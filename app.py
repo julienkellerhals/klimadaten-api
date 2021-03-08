@@ -1,16 +1,24 @@
+import sqlalchemy
+from sqlalchemy import create_engine
 from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def mainPage():
-    return 'Load web fe'
+    return "Load web fe"
 
-@app.route('/api')
+@app.route("/api")
 def api():
-    return 'API'
+    return "API"
 
-@app.route('/admin/refresh')
+@app.route("/admin/refresh")
 def refreshData():
-    return 'Run webscraping'
+    return "Run webscraping"
+
+@app.route("/admin/db/create")
+def createConnection():
+    engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
+    print(engine)
+    return "Created connection"
