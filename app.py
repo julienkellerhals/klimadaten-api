@@ -2,6 +2,8 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from flask import Flask
 
+import download
+
 app = Flask(__name__)
 
 
@@ -16,6 +18,12 @@ def api():
 @app.route("/admin/refresh")
 def refreshData():
     return "Run webscraping"
+
+@app.route("/admin/homog")
+def getHomog():
+    content = download.getData()
+    # write data to database in etl schema
+    return content.content
 
 @app.route("/admin/db/create")
 def createConnection():

@@ -55,9 +55,8 @@ def postRequest(url, cookies, data):
     return r, reqError, errorCode
 
 
-
-link = "https://www.meteoschweiz.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_ALT.txt"
-
-my_return = getRequest(url = link)
+def getData():
+    link = "https://www.meteoschweiz.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_ALT.txt"
+    return getRequest(url = link)[0]
 
 print('ba')
