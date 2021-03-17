@@ -8,6 +8,7 @@ from sqlalchemy import create_engine
 from flask import Flask
 from flask import request
 import download
+import webscraping
 
 app = Flask(__name__)
 
@@ -24,6 +25,10 @@ def getDriverPath(driverfolder, browser = None):
     return driverInstalledBool, driverPath
 
 def testDriver():
+    """
+    Tests if the driver is running
+    & initiates the driver if it isn't running. 
+    """
     try:
         global driver
         driver
@@ -52,6 +57,9 @@ def api():
 
 @app.route("/admin/driver/<browser>", methods=['GET'])
 def createDriver(browser):
+    """
+    Run this function on first install to create a driver.
+    """
     output = ""
     cwd = Path.cwd()
     driverfolder = cwd / "driver"
@@ -111,24 +119,13 @@ def refreshData():
 
 @app.route("/admin/test")
 def getTest():
-    testDriver()
+    return "hello world"
 
-    driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
-    url_list = []
-    urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
-    for url in urls:
-        url_list.append(url.get_attribute('href'))
-    
-    resp = "Got following urls" + "</br>"
-    for url in url_list:
-        resp += url + "</br>"
+@app.route("/admin/scrape/meteoschweiz")
+def scrapeMeteoschweiz():
+    testDriver() # to test if the driver is initiated
+    resp = webscraping.scrape_meteoschweiz(driver)
     return resp
-
-@app.route("/admin/homog")
-def getHomog():
-    content = download.getData()
-    # write data to database in etl schema
-    return content.content
 
 @app.route("/admin/db/create")
 def createConnection():

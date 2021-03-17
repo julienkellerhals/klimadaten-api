@@ -53,10 +53,3 @@ def postRequest(url, cookies, data):
         print("connection error")
         print(e)
     return r, reqError, errorCode
-
-
-def getData():
-    link = "https://www.meteoschweiz.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_ALT.txt"
-    return getRequest(url = link)[0]
-
-print('ba')
