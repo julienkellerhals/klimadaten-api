@@ -1,4 +1,5 @@
 import io
+import re
 import zipfile
 import abstractDriver
 from pathlib import Path
@@ -72,12 +73,17 @@ def createDriver(browser):
     # download driver
     if not driverInstalledBool:
         output += "Installing driver" + "</br>"
-        browserDriverConf = {
-            "Edg": "https://msedgedriver.azureedge.net/" + version + "/edgedriver_win64.zip",
-            "Chrome": "https://chromedriver.storage.googleapis.com/" + version + "/chromedriver_win32.zip"
-        }
-        output += "Driver URL: " + browserDriverConf[browser] + "</br>"
-        driverRequest = download.getRequest(browserDriverConf[browser])[0]
+        if browser == "Chrome":
+            browserDriverDownloadPage, _, _ = download.getRequest("https://chromedriver.chromium.org/downloads")
+            pattern = r"ChromeDriver (" + version.split(".")[0] + r"\.\d*\.\d*\.\d*)"
+            existingDriverVersion = re.findall(pattern, browserDriverDownloadPage.content.decode("utf-8"))[0]
+            browserDriverDownloadUrl = "https://chromedriver.storage.googleapis.com/" + existingDriverVersion + "/chromedriver_win32.zip"
+        elif browser == "Edg":
+            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" + version + "/edgedriver_win64.zip"
+        else:
+            print("Browser not supported yet")
+        output += "Driver URL: " + browserDriverDownloadUrl + "</br>"
+        driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
         driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
         driverZip.extractall(driverfolder)
         output += "Downloaded and extracted driver" + "</br>"
@@ -104,7 +110,7 @@ def refreshData():
 @app.route("/admin/test")
 def getTest():
     testDriver()
-    
+
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
     url_list = []
     urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
