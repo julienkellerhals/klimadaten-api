@@ -11,11 +11,17 @@ def scrape_meteoschweiz(driver):
     for url in urls:
         url_list.append(url.get_attribute('href'))
     
-    browserDriverDownloadPage, _, _ = download.getRequest("https://www.meteoschweiz.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_ALT.txt")
-    mynewdata = str(browserDriverDownloadPage.content)
+    homoALTPage, _, _ = download.getRequest("https://www.meteoschweiz.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_ALT.txt")
+    data = homoALTPage.text.splitlines()
+    columnNames = data[27].split()
+    stripedData = data[28:]
+    ALTDictList = []
+    for data in stripedData:
+        row = data.split()
+        rowDict = dict(zip(columnNames, row))
+        ALTDictList.append(rowDict)
+    ALTDf = pd.DataFrame(data= ALTDictList, columns = columnNames)
 
-    print(url_list)
-    
-    resp = mynewdata
+    print(ALTDf)
 
-    return resp
+    return str(ALTDf)
