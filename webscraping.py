@@ -8,39 +8,42 @@ def scrape_meteoschweiz(driver):
 
     urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
 
-    df_all_stations = pd.DataFrame(columns= ['Year','Month','Temperature','Precipitation','Station'])
+    allStationsDf = pd.DataFrame(columns= ['Year','Month','Temperature','Precipitation','Station'])
 
     for url in urls:
         url_list.append(url.get_attribute('href'))
     
-        browserDriverDownloadPage, _, _ = download.getRequest(url.get_attribute('href'))
-        data = str(browserDriverDownloadPage.content)
+        dataPage, _, _ = download.getRequest(url.get_attribute('href'))
+        data = dataPage.text.splitlines()
 
-        s_list = data.split(sep='\\r\\n')
-        s_list_2 = []
+        nestedData = []
 
-        for i in range(len(s_list)):
-            s_list_2.append(s_list[i].split())
+        for i in range(len(data)):
+            nestedData.append(data[i].split())
 
-        station = ' '.join(s_list_2[5][1:]) # get station name
-
-        index_beginning = []
-        
-        for i in range(len(s_list_2)): 
-            try:
-                if s_list_2[i][0] == 'Year' and s_list_2[i][1] == 'Month':
-                    index_beginning.append(i)
-            except:
+        # get station name
+        station = ' '.join(nestedData[5][1:]) # get station name
+      
+        # find size of header and remove the header
+        for i in range(len(nestedData)):
+            if len(nestedData[i]) < 2:
                 pass
+            elif nestedData[i][0] == 'Year' and nestedData[i][1] == 'Month':
+                index_beginning = i
+                break
+            else:
+                pass
+
+        nestedData = nestedData[index_beginning:] 
+
+        # create data frame
+        stationDf = pd.DataFrame(nestedData[1:],columns=nestedData[0])
         
-        s_list_2 = s_list_2[index_beginning[0]:-1] # remove header and last item
+        # add station name as column to data frame
+        station_list = [station for i in range(len(nestedData) -1)]
+        stationDf['Station'] = station_list 
 
-        mydf = pd.DataFrame(s_list_2[1:],columns=s_list_2[0])
-        station_list = [station for i in range(len(s_list_2) -1)]
-        mydf['Station'] = station_list
+        # append the data frame to the data frame of all stations
+        allStationsDf = allStationsDf.append(stationDf, ignore_index = True)
 
-        df_all_stations = df_all_stations.append(mydf, ignore_index = True)
-        df_all_stations.to_json(r'.\all_stations.json', index = True)
-
-    resp = df_all_stations
-    return resp
+    return str(allStationsDf)
