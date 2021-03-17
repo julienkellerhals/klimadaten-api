@@ -87,11 +87,13 @@ def createDriver(browser):
         driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
         driverZip.extractall(driverfolder)
         output += "Downloaded and extracted driver" + "</br>"
+        # get driver path
+        driverInstalledBool, driverPath = getDriverPath(driverfolder, browser)
     else:
         output += "Driver already satisfied" + "</br>"
 
     # Convert to string
-    if headlessStr.lower == "true":
+    if headlessStr.lower() == "true":
         headlessBool = True
     else:
         headlessBool = False
@@ -99,7 +101,7 @@ def createDriver(browser):
     # Create driver
     global driver
     driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
-    output += "Created Driver" + "</br>"
+    output += "Started Driver" + "</br>"
 
     return output
 
