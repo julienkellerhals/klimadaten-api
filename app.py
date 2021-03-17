@@ -1,5 +1,6 @@
 import io
 import zipfile
+import abstractDriver
 from pathlib import Path
 import sqlalchemy
 from sqlalchemy import create_engine
@@ -9,6 +10,36 @@ import download
 
 app = Flask(__name__)
 
+def getDriverPath(driverfolder, browser = None):
+    driverInstalledBool = False
+    driverPath = ""
+    for driverPath in list(driverfolder.glob('**/*.exe')):
+        if browser is not None:
+            if browser.lower() in driverPath.name:
+                driverInstalledBool = True
+                driverPath = driverPath
+        else:
+            driverPath = driverPath
+    return driverInstalledBool, driverPath
+
+def testDriver():
+    try:
+        global driver
+        driver
+    except NameError:
+        print("Driver not started")
+        print("Starting programatically")
+        print("Assuming you installed only required drivers")
+        cwd = Path.cwd()
+        driverfolder = cwd / "driver"
+        _, driverPath = getDriverPath(driverfolder, None)
+        if driverPath.name == "msedgedriver.exe":
+            browser = "Edg"
+        elif driverPath.name == "chromedriver.exe":
+            browser = "Chrome"
+        else:
+            print("Browser not supported yet")
+        driver = abstractDriver.createDriver(browser, driverPath, True)
 
 @app.route("/")
 def mainPage():
@@ -19,11 +50,11 @@ def api():
     return "API"
 
 @app.route("/admin/driver/<browser>", methods=['GET'])
-def driver(browser):
+def createDriver(browser):
     output = ""
     cwd = Path.cwd()
     driverfolder = cwd / "driver"
-    headlessBool = request.args['headless']
+    headlessStr = request.args['headless']
 
     # user agent
     userAgent = request.headers.get('User-Agent')
@@ -35,13 +66,11 @@ def driver(browser):
         # output += "Browser not found, options are - Mozilla, AppleWebKit, Chrome, Safari, Edg" + "</br>"
         output += "Browser not found, options are - Chrome, Edg" + "</br>"
 
-    driverInstalledBool = False
-    for driverPath in list(driverfolder.glob('**/*.exe')):
-        if browser.lower() in driverPath.name:
-            driverInstalledBool = True
+    # get driver path
+    driverInstalledBool, driverPath = getDriverPath(driverfolder, browser)
 
+    # download driver
     if not driverInstalledBool:
-        # download driver
         output += "Installing driver" + "</br>"
         browserDriverConf = {
             "Edg": "https://msedgedriver.azureedge.net/" + version + "/edgedriver_win64.zip",
@@ -55,11 +84,37 @@ def driver(browser):
     else:
         output += "Driver already satisfied" + "</br>"
 
+    # Convert to string
+    if headlessStr.lower == "true":
+        headlessBool = True
+    else:
+        headlessBool = False
+
+    # Create driver
+    global driver
+    driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
+    output += "Created Driver" + "</br>"
+
     return output
 
 @app.route("/admin/refresh")
 def refreshData():
     return "Run webscraping"
+
+@app.route("/admin/test")
+def getTest():
+    testDriver()
+    
+    driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
+    url_list = []
+    urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
+    for url in urls:
+        url_list.append(url.get_attribute('href'))
+    
+    resp = "Got following urls" + "</br>"
+    for url in url_list:
+        resp += url + "</br>"
+    return resp
 
 @app.route("/admin/homog")
 def getHomog():
