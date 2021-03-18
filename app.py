@@ -141,6 +141,12 @@ def scrapeMeteoschweiz():
     resp = webscraping.scrape_meteoschweiz(driver, engine)
     return resp
 
+@app.route("/admin/scrape/idaweb")
+def scrapeIdaweb():
+    testGlobal() # to test if the global variable are set
+    resp = webscraping.scrape_idaweb(driver, engine)
+    return resp
+
 @app.route("/admin/db/connect")
 def createConnection():
     global engine
