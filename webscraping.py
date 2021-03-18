@@ -1,5 +1,6 @@
 import pandas as pd
 import download
+import numpy as np
 
 def scrape_meteoschweiz(driver):
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
@@ -42,4 +43,14 @@ def scrape_meteoschweiz(driver):
         # append the data frame to the data frame of all stations
         allStationsDf = allStationsDf.append(stationDf, ignore_index = True)
 
+    # change column data types
+    allStationsDf = allStationsDf.astype({'Year': int, 'Month': int, 'Station': str}, errors = 'ignore')
+    allStationsDf["Temperature"] = pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
+    allStationsDf["Precipitation"] = pd.to_numeric(allStationsDf["Precipitation"], errors='coerce')
+
+    """
+    allStationsDf.isnull().sum().head()
+    pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
+    allStationsDf.dtypes
+    """
     return str(allStationsDf)
