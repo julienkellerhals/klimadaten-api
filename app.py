@@ -1,3 +1,4 @@
+import os
 import io
 import re
 import zipfile
@@ -62,7 +63,9 @@ def createDriver(browser):
     """
     output = ""
     cwd = Path.cwd()
-    driverfolder = cwd / "driver"
+    driverFolder = cwd / "driver"
+    if not driverFolder.exists():
+        os.mkdir("driver")
     headlessStr = request.args['headless']
 
     # user agent
@@ -76,7 +79,7 @@ def createDriver(browser):
         output += "Browser not found, options are - Chrome, Edg" + "</br>"
 
     # get driver path
-    driverInstalledBool, driverPath = getDriverPath(driverfolder, browser)
+    driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
 
     # download driver
     if not driverInstalledBool:
@@ -93,10 +96,10 @@ def createDriver(browser):
         output += "Driver URL: " + browserDriverDownloadUrl + "</br>"
         driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
         driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
-        driverZip.extractall(driverfolder)
+        driverZip.extractall(driverFolder)
         output += "Downloaded and extracted driver" + "</br>"
         # get driver path
-        driverInstalledBool, driverPath = getDriverPath(driverfolder, browser)
+        driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
     else:
         output += "Driver already satisfied" + "</br>"
 
