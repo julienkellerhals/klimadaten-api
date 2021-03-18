@@ -154,6 +154,6 @@ def createDatabase():
         create_database(engine.url)
     if not engine.dialect.has_schema(engine, "core"): #Check if schema core exists else create
         engine.execute(sqlalchemy.schema.CreateSchema("core"))
-    if not engine.dialect.has_schema(engine, "etl"): #Check if schema etl exists else create
-        engine.execute(sqlalchemy.schema.CreateSchema("etl"))
+    if not engine.dialect.has_schema(engine, "stage"): #Check if schema etl exists else create
+        engine.execute(sqlalchemy.schema.CreateSchema("stage"))
     return "Database created"
