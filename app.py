@@ -6,6 +6,7 @@ import abstractDriver
 from pathlib import Path
 import sqlalchemy
 from sqlalchemy import create_engine
+from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
 from flask import request
 import download
@@ -146,3 +147,14 @@ def createConnection():
     engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
     print(engine)
     return "Created connection"
+
+@app.route("/admin/db/create")
+def createDatabase():
+    testGlobal()
+    if not database_exists(engine.url): #Check if Database exists else create
+        create_database(engine.url)
+    if not engine.dialect.has_schema(engine, "core"): #Check if schema core exists else create
+        engine.execute(sqlalchemy.schema.CreateSchema("core"))
+    if not engine.dialect.has_schema(engine, "stage"): #Check if schema etl exists else create
+        engine.execute(sqlalchemy.schema.CreateSchema("stage"))
+    return "Database created"
