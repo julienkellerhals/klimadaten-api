@@ -11,12 +11,12 @@ def createDriver(browser, driverPath, headless):
             edge_options.use_chromium = True
             edge_options.add_argument('headless')
             edge_options.add_argument('disable-gpu')
-        driver = Edge(executable_path=driverPath, options=edge_options)
+        driver = Edge(executable_path=str(driverPath), options=edge_options)
     elif browser == "Chrome":
         chrome_options = Options()
         if headless:
             chrome_options.add_argument("--headless")
-        driver = webdriver.Chrome(executable_path=driverPath, options=chrome_options)
+        driver = webdriver.Chrome(executable_path=str(driverPath), options=chrome_options)
     else:
         print("Browser not supported yet")
 
