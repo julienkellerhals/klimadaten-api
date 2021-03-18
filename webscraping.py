@@ -1,8 +1,9 @@
-import pandas as pd
-import download
-import numpy as np
+import re
 import time
+import numpy as np
+import pandas as pd
 from datetime import date
+import download
 
 def scrape_meteoschweiz(driver, engine):
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
@@ -96,14 +97,24 @@ def scrape_idaweb(driver, engine):
     driver.find_element_by_name('since').send_keys('01.01.1800') 
     driver.find_element_by_name('till').send_keys(str(date.today().strftime('%d.%m.%Y')))
 
-    # go to time preselection
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()  
-
-    # click select all
-    driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()  
+    # go to order
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
     
-    # to go order
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()  
+    # find out home many orders we make to be able to limit it to 400
+    lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
+    length = int(re.findall('\[.*\/ (\d+)\]', lengthDiv)[0])
 
+    if length <= 400:
+        # if length is less than 400 select all
+        driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
+    else:
+        # select the first 400
+        for i in range(1,17):
+            driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
+    
+
+    # only 16 selected so far
+    
+    
     return 'helloworld'
 

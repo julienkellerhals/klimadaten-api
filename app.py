@@ -2,9 +2,9 @@ import os
 import io
 import re
 import zipfile
+import sqlalchemy
 import abstractDriver
 from pathlib import Path
-import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
