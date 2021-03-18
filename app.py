@@ -150,6 +150,7 @@ def createConnection():
 
 @app.route("/admin/db/create")
 def createDatabase():
+    testGlobal()
     if not database_exists(engine.url): #Check if Database exists else create
         create_database(engine.url)
     if not engine.dialect.has_schema(engine, "core"): #Check if schema core exists else create
