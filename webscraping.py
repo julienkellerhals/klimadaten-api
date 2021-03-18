@@ -2,14 +2,14 @@ import pandas as pd
 import download
 import numpy as np
 
-def scrape_meteoschweiz(driver):
+def scrape_meteoschweiz(driver, engine):
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
 
     url_list = []
 
     urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
 
-    allStationsDf = pd.DataFrame(columns= ['Year','Month','Temperature','Precipitation','Station'])
+    allStationsDf = pd.DataFrame(columns= ['year','month','temperature','precipitation','station'])
 
     for url in urls:
         url_list.append(url.get_attribute('href'))
@@ -34,19 +34,22 @@ def scrape_meteoschweiz(driver):
         nestedData = nestedData[index_beginning:] 
 
         # create data frame
-        stationDf = pd.DataFrame(nestedData[1:],columns=nestedData[0])
+        columnHeaders = [i.lower() for i in nestedData[0]]
+        stationDf = pd.DataFrame(nestedData[1:],columns=columnHeaders)
         
         # add station name as column to data frame
         station_list = [station for i in range(len(nestedData) -1)]
-        stationDf['Station'] = station_list 
+        stationDf['station'] = station_list 
 
         # append the data frame to the data frame of all stations
         allStationsDf = allStationsDf.append(stationDf, ignore_index = True)
 
     # change column data types
-    allStationsDf = allStationsDf.astype({'Year': int, 'Month': int, 'Station': str}, errors = 'ignore')
-    allStationsDf["Temperature"] = pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
-    allStationsDf["Precipitation"] = pd.to_numeric(allStationsDf["Precipitation"], errors='coerce')
+    allStationsDf = allStationsDf.astype({'year': int, 'month': int, 'station': str}, errors = 'ignore')
+    allStationsDf["temperature"] = pd.to_numeric(allStationsDf["temperature"], errors='coerce')
+    allStationsDf["precipitation"] = pd.to_numeric(allStationsDf["precipitation"], errors='coerce')
+
+    allStationsDf.to_sql('meteoschweiz_t', engine, schema = 'stage', if_exists = 'append', index = False)
 
     """
     allStationsDf.isnull().sum().head()

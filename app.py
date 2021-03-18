@@ -138,7 +138,7 @@ def getTest():
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
     testGlobal() # to test if the global variable are set
-    resp = webscraping.scrape_meteoschweiz(driver)
+    resp = webscraping.scrape_meteoschweiz(driver, engine)
     return resp
 
 @app.route("/admin/db/connect")
