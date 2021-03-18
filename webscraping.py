@@ -26,14 +26,10 @@ def scrape_meteoschweiz(driver):
       
         # find size of header and remove the header
         for i in range(len(nestedData)):
-            if len(nestedData[i]) < 2:
-                pass
-            elif nestedData[i][0] == 'Year' and nestedData[i][1] == 'Month':
-                index_beginning = i
-                break
-            else:
-                pass
-
+            if len(nestedData[i]) > 2:
+                if nestedData[i][0] == 'Year' and nestedData[i][1] == 'Month':
+                    index_beginning = i
+                    break
         nestedData = nestedData[index_beginning:] 
 
         # create data frame
