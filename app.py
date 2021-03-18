@@ -25,10 +25,10 @@ def getDriverPath(driverfolder, browser = None):
             driverPath = driverPath
     return driverInstalledBool, driverPath
 
-def testDriver():
+def testGlobal():
     """
-    Tests if the driver is running
-    & initiates the driver if it isn't running. 
+    Tests if the global variable are set.
+    initiates them if they aren't. 
     """
     try:
         global driver
@@ -47,6 +47,16 @@ def testDriver():
         else:
             print("Browser not supported yet")
         driver = abstractDriver.createDriver(browser, driverPath, True)
+
+    try:
+        global engine
+        engine
+    except NameError:
+        print("Engine not started")
+        print("Starting programatically")
+        print("Assuming you installed the database")
+        engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
+    
 
 @app.route("/")
 def mainPage():
@@ -126,12 +136,13 @@ def getTest():
 
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
-    testDriver() # to test if the driver is initiated
+    testGlobal() # to test if the global variable are set
     resp = webscraping.scrape_meteoschweiz(driver)
     return resp
 
-@app.route("/admin/db/create")
+@app.route("/admin/db/connect")
 def createConnection():
+    global engine
     engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
     print(engine)
     return "Created connection"
