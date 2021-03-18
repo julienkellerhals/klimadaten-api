@@ -1,6 +1,8 @@
 import pandas as pd
 import download
 import numpy as np
+import time
+from datetime import date
 
 def scrape_meteoschweiz(driver, engine):
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
@@ -62,9 +64,46 @@ def scrape_meteoschweiz(driver, engine):
 def scrape_idaweb(driver, engine):
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
+    # log into page
     driver.find_element_by_name('user').send_keys('simon.schmid1@fhnw.ch')
     driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
+
+    # go to parameter portal
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
+
+    # select search parameter
+    driver.find_element_by_xpath('//*[@id="paramGroup_input"]/option[5]').click()
+    driver.find_element_by_xpath('//*[@id="granularity_input"]/option[2]').click()
+
+    # click search
+    driver.find_element_by_xpath('//*[@id="filter_actions"]/input[1]').click()
+
+    # click select all
+    driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()
+
+    # go to station preselection
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[1]').click()
+
+    # click select all
+    driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()  
+
+    # go to time preselection
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[3]').click()  
+
+    # click from and until
+    driver.find_element_by_name('since').send_keys('01.01.1800') 
+    driver.find_element_by_name('till').send_keys(str(date.today().strftime('%d.%m.%Y')))
+
+    # go to time preselection
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()  
+
+    # click select all
+    driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()  
+    
+    # to go order
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()  
 
     return 'helloworld'
 

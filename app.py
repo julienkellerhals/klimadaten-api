@@ -47,7 +47,7 @@ def testGlobal():
             browser = "Chrome"
         else:
             print("Browser not supported yet")
-        driver = abstractDriver.createDriver(browser, driverPath, True)
+        driver = abstractDriver.createDriver(browser, driverPath, False) # make browser headless or not 
 
     try:
         global engine
