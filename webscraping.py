@@ -62,8 +62,8 @@ def scrape_meteoschweiz(driver, engine):
 def scrape_idaweb(driver, engine):
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
-    driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input').send_keys('simon.schmid1@fhnw.ch')
-    driver.find_element_by_xpath('//*[@id="password_input"]').send_keys('AF3410985C')
+    driver.find_element_by_name('user').send_keys('simon.schmid1@fhnw.ch')
+    driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
 
     return 'helloworld'
