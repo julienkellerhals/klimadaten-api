@@ -4,9 +4,13 @@ import yaml
 import numpy as np
 import pandas as pd
 from datetime import date
+from datetime import datetime
 import download
+import math
+from selenium.common.exceptions import NoSuchElementException
 
 def scrape_meteoschweiz(driver, engine):
+
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
 
     url_list = []
@@ -62,12 +66,34 @@ def scrape_meteoschweiz(driver, engine):
     """
     return str(allStationsDf)
 
-
 def scrape_idaweb(driver, engine):
+    offset = 0
+    number = 1 # numbers the queries
+    saved_documents = []
+
     with open(r'idawebConfig.yaml') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
-        print(config)
 
+    scrape_idaweb_login(driver, engine)
+    scrape_idaweb_navigate(driver, engine)
+    # find out length
+    length, total_length = scrape_idaweb_length(driver, engine)
+    # total number of pages
+    num_of_pages = math.ceil(total_length / 16)
+    # find out new offset and length
+    offset, length, num_of_pages = scrape_idaweb_select(driver, engine, length, offset, num_of_pages)
+    number, saved_documents = scrape_idaweb_order(driver, engine, number, saved_documents)
+    
+
+    while length > 0:
+        scrape_idaweb_navigate(driver, engine)
+        # find out new offset and length
+        offset, length, num_of_pages = scrape_idaweb_select(driver, engine, length, offset, num_of_pages)
+        number, saved_documents = scrape_idaweb_order(driver, engine, number, saved_documents)
+    
+    return 'done'
+
+def scrape_idaweb_login(driver, engine):
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
     # log into page
@@ -75,6 +101,7 @@ def scrape_idaweb(driver, engine):
     driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
 
+def scrape_idaweb_navigate(driver, engine):
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
@@ -104,31 +131,59 @@ def scrape_idaweb(driver, engine):
 
     # go to data inventory
     driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
-    
-    # find out home many orders we make to be able to limit it to 400
+
+def scrape_idaweb_length(driver, engine):
+    # find out how many orders we are making, so we can limit it.
     lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
     length = int(re.findall('\[.*\/ (\d+)\]', lengthDiv)[0])
+    total_length = length
 
-    if length <= 160:
-        # if length is less than 160 select all
-        driver.find_element_by_xpath('//*[@id="list_actions"]/input[2]').click()
-    else:
-        # select the first 160
-        for j in range(10):
-            for i in range(1,17):
-                driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
-            
-            # go to next page
-            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+    return (length, total_length)
+
+def scrape_idaweb_select(driver, engine, length, offset, num_of_pages):
+    # go to the right offset position
+    for i in range(offset):
+        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
     
-    # where we are
-    done = 160
+    # decide how many pages to scrape
+    if num_of_pages > 10:
+        pages_to_scrape = 10
+    else:
+        pages_to_scrape = num_of_pages
 
+    # select
+    for j in range(pages_to_scrape):
+        for i in range(1,17):
+            # check if checkbox is missing
+            try:
+                driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
+            except NoSuchElementException:
+                pass
+        
+        offset += 1
+        num_of_pages -= 1
+
+        # go to next page
+        if j + 1 < pages_to_scrape:
+            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+            
+
+    # where we are
+    length -= 160
+
+    return (offset, length, num_of_pages)
+
+def scrape_idaweb_order(driver, engine, number, saved_documents):
     # go to order
     driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
 
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
     # create order name
-    driver.find_element_by_name('orderText').send_keys(f'lightning_up_to_{done}')
+    driver.find_element_by_name('orderText').send_keys(f'ld{number}_{now}')
+    number += 1
+    # append document name to saved documents
+    saved_documents.append(f'ld{number}_{now}')
+
     # change data format 
     driver.find_element_by_xpath('//*[@id="dataFormat_input"]/option[2]').click()
 
@@ -147,9 +202,7 @@ def scrape_idaweb(driver, engine):
     # click next
     driver.find_element_by_xpath('//*[@id="content_block"]/form/table/tbody/tr[14]/td[2]/input').click()
 
-    
-    
-    return 'helloworld'
+    return (number, saved_documents)
 
 def scrapeIdawebOrders(driver):
     rowHeaders = ["no", "reference", "orderDate", "status", "deliveryNote", "delivery", "action", "downloadLink"]
