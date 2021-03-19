@@ -151,3 +151,29 @@ def scrape_idaweb(driver, engine):
     
     return 'helloworld'
 
+def scrapeIdawebOrders(driver):
+    rowHeaders = ["no", "reference", "orderDate", "status", "deliveryNote", "delivery", "action", "downloadLink"]
+    orderDataList = []
+    lastPageBool = False
+
+    while not lastPageBool:
+        for row in driver.find_elements_by_xpath('//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
+            rowContent = []
+            for col in row.find_elements_by_tag_name("td"):
+                rowContent.append(col.text)
+            
+            downloadLink = ""
+            if len(row.find_elements_by_xpath('./td[6]/nobr/a')) > 0:
+                downloadLink = row.find_element_by_xpath('./td[6]/nobr/a').get_attribute("href")
+            rowContent.append(downloadLink)
+                
+            orderDataList.append(dict(zip(rowHeaders, rowContent)))
+        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
+        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
+        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
+            lastPageBool = True
+        else:
+            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+    orderDf = pd.DataFrame(data=orderDataList)
+
+    return orderDf
