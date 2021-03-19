@@ -1,5 +1,6 @@
 import re
 import time
+import yaml
 import numpy as np
 import pandas as pd
 from datetime import date
@@ -63,6 +64,10 @@ def scrape_meteoschweiz(driver, engine):
 
 
 def scrape_idaweb(driver, engine):
+    with open(r'idawebConfig.yaml') as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+        print(config)
+
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
     # log into page
