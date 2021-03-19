@@ -153,28 +153,12 @@ def createConnection():
     global instance
     instance = db.Database()
     return "Connected"
-"""
-    global engine
-    engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
-    print(engine)
-    return "Created connection"
-"""
 
 @app.route("/admin/db/create")
 def createDatabase():
     instance.createDatabase()
     return "Database created"
 
-"""
-    testGlobal()
-    if not database_exists(engine.url): #Check if Database exists else create
-        create_database(engine.url)
-    if not engine.dialect.has_schema(engine, "core"): #Check if schema core exists else create
-        engine.execute(sqlalchemy.schema.CreateSchema("core"))
-    if not engine.dialect.has_schema(engine, "stage"): #Check if schema etl exists else create
-        engine.execute(sqlalchemy.schema.CreateSchema("stage"))
-    return "Database created"
-"""
 @app.route("/admin/db/table")
 def createTable():
     instance.createTable()
