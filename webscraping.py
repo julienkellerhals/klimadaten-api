@@ -97,23 +97,51 @@ def scrape_idaweb(driver, engine):
     driver.find_element_by_name('since').send_keys('01.01.1800') 
     driver.find_element_by_name('till').send_keys(str(date.today().strftime('%d.%m.%Y')))
 
-    # go to order
+    # go to data inventory
     driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
     
     # find out home many orders we make to be able to limit it to 400
     lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
     length = int(re.findall('\[.*\/ (\d+)\]', lengthDiv)[0])
 
-    if length <= 400:
-        # if length is less than 400 select all
-        driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
+    if length <= 160:
+        # if length is less than 160 select all
+        driver.find_element_by_xpath('//*[@id="list_actions"]/input[2]').click()
     else:
-        # select the first 400
-        for i in range(1,17):
-            driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
+        # select the first 160
+        for j in range(10):
+            for i in range(1,17):
+                driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
+            
+            # go to next page
+            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
     
+    # where we are
+    done = 160
 
-    # only 16 selected so far
+    # go to order
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
+
+    # create order name
+    driver.find_element_by_name('orderText').send_keys(f'lightning_up_to_{done}')
+    # change data format 
+    driver.find_element_by_xpath('//*[@id="dataFormat_input"]/option[2]').click()
+
+    # go to summary
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[6]').click()
+
+    # go to general terms and conditions
+    driver.find_element_by_xpath('//*[@id="wizard"]/a[7]').click()
+
+    # accept general terms and conditions
+    driver.find_element_by_name('acceptAgbs').click()
+
+    # click order
+    driver.find_element_by_xpath('//*[@id="form_block"]/div/fieldset/table[2]/tbody/tr/td[3]/table/tbody/tr/td/input').click()
+    
+    # click next
+    driver.find_element_by_xpath('//*[@id="content_block"]/form/table/tbody/tr[14]/td[2]/input').click()
+
     
     
     return 'helloworld'
