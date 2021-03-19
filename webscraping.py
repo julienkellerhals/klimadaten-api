@@ -1,5 +1,6 @@
 import re
 import time
+import yaml
 import numpy as np
 import pandas as pd
 from datetime import date
@@ -69,6 +70,9 @@ def scrape_idaweb(driver, engine):
     offset = 0
     number = 1 # numbers the queries
     saved_documents = []
+
+    with open(r'idawebConfig.yaml') as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
 
     scrape_idaweb_login(driver, engine)
     scrape_idaweb_navigate(driver, engine)
