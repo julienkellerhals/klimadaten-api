@@ -4,6 +4,7 @@ import re
 import zipfile
 import sqlalchemy
 import abstractDriver
+import db
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
@@ -149,18 +150,16 @@ def scrapeIdaweb():
 
 @app.route("/admin/db/connect")
 def createConnection():
-    global engine
-    engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
-    print(engine)
-    return "Created connection"
+    global instance
+    instance = db.Database()
+    return "Connected"
 
 @app.route("/admin/db/create")
 def createDatabase():
-    testGlobal()
-    if not database_exists(engine.url): #Check if Database exists else create
-        create_database(engine.url)
-    if not engine.dialect.has_schema(engine, "core"): #Check if schema core exists else create
-        engine.execute(sqlalchemy.schema.CreateSchema("core"))
-    if not engine.dialect.has_schema(engine, "stage"): #Check if schema etl exists else create
-        engine.execute(sqlalchemy.schema.CreateSchema("stage"))
+    instance.createDatabase()
     return "Database created"
+
+@app.route("/admin/db/table")
+def createTable():
+    instance.createTable()
+    return "Table created"
