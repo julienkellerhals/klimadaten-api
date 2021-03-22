@@ -1,23 +1,32 @@
 import re
+import math
 import time
 import yaml
 import numpy as np
 import pandas as pd
 from datetime import date
 from datetime import datetime
-import download
-import math
 from selenium.common.exceptions import NoSuchElementException
+import download
+
+def readConfig(configFileName):
+    with open(configFileName) as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+    return config
+
+def indexMarks(nrows, chunk_size):
+    return range(chunk_size, math.ceil(nrows / chunk_size) * chunk_size, chunk_size)
+
+def splitDf(dfm, chunk_size):
+    indices = indexMarks(dfm.shape[0], chunk_size)
+    return np.split(dfm, indices)
 
 def scrape_meteoschweiz(driver, engine):
+    url_list = []
+    allStationsDf = pd.DataFrame(columns= ['year','month','temperature','precipitation','station'])
 
     driver.get("https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle")
-
-    url_list = []
-
     urls = driver.find_elements_by_xpath("//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a")
-
-    allStationsDf = pd.DataFrame(columns= ['year','month','temperature','precipitation','station'])
 
     for url in urls:
         url_list.append(url.get_attribute('href'))
@@ -70,30 +79,31 @@ def scrape_idaweb(driver, engine):
     offset = 0
     number = 1 # numbers the queries
     saved_documents = []
+    configFileName = "idawebConfig.yaml"
 
-    with open(r'idawebConfig.yaml') as f:
-        config = yaml.load(f, Loader=yaml.FullLoader)
+    # login
+    scrape_idaweb_login(driver)
 
-    scrape_idaweb_login(driver, engine)
-    scrape_idaweb_navigate(driver, engine)
-    # find out length
-    length, total_length = scrape_idaweb_length(driver, engine)
-    # total number of pages
-    num_of_pages = math.ceil(total_length / 16)
-    # find out new offset and length
-    offset, length, num_of_pages = scrape_idaweb_select(driver, engine, length, offset, num_of_pages)
-    number, saved_documents = scrape_idaweb_order(driver, engine, number, saved_documents)
-    
+    # read config file
+    config = readConfig(configFileName)
 
-    while length > 0:
-        scrape_idaweb_navigate(driver, engine)
-        # find out new offset and length
-        offset, length, num_of_pages = scrape_idaweb_select(driver, engine, length, offset, num_of_pages)
-        number, saved_documents = scrape_idaweb_order(driver, engine, number, saved_documents)
-    
+    for searchGranularity in config:
+        for searchGroup in config[searchGranularity]:
+            scrape_idaweb_navigate(driver, searchGroup, searchGranularity)
+
+            # get inventory and split into 160 chunks
+            inventoryDf = scrapeIdawebInventory(driver)
+            chunks = splitDf(inventoryDf, 160)
+            for chunk in chunks:
+                formData = 'var data = new FormData(document.getElementsByTagName("form")[0])'
+                
+            number, saved_documents = scrape_idaweb_order(driver, number, saved_documents)
+
+    print(saved_documents)
+
     return 'done'
 
-def scrape_idaweb_login(driver, engine):
+def scrape_idaweb_login(driver):
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
     # log into page
@@ -101,14 +111,14 @@ def scrape_idaweb_login(driver, engine):
     driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
 
-def scrape_idaweb_navigate(driver, engine):
+def scrape_idaweb_navigate(driver, searchGroup, searchGranularity):
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
 
     # select search parameter
-    driver.find_element_by_xpath('//*[@id="paramGroup_input"]/option[5]').click()
-    driver.find_element_by_xpath('//*[@id="granularity_input"]/option[2]').click()
+    driver.find_element_by_xpath(f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]').click()
+    driver.find_element_by_xpath(f'//*[@id="granularity_input"]/option[@value="{searchGranularity}"]').click()
 
     # click search
     driver.find_element_by_xpath('//*[@id="filter_actions"]/input[1]').click()
@@ -132,48 +142,7 @@ def scrape_idaweb_navigate(driver, engine):
     # go to data inventory
     driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
 
-def scrape_idaweb_length(driver, engine):
-    # find out how many orders we are making, so we can limit it.
-    lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
-    length = int(re.findall('\[.*\/ (\d+)\]', lengthDiv)[0])
-    total_length = length
-
-    return (length, total_length)
-
-def scrape_idaweb_select(driver, engine, length, offset, num_of_pages):
-    # go to the right offset position
-    for i in range(offset):
-        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
-    
-    # decide how many pages to scrape
-    if num_of_pages > 10:
-        pages_to_scrape = 10
-    else:
-        pages_to_scrape = num_of_pages
-
-    # select
-    for j in range(pages_to_scrape):
-        for i in range(1,17):
-            # check if checkbox is missing
-            try:
-                driver.find_element_by_xpath(f'//*[@id="body_block"]/form/div[4]/table/tbody/tr[{i}]/td[8]/nobr/input').click()
-            except NoSuchElementException:
-                pass
-        
-        offset += 1
-        num_of_pages -= 1
-
-        # go to next page
-        if j + 1 < pages_to_scrape:
-            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
-            
-
-    # where we are
-    length -= 160
-
-    return (offset, length, num_of_pages)
-
-def scrape_idaweb_order(driver, engine, number, saved_documents):
+def scrape_idaweb_order(driver, number, saved_documents):
     # go to order
     driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
 
@@ -230,3 +199,25 @@ def scrapeIdawebOrders(driver):
     orderDf = pd.DataFrame(data=orderDataList)
 
     return orderDf
+
+def scrapeIdawebInventory(driver):
+    rowHeaders = ["station", "alt", "parameter", "unit", "granularity", "from", "until", "value"]
+    inventoryList = []
+    lastPageBool = False
+
+    while not lastPageBool:
+        for row in driver.find_elements_by_xpath('//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
+            cols = row.find_elements_by_tag_name("td")
+            rowContent = [col.text for col in cols[:-1]]
+            rowContent.append(cols[-1].find_element_by_tag_name("input").get_attribute("value"))
+            inventoryList.append(dict(zip(rowHeaders, rowContent)))
+
+        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
+        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
+        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
+            lastPageBool = True
+        else:
+            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+    inventoryDf = pd.DataFrame(data=inventoryList)
+    inventoryDf = inventoryDf.drop_duplicates()
+    return inventoryDf
