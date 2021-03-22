@@ -6,6 +6,10 @@ import numpy as np
 import pandas as pd
 from datetime import date
 from datetime import datetime
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 import download
 
@@ -20,6 +24,15 @@ def indexMarks(nrows, chunk_size):
 def splitDf(dfm, chunk_size):
     indices = indexMarks(dfm.shape[0], chunk_size)
     return np.split(dfm, indices)
+
+def getLastPageBool(driver, lastPageBool):
+    arrowPath = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body_block"]/form/div[5]'))).find_elements_by_tag_name("img")[2].get_attribute("src")
+    if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
+        lastPageBool = True
+    else:
+        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+
+    return lastPageBool
 
 def scrape_meteoschweiz(driver, engine):
     url_list = []
@@ -198,12 +211,8 @@ def scrapeIdawebInventory(driver):
             rowContent.append(cols[-1].find_element_by_tag_name("input").get_attribute("value"))
             inventoryList.append(dict(zip(rowHeaders, rowContent)))
 
-        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
-        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
-        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
-            lastPageBool = True
-        else:
-            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+        lastPageBool = getLastPageBool(driver, lastPageBool)
+        
     inventoryDf = pd.DataFrame(data=inventoryList)
     inventoryDf = inventoryDf.drop_duplicates()
     return inventoryDf
@@ -223,14 +232,10 @@ def scrapeIdawebOrders(driver):
             if len(row.find_elements_by_xpath('./td[6]/nobr/a')) > 0:
                 downloadLink = row.find_element_by_xpath('./td[6]/nobr/a').get_attribute("href")
             rowContent.append(downloadLink)
-                
             orderDataList.append(dict(zip(rowHeaders, rowContent)))
-        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
-        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
-        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
-            lastPageBool = True
-        else:
-            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+
+        lastPageBool = getLastPageBool(driver, lastPageBool)
+
     orderDf = pd.DataFrame(data=orderDataList)
 
     return orderDf
