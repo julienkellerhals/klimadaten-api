@@ -76,8 +76,6 @@ def scrape_meteoschweiz(driver, engine):
     return str(allStationsDf)
 
 def scrape_idaweb(driver, engine):
-    offset = 0
-    number = 1 # numbers the queries
     saved_documents = []
     configFileName = "idawebConfig.yaml"
 
@@ -89,19 +87,40 @@ def scrape_idaweb(driver, engine):
 
     for searchGranularity in config:
         for searchGroup in config[searchGranularity]:
-            scrape_idaweb_navigate(driver, searchGroup, searchGranularity)
+            orderNumber = 1
+            inventoryNavigationProcess(driver, searchGroup, searchGranularity)
 
-            # get inventory and split into 160 chunks
+            # get inventory and split into chunks
             inventoryDf = scrapeIdawebInventory(driver)
-            chunks = splitDf(inventoryDf, 160)
+            chunks = splitDf(inventoryDf, 200)
             for chunk in chunks:
-                formData = 'var data = new FormData(document.getElementsByTagName("form")[0])'
+                inventoryNavigationProcess(driver, searchGroup, searchGranularity)
+                for value in chunk["value"]:
+                    js = (
+                        "var form = document.getElementsByTagName('form')[0];" # get form
+                        "var checkbox = document.createElement('input');" # create input
+                        "checkbox.checked = true;" # set input to checked
+                        "checkbox.name = 'selection';" # set input name
+                        f"checkbox.value = '{value}';" # set input value
+                        "updateCount(checkbox.checked);" # update count
+                        "form.appendChild(checkbox);" # add checkbox
+                    )
+                    driver.execute_script(js)
                 
-            number, saved_documents = scrape_idaweb_order(driver, number, saved_documents)
+                # create order name
+                now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+                orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
+                
+                # Continue with order process
+                orderNavigationProcess(driver, orderName)
+
+                orderNumber += 1
+                # Add roder to list
+                saved_documents.append(orderName)
 
     print(saved_documents)
 
-    return 'done'
+    return str(saved_documents)
 
 def scrape_idaweb_login(driver):
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
@@ -111,7 +130,7 @@ def scrape_idaweb_login(driver):
     driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
 
-def scrape_idaweb_navigate(driver, searchGroup, searchGranularity):
+def inventoryNavigationProcess(driver, searchGroup, searchGranularity):
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
@@ -142,17 +161,13 @@ def scrape_idaweb_navigate(driver, searchGroup, searchGranularity):
     # go to data inventory
     driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
 
-def scrape_idaweb_order(driver, number, saved_documents):
+def orderNavigationProcess(driver, orderName):
     # go to order
     driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
 
-    now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
-    # create order name
-    driver.find_element_by_name('orderText').send_keys(f'ld{number}_{now}')
-    number += 1
-    # append document name to saved documents
-    saved_documents.append(f'ld{number}_{now}')
-
+    # create order
+    driver.find_element_by_name('orderText').send_keys(orderName)
+    
     # change data format 
     driver.find_element_by_xpath('//*[@id="dataFormat_input"]/option[2]').click()
 
@@ -171,7 +186,27 @@ def scrape_idaweb_order(driver, number, saved_documents):
     # click next
     driver.find_element_by_xpath('//*[@id="content_block"]/form/table/tbody/tr[14]/td[2]/input').click()
 
-    return (number, saved_documents)
+def scrapeIdawebInventory(driver):
+    rowHeaders = ["station", "alt", "parameter", "unit", "granularity", "from", "until", "value"]
+    inventoryList = []
+    lastPageBool = False
+
+    while not lastPageBool:
+        for row in driver.find_elements_by_xpath('//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
+            cols = row.find_elements_by_tag_name("td")
+            rowContent = [col.text for col in cols[:-1]]
+            rowContent.append(cols[-1].find_element_by_tag_name("input").get_attribute("value"))
+            inventoryList.append(dict(zip(rowHeaders, rowContent)))
+
+        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
+        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
+        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
+            lastPageBool = True
+        else:
+            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
+    inventoryDf = pd.DataFrame(data=inventoryList)
+    inventoryDf = inventoryDf.drop_duplicates()
+    return inventoryDf
 
 def scrapeIdawebOrders(driver):
     rowHeaders = ["no", "reference", "orderDate", "status", "deliveryNote", "delivery", "action", "downloadLink"]
@@ -199,25 +234,3 @@ def scrapeIdawebOrders(driver):
     orderDf = pd.DataFrame(data=orderDataList)
 
     return orderDf
-
-def scrapeIdawebInventory(driver):
-    rowHeaders = ["station", "alt", "parameter", "unit", "granularity", "from", "until", "value"]
-    inventoryList = []
-    lastPageBool = False
-
-    while not lastPageBool:
-        for row in driver.find_elements_by_xpath('//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
-            cols = row.find_elements_by_tag_name("td")
-            rowContent = [col.text for col in cols[:-1]]
-            rowContent.append(cols[-1].find_element_by_tag_name("input").get_attribute("value"))
-            inventoryList.append(dict(zip(rowHeaders, rowContent)))
-
-        driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]')
-        arrowPath = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').find_elements_by_tag_name("img")[2].get_attribute("src")
-        if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
-            lastPageBool = True
-        else:
-            driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
-    inventoryDf = pd.DataFrame(data=inventoryList)
-    inventoryDf = inventoryDf.drop_duplicates()
-    return inventoryDf
