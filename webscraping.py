@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from datetime import date
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -30,6 +31,7 @@ def getLastPageBool(driver, lastPageBool):
     if arrowPath.split("/")[-1:][0] == "arrowrightblack.gif":
         lastPageBool = True
     else:
+        time.sleep(1)
         driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
 
     return lastPageBool
@@ -99,37 +101,66 @@ def scrape_idaweb(driver, engine):
     config = readConfig(configFileName)
 
     for searchGranularity in config:
-        for searchGroup in config[searchGranularity]:
-            orderNumber = 1
-            inventoryNavigationProcess(driver, searchGroup, searchGranularity)
+        for searchGroupDict in config[searchGranularity]:
+            searchGroup = list(searchGroupDict.keys())[0]
+            for searchName in searchGroupDict[searchGroup]:
+                orderNumber = 1
 
-            # get inventory and split into chunks
-            inventoryDf = scrapeIdawebInventory(driver)
-            chunks = splitDf(inventoryDf, 200)
-            for chunk in chunks:
-                inventoryNavigationProcess(driver, searchGroup, searchGranularity)
-                for value in chunk["value"]:
-                    js = (
-                        "var form = document.getElementsByTagName('form')[0];" # get form
-                        "var checkbox = document.createElement('input');" # create input
-                        "checkbox.checked = true;" # set input to checked
-                        "checkbox.name = 'selection';" # set input name
-                        f"checkbox.value = '{value}';" # set input value
-                        "updateCount(checkbox.checked);" # update count
-                        "form.appendChild(checkbox);" # add checkbox
-                    )
-                    driver.execute_script(js)
+                idaWebParameterPortal(driver)
+                idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchName)
+                idaWebStationPreselection(driver)
                 
-                # create order name
-                now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
-                orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
-                
-                # Continue with order process
-                orderNavigationProcess(driver, orderName)
+                # Start time preselection
+                since = "01.01.1800"
+                until = date.today().strftime('%d.%m.%Y')
+                idaWebTimePreselection(driver, since, until)
 
-                orderNumber += 1
-                # Add roder to list
-                saved_documents.append(orderName)
+                entryCountBool = True
+                while entryCountBool:
+                    entryCountBool = idaWebDataInventoryCount(driver)
+
+                    if entryCountBool:
+                        until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=100)).strftime('%d.%m.%Y')
+                        idaWebTimePreselection(driver, since, until)
+
+                        entryCountBool = idaWebDataInventoryCount(driver)
+
+
+
+
+                idaWebDataInventory(driver)
+
+                # Add fancy logic for date filtering
+
+
+                # Keep this when we select one year
+                # get inventory and split into chunks
+                inventoryDf = scrapeIdawebInventory(driver)
+                chunks = splitDf(inventoryDf, 400)
+                for chunk in chunks:
+                    inventoryNavigationProcess(driver, searchGroup, searchGranularity, searchName)
+                    for value in chunk["value"]:
+                        js = (
+                            "var form = document.getElementsByTagName('form')[0];" # get form
+                            "var checkbox = document.createElement('input');" # create input
+                            "checkbox.checked = true;" # set input to checked
+                            "checkbox.name = 'selection';" # set input name
+                            f"checkbox.value = '{value}';" # set input value
+                            "updateCount(checkbox.checked);" # update count
+                            "form.appendChild(checkbox);" # add checkbox
+                        )
+                        driver.execute_script(js)
+                    
+                    # create order name
+                    now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+                    orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
+                    
+                    # Continue with order process
+                    orderNavigationProcess(driver, orderName)
+
+                    orderNumber += 1
+                    # Add roder to list
+                    saved_documents.append(orderName)
 
     print(saved_documents)
 
@@ -143,14 +174,16 @@ def scrape_idaweb_login(driver):
     driver.find_element_by_name('password').send_keys('AF3410985C')
     driver.find_element_by_xpath('//*[@id="content_block"]/form/fieldset/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input').click()
 
-def inventoryNavigationProcess(driver, searchGroup, searchGranularity):
+def idaWebParameterPortal(driver):
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
 
+def idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchName):
     # select search parameter
     driver.find_element_by_xpath(f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]').click()
     driver.find_element_by_xpath(f'//*[@id="granularity_input"]/option[@value="{searchGranularity}"]').click()
+    driver.find_element_by_name('shortName').send_keys(searchName)
 
     # click search
     driver.find_element_by_xpath('//*[@id="filter_actions"]/input[1]').click()
@@ -158,23 +191,42 @@ def inventoryNavigationProcess(driver, searchGroup, searchGranularity):
     # click select all
     driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()
 
+def idaWebStationPreselection(driver):
     # go to station preselection
     driver.find_element_by_xpath('//*[@id="wizard"]/a[1]').click()
 
     # click select all
     driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()  
 
+def idaWebTimePreselection(driver, since, until):
     # go to time preselection
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[3]').click()  
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Time preselection")]').click()
 
+    # clear input
+    driver.find_element_by_name('since').clear()
+    driver.find_element_by_name('till').clear()
+    
     # click from and until
-    driver.find_element_by_name('since').send_keys('01.01.1800') 
-    driver.find_element_by_name('till').send_keys(str(date.today().strftime('%d.%m.%Y')))
+    driver.find_element_by_name('since').send_keys(str(since)) 
+    driver.find_element_by_name('till').send_keys(str(until))
 
+def idaWebDataInventoryCount(driver):
     # go to data inventory
     driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
 
-def orderNavigationProcess(driver, orderName):
+    entryCountBool = False
+    # get length of entries
+    lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
+    length = int(re.findall(r'\[.*\/ (\d+)\]', lengthDiv)[0])
+    if length > 400:
+        entryCountBool = True
+    return entryCountBool
+
+def idaWebDataInventory(driver):
+    # Rest of the logic thingys
+    print("Here")
+
+def idaWebOrder(driver, orderName):
     # go to order
     driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
 
@@ -184,9 +236,14 @@ def orderNavigationProcess(driver, orderName):
     # change data format 
     driver.find_element_by_xpath('//*[@id="dataFormat_input"]/option[2]').click()
 
+    # split delivery
+    driver.find_element_by_name('split').click()
+
+def idaWebSummary(driver):
     # go to summary
     driver.find_element_by_xpath('//*[@id="wizard"]/a[6]').click()
 
+def idaWebAgbs(driver):
     # go to general terms and conditions
     driver.find_element_by_xpath('//*[@id="wizard"]/a[7]').click()
 
@@ -195,7 +252,7 @@ def orderNavigationProcess(driver, orderName):
 
     # click order
     driver.find_element_by_xpath('//*[@id="form_block"]/div/fieldset/table[2]/tbody/tr/td[3]/table/tbody/tr/td/input').click()
-    
+
     # click next
     driver.find_element_by_xpath('//*[@id="content_block"]/form/table/tbody/tr[14]/td[2]/input').click()
 
