@@ -115,9 +115,10 @@ def scrape_idaweb(driver, engine):
                 until = date.today().strftime('%d.%m.%Y')
                 idaWebTimePreselection(driver, since, until)
 
-                entryCountBool = True
-                while entryCountBool:
-                    entryCountBool = idaWebDataInventoryCount(driver)
+                tooManyEntriesBool = True
+                noEntriesBool = False
+                while tooManyEntriesBool:
+                    entryCountBool = idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool)
 
                     if entryCountBool:
                         until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=100)).strftime('%d.%m.%Y')
@@ -193,7 +194,7 @@ def idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchNa
 
 def idaWebStationPreselection(driver):
     # go to station preselection
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[1]').click()
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Station preselection")]').click()
 
     # click select all
     driver.find_element_by_xpath('//*[@id="list_actions"]/input[1]').click()  
@@ -210,17 +211,23 @@ def idaWebTimePreselection(driver, since, until):
     driver.find_element_by_name('since').send_keys(str(since)) 
     driver.find_element_by_name('till').send_keys(str(until))
 
-def idaWebDataInventoryCount(driver):
+def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
     # go to data inventory
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[4]').click()   
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Data inventory")]').click()   
 
-    entryCountBool = False
     # get length of entries
-    lengthDiv = driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]').text
+    lengthDiv = driver.find_element_by_class_name('pager').text
     length = int(re.findall(r'\[.*\/ (\d+)\]', lengthDiv)[0])
+
     if length > 400:
-        entryCountBool = True
-    return entryCountBool
+        tooManyEntriesBool = True
+    else:
+        tooManyEntriesBool = False
+    
+    if length == 0:
+        noEntriesBool = True
+    
+    return tooManyEntriesBool, noEntriesBool
 
 def idaWebDataInventory(driver):
     # Rest of the logic thingys
@@ -228,7 +235,7 @@ def idaWebDataInventory(driver):
 
 def idaWebOrder(driver, orderName):
     # go to order
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[5]').click()
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Order")]').click()
 
     # create order
     driver.find_element_by_name('orderText').send_keys(orderName)
@@ -241,11 +248,11 @@ def idaWebOrder(driver, orderName):
 
 def idaWebSummary(driver):
     # go to summary
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[6]').click()
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Summary")]').click()
 
 def idaWebAgbs(driver):
     # go to general terms and conditions
-    driver.find_element_by_xpath('//*[@id="wizard"]/a[7]').click()
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "General Terms and Conditions")]').click()
 
     # accept general terms and conditions
     driver.find_element_by_name('acceptAgbs').click()
