@@ -105,63 +105,101 @@ def scrape_idaweb(driver, engine):
             searchGroup = list(searchGroupDict.keys())[0]
             for searchName in searchGroupDict[searchGroup]:
                 orderNumber = 1
+                # create order name
+                now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+
+
+
 
                 idaWebParameterPortal(driver)
                 idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchName)
                 idaWebStationPreselection(driver)
                 
+
+
+
+
                 # Start time preselection
                 since = "01.01.1800"
                 until = date.today().strftime('%d.%m.%Y')
                 idaWebTimePreselection(driver, since, until)
 
+
+
+
                 tooManyEntriesBool = True
                 noEntriesBool = False
-                while tooManyEntriesBool:
-                    entryCountBool = idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool)
+                timeDeltaList = [1000, 100, 10, 1]
+                while True:
+                    tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool)
+                    if not len(timeDeltaList) == 0:
+                        if tooManyEntriesBool:
+                            timeDeltaList.remove(timeDeltaList[0])
+                            if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
+                                until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
+                            else:
+                                until = date.today().strftime('%d.%m.%Y')
+                            idaWebTimePreselection(driver, since, until)
+                        else:
+                            if not noEntriesBool:
+                                idaWebDataInventory(driver)
 
-                    if entryCountBool:
-                        until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=100)).strftime('%d.%m.%Y')
-                        idaWebTimePreselection(driver, since, until)
+                                orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'    
+                                idaWebOrder(driver, orderName)
+                                orderNumber += 1
 
-                        entryCountBool = idaWebDataInventoryCount(driver)
+                                idaWebSummary(driver)
+                                idaWebAgbs(driver)
 
+                                # Go back to start and continue with next time frame
+                                since = until
+                                if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
+                                    until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
+                                else:
+                                    until = date.today().strftime('%d.%m.%Y')
 
+                                # redo the whole order process
+                                idaWebParameterPortal(driver)
+                                idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchName)
+                                idaWebStationPreselection(driver)
+                                idaWebTimePreselection(driver, since, until)
 
+                            else:
+                                since = until
+                                if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
+                                    until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
+                                else:
+                                    until = date.today().strftime('%d.%m.%Y')
+                                idaWebTimePreselection(driver, since, until)
 
-                idaWebDataInventory(driver)
-
-                # Add fancy logic for date filtering
-
-
-                # Keep this when we select one year
-                # get inventory and split into chunks
-                inventoryDf = scrapeIdawebInventory(driver)
-                chunks = splitDf(inventoryDf, 400)
-                for chunk in chunks:
-                    inventoryNavigationProcess(driver, searchGroup, searchGranularity, searchName)
-                    for value in chunk["value"]:
-                        js = (
-                            "var form = document.getElementsByTagName('form')[0];" # get form
-                            "var checkbox = document.createElement('input');" # create input
-                            "checkbox.checked = true;" # set input to checked
-                            "checkbox.name = 'selection';" # set input name
-                            f"checkbox.value = '{value}';" # set input value
-                            "updateCount(checkbox.checked);" # update count
-                            "form.appendChild(checkbox);" # add checkbox
-                        )
-                        driver.execute_script(js)
                     
-                    # create order name
-                    now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
-                    orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
-                    
-                    # Continue with order process
-                    orderNavigationProcess(driver, orderName)
+                    else:
+                        idaWebDataInventoryManual(driver)
+                        inventoryDf = scrapeIdawebInventory(driver)
+                        chunks = splitDf(inventoryDf, 400)
+                        for chunk in chunks:
+                            for value in chunk["value"]:
+                                js = (
+                                    "var form = document.getElementsByTagName('form')[0];" # get form
+                                    "var checkbox = document.createElement('input');" # create input
+                                    "checkbox.checked = true;" # set input to checked
+                                    "checkbox.name = 'selection';" # set input name
+                                    f"checkbox.value = '{value}';" # set input value
+                                    "updateCount(checkbox.checked);" # update count
+                                    "form.appendChild(checkbox);" # add checkbox
+                                )
+                                driver.execute_script(js)
 
-                    orderNumber += 1
-                    # Add roder to list
-                    saved_documents.append(orderName)
+                        # create order name
+                        now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+                        orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
+                        
+                        # Continue with order process
+                        orderNavigationProcess(driver, orderName)
+
+                        orderNumber += 1
+                        # Add roder to list
+                        saved_documents.append(orderName)
 
     print(saved_documents)
 
@@ -226,11 +264,22 @@ def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
     
     if length == 0:
         noEntriesBool = True
+    else:
+        noEntriesBool = False
     
     return tooManyEntriesBool, noEntriesBool
 
 def idaWebDataInventory(driver):
-    # Rest of the logic thingys
+    # go to data inventory
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Data inventory")]').click()   
+
+    # click select all
+    driver.find_element_by_xpath('//*[@id="list_actions"]/input[2]').click()  
+
+def idaWebDataInventoryManual(driver):
+    # go to data inventory
+    driver.find_element_by_xpath('//*[@id="wizard"]//*[contains(., "Data inventory")]').click()   
+
     print("Here")
 
 def idaWebOrder(driver, orderName):
