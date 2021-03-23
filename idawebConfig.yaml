@@ -1,6 +1,24 @@
 "D":
   - "lightning":
     - "breclod0"
-  - "soil temperature"
+    - "brefard0"
+  - "temperature":
+    - "tre200dx"
+    - "tre200d0"
+    - "tre200dn"
+  - "snow":
+    - "hns000d0"
 "M":
-  - "wind"
+  - "wind":
+    - "fklnd3m0"
+    - "fu3010m1"
+  - "snow":
+    - "hns000mx"
+  - "precipitation":
+    - "rsd700m0"
+    - "rs1000m0"
+    - "rzz150mx"
+    - "rhh150mx"
+    - "rre150m0"
+    - "rhs150m0"
+
