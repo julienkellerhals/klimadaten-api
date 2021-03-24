@@ -5,7 +5,8 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import abstractDriver
 
-def getDriverPath(driverFolder, browser = None):
+
+def getDriverPath(driverFolder, browser=None):
     driverInstalledBool = False
     driverPath = ""
     for driverPath in list(driverFolder.glob('**/*.exe')):
@@ -17,6 +18,7 @@ def getDriverPath(driverFolder, browser = None):
             driverPath = driverPath
     return driverInstalledBool, driverPath
 
+
 cwd = Path.cwd()
 driverFolder = cwd / "driver"
 _, driverPath = getDriverPath(driverFolder, None)
@@ -26,7 +28,9 @@ elif driverPath.name == "chromedriver.exe":
     browser = "Chrome"
 else:
     print("Browser not supported yet")
-driver = abstractDriver.createDriver(browser, driverPath, False) # make browser headless or not 
+# make browser headless or not
+driver = abstractDriver.createDriver(browser, driverPath, False)
+
 
 def test_meteoschweiz_title():
     driver.get('https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle')
