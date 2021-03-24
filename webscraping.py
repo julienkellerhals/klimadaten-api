@@ -33,8 +33,14 @@ def getLastPageBool(driver, lastPageBool):
     else:
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="body_block"]/form/div[5]/a[@title="Next"]').click()
-
     return lastPageBool
+
+def getUntil(since, timeDeltaList):
+    if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
+        until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
+    else:
+        until = date.today().strftime('%d.%m.%Y')
+    return until
 
 def scrape_meteoschweiz(driver, engine):
     url_list = []
@@ -108,24 +114,14 @@ def scrape_idaweb(driver, engine):
                 # create order name
                 now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
 
-
-
-
                 idaWebParameterPortal(driver)
                 idaWebParameterPreselection(driver, searchGroup, searchGranularity, searchName)
                 idaWebStationPreselection(driver)
                 
-
-
-
-
                 # Start time preselection
                 since = "01.01.1800"
                 until = date.today().strftime('%d.%m.%Y')
                 idaWebTimePreselection(driver, since, until)
-
-
-
 
                 tooManyEntriesBool = True
                 noEntriesBool = False
@@ -135,10 +131,7 @@ def scrape_idaweb(driver, engine):
                     if not len(timeDeltaList) == 0:
                         if tooManyEntriesBool:
                             timeDeltaList.remove(timeDeltaList[0])
-                            if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
-                                until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
-                            else:
-                                until = date.today().strftime('%d.%m.%Y')
+                            until = getUntil(since, timeDeltaList)
                             idaWebTimePreselection(driver, since, until)
                         else:
                             if not noEntriesBool:
@@ -153,10 +146,7 @@ def scrape_idaweb(driver, engine):
 
                                 # Go back to start and continue with next time frame
                                 since = until
-                                if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
-                                    until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
-                                else:
-                                    until = date.today().strftime('%d.%m.%Y')
+                                until = getUntil(since, timeDeltaList)
 
                                 # redo the whole order process
                                 idaWebParameterPortal(driver)
@@ -166,13 +156,9 @@ def scrape_idaweb(driver, engine):
 
                             else:
                                 since = until
-                                if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).date() < date.today():
-                                    until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(years=timeDeltaList[0])).strftime('%d.%m.%Y')
-                                else:
-                                    until = date.today().strftime('%d.%m.%Y')
+                                until = getUntil(since, timeDeltaList)
                                 idaWebTimePreselection(driver, since, until)
-
-                    
+  
                     else:
                         idaWebDataInventoryManual(driver)
                         inventoryDf = scrapeIdawebInventory(driver)
@@ -191,11 +177,13 @@ def scrape_idaweb(driver, engine):
                                 driver.execute_script(js)
 
                         # create order name
-                        now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
                         orderName = f'{searchGroup[0]}{searchGranularity.lower()}{orderNumber}_{now}'
+                        idaWebOrder(driver, orderName)
+                        orderNumber += 1
                         
                         # Continue with order process
-                        orderNavigationProcess(driver, orderName)
+                        idaWebSummary(driver)
+                        idaWebAgbs(driver)
 
                         orderNumber += 1
                         # Add roder to list
