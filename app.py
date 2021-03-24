@@ -15,7 +15,8 @@ import webscraping
 
 app = Flask(__name__)
 
-def getDriverPath(driverFolder, browser = None):
+
+def getDriverPath(driverFolder, browser=None):
     driverInstalledBool = False
     driverPath = ""
     for driverPath in list(driverFolder.glob('**/*.exe')):
@@ -27,10 +28,11 @@ def getDriverPath(driverFolder, browser = None):
             driverPath = driverPath
     return driverInstalledBool, driverPath
 
+
 def testGlobal():
     """
     Tests if the global variable are set.
-    initiates them if they aren't. 
+    initiates them if they aren't.
     """
     try:
         global driver
@@ -48,7 +50,8 @@ def testGlobal():
             browser = "Chrome"
         else:
             print("Browser not supported yet")
-        driver = abstractDriver.createDriver(browser, driverPath, False) # make browser headless or not 
+        # make browser headless or not
+        driver = abstractDriver.createDriver(browser, driverPath, False)
 
     try:
         global engine
@@ -57,16 +60,21 @@ def testGlobal():
         print("Engine not started")
         print("Starting programatically")
         print("Assuming you installed the database")
-        engine = create_engine("postgresql://postgres:postgres@localhost:5432/klimadb", echo=True)
-    
+        engine = create_engine(
+            "postgresql://postgres:postgres@localhost:5432/klimadb",
+            echo=True
+        )
+
 
 @app.route("/")
 def mainPage():
     return "Load web fe"
 
+
 @app.route("/api")
 def api():
     return "API"
+
 
 @app.route("/admin/driver/<browser>", methods=['GET'])
 def createDriver(browser):
@@ -87,7 +95,12 @@ def createDriver(browser):
         if browserVersion.split("/")[0] == browser:
             version = browserVersion.split("/")[1]
     if len(version) == 0:
-        # output += "Browser not found, options are - Mozilla, AppleWebKit, Chrome, Safari, Edg" + "</br>"
+        # output += "Browser not found, options are -
+        # Mozilla,
+        # AppleWebKit,
+        # Chrome,
+        # Safari,
+        # Edg
         output += "Browser not found, options are - Chrome, Edg" + "</br>"
 
     # get driver path
@@ -97,12 +110,24 @@ def createDriver(browser):
     if not driverInstalledBool:
         output += "Installing driver" + "</br>"
         if browser == "Chrome":
-            browserDriverDownloadPage, _, _ = download.getRequest("https://chromedriver.chromium.org/downloads")
-            pattern = r"ChromeDriver (" + version.split(".")[0] + r"\.\d*\.\d*\.\d*)"
-            existingDriverVersion = re.findall(pattern, browserDriverDownloadPage.content.decode("utf-8"))[0]
-            browserDriverDownloadUrl = "https://chromedriver.storage.googleapis.com/" + existingDriverVersion + "/chromedriver_win32.zip"
+            browserDriverDownloadPage, _, _ = download.getRequest(
+                "https://chromedriver.chromium.org/downloads"
+            )
+            pattern = r"ChromeDriver (" \
+                + version.split(".")[0] \
+                + r"\.\d*\.\d*\.\d*)"
+            existingDriverVersion = re.findall(
+                pattern,
+                browserDriverDownloadPage.content.decode("utf-8")
+            )[0]
+            browserDriverDownloadUrl = \
+                "https://chromedriver.storage.googleapis.com/" \
+                + existingDriverVersion \
+                + "/chromedriver_win32.zip"
         elif browser == "Edg":
-            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" + version + "/edgedriver_win64.zip"
+            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" \
+                + version \
+                + "/edgedriver_win64.zip"
         else:
             print("Browser not supported yet")
         output += "Driver URL: " + browserDriverDownloadUrl + "</br>"
@@ -128,25 +153,30 @@ def createDriver(browser):
 
     return output
 
+
 @app.route("/admin/refresh")
 def refreshData():
     return "Run webscraping"
+
 
 @app.route("/admin/test")
 def getTest():
     return "hello world"
 
+
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
-    testGlobal() # to test if the global variable are set
+    testGlobal()  # to test if the global variable are set
     resp = webscraping.scrape_meteoschweiz(driver, engine)
     return resp
 
+
 @app.route("/admin/scrape/idaweb")
 def scrapeIdaweb():
-    testGlobal() # to test if the global variable are set
+    testGlobal()  # to test if the global variable are set
     resp = webscraping.scrape_idaweb(driver, engine)
     return resp
+
 
 @app.route("/admin/db/connect")
 def createConnection():
@@ -154,10 +184,12 @@ def createConnection():
     instance = db.Database()
     return "Connected"
 
+
 @app.route("/admin/db/create")
 def createDatabase():
     instance.createDatabase()
     return "Database created"
+
 
 @app.route("/admin/db/table")
 def createTable():
