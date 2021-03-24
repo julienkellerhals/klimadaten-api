@@ -15,10 +15,10 @@ import webscraping
 
 app = Flask(__name__)
 
-def getDriverPath(driverfolder, browser = None):
+def getDriverPath(driverFolder, browser = None):
     driverInstalledBool = False
     driverPath = ""
-    for driverPath in list(driverfolder.glob('**/*.exe')):
+    for driverPath in list(driverFolder.glob('**/*.exe')):
         if browser is not None:
             if browser.lower() in driverPath.name:
                 driverInstalledBool = True
@@ -40,8 +40,8 @@ def testGlobal():
         print("Starting programatically")
         print("Assuming you installed only required drivers")
         cwd = Path.cwd()
-        driverfolder = cwd / "driver"
-        _, driverPath = getDriverPath(driverfolder, None)
+        driverFolder = cwd / "driver"
+        _, driverPath = getDriverPath(driverFolder, None)
         if driverPath.name == "msedgedriver.exe":
             browser = "Edg"
         elif driverPath.name == "chromedriver.exe":
