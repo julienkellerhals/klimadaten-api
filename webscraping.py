@@ -15,13 +15,6 @@ from selenium.common.exceptions import NoSuchElementException
 import download
 
 
-def format_sse(data: str, event=None) -> str:
-    msg = f'data: {data}\n\n'
-    if event is not None:
-        msg = f'event: {event}\n{msg}'
-    return msg
-
-
 def readConfig(configFileName):
     with open(configFileName) as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
@@ -69,7 +62,7 @@ def getUntil(since, timeDeltaList):
     return until
 
 
-def scrape_meteoschweiz(driver, engine, announcer):
+def scrape_meteoschweiz(driver, engine):
     url_list = []
     allStationsDf = pd.DataFrame(columns=[
         'year',
@@ -88,16 +81,10 @@ def scrape_meteoschweiz(driver, engine, announcer):
         "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
     )
 
-    for urlEl in urls:
-        url = urlEl.get_attribute('href')
+    for url in urls:
+        url_list.append(url.get_attribute('href'))
 
-        msgTxt = "Scrapping: " + url
-        msg = format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-        url_list.append(url)
-
-        dataPage, _, _ = download.getRequest(url)
+        dataPage, _, _ = download.getRequest(url.get_attribute('href'))
         data = dataPage.text.splitlines()
 
         nestedData = []
