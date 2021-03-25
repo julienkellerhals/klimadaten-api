@@ -18,6 +18,7 @@ import webscraping
 import messageAnnouncer
 
 app = Flask(__name__)
+announcer = messageAnnouncer.MessageAnnouncer()
 
 
 def getDriverPath(driverFolder, browser=None):
@@ -86,9 +87,6 @@ def ping():
 
 @app.route('/listen', methods=['GET'])
 def listen():
-    global announcer
-    announcer = messageAnnouncer.MessageAnnouncer()
-
     def stream():
         messages = announcer.listen()  # returns a queue.Queue
         while True:
@@ -199,9 +197,25 @@ def getTest():
 
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
-    testGlobal()  # to test if the global variable are set
-    resp = webscraping.scrape_meteoschweiz(driver, engine)
-    return resp
+    return render_template(
+        "index.html.jinja",
+        streamUrl="/admin/stream/meteoschweiz"
+    )
+
+
+@app.route("/admin/stream/meteoschweiz")
+def streamMeteoschweiz():
+
+    def stream():
+        messages = announcer.listen()  # returns a queue.Queue
+
+        testGlobal()  # to test if the global variable are set
+        webscraping.scrape_meteoschweiz(driver, engine, announcer)
+
+        while True:
+            msg = messages.get()  # blocks until a new message arrives
+            yield msg
+    return Response(stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/scrape/idaweb")
