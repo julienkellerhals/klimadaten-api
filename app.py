@@ -1,6 +1,7 @@
 import os
 import io
 import re
+import time
 import zipfile
 import sqlalchemy
 import abstractDriver
@@ -10,8 +11,11 @@ from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
 from flask import request
+from flask import render_template
+from flask import Response
 import download
 import webscraping
+import messageAnnouncer
 
 app = Flask(__name__)
 
@@ -66,13 +70,42 @@ def testGlobal():
         )
 
 
+def format_sse(data: str, event=None) -> str:
+    msg = f'data: {data}\n\n'
+    if event is not None:
+        msg = f'event: {event}\n{msg}'
+    return msg
+
+
+@app.route('/ping')
+def ping():
+    msg = format_sse(data='pong')
+    announcer.announce(msg=msg)
+    return {}, 200
+
+
+@app.route('/listen', methods=['GET'])
+def listen():
+    global announcer
+    announcer = messageAnnouncer.MessageAnnouncer()
+
+    def stream():
+        messages = announcer.listen()  # returns a queue.Queue
+        while True:
+            msg = messages.get()  # blocks until a new message arrives
+            yield msg
+
+    return Response(stream(), mimetype='text/event-stream')
+
+
 @app.route("/")
 def mainPage():
-    return "Load web fe"
+    return render_template("index.html")
 
 
 @app.route("/api")
 def api():
+    get_message("by me")
     return "API"
 
 
