@@ -3,9 +3,10 @@ import io
 import re
 import time
 import zipfile
+import threading
+import subprocess
 import sqlalchemy
 import abstractDriver
-import threading
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
@@ -79,17 +80,6 @@ def format_sse(data: str, event=None) -> str:
     return msg
 
 
-@app.route('/listen', methods=['GET'])
-def listen():
-    def stream():
-        messages = announcer.listen()  # returns a queue.Queue
-        while True:
-            msg = messages.get()  # blocks until a new message arrives
-            yield msg
-
-    return Response(stream(), mimetype='text/event-stream')
-
-
 def stream():
     messages = announcer.listen()  # returns a queue.Queue
 
@@ -100,16 +90,15 @@ def stream():
 
 @app.route("/")
 def mainPage():
-    return render_template("index.html")
+    return "Hello World, story will be here"
 
 
 @app.route("/api")
 def api():
-    get_message("by me")
     return "API"
 
 
-@app.route("/admin/driver/<browser>", methods=['GET'])
+@app.route("/admin/driver/<browser>")
 def createDriver(browser):
     """
     Run this function on first install to create a driver.
@@ -193,8 +182,34 @@ def refreshData():
 
 
 @app.route("/admin/test")
-def getTest():
-    return "hello world"
+def runTests():
+    return render_template(
+        "index.html.jinja",
+        streamUrl="/admin/stream/test"
+    )
+
+
+@app.route("/admin/stream/test")
+def streamTest():
+    def runTestSubprocess():
+        with subprocess.Popen(
+            ["pytest", "-v"],
+            # ["ipconfig"],
+            stdout=subprocess.PIPE
+        ) as proc:
+            proc.wait()
+            res = proc.stdout.read().decode()
+            msgTxt = "Testing: " + res
+            msgTxt = msgTxt.replace("\r\n", "<br>")
+            msg = format_sse(data=msgTxt)
+            announcer.announce(msg=msg)
+
+    x = threading.Thread(
+        target=runTestSubprocess
+    )
+    x.start()
+
+    return Response(stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/scrape/meteoschweiz")
