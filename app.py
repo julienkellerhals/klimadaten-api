@@ -2,6 +2,7 @@ import os
 import io
 import re
 import time
+import psutil
 import zipfile
 import threading
 import subprocess
@@ -192,14 +193,25 @@ def runTests():
 @app.route("/admin/stream/test")
 def streamTest():
     def runTestSubprocess():
-        with subprocess.Popen(
-            ["pytest", "-v"],
-            # ["ipconfig"],
-            stdout=subprocess.PIPE
-        ) as proc:
-            proc.wait()
-            res = proc.stdout.read().decode()
-            msgTxt = "Testing: " + res
+        testNameList = [
+            "meteoschweiz",
+            "idaweb"
+        ]
+        for testName in testNameList:
+            p = subprocess.Popen(
+                ["pytest", "-v", "-m", testName],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE
+            )
+            while True:
+                time.sleep(2)
+                proc = psutil.Process(p.pid)
+                print(proc.threads())
+                if len(proc.threads()) < 2:
+                    proc.kill()
+                    break
+            out, err = p.communicate()
+            msgTxt = "Testing: " + out.decode()
             msgTxt = msgTxt.replace("\r\n", "<br>")
             msg = format_sse(data=msgTxt)
             announcer.announce(msg=msg)
