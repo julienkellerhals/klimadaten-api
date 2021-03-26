@@ -1,6 +1,7 @@
 import os
 import io
 import re
+import time
 import psutil
 import zipfile
 import threading
@@ -12,11 +13,15 @@ from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
 from flask import request
+from flask import render_template
+from flask import Response
 import db
 import download
 import webscraping
+import messageAnnouncer
 
 app = Flask(__name__)
+announcer = messageAnnouncer.MessageAnnouncer()
 
 
 def createDriver(browser, headlessStr, userAgent):
@@ -162,12 +167,21 @@ def testGlobal():
         )
 
 
+def format_sse(data: str, event=None) -> str:
+    msg = f'data: {data}\n\n'
+    if event is not None:
+        msg = f'event: {event}\n{msg}'
+    return msg
+
+
 def stream():
     messages = announcer.listen()  # returns a queue.Queue
 
     while True:
         msg = messages.get()  # blocks until a new message arrives
         yield msg
+
+
 @app.route("/")
 def mainPage():
     return "Hello World, story will be here"
@@ -253,12 +267,22 @@ def streamTest():
 
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
+    return render_template(
+        "index.html.jinja",
+        streamUrl="/admin/stream/meteoschweiz"
+    )
+
+
+@app.route("/admin/stream/meteoschweiz")
+def streamMeteoschweiz():
     testGlobal()  # to test if the global variable are set
     x = threading.Thread(
         target=webscraping.scrape_meteoschweiz,
         args=(driver, engine, announcer)
     )
     x.start()
+
+    return Response(stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/scrape/idaweb")
