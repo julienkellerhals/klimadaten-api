@@ -5,7 +5,7 @@ import time
 import zipfile
 import sqlalchemy
 import abstractDriver
-import db
+import threading
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
@@ -13,6 +13,7 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from flask import Response
+import db
 import download
 import webscraping
 import messageAnnouncer
@@ -56,7 +57,7 @@ def testGlobal():
         else:
             print("Browser not supported yet")
         # make browser headless or not
-        driver = abstractDriver.createDriver(browser, driverPath, False)
+        driver = abstractDriver.createDriver(browser, driverPath, True)
 
     try:
         global engine
@@ -78,13 +79,6 @@ def format_sse(data: str, event=None) -> str:
     return msg
 
 
-@app.route('/ping')
-def ping():
-    msg = format_sse(data='pong')
-    announcer.announce(msg=msg)
-    return {}, 200
-
-
 @app.route('/listen', methods=['GET'])
 def listen():
     def stream():
@@ -94,6 +88,14 @@ def listen():
             yield msg
 
     return Response(stream(), mimetype='text/event-stream')
+
+
+def stream():
+    messages = announcer.listen()  # returns a queue.Queue
+
+    while True:
+        msg = messages.get()  # blocks until a new message arrives
+        yield msg
 
 
 @app.route("/")
@@ -205,16 +207,13 @@ def scrapeMeteoschweiz():
 
 @app.route("/admin/stream/meteoschweiz")
 def streamMeteoschweiz():
+    testGlobal()  # to test if the global variable are set
+    x = threading.Thread(
+        target=webscraping.scrape_meteoschweiz,
+        args=(driver, engine, announcer)
+    )
+    x.start()
 
-    def stream():
-        messages = announcer.listen()  # returns a queue.Queue
-
-        testGlobal()  # to test if the global variable are set
-        webscraping.scrape_meteoschweiz(driver, engine, announcer)
-
-        while True:
-            msg = messages.get()  # blocks until a new message arrives
-            yield msg
     return Response(stream(), mimetype='text/event-stream')
 
 
