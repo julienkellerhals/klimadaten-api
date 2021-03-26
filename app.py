@@ -24,6 +24,99 @@ app = Flask(__name__)
 announcer = messageAnnouncer.MessageAnnouncer()
 
 
+def createDriver(browser, headlessStr, userAgent):
+    """
+    Run this function on first install to create a driver.
+    """
+
+    cwd = Path.cwd()
+    driverFolder = cwd / "driver"
+    if not driverFolder.exists():
+        os.mkdir("driver")
+
+    msgTxt = "User agent: " + userAgent + "<br>"
+    msg = format_sse(data=msgTxt)
+    announcer.announce(msg=msg)
+
+    for browserVersion in userAgent.split(" "):
+        if browserVersion.split("/")[0] == browser:
+            version = browserVersion.split("/")[1]
+    if len(version) == 0:
+        # output += "Browser not found, options are -
+        # Mozilla,
+        # AppleWebKit,
+        # Chrome,
+        # Safari,
+        # Edg
+        msgTxt = "Error: Browser not found, options are - Chrome, Edg <br>"
+        msg = format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+    # get driver path
+    driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
+
+    # download driver
+    if not driverInstalledBool:
+        msgTxt = "Installing driver <br>"
+        msg = format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+        if browser == "Chrome":
+            browserDriverDownloadPage, _, _ = download.getRequest(
+                "https://chromedriver.chromium.org/downloads"
+            )
+            pattern = r"ChromeDriver (" \
+                + version.split(".")[0] \
+                + r"\.\d*\.\d*\.\d*)"
+            existingDriverVersion = re.findall(
+                pattern,
+                browserDriverDownloadPage.content.decode("utf-8")
+            )[0]
+            browserDriverDownloadUrl = \
+                "https://chromedriver.storage.googleapis.com/" \
+                + existingDriverVersion \
+                + "/chromedriver_win32.zip"
+        elif browser == "Edg":
+            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" \
+                + version \
+                + "/edgedriver_win64.zip"
+        else:
+            print("Browser not supported yet")
+
+        msgTxt = "Driver URL: " + browserDriverDownloadUrl + "<br>"
+        msg = format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+        driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
+        driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
+        driverZip.extractall(driverFolder)
+
+        msgTxt = "Downloaded and extracted driver <br>"
+        msg = format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+        # get driver path
+        driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
+    else:
+        msgTxt = "Driver already satisfied <br>"
+        msg = format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+    # Convert to string
+    if headlessStr.lower() == "true":
+        headlessBool = True
+    else:
+        headlessBool = False
+
+    # Create driver
+    global driver
+    driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
+
+    msgTxt = "Started Driver <br>"
+    msg = format_sse(data=msgTxt)
+    announcer.announce(msg=msg)
+
+
 def getDriverPath(driverFolder, browser=None):
     driverInstalledBool = False
     driverPath = ""
@@ -100,81 +193,29 @@ def api():
 
 
 @app.route("/admin/driver/<browser>")
-def createDriver(browser):
-    """
-    Run this function on first install to create a driver.
-    """
-    output = ""
-    cwd = Path.cwd()
-    driverFolder = cwd / "driver"
-    if not driverFolder.exists():
-        os.mkdir("driver")
+def driver(browser):
+    reqUrl = request.full_path
+    streamUrl = reqUrl.replace(
+        "/admin",
+        "/admin/stream"
+    )
+    return render_template(
+        "index.html.jinja",
+        streamUrl=streamUrl
+    )
+
+
+@app.route("/admin/stream/driver/<browser>")
+def streamDriver(browser):
     headlessStr = request.args['headless']
-
-    # user agent
     userAgent = request.headers.get('User-Agent')
-    output += "User agent: " + userAgent + "</br>"
-    for browserVersion in userAgent.split(" "):
-        if browserVersion.split("/")[0] == browser:
-            version = browserVersion.split("/")[1]
-    if len(version) == 0:
-        # output += "Browser not found, options are -
-        # Mozilla,
-        # AppleWebKit,
-        # Chrome,
-        # Safari,
-        # Edg
-        output += "Browser not found, options are - Chrome, Edg" + "</br>"
 
-    # get driver path
-    driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-
-    # download driver
-    if not driverInstalledBool:
-        output += "Installing driver" + "</br>"
-        if browser == "Chrome":
-            browserDriverDownloadPage, _, _ = download.getRequest(
-                "https://chromedriver.chromium.org/downloads"
-            )
-            pattern = r"ChromeDriver (" \
-                + version.split(".")[0] \
-                + r"\.\d*\.\d*\.\d*)"
-            existingDriverVersion = re.findall(
-                pattern,
-                browserDriverDownloadPage.content.decode("utf-8")
-            )[0]
-            browserDriverDownloadUrl = \
-                "https://chromedriver.storage.googleapis.com/" \
-                + existingDriverVersion \
-                + "/chromedriver_win32.zip"
-        elif browser == "Edg":
-            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" \
-                + version \
-                + "/edgedriver_win64.zip"
-        else:
-            print("Browser not supported yet")
-        output += "Driver URL: " + browserDriverDownloadUrl + "</br>"
-        driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
-        driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
-        driverZip.extractall(driverFolder)
-        output += "Downloaded and extracted driver" + "</br>"
-        # get driver path
-        driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-    else:
-        output += "Driver already satisfied" + "</br>"
-
-    # Convert to string
-    if headlessStr.lower() == "true":
-        headlessBool = True
-    else:
-        headlessBool = False
-
-    # Create driver
-    global driver
-    driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
-    output += "Started Driver" + "</br>"
-
-    return output
+    x = threading.Thread(
+        target=createDriver,
+        args=(browser, headlessStr, userAgent)
+    )
+    x.start()
+    return Response(stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/refresh")
