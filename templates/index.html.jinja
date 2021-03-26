@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stream</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            font-family: verdana;
+        }
+
+        #container {
+            width: 100%;
+            padding: 2vh 4vw;
+            display: flex;
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+
+        #eventLog {
+            display: flex;
+            flex: 0 1 auto;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow-x: auto;
+        }
+
+        .eventItem {
+            height: 52pt;
+            flex-basis: auto;
+            font-family: "Courier New"
+        }
+    </style>
 </head>
+
 <body>
-    <div id="target_div">Watch this space...</div>
-    <script>
-        var targetContainer = document.getElementById("target_div");
-        var eventSource = new EventSource("{{streamUrl}}")
-          eventSource.onmessage = function(e) {
-          targetContainer.innerHTML = e.data;
-        };
-    </script>
+    <h2>Event log</h2>
+    <h3>{{streamUrl}}</h3>
+    <div id="container">
+        <div id="eventLog"></div>
+        <script>
+            var eventContainer = document.getElementById("eventLog");
+            var eventSource = new EventSource("{{streamUrl}}")
+            eventSource.onmessage = function (e) {
+                var entry = document.createElement("div");
+                entry.className = "eventItem"
+                entry.append(e.data);
+                eventContainer.appendChild(entry);
+            };
+        </script>
+    </div>
 </body>
+
 </html>
