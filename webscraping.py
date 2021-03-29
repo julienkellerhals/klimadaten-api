@@ -4,6 +4,7 @@ import time
 import yaml
 import numpy as np
 import pandas as pd
+from lxml import etree
 from datetime import date
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
@@ -22,10 +23,34 @@ def format_sse(data: str, event=None) -> str:
     return msg
 
 
+def createJs(value):
+    js = (
+        "var form = document.getElementsByTagName('form')[0];"  # get form
+        "var checkbox = document.createElement('input');"  # create input
+        "checkbox.checked = true;"  # set input to checked
+        "checkbox.name = 'selection';"  # set input name
+        f"checkbox.value = '{value}';"  # set input value
+        "updateCount(checkbox.checked);"  # update count
+        "form.appendChild(checkbox);"  # add checkbox
+    )
+    return js
+
+
+def createOrderName(config, orderNumber, now):
+    orderName = f'{config.attrib['group'][0]}' \
+                f'{config.attrib['granularity'].lower()}' \
+                f'{orderNumber}_{now}'
+    return orderName
+
+
 def readConfig(configFileName):
-    with open(configFileName) as f:
-        config = yaml.load(f, Loader=yaml.FullLoader)
-    return config
+    configList = []
+
+    tree = etree.parse("idawebConfig.xml")
+    root = tree.getroot()
+    for config in root:
+        configList.append(config)
+    return configList
 
 
 def indexMarks(nrows, chunk_size):
@@ -163,110 +188,94 @@ def scrape_idaweb(driver, engine):
     saved_documents = []
     configFileName = "idawebConfig.yaml"
 
+    # read config file
+    configList = readConfig(configFileName)
+
     # login
     scrape_idaweb_login(driver)
 
-    # read config file
-    config = readConfig(configFileName)
+    for config in configList:
+        orderNumber = 1
+        # create order name
+        now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
 
-    for searchGranularity in config:
-        for searchGroupDict in config[searchGranularity]:
-            searchGroup = list(searchGroupDict.keys())[0]
-            for searchName in searchGroupDict[searchGroup]:
-                orderNumber = 1
-                # create order name
-                now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+        idaWebParameterPortal(driver)
+        idaWebParameterPreselection(
+            driver,
+            config.attrib['group'],
+            config.attrib['granularity'],
+            config.text
+        )
+        idaWebStationPreselection(driver)
 
-                idaWebParameterPortal(driver)
-                idaWebParameterPreselection(
-                    driver,
-                    searchGroup,
-                    searchGranularity,
-                    searchName
-                )
-                idaWebStationPreselection(driver)
+        # Start time preselection
+        since = "01.01.1800"
+        until = date.today().strftime('%d.%m.%Y')
+        idaWebTimePreselection(driver, since, until)
 
-                # Start time preselection
-                since = "01.01.1800"
-                until = date.today().strftime('%d.%m.%Y')
-                idaWebTimePreselection(driver, since, until)
+        tooManyEntriesBool = True
+        noEntriesBool = False
+        timeDeltaList = [1000, 100, 10, 1]
+        while True:
+            tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
+                driver,
+                tooManyEntriesBool,
+                noEntriesBool
+            )
+            if not len(timeDeltaList) == 0:
+                if tooManyEntriesBool:
+                    timeDeltaList.remove(timeDeltaList[0])
+                    until = getUntil(since, timeDeltaList)
+                    idaWebTimePreselection(driver, since, until)
+                else:
+                    if not noEntriesBool:
+                        idaWebDataInventory(driver)
 
-                tooManyEntriesBool = True
-                noEntriesBool = False
-                timeDeltaList = [1000, 100, 10, 1]
-                while True:
-                    tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
-                        driver,
-                        tooManyEntriesBool,
-                        noEntriesBool
-                    )
-                    if not len(timeDeltaList) == 0:
-                        if tooManyEntriesBool:
-                            timeDeltaList.remove(timeDeltaList[0])
-                            until = getUntil(since, timeDeltaList)
-                            idaWebTimePreselection(driver, since, until)
-                        else:
-                            if not noEntriesBool:
-                                idaWebDataInventory(driver)
-
-                                orderName = f'{searchGroup[0]}' \
-                                            f'{searchGranularity.lower()}' \
-                                            f'{orderNumber}_{now}'
-                                idaWebOrder(driver, orderName)
-                                orderNumber += 1
-
-                                idaWebSummary(driver)
-                                idaWebAgbs(driver)
-
-                                # Go back to start and continue
-                                since = until
-                                until = getUntil(since, timeDeltaList)
-
-                                # redo the whole order process
-                                idaWebParameterPortal(driver)
-                                idaWebParameterPreselection(
-                                    driver,
-                                    searchGroup,
-                                    searchGranularity,
-                                    searchName
-                                )
-                                idaWebStationPreselection(driver)
-                                idaWebTimePreselection(driver, since, until)
-
-                            else:
-                                since = until
-                                until = getUntil(since, timeDeltaList)
-                                idaWebTimePreselection(driver, since, until)
-
-                    else:
-                        idaWebDataInventoryManual(driver)
-                        inventoryDf = scrapeIdawebInventory(driver)
-                        chunks = splitDf(inventoryDf, 400)
-                        for chunk in chunks:
-                            for value in chunk["value"]:
-                                js = (
-                                    "var form = document.getElementsByTagName('form')[0];"  # get form
-                                    "var checkbox = document.createElement('input');"  # create input
-                                    "checkbox.checked = true;"  # set input to checked
-                                    "checkbox.name = 'selection';"  # set input name
-                                    f"checkbox.value = '{value}';"  # set input value
-                                    "updateCount(checkbox.checked);"  # update count
-                                    "form.appendChild(checkbox);"  # add checkbox
-                                )
-                                driver.execute_script(js)
-
-                        # create order name
-                        orderName = f'{searchGroup[0]}' \
-                                    f'{searchGranularity.lower()}' \
-                                    f'{orderNumber}_{now}'
+                        orderName = createOrderName(config, orderNumber, now)
                         idaWebOrder(driver, orderName)
                         orderNumber += 1
 
                         idaWebSummary(driver)
                         idaWebAgbs(driver)
 
-                        # Add roder to list
-                        saved_documents.append(orderName)
+                        # Go back to start and continue
+                        since = until
+                        until = getUntil(since, timeDeltaList)
+
+                        # redo the whole order process
+                        idaWebParameterPortal(driver)
+                        idaWebParameterPreselection(
+                            driver,
+                            config.attrib['group'],
+                            config.attrib['granularity'],
+                            config.text
+                        )
+                        idaWebStationPreselection(driver)
+                        idaWebTimePreselection(driver, since, until)
+
+                    else:
+                        since = until
+                        until = getUntil(since, timeDeltaList)
+                        idaWebTimePreselection(driver, since, until)
+
+            else:
+                idaWebDataInventoryManual(driver)
+                inventoryDf = scrapeIdawebInventory(driver)
+                chunks = splitDf(inventoryDf, 400)
+                for chunk in chunks:
+                    for value in chunk["value"]:
+                        createJs(value)
+                        driver.execute_script(js)
+
+                orderName = createOrderName(config, orderNumber, now)
+                idaWebOrder(driver, orderName)
+                orderNumber += 1
+
+                idaWebSummary(driver)
+                idaWebAgbs(driver)
+
+                # Add roder to list
+                saved_documents.append(orderName)
 
     print(saved_documents)
 
