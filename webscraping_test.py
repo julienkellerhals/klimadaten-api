@@ -7,6 +7,17 @@ import abstractDriver
 
 
 def getDriverPath(driverFolder, browser=None):
+    """ Check if driver is installed and returns path
+
+    Args:
+        driverFolder (Path): Pathlib path to driver folder
+        browser (string, optional): Browser type. Defaults to None.
+
+    Returns:
+        driverInstalledBool (bool): True if driver was found
+        driverPath (Path): Driver + driver name path
+    """
+
     driverInstalledBool = False
     driverPath = ""
     for driverPath in list(driverFolder.glob('**/*.exe')):

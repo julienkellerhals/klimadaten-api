@@ -6,6 +6,17 @@ from msedge.selenium_tools import Edge
 
 
 def createDriver(browser, driverPath, headless):
+    """ Start selenium web driver
+
+    Args:
+        browser (str): Browser type
+        driverPath (Path): Path to driver
+        headless (bool): Headless bool
+
+    Returns:
+        driver: selenium driver
+    """
+
     if browser == "Edg":
         edge_options = EdgeOptions()
         if headless:

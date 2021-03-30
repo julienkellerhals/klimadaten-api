@@ -17,6 +17,16 @@ import download
 
 
 def format_sse(data: str, event=None) -> str:
+    """ Converts string to sse format
+
+    Args:
+        data (str): String to be converted to sse format
+        event (string, optional): Event name. Defaults to None.
+
+    Returns:
+        str: sse string
+    """
+
     msg = f'data: {data}\n\n'
     if event is not None:
         msg = f'event: {event}\n{msg}'
@@ -24,6 +34,15 @@ def format_sse(data: str, event=None) -> str:
 
 
 def createJs(value):
+    """ Creates js for idaweb form
+
+    Args:
+        value (str): idaweb checkbox value
+
+    Returns:
+        str: Javascript to be executed on page
+    """
+
     js = (
         "var form = document.getElementsByTagName('form')[0];"  # get form
         "var checkbox = document.createElement('input');"  # create input
@@ -37,6 +56,17 @@ def createJs(value):
 
 
 def createOrderName(config, orderNumber, now):
+    """ Creates order name
+
+    Args:
+        config (xml): Config from idawebConfig.xml
+        orderNumber (str): Order number
+        now (str): Date time from order
+
+    Returns:
+        str: Order name for idaweb data
+    """
+
     orderName = f'{config.attrib['group'][0]}' \
                 f'{config.attrib['granularity'].lower()}' \
                 f'{orderNumber}_{now}'
@@ -44,9 +74,18 @@ def createOrderName(config, orderNumber, now):
 
 
 def readConfig(configFileName):
+    """ Read config file
+
+    Args:
+        configFileName (str): config file name
+
+    Returns:
+        list: Configuration in config file
+    """
+
     configList = []
 
-    tree = etree.parse("idawebConfig.xml")
+    tree = etree.parse(configFileName)
     root = tree.getroot()
     for config in root:
         configList.append(config)
@@ -54,6 +93,16 @@ def readConfig(configFileName):
 
 
 def indexMarks(nrows, chunk_size):
+    """ Return idx range for df spliting
+
+    Args:
+        nrows (int): Number of rows in dataframe
+        chunk_size (int): Target chunk size
+
+    Returns:
+        range: Index range for split
+    """
+
     indexMarksRange = range(
         chunk_size,
         math.ceil(nrows / chunk_size) * chunk_size,
@@ -63,11 +112,31 @@ def indexMarks(nrows, chunk_size):
 
 
 def splitDf(dfm, chunk_size):
+    """ Splits df into specified chunks
+
+    Args:
+        dfm (df): Input dataframe
+        chunk_size (int): Target chunk size for df
+
+    Returns:
+        np: Splited df
+    """
+
     indices = indexMarks(dfm.shape[0], chunk_size)
     return np.split(dfm, indices)
 
 
 def getLastPageBool(driver, lastPageBool):
+    """ Checks if the driver is at the last table page
+
+    Args:
+        driver (driver): Web driver
+        lastPageBool (bool): If last page
+
+    Returns:
+        bool: If last page
+    """
+
     arrowPath = WebDriverWait(driver, 3).until(
         EC.presence_of_element_located(
             (By.XPATH, '//*[@id="body_block"]/form/div[5]')
@@ -85,6 +154,16 @@ def getLastPageBool(driver, lastPageBool):
 
 
 def getUntil(since, timeDeltaList):
+    """ Creates until time for data request (max. today)
+
+    Args:
+        since (datetime): Since datetime
+        timeDeltaList (array): Delta to add on since date
+
+    Returns:
+        datetime: Incremented since date
+    """
+
     if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
             years=timeDeltaList[0])).date() < date.today():
         until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
@@ -95,6 +174,17 @@ def getUntil(since, timeDeltaList):
 
 
 def scrape_meteoschweiz(driver, engine, announcer):
+    """ Scrape data from meteo suisse
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+        announcer (announcer): Message announcer
+
+    Returns:
+        str: Scrapped data
+    """
+
     url_list = []
     allStationsDf = pd.DataFrame(columns=[
         'year',
@@ -181,12 +271,24 @@ def scrape_meteoschweiz(driver, engine, announcer):
     # allStationsDf.isnull().sum().head()
     # pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
     # allStationsDf.dtypes
+
+    # TODO See what to return
     return str(allStationsDf)
 
 
 def scrape_idaweb(driver, engine):
+    """ Scrape idaweb
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+
+    Returns:
+        str: Downloaded documents list
+    """
+
     saved_documents = []
-    configFileName = "idawebConfig.yaml"
+    configFileName = "idawebConfig.xml"
 
     # read config file
     configList = readConfig(configFileName)
@@ -283,6 +385,12 @@ def scrape_idaweb(driver, engine):
 
 
 def scrape_idaweb_login(driver):
+    """ Login into idaweb
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
     # log into page
@@ -295,6 +403,12 @@ def scrape_idaweb_login(driver):
 
 
 def idaWebParameterPortal(driver):
+    """ Go to parameter portal
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
@@ -305,6 +419,15 @@ def idaWebParameterPreselection(
         searchGroup,
         searchGranularity,
         searchName):
+    """ Go to parameter preselection, filter and select all
+
+    Args:
+        driver (driver): Selenium driver
+        searchGroup (str): Search group (lightning, wind, ...)
+        searchGranularity (str): Search granularity (D, M, ...)
+        searchName (str): Parameter name
+    """
+
     # select search parameter
     driver.find_element_by_xpath(
         f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]'
@@ -328,6 +451,12 @@ def idaWebParameterPreselection(
 
 
 def idaWebStationPreselection(driver):
+    """ Go to station preselection and select all
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to station preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Station preselection")]'
@@ -340,6 +469,14 @@ def idaWebStationPreselection(driver):
 
 
 def idaWebTimePreselection(driver, since, until):
+    """ Go to web time preselection and filer
+
+    Args:
+        driver (driver): Selenium driver
+        since (str): Since date
+        until (str): Until date
+    """
+
     # go to time preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Time preselection")]'
@@ -355,6 +492,17 @@ def idaWebTimePreselection(driver, since, until):
 
 
 def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
+    """ Count entries in inventory
+
+    Args:
+        driver (driver): Selenium driver
+        tooManyEntriesBool (bool): To many entries
+        noEntriesBool (bool): No entries
+
+    Returns:
+        bools: Bools with inventory result
+    """
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -378,6 +526,12 @@ def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
 
 
 def idaWebDataInventory(driver):
+    """ Go to data inventory and select all
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -390,6 +544,14 @@ def idaWebDataInventory(driver):
 
 
 def idaWebDataInventoryManual(driver):
+    """ Go to inventory and .... to be implemented
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
+    # TODO implement run js here?
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -399,6 +561,13 @@ def idaWebDataInventoryManual(driver):
 
 
 def idaWebOrder(driver, orderName):
+    """ Go to order and order data
+
+    Args:
+        driver (driver): Selenium driver
+        orderName (str): Order name
+    """
+
     # go to order
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -417,6 +586,12 @@ def idaWebOrder(driver, orderName):
 
 
 def idaWebSummary(driver):
+    """ Go to summary
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to summary
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Summary")]'
@@ -424,6 +599,12 @@ def idaWebSummary(driver):
 
 
 def idaWebAgbs(driver):
+    """ Go to agbs and accepts
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to general terms and conditions
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "General Terms and Conditions")]'
@@ -445,6 +626,15 @@ def idaWebAgbs(driver):
 
 
 def scrapeIdawebInventory(driver):
+    """ Scrape data inventory for manual select
+
+    Args:
+        driver (driver): Selenium driver
+
+    Returns:
+        df: Dataframe with all tables concated
+    """
+
     rowHeaders = [
         "station",
         "alt",
@@ -478,6 +668,17 @@ def scrapeIdawebInventory(driver):
 
 
 def scrapeIdawebOrders(driver):
+    """ Scrape made orders
+
+    Args:
+        driver (driver): Selenium driver
+
+    Returns:
+        df: Dataframe containing all orders
+    """
+
+    # TODO join to made order and only download the new ones
+    # TODO if not available wait a few min
     rowHeaders = [
         "no",
         "reference",

@@ -25,8 +25,13 @@ announcer = messageAnnouncer.MessageAnnouncer()
 
 
 def createDriver(browser, headlessStr, userAgent):
-    """
-    Run this function on first install to create a driver.
+    """ Creates selenium driver for webscrapping automation
+        Downloads it into driver folder if not installed
+
+    Args:
+        browser (string): Browser type (Edge, Chrome, etc.)
+        headlessStr (string): Start in headless bool
+        userAgent (string): Browser user agent from header
     """
 
     cwd = Path.cwd()
@@ -118,6 +123,17 @@ def createDriver(browser, headlessStr, userAgent):
 
 
 def getDriverPath(driverFolder, browser=None):
+    """ Check if driver is installed and returns path
+
+    Args:
+        driverFolder (Path): Pathlib path to driver folder
+        browser (string, optional): Browser type. Defaults to None.
+
+    Returns:
+        driverInstalledBool (bool): True if driver was found
+        driverPath (Path): Driver + driver name path
+    """
+
     driverInstalledBool = False
     driverPath = ""
     for driverPath in list(driverFolder.glob('**/*.exe')):
@@ -131,10 +147,10 @@ def getDriverPath(driverFolder, browser=None):
 
 
 def testGlobal():
+    """ Tests if the global variable are set.
+        Initiates them if they aren't.
     """
-    Tests if the global variable are set.
-    initiates them if they aren't.
-    """
+
     try:
         global driver
         driver
@@ -168,6 +184,16 @@ def testGlobal():
 
 
 def format_sse(data: str, event=None) -> str:
+    """ Converts string to sse format
+
+    Args:
+        data (str): String to be converted to sse format
+        event (string, optional): Event name. Defaults to None.
+
+    Returns:
+        str: sse string
+    """
+
     msg = f'data: {data}\n\n'
     if event is not None:
         msg = f'event: {event}\n{msg}'
@@ -175,6 +201,12 @@ def format_sse(data: str, event=None) -> str:
 
 
 def stream():
+    """ Creates stream
+
+    Yields:
+        str: Message yield
+    """
+
     messages = announcer.listen()  # returns a queue.Queue
 
     while True:
@@ -184,16 +216,37 @@ def stream():
 
 @app.route("/")
 def mainPage():
+    """ Main page
+
+    Returns:
+        str: Temp main return
+    """
+
     return "Hello World, story will be here"
 
 
 @app.route("/api")
 def api():
+    """ API
+
+    Returns:
+        str: Temp
+    """
+
     return "API"
 
 
 @app.route("/admin/driver/<browser>")
 def driver(browser):
+    """ Returns driver page
+
+    Args:
+        browser (str): Browser type
+
+    Returns:
+        html: Renders html template
+    """
+
     reqUrl = request.full_path
     streamUrl = reqUrl.replace(
         "/admin",
@@ -207,6 +260,15 @@ def driver(browser):
 
 @app.route("/admin/stream/driver/<browser>")
 def streamDriver(browser):
+    """ Creates driver and data stream for driver page
+
+    Args:
+        browser (str): Browser type
+
+    Returns:
+        stream: Data stream for driver creation
+    """
+
     headlessStr = request.args['headless']
     userAgent = request.headers.get('User-Agent')
 
@@ -220,11 +282,23 @@ def streamDriver(browser):
 
 @app.route("/admin/refresh")
 def refreshData():
+    """ Temp route
+
+    Returns:
+        str: Temp
+    """
+
     return "Run webscraping"
 
 
 @app.route("/admin/test")
 def runTests():
+    """ Return test page
+
+    Returns:
+        html: Renders html template
+    """
+
     return render_template(
         "index.html.jinja",
         streamUrl="/admin/stream/test"
@@ -233,7 +307,17 @@ def runTests():
 
 @app.route("/admin/stream/test")
 def streamTest():
+    """ Runs tests and creates data stream for tests page
+
+    Returns:
+        stream: Data stream for test runs
+    """
+
     def runTestSubprocess():
+        # TODO try to take this func out and test it
+        """ Run subprocess in local thread
+        """
+
         testNameList = [
             "meteoschweiz",
             "idaweb"
@@ -267,6 +351,12 @@ def streamTest():
 
 @app.route("/admin/scrape/meteoschweiz")
 def scrapeMeteoschweiz():
+    """ Return meteosuisse page
+
+    Returns:
+        html: Renders html template
+    """
+
     return render_template(
         "index.html.jinja",
         streamUrl="/admin/stream/meteoschweiz"
@@ -275,6 +365,12 @@ def scrapeMeteoschweiz():
 
 @app.route("/admin/stream/meteoschweiz")
 def streamMeteoschweiz():
+    """ Runs meteo suisse scrapping process and returns stream
+
+    Returns:
+        stream: Meteosuisse stream
+    """
+
     testGlobal()  # to test if the global variable are set
     x = threading.Thread(
         target=webscraping.scrape_meteoschweiz,
@@ -287,6 +383,12 @@ def streamMeteoschweiz():
 
 @app.route("/admin/scrape/idaweb")
 def scrapeIdaweb():
+    """ Runs idaweb scrapping
+
+    Returns:
+        str: temp
+    """
+
     testGlobal()  # to test if the global variable are set
     resp = webscraping.scrape_idaweb(driver, engine)
     return resp
@@ -294,6 +396,12 @@ def scrapeIdaweb():
 
 @app.route("/admin/db/connect")
 def createConnection():
+    """ Creates database connection
+
+    Returns:
+        str: Connected
+    """
+
     global instance
     instance = db.Database()
     return "Connected"
@@ -301,11 +409,23 @@ def createConnection():
 
 @app.route("/admin/db/create")
 def createDatabase():
+    """ Create database
+
+    Returns:
+        str: Database created
+    """
+
     instance.createDatabase()
     return "Database created"
 
 
 @app.route("/admin/db/table")
 def createTable():
+    """ Create tables
+
+    Returns:
+        str: Table created
+    """
+
     instance.createTable()
     return "Table created"
