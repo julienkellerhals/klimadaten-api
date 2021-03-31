@@ -1,3 +1,4 @@
+import threading
 import sqlalchemy
 from sqlalchemy import *
 from sqlalchemy_utils import database_exists, create_database
@@ -9,6 +10,7 @@ class Database:
 
     engine = None
     meta = MetaData()
+    announcer = None
 
     def __init__(self):
         """ Init engine
@@ -19,6 +21,23 @@ class Database:
             echo=True
         )
         print(self.engine)
+
+    def runThreaded(self, announcer):
+        self.announcer = announcer
+        x = threading.Thread(
+            target=self.getEngineStatus
+        )
+        x.start()
+
+    def getEngineStatus(self):
+        try:
+            self.engine.connect()
+        except sqlalchemy.exc.OperationalError as e:
+            msgTxt = "Status: 1; Error: " + str(e)
+            self.announcer.announce(self.announcer.format_sse(msgTxt))
+        else:
+            msgTxt = "Status: 0;"
+            self.announcer.announce(self.announcer.format_sse(msgTxt))
 
     def createDatabase(self):
         """ Creates database

@@ -219,10 +219,17 @@ def adminPage():
     )
 
 
+@app.route("/admin/getEngineStatus")
+def getEngineStatus():
+    instance = db.Database()
+    instance.runThreaded(announcer)
+    return Response(announcer.stream(), mimetype='text/event-stream')
+
+
 @app.route("/admin/testFunc")
 def testFunc():
-    instance = db.Database()
-    instance.test(announcer)
+    # instance = db.Database()
+    # instance.test(announcer)
     return Response(announcer.stream(), mimetype='text/event-stream')
 
 
