@@ -5,42 +5,8 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import abstractDriver
 
-
-def getDriverPath(driverFolder, browser=None):
-    """ Check if driver is installed and returns path
-
-    Args:
-        driverFolder (Path): Pathlib path to driver folder
-        browser (string, optional): Browser type. Defaults to None.
-
-    Returns:
-        driverInstalledBool (bool): True if driver was found
-        driverPath (Path): Driver + driver name path
-    """
-
-    driverInstalledBool = False
-    driverPath = ""
-    for driverPath in list(driverFolder.glob('**/*.exe')):
-        if browser is not None:
-            if browser.lower() in driverPath.name:
-                driverInstalledBool = True
-                driverPath = driverPath
-        else:
-            driverPath = driverPath
-    return driverInstalledBool, driverPath
-
-
-cwd = Path.cwd()
-driverFolder = cwd / "driver"
-_, driverPath = getDriverPath(driverFolder, None)
-if driverPath.name == "msedgedriver.exe":
-    browser = "Edg"
-elif driverPath.name == "chromedriver.exe":
-    browser = "Chrome"
-else:
-    print("Browser not supported yet")
-# make browser headless or not
-driver = abstractDriver.createDriver(browser, driverPath, False)
+abstractDriver = abstractDriver.AbstractDriver()
+driver = abstractDriver.getDriver()
 
 
 @pytest.mark.meteoschweiz

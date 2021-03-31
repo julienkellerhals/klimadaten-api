@@ -76,16 +76,21 @@
                 <span class="dot"></span>
             </div>
             <script>
-                var engineEventSource = new EventSource("/admin/getEngineStatus")
-                engineEventSource.onmessage = function (e) {
-                    if (e.data.split(";")[0] == "Status: 1") {
-                        document.getElementById("engineStatus").lastElementChild.classList.remove("success")
-                        document.getElementById("engineStatus").lastElementChild.classList.add("error")
-                    } else if (e.data.split(";")[0] == "Status: 0") {
-                        document.getElementById("engineStatus").lastElementChild.classList.remove("error")
-                        document.getElementById("engineStatus").lastElementChild.classList.add("success")
-                    }
-                };
+                function getEngineStatus() {
+                    var engineEventSource = new EventSource("/admin/getEngineStatus")
+                    engineEventSource.onmessage = function (e) {
+                        if (e.data.split(";")[0] == "Status: 1") {
+                            document.getElementById("engineStatus").lastElementChild.classList.remove("success")
+                            document.getElementById("engineStatus").lastElementChild.classList.add("error")
+                        } else if (e.data.split(";")[0] == "Status: 0") {
+                            document.getElementById("engineStatus").lastElementChild.classList.remove("error")
+                            document.getElementById("engineStatus").lastElementChild.classList.add("success")
+                        }
+                    };
+                }
+                // TODO system is appending additional event source, wait until event source is close before starting new one
+                // setInterval(getEngineStatus, 10000);
+                getEngineStatus();
             </script>
         </div>
     </div>

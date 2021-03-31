@@ -7,7 +7,6 @@ import zipfile
 import threading
 import subprocess
 import sqlalchemy
-import abstractDriver
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
@@ -18,169 +17,13 @@ from flask import Response
 import db
 import download
 import webscraping
+import abstractDriver
 import messageAnnouncer
 
 app = Flask(__name__)
 announcer = messageAnnouncer.MessageAnnouncer()
-
-
-def createDriver(browser, headlessStr, userAgent):
-    """ Creates selenium driver for webscrapping automation
-        Downloads it into driver folder if not installed
-
-    Args:
-        browser (string): Browser type (Edge, Chrome, etc.)
-        headlessStr (string): Start in headless bool
-        userAgent (string): Browser user agent from header
-    """
-
-    cwd = Path.cwd()
-    driverFolder = cwd / "driver"
-    if not driverFolder.exists():
-        os.mkdir("driver")
-
-    msgTxt = "User agent: " + userAgent + "<br>"
-    msg = announcer.format_sse(data=msgTxt)
-    announcer.announce(msg=msg)
-
-    for browserVersion in userAgent.split(" "):
-        if browserVersion.split("/")[0] == browser:
-            version = browserVersion.split("/")[1]
-    if len(version) == 0:
-        # output += "Browser not found, options are -
-        # Mozilla,
-        # AppleWebKit,
-        # Chrome,
-        # Safari,
-        # Edg
-        msgTxt = "Error: Browser not found, options are - Chrome, Edg <br>"
-        msg = announcer.format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-    # get driver path
-    driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-
-    # download driver
-    if not driverInstalledBool:
-        msgTxt = "Installing driver <br>"
-        msg = announcer.format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-        if browser == "Chrome":
-            browserDriverDownloadPage, _, _ = download.getRequest(
-                "https://chromedriver.chromium.org/downloads"
-            )
-            pattern = r"ChromeDriver (" \
-                + version.split(".")[0] \
-                + r"\.\d*\.\d*\.\d*)"
-            existingDriverVersion = re.findall(
-                pattern,
-                browserDriverDownloadPage.content.decode("utf-8")
-            )[0]
-            browserDriverDownloadUrl = \
-                "https://chromedriver.storage.googleapis.com/" \
-                + existingDriverVersion \
-                + "/chromedriver_win32.zip"
-        elif browser == "Edg":
-            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" \
-                + version \
-                + "/edgedriver_win64.zip"
-        else:
-            print("Browser not supported yet")
-
-        msgTxt = "Driver URL: " + browserDriverDownloadUrl + "<br>"
-        msg = announcer.format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-        driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
-        driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
-        driverZip.extractall(driverFolder)
-
-        msgTxt = "Downloaded and extracted driver <br>"
-        msg = announcer.format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-        # get driver path
-        driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-    else:
-        msgTxt = "Driver already satisfied <br>"
-        msg = announcer.format_sse(data=msgTxt)
-        announcer.announce(msg=msg)
-
-    # Convert to string
-    if headlessStr.lower() == "true":
-        headlessBool = True
-    else:
-        headlessBool = False
-
-    # Create driver
-    global driver
-    driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
-
-    msgTxt = "Started Driver <br>"
-    msg = announcer.format_sse(data=msgTxt)
-    announcer.announce(msg=msg)
-
-
-def getDriverPath(driverFolder, browser=None):
-    """ Check if driver is installed and returns path
-
-    Args:
-        driverFolder (Path): Pathlib path to driver folder
-        browser (string, optional): Browser type. Defaults to None.
-
-    Returns:
-        driverInstalledBool (bool): True if driver was found
-        driverPath (Path): Driver + driver name path
-    """
-
-    driverInstalledBool = False
-    driverPath = ""
-    for driverPath in list(driverFolder.glob('**/*.exe')):
-        if browser is not None:
-            if browser.lower() in driverPath.name:
-                driverInstalledBool = True
-                driverPath = driverPath
-        else:
-            driverPath = driverPath
-    return driverInstalledBool, driverPath
-
-
-def testGlobal():
-    """ Tests if the global variable are set.
-        Initiates them if they aren't.
-    """
-
-    try:
-        global driver
-        driver
-    except NameError:
-        print("Driver not started")
-        print("Starting programatically")
-        print("Assuming you installed only required drivers")
-        cwd = Path.cwd()
-        driverFolder = cwd / "driver"
-        _, driverPath = getDriverPath(driverFolder, None)
-        if driverPath.name == "msedgedriver.exe":
-            browser = "Edg"
-        elif driverPath.name == "chromedriver.exe":
-            browser = "Chrome"
-        else:
-            print("Browser not supported yet")
-        # make browser headless or not
-        driver = abstractDriver.createDriver(browser, driverPath, False)
-
-    try:
-        global engine
-        engine
-    except NameError:
-        print("Engine not started")
-        print("Starting programatically")
-        print("Assuming you installed the database")
-        engine = create_engine(
-            "postgresql://postgres:postgres@localhost:5432/klimadb",
-            echo=True
-        )
+abstractDriver = abstractDriver.AbstractDriver()
+instance = db.Database()
 
 
 @app.route("/")
@@ -348,8 +191,8 @@ def streamDriver(browser):
     userAgent = request.headers.get('User-Agent')
 
     x = threading.Thread(
-        target=createDriver,
-        args=(browser, headlessStr, userAgent)
+        target=abstractDriver.runThreaded,
+        args=(announcer, browser, headlessStr, userAgent)
     )
     x.start()
     return Response(announcer.stream(), mimetype='text/event-stream')
@@ -413,8 +256,7 @@ def streamTest():
             out, err = p.communicate()
             msgTxt = "Testing: " + out.decode()
             msgTxt = msgTxt.replace("\r\n", "<br>")
-            msg = announcer.format_sse(data=msgTxt)
-            announcer.announce(msg=msg)
+            announcer.announce(announcer.format_sse(msgTxt))
 
     x = threading.Thread(
         target=runTestSubprocess
@@ -446,7 +288,8 @@ def streamMeteoschweiz():
         stream: Meteosuisse stream
     """
 
-    testGlobal()  # to test if the global variable are set
+    driver = abstractDriver.getDriver()
+    engine = instance.engine
     x = threading.Thread(
         target=webscraping.scrape_meteoschweiz,
         args=(driver, engine, announcer)
@@ -464,7 +307,8 @@ def scrapeIdaweb():
         str: temp
     """
 
-    testGlobal()  # to test if the global variable are set
+    driver = abstractDriver.getDriver()
+    engine = instance.engine
     resp = webscraping.scrape_idaweb(driver, engine)
     return resp
 
@@ -477,7 +321,6 @@ def createConnection():
         str: Connected
     """
 
-    global instance
     instance = db.Database()
     return "Connected"
 

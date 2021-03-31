@@ -73,7 +73,7 @@ class Database:
                 Column('year', Integer),
                 Column('month', Integer),
                 Column('station', String),
-                Column('temprature', Float),
+                Column('temperature', Float),
                 Column('precipitation', Float),
                 schema='stage')
 
