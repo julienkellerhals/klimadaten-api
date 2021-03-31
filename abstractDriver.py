@@ -4,6 +4,7 @@ import threading
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import WebDriverException
 from msedge.selenium_tools import EdgeOptions
 from msedge.selenium_tools import Edge
 import download
@@ -30,6 +31,28 @@ class AbstractDriver():
             args=(browser, headlessStr, userAgent)
         )
         x.start()
+
+    def getDriverStatus(self, announcer):
+        self.announcer = announcer
+        x = threading.Thread(
+            target=self._getDriverStatus
+        )
+        x.start()
+
+    def _getDriverStatus(self):
+        try:
+            self.driver.window_handles
+        except WebDriverException as e:
+            msgTxt = "Status: 1; Error: " + str(e)
+            self.announcer.announce(self.announcer.format_sse(msgTxt))
+        except AttributeError as e:
+            msgTxt = "Status: 1; Error: " + str(e)
+            self.announcer.announce(self.announcer.format_sse(msgTxt))
+        else:
+            msgTxt = "Status: 0;"
+            self.announcer.announce(self.announcer.format_sse(msgTxt))
+            # chrome instance
+            print(self.driver.window_handles)
 
     def checkDriver(self):
         if self.driver is None:

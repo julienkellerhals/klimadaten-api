@@ -88,9 +88,22 @@
                         }
                     };
                 }
+                function getDriverStatus() {
+                    var driverEventSource = new EventSource("/admin/getDriverStatus")
+                    driverEventSource.onmessage = function (e) {
+                        if (e.data.split(";")[0] == "Status: 1") {
+                            document.getElementById("driverStatus").lastElementChild.classList.remove("success")
+                            document.getElementById("driverStatus").lastElementChild.classList.add("error")
+                        } else if (e.data.split(";")[0] == "Status: 0") {
+                            document.getElementById("driverStatus").lastElementChild.classList.remove("error")
+                            document.getElementById("driverStatus").lastElementChild.classList.add("success")
+                        }
+                    };
+                }
                 // TODO system is appending additional event source, wait until event source is close before starting new one
                 // setInterval(getEngineStatus, 10000);
                 getEngineStatus();
+                getDriverStatus();
             </script>
         </div>
     </div>
