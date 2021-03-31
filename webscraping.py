@@ -67,9 +67,9 @@ def createOrderName(config, orderNumber, now):
         str: Order name for idaweb data
     """
 
-    orderName = f'{config.attrib['group'][0]}' \
-                f'{config.attrib['granularity'].lower()}' \
-                f'{orderNumber}_{now}'
+    orderName = f"{config.attrib['group'][0]}" \
+                f"{config.attrib['granularity'].lower()}" \
+                f"{orderNumber}_{now}"
     return orderName
 
 
