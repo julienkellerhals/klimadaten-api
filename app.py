@@ -236,6 +236,98 @@ def api():
     return "API"
 
 
+@app.route("/admin")
+@app.route("/admin/")
+def adminPage():
+    """ Admin page
+
+    Returns:
+        html: Returns admin page
+    """
+
+    return render_template(
+        "admin.html",
+    )
+
+
+@app.route("/admin/tables")
+def tablesPage():
+    """ Tables page
+
+    Returns:
+        html: Returns tables page
+    """
+
+    return render_template(
+        "tables.html",
+    )
+
+
+@app.route("/admin/source")
+def sourcePage():
+    """ Source page
+
+    Returns:
+        html: Returns source page
+    """
+
+    return render_template(
+        "source.html",
+    )
+
+
+@app.route("/admin/status")
+def statusPage():
+    """ Status page
+
+    Returns:
+        html: Returns status page
+    """
+
+    return render_template(
+        "status.html",
+    )
+
+
+@app.route("/admin/tests")
+def testsPage():
+    """ Tests page
+
+    Returns:
+        html: Returns tests page
+    """
+
+    return render_template(
+        "tests.html",
+    )
+
+
+@app.route("/admin/doc")
+def docPage():
+    """ Doc page
+
+    Returns:
+        html: Returns doc page
+    """
+
+    return render_template(
+        "doc.html",
+    )
+
+
+@app.route("/admin/errors")
+def errorPage():
+    """ Error page
+
+    Returns:
+        html: Returns error page
+    """
+
+    return render_template(
+        "error.html",
+    )
+
+
 @app.route("/admin/driver/<browser>")
 def driver(browser):
     """ Returns driver page
@@ -253,7 +345,7 @@ def driver(browser):
         "/admin/stream"
     )
     return render_template(
-        "index.html.jinja",
+        "stream.html",
         streamUrl=streamUrl
     )
 
@@ -300,7 +392,7 @@ def runTests():
     """
 
     return render_template(
-        "index.html.jinja",
+        "stream.html",
         streamUrl="/admin/stream/test"
     )
 
@@ -358,7 +450,7 @@ def scrapeMeteoschweiz():
     """
 
     return render_template(
-        "index.html.jinja",
+        "stream.html",
         streamUrl="/admin/stream/meteoschweiz"
     )
 
