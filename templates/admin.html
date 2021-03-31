@@ -39,11 +39,11 @@
         display: inline-block;
     }
 
-    .det .success {
+    .success {
         background-color: green;
     }
 
-    .dot .error {
+    .error {
         background-color: red;
     }
 </style>
@@ -76,12 +76,15 @@
                 <span class="dot"></span>
             </div>
             <script>
-                var eventSource = new EventSource("/admin/testFunc")
-                eventSource.onmessage = function (e) {
-                    var entry = document.createElement("div");
-                    entry.className = "eventItem"
-                    entry.innerHTML = e.data;
-                    eventContainer.appendChild(entry);
+                var engineEventSource = new EventSource("/admin/getEngineStatus")
+                engineEventSource.onmessage = function (e) {
+                    if (e.data.split(";")[0] == "Status: 1") {
+                        document.getElementById("engineStatus").lastElementChild.classList.remove("success")
+                        document.getElementById("engineStatus").lastElementChild.classList.add("error")
+                    } else if (e.data.split(";")[0] == "Status: 0") {
+                        document.getElementById("engineStatus").lastElementChild.classList.remove("error")
+                        document.getElementById("engineStatus").lastElementChild.classList.add("success")
+                    }
                 };
             </script>
         </div>
