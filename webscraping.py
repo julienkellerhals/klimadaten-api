@@ -16,23 +16,6 @@ from selenium.common.exceptions import NoSuchElementException
 import download
 
 
-def format_sse(data: str, event=None) -> str:
-    """ Converts string to sse format
-
-    Args:
-        data (str): String to be converted to sse format
-        event (string, optional): Event name. Defaults to None.
-
-    Returns:
-        str: sse string
-    """
-
-    msg = f'data: {data}\n\n'
-    if event is not None:
-        msg = f'event: {event}\n{msg}'
-    return msg
-
-
 def createJs(value):
     """ Creates js for idaweb form
 
@@ -207,7 +190,7 @@ def scrape_meteoschweiz(driver, engine, announcer):
         url = urlEl.get_attribute('href')
 
         msgTxt = "Scrapping: " + url
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
         url_list.append(url)

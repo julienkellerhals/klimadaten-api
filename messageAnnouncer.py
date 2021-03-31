@@ -11,6 +11,35 @@ class MessageAnnouncer:
 
         self.listeners = []
 
+    def format_sse(self, data: str, event=None) -> str:
+        """ Converts string to sse format
+
+        Args:
+            data (str): String to be converted to sse format
+            event (string, optional): Event name. Defaults to None.
+
+        Returns:
+            str: sse string
+        """
+
+        msg = f'data: {data}\n\n'
+        if event is not None:
+            msg = f'event: {event}\n{msg}'
+        return msg
+
+    def stream():
+        """ Creates stream
+
+        Yields:
+            str: Message yield
+        """
+
+        messages = announcer.listen()  # returns a queue.Queue
+
+        while True:
+            msg = messages.get()  # blocks until a new message arrives
+            yield msg
+
     def listen(self):
         """ Creates queue
 

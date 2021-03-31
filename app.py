@@ -40,7 +40,7 @@ def createDriver(browser, headlessStr, userAgent):
         os.mkdir("driver")
 
     msgTxt = "User agent: " + userAgent + "<br>"
-    msg = format_sse(data=msgTxt)
+    msg = announcer.format_sse(data=msgTxt)
     announcer.announce(msg=msg)
 
     for browserVersion in userAgent.split(" "):
@@ -54,7 +54,7 @@ def createDriver(browser, headlessStr, userAgent):
         # Safari,
         # Edg
         msgTxt = "Error: Browser not found, options are - Chrome, Edg <br>"
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
     # get driver path
@@ -63,7 +63,7 @@ def createDriver(browser, headlessStr, userAgent):
     # download driver
     if not driverInstalledBool:
         msgTxt = "Installing driver <br>"
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
         if browser == "Chrome":
@@ -89,7 +89,7 @@ def createDriver(browser, headlessStr, userAgent):
             print("Browser not supported yet")
 
         msgTxt = "Driver URL: " + browserDriverDownloadUrl + "<br>"
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
         driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
@@ -97,14 +97,14 @@ def createDriver(browser, headlessStr, userAgent):
         driverZip.extractall(driverFolder)
 
         msgTxt = "Downloaded and extracted driver <br>"
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
         # get driver path
         driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
     else:
         msgTxt = "Driver already satisfied <br>"
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
     # Convert to string
@@ -118,7 +118,7 @@ def createDriver(browser, headlessStr, userAgent):
     driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
 
     msgTxt = "Started Driver <br>"
-    msg = format_sse(data=msgTxt)
+    msg = announcer.format_sse(data=msgTxt)
     announcer.announce(msg=msg)
 
 
@@ -183,37 +183,6 @@ def testGlobal():
         )
 
 
-def format_sse(data: str, event=None) -> str:
-    """ Converts string to sse format
-
-    Args:
-        data (str): String to be converted to sse format
-        event (string, optional): Event name. Defaults to None.
-
-    Returns:
-        str: sse string
-    """
-
-    msg = f'data: {data}\n\n'
-    if event is not None:
-        msg = f'event: {event}\n{msg}'
-    return msg
-
-
-def stream():
-    """ Creates stream
-
-    Yields:
-        str: Message yield
-    """
-
-    messages = announcer.listen()  # returns a queue.Queue
-
-    while True:
-        msg = messages.get()  # blocks until a new message arrives
-        yield msg
-
-
 @app.route("/")
 def mainPage():
     """ Main page
@@ -248,6 +217,13 @@ def adminPage():
     return render_template(
         "admin.html",
     )
+
+
+@app.route("/admin/testFunc")
+def testFunc():
+    instance = db.Database()
+    instance.test(announcer)
+    return Response(announcer.stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/tables")
@@ -369,7 +345,7 @@ def streamDriver(browser):
         args=(browser, headlessStr, userAgent)
     )
     x.start()
-    return Response(stream(), mimetype='text/event-stream')
+    return Response(announcer.stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/refresh")
@@ -430,7 +406,7 @@ def streamTest():
             out, err = p.communicate()
             msgTxt = "Testing: " + out.decode()
             msgTxt = msgTxt.replace("\r\n", "<br>")
-            msg = format_sse(data=msgTxt)
+            msg = announcer.format_sse(data=msgTxt)
             announcer.announce(msg=msg)
 
     x = threading.Thread(
@@ -438,7 +414,7 @@ def streamTest():
     )
     x.start()
 
-    return Response(stream(), mimetype='text/event-stream')
+    return Response(announcer.stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/scrape/meteoschweiz")
@@ -470,7 +446,7 @@ def streamMeteoschweiz():
     )
     x.start()
 
-    return Response(stream(), mimetype='text/event-stream')
+    return Response(announcer.stream(), mimetype='text/event-stream')
 
 
 @app.route("/admin/scrape/idaweb")
