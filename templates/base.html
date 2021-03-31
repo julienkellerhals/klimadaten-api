@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            font-family: verdana;
+        }
+
+        #navbarContainer {
+            height: 3em;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: gray;
+        }
+
+        #navbar {
+            width: 40em;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #container {
+            flex-grow: 1;
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+    <div id="navbarContainer">
+        <div id=navbar>
+            <a href="/admin/">Admin</a>
+            <a href="/admin/tables">Tables</a>
+            <a href="/admin/source">Data source</a>
+            <a href="/admin/status">Data status</a>
+            <a href="/admin/tests">Tests</a>
+            <a href="/admin/doc">Help / Doc</a>
+        </div>
+        <a id="error" href="/admin/errors">Errors</a>
+    </div>
+    <div id="container">
+        {% block container %}{% endblock %}
+    </div>
+</body>
+
+</html>
