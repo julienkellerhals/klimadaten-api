@@ -64,14 +64,32 @@ def adminPage():
 
 @app.route("/admin/getEngineStatus", methods=["POST"])
 def getEngineStatus():
-    instance.runThreaded(announcer)
+    instance.getDatabaseStatus()
     return ""
 
 
 @app.route("/admin/stream/getEngineStatus")
 def streamEngineStatus():
-    instance.runThreaded(announcer)
-    return Response(announcer.stream(), mimetype='text/event-stream')
+    instance.getDatabaseStatus()
+    return Response(
+        instance.databaseStatusStream.stream(),
+        mimetype='text/event-stream'
+    )
+
+
+@app.route("/admin/getDatabaseStatus", methods=["POST"])
+def getDatabaseStatus():
+    instance.getDatabaseStatus()
+    return ""
+
+
+@app.route("/admin/stream/getDatabaseStatus")
+def streamDatabaseStatus():
+    instance.getDatabaseStatus()
+    return Response(
+        instance.databaseStatusStream.stream(),
+        mimetype='text/event-stream'
+    )
 
 
 @app.route("/admin/getDriverPathStatus", methods=["POST"])

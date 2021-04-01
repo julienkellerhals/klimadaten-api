@@ -67,6 +67,10 @@
                 <span>Webdriver status</span>
                 <span class="dot"></span>
             </div>
+            <div class="service" id="databaseStatus">
+                <span>Database status</span>
+                <span class="dot"></span>
+            </div>
             <div class="service" id="engineStatus">
                 <span>Database engine status</span>
                 <span class="dot"></span>
@@ -76,6 +80,37 @@
                 <span class="dot"></span>
             </div>
             <script>
+                function streamDatabaseStatus() {
+                    var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
+                    var previousStatusCode = null
+                    databaseEventSource.onmessage = function (e) {
+                        var content = e.data;
+                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                        var msg = content.split(";")[1]
+                        var errorMsg = content.split(";")[2]
+                        var databaseStatusSpan = document.getElementById("databaseStatus").firstElementChild
+                        var databaseStatusDot = document.getElementById("databaseStatus").lastElementChild
+                        if (e.data.split(";")[0] == "Status: 1") {
+                            databaseStatusSpan.innerText = msg.trim()
+                            databaseStatusDot.classList.remove("success")
+                            databaseStatusDot.classList.add("error")
+                            databaseStatusDot.title = errorMsg.trim()
+                        } else if (e.data.split(";")[0] == "Status: 0") {
+                            databaseStatusSpan.innerText = msg.trim()
+                            databaseStatusDot.classList.remove("error")
+                            databaseStatusDot.classList.add("success")
+                            databaseStatusDot.title = ""
+                        }
+                    };
+                }
+                function getDatabaseStatus() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/getDatabaseStatus", true);
+                    xhr.send()
+                }
+                streamDatabaseStatus();
+                setInterval(getDatabaseStatus, 10000);
+
                 function streamEngineStatus() {
                     var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
                     engineEventSource.onmessage = function (e) {

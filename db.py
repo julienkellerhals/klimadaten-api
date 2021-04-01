@@ -2,6 +2,7 @@ import threading
 import sqlalchemy
 from sqlalchemy import *
 from sqlalchemy_utils import database_exists, create_database
+import messageAnnouncer
 
 
 class Database:
@@ -11,33 +12,41 @@ class Database:
     engine = None
     meta = MetaData()
     announcer = None
+    databaseStatusStream = None
 
     def __init__(self):
         """ Init engine
         """
 
+        self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engine = create_engine(
             "postgresql://postgres:postgres@localhost:5432/klimadb",
             echo=True
         )
         print(self.engine)
 
-    def runThreaded(self, announcer):
-        self.announcer = announcer
+    def getDatabaseStatus(self):
         x = threading.Thread(
-            target=self.getEngineStatus
+            target=self._getDatabaseStatus
         )
         x.start()
 
-    def getEngineStatus(self):
+    def _getDatabaseStatus(self):
         try:
-            self.engine.connect()
+            create_engine(
+                "postgresql://postgres:postgres@localhost:5432/klimadb",
+                echo=True
+            ).connect()
         except sqlalchemy.exc.OperationalError as e:
-            msgTxt = "Status: 1; Error: " + str(e)
-            self.announcer.announce(self.announcer.format_sse(msgTxt))
+            msgTxt = "Status: 1; Database not started; Error: " + str(e)
+            self.databaseStatusStream.announce(
+                self.databaseStatusStream.format_sse(msgTxt)
+            )
         else:
-            msgTxt = "Status: 0;"
-            self.announcer.announce(self.announcer.format_sse(msgTxt))
+            msgTxt = "Status: 0; Database connection: " + str(self.engine.url)
+            self.databaseStatusStream.announce(
+                self.databaseStatusStream.format_sse(msgTxt)
+            )
 
     def createDatabase(self):
         """ Creates database
