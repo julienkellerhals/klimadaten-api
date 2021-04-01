@@ -76,15 +76,15 @@ def streamEngineStatus():
 
 @app.route("/admin/getDriverPathStatus", methods=["POST"])
 def getDriverPathStatus():
-    abstractDriver.getDriverStatus()
+    abstractDriver.getDriverPathStatus()
     return ""
 
 
 @app.route("/admin/stream/getDriverPathStatus")
 def streamDriverPathStatus():
-    abstractDriver.getDriverStatus()
+    abstractDriver.getDriverPathStatus()
     return Response(
-        abstractDriver.statusStream.stream(),
+        abstractDriver.pathStatusStream.stream(),
         mimetype='text/event-stream'
     )
 
@@ -99,7 +99,7 @@ def getDriverStatus():
 def streamDriverStatus():
     abstractDriver.getDriverStatus()
     return Response(
-        abstractDriver.statusStream.stream(),
+        abstractDriver.driverStatusStream.stream(),
         mimetype='text/event-stream'
     )
 

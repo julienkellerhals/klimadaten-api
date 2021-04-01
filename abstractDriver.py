@@ -16,13 +16,16 @@ class AbstractDriver():
     driver = None
     browser = None
     driverPath = None
+    driverFolder = Path.cwd() / "driver"
     driverInstalledBool = False
     headless = False
     announcer = None
-    statusStream = None
+    pathStatusStream = None
+    driverStatusStream = None
 
     def __init__(self):
-        self.statusStream = messageAnnouncer.MessageAnnouncer()
+        self.pathStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.driverStatusStream = messageAnnouncer.MessageAnnouncer()
 
     def runThreaded(
             self,
@@ -37,6 +40,31 @@ class AbstractDriver():
         )
         x.start()
 
+    def getDriverPathStatus(self):
+        x = threading.Thread(
+            target=self._getDriverPathStatus
+        )
+        x.start()
+
+    def _getDriverPathStatus(self):
+        if self.driverPath is None:
+            self.getDriverPath(self.driverFolder, None)
+            if self.driverInstalledBool is False:
+                msgTxt = "Status: 1; Error: Driver not installed"
+                self.pathStatusStream.announce(
+                    self.pathStatusStream.format_sse(msgTxt)
+                )
+            else:
+                msgTxt = "Status: 0; Path: " + str(self.driverPath)
+                self.pathStatusStream.announce(
+                    self.pathStatusStream.format_sse(msgTxt)
+                )
+        else:
+            msgTxt = "Status: 0; Path: " + str(self.driverPath)
+            self.pathStatusStream.announce(
+                self.pathStatusStream.format_sse(msgTxt)
+            )
+
     def getDriverStatus(self):
         x = threading.Thread(
             target=self._getDriverStatus
@@ -48,23 +76,27 @@ class AbstractDriver():
             self.driver.window_handles
         except WebDriverException as e:
             msgTxt = "Status: 1; Error: " + str(e)
-            self.statusStream.announce(self.statusStream.format_sse(msgTxt))
+            self.driverStatusStream.announce(
+                self.driverStatusStream.format_sse(msgTxt)
+            )
         except AttributeError as e:
             msgTxt = "Status: 1; Error: " + str(e)
-            self.statusStream.announce(self.statusStream.format_sse(msgTxt))
+            self.driverStatusStream.announce(
+                self.driverStatusStream.format_sse(msgTxt)
+            )
         else:
             msgTxt = "Status: 0; Instance: " \
                 + str(self.driver.window_handles[0])
-            self.statusStream.announce(self.statusStream.format_sse(msgTxt))
+            self.driverStatusStream.announce(
+                self.driverStatusStream.format_sse(msgTxt)
+            )
 
     def checkDriver(self):
         if self.driver is None:
             print("Driver not started")
             print("Starting programatically")
             print("Assuming you installed only required drivers")
-            cwd = Path.cwd()
-            driverFolder = cwd / "driver"
-            _, self.driverPath = self.getDriverPath(driverFolder, None)
+            _, self.driverPath = self.getDriverPath(self.driverFolder, None)
             if self.driverPath.name == "msedgedriver.exe":
                 self.browser = "Edg"
             elif driverPath.name == "chromedriver.exe":
@@ -109,9 +141,7 @@ class AbstractDriver():
             userAgent (string): Browser user agent from header
         """
 
-        cwd = Path.cwd()
-        driverFolder = cwd / "driver"
-        if not driverFolder.exists():
+        if not self.driverFolder.exists():
             os.mkdir("driver")
 
         msgTxt = "User agent: " + userAgent + "<br>"
@@ -132,7 +162,7 @@ class AbstractDriver():
 
         # get driver path
         self.driverInstalledBool, self.driverPath = self.getDriverPath(
-            driverFolder,
+            self.driverFolder,
             browser
         )
 
@@ -169,14 +199,14 @@ class AbstractDriver():
 
             driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
             driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
-            driverZip.extractall(driverFolder)
+            driverZip.extractall(self.driverFolder)
 
             msgTxt = "Downloaded and extracted driver <br>"
             self.announcer.announce(self.announcer.format_sse(msgTxt))
 
             # get driver path
             self.driverInstalledBool, self.driverPath = self.getDriverPath(
-                driverFolder,
+                self.driverFolder,
                 browser
             )
         else:
