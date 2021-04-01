@@ -55,12 +55,12 @@ class AbstractDriver():
                     self.pathStatusStream.format_sse(msgTxt)
                 )
             else:
-                msgTxt = "Status: 0; Path: " + str(self.driverPath)
+                msgTxt = "Status: 0; Driver: " + str(self.driverPath.stem)
                 self.pathStatusStream.announce(
                     self.pathStatusStream.format_sse(msgTxt)
                 )
         else:
-            msgTxt = "Status: 0; Path: " + str(self.driverPath)
+            msgTxt = "Status: 0; Driver: " + str(self.driverPath.stem)
             self.pathStatusStream.announce(
                 self.pathStatusStream.format_sse(msgTxt)
             )
@@ -75,17 +75,17 @@ class AbstractDriver():
         try:
             self.driver.window_handles
         except WebDriverException as e:
-            msgTxt = "Status: 1; Error: " + str(e)
+            msgTxt = "Status: 1; not started; Error: " + str(e)
             self.driverStatusStream.announce(
                 self.driverStatusStream.format_sse(msgTxt)
             )
         except AttributeError as e:
-            msgTxt = "Status: 1; Error: " + str(e)
+            msgTxt = "Status: 1; not started; Error: " + str(e)
             self.driverStatusStream.announce(
                 self.driverStatusStream.format_sse(msgTxt)
             )
         else:
-            msgTxt = "Status: 0; Instance: " \
+            msgTxt = "Status: 0; instance: " \
                 + str(self.driver.window_handles[0])
             self.driverStatusStream.announce(
                 self.driverStatusStream.format_sse(msgTxt)

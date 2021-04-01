@@ -60,19 +60,19 @@
         <h3>Running services</h3>
         <div id="panelContainer">
             <div class="service" id="driverLoc">
-                Driver missing / found
+                <span>Driver</span>
                 <span class="dot"></span>
             </div>
             <div class="service" id="driverStatus">
-                Webdriver status
+                <span>Webdriver status</span>
                 <span class="dot"></span>
             </div>
             <div class="service" id="engineStatus">
-                Database engine status
+                <span>Database engine status</span>
                 <span class="dot"></span>
             </div>
             <div class="service">
-                More to be added
+                <span>More to be added</span>
                 <span class="dot"></span>
             </div>
             <script>
@@ -98,13 +98,23 @@
 
                 function streamDriverPathStatus() {
                     var driverPathEventSource = new EventSource("/admin/stream/getDriverPathStatus");
+                    var previousStatusCode = null
                     driverPathEventSource.onmessage = function (e) {
-                        if (e.data.split(";")[0] == "Status: 1") {
-                            document.getElementById("driverLoc").lastElementChild.classList.remove("success")
-                            document.getElementById("driverLoc").lastElementChild.classList.add("error")
-                        } else if (e.data.split(";")[0] == "Status: 0") {
-                            document.getElementById("driverLoc").lastElementChild.classList.remove("error")
-                            document.getElementById("driverLoc").lastElementChild.classList.add("success")
+                        var content = e.data;
+                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                        var msg = content.split(";")[1]
+                        var driverLocSpan = document.getElementById("driverLoc").firstElementChild
+                        var driverLocDot = document.getElementById("driverLoc").lastElementChild
+                        if (previousStatusCode != statusCode) {
+                            if (statusCode == 1) {
+                                driverLocSpan.innerText = msg.trim()
+                                driverLocDot.classList.remove("success")
+                                driverLocDot.classList.add("error")
+                            } else if (statusCode == 0) {
+                                driverLocSpan.innerText = msg.trim()
+                                driverLocDot.classList.remove("error")
+                                driverLocDot.classList.add("success")
+                            }
                         }
                     };
                 }
@@ -118,13 +128,26 @@
 
                 function streamDriverStatus() {
                     var driverEventSource = new EventSource("/admin/stream/getDriverStatus");
+                    var previousStatusCode = null
                     driverEventSource.onmessage = function (e) {
-                        if (e.data.split(";")[0] == "Status: 1") {
-                            document.getElementById("driverStatus").lastElementChild.classList.remove("success")
-                            document.getElementById("driverStatus").lastElementChild.classList.add("error")
-                        } else if (e.data.split(";")[0] == "Status: 0") {
-                            document.getElementById("driverStatus").lastElementChild.classList.remove("error")
-                            document.getElementById("driverStatus").lastElementChild.classList.add("success")
+                        var content = e.data;
+                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                        var msg = content.split(";")[1]
+                        var errorMsg = content.split(";")[2]
+                        var driverStatusSpan = document.getElementById("driverStatus").firstElementChild
+                        var driverStatusDot = document.getElementById("driverStatus").lastElementChild
+                        if (previousStatusCode != statusCode) {
+                            if (statusCode == 1) {
+                                driverStatusSpan.innerText = "Webdriver " + msg.trim()
+                                driverStatusDot.classList.remove("success")
+                                driverStatusDot.classList.add("error")
+                                driverStatusDot.title = errorMsg.trim()
+                            } else if (statusCode == 0) {
+                                driverStatusSpan.innerText = "Webdriver " + msg.trim()
+                                driverStatusDot.classList.remove("error")
+                                driverStatusDot.classList.add("success")
+                                driverStatusDot.title = ""
+                            }
                         }
                     };
                 }
