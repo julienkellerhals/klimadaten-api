@@ -53,10 +53,9 @@ class AbstractDriver():
             msgTxt = "Status: 1; Error: " + str(e)
             self.statusStream.announce(self.statusStream.format_sse(msgTxt))
         else:
-            msgTxt = "Status: 0;"
+            msgTxt = "Status: 0; Instance: " \
+                + str(self.driver.window_handles[0])
             self.statusStream.announce(self.statusStream.format_sse(msgTxt))
-            # chrome instance
-            print(self.driver.window_handles)
 
     def checkDriver(self):
         if self.driver is None:

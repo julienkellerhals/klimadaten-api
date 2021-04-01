@@ -76,8 +76,8 @@
                 <span class="dot"></span>
             </div>
             <script>
-                function getEngineStatus() {
-                    var engineEventSource = new EventSource("/admin/getEngineStatus")
+                function streamEngineStatus() {
+                    var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
                     engineEventSource.onmessage = function (e) {
                         if (e.data.split(";")[0] == "Status: 1") {
                             document.getElementById("engineStatus").lastElementChild.classList.remove("success")
@@ -88,8 +88,36 @@
                         }
                     };
                 }
-                function getDriverStatus() {
-                    var driverEventSource = new EventSource("/admin/getDriverStatus")
+                function getEngineStatus() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/getEngineStatus", true);
+                    xhr.send()
+                }
+                streamEngineStatus();
+                setInterval(getEngineStatus, 10000);
+
+                function streamDriverPathStatus() {
+                    var driverPathEventSource = new EventSource("/admin/stream/getDriverPathStatus");
+                    driverPathEventSource.onmessage = function (e) {
+                        if (e.data.split(";")[0] == "Status: 1") {
+                            document.getElementById("driverLoc").lastElementChild.classList.remove("success")
+                            document.getElementById("driverLoc").lastElementChild.classList.add("error")
+                        } else if (e.data.split(";")[0] == "Status: 0") {
+                            document.getElementById("driverLoc").lastElementChild.classList.remove("error")
+                            document.getElementById("driverLoc").lastElementChild.classList.add("success")
+                        }
+                    };
+                }
+                function getDriverPathStatus() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/getDriverPathStatus", true);
+                    xhr.send()
+                }
+                streamDriverPathStatus();
+                setInterval(getDriverPathStatus, 10000);
+
+                function streamDriverStatus() {
+                    var driverEventSource = new EventSource("/admin/stream/getDriverStatus");
                     driverEventSource.onmessage = function (e) {
                         if (e.data.split(";")[0] == "Status: 1") {
                             document.getElementById("driverStatus").lastElementChild.classList.remove("success")
@@ -100,10 +128,13 @@
                         }
                     };
                 }
-                // TODO system is appending additional event source, wait until event source is close before starting new one
-                // setInterval(getEngineStatus, 10000);
-                getEngineStatus();
-                getDriverStatus();
+                function getDriverStatus() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/getDriverStatus", true);
+                    xhr.send()
+                }
+                streamDriverStatus();
+                setInterval(getDriverStatus, 10000);
             </script>
         </div>
     </div>

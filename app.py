@@ -62,15 +62,41 @@ def adminPage():
     )
 
 
-@app.route("/admin/getEngineStatus")
+@app.route("/admin/getEngineStatus", methods=["POST"])
 def getEngineStatus():
-    instance = db.Database()
+    instance.runThreaded(announcer)
+    return ""
+
+
+@app.route("/admin/stream/getEngineStatus")
+def streamEngineStatus():
     instance.runThreaded(announcer)
     return Response(announcer.stream(), mimetype='text/event-stream')
 
 
-@app.route("/admin/getDriverStatus")
+@app.route("/admin/getDriverPathStatus", methods=["POST"])
+def getDriverPathStatus():
+    abstractDriver.getDriverStatus()
+    return ""
+
+
+@app.route("/admin/stream/getDriverPathStatus")
+def streamDriverPathStatus():
+    abstractDriver.getDriverStatus()
+    return Response(
+        abstractDriver.statusStream.stream(),
+        mimetype='text/event-stream'
+    )
+
+
+@app.route("/admin/getDriverStatus", methods=["POST"])
 def getDriverStatus():
+    abstractDriver.getDriverStatus()
+    return ""
+
+
+@app.route("/admin/stream/getDriverStatus")
+def streamDriverStatus():
     abstractDriver.getDriverStatus()
     return Response(
         abstractDriver.statusStream.stream(),
