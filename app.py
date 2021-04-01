@@ -71,9 +71,11 @@ def getEngineStatus():
 
 @app.route("/admin/getDriverStatus")
 def getDriverStatus():
-    abstractDriver.getDriverStatus(announcer)
-    # TODO Uses same stream fix with different stream
-    return Response(announcer.stream(), mimetype='text/event-stream')
+    abstractDriver.getDriverStatus()
+    return Response(
+        abstractDriver.statusStream.stream(),
+        mimetype='text/event-stream'
+    )
 
 
 @app.route("/admin/testFunc")
