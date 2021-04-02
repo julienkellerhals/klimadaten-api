@@ -90,16 +90,19 @@
                         var errorMsg = content.split(";")[2]
                         var databaseStatusSpan = document.getElementById("databaseStatus").firstElementChild
                         var databaseStatusDot = document.getElementById("databaseStatus").lastElementChild
-                        if (e.data.split(";")[0] == "Status: 1") {
-                            databaseStatusSpan.innerText = msg.trim()
-                            databaseStatusDot.classList.remove("success")
-                            databaseStatusDot.classList.add("error")
-                            databaseStatusDot.title = errorMsg.trim()
-                        } else if (e.data.split(";")[0] == "Status: 0") {
-                            databaseStatusSpan.innerText = msg.trim()
-                            databaseStatusDot.classList.remove("error")
-                            databaseStatusDot.classList.add("success")
-                            databaseStatusDot.title = ""
+                        if (previousStatusCode != statusCode) {
+                            previousStatusCode = statusCode
+                            if (e.data.split(";")[0] == "Status: 1") {
+                                databaseStatusSpan.innerText = msg.trim()
+                                databaseStatusDot.classList.remove("success")
+                                databaseStatusDot.classList.add("error")
+                                databaseStatusDot.title = errorMsg.trim()
+                            } else if (e.data.split(";")[0] == "Status: 0") {
+                                databaseStatusSpan.innerText = msg.trim()
+                                databaseStatusDot.classList.remove("error")
+                                databaseStatusDot.classList.add("success")
+                                databaseStatusDot.title = ""
+                            }
                         }
                     };
                 }
@@ -113,13 +116,24 @@
 
                 function streamEngineStatus() {
                     var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
+                    var previousStatusCode = null
                     engineEventSource.onmessage = function (e) {
-                        if (e.data.split(";")[0] == "Status: 1") {
-                            document.getElementById("engineStatus").lastElementChild.classList.remove("success")
-                            document.getElementById("engineStatus").lastElementChild.classList.add("error")
-                        } else if (e.data.split(";")[0] == "Status: 0") {
-                            document.getElementById("engineStatus").lastElementChild.classList.remove("error")
-                            document.getElementById("engineStatus").lastElementChild.classList.add("success")
+                        var content = e.data
+                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                        var msg = content.split(";")[1]
+                        var engineStatusSpan = document.getElementById("engineStatus").firstElementChild
+                        var engineStatusDot = document.getElementById("engineStatus").lastElementChild
+                        if (previousStatusCode != statusCode) {
+                            previousStatusCode = statusCode
+                            if (statusCode == 1) {
+                                engineStatusSpan.innerText = msg.trim()
+                                engineStatusDot.classList.remove("success")
+                                engineStatusDot.classList.add("error")
+                            } else if (statusCode == 0) {
+                                engineStatusSpan.innerText = msg.trim()
+                                engineStatusDot.classList.remove("error")
+                                engineStatusDot.classList.add("success")
+                            }
                         }
                     };
                 }
@@ -141,6 +155,7 @@
                         var driverLocSpan = document.getElementById("driverLoc").firstElementChild
                         var driverLocDot = document.getElementById("driverLoc").lastElementChild
                         if (previousStatusCode != statusCode) {
+                            previousStatusCode = statusCode
                             if (statusCode == 1) {
                                 driverLocSpan.innerText = msg.trim()
                                 driverLocDot.classList.remove("success")
@@ -172,6 +187,7 @@
                         var driverStatusSpan = document.getElementById("driverStatus").firstElementChild
                         var driverStatusDot = document.getElementById("driverStatus").lastElementChild
                         if (previousStatusCode != statusCode) {
+                            previousStatusCode = statusCode
                             if (statusCode == 1) {
                                 driverStatusSpan.innerText = "Webdriver " + msg.trim()
                                 driverStatusDot.classList.remove("success")
