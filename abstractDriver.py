@@ -134,6 +134,7 @@ class AbstractDriver():
                     self.driverInstalledBool = True
                     self.driverPath = driverPath
             else:
+                self.driverInstalledBool = True
                 self.driverPath = driverPath
         return self.driverInstalledBool, self.driverPath
 
