@@ -395,7 +395,7 @@ def scrapeIdaweb():
     return resp
 
 
-@app.route("/admin/db/connect")
+@app.route("/admin/db/connect", methods=["GET", "POST"])
 def createConnection():
     """ Creates database connection
 
