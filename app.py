@@ -285,7 +285,6 @@ def streamTest():
     """
 
     def runTestSubprocess():
-        # TODO try to take this func out and test it
         """ Run subprocess in local thread
         """
 
@@ -297,15 +296,9 @@ def streamTest():
             p = subprocess.Popen(
                 ["pytest", "-v", "-m", testName],
                 stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE
+                stderr=subprocess.PIPE,
+                shell=False
             )
-            while True:
-                time.sleep(2)
-                proc = psutil.Process(p.pid)
-                print(proc.threads())
-                if len(proc.threads()) < 2:
-                    proc.kill()
-                    break
             out, err = p.communicate()
             msgTxt = "Testing: " + out.decode()
             msgTxt = msgTxt.replace("\r\n", "<br>")
