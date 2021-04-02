@@ -5,6 +5,7 @@ import threading
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.remote.command import Command
 from selenium.common.exceptions import WebDriverException
 from msedge.selenium_tools import EdgeOptions
 from msedge.selenium_tools import Edge
@@ -105,6 +106,11 @@ class AbstractDriver():
                 print("Browser not supported yet")
             # make browser headless or not
             self.createDriver(self.browser, self.driverPath, False)
+        else:
+            try:
+                self.driver.execute(Command.STATUS)
+            except:
+                self.createDriver(self.browser, self.driverPath, False)
 
     def getDriver(self):
         self.checkDriver()
