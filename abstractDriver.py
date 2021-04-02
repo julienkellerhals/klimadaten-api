@@ -20,26 +20,15 @@ class AbstractDriver():
     driverFolder = Path.cwd() / "driver"
     driverInstalledBool = False
     headless = False
+    userAgent = None
     announcer = None
     pathStatusStream = None
     driverStatusStream = None
 
-    def __init__(self):
+    def __init__(self, announcer):
         self.pathStatusStream = messageAnnouncer.MessageAnnouncer()
         self.driverStatusStream = messageAnnouncer.MessageAnnouncer()
-
-    def runThreaded(
-            self,
-            announcer,
-            browser,
-            headlessStr,
-            userAgent):
         self.announcer = announcer
-        x = threading.Thread(
-            target=self.downloadDriver,
-            args=(browser, headlessStr, userAgent)
-        )
-        x.start()
 
     def getDriverPathStatus(self):
         x = threading.Thread(
@@ -139,23 +128,31 @@ class AbstractDriver():
         return self.driverInstalledBool, self.driverPath
 
     def downloadDriver(self, browser, headlessStr, userAgent):
+        self.browser = browser
+        if headlessStr.lower() == "true":
+            self.headless = True
+        else:
+            self.headless = False
+        self.userAgent = userAgent
+
+        x = threading.Thread(
+            target=self._downloadDriver
+        )
+        x.start()
+
+    def _downloadDriver(self):
         """ Creates selenium driver for webscrapping automation
             Downloads it into driver folder if not installed
-
-        Args:
-            browser (string): Browser type (Edge, Chrome, etc.)
-            headlessStr (string): Start in headless bool
-            userAgent (string): Browser user agent from header
         """
 
         if not self.driverFolder.exists():
             os.mkdir("driver")
 
-        msgTxt = "User agent: " + userAgent + "<br>"
+        msgTxt = "User agent: " + self.userAgent + "<br>"
         self.announcer.announce(self.announcer.format_sse(msgTxt))
 
-        for browserVersion in userAgent.split(" "):
-            if browserVersion.split("/")[0] == browser:
+        for browserVersion in self.userAgent.split(" "):
+            if browserVersion.split("/")[0] == self.browser:
                 version = browserVersion.split("/")[1]
         if len(version) == 0:
             # output += "Browser not found, options are -
@@ -170,7 +167,7 @@ class AbstractDriver():
         # get driver path
         self.driverInstalledBool, self.driverPath = self.getDriverPath(
             self.driverFolder,
-            browser
+            self.browser
         )
 
         # download driver
@@ -178,7 +175,7 @@ class AbstractDriver():
             msgTxt = "Installing driver <br>"
             self.announcer.announce(self.announcer.format_sse(msgTxt))
 
-            if browser == "Chrome":
+            if self.browser == "Chrome":
                 browserDriverDownloadPage, _, _ = download.getRequest(
                     "https://chromedriver.chromium.org/downloads"
                 )
@@ -193,7 +190,7 @@ class AbstractDriver():
                     "https://chromedriver.storage.googleapis.com/" \
                     + existingDriverVersion \
                     + "/chromedriver_win32.zip"
-            elif browser == "Edg":
+            elif self.browser == "Edg":
                 browserDriverDownloadUrl = \
                     "https://msedgedriver.azureedge.net/" \
                     + version \
@@ -214,20 +211,18 @@ class AbstractDriver():
             # get driver path
             self.driverInstalledBool, self.driverPath = self.getDriverPath(
                 self.driverFolder,
-                browser
+                self.browser
             )
         else:
             msgTxt = "Driver already satisfied <br>"
             self.announcer.announce(self.announcer.format_sse(msgTxt))
 
-        # Convert to string
-        if headlessStr.lower() == "true":
-            headlessBool = True
-        else:
-            headlessBool = False
-
         # Create driver
-        self.driver = self.createDriver(browser, self.driverPath, headlessBool)
+        self.driver = self.createDriver(
+            self.browser,
+            self.driverPath,
+            self.headless
+        )
 
         msgTxt = "Started Driver <br>"
         self.announcer.announce(self.announcer.format_sse(msgTxt))

@@ -22,7 +22,7 @@ import messageAnnouncer
 
 app = Flask(__name__)
 announcer = messageAnnouncer.MessageAnnouncer()
-abstractDriver = abstractDriver.AbstractDriver()
+abstractDriver = abstractDriver.AbstractDriver(announcer)
 instance = db.Database()
 
 
@@ -59,6 +59,14 @@ def adminPage():
 
     return render_template(
         "admin.html",
+    )
+
+
+@app.route("/admin/stream/eventLog")
+def streamEventLog():
+    return Response(
+        announcer.stream(),
+        mimetype='text/event-stream'
     )
 
 
@@ -243,11 +251,8 @@ def streamDriver(browser):
     headlessStr = request.args['headless']
     userAgent = request.headers.get('User-Agent')
 
-    x = threading.Thread(
-        target=abstractDriver.runThreaded,
-        args=(announcer, browser, headlessStr, userAgent)
-    )
-    x.start()
+    abstractDriver.downloadDriver(browser, headlessStr, userAgent)
+
     return Response(announcer.stream(), mimetype='text/event-stream')
 
 

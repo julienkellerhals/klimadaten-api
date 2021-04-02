@@ -53,7 +53,17 @@
 <div id="adminContainer">
     <div id="serverLog">
         <h1>Server Log</h1>
-        Add server log here
+        <div id="eventLog"></div>
+        <script>
+            var eventContainer = document.getElementById("eventLog");
+            var eventSource = new EventSource("/admin/stream/eventLog")
+            eventSource.onmessage = function (e) {
+                var entry = document.createElement("div");
+                entry.className = "eventItem"
+                entry.innerHTML = e.data;
+                eventContainer.appendChild(entry);
+            };
+        </script>
     </div>
     <div id="panel">
         <h1>Panel</h1>
