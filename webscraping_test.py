@@ -1,8 +1,4 @@
 import pytest
-from pathlib import Path
-from selenium import webdriver
-from selenium.webdriver import Chrome
-from selenium.webdriver.chrome.options import Options
 import abstractDriver
 
 abstractDriver = abstractDriver.AbstractDriver()
@@ -12,14 +8,22 @@ abstractDriver = abstractDriver.AbstractDriver()
 class TestMeteoSchweiz():
     def test_meteoschweiz_title(self):
         driver = abstractDriver.getDriver()
-        driver.get('https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle')
+        driver.get(
+            "https://www.meteoschweiz.admin.ch/home/klima/" +
+            "schweizer-klima-im-detail/homogene-messreihen-ab-1864.html" +
+            "?region=Tabelle"
+        )
         title = driver.title
         driver.quit()
         assert title == 'Homogene Messreihen ab 1864 - MeteoSchweiz'
 
     def test_meteoschweiz_xpath(self):
         driver = abstractDriver.getDriver()
-        driver.get('https://www.meteoschweiz.admin.ch/home/klima/schweizer-klima-im-detail/homogene-messreihen-ab-1864.html?region=Tabelle')
+        driver.get(
+            "https://www.meteoschweiz.admin.ch/home/klima/" +
+            "schweizer-klima-im-detail/homogene-messreihen-ab-1864.html" +
+            "?region=Tabelle"
+        )
         urls = driver.find_elements_by_xpath(
             "//table[@id='stations-table']/tbody/tr"
             + "/td/span[@class='overflow']/a")

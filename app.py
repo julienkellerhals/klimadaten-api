@@ -1,21 +1,10 @@
-import os
-import io
-import re
-import time
-import psutil
-import zipfile
 import threading
 import subprocess
-import sqlalchemy
-from pathlib import Path
-from sqlalchemy import create_engine
-from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
 from flask import request
 from flask import render_template
 from flask import Response
 import db
-import download
 import webscraping
 import abstractDriver
 import messageAnnouncer
@@ -23,7 +12,7 @@ import messageAnnouncer
 app = Flask(__name__)
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
-instance = db.Database()
+instance = db.Database(announcer)
 
 
 @app.route("/")
@@ -64,6 +53,12 @@ def adminPage():
 
 @app.route("/admin/stream/eventLog")
 def streamEventLog():
+    """ Create event log stream
+
+    Returns:
+        stream: announcer stream
+    """
+
     return Response(
         announcer.stream(),
         mimetype='text/event-stream'
@@ -72,12 +67,21 @@ def streamEventLog():
 
 @app.route("/admin/getEngineStatus", methods=["POST"])
 def getEngineStatus():
+    """ Runs function get engine status
+    """
+
     instance.getEngineStatus()
     return ""
 
 
 @app.route("/admin/stream/getEngineStatus")
 def streamEngineStatus():
+    """ Stream engine status
+
+    Returns:
+        stream: engine status stream
+    """
+
     instance.getEngineStatus()
     return Response(
         instance.engineStatusStream.stream(),
@@ -87,12 +91,21 @@ def streamEngineStatus():
 
 @app.route("/admin/getDatabaseStatus", methods=["POST"])
 def getDatabaseStatus():
+    """ Runs function get database status
+    """
+
     instance.getDatabaseStatus()
     return ""
 
 
 @app.route("/admin/stream/getDatabaseStatus")
 def streamDatabaseStatus():
+    """ Stream database status
+
+    Returns:
+        stream: database status stream
+    """
+
     instance.getDatabaseStatus()
     return Response(
         instance.databaseStatusStream.stream(),
@@ -102,12 +115,21 @@ def streamDatabaseStatus():
 
 @app.route("/admin/getDriverPathStatus", methods=["POST"])
 def getDriverPathStatus():
+    """ Gets driver path
+    """
+
     abstractDriver.getDriverPathStatus()
     return ""
 
 
 @app.route("/admin/stream/getDriverPathStatus")
 def streamDriverPathStatus():
+    """ Stream driver path status
+
+    Returns:
+        stream: path status stream
+    """
+
     abstractDriver.getDriverPathStatus()
     return Response(
         abstractDriver.pathStatusStream.stream(),
@@ -117,12 +139,21 @@ def streamDriverPathStatus():
 
 @app.route("/admin/getDriverStatus", methods=["POST"])
 def getDriverStatus():
+    """ Runs driver status function
+    """
+
     abstractDriver.getDriverStatus()
     return ""
 
 
 @app.route("/admin/stream/getDriverStatus")
 def streamDriverStatus():
+    """ Stream driver status
+
+    Returns:
+        stream: driver status stream
+    """
+
     abstractDriver.getDriverStatus()
     return Response(
         abstractDriver.driverStatusStream.stream(),
@@ -304,7 +335,7 @@ def streamTest():
                 stderr=subprocess.PIPE,
                 shell=False
             )
-            out, err = p.communicate()
+            out, _ = p.communicate()
             msgTxt = "Testing: " + out.decode()
             msgTxt = msgTxt.replace("\r\n", "<br>")
             announcer.announce(announcer.format_sse(msgTxt))

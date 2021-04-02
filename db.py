@@ -1,6 +1,7 @@
 import threading
 import sqlalchemy
-from sqlalchemy import *
+from sqlalchemy import MetaData, create_engine
+from sqlalchemy import Table, Column, Integer, String, Float
 from sqlalchemy_utils import database_exists, create_database
 import messageAnnouncer
 
@@ -16,12 +17,13 @@ class Database:
     databaseStatusStream = None
     engineStatusStream = None
 
-    def __init__(self):
+    def __init__(self, announcer):
         """ Init engine
         """
 
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.announcer = announcer
 
     def getEngine(self):
         self.checkEngine()
@@ -108,7 +110,7 @@ class Database:
             table_name='meteoschweiz_t',
             schema='stage'
         ):
-            meteoschweiz_t = Table(
+            Table(
                 'meteoschweiz_t',
                 self.meta,
                 Column('year', Integer),

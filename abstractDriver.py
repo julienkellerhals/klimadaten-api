@@ -1,5 +1,6 @@
 import os
 import io
+import re
 import zipfile
 import threading
 from pathlib import Path
@@ -9,6 +10,7 @@ from selenium.webdriver.remote.command import Command
 from selenium.common.exceptions import WebDriverException
 from msedge.selenium_tools import EdgeOptions
 from msedge.selenium_tools import Edge
+from urllib3.exceptions import MaxRetryError
 import download
 import messageAnnouncer
 
@@ -89,7 +91,7 @@ class AbstractDriver():
             _, self.driverPath = self.getDriverPath(self.driverFolder, None)
             if self.driverPath.name == "msedgedriver.exe":
                 self.browser = "Edg"
-            elif driverPath.name == "chromedriver.exe":
+            elif self.driverPath.name == "chromedriver.exe":
                 self.browser = "Chrome"
             else:
                 print("Browser not supported yet")
@@ -98,7 +100,7 @@ class AbstractDriver():
         else:
             try:
                 self.driver.execute(Command.STATUS)
-            except:
+            except MaxRetryError:
                 self.createDriver(self.browser, self.driverPath, False)
 
     def getDriver(self):

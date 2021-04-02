@@ -1,7 +1,6 @@
 import re
 import math
 import time
-import yaml
 import numpy as np
 import pandas as pd
 from lxml import etree
@@ -11,8 +10,8 @@ from dateutil.relativedelta import relativedelta
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import NoSuchElementException
+# from selenium.common.exceptions import TimeoutException
+# from selenium.common.exceptions import NoSuchElementException
 import download
 
 
@@ -349,7 +348,7 @@ def scrape_idaweb(driver, engine):
                 chunks = splitDf(inventoryDf, 400)
                 for chunk in chunks:
                     for value in chunk["value"]:
-                        createJs(value)
+                        js = createJs(value)
                         driver.execute_script(js)
 
                 orderName = createOrderName(config, orderNumber, now)
