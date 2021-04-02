@@ -121,6 +121,7 @@
                         var content = e.data
                         var statusCode = parseInt(content.split(";")[0].split(":")[1]);
                         var msg = content.split(";")[1]
+                        var errorMsg = content.split(";")[2]
                         var engineStatusSpan = document.getElementById("engineStatus").firstElementChild
                         var engineStatusDot = document.getElementById("engineStatus").lastElementChild
                         if (previousStatusCode != statusCode) {
@@ -129,10 +130,12 @@
                                 engineStatusSpan.innerText = msg.trim()
                                 engineStatusDot.classList.remove("success")
                                 engineStatusDot.classList.add("error")
+                                engineStatusDot.title = errorMsg.trim()
                             } else if (statusCode == 0) {
                                 engineStatusSpan.innerText = msg.trim()
                                 engineStatusDot.classList.remove("error")
                                 engineStatusDot.classList.add("success")
+                                engineStatusDot.title = ""
                             }
                         }
                     };

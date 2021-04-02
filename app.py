@@ -64,15 +64,15 @@ def adminPage():
 
 @app.route("/admin/getEngineStatus", methods=["POST"])
 def getEngineStatus():
-    instance.getDatabaseStatus()
+    instance.getEngineStatus()
     return ""
 
 
 @app.route("/admin/stream/getEngineStatus")
 def streamEngineStatus():
-    instance.getDatabaseStatus()
+    instance.getEngineStatus()
     return Response(
-        instance.databaseStatusStream.stream(),
+        instance.engineStatusStream.stream(),
         mimetype='text/event-stream'
     )
 
@@ -335,7 +335,7 @@ def streamMeteoschweiz():
     """
 
     driver = abstractDriver.getDriver()
-    engine = instance.engine
+    engine = instance.getEngine()
     x = threading.Thread(
         target=webscraping.scrape_meteoschweiz,
         args=(driver, engine, announcer)
@@ -354,7 +354,7 @@ def scrapeIdaweb():
     """
 
     driver = abstractDriver.getDriver()
-    engine = instance.engine
+    engine = instance.getEngine()
     resp = webscraping.scrape_idaweb(driver, engine)
     return resp
 
@@ -367,7 +367,7 @@ def createConnection():
         str: Connected
     """
 
-    instance = db.Database()
+    instance.checkEngine()
     return "Connected"
 
 
@@ -379,6 +379,7 @@ def createDatabase():
         str: Database created
     """
 
+    instance.checkEngine()
     instance.createDatabase()
     return "Database created"
 
@@ -391,5 +392,6 @@ def createTable():
         str: Table created
     """
 
+    instance.checkEngine()
     instance.createTable()
     return "Table created"

@@ -10,20 +10,35 @@ class Database:
     """
 
     engine = None
+    databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
     meta = MetaData()
     announcer = None
     databaseStatusStream = None
+    engineStatusStream = None
 
     def __init__(self):
         """ Init engine
         """
 
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
+
+    def getEngine(self):
+        self.checkEngine()
+        return self.engine
+
+    def checkEngine(self):
+        if self.engine is None:
+            print("Engine not started")
+            print("Starting programatically")
+            print("Assuming you installed database")
+            self.createEngine()
+
+    def createEngine(self):
         self.engine = create_engine(
-            "postgresql://postgres:postgres@localhost:5432/klimadb",
+            self.databaseUrl,
             echo=True
         )
-        print(self.engine)
 
     def getDatabaseStatus(self):
         x = threading.Thread(
@@ -34,8 +49,7 @@ class Database:
     def _getDatabaseStatus(self):
         try:
             create_engine(
-                "postgresql://postgres:postgres@localhost:5432/klimadb",
-                echo=True
+                self.databaseUrl
             ).connect()
         except sqlalchemy.exc.OperationalError as e:
             msgTxt = "Status: 1; Database not started; Error: " + str(e)
@@ -43,9 +57,27 @@ class Database:
                 self.databaseStatusStream.format_sse(msgTxt)
             )
         else:
-            msgTxt = "Status: 0; Database connection: " + str(self.engine.url)
+            msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
             self.databaseStatusStream.announce(
                 self.databaseStatusStream.format_sse(msgTxt)
+            )
+
+    def getEngineStatus(self):
+        x = threading.Thread(
+            target=self._getEngineStatus
+        )
+        x.start()
+
+    def _getEngineStatus(self):
+        if self.engine is None:
+            msgTxt = "Status: 1; Engine not started; Error: Connect to db"
+            self.engineStatusStream.announce(
+                self.engineStatusStream.format_sse(msgTxt)
+            )
+        else:
+            msgTxt = "Status: 0; Engine started"
+            self.engineStatusStream.announce(
+                self.engineStatusStream.format_sse(msgTxt)
             )
 
     def createDatabase(self):
