@@ -1,18 +1,46 @@
-import threading
-import subprocess
 from flask import Flask
-from flask import request
-from flask import render_template
-from flask import Response
 import db
-import webscraping
+import dbAPI
+import adminAPI
+import streamAPI
+import scrapeAPI
 import abstractDriver
 import messageAnnouncer
 
 app = Flask(__name__)
+
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
 instance = db.Database(announcer)
+
+app.register_blueprint(adminAPI.constructBlueprint(
+    announcer,
+    instance,
+    abstractDriver
+    ),
+    url_prefix="/admin"
+)
+app.register_blueprint(streamAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/stream"
+)
+app.register_blueprint(dbAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/db"
+)
+app.register_blueprint(scrapeAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/scrape"
+)
 
 
 @app.route("/")
@@ -35,399 +63,3 @@ def api():
     """
 
     return "API"
-
-
-@app.route("/admin")
-@app.route("/admin/")
-def adminPage():
-    """ Admin page
-
-    Returns:
-        html: Returns admin page
-    """
-
-    return render_template(
-        "admin.html",
-    )
-
-
-@app.route("/admin/stream/eventLog")
-def streamEventLog():
-    """ Create event log stream
-
-    Returns:
-        stream: announcer stream
-    """
-
-    return Response(
-        announcer.stream(),
-        mimetype='text/event-stream'
-    )
-
-
-@app.route("/admin/getEngineStatus", methods=["POST"])
-def getEngineStatus():
-    """ Runs function get engine status
-    """
-
-    instance.getEngineStatus()
-    return ""
-
-
-@app.route("/admin/stream/getEngineStatus")
-def streamEngineStatus():
-    """ Stream engine status
-
-    Returns:
-        stream: engine status stream
-    """
-
-    instance.getEngineStatus()
-    return Response(
-        instance.engineStatusStream.stream(),
-        mimetype='text/event-stream'
-    )
-
-
-@app.route("/admin/getDatabaseStatus", methods=["POST"])
-def getDatabaseStatus():
-    """ Runs function get database status
-    """
-
-    instance.getDatabaseStatus()
-    return ""
-
-
-@app.route("/admin/stream/getDatabaseStatus")
-def streamDatabaseStatus():
-    """ Stream database status
-
-    Returns:
-        stream: database status stream
-    """
-
-    instance.getDatabaseStatus()
-    return Response(
-        instance.databaseStatusStream.stream(),
-        mimetype='text/event-stream'
-    )
-
-
-@app.route("/admin/getDriverPathStatus", methods=["POST"])
-def getDriverPathStatus():
-    """ Gets driver path
-    """
-
-    abstractDriver.getDriverPathStatus()
-    return ""
-
-
-@app.route("/admin/stream/getDriverPathStatus")
-def streamDriverPathStatus():
-    """ Stream driver path status
-
-    Returns:
-        stream: path status stream
-    """
-
-    abstractDriver.getDriverPathStatus()
-    return Response(
-        abstractDriver.pathStatusStream.stream(),
-        mimetype='text/event-stream'
-    )
-
-
-@app.route("/admin/getDriverStatus", methods=["POST"])
-def getDriverStatus():
-    """ Runs driver status function
-    """
-
-    abstractDriver.getDriverStatus()
-    return ""
-
-
-@app.route("/admin/stream/getDriverStatus")
-def streamDriverStatus():
-    """ Stream driver status
-
-    Returns:
-        stream: driver status stream
-    """
-
-    abstractDriver.getDriverStatus()
-    return Response(
-        abstractDriver.driverStatusStream.stream(),
-        mimetype='text/event-stream'
-    )
-
-
-@app.route("/admin/testFunc")
-def testFunc():
-    # instance = db.Database()
-    # instance.test(announcer)
-    return Response(announcer.stream(), mimetype='text/event-stream')
-
-
-@app.route("/admin/tables")
-def tablesPage():
-    """ Tables page
-
-    Returns:
-        html: Returns tables page
-    """
-
-    return render_template(
-        "tables.html",
-    )
-
-
-@app.route("/admin/source")
-def sourcePage():
-    """ Source page
-
-    Returns:
-        html: Returns source page
-    """
-
-    return render_template(
-        "source.html",
-    )
-
-
-@app.route("/admin/status")
-def statusPage():
-    """ Status page
-
-    Returns:
-        html: Returns status page
-    """
-
-    return render_template(
-        "status.html",
-    )
-
-
-@app.route("/admin/tests")
-def testsPage():
-    """ Tests page
-
-    Returns:
-        html: Returns tests page
-    """
-
-    return render_template(
-        "tests.html",
-    )
-
-
-@app.route("/admin/doc")
-def docPage():
-    """ Doc page
-
-    Returns:
-        html: Returns doc page
-    """
-
-    return render_template(
-        "doc.html",
-    )
-
-
-@app.route("/admin/errors")
-def errorPage():
-    """ Error page
-
-    Returns:
-        html: Returns error page
-    """
-
-    return render_template(
-        "error.html",
-    )
-
-
-@app.route("/admin/driver/<browser>")
-def driver(browser):
-    """ Returns driver page
-
-    Args:
-        browser (str): Browser type
-
-    Returns:
-        html: Renders html template
-    """
-
-    reqUrl = request.full_path
-    streamUrl = reqUrl.replace(
-        "/admin",
-        "/admin/stream"
-    )
-    return render_template(
-        "stream.html",
-        streamUrl=streamUrl
-    )
-
-
-@app.route("/admin/stream/driver/<browser>")
-def streamDriver(browser):
-    """ Creates driver and data stream for driver page
-
-    Args:
-        browser (str): Browser type
-
-    Returns:
-        stream: Data stream for driver creation
-    """
-
-    headlessStr = request.args['headless']
-    userAgent = request.headers.get('User-Agent')
-
-    abstractDriver.downloadDriver(browser, headlessStr, userAgent)
-
-    return Response(announcer.stream(), mimetype='text/event-stream')
-
-
-@app.route("/admin/refresh")
-def refreshData():
-    """ Temp route
-
-    Returns:
-        str: Temp
-    """
-
-    return "Run webscraping"
-
-
-@app.route("/admin/test")
-def runTests():
-    """ Return test page
-
-    Returns:
-        html: Renders html template
-    """
-
-    return render_template(
-        "stream.html",
-        streamUrl="/admin/stream/test"
-    )
-
-
-@app.route("/admin/stream/test")
-def streamTest():
-    """ Runs tests and creates data stream for tests page
-
-    Returns:
-        stream: Data stream for test runs
-    """
-
-    def runTestSubprocess():
-        """ Run subprocess in local thread
-        """
-
-        testNameList = [
-            "meteoschweiz",
-            "idaweb"
-        ]
-        for testName in testNameList:
-            p = subprocess.Popen(
-                ["pytest", "-v", "-m", testName],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                shell=False
-            )
-            out, _ = p.communicate()
-            msgTxt = "Testing: " + out.decode()
-            msgTxt = msgTxt.replace("\r\n", "<br>")
-            announcer.announce(announcer.format_sse(msgTxt))
-
-    x = threading.Thread(
-        target=runTestSubprocess
-    )
-    x.start()
-
-    return Response(announcer.stream(), mimetype='text/event-stream')
-
-
-@app.route("/admin/scrape/meteoschweiz")
-def scrapeMeteoschweiz():
-    """ Return meteosuisse page
-
-    Returns:
-        html: Renders html template
-    """
-
-    return render_template(
-        "stream.html",
-        streamUrl="/admin/stream/meteoschweiz"
-    )
-
-
-@app.route("/admin/stream/meteoschweiz")
-def streamMeteoschweiz():
-    """ Runs meteo suisse scrapping process and returns stream
-
-    Returns:
-        stream: Meteosuisse stream
-    """
-
-    driver = abstractDriver.getDriver()
-    engine = instance.getEngine()
-    x = threading.Thread(
-        target=webscraping.scrape_meteoschweiz,
-        args=(driver, engine, announcer)
-    )
-    x.start()
-
-    return Response(announcer.stream(), mimetype='text/event-stream')
-
-
-@app.route("/admin/scrape/idaweb")
-def scrapeIdaweb():
-    """ Runs idaweb scrapping
-
-    Returns:
-        str: temp
-    """
-
-    driver = abstractDriver.getDriver()
-    engine = instance.getEngine()
-    resp = webscraping.scrape_idaweb(driver, engine)
-    return resp
-
-
-@app.route("/admin/db/connect", methods=["GET", "POST"])
-def createConnection():
-    """ Creates database connection
-
-    Returns:
-        str: Connected
-    """
-
-    instance.checkEngine()
-    return "Connected"
-
-
-@app.route("/admin/db/create")
-def createDatabase():
-    """ Create database
-
-    Returns:
-        str: Database created
-    """
-
-    instance.checkEngine()
-    instance.createDatabase()
-    return "Database created"
-
-
-@app.route("/admin/db/table")
-def createTable():
-    """ Create tables
-
-    Returns:
-        str: Table created
-    """
-
-    instance.checkEngine()
-    instance.createTable()
-    return "Table created"
