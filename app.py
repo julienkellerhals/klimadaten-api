@@ -1,9 +1,9 @@
 from flask import Flask
 import db
-import dbAPI
-import adminAPI
-import streamAPI
-import scrapeAPI
+from api import dbAPI
+from api import adminAPI
+from api import streamAPI
+from api import scrapeAPI
 import abstractDriver
 import messageAnnouncer
 
