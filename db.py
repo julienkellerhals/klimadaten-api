@@ -145,6 +145,6 @@ class Database:
                 Column('source', String),
                 Column("valid_from", DateTime),
                 Column("valid_to", Date),
-                schema='stage')
+                schema='core')
 
         self.meta.create_all(self.engine)
