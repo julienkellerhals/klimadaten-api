@@ -10,7 +10,18 @@
         top: 50%;
         left: 50%;
         position: absolute;
+        z-index: 2;
         background: yellow;
+    }
+
+    #dbCreate {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        z-index: 1;
+        background: green;
     }
 
     .hide {
@@ -75,6 +86,45 @@
         streamEngineStatus();
         setInterval(getEngineStatus, 10000);
         document.getElementById("dbConnection").addEventListener("click", startEngine)
+    </script>
+</div>
+<div id="dbCreate">
+    <h1>
+        Create database
+    </h1>
+    <script>
+        function createDb() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/db/create", true);
+            xhr.send()
+            getDatabaseStatus()
+        }
+
+        function streamDatabaseStatus() {
+            var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
+            var previousStatusCode = null
+            databaseEventSource.onmessage = function (e) {
+                var content = e.data;
+                var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                var dbCreate = document.getElementById("dbCreate")
+                if (previousStatusCode != statusCode) {
+                    previousStatusCode = statusCode
+                    if (statusCode == 2) {
+                        dbCreate.classList.remove("hide")
+                    } else if (statusCode < 2) {
+                        dbCreate.classList.add("hide")
+                    }
+                }
+            };
+        }
+        function getDatabaseStatus() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/getDatabaseStatus", true);
+            xhr.send()
+        }
+        streamDatabaseStatus();
+        setInterval(getDatabaseStatus, 10000);
+        document.getElementById("dbCreate").addEventListener("click", createDb)
     </script>
 </div>
 <div id="tableContainer">

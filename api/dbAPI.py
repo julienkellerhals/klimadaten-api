@@ -15,7 +15,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.checkEngine()
         return "Connected"
 
-    @dbApi.route("/create")
+    @dbApi.route("/create", methods=["GET", "POST"])
     def createDatabase():
         """ Create database
 
