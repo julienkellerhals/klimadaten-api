@@ -102,12 +102,12 @@
                         var databaseStatusDot = document.getElementById("databaseStatus").lastElementChild
                         if (previousStatusCode != statusCode) {
                             previousStatusCode = statusCode
-                            if (e.data.split(";")[0] == "Status: 1") {
+                            if (statusCode > 0) {
                                 databaseStatusSpan.innerText = msg.trim()
                                 databaseStatusDot.classList.remove("success")
                                 databaseStatusDot.classList.add("error")
                                 databaseStatusDot.title = errorMsg.trim()
-                            } else if (e.data.split(";")[0] == "Status: 0") {
+                            } else if (statusCode == 0) {
                                 databaseStatusSpan.innerText = msg.trim()
                                 databaseStatusDot.classList.remove("error")
                                 databaseStatusDot.classList.add("success")

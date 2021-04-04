@@ -1,7 +1,7 @@
 import threading
 import sqlalchemy
 from sqlalchemy import MetaData, create_engine
-from sqlalchemy import Table, Column, Integer, String, Float
+from sqlalchemy import Table, Column, Integer, String, Float, Date, DateTime
 from sqlalchemy_utils import database_exists, create_database
 import messageAnnouncer
 
@@ -54,10 +54,18 @@ class Database:
                 self.databaseUrl
             ).connect()
         except sqlalchemy.exc.OperationalError as e:
-            msgTxt = "Status: 1; Database not started; Error: " + str(e)
-            self.databaseStatusStream.announce(
-                self.databaseStatusStream.format_sse(msgTxt)
-            )
+            try:
+                database_exists(self.databaseUrl)
+            except sqlalchemy.exc.OperationalError as e:
+                msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                self.databaseStatusStream.announce(
+                    self.databaseStatusStream.format_sse(msgTxt)
+                )
+            else:
+                msgTxt = "Status: 1; Database not created; Error: " + str(e)
+                self.databaseStatusStream.announce(
+                    self.databaseStatusStream.format_sse(msgTxt)
+                )
         else:
             msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
             self.databaseStatusStream.announce(
@@ -118,6 +126,25 @@ class Database:
                 Column('station', String),
                 Column('temperature', Float),
                 Column('precipitation', Float),
+                Column("load_date", Date),
                 schema='stage')
 
-            self.meta.create_all(self.engine)
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='measurements_t',
+            schema='core'
+        ):
+            Table(
+                'measurements_t',
+                self.meta,
+                Column('meas_date', Date),
+                Column('station', String),
+                Column('granularity', String),
+                Column('meas_name', String),
+                Column('meas_value', Float),
+                Column('source', String),
+                Column("valid_from", DateTime),
+                Column("valid_to", Date),
+                schema='stage')
+
+        self.meta.create_all(self.engine)

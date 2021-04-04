@@ -242,6 +242,8 @@ def scrape_meteoschweiz(driver, engine, announcer):
         errors='coerce'
     )
 
+    allStationsDf["load_date"] = pd.to_datetime('today').normalize()
+
     allStationsDf.to_sql(
         'meteoschweiz_t',
         engine,
