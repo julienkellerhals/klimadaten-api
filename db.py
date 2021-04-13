@@ -1,7 +1,8 @@
 import threading
 import sqlalchemy
+import pandas as pd
 from sqlalchemy import MetaData, create_engine
-from sqlalchemy import Table, Column, Integer, String, Float, Date, DateTime
+from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy_utils import database_exists, create_database
 import messageAnnouncer
 
@@ -11,6 +12,7 @@ class Database:
     """
 
     engine = None
+    conn = None
     databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
     meta = MetaData()
     announcer = None
@@ -118,7 +120,7 @@ class Database:
             table_name='meteoschweiz_t',
             schema='stage'
         ):
-            Table(
+            self.meteoschweiz_t = Table(
                 'meteoschweiz_t',
                 self.meta,
                 Column('year', Integer),
@@ -134,7 +136,7 @@ class Database:
             table_name='measurements_t',
             schema='core'
         ):
-            Table(
+            self.measurements_t = Table(
                 'measurements_t',
                 self.meta,
                 Column('meas_date', Date),
@@ -143,8 +145,59 @@ class Database:
                 Column('meas_name', String),
                 Column('meas_value', Float),
                 Column('source', String),
-                Column("valid_from", DateTime),
+                Column("valid_from", Date),
                 Column("valid_to", Date),
                 schema='core')
 
         self.meta.create_all(self.engine)
+
+    def runCoreETL(self):
+        self.meteoschweizCoreETL()
+
+    def meteoschweizCoreETL(self):
+        meteoschweizDf = pd.read_sql_table(
+            "meteoschweiz_t",
+            self.engine,
+            schema="stage"
+        )
+
+        meteoschweizDf["meas_date"] = pd.to_datetime(
+            meteoschweizDf["year"].map(str)
+            + "." + meteoschweizDf["month"].map(str)
+            + ".01",
+            format="%Y.%m.%d"
+        )
+
+        meteoschweizDf["granularity"] = "M"
+        meteoschweizDf["source"] = "meteoschweiz"
+        meteoschweizDf.rename(
+            columns={"load_date": "valid_from"},
+            inplace=True
+        )
+        meteoschweizDf["valid_to"] = pd.to_datetime("2262-04-11")
+        del meteoschweizDf['year']
+        del meteoschweizDf['month']
+        meteoschweizDf = pd.melt(
+            meteoschweizDf,
+            id_vars=[
+                "station",
+                "valid_from",
+                "valid_to",
+                "meas_date",
+                "granularity",
+                "source"
+            ],
+            value_vars=[
+                "temperature",
+                "precipitation"
+            ],
+            var_name="meas_name",
+            value_name="meas_value"
+        )
+        meteoschweizDf.to_sql(
+            'measurements_t',
+            self.engine,
+            schema='core',
+            if_exists='append',
+            index=False
+        )

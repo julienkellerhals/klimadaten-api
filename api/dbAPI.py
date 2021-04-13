@@ -39,4 +39,11 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.createTable()
         return "Table created"
 
+    @dbApi.route("/etl/core", methods=["GET", "POST"])
+    def runCoreETL():
+
+        instance.checkEngine()
+        instance.runCoreETL()
+        return "Run Core ETL"
+
     return dbApi

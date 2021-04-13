@@ -8,9 +8,9 @@
         width: 50px;
         height: 50px;
         top: 50%;
-        left: 50%;
+        left: 60%;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         background: yellow;
     }
 
@@ -18,7 +18,7 @@
         width: 50px;
         height: 50px;
         top: 50%;
-        left: 50%;
+        left: 40%;
         position: absolute;
         z-index: 1;
         background: green;
@@ -109,9 +109,14 @@
                 var dbCreate = document.getElementById("dbCreate")
                 if (previousStatusCode != statusCode) {
                     previousStatusCode = statusCode
-                    if (statusCode == 2) {
+                    if (statusCode == 0) {
+                        // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+                        dbCreate.classList.add("hide")
+                    } else if (statusCode == 1) {
+                        // msgTxt = "Status: 1; Database not created; Error: " + str(e)
                         dbCreate.classList.remove("hide")
-                    } else if (statusCode < 2) {
+                    } else if (statusCode == 2) {
+                        // msgTxt = "Status: 2; Database not started; Error: " + str(e)
                         dbCreate.classList.add("hide")
                     }
                 }
@@ -131,8 +136,23 @@
     <div id="stage" class="schema">
         <h1>Stage Schema</h1>
         <div class="tableGroup">
+            <div id="tableCreate">create tables</div>
             <script>
-
+                function createTables() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/db/table", true);
+                    xhr.send()
+                }
+                document.getElementById("tableCreate").addEventListener("click", createTables)
+            </script>
+            <div id="execCoreETL">Run stage to core etl</div>
+            <script>
+                function runCoreETL() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/db/etl/core", true);
+                    xhr.send()
+                }
+                document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
             </script>
         </div>
     </div>
