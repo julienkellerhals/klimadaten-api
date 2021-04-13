@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>{% block title %}{% endblock %}</title>
     <style>
         body {
@@ -14,22 +16,6 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            font-family: verdana;
-        }
-
-        #navbarContainer {
-            height: 3em;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: gray;
-        }
-
-        #navbar {
-            width: 40em;
-            display: flex;
-            justify-content: space-around;
         }
 
         #error {
@@ -44,17 +30,20 @@
 </head>
 
 <body>
-    <div id="navbarContainer">
-        <div id=navbar>
-            <a href="/admin/">Admin</a>
-            <a href="/admin/tables">Tables</a>
-            <a href="/admin/source">Data source</a>
-            <a href="/admin/status">Data status</a>
-            <a href="/admin/tests">Tests</a>
-            <a href="/admin/doc">Help / Doc</a>
+    <nav>
+        <div class="nav-wrapper grey darken-3">
+            <a href="/admin/" class="brand-logo">Klima API</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li {% if active_page == "admin" %} class="active"{% endif%}><a href="/admin/">Admin</a></li>
+                <li {% if active_page == "tables" %} class="active"{% endif%}><a href="/admin/tables">Tables</a></li>
+                <li {% if active_page == "source" %} class="active"{% endif%}><a href="/admin/source">Data source</a></li>
+                <li {% if active_page == "status" %} class="active"{% endif%}><a href="/admin/status">Data status</a></li>
+                <li {% if active_page == "tests" %} class="active"{% endif%}><a href="/admin/tests">Tests</a></li>
+                <li {% if active_page == "doc" %} class="active"{% endif%}><a href="/admin/doc">Help / Doc</a></li>
+                <li {% if active_page == "errors" %} class="active"{% endif%}><a id="error" class="right" href="/admin/errors">Errors</a></li>
+            </ul>
         </div>
-        <a id="error" href="/admin/errors">Errors</a>
-    </div>
+    </nav>
     <div id="container">
         {% block container %}{% endblock %}
     </div>
