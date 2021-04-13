@@ -322,16 +322,16 @@ def scrape_idaweb(driver, engine):
 
         tooManyEntriesBool = True
         noEntriesBool = False
-        timeDeltaList = [1000, 100, 10, 1]
-
+        timeDeltaList = [300, 100, 30, 10, 3, 1]
+        notFinished = True
         # selection and ordering of data
-        while True:
+        while notFinished:
             tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
                 driver,
                 tooManyEntriesBool,
                 noEntriesBool
             )
-            # try selecting with select all as long as there are elements in time delta list
+            # try selecting with select all as long as there are elements in timeDeltaList
             if not len(timeDeltaList) == 0:
 
                 # if time delta too big, make it smaller
@@ -353,6 +353,9 @@ def scrape_idaweb(driver, engine):
                         idaWebSummary(driver)
                         idaWebAgbs(driver)
 
+                        # Add order to list
+                        saved_documents.append(orderName)
+
                         # Go back to start and continue
                         since = until
                         until = getUntil(since, timeDeltaList)
@@ -373,6 +376,8 @@ def scrape_idaweb(driver, engine):
                         since = until
                         until = getUntil(since, timeDeltaList)
                         idaWebTimePreselection(driver, since, until)
+                        if since == until:
+                            notFinished = False
 
             # select junks manually if select all doesn't work
             else:
@@ -391,8 +396,19 @@ def scrape_idaweb(driver, engine):
                 idaWebSummary(driver)
                 idaWebAgbs(driver)
 
-                # Add roder to list
+                # Add order to list
                 saved_documents.append(orderName)
+
+                # redo the whole order process
+                idaWebParameterPortal(driver)
+                idaWebParameterPreselection(
+                    driver,
+                    config.attrib['group'],
+                    config.attrib['granularity'],
+                    config.text
+                )
+                idaWebStationPreselection(driver)
+                idaWebTimePreselection(driver, since, until)
 
     print(saved_documents)
 
