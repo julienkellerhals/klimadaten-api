@@ -29,7 +29,8 @@ def constructBlueprint(announcer, instance, abstractDriver):
 
         driver = abstractDriver.getDriver()
         engine = instance.getEngine()
-        resp = webscraping.scrape_idaweb(driver, engine)
-        return resp
+        savedDocuments = webscraping.scrape_idaweb(driver, engine)
+        orderDf = webscraping.scrapeIdawebOrders(driver)
+        return "Scraped idaweb successfully"
 
     return scrapeApi
