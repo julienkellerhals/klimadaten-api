@@ -1,5 +1,6 @@
 import re
 import io
+import os
 import math
 import time
 import zipfile
@@ -269,6 +270,8 @@ def scrape_meteoschweiz(driver, engine, announcer):
 
 # main function
 def scrape_idaweb(driver, engine):
+    if not os.path.isdir("data"):
+        os.mkdir("data")
     savedDocuments = _scrape_idaweb(driver, engine)
     savedDocumentsDf = pd.DataFrame(
         savedDocuments,
@@ -839,11 +842,11 @@ def scrapeIdawebOrders(driver):
         df: Dataframe containing all orders
     """
 
-    scrape_idaweb_login(driver)
-    idaWebOrderPortal(driver)
+    orderUrl = "https://gate.meteoswiss.ch/idaweb/system/ordersList.do"
+    if driver.current_url != orderUrl:
+        scrape_idaweb_login(driver)
+        idaWebOrderPortal(driver)
 
-    # TODO join to made order and only download the new ones
-    # TODO if not available wait a few min
     rowHeaders = [
         "no",
         "reference",
