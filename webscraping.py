@@ -173,6 +173,7 @@ def getUntil(since, timeDeltaList):
     return until
 
 
+# main function
 def scrape_meteoschweiz(driver, engine, announcer):
     """ Scrape data from meteo suisse
 
@@ -276,6 +277,7 @@ def scrape_meteoschweiz(driver, engine, announcer):
     return str(allStationsDf)
 
 
+# main function
 def scrape_idaweb(driver, engine):
     """ Scrape idaweb
 
@@ -296,11 +298,14 @@ def scrape_idaweb(driver, engine):
     # login
     scrape_idaweb_login(driver)
 
+
+    # for every variable in idawebConfig.xml
     for config in configList:
         orderNumber = 1
-        # create order name
+        # get date and time for order name
         now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
 
+        # select params according to confic in param preselecton
         idaWebParameterPortal(driver)
         idaWebParameterPreselection(
             driver,
@@ -317,19 +322,27 @@ def scrape_idaweb(driver, engine):
 
         tooManyEntriesBool = True
         noEntriesBool = False
-        timeDeltaList = [1000, 100, 10, 1]
-        while True:
+        timeDeltaList = [300, 100, 30, 10, 3, 1]
+        notFinished = True
+        # selection and ordering of data
+        while notFinished:
             tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
                 driver,
                 tooManyEntriesBool,
                 noEntriesBool
             )
+            # try selecting with select all as long as there are elements in timeDeltaList
             if not len(timeDeltaList) == 0:
+
+                # if time delta too big, make it smaller
                 if tooManyEntriesBool:
                     timeDeltaList.remove(timeDeltaList[0])
                     until = getUntil(since, timeDeltaList)
                     idaWebTimePreselection(driver, since, until)
                 else:
+
+                    # if the selection has entries, but no too many
+                    # order the data, move the time period, redo order process
                     if not noEntriesBool:
                         idaWebDataInventory(driver)
 
@@ -339,6 +352,9 @@ def scrape_idaweb(driver, engine):
 
                         idaWebSummary(driver)
                         idaWebAgbs(driver)
+
+                        # Add order to list
+                        saved_documents.append(orderName)
 
                         # Go back to start and continue
                         since = until
@@ -355,11 +371,15 @@ def scrape_idaweb(driver, engine):
                         idaWebStationPreselection(driver)
                         idaWebTimePreselection(driver, since, until)
 
+                    # if selection has no entries, change time period
                     else:
                         since = until
                         until = getUntil(since, timeDeltaList)
                         idaWebTimePreselection(driver, since, until)
+                        if since == until:
+                            notFinished = False
 
+            # select junks manually if select all doesn't work
             else:
                 idaWebDataInventoryManual(driver)
                 inventoryDf = scrapeIdawebInventory(driver)
@@ -376,8 +396,19 @@ def scrape_idaweb(driver, engine):
                 idaWebSummary(driver)
                 idaWebAgbs(driver)
 
-                # Add roder to list
+                # Add order to list
                 saved_documents.append(orderName)
+
+                # redo the whole order process
+                idaWebParameterPortal(driver)
+                idaWebParameterPreselection(
+                    driver,
+                    config.attrib['group'],
+                    config.attrib['granularity'],
+                    config.text
+                )
+                idaWebStationPreselection(driver)
+                idaWebTimePreselection(driver, since, until)
 
     print(saved_documents)
 
@@ -392,10 +423,11 @@ def scrape_idaweb_login(driver):
     """
 
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
-
+    
+    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02 
     # log into page
-    driver.find_element_by_name('user').send_keys('simon.schmid1@fhnw.ch')
-    driver.find_element_by_name('password').send_keys('AF3410985C')
+    driver.find_element_by_name('user').send_keys('joel.grosjean@students.fhnw.ch')
+    driver.find_element_by_name('password').send_keys('AGEJ649GJAL02')
     driver.find_element_by_xpath(
         '//*[@id="content_block"]/form/fieldset/'
         + 'table/tbody/tr[3]/td/table/tbody/tr/td[1]/input'
