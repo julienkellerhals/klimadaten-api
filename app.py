@@ -1,5 +1,6 @@
 from flask import Flask
 import db
+import dashboard
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
@@ -63,3 +64,8 @@ def api():
     """
 
     return "API"
+
+
+@app.route('/dashboard')
+def dashapp():
+    dashboard.create_dashapp(app)

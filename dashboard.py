@@ -3,7 +3,25 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 import pandas as pd
+from flask import Flask
 
+def create_dashapp(server):
+    app = dash.Dash(
+        server=server,
+        url_base_pathname='/dashapp/'
+    )
+    app.config['suppress_callback_exceptions'] = True
+    app.title='Dash App'
+
+    # Set the layout
+    app.layout = layout = html.Div('Hello Dash app')
+
+    # Register callbacks here if you want...
+    
+    return app
+
+
+"""
 df = pd.read_excel("https://github.com/chris1610/pbpython/blob/master/data/salesfunnel.xlsx?raw=True")
 pv = pd.pivot_table(df, index=['Name'], columns=["Status"], values=['Quantity'], aggfunc=sum, fill_value=0)
 
@@ -12,9 +30,10 @@ trace2 = go.Bar(x=pv.index, y=pv[('Quantity', 'pending')], name='Pending')
 trace3 = go.Bar(x=pv.index, y=pv[('Quantity', 'presented')], name='Presented')
 trace4 = go.Bar(x=pv.index, y=pv[('Quantity', 'won')], name='Won')
 
-app = dash.Dash()
 
-app.layout = html.Div(children=[
+dashboard = dash.Dash(server=app, url_base_pathname="/dashboard") 
+
+dashboard.layout = html.Div(children=[
     html.H1(children='Sales Funnel Report'),
     html.Div(children='''National Sales Funnel Report.'''),
     dcc.Graph(
@@ -26,5 +45,5 @@ app.layout = html.Div(children=[
         })
 ])
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+dashboard.run_server(debug=True)
+"""
