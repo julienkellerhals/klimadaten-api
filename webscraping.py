@@ -341,9 +341,10 @@ def _scrape_idaweb(driver, engine):
     # login
     scrape_idaweb_login(driver)
 
-
     # for every variable in idawebConfig.xml
     for config in configList:
+        time.sleep(30)
+
         orderNumber = 1
         # get date and time for order name
         now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
@@ -358,9 +359,28 @@ def _scrape_idaweb(driver, engine):
         )
 
         # add the height selection
-        heightDeltaList = [3500,2000,1000,500,350,200,100,50,35,20,10,5,3,2,1]
+        heightDeltaList = [
+            3500,
+            2000,
+            1000,
+            500,
+            350,
+            200,
+            100,
+            50,
+            35,
+            20,
+            10,
+            5,
+            3,
+            2,
+            1
+        ]
         heightMin = 200
-        idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+        idaWebStationPreselection(
+            driver,
+            f"{heightMin}..{heightMin + heightDeltaList[0]}"
+        )
 
         # Start time preselection
         since = "01.01.1800"
@@ -379,13 +399,17 @@ def _scrape_idaweb(driver, engine):
                 tooManyEntriesBool,
                 noEntriesBool
             )
-            # try selecting with select all as long as there are elements in timeDeltaList
+            # try selecting with select all as long
+            # as there are elements in timeDeltaList
             if not len(heightDeltaList) == 0:
 
                 # if hight delta too big, make it smaller
                 if tooManyEntriesBool:
                     heightDeltaList.remove(heightDeltaList[0])
-                    idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                    idaWebStationPreselection(
+                        driver,
+                        f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                    )
                     idaWebTimePreselection(driver, since, until)
                 else:
                     # if the selection has entries, but no too many
@@ -393,7 +417,11 @@ def _scrape_idaweb(driver, engine):
                     if not noEntriesBool:
                         idaWebDataInventory(driver)
                         try:
-                            orderName = createOrderName(config, orderNumber, now)
+                            orderName = createOrderName(
+                                config,
+                                orderNumber,
+                                now
+                            )
                             idaWebOrder(driver, orderName)
                             orderNumber += 1
 
@@ -407,10 +435,26 @@ def _scrape_idaweb(driver, engine):
                             if heightMin + heightDeltaList[0] >= 3700:
                                 notFinished = False
                                 break
-                            
+
                             # Go back to start and continue
                             heightMin = heightMin + heightDeltaList[0]
-                            heightDeltaList = [3500,2000,1000,500,350,200,100,50,35,20,10,5,3,2,1]
+                            heightDeltaList = [
+                                3500,
+                                2000,
+                                1000,
+                                500,
+                                350,
+                                200,
+                                100,
+                                50,
+                                35,
+                                20,
+                                10,
+                                5,
+                                3,
+                                2,
+                                1
+                            ]
 
                             # redo the whole order process
                             idaWebParameterPortal(driver)
@@ -420,22 +464,30 @@ def _scrape_idaweb(driver, engine):
                                 config.attrib['granularity'],
                                 config.text
                             )
-                            idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
                             idaWebTimePreselection(driver, since, until)
-                        
+
                         # if selection has more than 2'000'000 values
                         except:
                             # accept alert
                             # driver.switch_to.alert.accept()
-                            
-                            # make timeframe smaller 
+
+                            # make timeframe smaller
                             heightDeltaList.remove(heightDeltaList[0])
-                            idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
                             idaWebTimePreselection(driver, since, until)
 
                     # if selection has no entries, change time period
                     else:
-                        notFinished = False  
+                        notFinished = False
 
             # select junks manually if select all doesn't work
             # TODO make it work
@@ -466,7 +518,10 @@ def _scrape_idaweb(driver, engine):
                     config.attrib['granularity'],
                     config.text
                 )
-                idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                idaWebStationPreselection(
+                    driver,
+                    f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                )
                 idaWebTimePreselection(driver, since, until)
 
     print(saved_documents)
@@ -482,8 +537,8 @@ def scrape_idaweb_login(driver):
     """
 
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
-    
-    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02 
+
+    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02
     # log into page
     driver.find_element_by_name('user').send_keys(username)
     driver.find_element_by_name('password').send_keys(password)
@@ -556,7 +611,7 @@ def idaWebStationPreselection(driver, height):
     # click deselect
     driver.find_element_by_xpath(
         '//*[@id="list_actions"]/input[2]'
-    ).click()   
+    ).click()
 
     # clear height input
     driver.find_element_by_name('height').clear()
@@ -571,7 +626,6 @@ def idaWebStationPreselection(driver, height):
         '//*[@id="filter_actions"]/input[1]'
     ).click()
 
-    
     # click select all
     driver.find_element_by_xpath(
         '//*[@id="list_actions"]/input[1]'
