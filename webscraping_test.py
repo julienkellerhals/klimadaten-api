@@ -1,7 +1,9 @@
 import pytest
 import abstractDriver
+import messageAnnouncer
 
-abstractDriver = abstractDriver.AbstractDriver()
+announcer = messageAnnouncer.MessageAnnouncer()
+abstractDriver = abstractDriver.AbstractDriver(announcer)
 
 
 @pytest.mark.meteoschweiz
