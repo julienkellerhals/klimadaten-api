@@ -269,14 +269,7 @@ def scrape_meteoschweiz(driver, engine, announcer):
 
 # main function
 def scrape_idaweb(driver, engine):
-    # savedDocuments = _scrape_idaweb(driver, engine)
-    savedDocuments = [
-        "td1_2021-04-15_17:24:08",
-        "ld2_2021-04-15_17:19:52",
-        "ld1_2021-04-15_17:19:52",
-        "ld2_2021-04-15_17:17:12",
-        "ld1_2021-04-15_17:17:12"
-    ]
+    savedDocuments = _scrape_idaweb(driver, engine)
     savedDocumentsDf = pd.DataFrame(
         savedDocuments,
         columns=["reference"]
