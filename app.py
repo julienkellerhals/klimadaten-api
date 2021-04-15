@@ -390,8 +390,9 @@ def scrapeIdaweb():
     """
 
     testGlobal()  # to test if the global variable are set
-    resp = webscraping.scrape_idaweb(driver, engine)
-    return resp
+    savedDocuments = webscraping.scrape_idaweb(driver, engine)
+    orderDf = webscraping.scrapeIdawebOrders(driver)
+    return "scraped idaweb successfully"
 
 
 @app.route("/admin/db/connect")
