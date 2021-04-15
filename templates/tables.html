@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block title %}Tables{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    #dbConnection {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 60%;
+        position: absolute;
+        z-index: 1;
+        background: yellow;
+    }
+
+    #dbCreate {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 40%;
+        position: absolute;
+        z-index: 1;
+        background: green;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #tableContainer {
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .schema {
+        flex-grow: 1;
+    }
+
+    #stage {
+        background: red;
+    }
+
+    #core {
+        background: blue;
+    }
+</style>
+{% endblock %}
+
+{% set active_page = "tables" %}
+
+{% block container %}
+<div id="dbConnection">
+    <h1>
+        Connect to database
+    </h1>
+    <script>
+        function startEngine() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/db/connect", true);
+            xhr.send()
+            getEngineStatus()
+        }
+
+        function streamEngineStatus() {
+            var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
+            var previousStatusCode = null
+            engineEventSource.onmessage = function (e) {
+                var content = e.data
+                var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                var dbConnection = document.getElementById("dbConnection")
+                if (previousStatusCode != statusCode) {
+                    previousStatusCode = statusCode
+                    if (statusCode == 1) {
+                        dbConnection.classList.remove("hide")
+                    } else if (statusCode == 0) {
+                        dbConnection.classList.add("hide")
+                    }
+                }
+            };
+        }
+        function getEngineStatus() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/getEngineStatus", true);
+            xhr.send()
+        }
+        streamEngineStatus();
+        setInterval(getEngineStatus, 10000);
+        document.getElementById("dbConnection").addEventListener("click", startEngine)
+    </script>
+</div>
+<div id="dbCreate">
+    <h1>
+        Create database
+    </h1>
+    <script>
+        function createDb() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/db/create", true);
+            xhr.send()
+            getDatabaseStatus()
+        }
+
+        function streamDatabaseStatus() {
+            var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
+            var previousStatusCode = null
+            databaseEventSource.onmessage = function (e) {
+                var content = e.data;
+                var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                var dbCreate = document.getElementById("dbCreate")
+                if (previousStatusCode != statusCode) {
+                    previousStatusCode = statusCode
+                    if (statusCode == 0) {
+                        // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+                        dbCreate.classList.add("hide")
+                    } else if (statusCode == 1) {
+                        // msgTxt = "Status: 1; Database not created; Error: " + str(e)
+                        dbCreate.classList.remove("hide")
+                    } else if (statusCode == 2) {
+                        // msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                        dbCreate.classList.add("hide")
+                    }
+                }
+            };
+        }
+        function getDatabaseStatus() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/admin/getDatabaseStatus", true);
+            xhr.send()
+        }
+        streamDatabaseStatus();
+        setInterval(getDatabaseStatus, 10000);
+        document.getElementById("dbCreate").addEventListener("click", createDb)
+    </script>
+</div>
+<div id="tableContainer">
+    <div id="stage" class="schema">
+        <h1>Stage Schema</h1>
+        <div class="tableGroup">
+            <div id="tableCreate">create tables</div>
+            <script>
+                function createTables() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/db/table", true);
+                    xhr.send()
+                }
+                document.getElementById("tableCreate").addEventListener("click", createTables)
+            </script>
+            <div id="execCoreETL">Run stage to core etl</div>
+            <script>
+                function runCoreETL() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/db/etl/core", true);
+                    xhr.send()
+                }
+                document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
+            </script>
+        </div>
+    </div>
+    <div id="core" class="schema">
+        <h1>Core Schema</h1>
+        <div class="tableGroup">
+            <script>
+
+            </script>
+        </div>
+    </div>
+</div>
+Show database tables
+{% endblock %}

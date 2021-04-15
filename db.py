@@ -1,6 +1,10 @@
+import threading
 import sqlalchemy
-from sqlalchemy import *
+import pandas as pd
+from sqlalchemy import MetaData, create_engine
+from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy_utils import database_exists, create_database
+import messageAnnouncer
 
 
 class Database:
@@ -8,17 +12,85 @@ class Database:
     """
 
     engine = None
+    conn = None
+    databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
     meta = MetaData()
+    announcer = None
+    databaseStatusStream = None
+    engineStatusStream = None
 
-    def __init__(self):
+    def __init__(self, announcer):
         """ Init engine
         """
 
+        self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.announcer = announcer
+
+    def getEngine(self):
+        self.checkEngine()
+        return self.engine
+
+    def checkEngine(self):
+        if self.engine is None:
+            print("Engine not started")
+            print("Starting programatically")
+            print("Assuming you installed database")
+            self.createEngine()
+
+    def createEngine(self):
         self.engine = create_engine(
-            "postgresql://postgres:postgres@localhost:5432/klimadb",
+            self.databaseUrl,
             echo=True
         )
-        print(self.engine)
+
+    def getDatabaseStatus(self):
+        x = threading.Thread(
+            target=self._getDatabaseStatus
+        )
+        x.start()
+
+    def _getDatabaseStatus(self):
+        try:
+            create_engine(
+                self.databaseUrl
+            ).connect()
+        except sqlalchemy.exc.OperationalError as e:
+            try:
+                database_exists(self.databaseUrl)
+            except sqlalchemy.exc.OperationalError as e:
+                msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                self.databaseStatusStream.announce(
+                    self.databaseStatusStream.format_sse(msgTxt)
+                )
+            else:
+                msgTxt = "Status: 1; Database not created; Error: " + str(e)
+                self.databaseStatusStream.announce(
+                    self.databaseStatusStream.format_sse(msgTxt)
+                )
+        else:
+            msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+            self.databaseStatusStream.announce(
+                self.databaseStatusStream.format_sse(msgTxt)
+            )
+
+    def getEngineStatus(self):
+        x = threading.Thread(
+            target=self._getEngineStatus
+        )
+        x.start()
+
+    def _getEngineStatus(self):
+        if self.engine is None:
+            msgTxt = "Status: 1; Engine not started; Error: Connect to db"
+            self.engineStatusStream.announce(
+                self.engineStatusStream.format_sse(msgTxt)
+            )
+        else:
+            msgTxt = "Status: 0; Engine started"
+            self.engineStatusStream.announce(
+                self.engineStatusStream.format_sse(msgTxt)
+            )
 
     def createDatabase(self):
         """ Creates database
@@ -48,14 +120,84 @@ class Database:
             table_name='meteoschweiz_t',
             schema='stage'
         ):
-            meteoschweiz_t = Table(
+            self.meteoschweiz_t = Table(
                 'meteoschweiz_t',
                 self.meta,
                 Column('year', Integer),
                 Column('month', Integer),
                 Column('station', String),
-                Column('temprature', Float),
+                Column('temperature', Float),
                 Column('precipitation', Float),
+                Column("load_date", Date),
                 schema='stage')
 
-            self.meta.create_all(self.engine)
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='measurements_t',
+            schema='core'
+        ):
+            self.measurements_t = Table(
+                'measurements_t',
+                self.meta,
+                Column('meas_date', Date),
+                Column('station', String),
+                Column('granularity', String),
+                Column('meas_name', String),
+                Column('meas_value', Float),
+                Column('source', String),
+                Column("valid_from", Date),
+                Column("valid_to", Date),
+                schema='core')
+
+        self.meta.create_all(self.engine)
+
+    def runCoreETL(self):
+        self.meteoschweizCoreETL()
+
+    def meteoschweizCoreETL(self):
+        meteoschweizDf = pd.read_sql_table(
+            "meteoschweiz_t",
+            self.engine,
+            schema="stage"
+        )
+
+        meteoschweizDf["meas_date"] = pd.to_datetime(
+            meteoschweizDf["year"].map(str)
+            + "." + meteoschweizDf["month"].map(str)
+            + ".01",
+            format="%Y.%m.%d"
+        )
+
+        meteoschweizDf["granularity"] = "M"
+        meteoschweizDf["source"] = "meteoschweiz"
+        meteoschweizDf.rename(
+            columns={"load_date": "valid_from"},
+            inplace=True
+        )
+        meteoschweizDf["valid_to"] = pd.to_datetime("2262-04-11")
+        del meteoschweizDf['year']
+        del meteoschweizDf['month']
+        meteoschweizDf = pd.melt(
+            meteoschweizDf,
+            id_vars=[
+                "station",
+                "valid_from",
+                "valid_to",
+                "meas_date",
+                "granularity",
+                "source"
+            ],
+            value_vars=[
+                "temperature",
+                "precipitation"
+            ],
+            var_name="meas_name",
+            value_name="meas_value"
+        )
+        meteoschweizDf.to_sql(
+            'measurements_t',
+            self.engine,
+            schema='core',
+            if_exists='append',
+            index=False
+        )
