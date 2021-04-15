@@ -1,6 +1,8 @@
 import re
+import io
 import math
 import time
+import zipfile
 import numpy as np
 import pandas as pd
 from lxml import etree
@@ -13,6 +15,10 @@ from selenium.webdriver.common.by import By
 # from selenium.common.exceptions import TimeoutException
 # from selenium.common.exceptions import NoSuchElementException
 import download
+
+
+username = "joel.grosjean@students.fhnw.ch"
+password = "AGEJ649GJAL02"
 
 
 def createJs(value):
@@ -263,6 +269,59 @@ def scrape_meteoschweiz(driver, engine, announcer):
 
 # main function
 def scrape_idaweb(driver, engine):
+    # savedDocuments = _scrape_idaweb(driver, engine)
+    savedDocuments = [
+        "td1_2021-04-15_17:24:08",
+        "ld2_2021-04-15_17:19:52",
+        "ld1_2021-04-15_17:19:52",
+        "ld2_2021-04-15_17:17:12",
+        "ld1_2021-04-15_17:17:12"
+    ]
+    savedDocumentsDf = pd.DataFrame(
+        savedDocuments,
+        columns=["reference"]
+    )
+    orderDf = scrapeIdawebOrders(driver)
+    orderDf = orderDf.merge(
+        savedDocumentsDf,
+        on="reference",
+        how="inner"
+    )
+    inProductionBool = True
+    while inProductionBool:
+        if len(orderDf["status"].unique()) > 1:
+            time.sleep(300)
+            orderDf = scrapeIdawebOrders(driver)
+            orderDf = orderDf.merge(
+                savedDocumentsDf,
+                on="reference",
+                how="inner"
+            )
+        else:
+            inProductionBool = False
+            loginReq = download.getRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do"
+            )[0]
+            cred = {
+                "method": "validate",
+                "user": username,
+                "password": password
+            }
+            loginReq = download.postRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do",
+                loginReq.cookies,
+                cred
+            )[0]
+    for downloadUrl in orderDf["downloadLink"]:
+        downloadReq = download.getRequest(
+            downloadUrl,
+            loginReq.cookies
+        )[0]
+        dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
+        dataZip.extractall("data")
+
+
+def _scrape_idaweb(driver, engine):
     """ Scrape idaweb
 
     Args:
@@ -426,8 +485,8 @@ def scrape_idaweb_login(driver):
     
     # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02 
     # log into page
-    driver.find_element_by_name('user').send_keys('joel.grosjean@students.fhnw.ch')
-    driver.find_element_by_name('password').send_keys('AGEJ649GJAL02')
+    driver.find_element_by_name('user').send_keys(username)
+    driver.find_element_by_name('password').send_keys(password)
     driver.find_element_by_xpath(
         '//*[@id="content_block"]/form/fieldset/'
         + 'table/tbody/tr[3]/td/table/tbody/tr/td[1]/input'
@@ -717,7 +776,12 @@ def scrapeIdawebInventory(driver):
 
     return inventoryDf
 
-# ['ld1_2021-04-15_17:17:12', 'ld2_2021-04-15_17:17:12', 'ld1_2021-04-15_17:19:52', 'ld2_2021-04-15_17:19:52', 'td1_2021-04-15_17:24:08', 'td2_2021-04-15_17:24:08', 'td3_2021-04-15_17:24:08', 'td4_2021-04-15_17:24:08', 'td5_2021-04-15_17:24:08']
+
+def idaWebOrderPortal(driver):
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[7]/a').click()
+
+
 def scrapeIdawebOrders(driver):
     """ Scrape made orders
 
@@ -727,6 +791,9 @@ def scrapeIdawebOrders(driver):
     Returns:
         df: Dataframe containing all orders
     """
+
+    scrape_idaweb_login(driver)
+    idaWebOrderPortal(driver)
 
     # TODO join to made order and only download the new ones
     # TODO if not available wait a few min

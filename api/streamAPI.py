@@ -149,4 +149,16 @@ def constructBlueprint(announcer, instance, abstractDriver):
 
         return Response(announcer.stream(), mimetype='text/event-stream')
 
+    @streamApi.route("/idaweb")
+    def streamIdaWeb():
+        driver = abstractDriver.getDriver()
+        engine = instance.getEngine()
+        x = threading.Thread(
+            target=webscraping.scrape_idaweb,
+            args=(driver, engine)
+        )
+        x.start()
+
+        return Response(announcer.stream(), mimetype='text/event-stream')
+
     return streamApi
