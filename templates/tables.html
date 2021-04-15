@@ -156,6 +156,15 @@
                 }
                 document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
             </script>
+            <div id="execStageETL">Run stage etl</div>
+            <script>
+                function runCoreETL() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "/admin/db/etl/stage", true);
+                    xhr.send()
+                }
+                document.getElementById("execStageETL").addEventListener("click", runCoreETL)
+            </script>
         </div>
     </div>
     <div id="core" class="schema">

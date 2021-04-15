@@ -1,6 +1,9 @@
 import threading
 import sqlalchemy
+import numpy as np
 import pandas as pd
+from lxml import etree
+from pathlib import Path
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy_utils import database_exists, create_database
@@ -26,6 +29,12 @@ class Database:
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
+
+    def readConfig(self, shortName):
+        tree = etree.parse("idawebConfig.xml")
+        root = tree.getroot()
+        config = root.xpath("//*[contains(text(), '{}')]".format(shortName))[0]
+        return config
 
     def getEngine(self):
         self.checkEngine()
@@ -133,6 +142,24 @@ class Database:
 
         if not self.engine.dialect.has_table(
             connection=self.engine,
+            table_name='idaweb_t',
+            schema='stage'
+        ):
+            self.meteoschweiz_t = Table(
+                'idaweb_t',
+                self.meta,
+                Column('meas_date', Date),
+                Column('station', String),
+                Column('granularity', String),
+                Column('meas_name', String),
+                Column('meas_value', Float),
+                Column('source', String),
+                Column("valid_from", Date),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
             table_name='measurements_t',
             schema='core'
         ):
@@ -150,6 +177,70 @@ class Database:
                 schema='core')
 
         self.meta.create_all(self.engine)
+
+    def runStageETL(self):
+        self.idaWebStageETL()
+
+    def idaWebStageETL(self):
+        idaWebDf = pd.DataFrame()
+        dataDir = Path.cwd() / "data"
+        dataFiles = dataDir.glob("**/*_data.txt")
+        for dataFile in dataFiles:
+            print(dataFile.stem)
+            dataFileDf = pd.read_csv(dataFile, sep=";")
+            shortName = dataFileDf.columns[-1]
+            config = self.readConfig(shortName)
+            dataFileDf.rename(
+                columns={
+                    "stn": "station",
+                    "time": "meas_date"
+                },
+                inplace=True
+            )
+            dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
+            dataFileDf["source"] = "IdaWeb"
+            dataFileDf["granularity"] = config.attrib['granularity']
+            if config.attrib['granularity'] == "M":
+                dataFileDf["meas_date"] = pd.to_datetime(
+                    dataFileDf["meas_date"].map(str) + "01",
+                    format="%Y%m%d"
+                )
+            elif config.attrib['granularity'] == "D":
+                dataFileDf["meas_date"] = pd.to_datetime(
+                    dataFileDf["meas_date"],
+                    format="%Y%m%d"
+                )
+            else:
+                NotImplementedError()
+            dataFileDf = pd.melt(
+                dataFileDf,
+                id_vars=[
+                    "station",
+                    "valid_to",
+                    "meas_date",
+                    "granularity",
+                    "source"
+                ],
+                value_vars=[shortName],
+                var_name="meas_name",
+                value_name="meas_value"
+            )
+            idaWebDf = idaWebDf.append(dataFileDf)
+        validFromDf = idaWebDf.groupby(
+            ["meas_name"]
+        ).agg(valid_from=("meas_date", np.max))
+        idaWebDf = idaWebDf.merge(
+            validFromDf,
+            on="meas_name",
+            how="outer"
+        )
+        idaWebDf.to_sql(
+            'idaweb_t',
+            self.engine,
+            schema='stage',
+            if_exists='append',
+            index=False
+        )
 
     def runCoreETL(self):
         self.meteoschweizCoreETL()

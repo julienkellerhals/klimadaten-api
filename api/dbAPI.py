@@ -39,6 +39,13 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.createTable()
         return "Table created"
 
+    @dbApi.route("/etl/stage", methods=["GET", "POST"])
+    def runStageETL():
+
+        instance.checkEngine()
+        instance.runStageETL()
+        return "Run Stage ETL"
+
     @dbApi.route("/etl/core", methods=["GET", "POST"])
     def runCoreETL():
 
