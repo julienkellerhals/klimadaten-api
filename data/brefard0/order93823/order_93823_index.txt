@@ -1,0 +1,520 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 93823
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_93823_ABO_brefard0_1_data.txt     Data      Adelboden                            Distant lightning (distance 3 - 30 km); daily total         19831124-20210413
+order_93823_ABO_brefard0_1_legend.txt   Legend    Adelboden                            Distant lightning (distance 3 - 30 km); daily total         19831124-20210413
+order_93823_AIE_brefard0_1_data.txt     Data      Affoltern i. E.                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AIE_brefard0_1_legend.txt   Legend    Affoltern i. E.                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AIR_brefard0_1_data.txt     Data      Airolo                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AIR_brefard0_1_legend.txt   Legend    Airolo                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALW_brefard0_1_data.txt     Data      Allenwinden, TG                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALW_brefard0_1_legend.txt   Legend    Allenwinden, TG                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_APT_brefard0_1_data.txt     Data      Alpthal                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_APT_brefard0_1_legend.txt   Legend    Alpthal                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALM_brefard0_1_data.txt     Data      Altmatt                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALM_brefard0_1_legend.txt   Legend    Altmatt                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALV_brefard0_1_data.txt     Data      Alvaneu Dorf                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ALV_brefard0_1_legend.txt   Legend    Alvaneu Dorf                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AND_brefard0_1_data.txt     Data      Andeer                               Distant lightning (distance 3 - 30 km); daily total         20080122-20210413
+order_93823_AND_brefard0_1_legend.txt   Legend    Andeer                               Distant lightning (distance 3 - 30 km); daily total         20080122-20210413
+order_93823_ANT_brefard0_1_data.txt     Data      Andermatt                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ANT_brefard0_1_legend.txt   Legend    Andermatt                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_APP_brefard0_1_data.txt     Data      Appenzell                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_APP_brefard0_1_legend.txt   Legend    Appenzell                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ARO_brefard0_1_data.txt     Data      Arosa                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ARO_brefard0_1_legend.txt   Legend    Arosa                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AVB_brefard0_1_data.txt     Data      Avers / Am Bach                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AVB_brefard0_1_legend.txt   Legend    Avers / Am Bach                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BSW_brefard0_1_data.txt     Data      Bad Schwendi                         Distant lightning (distance 3 - 30 km); daily total         20050531-20070225
+order_93823_BSW_brefard0_1_legend.txt   Legend    Bad Schwendi                         Distant lightning (distance 3 - 30 km); daily total         20050531-20070225
+order_93823_BAN_brefard0_1_data.txt     Data      Bantiger                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BAN_brefard0_1_legend.txt   Legend    Bantiger                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BAR_brefard0_1_data.txt     Data      Bargen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20131118
+order_93823_BAR_brefard0_1_legend.txt   Legend    Bargen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20131118
+order_93823_BAW_brefard0_1_data.txt     Data      Barmelweid                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BAW_brefard0_1_legend.txt   Legend    Barmelweid                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BEY_brefard0_1_data.txt     Data      Bellelay                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BEY_brefard0_1_legend.txt   Legend    Bellelay                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAT_brefard0_1_data.txt     Data      Bergün / Latsch                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAT_brefard0_1_legend.txt   Legend    Bergün / Latsch                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BEC_brefard0_1_data.txt     Data      Bernina / Curtinatsch                Distant lightning (distance 3 - 30 km); daily total         20050531-20120801
+order_93823_BEC_brefard0_1_legend.txt   Legend    Bernina / Curtinatsch                Distant lightning (distance 3 - 30 km); daily total         20050531-20120801
+order_93823_BEC_brefard0_2_data.txt     Data      Bernina / Curtinatsch                Distant lightning (distance 3 - 30 km); daily total         20150907-20210413
+order_93823_BEC_brefard0_2_legend.txt   Legend    Bernina / Curtinatsch                Distant lightning (distance 3 - 30 km); daily total         20150907-20210413
+order_93823_BIN_brefard0_1_data.txt     Data      Binn                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIN_brefard0_1_legend.txt   Legend    Binn                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIS_brefard0_1_data.txt     Data      Bisisthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIS_brefard0_1_legend.txt   Legend    Bisisthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIV_brefard0_1_data.txt     Data      Bivio                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIV_brefard0_1_legend.txt   Legend    Bivio                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BLA_brefard0_1_data.txt     Data      Blatten, Lötschental                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BLA_brefard0_1_legend.txt   Legend    Blatten, Lötschental                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOL_brefard0_1_data.txt     Data      Boltigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOL_brefard0_1_legend.txt   Legend    Boltigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOT_brefard0_1_data.txt     Data      Boltigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOT_brefard0_1_legend.txt   Legend    Boltigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOS_brefard0_1_data.txt     Data      Bosco/Gurin                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOS_brefard0_1_legend.txt   Legend    Bosco/Gurin                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOV_brefard0_1_data.txt     Data      Boudevilliers                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BOV_brefard0_1_legend.txt   Legend    Boudevilliers                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BSP_brefard0_1_data.txt     Data      Bourg-St-Pierre                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BSP_brefard0_1_legend.txt   Legend    Bourg-St-Pierre                      Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRA_brefard0_1_data.txt     Data      Braggio                              Distant lightning (distance 3 - 30 km); daily total         20050531-20090514
+order_93823_BRA_brefard0_1_legend.txt   Legend    Braggio                              Distant lightning (distance 3 - 30 km); daily total         20050531-20090514
+order_93823_BRA_brefard0_2_data.txt     Data      Braggio                              Distant lightning (distance 3 - 30 km); daily total         20170214-20210413
+order_93823_BRA_brefard0_2_legend.txt   Legend    Braggio                              Distant lightning (distance 3 - 30 km); daily total         20170214-20210413
+order_93823_BRW_brefard0_1_data.txt     Data      Braunwald                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRW_brefard0_1_legend.txt   Legend    Braunwald                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRT_brefard0_1_data.txt     Data      Bristen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRT_brefard0_1_legend.txt   Legend    Bristen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRP_brefard0_1_data.txt     Data      Brusio                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRP_brefard0_1_legend.txt   Legend    Brusio                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BLS_brefard0_1_data.txt     Data      Brülisau                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BLS_brefard0_1_legend.txt   Legend    Brülisau                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BUF_brefard0_1_data.txt     Data      Buffalora                            Distant lightning (distance 3 - 30 km); daily total         20101031-20210413
+order_93823_BUF_brefard0_1_legend.txt   Legend    Buffalora                            Distant lightning (distance 3 - 30 km); daily total         20101031-20210413
+order_93823_FRE_brefard0_1_data.txt     Data      Bullet / La Frétaz                   Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_FRE_brefard0_1_legend.txt   Legend    Bullet / La Frétaz                   Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_CAV_brefard0_1_data.txt     Data      Cavaglia                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CAV_brefard0_1_legend.txt   Legend    Cavaglia                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CNZ_brefard0_1_data.txt     Data      Chanéaz                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CNZ_brefard0_1_legend.txt   Legend    Chanéaz                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHA_brefard0_1_data.txt     Data      Chasseral                            Distant lightning (distance 3 - 30 km); daily total         19801231-19810314
+order_93823_CHA_brefard0_1_legend.txt   Legend    Chasseral                            Distant lightning (distance 3 - 30 km); daily total         19801231-19810314
+order_93823_CHA_brefard0_2_data.txt     Data      Chasseral                            Distant lightning (distance 3 - 30 km); daily total         19810629-20210413
+order_93823_CHA_brefard0_2_legend.txt   Legend    Chasseral                            Distant lightning (distance 3 - 30 km); daily total         19810629-20210413
+order_93823_CHM_brefard0_1_data.txt     Data      Chaumont                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHM_brefard0_1_legend.txt   Legend    Chaumont                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHD_brefard0_1_data.txt     Data      Château-d'Oex                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHD_brefard0_1_legend.txt   Legend    Château-d'Oex                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CIM_brefard0_1_data.txt     Data      Cimetta                              Distant lightning (distance 3 - 30 km); daily total         19820629-20210413
+order_93823_CIM_brefard0_1_legend.txt   Legend    Cimetta                              Distant lightning (distance 3 - 30 km); daily total         19820629-20210413
+order_93823_CDM_brefard0_1_data.txt     Data      Col des Mosses                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CDM_brefard0_1_legend.txt   Legend    Col des Mosses                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GSB_brefard0_1_data.txt     Data      Col du Grand St-Bernard              Distant lightning (distance 3 - 30 km); daily total         19811008-20210413
+order_93823_GSB_brefard0_1_legend.txt   Legend    Col du Grand St-Bernard              Distant lightning (distance 3 - 30 km); daily total         19811008-20210413
+order_93823_COU_brefard0_1_data.txt     Data      Couvet                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_COU_brefard0_1_legend.txt   Legend    Couvet                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CMA_brefard0_1_data.txt     Data      Crap Masegn                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CMA_brefard0_1_legend.txt   Legend    Crap Masegn                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DAV_brefard0_1_data.txt     Data      Davos                                Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_DAV_brefard0_1_legend.txt   Legend    Davos                                Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_DEH_brefard0_1_data.txt     Data      Degersheim                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DEH_brefard0_1_legend.txt   Legend    Degersheim                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DMA_brefard0_1_data.txt     Data      Dischma                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DMA_brefard0_1_legend.txt   Legend    Dischma                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DIS_brefard0_1_data.txt     Data      Disentis                             Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_DIS_brefard0_1_legend.txt   Legend    Disentis                             Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_EGR_brefard0_1_data.txt     Data      Eggersriet                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EGR_brefard0_1_legend.txt   Legend    Eggersriet                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EGH_brefard0_1_data.txt     Data      Eggishorn                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EGH_brefard0_1_legend.txt   Legend    Eggishorn                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EIT_brefard0_1_data.txt     Data      Eigenthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EIT_brefard0_1_legend.txt   Legend    Eigenthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EIN_brefard0_1_data.txt     Data      Einsiedeln                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EIN_brefard0_1_legend.txt   Legend    Einsiedeln                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ELM_brefard0_1_data.txt     Data      Elm                                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ELM_brefard0_1_legend.txt   Legend    Elm                                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ENG_brefard0_1_data.txt     Data      Engelberg                            Distant lightning (distance 3 - 30 km); daily total         19821015-20210413
+order_93823_ENG_brefard0_1_legend.txt   Legend    Engelberg                            Distant lightning (distance 3 - 30 km); daily total         19821015-20210413
+order_93823_ENT_brefard0_1_data.txt     Data      Entlebuch                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ENT_brefard0_1_legend.txt   Legend    Entlebuch                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ERI_brefard0_1_data.txt     Data      Eriswil                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ERI_brefard0_1_legend.txt   Legend    Eriswil                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ERB_brefard0_1_data.txt     Data      Erlenbach im Simmental               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ERB_brefard0_1_legend.txt   Legend    Erlenbach im Simmental               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EHM_brefard0_1_data.txt     Data      Escholzmatt                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EHM_brefard0_1_legend.txt   Legend    Escholzmatt                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EUT_brefard0_1_data.txt     Data      Euthal                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EUT_brefard0_1_legend.txt   Legend    Euthal                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EVL_brefard0_1_data.txt     Data      Evolène                              Distant lightning (distance 3 - 30 km); daily total         20050531-20050830
+order_93823_EVL_brefard0_1_legend.txt   Legend    Evolène                              Distant lightning (distance 3 - 30 km); daily total         20050531-20050830
+order_93823_EVO_brefard0_1_data.txt     Data      Evolène / Villa                      Distant lightning (distance 3 - 30 km); daily total         19860923-20210413
+order_93823_EVO_brefard0_1_legend.txt   Legend    Evolène / Villa                      Distant lightning (distance 3 - 30 km); daily total         19860923-20210413
+order_93823_FAI_brefard0_1_data.txt     Data      Faido                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FAI_brefard0_1_legend.txt   Legend    Faido                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FEY_brefard0_1_data.txt     Data      Fey                                  Distant lightning (distance 3 - 30 km); daily total         19890427-20051102
+order_93823_FEY_brefard0_1_legend.txt   Legend    Fey                                  Distant lightning (distance 3 - 30 km); daily total         19890427-20051102
+order_93823_FIT_brefard0_1_data.txt     Data      Fieschertal                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FIT_brefard0_1_legend.txt   Legend    Fieschertal                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FIL_brefard0_1_data.txt     Data      Filisur                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FIL_brefard0_1_legend.txt   Legend    Filisur                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CTA_brefard0_1_data.txt     Data      Finhaut                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CTA_brefard0_1_legend.txt   Legend    Finhaut                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FIO_brefard0_1_data.txt     Data      Fionnay                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FIO_brefard0_1_legend.txt   Legend    Fionnay                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FLI_brefard0_1_data.txt     Data      Flims                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FLI_brefard0_1_legend.txt   Legend    Flims                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FLU_brefard0_1_data.txt     Data      Flühli, LU                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FLU_brefard0_1_legend.txt   Legend    Flühli, LU                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FRC_brefard0_1_data.txt     Data      Fruence                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FRC_brefard0_1_legend.txt   Legend    Fruence                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FRU_brefard0_1_data.txt     Data      Frutigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_FRU_brefard0_1_legend.txt   Legend    Frutigen                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GAD_brefard0_1_data.txt     Data      Gadmen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GAD_brefard0_1_legend.txt   Legend    Gadmen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOR_brefard0_1_data.txt     Data      Gornergrat                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOR_brefard0_1_legend.txt   Legend    Gornergrat                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRI_brefard0_1_data.txt     Data      Grimentz                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRI_brefard0_1_legend.txt   Legend    Grimentz                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRH_brefard0_1_data.txt     Data      Grimsel Hospiz                       Distant lightning (distance 3 - 30 km); daily total         19890426-20210413
+order_93823_GRH_brefard0_1_legend.txt   Legend    Grimsel Hospiz                       Distant lightning (distance 3 - 30 km); daily total         19890426-20210413
+order_93823_GWA_brefard0_1_data.txt     Data      Grindelwald                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GWA_brefard0_1_legend.txt   Legend    Grindelwald                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GSS_brefard0_1_data.txt     Data      Gross, SZ                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GSS_brefard0_1_legend.txt   Legend    Gross, SZ                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STF_brefard0_1_data.txt     Data      Grossdietwil / Stampfi               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STF_brefard0_1_legend.txt   Legend    Grossdietwil / Stampfi               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GHS_brefard0_1_data.txt     Data      Grosshöchstetten                     Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GHS_brefard0_1_legend.txt   Legend    Grosshöchstetten                     Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRY_brefard0_1_data.txt     Data      Gryon                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRY_brefard0_1_legend.txt   Legend    Gryon                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRC_brefard0_1_data.txt     Data      Grächen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GRC_brefard0_1_legend.txt   Legend    Grächen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GST_brefard0_1_data.txt     Data      Gstaad                               Distant lightning (distance 3 - 30 km); daily total         20050531-20110101
+order_93823_GST_brefard0_1_legend.txt   Legend    Gstaad                               Distant lightning (distance 3 - 30 km); daily total         20050531-20110101
+order_93823_GSG_brefard0_1_data.txt     Data      Gsteig, Gstaad                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GSG_brefard0_1_legend.txt   Legend    Gsteig, Gstaad                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GUG_brefard0_1_data.txt     Data      Guglera                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GUG_brefard0_1_legend.txt   Legend    Guglera                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GTT_brefard0_1_data.txt     Data      Guttannen                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GTT_brefard0_1_legend.txt   Legend    Guttannen                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOS_brefard0_1_data.txt     Data      Göschenen                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOS_brefard0_1_legend.txt   Legend    Göschenen                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOA_brefard0_1_data.txt     Data      Göscheneralp                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GOA_brefard0_1_legend.txt   Legend    Göscheneralp                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GUE_brefard0_1_data.txt     Data      Gütsch, Andermatt                    Distant lightning (distance 3 - 30 km); daily total         19801231-20040828
+order_93823_GUE_brefard0_1_legend.txt   Legend    Gütsch, Andermatt                    Distant lightning (distance 3 - 30 km); daily total         19801231-20040828
+order_93823_GUE_brefard0_2_data.txt     Data      Gütsch, Andermatt                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GUE_brefard0_2_legend.txt   Legend    Gütsch, Andermatt                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HES_brefard0_1_data.txt     Data      Herisau                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HES_brefard0_1_legend.txt   Legend    Herisau                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HIR_brefard0_1_data.txt     Data      Hinterrhein                          Distant lightning (distance 3 - 30 km); daily total         19801231-20110911
+order_93823_HIR_brefard0_1_legend.txt   Legend    Hinterrhein                          Distant lightning (distance 3 - 30 km); daily total         19801231-20110911
+order_93823_HOY_brefard0_1_data.txt     Data      Hoch-Ybrig                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HOY_brefard0_1_legend.txt   Legend    Hoch-Ybrig                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HON_brefard0_1_data.txt     Data      Hondrich                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HON_brefard0_1_legend.txt   Legend    Hondrich                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HER_brefard0_1_data.txt     Data      Hérémence                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HER_brefard0_1_legend.txt   Legend    Hérémence                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HOE_brefard0_1_data.txt     Data      Hörnli                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HOE_brefard0_1_legend.txt   Legend    Hörnli                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_INF_brefard0_1_data.txt     Data      Innerferrera                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_INF_brefard0_1_legend.txt   Legend    Innerferrera                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_INN_brefard0_1_data.txt     Data      Innerthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_INN_brefard0_1_legend.txt   Legend    Innerthal                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_IST_brefard0_1_data.txt     Data      Isenthal                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_IST_brefard0_1_legend.txt   Legend    Isenthal                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_JAU_brefard0_1_data.txt     Data      Jaun                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_JAU_brefard0_1_legend.txt   Legend    Jaun                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_JUN_brefard0_1_data.txt     Data      Jungfraujoch                         Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_JUN_brefard0_1_legend.txt   Legend    Jungfraujoch                         Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_KAS_brefard0_1_data.txt     Data      Kandersteg                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KAS_brefard0_1_legend.txt   Legend    Kandersteg                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KIE_brefard0_1_data.txt     Data      Kiental                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KIE_brefard0_1_legend.txt   Legend    Kiental                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KIB_brefard0_1_data.txt     Data      Kirchberg, SG                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KIB_brefard0_1_legend.txt   Legend    Kirchberg, SG                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KSE_brefard0_1_data.txt     Data      Kleine Scheidegg                     Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KSE_brefard0_1_legend.txt   Legend    Kleine Scheidegg                     Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KLA_brefard0_1_data.txt     Data      Klosters                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KLA_brefard0_1_legend.txt   Legend    Klosters                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KLT_brefard0_1_data.txt     Data      Klöntal                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KLT_brefard0_1_legend.txt   Legend    Klöntal                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KRO_brefard0_1_data.txt     Data      Kronberg                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KRO_brefard0_1_legend.txt   Legend    Kronberg                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KUA_brefard0_1_data.txt     Data      Kurzeneialp                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KUA_brefard0_1_legend.txt   Legend    Kurzeneialp                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KUB_brefard0_1_data.txt     Data      Küblis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_KUB_brefard0_1_legend.txt   Legend    Küblis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AUB_brefard0_1_data.txt     Data      L' Auberson                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AUB_brefard0_1_legend.txt   Legend    L' Auberson                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRL_brefard0_1_data.txt     Data      La Brévine                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BRL_brefard0_1_legend.txt   Legend    La Brévine                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CDF_brefard0_1_data.txt     Data      La Chaux-de-Fonds                    Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_CDF_brefard0_1_legend.txt   Legend    La Chaux-de-Fonds                    Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_CUE_brefard0_1_data.txt     Data      La Cure                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CUE_brefard0_1_legend.txt   Legend    La Cure                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DOL_brefard0_1_data.txt     Data      La Dôle                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_DOL_brefard0_1_legend.txt   Legend    La Dôle                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_VST_brefard0_1_data.txt     Data      La Valsainte                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VST_brefard0_1_legend.txt   Legend    La Valsainte                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EGL_brefard0_1_data.txt     Data      Lachen / Eggen                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_EGL_brefard0_1_legend.txt   Legend    Lachen / Eggen                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAB_brefard0_1_data.txt     Data      Langenbruck                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAB_brefard0_1_legend.txt   Legend    Langenbruck                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAG_brefard0_1_data.txt     Data      Langnau i.E.                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAG_brefard0_1_legend.txt   Legend    Langnau i.E.                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LTB_brefard0_1_data.txt     Data      Lauterbrunnen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LTB_brefard0_1_legend.txt   Legend    Lauterbrunnen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHE_brefard0_1_data.txt     Data      Le Chenit                            Distant lightning (distance 3 - 30 km); daily total         20050531-20140112
+order_93823_CHE_brefard0_1_legend.txt   Legend    Le Chenit                            Distant lightning (distance 3 - 30 km); daily total         20050531-20140112
+order_93823_LOC_brefard0_1_data.txt     Data      Le Locle                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LOC_brefard0_1_legend.txt   Legend    Le Locle                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MLS_brefard0_1_data.txt     Data      Le Moléson                           Distant lightning (distance 3 - 30 km); daily total         19820921-20210413
+order_93823_MLS_brefard0_1_legend.txt   Legend    Le Moléson                           Distant lightning (distance 3 - 30 km); daily total         19820921-20210413
+order_93823_LEN_brefard0_1_data.txt     Data      Lenk                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LEN_brefard0_1_legend.txt   Legend    Lenk                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LEH_brefard0_1_data.txt     Data      Lenzerheide                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LEH_brefard0_1_legend.txt   Legend    Lenzerheide                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ATT_brefard0_1_data.txt     Data      Les Attelas                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ATT_brefard0_1_legend.txt   Legend    Les Attelas                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AVA_brefard0_1_data.txt     Data      Les Avants                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AVA_brefard0_1_legend.txt   Legend    Les Avants                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIO_brefard0_1_data.txt     Data      Les Bioux                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BIO_brefard0_1_legend.txt   Legend    Les Bioux                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BNE_brefard0_1_data.txt     Data      Les Brenets                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BNE_brefard0_1_legend.txt   Legend    Les Brenets                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHB_brefard0_1_data.txt     Data      Les Charbonnières                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CHB_brefard0_1_legend.txt   Legend    Les Charbonnières                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DIA_brefard0_1_data.txt     Data      Les Diablerets                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DIA_brefard0_1_legend.txt   Legend    Les Diablerets                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DIB_brefard0_1_data.txt     Data      Les Diablerets                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_DIB_brefard0_1_legend.txt   Legend    Les Diablerets                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAR_brefard0_1_data.txt     Data      Les Marécottes                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAR_brefard0_1_legend.txt   Legend    Les Marécottes                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PDM_brefard0_1_data.txt     Data      Les Ponts-de-Martel                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PDM_brefard0_1_legend.txt   Legend    Les Ponts-de-Martel                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LEU_brefard0_1_data.txt     Data      Leukerbad                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LEU_brefard0_1_legend.txt   Legend    Leukerbad                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TFD_brefard0_1_data.txt     Data      Linthal / Tierfehd                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TFD_brefard0_1_legend.txt   Legend    Linthal / Tierfehd                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LON_brefard0_1_data.txt     Data      Longirod                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LON_brefard0_1_legend.txt   Legend    Longirod                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LUN_brefard0_1_data.txt     Data      Lungern                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LUN_brefard0_1_legend.txt   Legend    Lungern                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LUT_brefard0_1_data.txt     Data      Luthern                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LUT_brefard0_1_legend.txt   Legend    Luthern                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAE_brefard0_1_data.txt     Data      Lägern                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LAE_brefard0_1_legend.txt   Legend    Lägern                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MGL_brefard0_1_data.txt     Data      Magglingen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MGL_brefard0_1_legend.txt   Legend    Magglingen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAL_brefard0_1_data.txt     Data      Malbun                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAL_brefard0_1_legend.txt   Legend    Malbun                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MBA_brefard0_1_data.txt     Data      Marbach, LU                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MBA_brefard0_1_legend.txt   Legend    Marbach, LU                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAS_brefard0_1_data.txt     Data      Marsens                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAS_brefard0_1_legend.txt   Legend    Marsens                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAT_brefard0_1_data.txt     Data      Martina                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAT_brefard0_1_legend.txt   Legend    Martina                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MTR_brefard0_1_data.txt     Data      Matro                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MTR_brefard0_1_legend.txt   Legend    Matro                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MES_brefard0_1_data.txt     Data      Mesocco                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MES_brefard0_1_legend.txt   Legend    Mesocco                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MGB_brefard0_1_data.txt     Data      Mogelsberg                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MGB_brefard0_1_legend.txt   Legend    Mogelsberg                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MST_brefard0_1_data.txt     Data      Monstein                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MST_brefard0_1_legend.txt   Legend    Monstein                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MOD_brefard0_1_data.txt     Data      Montagne du Droit                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MOD_brefard0_1_legend.txt   Legend    Montagne du Droit                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MOB_brefard0_1_data.txt     Data      Montagnier, Bagnes                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MOB_brefard0_1_legend.txt   Legend    Montagnier, Bagnes                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MVE_brefard0_1_data.txt     Data      Montana                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_MVE_brefard0_1_legend.txt   Legend    Montana                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_GEN_brefard0_1_data.txt     Data      Monte Generoso                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_GEN_brefard0_1_legend.txt   Legend    Monte Generoso                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MRP_brefard0_1_data.txt     Data      Monte Rosa-Plattje                   Distant lightning (distance 3 - 30 km); daily total         20091215-20210413
+order_93823_MRP_brefard0_1_legend.txt   Legend    Monte Rosa-Plattje                   Distant lightning (distance 3 - 30 km); daily total         20091215-20210413
+order_93823_MGI_brefard0_1_data.txt     Data      Morgins                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MGI_brefard0_1_legend.txt   Legend    Morgins                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MSG_brefard0_1_data.txt     Data      Mosogno                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MSG_brefard0_1_legend.txt   Legend    Mosogno                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MTE_brefard0_1_data.txt     Data      Mottec                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MTE_brefard0_1_legend.txt   Legend    Mottec                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MAE_brefard0_1_data.txt     Data      Männlichen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20150216
+order_93823_MAE_brefard0_1_legend.txt   Legend    Männlichen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20150216
+order_93823_MSK_brefard0_1_data.txt     Data      Mühleberg / Stockeren                Distant lightning (distance 3 - 30 km); daily total         20130213-20210413
+order_93823_MSK_brefard0_1_legend.txt   Legend    Mühleberg / Stockeren                Distant lightning (distance 3 - 30 km); daily total         20130213-20210413
+order_93823_MUE_brefard0_1_data.txt     Data      Mürren                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MUE_brefard0_1_legend.txt   Legend    Mürren                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MUS_brefard0_1_data.txt     Data      Müstair                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_MUS_brefard0_1_legend.txt   Legend    Müstair                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_NAS_brefard0_1_data.txt     Data      Naluns / Schlivera                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_NAS_brefard0_1_legend.txt   Legend    Naluns / Schlivera                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_NAP_brefard0_1_data.txt     Data      Napf                                 Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_NAP_brefard0_1_legend.txt   Legend    Napf                                 Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_NEB_brefard0_1_data.txt     Data      Nesselboden                          Distant lightning (distance 3 - 30 km); daily total         20050531-20100203
+order_93823_NEB_brefard0_1_legend.txt   Legend    Nesselboden                          Distant lightning (distance 3 - 30 km); daily total         20050531-20100203
+order_93823_NEB_brefard0_2_data.txt     Data      Nesselboden                          Distant lightning (distance 3 - 30 km); daily total         20140203-20210413
+order_93823_NEB_brefard0_2_legend.txt   Legend    Nesselboden                          Distant lightning (distance 3 - 30 km); daily total         20140203-20210413
+order_93823_OBI_brefard0_1_data.txt     Data      Oberiberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_OBI_brefard0_1_legend.txt   Legend    Oberiberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AEG_brefard0_1_data.txt     Data      Oberägeri                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AEG_brefard0_1_legend.txt   Legend    Oberägeri                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_OLI_brefard0_1_data.txt     Data      Olivone                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_OLI_brefard0_1_legend.txt   Legend    Olivone                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ORO_brefard0_1_data.txt     Data      Oron                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ORO_brefard0_1_legend.txt   Legend    Oron                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ORS_brefard0_1_data.txt     Data      Orsières                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ORS_brefard0_1_legend.txt   Legend    Orsières                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_BEH_brefard0_1_data.txt     Data      Passo del Bernina                    Distant lightning (distance 3 - 30 km); daily total         20050531-20200901
+order_93823_BEH_brefard0_1_legend.txt   Legend    Passo del Bernina                    Distant lightning (distance 3 - 30 km); daily total         20050531-20200901
+order_93823_PIG_brefard0_1_data.txt     Data      Pigniu                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PIG_brefard0_1_legend.txt   Legend    Pigniu                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PIL_brefard0_1_data.txt     Data      Pilatus                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_PIL_brefard0_1_legend.txt   Legend    Pilatus                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_PIO_brefard0_1_data.txt     Data      Piotta                               Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_PIO_brefard0_1_legend.txt   Legend    Piotta                               Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_COV_brefard0_1_data.txt     Data      Piz Corvatsch                        Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_COV_brefard0_1_legend.txt   Legend    Piz Corvatsch                        Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_PMA_brefard0_1_data.txt     Data      Piz Martegnas                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PMA_brefard0_1_legend.txt   Legend    Piz Martegnas                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PLF_brefard0_1_data.txt     Data      Plaffeien                            Distant lightning (distance 3 - 30 km); daily total         19890928-20210413
+order_93823_PLF_brefard0_1_legend.txt   Legend    Plaffeien                            Distant lightning (distance 3 - 30 km); daily total         19890928-20210413
+order_93823_LOB_brefard0_1_data.txt     Data      Pleigne                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_LOB_brefard0_1_legend.txt   Legend    Pleigne                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PON_brefard0_1_data.txt     Data      Pontresina                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PON_brefard0_1_legend.txt   Legend    Pontresina                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ROB_brefard0_1_data.txt     Data      Poschiavo / Robbia                   Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_ROB_brefard0_1_legend.txt   Legend    Poschiavo / Robbia                   Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_PUD_brefard0_1_data.txt     Data      Punt la Drossa                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_PUD_brefard0_1_legend.txt   Legend    Punt la Drossa                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_RIC_brefard0_1_data.txt     Data      Ricken                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_RIC_brefard0_1_legend.txt   Legend    Ricken                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ROE_brefard0_1_data.txt     Data      Robièi                               Distant lightning (distance 3 - 30 km); daily total         19910110-20210413
+order_93823_ROE_brefard0_1_legend.txt   Legend    Robièi                               Distant lightning (distance 3 - 30 km); daily total         19910110-20210413
+order_93823_SRL_brefard0_1_data.txt     Data      S-charl                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SRL_brefard0_1_legend.txt   Legend    S-charl                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SBE_brefard0_1_data.txt     Data      S. Bernardino                        Distant lightning (distance 3 - 30 km); daily total         19811007-20210413
+order_93823_SBE_brefard0_1_legend.txt   Legend    S. Bernardino                        Distant lightning (distance 3 - 30 km); daily total         19811007-20210413
+order_93823_SBA_brefard0_1_data.txt     Data      Saas Balen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SBA_brefard0_1_legend.txt   Legend    Saas Balen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAF_brefard0_1_data.txt     Data      Saas Fee                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAF_brefard0_1_legend.txt   Legend    Saas Fee                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAP_brefard0_1_data.txt     Data      Safien Platz                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAP_brefard0_1_legend.txt   Legend    Safien Platz                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAI_brefard0_1_data.txt     Data      Saignelégier                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAI_brefard0_1_legend.txt   Legend    Saignelégier                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HAI_brefard0_1_data.txt     Data      Salen-Reutenen                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_HAI_brefard0_1_legend.txt   Legend    Salen-Reutenen                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAM_brefard0_1_data.txt     Data      Samedan                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_SAM_brefard0_1_legend.txt   Legend    Samedan                              Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_SAB_brefard0_1_data.txt     Data      Sangernboden                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAB_brefard0_1_legend.txt   Legend    Sangernboden                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAG_brefard0_1_data.txt     Data      Sattel, SZ                           Distant lightning (distance 3 - 30 km); daily total         20050531-20140126
+order_93823_SAG_brefard0_1_legend.txt   Legend    Sattel, SZ                           Distant lightning (distance 3 - 30 km); daily total         20050531-20140126
+order_93823_SAG_brefard0_2_data.txt     Data      Sattel, SZ                           Distant lightning (distance 3 - 30 km); daily total         20200513-20210413
+order_93823_SAG_brefard0_2_legend.txt   Legend    Sattel, SZ                           Distant lightning (distance 3 - 30 km); daily total         20200513-20210413
+order_93823_SVG_brefard0_1_data.txt     Data      Savognin                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SVG_brefard0_1_legend.txt   Legend    Savognin                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SZB_brefard0_1_data.txt     Data      Schwarzenburg                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SZB_brefard0_1_legend.txt   Legend    Schwarzenburg                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SCE_brefard0_1_data.txt     Data      Schwarzenegg                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SCE_brefard0_1_legend.txt   Legend    Schwarzenegg                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SWA_brefard0_1_data.txt     Data      Schwägalp                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SWA_brefard0_1_legend.txt   Legend    Schwägalp                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SPF_brefard0_1_data.txt     Data      Schüpfheim                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SPF_brefard0_1_legend.txt   Legend    Schüpfheim                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SCD_brefard0_1_data.txt     Data      Scudellate                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SCD_brefard0_1_legend.txt   Legend    Scudellate                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SCU_brefard0_1_data.txt     Data      Scuol                                Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_SCU_brefard0_1_legend.txt   Legend    Scuol                                Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_SED_brefard0_1_data.txt     Data      Sedrun                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SED_brefard0_1_legend.txt   Legend    Sedrun                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SIA_brefard0_1_data.txt     Data      Segl-Maria                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SIA_brefard0_1_legend.txt   Legend    Segl-Maria                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SEM_brefard0_1_data.txt     Data      Semsales                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SEM_brefard0_1_legend.txt   Legend    Semsales                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SIM_brefard0_1_data.txt     Data      Simplon-Dorf                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SIM_brefard0_1_legend.txt   Legend    Simplon-Dorf                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SOG_brefard0_1_data.txt     Data      Soglio                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SOG_brefard0_1_legend.txt   Legend    Soglio                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SON_brefard0_1_data.txt     Data      Sonogno                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SON_brefard0_1_legend.txt   Legend    Sonogno                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SDO_brefard0_1_data.txt     Data      Splügen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SDO_brefard0_1_legend.txt   Legend    Splügen                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAN_brefard0_1_data.txt     Data      St. Antönien                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAN_brefard0_1_legend.txt   Legend    St. Antönien                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STG_brefard0_1_data.txt     Data      St. Gallen                           Distant lightning (distance 3 - 30 km); daily total         19810715-20210413
+order_93823_STG_brefard0_1_legend.txt   Legend    St. Gallen                           Distant lightning (distance 3 - 30 km); daily total         19810715-20210413
+order_93823_SPZ_brefard0_1_data.txt     Data      St. Peterzell                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SPZ_brefard0_1_legend.txt   Legend    St. Peterzell                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SMM_brefard0_1_data.txt     Data      Sta. Maria, Val Müstair              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SMM_brefard0_1_legend.txt   Legend    Sta. Maria, Val Müstair              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AST_brefard0_1_data.txt     Data      Stalden / Ackersand                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_AST_brefard0_1_legend.txt   Legend    Stalden / Ackersand                  Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SKO_brefard0_1_data.txt     Data      Stallikon                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SKO_brefard0_1_legend.txt   Legend    Stallikon                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STB_brefard0_1_data.txt     Data      Starkenbach                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STB_brefard0_1_legend.txt   Legend    Starkenbach                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SGD_brefard0_1_data.txt     Data      Stiegelschwand                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SGD_brefard0_1_legend.txt   Legend    Stiegelschwand                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STP_brefard0_1_data.txt     Data      Stöckalp                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_STP_brefard0_1_legend.txt   Legend    Stöckalp                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SUS_brefard0_1_data.txt     Data      Susch                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SUS_brefard0_1_legend.txt   Legend    Susch                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_SAE_brefard0_1_data.txt     Data      Säntis                               Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_SAE_brefard0_1_legend.txt   Legend    Säntis                               Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_TAV_brefard0_1_data.txt     Data      Tavanasa                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TAV_brefard0_1_legend.txt   Legend    Tavanasa                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TEU_brefard0_1_data.txt     Data      Teufen, AR                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TEU_brefard0_1_legend.txt   Legend    Teufen, AR                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_THI_brefard0_1_data.txt     Data      Thierrens                            Distant lightning (distance 3 - 30 km); daily total         20050531-20070225
+order_93823_THI_brefard0_1_legend.txt   Legend    Thierrens                            Distant lightning (distance 3 - 30 km); daily total         20050531-20070225
+order_93823_TIC_brefard0_1_data.txt     Data      Tiefencastel                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TIC_brefard0_1_legend.txt   Legend    Tiefencastel                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TIT_brefard0_1_data.txt     Data      Titlis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TIT_brefard0_1_legend.txt   Legend    Titlis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CTO_brefard0_1_data.txt     Data      Torricella / Crana                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_CTO_brefard0_1_legend.txt   Legend    Torricella / Crana                   Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TDG_brefard0_1_data.txt     Data      Tour de Gourze                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TDG_brefard0_1_legend.txt   Legend    Tour de Gourze                       Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TRO_brefard0_1_data.txt     Data      Trogen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TRO_brefard0_1_legend.txt   Legend    Trogen                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TRU_brefard0_1_data.txt     Data      Trun                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TRU_brefard0_1_legend.txt   Legend    Trun                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TST_brefard0_1_data.txt     Data      Tschiertschen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TST_brefard0_1_legend.txt   Legend    Tschiertschen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_UEB_brefard0_1_data.txt     Data      Uetliberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_UEB_brefard0_1_legend.txt   Legend    Uetliberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ULR_brefard0_1_data.txt     Data      Ulrichen                             Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_ULR_brefard0_1_legend.txt   Legend    Ulrichen                             Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_UNS_brefard0_1_data.txt     Data      Unterschächen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_UNS_brefard0_1_legend.txt   Legend    Unterschächen                        Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_URB_brefard0_1_data.txt     Data      Urnerboden                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_URB_brefard0_1_legend.txt   Legend    Urnerboden                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_URN_brefard0_1_data.txt     Data      Urnäsch                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_URN_brefard0_1_legend.txt   Legend    Urnäsch                              Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VAB_brefard0_1_data.txt     Data      Valbella                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VAB_brefard0_1_legend.txt   Legend    Valbella                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VVI_brefard0_1_data.txt     Data      Vallorbe                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VVI_brefard0_1_legend.txt   Legend    Vallorbe                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VLS_brefard0_1_data.txt     Data      Vals                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VLS_brefard0_1_legend.txt   Legend    Vals                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VEL_brefard0_1_data.txt     Data      Vella                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VEL_brefard0_1_legend.txt   Legend    Vella                                Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VIO_brefard0_1_data.txt     Data      Vicosoprano                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VIO_brefard0_1_legend.txt   Legend    Vicosoprano                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VIT_brefard0_1_data.txt     Data      Villars-Tiercelin                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VIT_brefard0_1_legend.txt   Legend    Villars-Tiercelin                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VRI_brefard0_1_data.txt     Data      Vrin                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VRI_brefard0_1_legend.txt   Legend    Vrin                                 Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VAE_brefard0_1_data.txt     Data      Vättis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_VAE_brefard0_1_legend.txt   Legend    Vättis                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WDO_brefard0_1_data.txt     Data      Wahlendorf                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WDO_brefard0_1_legend.txt   Legend    Wahlendorf                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TAW_brefard0_1_data.txt     Data      Wald / Tanne                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_TAW_brefard0_1_legend.txt   Legend    Wald / Tanne                         Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WIE_brefard0_1_data.txt     Data      Wasen im Emmental                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WIE_brefard0_1_legend.txt   Legend    Wasen im Emmental                    Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WFJ_brefard0_1_data.txt     Data      Weissfluhjoch                        Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_WFJ_brefard0_1_legend.txt   Legend    Weissfluhjoch                        Distant lightning (distance 3 - 30 km); daily total         19801231-20210413
+order_93823_WET_brefard0_1_data.txt     Data      Weisstannen                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WET_brefard0_1_legend.txt   Legend    Weisstannen                          Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WHA_brefard0_1_data.txt     Data      Wildhaus                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_WHA_brefard0_1_legend.txt   Legend    Wildhaus                             Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZER_brefard0_1_data.txt     Data      Zermatt                              Distant lightning (distance 3 - 30 km); daily total         19811202-20210413
+order_93823_ZER_brefard0_1_legend.txt   Legend    Zermatt                              Distant lightning (distance 3 - 30 km); daily total         19811202-20210413
+order_93823_ZNZ_brefard0_1_data.txt     Data      Zernez                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZNZ_brefard0_1_legend.txt   Legend    Zernez                               Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZEV_brefard0_1_data.txt     Data      Zervreila                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZEV_brefard0_1_legend.txt   Legend    Zervreila                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZUB_brefard0_1_data.txt     Data      Zugerberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZUB_brefard0_1_legend.txt   Legend    Zugerberg                            Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZWE_brefard0_1_data.txt     Data      Zweisimmen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
+order_93823_ZWE_brefard0_1_legend.txt   Legend    Zweisimmen                           Distant lightning (distance 3 - 30 km); daily total         20050531-20210413
