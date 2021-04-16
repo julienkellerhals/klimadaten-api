@@ -1,0 +1,656 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94024
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94024_GOA_hns000mx_1_data.txt     Data      Göscheneralp                         Fresh snow; maximum daily total of the month                200903-200904
+order_94024_GOA_hns000mx_1_legend.txt   Legend    Göscheneralp                         Fresh snow; maximum daily total of the month                200903-200904
+order_94024_SLF6PE_hns000mx_1_data.txt  Data      Pesciüm                              Fresh snow; maximum daily total of the month                201210-201305
+order_94024_SLF6PE_hns000mx_1_legend.txt Legend    Pesciüm                              Fresh snow; maximum daily total of the month                201210-201305
+order_94024_SLF6PE_hns000mx_2_data.txt  Data      Pesciüm                              Fresh snow; maximum daily total of the month                201310-201405
+order_94024_SLF6PE_hns000mx_2_legend.txt Legend    Pesciüm                              Fresh snow; maximum daily total of the month                201310-201405
+order_94024_SLF6PE_hns000mx_3_data.txt  Data      Pesciüm                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF6PE_hns000mx_3_legend.txt Legend    Pesciüm                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF6PE_hns000mx_4_data.txt  Data      Pesciüm                              Fresh snow; maximum daily total of the month                201909-201910
+order_94024_SLF6PE_hns000mx_4_legend.txt Legend    Pesciüm                              Fresh snow; maximum daily total of the month                201909-201910
+order_94024_SLF6PE_hns000mx_5_data.txt  Data      Pesciüm                              Fresh snow; maximum daily total of the month                202101-202103
+order_94024_SLF6PE_hns000mx_5_legend.txt Legend    Pesciüm                              Fresh snow; maximum daily total of the month                202101-202103
+order_94024_PON_hns000mx_1_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201110-201206
+order_94024_PON_hns000mx_1_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201110-201206
+order_94024_PON_hns000mx_2_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201207-201212
+order_94024_PON_hns000mx_2_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201207-201212
+order_94024_PON_hns000mx_3_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201301-201405
+order_94024_PON_hns000mx_3_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201301-201405
+order_94024_PON_hns000mx_4_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201406-201411
+order_94024_PON_hns000mx_4_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201406-201411
+order_94024_PON_hns000mx_5_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201501-201508
+order_94024_PON_hns000mx_5_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201501-201508
+order_94024_PON_hns000mx_6_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201509-201607
+order_94024_PON_hns000mx_6_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201509-201607
+order_94024_PON_hns000mx_7_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201608-201911
+order_94024_PON_hns000mx_7_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201608-201911
+order_94024_PON_hns000mx_8_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                201912-202010
+order_94024_PON_hns000mx_8_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                201912-202010
+order_94024_PON_hns000mx_9_data.txt     Data      Pontresina                           Fresh snow; maximum daily total of the month                202011-202102
+order_94024_PON_hns000mx_9_legend.txt   Legend    Pontresina                           Fresh snow; maximum daily total of the month                202011-202102
+order_94024_RKU_hns000mx_1_data.txt     Data      Rigi-Kulm                            Fresh snow; maximum daily total of the month                193012-194805
+order_94024_RKU_hns000mx_1_legend.txt   Legend    Rigi-Kulm                            Fresh snow; maximum daily total of the month                193012-194805
+order_94024_RKU_hns000mx_2_data.txt     Data      Rigi-Kulm                            Fresh snow; maximum daily total of the month                195405-196412
+order_94024_RKU_hns000mx_2_legend.txt   Legend    Rigi-Kulm                            Fresh snow; maximum daily total of the month                195405-196412
+order_94024_SLF4SF_hns000mx_1_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                194110-194204
+order_94024_SLF4SF_hns000mx_1_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                194110-194204
+order_94024_SLF4SF_hns000mx_2_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                194210-194304
+order_94024_SLF4SF_hns000mx_2_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                194210-194304
+order_94024_SLF4SF_hns000mx_3_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                194310-194404
+order_94024_SLF4SF_hns000mx_3_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                194310-194404
+order_94024_SLF4SF_hns000mx_4_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                194410-194504
+order_94024_SLF4SF_hns000mx_4_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                194410-194504
+order_94024_SLF4SF_hns000mx_5_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                195110-195204
+order_94024_SLF4SF_hns000mx_5_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195110-195204
+order_94024_SLF4SF_hns000mx_6_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                195210-195304
+order_94024_SLF4SF_hns000mx_6_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195210-195304
+order_94024_SLF4SF_hns000mx_7_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                195310-195404
+order_94024_SLF4SF_hns000mx_7_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195310-195404
+order_94024_SLF4SF_hns000mx_8_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                195410-195504
+order_94024_SLF4SF_hns000mx_8_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195410-195504
+order_94024_SLF4SF_hns000mx_9_data.txt  Data      Saas Fee                             Fresh snow; maximum daily total of the month                195509-195604
+order_94024_SLF4SF_hns000mx_9_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195509-195604
+order_94024_SLF4SF_hns000mx_10_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                195609-195704
+order_94024_SLF4SF_hns000mx_10_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195609-195704
+order_94024_SLF4SF_hns000mx_11_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                195710-195804
+order_94024_SLF4SF_hns000mx_11_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195710-195804
+order_94024_SLF4SF_hns000mx_12_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                195810-195904
+order_94024_SLF4SF_hns000mx_12_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195810-195904
+order_94024_SLF4SF_hns000mx_13_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF4SF_hns000mx_13_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF4SF_hns000mx_14_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196010-196104
+order_94024_SLF4SF_hns000mx_14_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196010-196104
+order_94024_SLF4SF_hns000mx_15_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF4SF_hns000mx_15_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF4SF_hns000mx_16_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF4SF_hns000mx_16_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF4SF_hns000mx_17_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF4SF_hns000mx_17_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF4SF_hns000mx_18_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196410-196504
+order_94024_SLF4SF_hns000mx_18_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196410-196504
+order_94024_SLF4SF_hns000mx_19_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF4SF_hns000mx_19_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF4SF_hns000mx_20_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF4SF_hns000mx_20_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF4SF_hns000mx_21_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196710-196804
+order_94024_SLF4SF_hns000mx_21_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196710-196804
+order_94024_SLF4SF_hns000mx_22_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF4SF_hns000mx_22_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF4SF_hns000mx_23_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF4SF_hns000mx_23_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF4SF_hns000mx_24_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF4SF_hns000mx_24_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF4SF_hns000mx_25_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197110-197205
+order_94024_SLF4SF_hns000mx_25_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197110-197205
+order_94024_SLF4SF_hns000mx_26_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197209-197304
+order_94024_SLF4SF_hns000mx_26_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197209-197304
+order_94024_SLF4SF_hns000mx_27_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197310-197405
+order_94024_SLF4SF_hns000mx_27_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197310-197405
+order_94024_SLF4SF_hns000mx_28_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197409-197505
+order_94024_SLF4SF_hns000mx_28_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197409-197505
+order_94024_SLF4SF_hns000mx_29_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197510-197604
+order_94024_SLF4SF_hns000mx_29_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197510-197604
+order_94024_SLF4SF_hns000mx_30_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197610-197705
+order_94024_SLF4SF_hns000mx_30_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197610-197705
+order_94024_SLF4SF_hns000mx_31_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197710-197804
+order_94024_SLF4SF_hns000mx_31_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197710-197804
+order_94024_SLF4SF_hns000mx_32_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197810-197905
+order_94024_SLF4SF_hns000mx_32_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197810-197905
+order_94024_SLF4SF_hns000mx_33_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF4SF_hns000mx_33_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF4SF_hns000mx_34_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF4SF_hns000mx_34_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF4SF_hns000mx_35_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF4SF_hns000mx_35_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF4SF_hns000mx_36_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198210-198305
+order_94024_SLF4SF_hns000mx_36_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198210-198305
+order_94024_SLF4SF_hns000mx_37_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF4SF_hns000mx_37_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF4SF_hns000mx_38_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF4SF_hns000mx_38_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF4SF_hns000mx_39_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF4SF_hns000mx_39_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF4SF_hns000mx_40_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF4SF_hns000mx_40_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF4SF_hns000mx_41_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF4SF_hns000mx_41_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF4SF_hns000mx_42_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF4SF_hns000mx_42_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF4SF_hns000mx_43_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF4SF_hns000mx_43_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF4SF_hns000mx_44_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF4SF_hns000mx_44_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF4SF_hns000mx_45_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF4SF_hns000mx_45_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF4SF_hns000mx_46_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF4SF_hns000mx_46_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF4SF_hns000mx_47_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF4SF_hns000mx_47_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF4SF_hns000mx_48_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF4SF_hns000mx_48_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF4SF_hns000mx_49_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF4SF_hns000mx_49_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF4SF_hns000mx_50_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF4SF_hns000mx_50_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF4SF_hns000mx_51_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF4SF_hns000mx_51_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF4SF_hns000mx_52_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF4SF_hns000mx_52_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF4SF_hns000mx_53_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF4SF_hns000mx_53_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF4SF_hns000mx_54_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF4SF_hns000mx_54_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF4SF_hns000mx_55_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF4SF_hns000mx_55_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF4SF_hns000mx_56_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200210-200304
+order_94024_SLF4SF_hns000mx_56_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200210-200304
+order_94024_SLF4SF_hns000mx_57_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF4SF_hns000mx_57_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF4SF_hns000mx_58_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF4SF_hns000mx_58_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF4SF_hns000mx_59_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF4SF_hns000mx_59_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF4SF_hns000mx_60_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200509-200511
+order_94024_SLF4SF_hns000mx_60_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200509-200511
+order_94024_SLF4SF_hns000mx_61_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF4SF_hns000mx_61_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF4SF_hns000mx_62_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200609-200610
+order_94024_SLF4SF_hns000mx_62_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200609-200610
+order_94024_SLF4SF_hns000mx_63_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200611-200612
+order_94024_SLF4SF_hns000mx_63_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200611-200612
+order_94024_SLF4SF_hns000mx_64_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200701-200705
+order_94024_SLF4SF_hns000mx_64_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200701-200705
+order_94024_SLF4SF_hns000mx_65_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200709-200710
+order_94024_SLF4SF_hns000mx_65_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200709-200710
+order_94024_SLF4SF_hns000mx_66_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200712-200805
+order_94024_SLF4SF_hns000mx_66_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200712-200805
+order_94024_SLF4SF_hns000mx_67_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF4SF_hns000mx_67_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF4SF_hns000mx_68_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                200909-201004
+order_94024_SLF4SF_hns000mx_68_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                200909-201004
+order_94024_SLF4SF_hns000mx_69_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201010-201105
+order_94024_SLF4SF_hns000mx_69_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201010-201105
+order_94024_SLF4SF_hns000mx_70_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201109-201205
+order_94024_SLF4SF_hns000mx_70_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201109-201205
+order_94024_SLF4SF_hns000mx_71_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF4SF_hns000mx_71_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF4SF_hns000mx_72_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201310-201404
+order_94024_SLF4SF_hns000mx_72_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201310-201404
+order_94024_SLF4SF_hns000mx_73_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF4SF_hns000mx_73_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF4SF_hns000mx_74_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF4SF_hns000mx_74_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF4SF_hns000mx_75_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF4SF_hns000mx_75_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF4SF_hns000mx_76_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF4SF_hns000mx_76_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF4SF_hns000mx_77_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF4SF_hns000mx_77_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF4SF_hns000mx_78_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF4SF_hns000mx_78_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF4SF_hns000mx_79_data.txt Data      Saas Fee                             Fresh snow; maximum daily total of the month                202010-202103
+order_94024_SLF4SF_hns000mx_79_legend.txt Legend    Saas Fee                             Fresh snow; maximum daily total of the month                202010-202103
+order_94024_SAA_hns000mx_1_data.txt     Data      Saas-Fee                             Fresh snow; maximum daily total of the month                193012-196812
+order_94024_SAA_hns000mx_1_legend.txt   Legend    Saas-Fee                             Fresh snow; maximum daily total of the month                193012-196812
+order_94024_SLF7SD_hns000mx_1_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                194312-194404
+order_94024_SLF7SD_hns000mx_1_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                194312-194404
+order_94024_SLF7SD_hns000mx_2_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195010-195104
+order_94024_SLF7SD_hns000mx_2_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195010-195104
+order_94024_SLF7SD_hns000mx_3_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195110-195204
+order_94024_SLF7SD_hns000mx_3_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195110-195204
+order_94024_SLF7SD_hns000mx_4_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195210-195304
+order_94024_SLF7SD_hns000mx_4_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195210-195304
+order_94024_SLF7SD_hns000mx_5_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195310-195404
+order_94024_SLF7SD_hns000mx_5_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195310-195404
+order_94024_SLF7SD_hns000mx_6_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195410-195504
+order_94024_SLF7SD_hns000mx_6_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195410-195504
+order_94024_SLF7SD_hns000mx_7_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195510-195604
+order_94024_SLF7SD_hns000mx_7_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195510-195604
+order_94024_SLF7SD_hns000mx_8_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195610-195704
+order_94024_SLF7SD_hns000mx_8_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195610-195704
+order_94024_SLF7SD_hns000mx_9_data.txt  Data      Samedan                              Fresh snow; maximum daily total of the month                195710-195804
+order_94024_SLF7SD_hns000mx_9_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195710-195804
+order_94024_SLF7SD_hns000mx_10_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                195810-195904
+order_94024_SLF7SD_hns000mx_10_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195810-195904
+order_94024_SLF7SD_hns000mx_11_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF7SD_hns000mx_11_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF7SD_hns000mx_12_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196009-196105
+order_94024_SLF7SD_hns000mx_12_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196009-196105
+order_94024_SLF7SD_hns000mx_13_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF7SD_hns000mx_13_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF7SD_hns000mx_14_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF7SD_hns000mx_14_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF7SD_hns000mx_15_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF7SD_hns000mx_15_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF7SD_hns000mx_16_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196409-196504
+order_94024_SLF7SD_hns000mx_16_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196409-196504
+order_94024_SLF7SD_hns000mx_17_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF7SD_hns000mx_17_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF7SD_hns000mx_18_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF7SD_hns000mx_18_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF7SD_hns000mx_19_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196709-196804
+order_94024_SLF7SD_hns000mx_19_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196709-196804
+order_94024_SLF7SD_hns000mx_20_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF7SD_hns000mx_20_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF7SD_hns000mx_21_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF7SD_hns000mx_21_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF7SD_hns000mx_22_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF7SD_hns000mx_22_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF7SD_hns000mx_23_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197110-197204
+order_94024_SLF7SD_hns000mx_23_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197110-197204
+order_94024_SLF7SD_hns000mx_24_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197209-197305
+order_94024_SLF7SD_hns000mx_24_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197209-197305
+order_94024_SLF7SD_hns000mx_25_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197309-197404
+order_94024_SLF7SD_hns000mx_25_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197309-197404
+order_94024_SLF7SD_hns000mx_26_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197409-197505
+order_94024_SLF7SD_hns000mx_26_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197409-197505
+order_94024_SLF7SD_hns000mx_27_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197510-197604
+order_94024_SLF7SD_hns000mx_27_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197510-197604
+order_94024_SLF7SD_hns000mx_28_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197609-197704
+order_94024_SLF7SD_hns000mx_28_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197609-197704
+order_94024_SLF7SD_hns000mx_29_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197710-197804
+order_94024_SLF7SD_hns000mx_29_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197710-197804
+order_94024_SLF7SD_hns000mx_30_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF7SD_hns000mx_30_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF7SD_hns000mx_31_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF7SD_hns000mx_31_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF7SD_hns000mx_32_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF7SD_hns000mx_32_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF7SD_hns000mx_33_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF7SD_hns000mx_33_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF7SD_hns000mx_34_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198209-198305
+order_94024_SLF7SD_hns000mx_34_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198209-198305
+order_94024_SLF7SD_hns000mx_35_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF7SD_hns000mx_35_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF7SD_hns000mx_36_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF7SD_hns000mx_36_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF7SD_hns000mx_37_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF7SD_hns000mx_37_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF7SD_hns000mx_38_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF7SD_hns000mx_38_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF7SD_hns000mx_39_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF7SD_hns000mx_39_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF7SD_hns000mx_40_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF7SD_hns000mx_40_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF7SD_hns000mx_41_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF7SD_hns000mx_41_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF7SD_hns000mx_42_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF7SD_hns000mx_42_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF7SD_hns000mx_43_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF7SD_hns000mx_43_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF7SD_hns000mx_44_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF7SD_hns000mx_44_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF7SD_hns000mx_45_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF7SD_hns000mx_45_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF7SD_hns000mx_46_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF7SD_hns000mx_46_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF7SD_hns000mx_47_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF7SD_hns000mx_47_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF7SD_hns000mx_48_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF7SD_hns000mx_48_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF7SD_hns000mx_49_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF7SD_hns000mx_49_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF7SD_hns000mx_50_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF7SD_hns000mx_50_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF7SD_hns000mx_51_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF7SD_hns000mx_51_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF7SD_hns000mx_52_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF7SD_hns000mx_52_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF7SD_hns000mx_53_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF7SD_hns000mx_53_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF7SD_hns000mx_54_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200209-200305
+order_94024_SLF7SD_hns000mx_54_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200209-200305
+order_94024_SLF7SD_hns000mx_55_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF7SD_hns000mx_55_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF7SD_hns000mx_56_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200409-200505
+order_94024_SLF7SD_hns000mx_56_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200409-200505
+order_94024_SLF7SD_hns000mx_57_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200509-200605
+order_94024_SLF7SD_hns000mx_57_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200509-200605
+order_94024_SLF7SD_hns000mx_58_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200609-200705
+order_94024_SLF7SD_hns000mx_58_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200609-200705
+order_94024_SLF7SD_hns000mx_59_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF7SD_hns000mx_59_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF7SD_hns000mx_60_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF7SD_hns000mx_60_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF7SD_hns000mx_61_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF7SD_hns000mx_61_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF7SD_hns000mx_62_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201009-201105
+order_94024_SLF7SD_hns000mx_62_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201009-201105
+order_94024_SLF7SD_hns000mx_63_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201109-201205
+order_94024_SLF7SD_hns000mx_63_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201109-201205
+order_94024_SLF7SD_hns000mx_64_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF7SD_hns000mx_64_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF7SD_hns000mx_65_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF7SD_hns000mx_65_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF7SD_hns000mx_66_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF7SD_hns000mx_66_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF7SD_hns000mx_67_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF7SD_hns000mx_67_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF7SD_hns000mx_68_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF7SD_hns000mx_68_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF7SD_hns000mx_69_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF7SD_hns000mx_69_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF7SD_hns000mx_70_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF7SD_hns000mx_70_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF7SD_hns000mx_71_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF7SD_hns000mx_71_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF7SD_hns000mx_72_data.txt Data      Samedan                              Fresh snow; maximum daily total of the month                202010-202103
+order_94024_SLF7SD_hns000mx_72_legend.txt Legend    Samedan                              Fresh snow; maximum daily total of the month                202010-202103
+order_94024_SLF7SN_hns000mx_1_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                195802-195803
+order_94024_SLF7SN_hns000mx_1_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                195802-195803
+order_94024_SLF7SN_hns000mx_2_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF7SN_hns000mx_2_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                195910-196004
+order_94024_SLF7SN_hns000mx_3_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196010-196104
+order_94024_SLF7SN_hns000mx_3_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196010-196104
+order_94024_SLF7SN_hns000mx_4_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF7SN_hns000mx_4_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196110-196204
+order_94024_SLF7SN_hns000mx_5_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF7SN_hns000mx_5_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196210-196304
+order_94024_SLF7SN_hns000mx_6_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF7SN_hns000mx_6_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196310-196404
+order_94024_SLF7SN_hns000mx_7_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196409-196504
+order_94024_SLF7SN_hns000mx_7_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196409-196504
+order_94024_SLF7SN_hns000mx_8_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF7SN_hns000mx_8_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196510-196604
+order_94024_SLF7SN_hns000mx_9_data.txt  Data      Samnaun                              Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF7SN_hns000mx_9_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196610-196704
+order_94024_SLF7SN_hns000mx_10_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                196710-196804
+order_94024_SLF7SN_hns000mx_10_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196710-196804
+order_94024_SLF7SN_hns000mx_11_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF7SN_hns000mx_11_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196810-196904
+order_94024_SLF7SN_hns000mx_12_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF7SN_hns000mx_12_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                196910-197004
+order_94024_SLF7SN_hns000mx_13_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF7SN_hns000mx_13_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF7SN_hns000mx_14_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197110-197204
+order_94024_SLF7SN_hns000mx_14_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197110-197204
+order_94024_SLF7SN_hns000mx_15_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197209-197304
+order_94024_SLF7SN_hns000mx_15_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197209-197304
+order_94024_SLF7SN_hns000mx_16_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197309-197404
+order_94024_SLF7SN_hns000mx_16_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197309-197404
+order_94024_SLF7SN_hns000mx_17_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197410-197505
+order_94024_SLF7SN_hns000mx_17_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197410-197505
+order_94024_SLF7SN_hns000mx_18_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197509-197605
+order_94024_SLF7SN_hns000mx_18_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197509-197605
+order_94024_SLF7SN_hns000mx_19_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197609-197705
+order_94024_SLF7SN_hns000mx_19_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197609-197705
+order_94024_SLF7SN_hns000mx_20_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197709-197805
+order_94024_SLF7SN_hns000mx_20_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197709-197805
+order_94024_SLF7SN_hns000mx_21_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF7SN_hns000mx_21_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF7SN_hns000mx_22_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF7SN_hns000mx_22_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF7SN_hns000mx_23_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF7SN_hns000mx_23_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF7SN_hns000mx_24_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF7SN_hns000mx_24_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF7SN_hns000mx_25_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198209-198304
+order_94024_SLF7SN_hns000mx_25_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198209-198304
+order_94024_SLF7SN_hns000mx_26_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF7SN_hns000mx_26_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF7SN_hns000mx_27_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF7SN_hns000mx_27_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF7SN_hns000mx_28_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF7SN_hns000mx_28_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF7SN_hns000mx_29_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF7SN_hns000mx_29_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF7SN_hns000mx_30_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF7SN_hns000mx_30_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF7SN_hns000mx_31_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF7SN_hns000mx_31_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF7SN_hns000mx_32_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF7SN_hns000mx_32_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF7SN_hns000mx_33_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF7SN_hns000mx_33_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF7SN_hns000mx_34_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF7SN_hns000mx_34_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF7SN_hns000mx_35_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF7SN_hns000mx_35_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF7SN_hns000mx_36_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF7SN_hns000mx_36_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF7SN_hns000mx_37_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF7SN_hns000mx_37_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF7SN_hns000mx_38_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF7SN_hns000mx_38_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF7SN_hns000mx_39_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF7SN_hns000mx_39_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF7SN_hns000mx_40_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF7SN_hns000mx_40_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF7SN_hns000mx_41_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF7SN_hns000mx_41_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF7SN_hns000mx_42_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF7SN_hns000mx_42_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF7SN_hns000mx_43_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF7SN_hns000mx_43_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF7SN_hns000mx_44_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF7SN_hns000mx_44_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF7SN_hns000mx_45_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200210-200305
+order_94024_SLF7SN_hns000mx_45_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200210-200305
+order_94024_SLF7SN_hns000mx_46_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200310-200404
+order_94024_SLF7SN_hns000mx_46_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200310-200404
+order_94024_SLF7SN_hns000mx_47_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF7SN_hns000mx_47_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF7SN_hns000mx_48_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF7SN_hns000mx_48_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF7SN_hns000mx_49_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200509-200512
+order_94024_SLF7SN_hns000mx_49_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200509-200512
+order_94024_SLF7SN_hns000mx_50_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200602-200603
+order_94024_SLF7SN_hns000mx_50_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200602-200603
+order_94024_SLF7SN_hns000mx_51_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF7SN_hns000mx_51_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF7SN_hns000mx_52_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200609-200610
+order_94024_SLF7SN_hns000mx_52_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200609-200610
+order_94024_SLF7SN_hns000mx_53_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200611-200612
+order_94024_SLF7SN_hns000mx_53_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200611-200612
+order_94024_SLF7SN_hns000mx_54_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200701-200702
+order_94024_SLF7SN_hns000mx_54_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200701-200702
+order_94024_SLF7SN_hns000mx_55_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200704-200705
+order_94024_SLF7SN_hns000mx_55_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200704-200705
+order_94024_SLF7SN_hns000mx_56_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF7SN_hns000mx_56_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF7SN_hns000mx_57_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF7SN_hns000mx_57_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF7SN_hns000mx_58_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF7SN_hns000mx_58_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF7SN_hns000mx_59_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201009-201105
+order_94024_SLF7SN_hns000mx_59_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201009-201105
+order_94024_SLF7SN_hns000mx_60_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201109-201203
+order_94024_SLF7SN_hns000mx_60_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201109-201203
+order_94024_SLF7SN_hns000mx_61_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201204-201205
+order_94024_SLF7SN_hns000mx_61_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201204-201205
+order_94024_SLF7SN_hns000mx_62_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF7SN_hns000mx_62_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201209-201305
+order_94024_SLF7SN_hns000mx_63_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF7SN_hns000mx_63_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF7SN_hns000mx_64_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF7SN_hns000mx_64_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF7SN_hns000mx_65_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF7SN_hns000mx_65_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF7SN_hns000mx_66_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF7SN_hns000mx_66_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF7SN_hns000mx_67_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF7SN_hns000mx_67_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF7SN_hns000mx_68_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF7SN_hns000mx_68_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF7SN_hns000mx_69_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF7SN_hns000mx_69_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF7SN_hns000mx_70_data.txt Data      Samnaun                              Fresh snow; maximum daily total of the month                202011-202103
+order_94024_SLF7SN_hns000mx_70_legend.txt Legend    Samnaun                              Fresh snow; maximum daily total of the month                202011-202103
+order_94024_SLF2TR_hns000mx_1_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                193911-194001
+order_94024_SLF2TR_hns000mx_1_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                193911-194001
+order_94024_SLF2TR_hns000mx_2_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194110-194202
+order_94024_SLF2TR_hns000mx_2_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194110-194202
+order_94024_SLF2TR_hns000mx_3_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194211-194302
+order_94024_SLF2TR_hns000mx_3_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194211-194302
+order_94024_SLF2TR_hns000mx_4_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194312-194401
+order_94024_SLF2TR_hns000mx_4_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194312-194401
+order_94024_SLF2TR_hns000mx_5_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194510-194604
+order_94024_SLF2TR_hns000mx_5_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194510-194604
+order_94024_SLF2TR_hns000mx_6_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194612-194704
+order_94024_SLF2TR_hns000mx_6_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194612-194704
+order_94024_SLF2TR_hns000mx_7_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194712-194804
+order_94024_SLF2TR_hns000mx_7_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194712-194804
+order_94024_SLF2TR_hns000mx_8_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194811-194904
+order_94024_SLF2TR_hns000mx_8_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194811-194904
+order_94024_SLF2TR_hns000mx_9_data.txt  Data      Trübsee                              Fresh snow; maximum daily total of the month                194912-195003
+order_94024_SLF2TR_hns000mx_9_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                194912-195003
+order_94024_SLF2TR_hns000mx_10_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195012-195104
+order_94024_SLF2TR_hns000mx_10_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195012-195104
+order_94024_SLF2TR_hns000mx_11_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195112-195204
+order_94024_SLF2TR_hns000mx_11_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195112-195204
+order_94024_SLF2TR_hns000mx_12_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195212-195303
+order_94024_SLF2TR_hns000mx_12_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195212-195303
+order_94024_SLF2TR_hns000mx_13_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195312-195403
+order_94024_SLF2TR_hns000mx_13_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195312-195403
+order_94024_SLF2TR_hns000mx_14_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195412-195503
+order_94024_SLF2TR_hns000mx_14_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195412-195503
+order_94024_SLF2TR_hns000mx_15_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195512-195604
+order_94024_SLF2TR_hns000mx_15_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195512-195604
+order_94024_SLF2TR_hns000mx_16_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195612-195704
+order_94024_SLF2TR_hns000mx_16_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195612-195704
+order_94024_SLF2TR_hns000mx_17_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195712-195805
+order_94024_SLF2TR_hns000mx_17_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195712-195805
+order_94024_SLF2TR_hns000mx_18_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195810-195812
+order_94024_SLF2TR_hns000mx_18_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195810-195812
+order_94024_SLF2TR_hns000mx_19_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195901-195905
+order_94024_SLF2TR_hns000mx_19_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195901-195905
+order_94024_SLF2TR_hns000mx_20_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195910-195911
+order_94024_SLF2TR_hns000mx_20_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195910-195911
+order_94024_SLF2TR_hns000mx_21_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                195912-196005
+order_94024_SLF2TR_hns000mx_21_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                195912-196005
+order_94024_SLF2TR_hns000mx_22_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196010-196105
+order_94024_SLF2TR_hns000mx_22_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196010-196105
+order_94024_SLF2TR_hns000mx_23_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196110-196205
+order_94024_SLF2TR_hns000mx_23_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196110-196205
+order_94024_SLF2TR_hns000mx_24_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196210-196305
+order_94024_SLF2TR_hns000mx_24_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196210-196305
+order_94024_SLF2TR_hns000mx_25_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196309-196404
+order_94024_SLF2TR_hns000mx_25_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196309-196404
+order_94024_SLF2TR_hns000mx_26_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196409-196505
+order_94024_SLF2TR_hns000mx_26_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196409-196505
+order_94024_SLF2TR_hns000mx_27_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196510-196605
+order_94024_SLF2TR_hns000mx_27_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196510-196605
+order_94024_SLF2TR_hns000mx_28_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196610-196705
+order_94024_SLF2TR_hns000mx_28_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196610-196705
+order_94024_SLF2TR_hns000mx_29_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196709-196805
+order_94024_SLF2TR_hns000mx_29_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196709-196805
+order_94024_SLF2TR_hns000mx_30_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196810-196905
+order_94024_SLF2TR_hns000mx_30_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196810-196905
+order_94024_SLF2TR_hns000mx_31_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                196910-197005
+order_94024_SLF2TR_hns000mx_31_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                196910-197005
+order_94024_SLF2TR_hns000mx_32_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF2TR_hns000mx_32_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197009-197104
+order_94024_SLF2TR_hns000mx_33_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197109-197205
+order_94024_SLF2TR_hns000mx_33_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197109-197205
+order_94024_SLF2TR_hns000mx_34_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197209-197305
+order_94024_SLF2TR_hns000mx_34_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197209-197305
+order_94024_SLF2TR_hns000mx_35_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197309-197405
+order_94024_SLF2TR_hns000mx_35_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197309-197405
+order_94024_SLF2TR_hns000mx_36_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197410-197505
+order_94024_SLF2TR_hns000mx_36_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197410-197505
+order_94024_SLF2TR_hns000mx_37_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197509-197605
+order_94024_SLF2TR_hns000mx_37_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197509-197605
+order_94024_SLF2TR_hns000mx_38_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197610-197705
+order_94024_SLF2TR_hns000mx_38_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197610-197705
+order_94024_SLF2TR_hns000mx_39_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197710-197805
+order_94024_SLF2TR_hns000mx_39_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197710-197805
+order_94024_SLF2TR_hns000mx_40_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF2TR_hns000mx_40_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197809-197905
+order_94024_SLF2TR_hns000mx_41_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF2TR_hns000mx_41_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                197909-198005
+order_94024_SLF2TR_hns000mx_42_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF2TR_hns000mx_42_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198009-198105
+order_94024_SLF2TR_hns000mx_43_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF2TR_hns000mx_43_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198109-198205
+order_94024_SLF2TR_hns000mx_44_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198209-198305
+order_94024_SLF2TR_hns000mx_44_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198209-198305
+order_94024_SLF2TR_hns000mx_45_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF2TR_hns000mx_45_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198309-198405
+order_94024_SLF2TR_hns000mx_46_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF2TR_hns000mx_46_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198409-198505
+order_94024_SLF2TR_hns000mx_47_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF2TR_hns000mx_47_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198509-198605
+order_94024_SLF2TR_hns000mx_48_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF2TR_hns000mx_48_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198609-198705
+order_94024_SLF2TR_hns000mx_49_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF2TR_hns000mx_49_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198709-198805
+order_94024_SLF2TR_hns000mx_50_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF2TR_hns000mx_50_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198809-198905
+order_94024_SLF2TR_hns000mx_51_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF2TR_hns000mx_51_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                198909-199005
+order_94024_SLF2TR_hns000mx_52_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF2TR_hns000mx_52_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199009-199105
+order_94024_SLF2TR_hns000mx_53_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF2TR_hns000mx_53_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199109-199205
+order_94024_SLF2TR_hns000mx_54_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF2TR_hns000mx_54_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199209-199305
+order_94024_SLF2TR_hns000mx_55_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF2TR_hns000mx_55_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199309-199405
+order_94024_SLF2TR_hns000mx_56_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF2TR_hns000mx_56_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199409-199505
+order_94024_SLF2TR_hns000mx_57_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF2TR_hns000mx_57_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199509-199605
+order_94024_SLF2TR_hns000mx_58_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF2TR_hns000mx_58_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199609-199705
+order_94024_SLF2TR_hns000mx_59_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF2TR_hns000mx_59_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199709-199805
+order_94024_SLF2TR_hns000mx_60_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF2TR_hns000mx_60_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199809-199905
+order_94024_SLF2TR_hns000mx_61_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF2TR_hns000mx_61_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                199909-200005
+order_94024_SLF2TR_hns000mx_62_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF2TR_hns000mx_62_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200009-200105
+order_94024_SLF2TR_hns000mx_63_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF2TR_hns000mx_63_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200109-200205
+order_94024_SLF2TR_hns000mx_64_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200209-200304
+order_94024_SLF2TR_hns000mx_64_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200209-200304
+order_94024_SLF2TR_hns000mx_65_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF2TR_hns000mx_65_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200309-200405
+order_94024_SLF2TR_hns000mx_66_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF2TR_hns000mx_66_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200409-200502
+order_94024_SLF2TR_hns000mx_67_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF2TR_hns000mx_67_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200504-200505
+order_94024_SLF2TR_hns000mx_68_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200509-200603
+order_94024_SLF2TR_hns000mx_68_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200509-200603
+order_94024_SLF2TR_hns000mx_69_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF2TR_hns000mx_69_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200604-200605
+order_94024_SLF2TR_hns000mx_70_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200609-200705
+order_94024_SLF2TR_hns000mx_70_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200609-200705
+order_94024_SLF2TR_hns000mx_71_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF2TR_hns000mx_71_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200709-200805
+order_94024_SLF2TR_hns000mx_72_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF2TR_hns000mx_72_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200809-200905
+order_94024_SLF2TR_hns000mx_73_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF2TR_hns000mx_73_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                200909-201005
+order_94024_SLF2TR_hns000mx_74_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201010-201105
+order_94024_SLF2TR_hns000mx_74_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201010-201105
+order_94024_SLF2TR_hns000mx_75_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201110-201205
+order_94024_SLF2TR_hns000mx_75_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201110-201205
+order_94024_SLF2TR_hns000mx_76_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201210-201305
+order_94024_SLF2TR_hns000mx_76_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201210-201305
+order_94024_SLF2TR_hns000mx_77_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF2TR_hns000mx_77_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201309-201405
+order_94024_SLF2TR_hns000mx_78_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF2TR_hns000mx_78_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201409-201505
+order_94024_SLF2TR_hns000mx_79_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF2TR_hns000mx_79_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201509-201605
+order_94024_SLF2TR_hns000mx_80_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF2TR_hns000mx_80_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201609-201705
+order_94024_SLF2TR_hns000mx_81_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF2TR_hns000mx_81_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201709-201805
+order_94024_SLF2TR_hns000mx_82_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF2TR_hns000mx_82_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201809-201905
+order_94024_SLF2TR_hns000mx_83_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF2TR_hns000mx_83_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                201909-202005
+order_94024_SLF2TR_hns000mx_84_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                202010-202011
+order_94024_SLF2TR_hns000mx_84_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                202010-202011
+order_94024_SLF2TR_hns000mx_85_data.txt Data      Trübsee                              Fresh snow; maximum daily total of the month                202012-202103
+order_94024_SLF2TR_hns000mx_85_legend.txt Legend    Trübsee                              Fresh snow; maximum daily total of the month                202012-202103

@@ -1,0 +1,736 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94060
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94060_AIG_rzz150mx_1_data.txt     Data      Aigle                                Precipitation; maximum ten minute total of the month        198012-201309
+order_94060_AIG_rzz150mx_1_legend.txt   Legend    Aigle                                Precipitation; maximum ten minute total of the month        198012-201309
+order_94060_AIG_rzz150mx_2_data.txt     Data      Aigle                                Precipitation; maximum ten minute total of the month        201310-202103
+order_94060_AIG_rzz150mx_2_legend.txt   Legend    Aigle                                Precipitation; maximum ten minute total of the month        201310-202103
+order_94060_ARH_rzz150mx_1_data.txt     Data      Altenrhein                           Precipitation; maximum ten minute total of the month        201401-201412
+order_94060_ARH_rzz150mx_1_legend.txt   Legend    Altenrhein                           Precipitation; maximum ten minute total of the month        201401-201412
+order_94060_ARH_rzz150mx_2_data.txt     Data      Altenrhein                           Precipitation; maximum ten minute total of the month        201501-201907
+order_94060_ARH_rzz150mx_2_legend.txt   Legend    Altenrhein                           Precipitation; maximum ten minute total of the month        201501-201907
+order_94060_ARH_rzz150mx_3_data.txt     Data      Altenrhein                           Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_ARH_rzz150mx_3_legend.txt   Legend    Altenrhein                           Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_IYAUE_rzz150mx_1_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        200212-201902
+order_94060_IYAUE_rzz150mx_1_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        200212-201902
+order_94060_IYAUE_rzz150mx_2_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYAUE_rzz150mx_2_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYAUE_rzz150mx_3_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYAUE_rzz150mx_3_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYAUE_rzz150mx_4_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYAUE_rzz150mx_4_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYAUE_rzz150mx_5_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYAUE_rzz150mx_5_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYAUE_rzz150mx_6_data.txt   Data      Auer                                 Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_IYAUE_rzz150mx_6_legend.txt Legend    Auer                                 Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_DLKIS_rzz150mx_1_data.txt   Data      Bad Kissingen                        Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLKIS_rzz150mx_1_legend.txt Legend    Bad Kissingen                        Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLBWB_rzz150mx_1_data.txt   Data      Bad Wildbad                          Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLBWB_rzz150mx_1_legend.txt Legend    Bad Wildbad                          Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLBWB_rzz150mx_2_data.txt   Data      Bad Wildbad                          Precipitation; maximum ten minute total of the month        201609-201809
+order_94060_DLBWB_rzz150mx_2_legend.txt Legend    Bad Wildbad                          Precipitation; maximum ten minute total of the month        201609-201809
+order_94060_DLBWB_rzz150mx_3_data.txt   Data      Bad Wildbad                          Precipitation; maximum ten minute total of the month        201810-201904
+order_94060_DLBWB_rzz150mx_3_legend.txt Legend    Bad Wildbad                          Precipitation; maximum ten minute total of the month        201810-201904
+order_94060_DLBWB_rzz150mx_4_data.txt   Data      Bad Wildbad                          Precipitation; maximum ten minute total of the month        201905-202103
+order_94060_DLBWB_rzz150mx_4_legend.txt Legend    Bad Wildbad                          Precipitation; maximum ten minute total of the month        201905-202103
+order_94060_DLBAB_rzz150mx_1_data.txt   Data      Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLBAB_rzz150mx_1_legend.txt Legend    Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLBAB_rzz150mx_2_data.txt   Data      Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201609-201906
+order_94060_DLBAB_rzz150mx_2_legend.txt Legend    Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201609-201906
+order_94060_DLBAB_rzz150mx_3_data.txt   Data      Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201908-202007
+order_94060_DLBAB_rzz150mx_3_legend.txt Legend    Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        201908-202007
+order_94060_DLBAB_rzz150mx_4_data.txt   Data      Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLBAB_rzz150mx_4_legend.txt Legend    Baden-Baden / Geroldsau              Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLBAM_rzz150mx_1_data.txt   Data      Bamberg                              Precipitation; maximum ten minute total of the month        202008-202009
+order_94060_DLBAM_rzz150mx_1_legend.txt Legend    Bamberg                              Precipitation; maximum ten minute total of the month        202008-202009
+order_94060_DLBAM_rzz150mx_2_data.txt   Data      Bamberg                              Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLBAM_rzz150mx_2_legend.txt Legend    Bamberg                              Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_BAS_rzz150mx_1_data.txt     Data      Basel / Binningen                    Precipitation; maximum ten minute total of the month        198012-200812
+order_94060_BAS_rzz150mx_1_legend.txt   Legend    Basel / Binningen                    Precipitation; maximum ten minute total of the month        198012-200812
+order_94060_BAS_rzz150mx_2_data.txt     Data      Basel / Binningen                    Precipitation; maximum ten minute total of the month        200901-201104
+order_94060_BAS_rzz150mx_2_legend.txt   Legend    Basel / Binningen                    Precipitation; maximum ten minute total of the month        200901-201104
+order_94060_BAS_rzz150mx_3_data.txt     Data      Basel / Binningen                    Precipitation; maximum ten minute total of the month        201105-202103
+order_94060_BAS_rzz150mx_3_legend.txt   Legend    Basel / Binningen                    Precipitation; maximum ten minute total of the month        201105-202103
+order_94060_KADER_rzz150mx_1_data.txt   Data      Basel / Dreispitz                    Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_KADER_rzz150mx_1_legend.txt Legend    Basel / Dreispitz                    Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_BLZ_rzz150mx_1_data.txt     Data      Bellinzona                           Precipitation; maximum ten minute total of the month        201605-202103
+order_94060_BLZ_rzz150mx_1_legend.txt   Legend    Bellinzona                           Precipitation; maximum ten minute total of the month        201605-202103
+order_94060_DLBER_rzz150mx_1_data.txt   Data      Berus                                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLBER_rzz150mx_1_legend.txt Legend    Berus                                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_BEZ_rzz150mx_1_data.txt     Data      Beznau                               Precipitation; maximum ten minute total of the month        198811-200906
+order_94060_BEZ_rzz150mx_1_legend.txt   Legend    Beznau                               Precipitation; maximum ten minute total of the month        198811-200906
+order_94060_BEZ_rzz150mx_2_data.txt     Data      Beznau                               Precipitation; maximum ten minute total of the month        200907-201506
+order_94060_BEZ_rzz150mx_2_legend.txt   Legend    Beznau                               Precipitation; maximum ten minute total of the month        200907-201506
+order_94060_BEZ_rzz150mx_3_data.txt     Data      Beznau                               Precipitation; maximum ten minute total of the month        201507-201604
+order_94060_BEZ_rzz150mx_3_legend.txt   Legend    Beznau                               Precipitation; maximum ten minute total of the month        201507-201604
+order_94060_BEZ_rzz150mx_4_data.txt     Data      Beznau                               Precipitation; maximum ten minute total of the month        201605-202103
+order_94060_BEZ_rzz150mx_4_legend.txt   Legend    Beznau                               Precipitation; maximum ten minute total of the month        201605-202103
+order_94060_BIA_rzz150mx_1_data.txt     Data      Biasca                               Precipitation; maximum ten minute total of the month        201403-201510
+order_94060_BIA_rzz150mx_1_legend.txt   Legend    Biasca                               Precipitation; maximum ten minute total of the month        201403-201510
+order_94060_BIA_rzz150mx_2_data.txt     Data      Biasca                               Precipitation; maximum ten minute total of the month        201511-201908
+order_94060_BIA_rzz150mx_2_legend.txt   Legend    Biasca                               Precipitation; maximum ten minute total of the month        201511-201908
+order_94060_BIA_rzz150mx_3_data.txt     Data      Biasca                               Precipitation; maximum ten minute total of the month        201909-202103
+order_94060_BIA_rzz150mx_3_legend.txt   Legend    Biasca                               Precipitation; maximum ten minute total of the month        201909-202103
+order_94060_TIBIC_rzz150mx_1_data.txt   Data      Biasca A2                            Precipitation; maximum ten minute total of the month        201110-201112
+order_94060_TIBIC_rzz150mx_1_legend.txt Legend    Biasca A2                            Precipitation; maximum ten minute total of the month        201110-201112
+order_94060_TIBIC_rzz150mx_2_data.txt   Data      Biasca A2                            Precipitation; maximum ten minute total of the month        201201-201612
+order_94060_TIBIC_rzz150mx_2_legend.txt Legend    Biasca A2                            Precipitation; maximum ten minute total of the month        201201-201612
+order_94060_TIBIC_rzz150mx_3_data.txt   Data      Biasca A2                            Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIBIC_rzz150mx_3_legend.txt Legend    Biasca A2                            Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIBIC_rzz150mx_4_data.txt   Data      Biasca A2                            Precipitation; maximum ten minute total of the month        202001-202103
+order_94060_TIBIC_rzz150mx_4_legend.txt Legend    Biasca A2                            Precipitation; maximum ten minute total of the month        202001-202103
+order_94060_TIBIO_rzz150mx_1_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        200910-201012
+order_94060_TIBIO_rzz150mx_1_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        200910-201012
+order_94060_TIBIO_rzz150mx_2_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201101-201204
+order_94060_TIBIO_rzz150mx_2_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201101-201204
+order_94060_TIBIO_rzz150mx_3_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201205-201302
+order_94060_TIBIO_rzz150mx_3_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201205-201302
+order_94060_TIBIO_rzz150mx_4_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201304-201604
+order_94060_TIBIO_rzz150mx_4_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201304-201604
+order_94060_TIBIO_rzz150mx_5_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201605-201803
+order_94060_TIBIO_rzz150mx_5_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201605-201803
+order_94060_TIBIO_rzz150mx_6_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201804-201903
+order_94060_TIBIO_rzz150mx_6_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201804-201903
+order_94060_TIBIO_rzz150mx_7_data.txt   Data      Bioggio                              Precipitation; maximum ten minute total of the month        201906-202103
+order_94060_TIBIO_rzz150mx_7_legend.txt Legend    Bioggio                              Precipitation; maximum ten minute total of the month        201906-202103
+order_94060_BOU_rzz150mx_1_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199407-199408
+order_94060_BOU_rzz150mx_1_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199407-199408
+order_94060_BOU_rzz150mx_2_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199409-199411
+order_94060_BOU_rzz150mx_2_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199409-199411
+order_94060_BOU_rzz150mx_3_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199412-199505
+order_94060_BOU_rzz150mx_3_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199412-199505
+order_94060_BOU_rzz150mx_4_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199506-199612
+order_94060_BOU_rzz150mx_4_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199506-199612
+order_94060_BOU_rzz150mx_5_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199701-199801
+order_94060_BOU_rzz150mx_5_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199701-199801
+order_94060_BOU_rzz150mx_6_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199804-199806
+order_94060_BOU_rzz150mx_6_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199804-199806
+order_94060_BOU_rzz150mx_7_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199808-199810
+order_94060_BOU_rzz150mx_7_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199808-199810
+order_94060_BOU_rzz150mx_8_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199811-199905
+order_94060_BOU_rzz150mx_8_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199811-199905
+order_94060_BOU_rzz150mx_9_data.txt     Data      Bouveret                             Precipitation; maximum ten minute total of the month        199906-199908
+order_94060_BOU_rzz150mx_9_legend.txt   Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199906-199908
+order_94060_BOU_rzz150mx_10_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        199909-199911
+order_94060_BOU_rzz150mx_10_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199909-199911
+order_94060_BOU_rzz150mx_11_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        199912-200002
+order_94060_BOU_rzz150mx_11_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        199912-200002
+order_94060_BOU_rzz150mx_12_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200006-200010
+order_94060_BOU_rzz150mx_12_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200006-200010
+order_94060_BOU_rzz150mx_13_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200011-200110
+order_94060_BOU_rzz150mx_13_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200011-200110
+order_94060_BOU_rzz150mx_14_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200202-200203
+order_94060_BOU_rzz150mx_14_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200202-200203
+order_94060_BOU_rzz150mx_15_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200204-200404
+order_94060_BOU_rzz150mx_15_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200204-200404
+order_94060_BOU_rzz150mx_16_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200405-200407
+order_94060_BOU_rzz150mx_16_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200405-200407
+order_94060_BOU_rzz150mx_17_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200409-200501
+order_94060_BOU_rzz150mx_17_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200409-200501
+order_94060_BOU_rzz150mx_18_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200504-200505
+order_94060_BOU_rzz150mx_18_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200504-200505
+order_94060_BOU_rzz150mx_19_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200506-200512
+order_94060_BOU_rzz150mx_19_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200506-200512
+order_94060_BOU_rzz150mx_20_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200601-200602
+order_94060_BOU_rzz150mx_20_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200601-200602
+order_94060_BOU_rzz150mx_21_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200604-200605
+order_94060_BOU_rzz150mx_21_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200604-200605
+order_94060_BOU_rzz150mx_22_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200607-200702
+order_94060_BOU_rzz150mx_22_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200607-200702
+order_94060_BOU_rzz150mx_23_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200705-200706
+order_94060_BOU_rzz150mx_23_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200705-200706
+order_94060_BOU_rzz150mx_24_data.txt    Data      Bouveret                             Precipitation; maximum ten minute total of the month        200707-200711
+order_94060_BOU_rzz150mx_24_legend.txt  Legend    Bouveret                             Precipitation; maximum ten minute total of the month        200707-200711
+order_94060_IYBOZ_rzz150mx_1_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        200012-200211
+order_94060_IYBOZ_rzz150mx_1_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        200012-200211
+order_94060_IYBOZ_rzz150mx_2_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        200212-201902
+order_94060_IYBOZ_rzz150mx_2_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        200212-201902
+order_94060_IYBOZ_rzz150mx_3_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYBOZ_rzz150mx_3_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYBOZ_rzz150mx_4_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYBOZ_rzz150mx_4_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYBOZ_rzz150mx_5_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYBOZ_rzz150mx_5_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYBOZ_rzz150mx_6_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYBOZ_rzz150mx_6_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYBOZ_rzz150mx_7_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_IYBOZ_rzz150mx_7_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_IYBOZ_rzz150mx_8_data.txt   Data      Bozen                                Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_IYBOZ_rzz150mx_8_legend.txt Legend    Bozen                                Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_IYBRZ_rzz150mx_1_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        200805-201807
+order_94060_IYBRZ_rzz150mx_1_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        200805-201807
+order_94060_IYBRZ_rzz150mx_2_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        201808-201902
+order_94060_IYBRZ_rzz150mx_2_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        201808-201902
+order_94060_IYBRZ_rzz150mx_3_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYBRZ_rzz150mx_3_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYBRZ_rzz150mx_4_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYBRZ_rzz150mx_4_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYBRZ_rzz150mx_5_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYBRZ_rzz150mx_5_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYBRZ_rzz150mx_6_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYBRZ_rzz150mx_6_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYBRZ_rzz150mx_7_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        202010-202012
+order_94060_IYBRZ_rzz150mx_7_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        202010-202012
+order_94060_IYBRZ_rzz150mx_8_data.txt   Data      Branzoll                             Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_IYBRZ_rzz150mx_8_legend.txt Legend    Branzoll                             Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_BUS_rzz150mx_1_data.txt     Data      Buchs / Aarau                        Precipitation; maximum ten minute total of the month        198405-200706
+order_94060_BUS_rzz150mx_1_legend.txt   Legend    Buchs / Aarau                        Precipitation; maximum ten minute total of the month        198405-200706
+order_94060_BUS_rzz150mx_2_data.txt     Data      Buchs / Aarau                        Precipitation; maximum ten minute total of the month        200707-201909
+order_94060_BUS_rzz150mx_2_legend.txt   Legend    Buchs / Aarau                        Precipitation; maximum ten minute total of the month        200707-201909
+order_94060_BUS_rzz150mx_3_data.txt     Data      Buchs / Aarau                        Precipitation; maximum ten minute total of the month        201910-202103
+order_94060_BUS_rzz150mx_3_legend.txt   Legend    Buchs / Aarau                        Precipitation; maximum ten minute total of the month        201910-202103
+order_94060_KABAT_rzz150mx_1_data.txt   Data      Bättwil                              Precipitation; maximum ten minute total of the month        201812-201904
+order_94060_KABAT_rzz150mx_1_legend.txt Legend    Bättwil                              Precipitation; maximum ten minute total of the month        201812-201904
+order_94060_KABAT_rzz150mx_2_data.txt   Data      Bättwil                              Precipitation; maximum ten minute total of the month        201911-202012
+order_94060_KABAT_rzz150mx_2_legend.txt Legend    Bättwil                              Precipitation; maximum ten minute total of the month        201911-202012
+order_94060_TICAN_rzz150mx_1_data.txt   Data      Canobbio                             Precipitation; maximum ten minute total of the month        200712-200908
+order_94060_TICAN_rzz150mx_1_legend.txt Legend    Canobbio                             Precipitation; maximum ten minute total of the month        200712-200908
+order_94060_TICAN_rzz150mx_2_data.txt   Data      Canobbio                             Precipitation; maximum ten minute total of the month        200909-201612
+order_94060_TICAN_rzz150mx_2_legend.txt Legend    Canobbio                             Precipitation; maximum ten minute total of the month        200909-201612
+order_94060_TICAN_rzz150mx_3_data.txt   Data      Canobbio                             Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TICAN_rzz150mx_3_legend.txt Legend    Canobbio                             Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TICAN_rzz150mx_4_data.txt   Data      Canobbio                             Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TICAN_rzz150mx_4_legend.txt Legend    Canobbio                             Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TICAN_rzz150mx_5_data.txt   Data      Canobbio                             Precipitation; maximum ten minute total of the month        202006-202102
+order_94060_TICAN_rzz150mx_5_legend.txt Legend    Canobbio                             Precipitation; maximum ten minute total of the month        202006-202102
+order_94060_TICIA_rzz150mx_1_data.txt   Data      Chiasso                              Precipitation; maximum ten minute total of the month        200709-201208
+order_94060_TICIA_rzz150mx_1_legend.txt Legend    Chiasso                              Precipitation; maximum ten minute total of the month        200709-201208
+order_94060_TICIA_rzz150mx_2_data.txt   Data      Chiasso                              Precipitation; maximum ten minute total of the month        201209-201612
+order_94060_TICIA_rzz150mx_2_legend.txt Legend    Chiasso                              Precipitation; maximum ten minute total of the month        201209-201612
+order_94060_TICIA_rzz150mx_3_data.txt   Data      Chiasso                              Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TICIA_rzz150mx_3_legend.txt Legend    Chiasso                              Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TICIA_rzz150mx_4_data.txt   Data      Chiasso                              Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TICIA_rzz150mx_4_legend.txt Legend    Chiasso                              Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TICIA_rzz150mx_5_data.txt   Data      Chiasso                              Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_TICIA_rzz150mx_5_legend.txt Legend    Chiasso                              Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_COL_rzz150mx_1_data.txt     Data      Coldrerio                            Precipitation; maximum ten minute total of the month        201508-201806
+order_94060_COL_rzz150mx_1_legend.txt   Legend    Coldrerio                            Precipitation; maximum ten minute total of the month        201508-201806
+order_94060_COL_rzz150mx_2_data.txt     Data      Coldrerio                            Precipitation; maximum ten minute total of the month        201807-202103
+order_94060_COL_rzz150mx_2_legend.txt   Legend    Coldrerio                            Precipitation; maximum ten minute total of the month        201807-202103
+order_94060_VDCUL_rzz150mx_1_data.txt   Data      Cully                                Precipitation; maximum ten minute total of the month        201212-202103
+order_94060_VDCUL_rzz150mx_1_legend.txt Legend    Cully                                Precipitation; maximum ten minute total of the month        201212-202103
+order_94060_DIT_rzz150mx_1_data.txt     Data      Dietikon                             Precipitation; maximum ten minute total of the month        201608-201811
+order_94060_DIT_rzz150mx_1_legend.txt   Legend    Dietikon                             Precipitation; maximum ten minute total of the month        201608-201811
+order_94060_DIT_rzz150mx_2_data.txt     Data      Dietikon                             Precipitation; maximum ten minute total of the month        201812-202103
+order_94060_DIT_rzz150mx_2_legend.txt   Legend    Dietikon                             Precipitation; maximum ten minute total of the month        201812-202103
+order_94060_DLDRE_rzz150mx_1_data.txt   Data      Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLDRE_rzz150mx_1_legend.txt Legend    Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLDRE_rzz150mx_2_data.txt   Data      Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201609-201911
+order_94060_DLDRE_rzz150mx_2_legend.txt Legend    Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201609-201911
+order_94060_DLDRE_rzz150mx_3_data.txt   Data      Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201912-202004
+order_94060_DLDRE_rzz150mx_3_legend.txt Legend    Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        201912-202004
+order_94060_DLDRE_rzz150mx_4_data.txt   Data      Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_DLDRE_rzz150mx_4_legend.txt Legend    Dresden / Klotzsche                  Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_DLEMM_rzz150mx_1_data.txt   Data      Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLEMM_rzz150mx_1_legend.txt Legend    Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLEMM_rzz150mx_2_data.txt   Data      Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        201609-202006
+order_94060_DLEMM_rzz150mx_2_legend.txt Legend    Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        201609-202006
+order_94060_DLEMM_rzz150mx_3_data.txt   Data      Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        202007-202103
+order_94060_DLEMM_rzz150mx_3_legend.txt Legend    Emmendingen / Mundingen              Precipitation; maximum ten minute total of the month        202007-202103
+order_94060_DLERF_rzz150mx_1_data.txt   Data      Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLERF_rzz150mx_1_legend.txt Legend    Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLERF_rzz150mx_2_data.txt   Data      Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201609-201709
+order_94060_DLERF_rzz150mx_2_legend.txt Legend    Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201609-201709
+order_94060_DLERF_rzz150mx_3_data.txt   Data      Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201710-202103
+order_94060_DLERF_rzz150mx_3_legend.txt Legend    Erfurt / Bindersleben                Precipitation; maximum ten minute total of the month        201710-202103
+order_94060_KAETT_rzz150mx_1_data.txt   Data      Ettingen                             Precipitation; maximum ten minute total of the month        201812-202012
+order_94060_KAETT_rzz150mx_1_legend.txt Legend    Ettingen                             Precipitation; maximum ten minute total of the month        201812-202012
+order_94060_TGFRA_rzz150mx_1_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201008-201009
+order_94060_TGFRA_rzz150mx_1_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201008-201009
+order_94060_TGFRA_rzz150mx_2_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201010-201107
+order_94060_TGFRA_rzz150mx_2_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201010-201107
+order_94060_TGFRA_rzz150mx_3_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201108-201303
+order_94060_TGFRA_rzz150mx_3_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201108-201303
+order_94060_TGFRA_rzz150mx_4_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201304-201306
+order_94060_TGFRA_rzz150mx_4_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201304-201306
+order_94060_TGFRA_rzz150mx_5_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201307-201308
+order_94060_TGFRA_rzz150mx_5_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201307-201308
+order_94060_TGFRA_rzz150mx_6_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201309-201404
+order_94060_TGFRA_rzz150mx_6_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201309-201404
+order_94060_TGFRA_rzz150mx_7_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201405-201407
+order_94060_TGFRA_rzz150mx_7_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201405-201407
+order_94060_TGFRA_rzz150mx_8_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201408-201504
+order_94060_TGFRA_rzz150mx_8_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201408-201504
+order_94060_TGFRA_rzz150mx_9_data.txt   Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201508-201811
+order_94060_TGFRA_rzz150mx_9_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201508-201811
+order_94060_TGFRA_rzz150mx_10_data.txt  Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        201812-202011
+order_94060_TGFRA_rzz150mx_10_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        201812-202011
+order_94060_TGFRA_rzz150mx_11_data.txt  Data      Frauenfeld                           Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_TGFRA_rzz150mx_11_legend.txt Legend    Frauenfeld                           Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_DLFRB_rzz150mx_1_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        201604-201608
+order_94060_DLFRB_rzz150mx_1_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        201604-201608
+order_94060_DLFRB_rzz150mx_2_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        201609-201705
+order_94060_DLFRB_rzz150mx_2_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        201609-201705
+order_94060_DLFRB_rzz150mx_3_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        201706-201805
+order_94060_DLFRB_rzz150mx_3_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        201706-201805
+order_94060_DLFRB_rzz150mx_4_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        201806-202007
+order_94060_DLFRB_rzz150mx_4_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        201806-202007
+order_94060_DLFRB_rzz150mx_5_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLFRB_rzz150mx_5_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLFRB_rzz150mx_6_data.txt   Data      Freiburg                             Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLFRB_rzz150mx_6_legend.txt Legend    Freiburg                             Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_AGFRI_rzz150mx_1_data.txt   Data      Frick                                Precipitation; maximum ten minute total of the month        200812-201406
+order_94060_AGFRI_rzz150mx_1_legend.txt Legend    Frick                                Precipitation; maximum ten minute total of the month        200812-201406
+order_94060_AGFRI_rzz150mx_2_data.txt   Data      Frick                                Precipitation; maximum ten minute total of the month        201410-202103
+order_94060_AGFRI_rzz150mx_2_legend.txt Legend    Frick                                Precipitation; maximum ten minute total of the month        201410-202103
+order_94060_IYGAR_rzz150mx_1_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        201612-201902
+order_94060_IYGAR_rzz150mx_1_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        201612-201902
+order_94060_IYGAR_rzz150mx_2_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYGAR_rzz150mx_2_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYGAR_rzz150mx_3_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        201910-201912
+order_94060_IYGAR_rzz150mx_3_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        201910-201912
+order_94060_IYGAR_rzz150mx_4_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYGAR_rzz150mx_4_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYGAR_rzz150mx_5_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYGAR_rzz150mx_5_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYGAR_rzz150mx_6_data.txt   Data      Gargazon                             Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_IYGAR_rzz150mx_6_legend.txt Legend    Gargazon                             Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_GEDDU_rzz150mx_1_data.txt   Data      Genève / David-Dufour                Precipitation; maximum ten minute total of the month        200411-201205
+order_94060_GEDDU_rzz150mx_1_legend.txt Legend    Genève / David-Dufour                Precipitation; maximum ten minute total of the month        200411-201205
+order_94060_GEDDU_rzz150mx_2_data.txt   Data      Genève / David-Dufour                Precipitation; maximum ten minute total of the month        201212-202103
+order_94060_GEDDU_rzz150mx_2_legend.txt Legend    Genève / David-Dufour                Precipitation; maximum ten minute total of the month        201212-202103
+order_94060_GEBTQ_rzz150mx_1_data.txt   Data      Genève / Jardin Botanique            Precipitation; maximum ten minute total of the month        201212-201509
+order_94060_GEBTQ_rzz150mx_1_legend.txt Legend    Genève / Jardin Botanique            Precipitation; maximum ten minute total of the month        201212-201509
+order_94060_TIGIU_rzz150mx_1_data.txt   Data      Giubiasco                            Precipitation; maximum ten minute total of the month        200502-202102
+order_94060_TIGIU_rzz150mx_1_legend.txt Legend    Giubiasco                            Precipitation; maximum ten minute total of the month        200502-202102
+order_94060_TIGNO_rzz150mx_1_data.txt   Data      Gnosca                               Precipitation; maximum ten minute total of the month        200804-201612
+order_94060_TIGNO_rzz150mx_1_legend.txt Legend    Gnosca                               Precipitation; maximum ten minute total of the month        200804-201612
+order_94060_TIGNO_rzz150mx_2_data.txt   Data      Gnosca                               Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIGNO_rzz150mx_2_legend.txt Legend    Gnosca                               Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIGNO_rzz150mx_3_data.txt   Data      Gnosca                               Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIGNO_rzz150mx_3_legend.txt Legend    Gnosca                               Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIGNO_rzz150mx_4_data.txt   Data      Gnosca                               Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_TIGNO_rzz150mx_4_legend.txt Legend    Gnosca                               Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_DLGOT_rzz150mx_1_data.txt   Data      Gottfrieding                         Precipitation; maximum ten minute total of the month        202009-202103
+order_94060_DLGOT_rzz150mx_1_legend.txt Legend    Gottfrieding                         Precipitation; maximum ten minute total of the month        202009-202103
+order_94060_TIGRA_rzz150mx_1_data.txt   Data      Grancia                              Precipitation; maximum ten minute total of the month        200604-201612
+order_94060_TIGRA_rzz150mx_1_legend.txt Legend    Grancia                              Precipitation; maximum ten minute total of the month        200604-201612
+order_94060_TIGRA_rzz150mx_2_data.txt   Data      Grancia                              Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIGRA_rzz150mx_2_legend.txt Legend    Grancia                              Precipitation; maximum ten minute total of the month        201701-201912
+order_94060_TIGRA_rzz150mx_3_data.txt   Data      Grancia                              Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIGRA_rzz150mx_3_legend.txt Legend    Grancia                              Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIGRA_rzz150mx_4_data.txt   Data      Grancia                              Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_TIGRA_rzz150mx_4_legend.txt Legend    Grancia                              Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_GRO_rzz150mx_1_data.txt     Data      Grono                                Precipitation; maximum ten minute total of the month        201210-202103
+order_94060_GRO_rzz150mx_1_legend.txt   Legend    Grono                                Precipitation; maximum ten minute total of the month        201210-202103
+order_94060_GOE_rzz150mx_1_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        198811-200705
+order_94060_GOE_rzz150mx_1_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        198811-200705
+order_94060_GOE_rzz150mx_2_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        200706-201205
+order_94060_GOE_rzz150mx_2_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        200706-201205
+order_94060_GOE_rzz150mx_3_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        201206-201307
+order_94060_GOE_rzz150mx_3_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        201206-201307
+order_94060_GOE_rzz150mx_4_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        201308-201609
+order_94060_GOE_rzz150mx_4_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        201308-201609
+order_94060_GOE_rzz150mx_5_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        201610-201907
+order_94060_GOE_rzz150mx_5_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        201610-201907
+order_94060_GOE_rzz150mx_6_data.txt     Data      Gösgen                               Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_GOE_rzz150mx_6_legend.txt   Legend    Gösgen                               Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_MMIBG_rzz150mx_1_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201211-201310
+order_94060_MMIBG_rzz150mx_1_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201211-201310
+order_94060_MMIBG_rzz150mx_2_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201311-201312
+order_94060_MMIBG_rzz150mx_2_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201311-201312
+order_94060_MMIBG_rzz150mx_3_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201401-201404
+order_94060_MMIBG_rzz150mx_3_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201401-201404
+order_94060_MMIBG_rzz150mx_4_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201405-201407
+order_94060_MMIBG_rzz150mx_4_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201405-201407
+order_94060_MMIBG_rzz150mx_5_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201408-201410
+order_94060_MMIBG_rzz150mx_5_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201408-201410
+order_94060_MMIBG_rzz150mx_6_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201411-201412
+order_94060_MMIBG_rzz150mx_6_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201411-201412
+order_94060_MMIBG_rzz150mx_7_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201502-201504
+order_94060_MMIBG_rzz150mx_7_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201502-201504
+order_94060_MMIBG_rzz150mx_8_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201507-201508
+order_94060_MMIBG_rzz150mx_8_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201507-201508
+order_94060_MMIBG_rzz150mx_9_data.txt   Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201510-201601
+order_94060_MMIBG_rzz150mx_9_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201510-201601
+order_94060_MMIBG_rzz150mx_10_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201603-201604
+order_94060_MMIBG_rzz150mx_10_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201603-201604
+order_94060_MMIBG_rzz150mx_11_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201605-201609
+order_94060_MMIBG_rzz150mx_11_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201605-201609
+order_94060_MMIBG_rzz150mx_12_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201611-201612
+order_94060_MMIBG_rzz150mx_12_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201611-201612
+order_94060_MMIBG_rzz150mx_13_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201702-201710
+order_94060_MMIBG_rzz150mx_13_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201702-201710
+order_94060_MMIBG_rzz150mx_14_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201712-201808
+order_94060_MMIBG_rzz150mx_14_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201712-201808
+order_94060_MMIBG_rzz150mx_15_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201809-201811
+order_94060_MMIBG_rzz150mx_15_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201809-201811
+order_94060_MMIBG_rzz150mx_16_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201812-201903
+order_94060_MMIBG_rzz150mx_16_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201812-201903
+order_94060_MMIBG_rzz150mx_17_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        201904-202011
+order_94060_MMIBG_rzz150mx_17_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        201904-202011
+order_94060_MMIBG_rzz150mx_18_data.txt  Data      Isole di Brissago                    Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_MMIBG_rzz150mx_18_legend.txt Legend    Isole di Brissago                    Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_KAI_rzz150mx_1_data.txt     Data      Kaiserstuhl, AG                      Precipitation; maximum ten minute total of the month        201907-202103
+order_94060_KAI_rzz150mx_1_legend.txt   Legend    Kaiserstuhl, AG                      Precipitation; maximum ten minute total of the month        201907-202103
+order_94060_AGKST_rzz150mx_1_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        200609-200812
+order_94060_AGKST_rzz150mx_1_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        200609-200812
+order_94060_AGKST_rzz150mx_2_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        200912-201308
+order_94060_AGKST_rzz150mx_2_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        200912-201308
+order_94060_AGKST_rzz150mx_3_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        201310-201406
+order_94060_AGKST_rzz150mx_3_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        201310-201406
+order_94060_AGKST_rzz150mx_4_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        201410-201810
+order_94060_AGKST_rzz150mx_4_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        201410-201810
+order_94060_AGKST_rzz150mx_5_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        201811-202005
+order_94060_AGKST_rzz150mx_5_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        201811-202005
+order_94060_AGKST_rzz150mx_6_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        202006-202007
+order_94060_AGKST_rzz150mx_6_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        202006-202007
+order_94060_AGKST_rzz150mx_7_data.txt   Data      Kaisten                              Precipitation; maximum ten minute total of the month        202009-202102
+order_94060_AGKST_rzz150mx_7_legend.txt Legend    Kaisten                              Precipitation; maximum ten minute total of the month        202009-202102
+order_94060_TGKRE_rzz150mx_1_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201008-201009
+order_94060_TGKRE_rzz150mx_1_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201008-201009
+order_94060_TGKRE_rzz150mx_2_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201010-201107
+order_94060_TGKRE_rzz150mx_2_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201010-201107
+order_94060_TGKRE_rzz150mx_3_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201108-201111
+order_94060_TGKRE_rzz150mx_3_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201108-201111
+order_94060_TGKRE_rzz150mx_4_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201112-201206
+order_94060_TGKRE_rzz150mx_4_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201112-201206
+order_94060_TGKRE_rzz150mx_5_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201207-201303
+order_94060_TGKRE_rzz150mx_5_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201207-201303
+order_94060_TGKRE_rzz150mx_6_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201304-201306
+order_94060_TGKRE_rzz150mx_6_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201304-201306
+order_94060_TGKRE_rzz150mx_7_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201307-201308
+order_94060_TGKRE_rzz150mx_7_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201307-201308
+order_94060_TGKRE_rzz150mx_8_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201309-201404
+order_94060_TGKRE_rzz150mx_8_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201309-201404
+order_94060_TGKRE_rzz150mx_9_data.txt   Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201406-201407
+order_94060_TGKRE_rzz150mx_9_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201406-201407
+order_94060_TGKRE_rzz150mx_10_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201408-201502
+order_94060_TGKRE_rzz150mx_10_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201408-201502
+order_94060_TGKRE_rzz150mx_11_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201509-201511
+order_94060_TGKRE_rzz150mx_11_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201509-201511
+order_94060_TGKRE_rzz150mx_12_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201602-201606
+order_94060_TGKRE_rzz150mx_12_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201602-201606
+order_94060_TGKRE_rzz150mx_13_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201608-201609
+order_94060_TGKRE_rzz150mx_13_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201608-201609
+order_94060_TGKRE_rzz150mx_14_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201610-201704
+order_94060_TGKRE_rzz150mx_14_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201610-201704
+order_94060_TGKRE_rzz150mx_15_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201705-201804
+order_94060_TGKRE_rzz150mx_15_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201705-201804
+order_94060_TGKRE_rzz150mx_16_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201805-201811
+order_94060_TGKRE_rzz150mx_16_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201805-201811
+order_94060_TGKRE_rzz150mx_17_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201901-201906
+order_94060_TGKRE_rzz150mx_17_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201901-201906
+order_94060_TGKRE_rzz150mx_18_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201907-201910
+order_94060_TGKRE_rzz150mx_18_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201907-201910
+order_94060_TGKRE_rzz150mx_19_data.txt  Data      Kreuzlingen                          Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_TGKRE_rzz150mx_19_legend.txt Legend    Kreuzlingen                          Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_IYLAI_rzz150mx_1_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        200910-201807
+order_94060_IYLAI_rzz150mx_1_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        200910-201807
+order_94060_IYLAI_rzz150mx_2_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        201808-201902
+order_94060_IYLAI_rzz150mx_2_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        201808-201902
+order_94060_IYLAI_rzz150mx_3_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYLAI_rzz150mx_3_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYLAI_rzz150mx_4_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYLAI_rzz150mx_4_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYLAI_rzz150mx_5_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYLAI_rzz150mx_5_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYLAI_rzz150mx_6_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYLAI_rzz150mx_6_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYLAI_rzz150mx_7_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_IYLAI_rzz150mx_7_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_IYLAI_rzz150mx_8_data.txt   Data      Laimburg                             Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_IYLAI_rzz150mx_8_legend.txt Legend    Laimburg                             Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_DLLAU_rzz150mx_1_data.txt   Data      Lautertal, Oberlauter                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLLAU_rzz150mx_1_legend.txt Legend    Lautertal, Oberlauter                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_LEI_rzz150mx_1_data.txt     Data      Leibstadt                            Precipitation; maximum ten minute total of the month        198811-200307
+order_94060_LEI_rzz150mx_1_legend.txt   Legend    Leibstadt                            Precipitation; maximum ten minute total of the month        198811-200307
+order_94060_LEI_rzz150mx_2_data.txt     Data      Leibstadt                            Precipitation; maximum ten minute total of the month        200308-201006
+order_94060_LEI_rzz150mx_2_legend.txt   Legend    Leibstadt                            Precipitation; maximum ten minute total of the month        200308-201006
+order_94060_LEI_rzz150mx_3_data.txt     Data      Leibstadt                            Precipitation; maximum ten minute total of the month        201007-202103
+order_94060_LEI_rzz150mx_3_legend.txt   Legend    Leibstadt                            Precipitation; maximum ten minute total of the month        201007-202103
+order_94060_OTL_rzz150mx_1_data.txt     Data      Locarno / Monti                      Precipitation; maximum ten minute total of the month        198012-202103
+order_94060_OTL_rzz150mx_1_legend.txt   Legend    Locarno / Monti                      Precipitation; maximum ten minute total of the month        198012-202103
+order_94060_TILOD_rzz150mx_1_data.txt   Data      Lodrino                              Precipitation; maximum ten minute total of the month        201301-201312
+order_94060_TILOD_rzz150mx_1_legend.txt Legend    Lodrino                              Precipitation; maximum ten minute total of the month        201301-201312
+order_94060_LUG_rzz150mx_1_data.txt     Data      Lugano                               Precipitation; maximum ten minute total of the month        198012-202103
+order_94060_LUG_rzz150mx_1_legend.txt   Legend    Lugano                               Precipitation; maximum ten minute total of the month        198012-202103
+order_94060_AGLUP_rzz150mx_1_data.txt   Data      Lupfig                               Precipitation; maximum ten minute total of the month        200204-201212
+order_94060_AGLUP_rzz150mx_1_legend.txt Legend    Lupfig                               Precipitation; maximum ten minute total of the month        200204-201212
+order_94060_AGLUP_rzz150mx_2_data.txt   Data      Lupfig                               Precipitation; maximum ten minute total of the month        201308-202007
+order_94060_AGLUP_rzz150mx_2_legend.txt Legend    Lupfig                               Precipitation; maximum ten minute total of the month        201308-202007
+order_94060_AGLUP_rzz150mx_3_data.txt   Data      Lupfig                               Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_AGLUP_rzz150mx_3_legend.txt Legend    Lupfig                               Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_MMBIR_rzz150mx_1_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201211-201312
+order_94060_MMBIR_rzz150mx_1_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201211-201312
+order_94060_MMBIR_rzz150mx_2_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201401-201404
+order_94060_MMBIR_rzz150mx_2_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201401-201404
+order_94060_MMBIR_rzz150mx_3_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201405-201508
+order_94060_MMBIR_rzz150mx_3_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201405-201508
+order_94060_MMBIR_rzz150mx_4_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201509-201512
+order_94060_MMBIR_rzz150mx_4_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201509-201512
+order_94060_MMBIR_rzz150mx_5_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201603-201604
+order_94060_MMBIR_rzz150mx_5_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201603-201604
+order_94060_MMBIR_rzz150mx_6_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201605-201810
+order_94060_MMBIR_rzz150mx_6_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201605-201810
+order_94060_MMBIR_rzz150mx_7_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201812-201903
+order_94060_MMBIR_rzz150mx_7_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201812-201903
+order_94060_MMBIR_rzz150mx_8_data.txt   Data      Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201904-202103
+order_94060_MMBIR_rzz150mx_8_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Precipitation; maximum ten minute total of the month        201904-202103
+order_94060_MAG_rzz150mx_1_data.txt     Data      Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        198012-201708
+order_94060_MAG_rzz150mx_1_legend.txt   Legend    Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        198012-201708
+order_94060_MAG_rzz150mx_2_data.txt     Data      Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        201709-201804
+order_94060_MAG_rzz150mx_2_legend.txt   Legend    Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        201709-201804
+order_94060_MAG_rzz150mx_3_data.txt     Data      Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        201805-202103
+order_94060_MAG_rzz150mx_3_legend.txt   Legend    Magadino / Cadenazzo                 Precipitation; maximum ten minute total of the month        201805-202103
+order_94060_TIMAG_rzz150mx_1_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        200502-200504
+order_94060_TIMAG_rzz150mx_1_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        200502-200504
+order_94060_TIMAG_rzz150mx_2_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        200507-200705
+order_94060_TIMAG_rzz150mx_2_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        200507-200705
+order_94060_TIMAG_rzz150mx_3_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        200706-200710
+order_94060_TIMAG_rzz150mx_3_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        200706-200710
+order_94060_TIMAG_rzz150mx_4_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        200712-201012
+order_94060_TIMAG_rzz150mx_4_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        200712-201012
+order_94060_TIMAG_rzz150mx_5_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        201101-201912
+order_94060_TIMAG_rzz150mx_5_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        201101-201912
+order_94060_TIMAG_rzz150mx_6_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIMAG_rzz150mx_6_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIMAG_rzz150mx_7_data.txt   Data      Maggia                               Precipitation; maximum ten minute total of the month        202006-202102
+order_94060_TIMAG_rzz150mx_7_legend.txt Legend    Maggia                               Precipitation; maximum ten minute total of the month        202006-202102
+order_94060_TIMEN_rzz150mx_1_data.txt   Data      Mendrisio                            Precipitation; maximum ten minute total of the month        200410-201912
+order_94060_TIMEN_rzz150mx_1_legend.txt Legend    Mendrisio                            Precipitation; maximum ten minute total of the month        200410-201912
+order_94060_TIMEN_rzz150mx_2_data.txt   Data      Mendrisio                            Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIMEN_rzz150mx_2_legend.txt Legend    Mendrisio                            Precipitation; maximum ten minute total of the month        202001-202005
+order_94060_TIMEN_rzz150mx_3_data.txt   Data      Mendrisio                            Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_TIMEN_rzz150mx_3_legend.txt Legend    Mendrisio                            Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_IYMER_rzz150mx_1_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        200309-200501
+order_94060_IYMER_rzz150mx_1_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        200309-200501
+order_94060_IYMER_rzz150mx_2_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        200503-200706
+order_94060_IYMER_rzz150mx_2_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        200503-200706
+order_94060_IYMER_rzz150mx_3_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        200707-200807
+order_94060_IYMER_rzz150mx_3_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        200707-200807
+order_94060_IYMER_rzz150mx_4_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        200808-201902
+order_94060_IYMER_rzz150mx_4_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        200808-201902
+order_94060_IYMER_rzz150mx_5_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYMER_rzz150mx_5_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYMER_rzz150mx_6_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYMER_rzz150mx_6_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYMER_rzz150mx_7_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYMER_rzz150mx_7_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYMER_rzz150mx_8_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYMER_rzz150mx_8_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYMER_rzz150mx_9_data.txt   Data      Meran                                Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_IYMER_rzz150mx_9_legend.txt Legend    Meran                                Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_DLMEZ_rzz150mx_1_data.txt   Data      Metzingen                            Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLMEZ_rzz150mx_1_legend.txt Legend    Metzingen                            Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLMEZ_rzz150mx_2_data.txt   Data      Metzingen                            Precipitation; maximum ten minute total of the month        201609-201703
+order_94060_DLMEZ_rzz150mx_2_legend.txt Legend    Metzingen                            Precipitation; maximum ten minute total of the month        201609-201703
+order_94060_DLMEZ_rzz150mx_3_data.txt   Data      Metzingen                            Precipitation; maximum ten minute total of the month        201704-202005
+order_94060_DLMEZ_rzz150mx_3_legend.txt Legend    Metzingen                            Precipitation; maximum ten minute total of the month        201704-202005
+order_94060_DLMEZ_rzz150mx_4_data.txt   Data      Metzingen                            Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_DLMEZ_rzz150mx_4_legend.txt Legend    Metzingen                            Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_TIMOL_rzz150mx_1_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        200910-201012
+order_94060_TIMOL_rzz150mx_1_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        200910-201012
+order_94060_TIMOL_rzz150mx_2_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201101-201107
+order_94060_TIMOL_rzz150mx_2_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201101-201107
+order_94060_TIMOL_rzz150mx_3_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201108-201112
+order_94060_TIMOL_rzz150mx_3_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201108-201112
+order_94060_TIMOL_rzz150mx_4_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201201-201204
+order_94060_TIMOL_rzz150mx_4_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201201-201204
+order_94060_TIMOL_rzz150mx_5_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201205-201210
+order_94060_TIMOL_rzz150mx_5_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201205-201210
+order_94060_TIMOL_rzz150mx_6_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201211-201307
+order_94060_TIMOL_rzz150mx_6_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201211-201307
+order_94060_TIMOL_rzz150mx_7_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201308-201604
+order_94060_TIMOL_rzz150mx_7_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201308-201604
+order_94060_TIMOL_rzz150mx_8_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201605-201609
+order_94060_TIMOL_rzz150mx_8_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201605-201609
+order_94060_TIMOL_rzz150mx_9_data.txt   Data      Moleno                               Precipitation; maximum ten minute total of the month        201610-201708
+order_94060_TIMOL_rzz150mx_9_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201610-201708
+order_94060_TIMOL_rzz150mx_10_data.txt  Data      Moleno                               Precipitation; maximum ten minute total of the month        201709-201803
+order_94060_TIMOL_rzz150mx_10_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201709-201803
+order_94060_TIMOL_rzz150mx_11_data.txt  Data      Moleno                               Precipitation; maximum ten minute total of the month        201804-201903
+order_94060_TIMOL_rzz150mx_11_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201804-201903
+order_94060_TIMOL_rzz150mx_12_data.txt  Data      Moleno                               Precipitation; maximum ten minute total of the month        201904-201906
+order_94060_TIMOL_rzz150mx_12_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201904-201906
+order_94060_TIMOL_rzz150mx_13_data.txt  Data      Moleno                               Precipitation; maximum ten minute total of the month        201908-201911
+order_94060_TIMOL_rzz150mx_13_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201908-201911
+order_94060_TIMOL_rzz150mx_14_data.txt  Data      Moleno                               Precipitation; maximum ten minute total of the month        201912-202103
+order_94060_TIMOL_rzz150mx_14_legend.txt Legend    Moleno                               Precipitation; maximum ten minute total of the month        201912-202103
+order_94060_MOE_rzz150mx_1_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201010-201012
+order_94060_MOE_rzz150mx_1_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201010-201012
+order_94060_MOE_rzz150mx_2_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201101-201104
+order_94060_MOE_rzz150mx_2_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201101-201104
+order_94060_MOE_rzz150mx_3_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201105-201108
+order_94060_MOE_rzz150mx_3_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201105-201108
+order_94060_MOE_rzz150mx_4_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201109-201111
+order_94060_MOE_rzz150mx_4_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201109-201111
+order_94060_MOE_rzz150mx_5_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201112-201306
+order_94060_MOE_rzz150mx_5_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201112-201306
+order_94060_MOE_rzz150mx_6_data.txt     Data      Möhlin                               Precipitation; maximum ten minute total of the month        201308-202103
+order_94060_MOE_rzz150mx_6_legend.txt   Legend    Möhlin                               Precipitation; maximum ten minute total of the month        201308-202103
+order_94060_DLMUH_rzz150mx_1_data.txt   Data      Mühlacker                            Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLMUH_rzz150mx_1_legend.txt Legend    Mühlacker                            Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLMUH_rzz150mx_2_data.txt   Data      Mühlacker                            Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLMUH_rzz150mx_2_legend.txt Legend    Mühlacker                            Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLMUE_rzz150mx_1_data.txt   Data      Müllheim                             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLMUE_rzz150mx_1_legend.txt Legend    Müllheim                             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLMUE_rzz150mx_2_data.txt   Data      Müllheim                             Precipitation; maximum ten minute total of the month        201609-201811
+order_94060_DLMUE_rzz150mx_2_legend.txt Legend    Müllheim                             Precipitation; maximum ten minute total of the month        201609-201811
+order_94060_DLMUE_rzz150mx_3_data.txt   Data      Müllheim                             Precipitation; maximum ten minute total of the month        201812-201906
+order_94060_DLMUE_rzz150mx_3_legend.txt Legend    Müllheim                             Precipitation; maximum ten minute total of the month        201812-201906
+order_94060_DLMUE_rzz150mx_4_data.txt   Data      Müllheim                             Precipitation; maximum ten minute total of the month        201907-202005
+order_94060_DLMUE_rzz150mx_4_legend.txt Legend    Müllheim                             Precipitation; maximum ten minute total of the month        201907-202005
+order_94060_DLMUE_rzz150mx_5_data.txt   Data      Müllheim                             Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_DLMUE_rzz150mx_5_legend.txt Legend    Müllheim                             Precipitation; maximum ten minute total of the month        202006-202103
+order_94060_KAMUN_rzz150mx_1_data.txt   Data      Münchenstein                         Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_KAMUN_rzz150mx_1_legend.txt Legend    Münchenstein                         Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_DLNEH_rzz150mx_1_data.txt   Data      Neuhütten                            Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLNEH_rzz150mx_1_legend.txt Legend    Neuhütten                            Precipitation; maximum ten minute total of the month        202008-202010
+order_94060_DLNEH_rzz150mx_2_data.txt   Data      Neuhütten                            Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLNEH_rzz150mx_2_legend.txt Legend    Neuhütten                            Precipitation; maximum ten minute total of the month        202011-202103
+order_94060_DLNOT_rzz150mx_1_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        201605-201607
+order_94060_DLNOT_rzz150mx_1_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        201605-201607
+order_94060_DLNOT_rzz150mx_2_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        201609-201610
+order_94060_DLNOT_rzz150mx_2_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        201609-201610
+order_94060_DLNOT_rzz150mx_3_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        201611-201805
+order_94060_DLNOT_rzz150mx_3_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        201611-201805
+order_94060_DLNOT_rzz150mx_4_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        201806-201812
+order_94060_DLNOT_rzz150mx_4_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        201806-201812
+order_94060_DLNOT_rzz150mx_5_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        201901-202007
+order_94060_DLNOT_rzz150mx_5_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        201901-202007
+order_94060_DLNOT_rzz150mx_6_data.txt   Data      Notzingen                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLNOT_rzz150mx_6_legend.txt Legend    Notzingen                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLNUE_rzz150mx_1_data.txt   Data      Nürnberg                             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLNUE_rzz150mx_1_legend.txt Legend    Nürnberg                             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLNUE_rzz150mx_2_data.txt   Data      Nürnberg                             Precipitation; maximum ten minute total of the month        201609-202103
+order_94060_DLNUE_rzz150mx_2_legend.txt Legend    Nürnberg                             Precipitation; maximum ten minute total of the month        201609-202103
+order_94060_KAOWL_rzz150mx_1_data.txt   Data      Oberwil                              Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_KAOWL_rzz150mx_1_legend.txt Legend    Oberwil                              Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_DLREG_rzz150mx_1_data.txt   Data      Regensburg                           Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLREG_rzz150mx_1_legend.txt Legend    Regensburg                           Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_KAREH_rzz150mx_1_data.txt   Data      Reinach                              Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_KAREH_rzz150mx_1_legend.txt Legend    Reinach                              Precipitation; maximum ten minute total of the month        201811-202012
+order_94060_VDREN_rzz150mx_1_data.txt   Data      Rennaz                               Precipitation; maximum ten minute total of the month        201212-201901
+order_94060_VDREN_rzz150mx_1_legend.txt Legend    Rennaz                               Precipitation; maximum ten minute total of the month        201212-201901
+order_94060_KAROD_rzz150mx_1_data.txt   Data      Rodersdorf                           Precipitation; maximum ten minute total of the month        201901-202012
+order_94060_KAROD_rzz150mx_1_legend.txt Legend    Rodersdorf                           Precipitation; maximum ten minute total of the month        201901-202012
+order_94060_VDROL_rzz150mx_1_data.txt   Data      Rolle                                Precipitation; maximum ten minute total of the month        201308-202103
+order_94060_VDROL_rzz150mx_1_legend.txt Legend    Rolle                                Precipitation; maximum ten minute total of the month        201308-202103
+order_94060_DLROH_rzz150mx_1_data.txt   Data      Roth                                 Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_DLROH_rzz150mx_1_legend.txt Legend    Roth                                 Precipitation; maximum ten minute total of the month        202010-202011
+order_94060_DLROH_rzz150mx_2_data.txt   Data      Roth                                 Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_DLROH_rzz150mx_2_legend.txt Legend    Roth                                 Precipitation; maximum ten minute total of the month        202012-202103
+order_94060_DLRON_rzz150mx_1_data.txt   Data      Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLRON_rzz150mx_1_legend.txt Legend    Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLRON_rzz150mx_2_data.txt   Data      Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201609-201806
+order_94060_DLRON_rzz150mx_2_legend.txt Legend    Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201609-201806
+order_94060_DLRON_rzz150mx_3_data.txt   Data      Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201807-201904
+order_94060_DLRON_rzz150mx_3_legend.txt Legend    Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201807-201904
+order_94060_DLRON_rzz150mx_4_data.txt   Data      Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201906-201910
+order_94060_DLRON_rzz150mx_4_legend.txt Legend    Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201906-201910
+order_94060_DLRON_rzz150mx_5_data.txt   Data      Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_DLRON_rzz150mx_5_legend.txt Legend    Rottenburg am Neckar                 Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_DLSAA_rzz150mx_1_data.txt   Data      Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201605-201607
+order_94060_DLSAA_rzz150mx_1_legend.txt Legend    Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201605-201607
+order_94060_DLSAA_rzz150mx_2_data.txt   Data      Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201609-201805
+order_94060_DLSAA_rzz150mx_2_legend.txt Legend    Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201609-201805
+order_94060_DLSAA_rzz150mx_3_data.txt   Data      Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201806-201808
+order_94060_DLSAA_rzz150mx_3_legend.txt Legend    Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201806-201808
+order_94060_DLSAA_rzz150mx_4_data.txt   Data      Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201809-202103
+order_94060_DLSAA_rzz150mx_4_legend.txt Legend    Saarbrücken / Ensheim                Precipitation; maximum ten minute total of the month        201809-202103
+order_94060_IYSAU_rzz150mx_1_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        200212-200402
+order_94060_IYSAU_rzz150mx_1_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        200212-200402
+order_94060_IYSAU_rzz150mx_2_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        200407-201902
+order_94060_IYSAU_rzz150mx_2_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        200407-201902
+order_94060_IYSAU_rzz150mx_3_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYSAU_rzz150mx_3_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        201905-201907
+order_94060_IYSAU_rzz150mx_4_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYSAU_rzz150mx_4_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        201909-201912
+order_94060_IYSAU_rzz150mx_5_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYSAU_rzz150mx_5_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        202001-202002
+order_94060_IYSAU_rzz150mx_6_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYSAU_rzz150mx_6_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        202005-202006
+order_94060_IYSAU_rzz150mx_7_data.txt   Data      Salurn                               Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_IYSAU_rzz150mx_7_legend.txt Legend    Salurn                               Precipitation; maximum ten minute total of the month        202009-202012
+order_94060_SOSWE_rzz150mx_1_data.txt   Data      Schönewerd                           Precipitation; maximum ten minute total of the month        200612-201311
+order_94060_SOSWE_rzz150mx_1_legend.txt Legend    Schönewerd                           Precipitation; maximum ten minute total of the month        200612-201311
+order_94060_SOSWE_rzz150mx_2_data.txt   Data      Schönewerd                           Precipitation; maximum ten minute total of the month        201312-201912
+order_94060_SOSWE_rzz150mx_2_legend.txt Legend    Schönewerd                           Precipitation; maximum ten minute total of the month        201312-201912
+order_94060_AGSIN_rzz150mx_1_data.txt   Data      Sins                                 Precipitation; maximum ten minute total of the month        201805-202103
+order_94060_AGSIN_rzz150mx_1_legend.txt Legend    Sins                                 Precipitation; maximum ten minute total of the month        201805-202103
+order_94060_SBO_rzz150mx_1_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        198107-200812
+order_94060_SBO_rzz150mx_1_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        198107-200812
+order_94060_SBO_rzz150mx_2_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        200901-201204
+order_94060_SBO_rzz150mx_2_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        200901-201204
+order_94060_SBO_rzz150mx_3_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        201205-201705
+order_94060_SBO_rzz150mx_3_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        201205-201705
+order_94060_SBO_rzz150mx_4_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        201706-201802
+order_94060_SBO_rzz150mx_4_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        201706-201802
+order_94060_SBO_rzz150mx_5_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        201804-201910
+order_94060_SBO_rzz150mx_5_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        201804-201910
+order_94060_SBO_rzz150mx_6_data.txt     Data      Stabio                               Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_SBO_rzz150mx_6_legend.txt   Legend    Stabio                               Precipitation; maximum ten minute total of the month        201911-202103
+order_94060_AGSTE_rzz150mx_1_data.txt   Data      Stetten                              Precipitation; maximum ten minute total of the month        201506-201703
+order_94060_AGSTE_rzz150mx_1_legend.txt Legend    Stetten                              Precipitation; maximum ten minute total of the month        201506-201703
+order_94060_AGSTE_rzz150mx_2_data.txt   Data      Stetten                              Precipitation; maximum ten minute total of the month        201704-201811
+order_94060_AGSTE_rzz150mx_2_legend.txt Legend    Stetten                              Precipitation; maximum ten minute total of the month        201704-201811
+order_94060_AGSTE_rzz150mx_3_data.txt   Data      Stetten                              Precipitation; maximum ten minute total of the month        201812-202103
+order_94060_AGSTE_rzz150mx_3_legend.txt Legend    Stetten                              Precipitation; maximum ten minute total of the month        201812-202103
+order_94060_DLSTR_rzz150mx_1_data.txt   Data      Straubing                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLSTR_rzz150mx_1_legend.txt Legend    Straubing                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLSTU_rzz150mx_1_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLSTU_rzz150mx_1_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLSTU_rzz150mx_2_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201609-201705
+order_94060_DLSTU_rzz150mx_2_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201609-201705
+order_94060_DLSTU_rzz150mx_3_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201706-201808
+order_94060_DLSTU_rzz150mx_3_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201706-201808
+order_94060_DLSTU_rzz150mx_4_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201809-201811
+order_94060_DLSTU_rzz150mx_4_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201809-201811
+order_94060_DLSTU_rzz150mx_5_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201812-201904
+order_94060_DLSTU_rzz150mx_5_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201812-201904
+order_94060_DLSTU_rzz150mx_6_data.txt   Data      Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201905-202103
+order_94060_DLSTU_rzz150mx_6_legend.txt Legend    Stuttgart / Echterdingen             Precipitation; maximum ten minute total of the month        201905-202103
+order_94060_DLSTS_rzz150mx_1_data.txt   Data      Stuttgart / Schnarrenberg            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLSTS_rzz150mx_1_legend.txt Legend    Stuttgart / Schnarrenberg            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_AGSUL_rzz150mx_1_data.txt   Data      Sulz                                 Precipitation; maximum ten minute total of the month        202003-202103
+order_94060_AGSUL_rzz150mx_1_legend.txt Legend    Sulz                                 Precipitation; maximum ten minute total of the month        202003-202103
+order_94060_DLTHO_rzz150mx_1_data.txt   Data      Tholey                               Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLTHO_rzz150mx_1_legend.txt Legend    Tholey                               Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLTRI_rzz150mx_1_data.txt   Data      Trier                                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLTRI_rzz150mx_1_legend.txt Legend    Trier                                Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_AGTGI_rzz150mx_1_data.txt   Data      Turgi                                Precipitation; maximum ten minute total of the month        200101-201111
+order_94060_AGTGI_rzz150mx_1_legend.txt Legend    Turgi                                Precipitation; maximum ten minute total of the month        200101-201111
+order_94060_AGTGI_rzz150mx_2_data.txt   Data      Turgi                                Precipitation; maximum ten minute total of the month        201112-202103
+order_94060_AGTGI_rzz150mx_2_legend.txt Legend    Turgi                                Precipitation; maximum ten minute total of the month        201112-202103
+order_94060_GEARE_rzz150mx_1_data.txt   Data      Vernier / Aïre                       Precipitation; maximum ten minute total of the month        200410-202103
+order_94060_GEARE_rzz150mx_1_legend.txt Legend    Vernier / Aïre                       Precipitation; maximum ten minute total of the month        200410-202103
+order_94060_DLWAI_rzz150mx_1_data.txt   Data      Waibstadt                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLWAI_rzz150mx_1_legend.txt Legend    Waibstadt                            Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_ZHWEA_rzz150mx_1_data.txt   Data      Weiach                               Precipitation; maximum ten minute total of the month        201502-201612
+order_94060_ZHWEA_rzz150mx_1_legend.txt Legend    Weiach                               Precipitation; maximum ten minute total of the month        201502-201612
+order_94060_ZHWEA_rzz150mx_2_data.txt   Data      Weiach                               Precipitation; maximum ten minute total of the month        201701-202006
+order_94060_ZHWEA_rzz150mx_2_legend.txt Legend    Weiach                               Precipitation; maximum ten minute total of the month        201701-202006
+order_94060_ZHWEA_rzz150mx_3_data.txt   Data      Weiach                               Precipitation; maximum ten minute total of the month        202007-202012
+order_94060_ZHWEA_rzz150mx_3_legend.txt Legend    Weiach                               Precipitation; maximum ten minute total of the month        202007-202012
+order_94060_ZHWEA_rzz150mx_4_data.txt   Data      Weiach                               Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_ZHWEA_rzz150mx_4_legend.txt Legend    Weiach                               Precipitation; maximum ten minute total of the month        202102-202103
+order_94060_AGWDS_rzz150mx_1_data.txt   Data      Windisch                             Precipitation; maximum ten minute total of the month        200204-201212
+order_94060_AGWDS_rzz150mx_1_legend.txt Legend    Windisch                             Precipitation; maximum ten minute total of the month        200204-201212
+order_94060_AGWDS_rzz150mx_2_data.txt   Data      Windisch                             Precipitation; maximum ten minute total of the month        201308-201711
+order_94060_AGWDS_rzz150mx_2_legend.txt Legend    Windisch                             Precipitation; maximum ten minute total of the month        201308-201711
+order_94060_AGWDS_rzz150mx_3_data.txt   Data      Windisch                             Precipitation; maximum ten minute total of the month        201801-202103
+order_94060_AGWDS_rzz150mx_3_legend.txt Legend    Windisch                             Precipitation; maximum ten minute total of the month        201801-202103
+order_94060_DLWOL_rzz150mx_1_data.txt   Data      Wolfach                              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLWOL_rzz150mx_1_legend.txt Legend    Wolfach                              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLWOL_rzz150mx_2_data.txt   Data      Wolfach                              Precipitation; maximum ten minute total of the month        201609-201906
+order_94060_DLWOL_rzz150mx_2_legend.txt Legend    Wolfach                              Precipitation; maximum ten minute total of the month        201609-201906
+order_94060_DLWOL_rzz150mx_3_data.txt   Data      Wolfach                              Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_DLWOL_rzz150mx_3_legend.txt Legend    Wolfach                              Precipitation; maximum ten minute total of the month        201908-202103
+order_94060_DLWOF_rzz150mx_1_data.txt   Data      Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLWOF_rzz150mx_1_legend.txt Legend    Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        201605-201608
+order_94060_DLWOF_rzz150mx_2_data.txt   Data      Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        201609-202009
+order_94060_DLWOF_rzz150mx_2_legend.txt Legend    Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        201609-202009
+order_94060_DLWOF_rzz150mx_3_data.txt   Data      Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        202010-202103
+order_94060_DLWOF_rzz150mx_3_legend.txt Legend    Wutöschingen-Ofteringen              Precipitation; maximum ten minute total of the month        202010-202103
+order_94060_PSI_rzz150mx_1_data.txt     Data      Würenlingen / PSI                    Precipitation; maximum ten minute total of the month        199201-202103
+order_94060_PSI_rzz150mx_1_legend.txt   Legend    Würenlingen / PSI                    Precipitation; maximum ten minute total of the month        199201-202103
+order_94060_DLWUR_rzz150mx_1_data.txt   Data      Würzburg                             Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLWUR_rzz150mx_1_legend.txt Legend    Würzburg                             Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLOHR_rzz150mx_1_data.txt   Data      Öhringen                             Precipitation; maximum ten minute total of the month        202008-202103
+order_94060_DLOHR_rzz150mx_1_legend.txt Legend    Öhringen                             Precipitation; maximum ten minute total of the month        202008-202103
