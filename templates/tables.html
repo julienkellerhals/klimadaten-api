@@ -4,13 +4,7 @@
 {% block head %}
 {{ super() }}
 <style>
-    #stage {
-        background: red;
-    }
 
-    #core {
-        background: blue;
-    }
 </style>
 {% endblock %}
 
@@ -84,7 +78,7 @@
             }
             streamEngineStatus();
             setInterval(getEngineStatus, 2000);
-            
+
             function createDb() {
                 var xhr = new XMLHttpRequest();
                 xhr.onload = () => {
@@ -173,9 +167,20 @@
                         previousMessage = message
                         if (statusCode == 0) {
                             var tablesJson = JSON.parse(message)
-                            console.log(tablesJson)
-                            document.getElementById("stageTableGroup").innerHTML = String(tablesJson.stage)
-                            document.getElementById("coreTableGroup").innerHTML = String(tablesJson.core)
+                            document.getElementById("stageTableGroup").innerHTML = ""
+                            document.getElementById("coreTableGroup").innerHTML = ""
+                            tablesJson.stage.forEach(element => {
+                                var a = document.createElement("a")
+                                a.classList.add("collection-item")
+                                a.innerHTML = element
+                                document.getElementById("stageTableGroup").appendChild(a)
+                            });
+                            tablesJson.core.forEach(element => {
+                                var a = document.createElement("a")
+                                a.classList.add("collection-item")
+                                a.innerHTML = element
+                                document.getElementById("coreTableGroup").appendChild(a)
+                            });
                             tbCreate.classList.remove("text-lighten-5")
                             tbCreate.classList.add("text-darken-1")
                             if (currentStatus == null) {
@@ -221,39 +226,68 @@
         <div class="col s6">
             <div id="stage">
                 <h1>Stage Schema</h1>
+                <div id="stageTableGroup" class="collection">
+                </div>
                 <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
                 <script>
-                    function runCoreETL() {
+                    function runStageETL() {
+                        var stageDiv = document.getElementById("stage")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        stageDiv.insertBefore(progress, stageDiv.children[1])
+
+                        document.getElementById("execStageETL").classList.add("disabled")
+
                         var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            stageDiv.children[1].remove()
+                            document.getElementById("execStageETL").classList.remove("disabled")
+                        }
                         xhr.open("POST", "/admin/db/etl/stage", true);
                         xhr.send()
                     }
-                    document.getElementById("execStageETL").addEventListener("click", runCoreETL)
+                    document.getElementById("execStageETL").addEventListener("click", runStageETL)
                 </script>
-                <div id="stageTableGroup">
-                    stage table names come here
-                </div>
             </div>
         </div>
         <div class="col s6">
             <div id="core">
                 <h1>Core Schema</h1>
+                <div id="coreTableGroup" class="collection">
+                </div>
                 <a id="execCoreETL" class="waves-effect waves-light btn-small right">Core ETL</a>
                 <script>
                     function runCoreETL() {
+                        var coreDiv = document.getElementById("core")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        coreDiv.insertBefore(progress, coreDiv.children[1])
+
+                        document.getElementById("execCoreETL").classList.add("disabled")
+
                         var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            coreDiv.children[1].remove()
+                            document.getElementById("execCoreETL").classList.remove("disabled")
+                        }
                         xhr.open("POST", "/admin/db/etl/core", true);
                         xhr.send()
                     }
                     document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
                 </script>
-                <div id="coreTableGroup">
-                    Core tables come here
-                </div>
             </div>
         </div>
 
     </div>
 </div>
-Show database tables
 {% endblock %}
