@@ -1,9 +1,11 @@
+import json
 import threading
 import sqlalchemy
 import numpy as np
 import pandas as pd
 from lxml import etree
 from pathlib import Path
+from sqlalchemy import inspect
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy_utils import database_exists, create_database
@@ -21,6 +23,7 @@ class Database:
     announcer = None
     databaseStatusStream = None
     engineStatusStream = None
+    tablesStatusStream = None
 
     def __init__(self, announcer):
         """ Init engine
@@ -28,6 +31,7 @@ class Database:
 
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
 
     def readConfig(self, shortName):
@@ -99,6 +103,32 @@ class Database:
             msgTxt = "Status: 0; Engine started"
             self.engineStatusStream.announce(
                 self.engineStatusStream.format_sse(msgTxt)
+            )
+
+    def getTablesStatus(self):
+        x = threading.Thread(
+            target=self._getTablesStatus
+        )
+        x.start()
+
+    def _getTablesStatus(self):
+        self.getEngine()
+        inspector = inspect(self.engine)
+        stageTables = inspector.get_table_names("stage")
+        coreTables = inspector.get_table_names("core")
+        if len(stageTables) > 0 or len(coreTables) > 0:
+            dbTables = {}
+            dbTables["stage"] = inspector.get_table_names("stage")
+            dbTables["core"] = inspector.get_table_names("core")
+
+            msgTxt = "Status: 0; " + json.dumps(dbTables)
+            self.tablesStatusStream.announce(
+                self.tablesStatusStream.format_sse(msgTxt)
+            )
+        else:
+            msgTxt = "Status: 1; No tables found"
+            self.tablesStatusStream.announce(
+                self.tablesStatusStream.format_sse(msgTxt)
             )
 
     def createDatabase(self):

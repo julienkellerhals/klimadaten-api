@@ -50,6 +50,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
+    @streamApi.route("/getTablesStatus")
+    def streamTablesStatus():
+        instance.getTablesStatus()
+        return Response(
+            instance.tablesStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
     @streamApi.route("/getDriverPathStatus")
     def streamDriverPathStatus():
         """ Stream driver path status

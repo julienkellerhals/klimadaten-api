@@ -36,7 +36,7 @@
             <div class="col s10">
                 <a href="/admin/tables" id="dbConnection" class="breadcrumb grey-text">Connect to database</a>
                 <a href="/admin/tables" id="dbCreate" class="breadcrumb grey-text">Create database</a>
-                <a href="/admin/tables" class="breadcrumb grey-text">Create tables</a>
+                <a href="/admin/tables" id="tbCreate"class="breadcrumb grey-text">Create tables</a>
             </div>
             <div class="col s2">
                 <a id="dbAction" class="waves-effect waves-light btn-small right">Action</a>
@@ -50,6 +50,8 @@
                     startEngine()
                 } else if (currentStatus == "dbConnection") {
                     createDb()
+                } else if (currentStatus == "dbCreate") {
+                    createTb()
                 }
             }
 
@@ -143,6 +145,54 @@
             }
             streamDatabaseStatus();
             setInterval(getDatabaseStatus, 10000);
+
+            function createTb() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/admin/db/table", true);
+                xhr.send()
+                getTablesStatus()
+            }
+
+            function streamTablesStatus() {
+                var tablesEventSource = new EventSource("/admin/stream/getTablesStatus");
+                var previousStatusCode = null
+                var previousMessage = null
+                tablesEventSource.onmessage = function (e) {
+                    var content = e.data;
+                    var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                    var message = content.split(";")[1]
+                    var tbCreate = document.getElementById("tbCreate")
+                    if (previousStatusCode != statusCode || previousMessage != message) {
+                        previousStatusCode = statusCode
+                        previousMessage = message
+                        if (statusCode == 0) {
+                            var tablesJson = JSON.parse(message) 
+                            tbCreate.classList.remove("text-lighten-5")
+                            tbCreate.classList.add("text-darken-1")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = "tbCreate"
+                            }
+                        } else if (statusCode == 1) {
+                            tbCreate.classList.remove("text-darken-1")
+                            tbCreate.classList.add("text-lighten-5")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbConnection") {
+                                currentStatus = "dbConnection"
+                            }
+                        }
+                    }
+                };
+            }
+            function getTablesStatus() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/admin/getTablesStatus", true);
+                xhr.send()
+            }
+            streamTablesStatus();
+            setInterval(getTablesStatus, 10000);
 
             document.getElementById("dbAction").addEventListener("click", execCurrentAction)
         </script>

@@ -51,6 +51,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
         abstractDriver.getDriverStatus()
         return ""
 
+    @adminApi.route("/getTablesStatus", methods=["POST"])
+    def getTablesStatus():
+        """ Runs function get database status
+        """
+
+        instance.getTablesStatus()
+        return ""
+
     @adminApi.route("/testFunc")
     def testFunc():
         # instance = db.Database()

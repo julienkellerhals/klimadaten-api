@@ -27,7 +27,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.createDatabase()
         return "Database created"
 
-    @dbApi.route("/table")
+    @dbApi.route("/table", methods=["GET", "POST"])
     def createTable():
         """ Create tables
 
