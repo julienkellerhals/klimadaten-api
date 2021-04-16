@@ -891,5 +891,8 @@ def scrapeIdawebOrders(driver):
         lastPageBool = getLastPageBool(driver, lastPageBool)
 
     orderDf = pd.DataFrame(data=orderDataList)
+    driver.find_element_by_xpath(
+        '//*[@id="body_block"]/form/div[5]/a[@title="First page"]'
+    ).click()
 
     return orderDf
