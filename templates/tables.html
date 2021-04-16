@@ -173,6 +173,9 @@
                         previousMessage = message
                         if (statusCode == 0) {
                             var tablesJson = JSON.parse(message)
+                            console.log(tablesJson)
+                            document.getElementById("stageTableGroup").innerHTML = String(tablesJson.stage)
+                            document.getElementById("coreTableGroup").innerHTML = String(tablesJson.core)
                             tbCreate.classList.remove("text-lighten-5")
                             tbCreate.classList.add("text-darken-1")
                             if (currentStatus == null) {
@@ -227,7 +230,7 @@
                     }
                     document.getElementById("execStageETL").addEventListener("click", runCoreETL)
                 </script>
-                <div class="tableGroup">
+                <div id="stageTableGroup">
                     stage table names come here
                 </div>
             </div>
@@ -244,7 +247,7 @@
                     }
                     document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
                 </script>
-                <div class="tableGroup">
+                <div id="coreTableGroup">
                     Core tables come here
                 </div>
             </div>
