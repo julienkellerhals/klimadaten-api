@@ -13,7 +13,7 @@ from dateutil.relativedelta import relativedelta
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-# from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException
 # from selenium.common.exceptions import NoSuchElementException
 import download
 
@@ -412,12 +412,12 @@ def _scrape_idaweb(driver, engine):
                     # order the data, move the hight period, redo order process
                     if not noEntriesBool:
                         idaWebDataInventory(driver)
-                        try:
-                            orderName = createOrderName(
-                                config,
-                                orderNumber,
-                                now
-                            )
+                        orderName = createOrderName(
+                            config,
+                            orderNumber,
+                            now
+                        )
+                        if not idaWebCheckOrder(driver):
                             idaWebOrder(driver, orderName)
                             orderNumber += 1
 
@@ -468,11 +468,8 @@ def _scrape_idaweb(driver, engine):
                             idaWebTimePreselection(driver, since, until)
 
                         # if selection has more than 2'000'000 values
-                        except:
-                            # accept alert
-                            # driver.switch_to.alert.accept()
-
-                            # make timeframe smaller
+                        else:
+                            # make heightframe smaller
                             heightDeltaList.remove(heightDeltaList[0])
                             idaWebStationPreselection(
                                 driver,
@@ -718,6 +715,22 @@ def idaWebDataInventoryManual(driver):
     ).click()
 
     print("Here")
+
+
+def idaWebCheckOrder(driver):
+    tooManyValuesBool = False
+    driver.find_element_by_xpath(
+        '//*[@id="wizard"]//*[contains(., "Order")]'
+    ).click()
+
+    try:
+        alert = driver.switch_to.alert
+        alert.accept()
+        tooManyValuesBool = True
+    except EC.NoAlertPresentException:
+        tooManyValuesBool = False
+
+    return tooManyValuesBool
 
 
 def idaWebOrder(driver, orderName):
