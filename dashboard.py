@@ -14,36 +14,24 @@ def create_dashapp(server):
     app.title='Dash App'
 
     # Set the layout
-    app.layout = layout = html.Div('Hello Dash app')
+    app.layout = html.Div([
+        html.Br(), ' This is the outermost div!', html.Br(),'-',
+        html.Div([
+            'This is an inner div!'],
+            style={
+                'color': 'red',
+                'border': '2px red solid'}),
+        html.Div([
+            'This is an inner div!'],
+            style={
+                'color': 'blue',
+                'border': '2px blue solid'})], 
+        style={
+            'textAlign': 'center', 
+            'color': 'green',
+            'border': '2px green solid'})
 
     # Register callbacks here if you want...
     
-    return app
-
-
-"""
-df = pd.read_excel("https://github.com/chris1610/pbpython/blob/master/data/salesfunnel.xlsx?raw=True")
-pv = pd.pivot_table(df, index=['Name'], columns=["Status"], values=['Quantity'], aggfunc=sum, fill_value=0)
-
-trace1 = go.Bar(x=pv.index, y=pv[('Quantity', 'declined')], name='Declined')
-trace2 = go.Bar(x=pv.index, y=pv[('Quantity', 'pending')], name='Pending')
-trace3 = go.Bar(x=pv.index, y=pv[('Quantity', 'presented')], name='Presented')
-trace4 = go.Bar(x=pv.index, y=pv[('Quantity', 'won')], name='Won')
-
-
-dashboard = dash.Dash(server=app, url_base_pathname="/dashboard") 
-
-dashboard.layout = html.Div(children=[
-    html.H1(children='Sales Funnel Report'),
-    html.Div(children='''National Sales Funnel Report.'''),
-    dcc.Graph(
-        id='example-graph',
-        figure={
-            'data': [trace1, trace2, trace3, trace4],
-            'layout':
-            go.Layout(title='Order Status by Customer', barmode='stack')
-        })
-])
-
-dashboard.run_server(debug=True)
-"""
+    return app.run_server(debug=True)
+    #return app.server

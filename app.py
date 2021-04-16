@@ -1,5 +1,7 @@
 from flask import Flask
+from flask import render_template
 import db
+import dashtest
 import dashboard
 from api import dbAPI
 from api import adminAPI
@@ -66,6 +68,7 @@ def api():
     return "API"
 
 
-@app.route('/dashboard')
-def dashapp():
-    dashboard.create_dashapp(app)
+@app.route("/dashappl")
+def dashappli():
+    return dashboard.create_dashapp(app)
+    # return dashtest.init_dashboard(app)
