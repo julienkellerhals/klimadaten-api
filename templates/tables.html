@@ -23,7 +23,7 @@
             <div class="col s10">
                 <a href="/admin/tables" id="dbConnection" class="breadcrumb grey-text">Connect to database</a>
                 <a href="/admin/tables" id="dbCreate" class="breadcrumb grey-text">Create database</a>
-                <a href="/admin/tables" id="tbCreate"class="breadcrumb grey-text">Create tables</a>
+                <a href="/admin/tables" id="tbCreate" class="breadcrumb grey-text">Create tables</a>
             </div>
             <div class="col s2">
                 <a id="dbAction" class="waves-effect waves-light btn-small right">Action</a>
@@ -34,16 +34,22 @@
 
             function execCurrentAction() {
                 if (currentStatus == null) {
+                    document.getElementById("dbAction").classList.add("disabled")
                     startEngine()
                 } else if (currentStatus == "dbConnection") {
+                    document.getElementById("dbAction").classList.add("disabled")
                     createDb()
                 } else if (currentStatus == "dbCreate") {
+                    document.getElementById("dbAction").classList.add("disabled")
                     createTb()
                 }
             }
 
             function startEngine() {
                 var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
                 xhr.open("POST", "/admin/db/connect", true);
                 xhr.send()
                 getEngineStatus()
@@ -56,9 +62,10 @@
                     var content = e.data
                     var statusCode = parseInt(content.split(";")[0].split(":")[1]);
                     var dbConnection = document.getElementById("dbConnection")
-                    if (previousStatusCode != statusCode) {
+                    if (previousStatusCode != statusCode || currentStatus == "null") {
                         previousStatusCode = statusCode
                         if (statusCode == 1) {
+                            document.getElementById("dbAction").classList.remove("disabled")
                             dbConnection.classList.remove("text-darken-1")
                             dbConnection.classList.add("text-lighten-5")
                             currentStatus = null
@@ -76,10 +83,13 @@
                 xhr.send()
             }
             streamEngineStatus();
-            setInterval(getEngineStatus, 10000);
-
+            setInterval(getEngineStatus, 2000);
+            
             function createDb() {
                 var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
                 xhr.open("POST", "/admin/db/create", true);
                 xhr.send()
                 getDatabaseStatus()
@@ -92,7 +102,7 @@
                     var content = e.data;
                     var statusCode = parseInt(content.split(";")[0].split(":")[1]);
                     var dbCreate = document.getElementById("dbCreate")
-                    if (previousStatusCode != statusCode) {
+                    if (previousStatusCode != statusCode || currentStatus == "dbConnection") {
                         previousStatusCode = statusCode
                         if (statusCode == 0) {
                             // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
@@ -105,21 +115,27 @@
                             }
                         } else if (statusCode == 1) {
                             // msgTxt = "Status: 1; Database not created; Error: " + str(e)
+                            document.getElementById("dbAction").classList.remove("disabled")
                             dbCreate.classList.remove("text-darken-1")
                             dbCreate.classList.add("text-lighten-5")
                             if (currentStatus == null) {
                                 currentStatus = null
                             } else if (currentStatus == "dbConnection") {
                                 currentStatus = "dbConnection"
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = null
                             }
                         } else if (statusCode == 2) {
                             // msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                            document.getElementById("dbAction").classList.remove("disabled")
                             dbCreate.classList.remove("text-darken-1")
                             dbCreate.classList.add("text-lighten-5")
                             if (currentStatus == null) {
                                 currentStatus = null
                             } else if (currentStatus == "dbConnection") {
                                 currentStatus = "dbConnection"
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = null
                             }
                         }
                     }
@@ -131,10 +147,13 @@
                 xhr.send()
             }
             streamDatabaseStatus();
-            setInterval(getDatabaseStatus, 10000);
+            setInterval(getDatabaseStatus, 2000);
 
             function createTb() {
                 var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
                 xhr.open("POST", "/admin/db/table", true);
                 xhr.send()
                 getTablesStatus()
@@ -149,11 +168,11 @@
                     var statusCode = parseInt(content.split(";")[0].split(":")[1]);
                     var message = content.split(";")[1]
                     var tbCreate = document.getElementById("tbCreate")
-                    if (previousStatusCode != statusCode || previousMessage != message) {
+                    if (previousStatusCode != statusCode || previousMessage != message || currentStatus == "dbCreate") {
                         previousStatusCode = statusCode
                         previousMessage = message
                         if (statusCode == 0) {
-                            var tablesJson = JSON.parse(message) 
+                            var tablesJson = JSON.parse(message)
                             tbCreate.classList.remove("text-lighten-5")
                             tbCreate.classList.add("text-darken-1")
                             if (currentStatus == null) {
@@ -162,12 +181,15 @@
                                 currentStatus = "tbCreate"
                             }
                         } else if (statusCode == 1) {
+                            document.getElementById("dbAction").classList.remove("disabled")
                             tbCreate.classList.remove("text-darken-1")
                             tbCreate.classList.add("text-lighten-5")
                             if (currentStatus == null) {
                                 currentStatus = null
                             } else if (currentStatus == "dbConnection") {
                                 currentStatus = "dbConnection"
+                            } else if (currentStatus == "tbCreate") {
+                                currentStatus = null
                             }
                         }
                     }
@@ -179,9 +201,14 @@
                 xhr.send()
             }
             streamTablesStatus();
-            setInterval(getTablesStatus, 10000);
+            setInterval(getTablesStatus, 2000);
 
             document.getElementById("dbAction").addEventListener("click", execCurrentAction)
+            setInterval(function () {
+                if (currentStatus == "tbCreate") {
+                    document.getElementById("dbAction").classList.add("disabled")
+                }
+            }, 2000);
         </script>
     </div>
 </nav>
