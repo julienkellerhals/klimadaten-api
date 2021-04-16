@@ -113,23 +113,30 @@ class Database:
 
     def _getTablesStatus(self):
         self.getEngine()
-        inspector = inspect(self.engine)
-        stageTables = inspector.get_table_names("stage")
-        coreTables = inspector.get_table_names("core")
-        if len(stageTables) > 0 or len(coreTables) > 0:
-            dbTables = {}
-            dbTables["stage"] = inspector.get_table_names("stage")
-            dbTables["core"] = inspector.get_table_names("core")
-
-            msgTxt = "Status: 0; " + json.dumps(dbTables)
+        try:
+            inspector = inspect(self.engine)
+        except sqlalchemy.exc.OperationalError:
+            msgTxt = "Status: 1; Database not found"
             self.tablesStatusStream.announce(
                 self.tablesStatusStream.format_sse(msgTxt)
             )
         else:
-            msgTxt = "Status: 1; No tables found"
-            self.tablesStatusStream.announce(
-                self.tablesStatusStream.format_sse(msgTxt)
-            )
+            stageTables = inspector.get_table_names("stage")
+            coreTables = inspector.get_table_names("core")
+            if len(stageTables) > 0 or len(coreTables) > 0:
+                dbTables = {}
+                dbTables["stage"] = inspector.get_table_names("stage")
+                dbTables["core"] = inspector.get_table_names("core")
+
+                msgTxt = "Status: 0; " + json.dumps(dbTables)
+                self.tablesStatusStream.announce(
+                    self.tablesStatusStream.format_sse(msgTxt)
+                )
+            else:
+                msgTxt = "Status: 1; No tables found"
+                self.tablesStatusStream.announce(
+                    self.tablesStatusStream.format_sse(msgTxt)
+                )
 
     def createDatabase(self):
         """ Creates database
