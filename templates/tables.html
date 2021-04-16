@@ -4,19 +4,6 @@
 {% block head %}
 {{ super() }}
 <style>
-    .hide {
-        display: none;
-    }
-
-    #tableContainer {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .schema {
-        flex-grow: 1;
-    }
-
     #stage {
         background: red;
     }
@@ -202,46 +189,36 @@
     <div class="row">
 
         <div class="col s6">
-            <div id="stage" class="schema">
+            <div id="stage">
                 <h1>Stage Schema</h1>
+                <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
+                <script>
+                    function runCoreETL() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", "/admin/db/etl/stage", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execStageETL").addEventListener("click", runCoreETL)
+                </script>
                 <div class="tableGroup">
-                    <div id="tableCreate">create tables</div>
-                    <script>
-                        function createTables() {
-                            var xhr = new XMLHttpRequest();
-                            xhr.open("POST", "/admin/db/table", true);
-                            xhr.send()
-                        }
-                        document.getElementById("tableCreate").addEventListener("click", createTables)
-                    </script>
-                    <div id="execCoreETL">Run stage to core etl</div>
-                    <script>
-                        function runCoreETL() {
-                            var xhr = new XMLHttpRequest();
-                            xhr.open("POST", "/admin/db/etl/core", true);
-                            xhr.send()
-                        }
-                        document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
-                    </script>
-                    <div id="execStageETL">Run stage etl</div>
-                    <script>
-                        function runCoreETL() {
-                            var xhr = new XMLHttpRequest();
-                            xhr.open("POST", "/admin/db/etl/stage", true);
-                            xhr.send()
-                        }
-                        document.getElementById("execStageETL").addEventListener("click", runCoreETL)
-                    </script>
+                    stage table names come here
                 </div>
             </div>
         </div>
         <div class="col s6">
-            <div id="core" class="schema">
+            <div id="core">
                 <h1>Core Schema</h1>
+                <a id="execCoreETL" class="waves-effect waves-light btn-small right">Core ETL</a>
+                <script>
+                    function runCoreETL() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", "/admin/db/etl/core", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
+                </script>
                 <div class="tableGroup">
-                    <script>
-
-                    </script>
+                    Core tables come here
                 </div>
             </div>
         </div>
