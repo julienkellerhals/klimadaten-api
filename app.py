@@ -1,16 +1,18 @@
+import dash_html_components as html
+from dash import Dash
 from flask import Flask
-from flask import render_template
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 import db
-import dashtest
-import dashboard
+import abstractDriver
+import messageAnnouncer
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
-import abstractDriver
-import messageAnnouncer
 
 app = Flask(__name__)
+dash_app = Dash(__name__, server=app, url_base_pathname='/dashboard/')
+dash_app.layout = html.Div([html.H1('Hi there, I am app1 for dashboards')])
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
@@ -68,7 +70,6 @@ def api():
     return "API"
 
 
-@app.route("/dashappl")
-def dashappli():
-    return dashboard.create_dashapp(app)
-    # return dashtest.init_dashboard(app)
+@app.route('/dashboard')
+def render_dashboard():
+    return Flask.redirect('/dash')
