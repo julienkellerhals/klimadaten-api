@@ -1,8 +1,6 @@
-import dash_html_components as html
-from dash import Dash
 from flask import Flask
-from werkzeug.middleware.dispatcher import DispatcherMiddleware
 import db
+import dashboard
 import abstractDriver
 import messageAnnouncer
 from api import dbAPI
@@ -10,14 +8,11 @@ from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
 
-app = Flask(__name__)
-dash_app = Dash(__name__, server=app, url_base_pathname='/dashboard/')
-dash_app.layout = html.Div([html.H1('Hi there, I am app1 for dashboards')])
-
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
 instance = db.Database(announcer)
 
+app = Flask(__name__)
 app.register_blueprint(adminAPI.constructBlueprint(
     announcer,
     instance,
@@ -46,6 +41,9 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
     ),
     url_prefix="/admin/scrape"
 )
+
+dashApp = dashboard.Dashboard(app, instance)
+dashApp.createDashboard()
 
 
 @app.route("/")
