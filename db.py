@@ -242,7 +242,6 @@ class Database:
                 print(dataFile.stem)
                 dataFileDf = pd.read_csv(dataFile, sep=";")
                 shortName = dataFileDf.columns[-1]
-                config = self.readConfig(shortName)
                 dataFileDf.rename(
                     columns={
                         "stn": "station",
