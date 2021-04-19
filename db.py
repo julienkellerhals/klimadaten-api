@@ -286,6 +286,7 @@ class Database:
                 on="meas_name",
                 how="outer"
             )
+            idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
             idaWebPartDf.to_sql(
                 'idaweb_t',
                 self.engine,
