@@ -34,11 +34,23 @@ class Database:
         self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
 
-    def readConfig(self, shortName):
-        tree = etree.parse("idawebConfig.xml")
+    def readConfig(self, configFileName):
+        """ Read config file
+
+        Args:
+            configFileName (str): config file name
+
+        Returns:
+            list: Configuration in config file
+        """
+
+        configList = []
+
+        tree = etree.parse(configFileName)
         root = tree.getroot()
-        config = root.xpath("//*[contains(text(), '{}')]".format(shortName))[0]
-        return config
+        for config in root:
+            configList.append(config)
+        return configList
 
     def getEngine(self):
         self.checkEngine()
@@ -219,65 +231,69 @@ class Database:
         self.idaWebStageETL()
 
     def idaWebStageETL(self):
-        idaWebDf = pd.DataFrame()
-        dataDir = Path.cwd() / "data"
-        dataFiles = dataDir.glob("**/*_data.txt")
-        for dataFile in dataFiles:
-            print(dataFile.stem)
-            dataFileDf = pd.read_csv(dataFile, sep=";")
-            shortName = dataFileDf.columns[-1]
-            config = self.readConfig(shortName)
-            dataFileDf.rename(
-                columns={
-                    "stn": "station",
-                    "time": "meas_date"
-                },
-                inplace=True
-            )
-            dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
-            dataFileDf["source"] = "IdaWeb"
-            dataFileDf["granularity"] = config.attrib['granularity']
-            if config.attrib['granularity'] == "M":
-                dataFileDf["meas_date"] = pd.to_datetime(
-                    dataFileDf["meas_date"].map(str) + "01",
-                    format="%Y%m%d"
+        configFileName = "idawebConfig.xml"
+        configList = self.readConfig(configFileName)
+        for config in configList:
+            idaWebPartDf = pd.DataFrame()
+            dataDir = Path.cwd() / "data"
+            dataFiles = dataDir.glob("**/*_{}_*_data.txt".format(config.text))
+            print(config.text)
+            for dataFile in dataFiles:
+                print(dataFile.stem)
+                dataFileDf = pd.read_csv(dataFile, sep=";")
+                shortName = dataFileDf.columns[-1]
+                config = self.readConfig(shortName)
+                dataFileDf.rename(
+                    columns={
+                        "stn": "station",
+                        "time": "meas_date"
+                    },
+                    inplace=True
                 )
-            elif config.attrib['granularity'] == "D":
-                dataFileDf["meas_date"] = pd.to_datetime(
-                    dataFileDf["meas_date"],
-                    format="%Y%m%d"
+                dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
+                dataFileDf["source"] = "IdaWeb"
+                dataFileDf["granularity"] = config.attrib['granularity']
+                if config.attrib['granularity'] == "M":
+                    dataFileDf["meas_date"] = pd.to_datetime(
+                        dataFileDf["meas_date"].map(str) + "01",
+                        format="%Y%m%d"
+                    )
+                elif config.attrib['granularity'] == "D":
+                    dataFileDf["meas_date"] = pd.to_datetime(
+                        dataFileDf["meas_date"],
+                        format="%Y%m%d"
+                    )
+                else:
+                    NotImplementedError()
+                dataFileDf = pd.melt(
+                    dataFileDf,
+                    id_vars=[
+                        "station",
+                        "valid_to",
+                        "meas_date",
+                        "granularity",
+                        "source"
+                    ],
+                    value_vars=[shortName],
+                    var_name="meas_name",
+                    value_name="meas_value"
                 )
-            else:
-                NotImplementedError()
-            dataFileDf = pd.melt(
-                dataFileDf,
-                id_vars=[
-                    "station",
-                    "valid_to",
-                    "meas_date",
-                    "granularity",
-                    "source"
-                ],
-                value_vars=[shortName],
-                var_name="meas_name",
-                value_name="meas_value"
+                idaWebPartDf = idaWebPartDf.append(dataFileDf)
+            validFromDf = idaWebPartDf.groupby(
+                ["meas_name"]
+            ).agg(valid_from=("meas_date", np.max))
+            idaWebPartDf = idaWebPartDf.merge(
+                validFromDf,
+                on="meas_name",
+                how="outer"
             )
-            idaWebDf = idaWebDf.append(dataFileDf)
-        validFromDf = idaWebDf.groupby(
-            ["meas_name"]
-        ).agg(valid_from=("meas_date", np.max))
-        idaWebDf = idaWebDf.merge(
-            validFromDf,
-            on="meas_name",
-            how="outer"
-        )
-        idaWebDf.to_sql(
-            'idaweb_t',
-            self.engine,
-            schema='stage',
-            if_exists='append',
-            index=False
-        )
+            idaWebPartDf.to_sql(
+                'idaweb_t',
+                self.engine,
+                schema='stage',
+                if_exists='append',
+                index=False
+            )
 
     def runCoreETL(self):
         self.meteoschweizCoreETL()
