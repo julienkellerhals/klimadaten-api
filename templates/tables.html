@@ -181,7 +181,7 @@
                                 headerDiv.classList.add("collapsible-header")
                                 var headerTitle = document.createTextNode(element.name)
                                 headerDiv.appendChild(headerTitle)
-                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow + "</span>")
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
 
                                 var bodyDiv = document.createElement("div")
                                 bodyDiv.classList.add("collapsible-body")
@@ -204,7 +204,7 @@
                                 headerDiv.classList.add("collapsible-header")
                                 var headerTitle = document.createTextNode(element.name)
                                 headerDiv.appendChild(headerTitle)
-                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow + "</span>")
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
 
                                 var bodyDiv = document.createElement("div")
                                 bodyDiv.classList.add("collapsible-body")
