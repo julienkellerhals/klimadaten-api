@@ -133,14 +133,72 @@ class Database:
                 self.tablesStatusStream.format_sse(msgTxt)
             )
         else:
+            self.conn = self.engine.connect()
+
             stageTables = inspector.get_table_names("stage")
             coreTables = inspector.get_table_names("core")
             if len(stageTables) > 0 or len(coreTables) > 0:
                 dbTables = {}
-                dbTables["stage"] = inspector.get_table_names("stage")
-                dbTables["core"] = inspector.get_table_names("core")
 
-                msgTxt = "Status: 0; " + json.dumps(dbTables)
+                dbTables["stage"] = []
+                for stageTable in stageTables:
+                    tableDict = {}
+
+                    tableDict["name"] = stageTable
+
+                    nrowQuery = \
+                        "SELECT count(*) FROM stage.{}".format(stageTable)
+                    tableDict["nrow"] = self.conn.execute(
+                        nrowQuery
+                    ).first()[0]
+
+                    if stageTable == "idaweb_t":
+                        lastRefreshQuery = \
+                            "SELECT max(valid_from) FROM stage.{}".format(
+                                stageTable
+                            )
+                    elif stageTable == "meteoschweiz_t":
+                        lastRefreshQuery = \
+                            "SELECT max(load_date) FROM stage.{}".format(
+                                stageTable
+                            )
+                    else:
+                        raise NotImplementedError
+                    tableDict["lastRefresh"] = self.conn.execute(
+                        lastRefreshQuery
+                    ).first()[0]
+
+                    tableDict["action"] = []
+                    if stageTable == "idaweb_t":
+                        tableDict["action"].append("Initial load")
+                    tableDict["action"].append("Run scrapping")
+                    dbTables["stage"].append(tableDict)
+
+                dbTables["core"] = []
+                for coreTable in coreTables:
+                    tableDict = {}
+
+                    tableDict["name"] = coreTable
+
+                    tableDict["nrow"] = self.conn.execute(
+                        "SELECT count(*) FROM core.{}".format(
+                            coreTable
+                        )
+                    ).first()[0]
+
+                    tableDict["lastRefresh"] = self.conn.execute(
+                        "SELECT max(valid_from) FROM core.{}".format(
+                            coreTable
+                        )
+                    ).first()[0]
+
+                    tableDict["action"] = []
+                    dbTables["core"].append(tableDict)
+
+                msgTxt = "Status: 0; " + json.dumps(
+                    dbTables,
+                    default=str
+                )
                 self.tablesStatusStream.announce(
                     self.tablesStatusStream.format_sse(msgTxt)
                 )

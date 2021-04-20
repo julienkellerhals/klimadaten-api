@@ -25,6 +25,9 @@
         </div>
         <script>
             var currentStatus = null
+            // var refreshInterval = 2000
+            // Change page refresh interval
+            var refreshInterval = 20000
 
             function execCurrentAction() {
                 if (currentStatus == null) {
@@ -77,7 +80,7 @@
                 xhr.send()
             }
             streamEngineStatus();
-            setInterval(getEngineStatus, 2000);
+            setInterval(getEngineStatus, refreshInterval);
 
             function createDb() {
                 var xhr = new XMLHttpRequest();
@@ -141,7 +144,7 @@
                 xhr.send()
             }
             streamDatabaseStatus();
-            setInterval(getDatabaseStatus, 2000);
+            setInterval(getDatabaseStatus, refreshInterval);
 
             function createTb() {
                 var xhr = new XMLHttpRequest();
@@ -167,20 +170,56 @@
                         previousMessage = message
                         if (statusCode == 0) {
                             var tablesJson = JSON.parse(message)
+
                             document.getElementById("stageTableGroup").innerHTML = ""
                             document.getElementById("coreTableGroup").innerHTML = ""
+
                             tablesJson.stage.forEach(element => {
-                                var a = document.createElement("a")
-                                a.classList.add("collection-item")
-                                a.innerHTML = element
-                                document.getElementById("stageTableGroup").appendChild(a)
+                                var li = document.createElement("li")
+
+                                var headerDiv = document.createElement("div")
+                                headerDiv.classList.add("collapsible-header")
+                                var headerTitle = document.createTextNode(element.name)
+                                headerDiv.appendChild(headerTitle)
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow + "</span>")
+
+                                var bodyDiv = document.createElement("div")
+                                bodyDiv.classList.add("collapsible-body")
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
+                                }
+                                element.action.forEach(action => {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                })
+
+                                li.appendChild(headerDiv)
+                                li.appendChild(bodyDiv)
+                                document.getElementById("stageTableGroup").appendChild(li)
                             });
+
                             tablesJson.core.forEach(element => {
-                                var a = document.createElement("a")
-                                a.classList.add("collection-item")
-                                a.innerHTML = element
-                                document.getElementById("coreTableGroup").appendChild(a)
+                                var li = document.createElement("li")
+
+                                var headerDiv = document.createElement("div")
+                                headerDiv.classList.add("collapsible-header")
+                                var headerTitle = document.createTextNode(element.name)
+                                headerDiv.appendChild(headerTitle)
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow + "</span>")
+
+                                var bodyDiv = document.createElement("div")
+                                bodyDiv.classList.add("collapsible-body")
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
+                                }
+                                element.action.forEach(action => {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                })
+
+                                li.appendChild(headerDiv)
+                                li.appendChild(bodyDiv)
+                                document.getElementById("coreTableGroup").appendChild(li)
                             });
+
                             tbCreate.classList.remove("text-lighten-5")
                             tbCreate.classList.add("text-darken-1")
                             if (currentStatus == null) {
@@ -209,27 +248,28 @@
                 xhr.send()
             }
             streamTablesStatus();
-            setInterval(getTablesStatus, 2000);
+            setInterval(getTablesStatus, refreshInterval);
 
             document.getElementById("dbAction").addEventListener("click", execCurrentAction)
             setInterval(function () {
                 if (currentStatus == "tbCreate") {
                     document.getElementById("dbAction").classList.add("disabled")
                 }
-            }, 2000);
+            }, refreshInterval);
         </script>
     </div>
 </nav>
 <div id="container">
     <div class="row">
 
-        <div class="col s6">
+        <div class="col s4">
             <div id="stage">
-                <h1>Stage Schema</h1>
-                <div id="stageTableGroup" class="collection">
-                </div>
+                <h1>Stage</h1>
+                <ul id="stageTableGroup" class="collapsible popout"></ul>
                 <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
                 <script>
+                    M.AutoInit();
+
                     function runStageETL() {
                         var stageDiv = document.getElementById("stage")
 
@@ -255,13 +295,14 @@
                 </script>
             </div>
         </div>
-        <div class="col s6">
+        <div class="col s4">
             <div id="core">
-                <h1>Core Schema</h1>
-                <div id="coreTableGroup" class="collection">
-                </div>
+                <h1>Core</h1>
+                <ul id="coreTableGroup" class="collapsible popout"></ul>
                 <a id="execCoreETL" class="waves-effect waves-light btn-small right">Core ETL</a>
                 <script>
+                    M.AutoInit();
+
                     function runCoreETL() {
                         var coreDiv = document.getElementById("core")
 
@@ -284,6 +325,37 @@
                         xhr.send()
                     }
                     document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
+                </script>
+            </div>
+        </div>
+        <div class="col s4">
+            <div id="datamart">
+                <h1>Datamart</h1>
+                <ul id="datamartTableGroup" class="collapsible popout"></ul>
+                <a id="execDatamartETL" class="waves-effect waves-light btn-small right">Datamart ETL</a>
+                <script>
+                    function runDatamartETL() {
+                        var datamartDiv = document.getElementById("datamart")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        datamartDiv.insertBefore(progress, datamartDiv.children[1])
+
+                        document.getElementById("execDatamartETL").classList.add("disabled")
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            datamartDiv.children[1].remove()
+                            document.getElementById("execDatamartETL").classList.remove("disabled")
+                        }
+                        xhr.open("POST", "/admin/db/etl/core", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execDatamartETL").addEventListener("click", runDatamartETL)
                 </script>
             </div>
         </div>
