@@ -355,6 +355,7 @@ class Database:
 
     def runCoreETL(self):
         self.meteoschweizCoreETL()
+        self.idawebCoreETL()
 
     def meteoschweizCoreETL(self):
         meteoschweizDf = pd.read_sql_table(
@@ -397,6 +398,21 @@ class Database:
             value_name="meas_value"
         )
         meteoschweizDf.to_sql(
+            'measurements_t',
+            self.engine,
+            schema='core',
+            if_exists='append',
+            index=False
+        )
+
+    def idawebCoreETL(self):
+        idawebDf = pd.read_sql_table(
+            "idaweb_t",
+            self.engine,
+            schema="stage"
+        )
+
+        idawebDf.to_sql(
             'measurements_t',
             self.engine,
             schema='core',
