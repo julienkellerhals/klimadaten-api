@@ -158,14 +158,11 @@
 
             function runScrapping(tableName) {
                 var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", url, true);
-                xhr.send()
+                stageReq(url)
             }
             function runInitialLoad() {
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "/admin/db/etl/stage", true);
-                xhr.send()
+                var url = "/admin/db/etl/stage"
+                stageReq(url)
             }
             function load(tableName) {
                 var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
@@ -302,48 +299,41 @@
                 <script>
                     M.AutoInit();
 
-                    function runStageETL() {
+                    function stageReq(url) {
                         var stageDiv = document.getElementById("stage")
-
+    
                         var progress = document.createElement("div")
                         progress.classList.add("progress")
                         var progressBar = document.createElement("div")
                         progressBar.classList.add("indeterminate")
                         progress.appendChild(progressBar)
-
+    
                         stageDiv.insertBefore(progress, stageDiv.children[1])
-
-                        document.getElementById("execStageETL").classList.add("disabled")
-
+    
+                        var anchorlist = stageDiv.getElementsByTagName("a")
+                        Array.from(anchorlist).forEach(anchor => {
+                            anchor.classList.add("disabled")
+                        })
+    
                         var xhr = new XMLHttpRequest();
                         xhr.onload = () => {
                             stageDiv.children[1].remove()
-                            document.getElementById("execStageETL").classList.remove("disabled")
+                            Array.from(anchorlist).forEach(anchor => {
+                                anchor.classList.remove("disabled")
+                            })
                         }
-                        xhr.open("POST", "/admin/db/etl/stage", true);
+                        xhr.open("POST", url, true);
                         xhr.send()
                     }
 
+                    function runStageETL() {
+                        var url = "/admin/db/etl/stage"
+                        stageReq(url)
+                    }
+
                     function runAllScrapping() {
-                        var stageDiv = document.getElementById("stage")
-
-                        var progress = document.createElement("div")
-                        progress.classList.add("progress")
-                        var progressBar = document.createElement("div")
-                        progressBar.classList.add("indeterminate")
-                        progress.appendChild(progressBar)
-
-                        stageDiv.insertBefore(progress, stageDiv.children[1])
-
-                        document.getElementById("execScrapping").classList.add("disabled")
-
-                        var xhr = new XMLHttpRequest();
-                        xhr.onload = () => {
-                            stageDiv.children[1].remove()
-                            document.getElementById("execScrapping").classList.remove("disabled")
-                        }
-                        xhr.open("POST", "/admin/scrape/", true);
-                        xhr.send()
+                        var url = "/admin/scrape/"
+                        stageReq(url)
                     }
                     document.getElementById("execScrapping").addEventListener("click", runAllScrapping)
                     document.getElementById("execStageETL").addEventListener("click", runStageETL)
