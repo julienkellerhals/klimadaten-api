@@ -266,6 +266,7 @@
             <div id="stage">
                 <h1>Stage</h1>
                 <ul id="stageTableGroup" class="collapsible popout"></ul>
+                <a id="execScrapping" class="waves-effect waves-light btn-small right">Run scrapping</a>
                 <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
                 <script>
                     M.AutoInit();
@@ -291,6 +292,29 @@
                         xhr.open("POST", "/admin/db/etl/stage", true);
                         xhr.send()
                     }
+
+                    function runScrapping() {
+                        var stageDiv = document.getElementById("stage")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        stageDiv.insertBefore(progress, stageDiv.children[1])
+
+                        document.getElementById("execScrapping").classList.add("disabled")
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            stageDiv.children[1].remove()
+                            document.getElementById("execScrapping").classList.remove("disabled")
+                        }
+                        xhr.open("POST", "/admin/scrape/", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execScrapping").addEventListener("click", runScrapping)
                     document.getElementById("execStageETL").addEventListener("click", runStageETL)
                 </script>
             </div>

@@ -4,6 +4,7 @@ import os
 import math
 import time
 import zipfile
+import threading
 import numpy as np
 import pandas as pd
 from lxml import etree
@@ -163,7 +164,19 @@ def getUntil(since, timeDeltaList):
 
 
 # main function
-def scrape_meteoschweiz(driver, engine, announcer):
+def scrape_meteoschweiz(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_meteoschweiz,
+        args=(driver, engine, announcer)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
     """ Scrape data from meteo suisse
 
     Args:
@@ -269,10 +282,22 @@ def scrape_meteoschweiz(driver, engine, announcer):
 
 
 # main function
-def scrape_idaweb(driver, engine):
+def scrape_idaweb(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_idaweb,
+        args=(driver, engine)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_idaweb(driver, engine):
     if not os.path.isdir("data"):
         os.mkdir("data")
-    savedDocuments = _scrape_idaweb(driver, engine)
+    savedDocuments = run_scrape_idaweb(driver, engine)
     savedDocumentsDf = pd.DataFrame(
         savedDocuments,
         columns=["reference"]
@@ -317,7 +342,7 @@ def scrape_idaweb(driver, engine):
         dataZip.extractall("data")
 
 
-def _scrape_idaweb(driver, engine):
+def run_scrape_idaweb(driver, engine):
     """ Scrape idaweb
 
     Args:

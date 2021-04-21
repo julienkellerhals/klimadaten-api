@@ -147,26 +147,28 @@ def constructBlueprint(announcer, instance, abstractDriver):
             stream: Meteosuisse stream
         """
 
-        driver = abstractDriver.getDriver()
-        engine = instance.getEngine()
-        x = threading.Thread(
-            target=webscraping.scrape_meteoschweiz,
-            args=(driver, engine, announcer)
+        meteoschweizAnnouncer = webscraping.scrape_meteoschweiz(
+            abstractDriver,
+            instance,
+            announcer
         )
-        x.start()
 
-        return Response(announcer.stream(), mimetype='text/event-stream')
+        return Response(
+            meteoschweizAnnouncer.stream(),
+            mimetype='text/event-stream'
+        )
 
     @streamApi.route("/idaweb")
     def streamIdaWeb():
-        driver = abstractDriver.getDriver()
-        engine = instance.getEngine()
-        x = threading.Thread(
-            target=webscraping.scrape_idaweb,
-            args=(driver, engine)
+        idawebAnnouncer = webscraping.scrape_meteoschweiz(
+            abstractDriver,
+            instance,
+            announcer
         )
-        x.start()
 
-        return Response(announcer.stream(), mimetype='text/event-stream')
+        return Response(
+            idawebAnnouncer.stream(),
+            mimetype='text/event-stream'
+        )
 
     return streamApi

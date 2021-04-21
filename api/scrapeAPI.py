@@ -1,9 +1,23 @@
 from flask import Blueprint
 from flask import render_template
+import webscraping
 
 
 def constructBlueprint(announcer, instance, abstractDriver):
     scrapeApi = Blueprint("scrapeApi", __name__)
+
+    @scrapeApi.route("/", methods=["GET", "POST"])
+    def scrape():
+        webscraping.scrape_meteoschweiz(
+            abstractDriver,
+            instance,
+            announcer
+        )
+        webscraping.scrape_idaweb(
+            abstractDriver,
+            instance,
+            announcer
+        )
 
     @scrapeApi.route("/meteoschweiz")
     def scrapeMeteoschweiz():
