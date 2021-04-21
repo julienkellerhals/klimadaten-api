@@ -53,4 +53,11 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.runCoreETL()
         return "Run Core ETL"
 
+    @dbApi.route("/etl/core/measurements", methods=["GET", "POST"])
+    def runMeasurementsETL():
+
+        instance.checkEngine()
+        instance.runMeasurementsETL()
+        return "Run Measurements ETL"
+
     return dbApi

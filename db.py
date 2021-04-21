@@ -192,7 +192,7 @@ class Database:
                         )
                     ).first()[0]
 
-                    tableDict["action"] = []
+                    tableDict["action"] = ["Load"]
                     dbTables["core"].append(tableDict)
 
                 msgTxt = "Status: 0; " + json.dumps(
@@ -354,6 +354,9 @@ class Database:
             )
 
     def runCoreETL(self):
+        self.runMeasurementsETL()
+
+    def runMeasurementsETL(self):
         self.meteoschweizCoreETL()
         self.idawebCoreETL()
 
