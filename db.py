@@ -400,6 +400,7 @@ class Database:
             var_name="meas_name",
             value_name="meas_value"
         )
+        # write to temp table
         meteoschweizDf.to_sql(
             'measurements_t',
             self.engine,
@@ -407,8 +408,15 @@ class Database:
             if_exists='append',
             index=False
         )
+        # via sql query write into meas
 
     def idawebCoreETL(self):
+        # via sql query write into meas
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        # INSERT INTO core.measurements_t 
+        # SELECT * FROM stage.idaweb_t
+        # ON CONFLICT DO NOTHING;
         idawebDf = pd.read_sql_table(
             "idaweb_t",
             self.engine,
