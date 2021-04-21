@@ -1,0 +1,590 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94004
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94004_APP_hns000mx_1_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201110-201111
+order_94004_APP_hns000mx_1_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201110-201111
+order_94004_APP_hns000mx_2_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201112-201211
+order_94004_APP_hns000mx_2_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201112-201211
+order_94004_APP_hns000mx_3_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201301-201309
+order_94004_APP_hns000mx_3_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201301-201309
+order_94004_APP_hns000mx_4_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201310-201502
+order_94004_APP_hns000mx_4_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201310-201502
+order_94004_APP_hns000mx_5_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201505-201511
+order_94004_APP_hns000mx_5_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201505-201511
+order_94004_APP_hns000mx_6_data.txt     Data      Appenzell                            Fresh snow; maximum daily total of the month                201512-202103
+order_94004_APP_hns000mx_6_legend.txt   Legend    Appenzell                            Fresh snow; maximum daily total of the month                201512-202103
+order_94004_BAM_hns000mx_1_data.txt     Data      Bauma                                Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BAM_hns000mx_1_legend.txt   Legend    Bauma                                Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BAM_hns000mx_2_data.txt     Data      Bauma                                Fresh snow; maximum daily total of the month                200902-200912
+order_94004_BAM_hns000mx_2_legend.txt   Legend    Bauma                                Fresh snow; maximum daily total of the month                200902-200912
+order_94004_BAM_hns000mx_3_data.txt     Data      Bauma                                Fresh snow; maximum daily total of the month                201001-201008
+order_94004_BAM_hns000mx_3_legend.txt   Legend    Bauma                                Fresh snow; maximum daily total of the month                201001-201008
+order_94004_BAM_hns000mx_4_data.txt     Data      Bauma                                Fresh snow; maximum daily total of the month                201009-201104
+order_94004_BAM_hns000mx_4_legend.txt   Legend    Bauma                                Fresh snow; maximum daily total of the month                201009-201104
+order_94004_BAM_hns000mx_5_data.txt     Data      Bauma                                Fresh snow; maximum daily total of the month                201110-202103
+order_94004_BAM_hns000mx_5_legend.txt   Legend    Bauma                                Fresh snow; maximum daily total of the month                201110-202103
+order_94004_BIE_hns000mx_1_data.txt     Data      Bière                                Fresh snow; maximum daily total of the month                201304-201406
+order_94004_BIE_hns000mx_1_legend.txt   Legend    Bière                                Fresh snow; maximum daily total of the month                201304-201406
+order_94004_BLU_hns000mx_1_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BLU_hns000mx_1_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BLU_hns000mx_2_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                200901-201005
+order_94004_BLU_hns000mx_2_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                200901-201005
+order_94004_BLU_hns000mx_3_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201006-201010
+order_94004_BLU_hns000mx_3_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201006-201010
+order_94004_BLU_hns000mx_4_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201011-201105
+order_94004_BLU_hns000mx_4_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201011-201105
+order_94004_BLU_hns000mx_5_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201110-201203
+order_94004_BLU_hns000mx_5_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201110-201203
+order_94004_BLU_hns000mx_6_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201206-201208
+order_94004_BLU_hns000mx_6_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201206-201208
+order_94004_BLU_hns000mx_7_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201210-201308
+order_94004_BLU_hns000mx_7_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201210-201308
+order_94004_BLU_hns000mx_8_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201309-201405
+order_94004_BLU_hns000mx_8_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201309-201405
+order_94004_BLU_hns000mx_9_data.txt     Data      Blumenstein                          Fresh snow; maximum daily total of the month                201407-201408
+order_94004_BLU_hns000mx_9_legend.txt   Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201407-201408
+order_94004_BLU_hns000mx_10_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201410-201505
+order_94004_BLU_hns000mx_10_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201410-201505
+order_94004_BLU_hns000mx_11_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201506-201508
+order_94004_BLU_hns000mx_11_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201506-201508
+order_94004_BLU_hns000mx_12_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201509-201510
+order_94004_BLU_hns000mx_12_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201509-201510
+order_94004_BLU_hns000mx_13_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201511-201603
+order_94004_BLU_hns000mx_13_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201511-201603
+order_94004_BLU_hns000mx_14_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201604-201606
+order_94004_BLU_hns000mx_14_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201604-201606
+order_94004_BLU_hns000mx_15_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201607-201608
+order_94004_BLU_hns000mx_15_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201607-201608
+order_94004_BLU_hns000mx_16_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201609-201611
+order_94004_BLU_hns000mx_16_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201609-201611
+order_94004_BLU_hns000mx_17_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201612-201703
+order_94004_BLU_hns000mx_17_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201612-201703
+order_94004_BLU_hns000mx_18_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201706-201709
+order_94004_BLU_hns000mx_18_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201706-201709
+order_94004_BLU_hns000mx_19_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201710-201711
+order_94004_BLU_hns000mx_19_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201710-201711
+order_94004_BLU_hns000mx_20_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201712-201803
+order_94004_BLU_hns000mx_20_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201712-201803
+order_94004_BLU_hns000mx_21_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201804-201806
+order_94004_BLU_hns000mx_21_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201804-201806
+order_94004_BLU_hns000mx_22_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201807-201808
+order_94004_BLU_hns000mx_22_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201807-201808
+order_94004_BLU_hns000mx_23_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201809-201903
+order_94004_BLU_hns000mx_23_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201809-201903
+order_94004_BLU_hns000mx_24_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201905-201906
+order_94004_BLU_hns000mx_24_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201905-201906
+order_94004_BLU_hns000mx_25_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201908-201911
+order_94004_BLU_hns000mx_25_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201908-201911
+order_94004_BLU_hns000mx_26_data.txt    Data      Blumenstein                          Fresh snow; maximum daily total of the month                201912-202103
+order_94004_BLU_hns000mx_26_legend.txt  Legend    Blumenstein                          Fresh snow; maximum daily total of the month                201912-202103
+order_94004_BOV_hns000mx_1_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201111-201205
+order_94004_BOV_hns000mx_1_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201111-201205
+order_94004_BOV_hns000mx_2_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201206-201207
+order_94004_BOV_hns000mx_2_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201206-201207
+order_94004_BOV_hns000mx_3_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201209-201308
+order_94004_BOV_hns000mx_3_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201209-201308
+order_94004_BOV_hns000mx_4_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201309-201312
+order_94004_BOV_hns000mx_4_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201309-201312
+order_94004_BOV_hns000mx_5_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201401-201405
+order_94004_BOV_hns000mx_5_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201401-201405
+order_94004_BOV_hns000mx_6_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201406-201506
+order_94004_BOV_hns000mx_6_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201406-201506
+order_94004_BOV_hns000mx_7_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201507-201704
+order_94004_BOV_hns000mx_7_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201507-201704
+order_94004_BOV_hns000mx_8_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201705-201711
+order_94004_BOV_hns000mx_8_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201705-201711
+order_94004_BOV_hns000mx_9_data.txt     Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201712-201806
+order_94004_BOV_hns000mx_9_legend.txt   Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201712-201806
+order_94004_BOV_hns000mx_10_data.txt    Data      Boudevilliers                        Fresh snow; maximum daily total of the month                201807-202103
+order_94004_BOV_hns000mx_10_legend.txt  Legend    Boudevilliers                        Fresh snow; maximum daily total of the month                201807-202103
+order_94004_BRI_hns000mx_1_data.txt     Data      Brig                                 Fresh snow; maximum daily total of the month                201110-201402
+order_94004_BRI_hns000mx_1_legend.txt   Legend    Brig                                 Fresh snow; maximum daily total of the month                201110-201402
+order_94004_BRO_hns000mx_1_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                200801-200804
+order_94004_BRO_hns000mx_1_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                200801-200804
+order_94004_BRO_hns000mx_2_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BRO_hns000mx_2_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                200810-200811
+order_94004_BRO_hns000mx_3_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201007-201008
+order_94004_BRO_hns000mx_3_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201007-201008
+order_94004_BRO_hns000mx_4_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201009-201012
+order_94004_BRO_hns000mx_4_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201009-201012
+order_94004_BRO_hns000mx_5_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201101-201105
+order_94004_BRO_hns000mx_5_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201101-201105
+order_94004_BRO_hns000mx_6_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201110-201204
+order_94004_BRO_hns000mx_6_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201110-201204
+order_94004_BRO_hns000mx_7_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201205-201209
+order_94004_BRO_hns000mx_7_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201205-201209
+order_94004_BRO_hns000mx_8_data.txt     Data      Broc                                 Fresh snow; maximum daily total of the month                201210-201311
+order_94004_BRO_hns000mx_8_legend.txt   Legend    Broc                                 Fresh snow; maximum daily total of the month                201210-201311
+order_94004_COY_hns000mx_1_data.txt     Data      Courtelary                           Fresh snow; maximum daily total of the month                201204-201205
+order_94004_COY_hns000mx_1_legend.txt   Legend    Courtelary                           Fresh snow; maximum daily total of the month                201204-201205
+order_94004_COY_hns000mx_2_data.txt     Data      Courtelary                           Fresh snow; maximum daily total of the month                201211-201301
+order_94004_COY_hns000mx_2_legend.txt   Legend    Courtelary                           Fresh snow; maximum daily total of the month                201211-201301
+order_94004_COY_hns000mx_3_data.txt     Data      Courtelary                           Fresh snow; maximum daily total of the month                201309-201310
+order_94004_COY_hns000mx_3_legend.txt   Legend    Courtelary                           Fresh snow; maximum daily total of the month                201309-201310
+order_94004_COY_hns000mx_4_data.txt     Data      Courtelary                           Fresh snow; maximum daily total of the month                201401-201402
+order_94004_COY_hns000mx_4_legend.txt   Legend    Courtelary                           Fresh snow; maximum daily total of the month                201401-201402
+order_94004_COY_hns000mx_5_data.txt     Data      Courtelary                           Fresh snow; maximum daily total of the month                201407-201408
+order_94004_COY_hns000mx_5_legend.txt   Legend    Courtelary                           Fresh snow; maximum daily total of the month                201407-201408
+order_94004_COU_hns000mx_1_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201503-201505
+order_94004_COU_hns000mx_1_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201503-201505
+order_94004_COU_hns000mx_2_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201508-201510
+order_94004_COU_hns000mx_2_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201508-201510
+order_94004_COU_hns000mx_3_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201511-201512
+order_94004_COU_hns000mx_3_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201511-201512
+order_94004_COU_hns000mx_4_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201603-201604
+order_94004_COU_hns000mx_4_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201603-201604
+order_94004_COU_hns000mx_5_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201605-201606
+order_94004_COU_hns000mx_5_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201605-201606
+order_94004_COU_hns000mx_6_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201607-201609
+order_94004_COU_hns000mx_6_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201607-201609
+order_94004_COU_hns000mx_7_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201610-201612
+order_94004_COU_hns000mx_7_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201610-201612
+order_94004_COU_hns000mx_8_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201701-201703
+order_94004_COU_hns000mx_8_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201701-201703
+order_94004_COU_hns000mx_9_data.txt     Data      Couvet                               Fresh snow; maximum daily total of the month                201704-201706
+order_94004_COU_hns000mx_9_legend.txt   Legend    Couvet                               Fresh snow; maximum daily total of the month                201704-201706
+order_94004_COU_hns000mx_10_data.txt    Data      Couvet                               Fresh snow; maximum daily total of the month                201711-201805
+order_94004_COU_hns000mx_10_legend.txt  Legend    Couvet                               Fresh snow; maximum daily total of the month                201711-201805
+order_94004_COU_hns000mx_11_data.txt    Data      Couvet                               Fresh snow; maximum daily total of the month                201808-201810
+order_94004_COU_hns000mx_11_legend.txt  Legend    Couvet                               Fresh snow; maximum daily total of the month                201808-201810
+order_94004_COU_hns000mx_12_data.txt    Data      Couvet                               Fresh snow; maximum daily total of the month                201811-202103
+order_94004_COU_hns000mx_12_legend.txt  Legend    Couvet                               Fresh snow; maximum daily total of the month                201811-202103
+order_94004_ERI_hns000mx_1_data.txt     Data      Eriswil                              Fresh snow; maximum daily total of the month                201110-202103
+order_94004_ERI_hns000mx_1_legend.txt   Legend    Eriswil                              Fresh snow; maximum daily total of the month                201110-202103
+order_94004_ERB_hns000mx_1_data.txt     Data      Erlenbach im Simmental               Fresh snow; maximum daily total of the month                201905-202103
+order_94004_ERB_hns000mx_1_legend.txt   Legend    Erlenbach im Simmental               Fresh snow; maximum daily total of the month                201905-202103
+order_94004_FEY_hns000mx_1_data.txt     Data      Fey                                  Fresh snow; maximum daily total of the month                195906-197912
+order_94004_FEY_hns000mx_1_legend.txt   Legend    Fey                                  Fresh snow; maximum daily total of the month                195906-197912
+order_94004_FEY_hns000mx_2_data.txt     Data      Fey                                  Fresh snow; maximum daily total of the month                198001-198012
+order_94004_FEY_hns000mx_2_legend.txt   Legend    Fey                                  Fresh snow; maximum daily total of the month                198001-198012
+order_94004_GRA_hns000mx_1_data.txt     Data      Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                196412-197012
+order_94004_GRA_hns000mx_1_legend.txt   Legend    Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                196412-197012
+order_94004_GRA_hns000mx_2_data.txt     Data      Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                197102-200511
+order_94004_GRA_hns000mx_2_legend.txt   Legend    Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                197102-200511
+order_94004_GRA_hns000mx_3_data.txt     Data      Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                200607-200909
+order_94004_GRA_hns000mx_3_legend.txt   Legend    Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                200607-200909
+order_94004_GRA_hns000mx_4_data.txt     Data      Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                200910-202103
+order_94004_GRA_hns000mx_4_legend.txt   Legend    Fribourg / Grangeneuve               Fresh snow; maximum daily total of the month                200910-202103
+order_94004_STF_hns000mx_1_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201102-201103
+order_94004_STF_hns000mx_1_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201102-201103
+order_94004_STF_hns000mx_2_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201110-201111
+order_94004_STF_hns000mx_2_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201110-201111
+order_94004_STF_hns000mx_3_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201112-201203
+order_94004_STF_hns000mx_3_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201112-201203
+order_94004_STF_hns000mx_4_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201204-201207
+order_94004_STF_hns000mx_4_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201204-201207
+order_94004_STF_hns000mx_5_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201301-201304
+order_94004_STF_hns000mx_5_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201301-201304
+order_94004_STF_hns000mx_6_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201305-201307
+order_94004_STF_hns000mx_6_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201305-201307
+order_94004_STF_hns000mx_7_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201311-201312
+order_94004_STF_hns000mx_7_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201311-201312
+order_94004_STF_hns000mx_8_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201406-201407
+order_94004_STF_hns000mx_8_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201406-201407
+order_94004_STF_hns000mx_9_data.txt     Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201412-201503
+order_94004_STF_hns000mx_9_legend.txt   Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201412-201503
+order_94004_STF_hns000mx_10_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201510-201511
+order_94004_STF_hns000mx_10_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201510-201511
+order_94004_STF_hns000mx_11_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201604-201606
+order_94004_STF_hns000mx_11_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201604-201606
+order_94004_STF_hns000mx_12_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201806-201807
+order_94004_STF_hns000mx_12_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201806-201807
+order_94004_STF_hns000mx_13_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201810-201811
+order_94004_STF_hns000mx_13_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201810-201811
+order_94004_STF_hns000mx_14_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201903-201905
+order_94004_STF_hns000mx_14_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201903-201905
+order_94004_STF_hns000mx_15_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201906-201907
+order_94004_STF_hns000mx_15_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                201906-201907
+order_94004_STF_hns000mx_16_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                202002-202003
+order_94004_STF_hns000mx_16_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                202002-202003
+order_94004_STF_hns000mx_17_data.txt    Data      Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                202004-202005
+order_94004_STF_hns000mx_17_legend.txt  Legend    Grossdietwil / Stampfi               Fresh snow; maximum daily total of the month                202004-202005
+order_94004_GUR_hns000mx_1_data.txt     Data      Gurtnellen                           Fresh snow; maximum daily total of the month                196512-197312
+order_94004_GUR_hns000mx_1_legend.txt   Legend    Gurtnellen                           Fresh snow; maximum daily total of the month                196512-197312
+order_94004_HES_hns000mx_1_data.txt     Data      Herisau                              Fresh snow; maximum daily total of the month                201206-201207
+order_94004_HES_hns000mx_1_legend.txt   Legend    Herisau                              Fresh snow; maximum daily total of the month                201206-201207
+order_94004_HES_hns000mx_2_data.txt     Data      Herisau                              Fresh snow; maximum daily total of the month                201301-201606
+order_94004_HES_hns000mx_2_legend.txt   Legend    Herisau                              Fresh snow; maximum daily total of the month                201301-201606
+order_94004_HES_hns000mx_3_data.txt     Data      Herisau                              Fresh snow; maximum daily total of the month                201607-202103
+order_94004_HES_hns000mx_3_legend.txt   Legend    Herisau                              Fresh snow; maximum daily total of the month                201607-202103
+order_94004_ILZ_hns000mx_1_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                200812-201008
+order_94004_ILZ_hns000mx_1_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                200812-201008
+order_94004_ILZ_hns000mx_2_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                201010-201105
+order_94004_ILZ_hns000mx_2_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                201010-201105
+order_94004_ILZ_hns000mx_3_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                201206-201207
+order_94004_ILZ_hns000mx_3_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                201206-201207
+order_94004_ILZ_hns000mx_4_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                201309-201402
+order_94004_ILZ_hns000mx_4_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                201309-201402
+order_94004_ILZ_hns000mx_5_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                201501-201502
+order_94004_ILZ_hns000mx_5_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                201501-201502
+order_94004_ILZ_hns000mx_6_data.txt     Data      Ilanz                                Fresh snow; maximum daily total of the month                201508-202103
+order_94004_ILZ_hns000mx_6_legend.txt   Legend    Ilanz                                Fresh snow; maximum daily total of the month                201508-202103
+order_94004_KIB_hns000mx_1_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                200901-201102
+order_94004_KIB_hns000mx_1_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                200901-201102
+order_94004_KIB_hns000mx_2_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                201502-201504
+order_94004_KIB_hns000mx_2_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                201502-201504
+order_94004_KIB_hns000mx_3_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                201602-201603
+order_94004_KIB_hns000mx_3_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                201602-201603
+order_94004_KIB_hns000mx_4_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                201604-201605
+order_94004_KIB_hns000mx_4_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                201604-201605
+order_94004_KIB_hns000mx_5_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                201709-201710
+order_94004_KIB_hns000mx_5_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                201709-201710
+order_94004_KIB_hns000mx_6_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                201902-201904
+order_94004_KIB_hns000mx_6_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                201902-201904
+order_94004_KIB_hns000mx_7_data.txt     Data      Kirchberg, SG                        Fresh snow; maximum daily total of the month                202006-202103
+order_94004_KIB_hns000mx_7_legend.txt   Legend    Kirchberg, SG                        Fresh snow; maximum daily total of the month                202006-202103
+order_94004_LAB_hns000mx_1_data.txt     Data      Langenbruck                          Fresh snow; maximum daily total of the month                195812-198706
+order_94004_LAB_hns000mx_1_legend.txt   Legend    Langenbruck                          Fresh snow; maximum daily total of the month                195812-198706
+order_94004_LAG_hns000mx_1_data.txt     Data      Langnau i.E.                         Fresh snow; maximum daily total of the month                193012-202103
+order_94004_LAG_hns000mx_1_legend.txt   Legend    Langnau i.E.                         Fresh snow; maximum daily total of the month                193012-202103
+order_94004_LUN_hns000mx_1_data.txt     Data      Lungern                              Fresh snow; maximum daily total of the month                200902-201006
+order_94004_LUN_hns000mx_1_legend.txt   Legend    Lungern                              Fresh snow; maximum daily total of the month                200902-201006
+order_94004_LUN_hns000mx_2_data.txt     Data      Lungern                              Fresh snow; maximum daily total of the month                201007-201105
+order_94004_LUN_hns000mx_2_legend.txt   Legend    Lungern                              Fresh snow; maximum daily total of the month                201007-201105
+order_94004_LUN_hns000mx_3_data.txt     Data      Lungern                              Fresh snow; maximum daily total of the month                201110-201704
+order_94004_LUN_hns000mx_3_legend.txt   Legend    Lungern                              Fresh snow; maximum daily total of the month                201110-201704
+order_94004_LUN_hns000mx_4_data.txt     Data      Lungern                              Fresh snow; maximum daily total of the month                201705-202103
+order_94004_LUN_hns000mx_4_legend.txt   Legend    Lungern                              Fresh snow; maximum daily total of the month                201705-202103
+order_94004_MAD_hns000mx_1_data.txt     Data      Madiswil                             Fresh snow; maximum daily total of the month                201201-201209
+order_94004_MAD_hns000mx_1_legend.txt   Legend    Madiswil                             Fresh snow; maximum daily total of the month                201201-201209
+order_94004_MAD_hns000mx_2_data.txt     Data      Madiswil                             Fresh snow; maximum daily total of the month                201210-201211
+order_94004_MAD_hns000mx_2_legend.txt   Legend    Madiswil                             Fresh snow; maximum daily total of the month                201210-201211
+order_94004_MAS_hns000mx_1_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                195812-196901
+order_94004_MAS_hns000mx_1_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                195812-196901
+order_94004_MAS_hns000mx_2_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197002-197003
+order_94004_MAS_hns000mx_2_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197002-197003
+order_94004_MAS_hns000mx_3_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197212-197301
+order_94004_MAS_hns000mx_3_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197212-197301
+order_94004_MAS_hns000mx_4_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197311-197312
+order_94004_MAS_hns000mx_4_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197311-197312
+order_94004_MAS_hns000mx_5_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197402-197403
+order_94004_MAS_hns000mx_5_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197402-197403
+order_94004_MAS_hns000mx_6_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197412-197501
+order_94004_MAS_hns000mx_6_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197412-197501
+order_94004_MAS_hns000mx_7_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197510-197603
+order_94004_MAS_hns000mx_7_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197510-197603
+order_94004_MAS_hns000mx_8_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197610-197704
+order_94004_MAS_hns000mx_8_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197610-197704
+order_94004_MAS_hns000mx_9_data.txt     Data      Marsens                              Fresh snow; maximum daily total of the month                197711-197803
+order_94004_MAS_hns000mx_9_legend.txt   Legend    Marsens                              Fresh snow; maximum daily total of the month                197711-197803
+order_94004_MAS_hns000mx_10_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                197810-197905
+order_94004_MAS_hns000mx_10_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                197810-197905
+order_94004_MAS_hns000mx_11_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                197911-198004
+order_94004_MAS_hns000mx_11_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                197911-198004
+order_94004_MAS_hns000mx_12_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                198010-200812
+order_94004_MAS_hns000mx_12_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                198010-200812
+order_94004_MAS_hns000mx_13_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                200905-201105
+order_94004_MAS_hns000mx_13_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                200905-201105
+order_94004_MAS_hns000mx_14_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                201112-201211
+order_94004_MAS_hns000mx_14_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                201112-201211
+order_94004_MAS_hns000mx_15_data.txt    Data      Marsens                              Fresh snow; maximum daily total of the month                201212-202103
+order_94004_MAS_hns000mx_15_legend.txt  Legend    Marsens                              Fresh snow; maximum daily total of the month                201212-202103
+order_94004_MTO_hns000mx_1_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                200907-201006
+order_94004_MTO_hns000mx_1_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                200907-201006
+order_94004_MTO_hns000mx_2_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201007-201105
+order_94004_MTO_hns000mx_2_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201007-201105
+order_94004_MTO_hns000mx_3_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201110-201111
+order_94004_MTO_hns000mx_3_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201110-201111
+order_94004_MTO_hns000mx_4_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201112-201202
+order_94004_MTO_hns000mx_4_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201112-201202
+order_94004_MTO_hns000mx_5_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201301-201302
+order_94004_MTO_hns000mx_5_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201301-201302
+order_94004_MTO_hns000mx_6_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201405-201408
+order_94004_MTO_hns000mx_6_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201405-201408
+order_94004_MTO_hns000mx_7_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201410-201411
+order_94004_MTO_hns000mx_7_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201410-201411
+order_94004_MTO_hns000mx_8_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201412-201502
+order_94004_MTO_hns000mx_8_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201412-201502
+order_94004_MTO_hns000mx_9_data.txt     Data      Montenol                             Fresh snow; maximum daily total of the month                201511-201603
+order_94004_MTO_hns000mx_9_legend.txt   Legend    Montenol                             Fresh snow; maximum daily total of the month                201511-201603
+order_94004_MTO_hns000mx_10_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201605-201606
+order_94004_MTO_hns000mx_10_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201605-201606
+order_94004_MTO_hns000mx_11_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201609-201610
+order_94004_MTO_hns000mx_11_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201609-201610
+order_94004_MTO_hns000mx_12_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201711-201712
+order_94004_MTO_hns000mx_12_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201711-201712
+order_94004_MTO_hns000mx_13_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201804-201805
+order_94004_MTO_hns000mx_13_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201804-201805
+order_94004_MTO_hns000mx_14_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201812-201901
+order_94004_MTO_hns000mx_14_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201812-201901
+order_94004_MTO_hns000mx_15_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201903-201904
+order_94004_MTO_hns000mx_15_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201903-201904
+order_94004_MTO_hns000mx_16_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                201911-201912
+order_94004_MTO_hns000mx_16_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                201911-201912
+order_94004_MTO_hns000mx_17_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                202001-202002
+order_94004_MTO_hns000mx_17_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                202001-202002
+order_94004_MTO_hns000mx_18_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                202005-202006
+order_94004_MTO_hns000mx_18_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                202005-202006
+order_94004_MTO_hns000mx_19_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                202007-202010
+order_94004_MTO_hns000mx_19_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                202007-202010
+order_94004_MTO_hns000mx_20_data.txt    Data      Montenol                             Fresh snow; maximum daily total of the month                202011-202101
+order_94004_MTO_hns000mx_20_legend.txt  Legend    Montenol                             Fresh snow; maximum daily total of the month                202011-202101
+order_94004_OBD_hns000mx_1_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201011-201012
+order_94004_OBD_hns000mx_1_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201011-201012
+order_94004_OBD_hns000mx_2_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201101-201105
+order_94004_OBD_hns000mx_2_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201101-201105
+order_94004_OBD_hns000mx_3_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201201-201202
+order_94004_OBD_hns000mx_3_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201201-201202
+order_94004_OBD_hns000mx_4_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201211-201212
+order_94004_OBD_hns000mx_4_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201211-201212
+order_94004_OBD_hns000mx_5_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201302-201304
+order_94004_OBD_hns000mx_5_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201302-201304
+order_94004_OBD_hns000mx_6_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201306-201307
+order_94004_OBD_hns000mx_6_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201306-201307
+order_94004_OBD_hns000mx_7_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201311-201312
+order_94004_OBD_hns000mx_7_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201311-201312
+order_94004_OBD_hns000mx_8_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201402-201403
+order_94004_OBD_hns000mx_8_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201402-201403
+order_94004_OBD_hns000mx_9_data.txt     Data      Obstalden                            Fresh snow; maximum daily total of the month                201501-201504
+order_94004_OBD_hns000mx_9_legend.txt   Legend    Obstalden                            Fresh snow; maximum daily total of the month                201501-201504
+order_94004_OBD_hns000mx_10_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201601-201605
+order_94004_OBD_hns000mx_10_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201601-201605
+order_94004_OBD_hns000mx_11_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201612-201701
+order_94004_OBD_hns000mx_11_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201612-201701
+order_94004_OBD_hns000mx_12_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201703-201704
+order_94004_OBD_hns000mx_12_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201703-201704
+order_94004_OBD_hns000mx_13_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201712-201801
+order_94004_OBD_hns000mx_13_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201712-201801
+order_94004_OBD_hns000mx_14_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201806-201808
+order_94004_OBD_hns000mx_14_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201806-201808
+order_94004_OBD_hns000mx_15_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201810-201811
+order_94004_OBD_hns000mx_15_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201810-201811
+order_94004_OBD_hns000mx_16_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201812-201904
+order_94004_OBD_hns000mx_16_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201812-201904
+order_94004_OBD_hns000mx_17_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                201906-201909
+order_94004_OBD_hns000mx_17_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                201906-201909
+order_94004_OBD_hns000mx_18_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                202002-202005
+order_94004_OBD_hns000mx_18_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                202002-202005
+order_94004_OBD_hns000mx_19_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                202006-202008
+order_94004_OBD_hns000mx_19_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                202006-202008
+order_94004_OBD_hns000mx_20_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                202010-202011
+order_94004_OBD_hns000mx_20_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                202010-202011
+order_94004_OBD_hns000mx_21_data.txt    Data      Obstalden                            Fresh snow; maximum daily total of the month                202012-202103
+order_94004_OBD_hns000mx_21_legend.txt  Legend    Obstalden                            Fresh snow; maximum daily total of the month                202012-202103
+order_94004_LOB_hns000mx_1_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201011-201012
+order_94004_LOB_hns000mx_1_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201011-201012
+order_94004_LOB_hns000mx_2_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201101-201105
+order_94004_LOB_hns000mx_2_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201101-201105
+order_94004_LOB_hns000mx_3_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201204-201205
+order_94004_LOB_hns000mx_3_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201204-201205
+order_94004_LOB_hns000mx_4_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201206-201207
+order_94004_LOB_hns000mx_4_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201206-201207
+order_94004_LOB_hns000mx_5_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201210-201211
+order_94004_LOB_hns000mx_5_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201210-201211
+order_94004_LOB_hns000mx_6_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201212-201304
+order_94004_LOB_hns000mx_6_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201212-201304
+order_94004_LOB_hns000mx_7_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201305-201306
+order_94004_LOB_hns000mx_7_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201305-201306
+order_94004_LOB_hns000mx_8_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201406-201407
+order_94004_LOB_hns000mx_8_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201406-201407
+order_94004_LOB_hns000mx_9_data.txt     Data      Pleigne                              Fresh snow; maximum daily total of the month                201506-201507
+order_94004_LOB_hns000mx_9_legend.txt   Legend    Pleigne                              Fresh snow; maximum daily total of the month                201506-201507
+order_94004_LOB_hns000mx_10_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201510-201511
+order_94004_LOB_hns000mx_10_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201510-201511
+order_94004_LOB_hns000mx_11_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201604-201605
+order_94004_LOB_hns000mx_11_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201604-201605
+order_94004_LOB_hns000mx_12_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201608-201609
+order_94004_LOB_hns000mx_12_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201608-201609
+order_94004_LOB_hns000mx_13_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201612-201701
+order_94004_LOB_hns000mx_13_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201612-201701
+order_94004_LOB_hns000mx_14_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201703-201704
+order_94004_LOB_hns000mx_14_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201703-201704
+order_94004_LOB_hns000mx_15_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201707-201708
+order_94004_LOB_hns000mx_15_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201707-201708
+order_94004_LOB_hns000mx_16_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201710-201711
+order_94004_LOB_hns000mx_16_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201710-201711
+order_94004_LOB_hns000mx_17_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201806-201810
+order_94004_LOB_hns000mx_17_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201806-201810
+order_94004_LOB_hns000mx_18_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201811-201812
+order_94004_LOB_hns000mx_18_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201811-201812
+order_94004_LOB_hns000mx_19_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                201901-202012
+order_94004_LOB_hns000mx_19_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                201901-202012
+order_94004_LOB_hns000mx_20_data.txt    Data      Pleigne                              Fresh snow; maximum daily total of the month                202101-202103
+order_94004_LOB_hns000mx_20_legend.txt  Legend    Pleigne                              Fresh snow; maximum daily total of the month                202101-202103
+order_94004_ROM_hns000mx_1_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                200801-200803
+order_94004_ROM_hns000mx_1_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                200801-200803
+order_94004_ROM_hns000mx_2_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201001-201009
+order_94004_ROM_hns000mx_2_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201001-201009
+order_94004_ROM_hns000mx_3_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201010-201011
+order_94004_ROM_hns000mx_3_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201010-201011
+order_94004_ROM_hns000mx_4_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201012-201101
+order_94004_ROM_hns000mx_4_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201012-201101
+order_94004_ROM_hns000mx_5_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201308-201504
+order_94004_ROM_hns000mx_5_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201308-201504
+order_94004_ROM_hns000mx_6_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201505-201506
+order_94004_ROM_hns000mx_6_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201505-201506
+order_94004_ROM_hns000mx_7_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201507-201512
+order_94004_ROM_hns000mx_7_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201507-201512
+order_94004_ROM_hns000mx_8_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201601-201603
+order_94004_ROM_hns000mx_8_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201601-201603
+order_94004_ROM_hns000mx_9_data.txt     Data      Romont                               Fresh snow; maximum daily total of the month                201604-201609
+order_94004_ROM_hns000mx_9_legend.txt   Legend    Romont                               Fresh snow; maximum daily total of the month                201604-201609
+order_94004_ROM_hns000mx_10_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201610-201702
+order_94004_ROM_hns000mx_10_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201610-201702
+order_94004_ROM_hns000mx_11_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201707-201708
+order_94004_ROM_hns000mx_11_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201707-201708
+order_94004_ROM_hns000mx_12_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201709-201710
+order_94004_ROM_hns000mx_12_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201709-201710
+order_94004_ROM_hns000mx_13_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201711-201803
+order_94004_ROM_hns000mx_13_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201711-201803
+order_94004_ROM_hns000mx_14_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201804-201805
+order_94004_ROM_hns000mx_14_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201804-201805
+order_94004_ROM_hns000mx_15_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201807-201809
+order_94004_ROM_hns000mx_15_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201807-201809
+order_94004_ROM_hns000mx_16_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201810-201811
+order_94004_ROM_hns000mx_16_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201810-201811
+order_94004_ROM_hns000mx_17_data.txt    Data      Romont                               Fresh snow; maximum daily total of the month                201812-201903
+order_94004_ROM_hns000mx_17_legend.txt  Legend    Romont                               Fresh snow; maximum daily total of the month                201812-201903
+order_94004_HAI_hns000mx_1_data.txt     Data      Salen-Reutenen                       Fresh snow; maximum daily total of the month                196312-201204
+order_94004_HAI_hns000mx_1_legend.txt   Legend    Salen-Reutenen                       Fresh snow; maximum daily total of the month                196312-201204
+order_94004_SDB_hns000mx_1_data.txt     Data      Signal-de-Bougy                      Fresh snow; maximum daily total of the month                197112-198012
+order_94004_SDB_hns000mx_1_legend.txt   Legend    Signal-de-Bougy                      Fresh snow; maximum daily total of the month                197112-198012
+order_94004_SPZ_hns000mx_1_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201008-201009
+order_94004_SPZ_hns000mx_1_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201008-201009
+order_94004_SPZ_hns000mx_2_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201208-201209
+order_94004_SPZ_hns000mx_2_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201208-201209
+order_94004_SPZ_hns000mx_3_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201210-201304
+order_94004_SPZ_hns000mx_3_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201210-201304
+order_94004_SPZ_hns000mx_4_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201305-201309
+order_94004_SPZ_hns000mx_4_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201305-201309
+order_94004_SPZ_hns000mx_5_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201310-201404
+order_94004_SPZ_hns000mx_5_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201310-201404
+order_94004_SPZ_hns000mx_6_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201405-201406
+order_94004_SPZ_hns000mx_6_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201405-201406
+order_94004_SPZ_hns000mx_7_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201407-201408
+order_94004_SPZ_hns000mx_7_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201407-201408
+order_94004_SPZ_hns000mx_8_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201410-201412
+order_94004_SPZ_hns000mx_8_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201410-201412
+order_94004_SPZ_hns000mx_9_data.txt     Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201501-201502
+order_94004_SPZ_hns000mx_9_legend.txt   Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201501-201502
+order_94004_SPZ_hns000mx_10_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201505-201506
+order_94004_SPZ_hns000mx_10_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201505-201506
+order_94004_SPZ_hns000mx_11_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201508-201509
+order_94004_SPZ_hns000mx_11_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201508-201509
+order_94004_SPZ_hns000mx_12_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201510-201602
+order_94004_SPZ_hns000mx_12_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201510-201602
+order_94004_SPZ_hns000mx_13_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201604-201608
+order_94004_SPZ_hns000mx_13_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201604-201608
+order_94004_SPZ_hns000mx_14_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201703-201704
+order_94004_SPZ_hns000mx_14_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201703-201704
+order_94004_SPZ_hns000mx_15_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201706-201707
+order_94004_SPZ_hns000mx_15_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201706-201707
+order_94004_SPZ_hns000mx_16_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201710-201711
+order_94004_SPZ_hns000mx_16_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201710-201711
+order_94004_SPZ_hns000mx_17_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201712-201804
+order_94004_SPZ_hns000mx_17_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201712-201804
+order_94004_SPZ_hns000mx_18_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201805-201807
+order_94004_SPZ_hns000mx_18_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201805-201807
+order_94004_SPZ_hns000mx_19_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201811-201812
+order_94004_SPZ_hns000mx_19_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201811-201812
+order_94004_SPZ_hns000mx_20_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201902-201903
+order_94004_SPZ_hns000mx_20_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201902-201903
+order_94004_SPZ_hns000mx_21_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201904-201907
+order_94004_SPZ_hns000mx_21_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201904-201907
+order_94004_SPZ_hns000mx_22_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                201908-201909
+order_94004_SPZ_hns000mx_22_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                201908-201909
+order_94004_SPZ_hns000mx_23_data.txt    Data      St. Peterzell                        Fresh snow; maximum daily total of the month                202001-202103
+order_94004_SPZ_hns000mx_23_legend.txt  Legend    St. Peterzell                        Fresh snow; maximum daily total of the month                202001-202103
+order_94004_AST_hns000mx_1_data.txt     Data      Stalden / Ackersand                  Fresh snow; maximum daily total of the month                200901-200909
+order_94004_AST_hns000mx_1_legend.txt   Legend    Stalden / Ackersand                  Fresh snow; maximum daily total of the month                200901-200909
+order_94004_AST_hns000mx_2_data.txt     Data      Stalden / Ackersand                  Fresh snow; maximum daily total of the month                201112-201201
+order_94004_AST_hns000mx_2_legend.txt   Legend    Stalden / Ackersand                  Fresh snow; maximum daily total of the month                201112-201201
+order_94004_AST_hns000mx_3_data.txt     Data      Stalden / Ackersand                  Fresh snow; maximum daily total of the month                201206-201207
+order_94004_AST_hns000mx_3_legend.txt   Legend    Stalden / Ackersand                  Fresh snow; maximum daily total of the month                201206-201207
+order_94004_TAF_hns000mx_1_data.txt     Data      Tafers                               Fresh snow; maximum daily total of the month                201303-201507
+order_94004_TAF_hns000mx_1_legend.txt   Legend    Tafers                               Fresh snow; maximum daily total of the month                201303-201507
+order_94004_TAF_hns000mx_2_data.txt     Data      Tafers                               Fresh snow; maximum daily total of the month                201508-201611
+order_94004_TAF_hns000mx_2_legend.txt   Legend    Tafers                               Fresh snow; maximum daily total of the month                201508-201611
+order_94004_TAF_hns000mx_3_data.txt     Data      Tafers                               Fresh snow; maximum daily total of the month                201612-201708
+order_94004_TAF_hns000mx_3_legend.txt   Legend    Tafers                               Fresh snow; maximum daily total of the month                201612-201708
+order_94004_TAF_hns000mx_4_data.txt     Data      Tafers                               Fresh snow; maximum daily total of the month                201709-201809
+order_94004_TAF_hns000mx_4_legend.txt   Legend    Tafers                               Fresh snow; maximum daily total of the month                201709-201809
+order_94004_TAF_hns000mx_5_data.txt     Data      Tafers                               Fresh snow; maximum daily total of the month                201810-202103
+order_94004_TAF_hns000mx_5_legend.txt   Legend    Tafers                               Fresh snow; maximum daily total of the month                201810-202103
+order_94004_TAM_hns000mx_1_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                200812-200909
+order_94004_TAM_hns000mx_1_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                200812-200909
+order_94004_TAM_hns000mx_2_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                200910-201105
+order_94004_TAM_hns000mx_2_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                200910-201105
+order_94004_TAM_hns000mx_3_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                201804-201805
+order_94004_TAM_hns000mx_3_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                201804-201805
+order_94004_TAM_hns000mx_4_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                202002-202003
+order_94004_TAM_hns000mx_4_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                202002-202003
+order_94004_TAM_hns000mx_5_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                202010-202012
+order_94004_TAM_hns000mx_5_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                202010-202012
+order_94004_TAM_hns000mx_6_data.txt     Data      Tamins                               Fresh snow; maximum daily total of the month                202101-202103
+order_94004_TAM_hns000mx_6_legend.txt   Legend    Tamins                               Fresh snow; maximum daily total of the month                202101-202103
+order_94004_THS_hns000mx_1_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                200802-200804
+order_94004_THS_hns000mx_1_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                200802-200804
+order_94004_THS_hns000mx_2_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                200805-200806
+order_94004_THS_hns000mx_2_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                200805-200806
+order_94004_THS_hns000mx_3_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                200812-201003
+order_94004_THS_hns000mx_3_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                200812-201003
+order_94004_THS_hns000mx_4_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                201004-201105
+order_94004_THS_hns000mx_4_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                201004-201105
+order_94004_THS_hns000mx_5_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                201110-202103
+order_94004_THS_hns000mx_5_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                201110-202103
+order_94004_THS_hns000mx_6_data.txt     Data      Thusis                               Fresh snow; maximum daily total of the month                201301-201302
+order_94004_THS_hns000mx_6_legend.txt   Legend    Thusis                               Fresh snow; maximum daily total of the month                201301-201302
+order_94004_SLF5TH_hns000mx_1_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                199910-200004
+order_94004_SLF5TH_hns000mx_1_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                199910-200004
+order_94004_SLF5TH_hns000mx_2_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200010-200104
+order_94004_SLF5TH_hns000mx_2_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200010-200104
+order_94004_SLF5TH_hns000mx_3_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200110-200204
+order_94004_SLF5TH_hns000mx_3_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200110-200204
+order_94004_SLF5TH_hns000mx_4_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200210-200304
+order_94004_SLF5TH_hns000mx_4_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200210-200304
+order_94004_SLF5TH_hns000mx_5_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200310-200404
+order_94004_SLF5TH_hns000mx_5_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200310-200404
+order_94004_SLF5TH_hns000mx_6_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200609-200705
+order_94004_SLF5TH_hns000mx_6_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200609-200705
+order_94004_SLF5TH_hns000mx_7_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200709-200805
+order_94004_SLF5TH_hns000mx_7_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200709-200805
+order_94004_SLF5TH_hns000mx_8_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200809-200905
+order_94004_SLF5TH_hns000mx_8_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200809-200905
+order_94004_SLF5TH_hns000mx_9_data.txt  Data      Thusis                               Fresh snow; maximum daily total of the month                200909-201005
+order_94004_SLF5TH_hns000mx_9_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                200909-201005
+order_94004_SLF5TH_hns000mx_10_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201009-201105
+order_94004_SLF5TH_hns000mx_10_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201009-201105
+order_94004_SLF5TH_hns000mx_11_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201109-201205
+order_94004_SLF5TH_hns000mx_11_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201109-201205
+order_94004_SLF5TH_hns000mx_12_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201209-201305
+order_94004_SLF5TH_hns000mx_12_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201209-201305
+order_94004_SLF5TH_hns000mx_13_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201309-201405
+order_94004_SLF5TH_hns000mx_13_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201309-201405
+order_94004_SLF5TH_hns000mx_14_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201409-201505
+order_94004_SLF5TH_hns000mx_14_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201409-201505
+order_94004_SLF5TH_hns000mx_15_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201509-201605
+order_94004_SLF5TH_hns000mx_15_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201509-201605
+order_94004_SLF5TH_hns000mx_16_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201609-201705
+order_94004_SLF5TH_hns000mx_16_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201609-201705
+order_94004_SLF5TH_hns000mx_17_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201709-201805
+order_94004_SLF5TH_hns000mx_17_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201709-201805
+order_94004_SLF5TH_hns000mx_18_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201809-201905
+order_94004_SLF5TH_hns000mx_18_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201809-201905
+order_94004_SLF5TH_hns000mx_19_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                201909-202005
+order_94004_SLF5TH_hns000mx_19_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                201909-202005
+order_94004_SLF5TH_hns000mx_20_data.txt Data      Thusis                               Fresh snow; maximum daily total of the month                202012-202103
+order_94004_SLF5TH_hns000mx_20_legend.txt Legend    Thusis                               Fresh snow; maximum daily total of the month                202012-202103
+order_94004_VVI_hns000mx_1_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                200907-200910
+order_94004_VVI_hns000mx_1_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                200907-200910
+order_94004_VVI_hns000mx_2_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                200912-201003
+order_94004_VVI_hns000mx_2_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                200912-201003
+order_94004_VVI_hns000mx_3_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                201006-201105
+order_94004_VVI_hns000mx_3_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                201006-201105
+order_94004_VVI_hns000mx_4_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                201110-201210
+order_94004_VVI_hns000mx_4_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                201110-201210
+order_94004_VVI_hns000mx_5_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                201211-201307
+order_94004_VVI_hns000mx_5_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                201211-201307
+order_94004_VVI_hns000mx_6_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                201308-201709
+order_94004_VVI_hns000mx_6_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                201308-201709
+order_94004_VVI_hns000mx_7_data.txt     Data      Vallorbe                             Fresh snow; maximum daily total of the month                201710-202103
+order_94004_VVI_hns000mx_7_legend.txt   Legend    Vallorbe                             Fresh snow; maximum daily total of the month                201710-202103
+order_94004_ISP_hns000mx_1_data.txt     Data      Visp                                 Fresh snow; maximum daily total of the month                196112-197012
+order_94004_ISP_hns000mx_1_legend.txt   Legend    Visp                                 Fresh snow; maximum daily total of the month                196112-197012
+order_94004_WER_hns000mx_1_data.txt     Data      Wernetshausen                        Fresh snow; maximum daily total of the month                197407-198608
+order_94004_WER_hns000mx_1_legend.txt   Legend    Wernetshausen                        Fresh snow; maximum daily total of the month                197407-198608

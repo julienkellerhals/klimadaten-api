@@ -4,168 +4,362 @@
 {% block head %}
 {{ super() }}
 <style>
-    #dbConnection {
-        width: 50px;
-        height: 50px;
-        top: 50%;
-        left: 60%;
-        position: absolute;
-        z-index: 1;
-        background: yellow;
-    }
 
-    #dbCreate {
-        width: 50px;
-        height: 50px;
-        top: 50%;
-        left: 40%;
-        position: absolute;
-        z-index: 1;
-        background: green;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    #tableContainer {
-        height: 100%;
-        display: flex;
-        align-items: stretch;
-    }
-
-    .schema {
-        flex-grow: 1;
-    }
-
-    #stage {
-        background: red;
-    }
-
-    #core {
-        background: blue;
-    }
 </style>
 {% endblock %}
 
 {% set active_page = "tables" %}
 
 {% block container %}
-<div id="dbConnection">
-    <h1>
-        Connect to database
-    </h1>
-    <script>
-        function startEngine() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/admin/db/connect", true);
-            xhr.send()
-            getEngineStatus()
-        }
-
-        function streamEngineStatus() {
-            var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
-            var previousStatusCode = null
-            engineEventSource.onmessage = function (e) {
-                var content = e.data
-                var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                var dbConnection = document.getElementById("dbConnection")
-                if (previousStatusCode != statusCode) {
-                    previousStatusCode = statusCode
-                    if (statusCode == 1) {
-                        dbConnection.classList.remove("hide")
-                    } else if (statusCode == 0) {
-                        dbConnection.classList.add("hide")
-                    }
-                }
-            };
-        }
-        function getEngineStatus() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/admin/getEngineStatus", true);
-            xhr.send()
-        }
-        streamEngineStatus();
-        setInterval(getEngineStatus, 10000);
-        document.getElementById("dbConnection").addEventListener("click", startEngine)
-    </script>
-</div>
-<div id="dbCreate">
-    <h1>
-        Create database
-    </h1>
-    <script>
-        function createDb() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/admin/db/create", true);
-            xhr.send()
-            getDatabaseStatus()
-        }
-
-        function streamDatabaseStatus() {
-            var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
-            var previousStatusCode = null
-            databaseEventSource.onmessage = function (e) {
-                var content = e.data;
-                var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                var dbCreate = document.getElementById("dbCreate")
-                if (previousStatusCode != statusCode) {
-                    previousStatusCode = statusCode
-                    if (statusCode == 0) {
-                        // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
-                        dbCreate.classList.add("hide")
-                    } else if (statusCode == 1) {
-                        // msgTxt = "Status: 1; Database not created; Error: " + str(e)
-                        dbCreate.classList.remove("hide")
-                    } else if (statusCode == 2) {
-                        // msgTxt = "Status: 2; Database not started; Error: " + str(e)
-                        dbCreate.classList.add("hide")
-                    }
-                }
-            };
-        }
-        function getDatabaseStatus() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/admin/getDatabaseStatus", true);
-            xhr.send()
-        }
-        streamDatabaseStatus();
-        setInterval(getDatabaseStatus, 10000);
-        document.getElementById("dbCreate").addEventListener("click", createDb)
-    </script>
-</div>
-<div id="tableContainer">
-    <div id="stage" class="schema">
-        <h1>Stage Schema</h1>
-        <div class="tableGroup">
-            <div id="tableCreate">create tables</div>
-            <script>
-                function createTables() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/db/table", true);
-                    xhr.send()
-                }
-                document.getElementById("tableCreate").addEventListener("click", createTables)
-            </script>
-            <div id="execCoreETL">Run stage to core etl</div>
-            <script>
-                function runCoreETL() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/db/etl/core", true);
-                    xhr.send()
-                }
-                document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
-            </script>
+<nav>
+    <div class="nav-wrapper grey darken-3">
+        <div class="row valign-wrapper">
+            <div class="col s10">
+                <a href="/admin/tables" id="dbConnection" class="breadcrumb grey-text">Connect to database</a>
+                <a href="/admin/tables" id="dbCreate" class="breadcrumb grey-text">Create database</a>
+                <a href="/admin/tables" id="tbCreate" class="breadcrumb grey-text">Create tables</a>
+            </div>
+            <div class="col s2">
+                <a id="dbAction" class="waves-effect waves-light btn-small right">Action</a>
+            </div>
         </div>
-    </div>
-    <div id="core" class="schema">
-        <h1>Core Schema</h1>
-        <div class="tableGroup">
-            <script>
+        <script>
+            var currentStatus = null
+            // var refreshInterval = 2000
+            // Change page refresh interval
+            var refreshInterval = 20000
 
-            </script>
+            function execCurrentAction() {
+                if (currentStatus == null) {
+                    document.getElementById("dbAction").classList.add("disabled")
+                    startEngine()
+                } else if (currentStatus == "dbConnection") {
+                    document.getElementById("dbAction").classList.add("disabled")
+                    createDb()
+                } else if (currentStatus == "dbCreate") {
+                    document.getElementById("dbAction").classList.add("disabled")
+                    createTb()
+                }
+            }
+
+            function startEngine() {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
+                xhr.open("POST", "/admin/db/connect", true);
+                xhr.send()
+                getEngineStatus()
+            }
+
+            function streamEngineStatus() {
+                var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
+                var previousStatusCode = null
+                engineEventSource.onmessage = function (e) {
+                    var content = e.data
+                    var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                    var dbConnection = document.getElementById("dbConnection")
+                    if (previousStatusCode != statusCode || currentStatus == "null") {
+                        previousStatusCode = statusCode
+                        if (statusCode == 1) {
+                            document.getElementById("dbAction").classList.remove("disabled")
+                            dbConnection.classList.remove("text-darken-1")
+                            dbConnection.classList.add("text-lighten-5")
+                            currentStatus = null
+                        } else if (statusCode == 0) {
+                            dbConnection.classList.remove("text-lighten-5")
+                            dbConnection.classList.add("text-darken-1")
+                            currentStatus = "dbConnection"
+                        }
+                    }
+                };
+            }
+            function getEngineStatus() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/admin/getEngineStatus", true);
+                xhr.send()
+            }
+            streamEngineStatus();
+            setInterval(getEngineStatus, refreshInterval);
+
+            function createDb() {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
+                xhr.open("POST", "/admin/db/create", true);
+                xhr.send()
+                getDatabaseStatus()
+            }
+
+            function streamDatabaseStatus() {
+                var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
+                var previousStatusCode = null
+                databaseEventSource.onmessage = function (e) {
+                    var content = e.data;
+                    var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                    var dbCreate = document.getElementById("dbCreate")
+                    if (previousStatusCode != statusCode || currentStatus == "dbConnection") {
+                        previousStatusCode = statusCode
+                        if (statusCode == 0) {
+                            // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+                            dbCreate.classList.remove("text-lighten-5")
+                            dbCreate.classList.add("text-darken-1")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbConnection") {
+                                currentStatus = "dbCreate"
+                            }
+                        } else if (statusCode == 1) {
+                            // msgTxt = "Status: 1; Database not created; Error: " + str(e)
+                            document.getElementById("dbAction").classList.remove("disabled")
+                            dbCreate.classList.remove("text-darken-1")
+                            dbCreate.classList.add("text-lighten-5")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbConnection") {
+                                currentStatus = "dbConnection"
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = null
+                            }
+                        } else if (statusCode == 2) {
+                            // msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                            document.getElementById("dbAction").classList.remove("disabled")
+                            dbCreate.classList.remove("text-darken-1")
+                            dbCreate.classList.add("text-lighten-5")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbConnection") {
+                                currentStatus = "dbConnection"
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = null
+                            }
+                        }
+                    }
+                };
+            }
+            function getDatabaseStatus() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/admin/getDatabaseStatus", true);
+                xhr.send()
+            }
+            streamDatabaseStatus();
+            setInterval(getDatabaseStatus, refreshInterval);
+
+            function createTb() {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = () => {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                }
+                xhr.open("POST", "/admin/db/table", true);
+                xhr.send()
+                getTablesStatus()
+            }
+
+            function streamTablesStatus() {
+                var tablesEventSource = new EventSource("/admin/stream/getTablesStatus");
+                var previousStatusCode = null
+                var previousMessage = null
+                tablesEventSource.onmessage = function (e) {
+                    var content = e.data;
+                    var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+                    var message = content.split(";")[1]
+                    var tbCreate = document.getElementById("tbCreate")
+                    if (previousStatusCode != statusCode || previousMessage != message || currentStatus == "dbCreate") {
+                        previousStatusCode = statusCode
+                        previousMessage = message
+                        if (statusCode == 0) {
+                            var tablesJson = JSON.parse(message)
+
+                            document.getElementById("stageTableGroup").innerHTML = ""
+                            document.getElementById("coreTableGroup").innerHTML = ""
+
+                            tablesJson.stage.forEach(element => {
+                                var li = document.createElement("li")
+
+                                var headerDiv = document.createElement("div")
+                                headerDiv.classList.add("collapsible-header")
+                                var headerTitle = document.createTextNode(element.name)
+                                headerDiv.appendChild(headerTitle)
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
+
+                                var bodyDiv = document.createElement("div")
+                                bodyDiv.classList.add("collapsible-body")
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
+                                }
+                                element.action.forEach(action => {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                })
+
+                                li.appendChild(headerDiv)
+                                li.appendChild(bodyDiv)
+                                document.getElementById("stageTableGroup").appendChild(li)
+                            });
+
+                            tablesJson.core.forEach(element => {
+                                var li = document.createElement("li")
+
+                                var headerDiv = document.createElement("div")
+                                headerDiv.classList.add("collapsible-header")
+                                var headerTitle = document.createTextNode(element.name)
+                                headerDiv.appendChild(headerTitle)
+                                headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
+
+                                var bodyDiv = document.createElement("div")
+                                bodyDiv.classList.add("collapsible-body")
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
+                                }
+                                element.action.forEach(action => {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                })
+
+                                li.appendChild(headerDiv)
+                                li.appendChild(bodyDiv)
+                                document.getElementById("coreTableGroup").appendChild(li)
+                            });
+
+                            tbCreate.classList.remove("text-lighten-5")
+                            tbCreate.classList.add("text-darken-1")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbCreate") {
+                                currentStatus = "tbCreate"
+                            }
+                        } else if (statusCode == 1) {
+                            document.getElementById("dbAction").classList.remove("disabled")
+                            tbCreate.classList.remove("text-darken-1")
+                            tbCreate.classList.add("text-lighten-5")
+                            if (currentStatus == null) {
+                                currentStatus = null
+                            } else if (currentStatus == "dbConnection") {
+                                currentStatus = "dbConnection"
+                            } else if (currentStatus == "tbCreate") {
+                                currentStatus = null
+                            }
+                        }
+                    }
+                };
+            }
+            function getTablesStatus() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/admin/getTablesStatus", true);
+                xhr.send()
+            }
+            streamTablesStatus();
+            setInterval(getTablesStatus, refreshInterval);
+
+            document.getElementById("dbAction").addEventListener("click", execCurrentAction)
+            setInterval(function () {
+                if (currentStatus == "tbCreate") {
+                    document.getElementById("dbAction").classList.add("disabled")
+                }
+            }, refreshInterval);
+        </script>
+    </div>
+</nav>
+<div id="container">
+    <div class="row">
+
+        <div class="col s4">
+            <div id="stage">
+                <h1>Stage</h1>
+                <ul id="stageTableGroup" class="collapsible popout"></ul>
+                <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
+                <script>
+                    M.AutoInit();
+
+                    function runStageETL() {
+                        var stageDiv = document.getElementById("stage")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        stageDiv.insertBefore(progress, stageDiv.children[1])
+
+                        document.getElementById("execStageETL").classList.add("disabled")
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            stageDiv.children[1].remove()
+                            document.getElementById("execStageETL").classList.remove("disabled")
+                        }
+                        xhr.open("POST", "/admin/db/etl/stage", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execStageETL").addEventListener("click", runStageETL)
+                </script>
+            </div>
         </div>
+        <div class="col s4">
+            <div id="core">
+                <h1>Core</h1>
+                <ul id="coreTableGroup" class="collapsible popout"></ul>
+                <a id="execCoreETL" class="waves-effect waves-light btn-small right">Core ETL</a>
+                <script>
+                    M.AutoInit();
+
+                    function runCoreETL() {
+                        var coreDiv = document.getElementById("core")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        coreDiv.insertBefore(progress, coreDiv.children[1])
+
+                        document.getElementById("execCoreETL").classList.add("disabled")
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            coreDiv.children[1].remove()
+                            document.getElementById("execCoreETL").classList.remove("disabled")
+                        }
+                        xhr.open("POST", "/admin/db/etl/core", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
+                </script>
+            </div>
+        </div>
+        <div class="col s4">
+            <div id="datamart">
+                <h1>Datamart</h1>
+                <ul id="datamartTableGroup" class="collapsible popout"></ul>
+                <a id="execDatamartETL" class="waves-effect waves-light btn-small right">Datamart ETL</a>
+                <script>
+                    function runDatamartETL() {
+                        var datamartDiv = document.getElementById("datamart")
+
+                        var progress = document.createElement("div")
+                        progress.classList.add("progress")
+                        var progressBar = document.createElement("div")
+                        progressBar.classList.add("indeterminate")
+                        progress.appendChild(progressBar)
+
+                        datamartDiv.insertBefore(progress, datamartDiv.children[1])
+
+                        document.getElementById("execDatamartETL").classList.add("disabled")
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            datamartDiv.children[1].remove()
+                            document.getElementById("execDatamartETL").classList.remove("disabled")
+                        }
+                        xhr.open("POST", "/admin/db/etl/core", true);
+                        xhr.send()
+                    }
+                    document.getElementById("execDatamartETL").addEventListener("click", runDatamartETL)
+                </script>
+            </div>
+        </div>
+
     </div>
 </div>
-Show database tables
 {% endblock %}

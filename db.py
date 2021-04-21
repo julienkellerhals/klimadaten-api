@@ -1,6 +1,11 @@
+import json
 import threading
 import sqlalchemy
+import numpy as np
 import pandas as pd
+from lxml import etree
+from pathlib import Path
+from sqlalchemy import inspect
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy_utils import database_exists, create_database
@@ -18,6 +23,7 @@ class Database:
     announcer = None
     databaseStatusStream = None
     engineStatusStream = None
+    tablesStatusStream = None
 
     def __init__(self, announcer):
         """ Init engine
@@ -25,7 +31,26 @@ class Database:
 
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
+
+    def readConfig(self, configFileName):
+        """ Read config file
+
+        Args:
+            configFileName (str): config file name
+
+        Returns:
+            list: Configuration in config file
+        """
+
+        configList = []
+
+        tree = etree.parse(configFileName)
+        root = tree.getroot()
+        for config in root:
+            configList.append(config)
+        return configList
 
     def getEngine(self):
         self.checkEngine()
@@ -92,6 +117,97 @@ class Database:
                 self.engineStatusStream.format_sse(msgTxt)
             )
 
+    def getTablesStatus(self):
+        x = threading.Thread(
+            target=self._getTablesStatus
+        )
+        x.start()
+
+    def _getTablesStatus(self):
+        self.getEngine()
+        try:
+            inspector = inspect(self.engine)
+        except sqlalchemy.exc.OperationalError:
+            msgTxt = "Status: 1; Database not found"
+            self.tablesStatusStream.announce(
+                self.tablesStatusStream.format_sse(msgTxt)
+            )
+        else:
+            self.conn = self.engine.connect()
+
+            stageTables = inspector.get_table_names("stage")
+            coreTables = inspector.get_table_names("core")
+            if len(stageTables) > 0 or len(coreTables) > 0:
+                dbTables = {}
+
+                dbTables["stage"] = []
+                for stageTable in stageTables:
+                    tableDict = {}
+
+                    tableDict["name"] = stageTable
+
+                    nrowQuery = \
+                        "SELECT count(*) FROM stage.{}".format(stageTable)
+                    tableDict["nrow"] = self.conn.execute(
+                        nrowQuery
+                    ).first()[0]
+
+                    if stageTable == "idaweb_t":
+                        lastRefreshQuery = \
+                            "SELECT max(valid_from) FROM stage.{}".format(
+                                stageTable
+                            )
+                    elif stageTable == "meteoschweiz_t":
+                        lastRefreshQuery = \
+                            "SELECT max(load_date) FROM stage.{}".format(
+                                stageTable
+                            )
+                    else:
+                        raise NotImplementedError
+                    tableDict["lastRefresh"] = self.conn.execute(
+                        lastRefreshQuery
+                    ).first()[0]
+
+                    tableDict["action"] = []
+                    if stageTable == "idaweb_t":
+                        tableDict["action"].append("Initial load")
+                    tableDict["action"].append("Run scrapping")
+                    dbTables["stage"].append(tableDict)
+
+                dbTables["core"] = []
+                for coreTable in coreTables:
+                    tableDict = {}
+
+                    tableDict["name"] = coreTable
+
+                    tableDict["nrow"] = self.conn.execute(
+                        "SELECT count(*) FROM core.{}".format(
+                            coreTable
+                        )
+                    ).first()[0]
+
+                    tableDict["lastRefresh"] = self.conn.execute(
+                        "SELECT max(valid_from) FROM core.{}".format(
+                            coreTable
+                        )
+                    ).first()[0]
+
+                    tableDict["action"] = []
+                    dbTables["core"].append(tableDict)
+
+                msgTxt = "Status: 0; " + json.dumps(
+                    dbTables,
+                    default=str
+                )
+                self.tablesStatusStream.announce(
+                    self.tablesStatusStream.format_sse(msgTxt)
+                )
+            else:
+                msgTxt = "Status: 1; No tables found"
+                self.tablesStatusStream.announce(
+                    self.tablesStatusStream.format_sse(msgTxt)
+                )
+
     def createDatabase(self):
         """ Creates database
         """
@@ -133,6 +249,24 @@ class Database:
 
         if not self.engine.dialect.has_table(
             connection=self.engine,
+            table_name='idaweb_t',
+            schema='stage'
+        ):
+            self.meteoschweiz_t = Table(
+                'idaweb_t',
+                self.meta,
+                Column('meas_date', Date),
+                Column('station', String),
+                Column('granularity', String),
+                Column('meas_name', String),
+                Column('meas_value', Float),
+                Column('source', String),
+                Column("valid_from", Date),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
             table_name='measurements_t',
             schema='core'
         ):
@@ -151,8 +285,77 @@ class Database:
 
         self.meta.create_all(self.engine)
 
+    def runStageETL(self):
+        self.idaWebStageETL()
+
+    def idaWebStageETL(self):
+        configFileName = "idawebConfig.xml"
+        configList = self.readConfig(configFileName)
+        for config in configList:
+            idaWebPartDf = pd.DataFrame()
+            dataDir = Path.cwd() / "data"
+            dataFiles = dataDir.glob("**/*_{}_*_data.txt".format(config.text))
+            print(config.text)
+            for dataFile in dataFiles:
+                print(dataFile.stem)
+                dataFileDf = pd.read_csv(dataFile, sep=";")
+                shortName = dataFileDf.columns[-1]
+                dataFileDf.rename(
+                    columns={
+                        "stn": "station",
+                        "time": "meas_date"
+                    },
+                    inplace=True
+                )
+                dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
+                dataFileDf["source"] = "IdaWeb"
+                dataFileDf["granularity"] = config.attrib['granularity']
+                if config.attrib['granularity'] == "M":
+                    dataFileDf["meas_date"] = pd.to_datetime(
+                        dataFileDf["meas_date"].map(str) + "01",
+                        format="%Y%m%d"
+                    )
+                elif config.attrib['granularity'] == "D":
+                    dataFileDf["meas_date"] = pd.to_datetime(
+                        dataFileDf["meas_date"],
+                        format="%Y%m%d"
+                    )
+                else:
+                    NotImplementedError()
+                dataFileDf = pd.melt(
+                    dataFileDf,
+                    id_vars=[
+                        "station",
+                        "valid_to",
+                        "meas_date",
+                        "granularity",
+                        "source"
+                    ],
+                    value_vars=[shortName],
+                    var_name="meas_name",
+                    value_name="meas_value"
+                )
+                idaWebPartDf = idaWebPartDf.append(dataFileDf)
+            validFromDf = idaWebPartDf.groupby(
+                ["meas_name"]
+            ).agg(valid_from=("meas_date", np.max))
+            idaWebPartDf = idaWebPartDf.merge(
+                validFromDf,
+                on="meas_name",
+                how="outer"
+            )
+            idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
+            idaWebPartDf.to_sql(
+                'idaweb_t',
+                self.engine,
+                schema='stage',
+                if_exists='append',
+                index=False
+            )
+
     def runCoreETL(self):
         self.meteoschweizCoreETL()
+        self.idawebCoreETL()
 
     def meteoschweizCoreETL(self):
         meteoschweizDf = pd.read_sql_table(
@@ -195,6 +398,21 @@ class Database:
             value_name="meas_value"
         )
         meteoschweizDf.to_sql(
+            'measurements_t',
+            self.engine,
+            schema='core',
+            if_exists='append',
+            index=False
+        )
+
+    def idawebCoreETL(self):
+        idawebDf = pd.read_sql_table(
+            "idaweb_t",
+            self.engine,
+            schema="stage"
+        )
+
+        idawebDf.to_sql(
             'measurements_t',
             self.engine,
             schema='core',

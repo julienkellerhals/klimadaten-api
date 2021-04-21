@@ -50,6 +50,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
+    @streamApi.route("/getTablesStatus")
+    def streamTablesStatus():
+        instance.getTablesStatus()
+        return Response(
+            instance.tablesStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
     @streamApi.route("/getDriverPathStatus")
     def streamDriverPathStatus():
         """ Stream driver path status
@@ -144,6 +152,18 @@ def constructBlueprint(announcer, instance, abstractDriver):
         x = threading.Thread(
             target=webscraping.scrape_meteoschweiz,
             args=(driver, engine, announcer)
+        )
+        x.start()
+
+        return Response(announcer.stream(), mimetype='text/event-stream')
+
+    @streamApi.route("/idaweb")
+    def streamIdaWeb():
+        driver = abstractDriver.getDriver()
+        engine = instance.getEngine()
+        x = threading.Thread(
+            target=webscraping.scrape_idaweb,
+            args=(driver, engine)
         )
         x.start()
 

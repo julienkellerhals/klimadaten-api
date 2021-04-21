@@ -1,7 +1,58 @@
 {% extends 'base.html' %}
+{% block title %}Tables{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+  #testContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .testCases {
+    flex-grow: 1;
+  }
+  
+  #meteoschweiz{
+  }
+
+  #idaweb{
+  }
+</style>
+{% endblock %}
 
 {% set active_page = "tests" %}
 
 {% block container %}
-  tests page
+<div id="testContainer">
+  <h1>Unittest</h1>
+  <h3 id="start">start</h3>
+  <div id="meteoschweiz" class="testCases">
+  </div>
+  <script>
+    function runTests() {
+        var xhr = new EventSource("/admin/stream/test");
+        var eventContainer = document.getElementById("meteoschweiz");
+        xhr.onmessage = function (e) {
+          var testText = document.createElement("h5");
+          testText.id = "test"
+          testText.innerText = "Test Case"
+          var entry = document.createElement("div");
+          entry.id = "case"
+          entry.className = "eventItem"
+          entry.innerHTML = e.data;
+          entry.style.visibility = "hidden";
+          eventContainer.appendChild(testText);
+          eventContainer.appendChild(entry);
+          document.getElementById("test").addEventListener("click", showResult)
+        }
+    }
+    function showResult(){
+      document.getElementById("case").style.visibility = "visible"
+    }
+    document.getElementById("start").addEventListener("click", runTests)
+  </script>
+</div>
 {% endblock %}
