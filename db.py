@@ -176,24 +176,25 @@ class Database:
 
                 dbTables["core"] = []
                 for coreTable in coreTables:
-                    tableDict = {}
+                    if "temp_" not in coreTable:
+                        tableDict = {}
 
-                    tableDict["name"] = coreTable
+                        tableDict["name"] = coreTable
 
-                    tableDict["nrow"] = self.conn.execute(
-                        "SELECT count(*) FROM core.{}".format(
-                            coreTable
-                        )
-                    ).first()[0]
+                        tableDict["nrow"] = self.conn.execute(
+                            "SELECT count(*) FROM core.{}".format(
+                                coreTable
+                            )
+                        ).first()[0]
 
-                    tableDict["lastRefresh"] = self.conn.execute(
-                        "SELECT max(valid_from) FROM core.{}".format(
-                            coreTable
-                        )
-                    ).first()[0]
+                        tableDict["lastRefresh"] = self.conn.execute(
+                            "SELECT max(valid_from) FROM core.{}".format(
+                                coreTable
+                            )
+                        ).first()[0]
 
-                    tableDict["action"] = ["Load"]
-                    dbTables["core"].append(tableDict)
+                        tableDict["action"] = ["Load"]
+                        dbTables["core"].append(tableDict)
 
                 msgTxt = "Status: 0; " + json.dumps(
                     dbTables,
@@ -252,7 +253,7 @@ class Database:
             table_name='idaweb_t',
             schema='stage'
         ):
-            self.meteoschweiz_t = Table(
+            self.idaweb_t = Table(
                 'idaweb_t',
                 self.meta,
                 Column('meas_date', Date),
@@ -273,14 +274,14 @@ class Database:
             self.measurements_t = Table(
                 'measurements_t',
                 self.meta,
-                Column('meas_date', Date),
-                Column('station', String),
-                Column('granularity', String),
-                Column('meas_name', String),
+                Column('meas_date', Date, primary_key=True),
+                Column('station', String, primary_key=True),
+                Column('granularity', String, primary_key=True),
+                Column('meas_name', String, primary_key=True),
                 Column('meas_value', Float),
-                Column('source', String),
+                Column('source', String, primary_key=True),
                 Column("valid_from", Date),
-                Column("valid_to", Date),
+                Column("valid_to", Date, primary_key=True),
                 schema='core')
 
         self.meta.create_all(self.engine)
@@ -289,6 +290,12 @@ class Database:
         self.idaWebStageETL()
 
     def idaWebStageETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "TRUNCATE TABLE stage.idaweb_t;"
+        )
+
         configFileName = "idawebConfig.xml"
         configList = self.readConfig(configFileName)
         for config in configList:
@@ -400,33 +407,49 @@ class Database:
             var_name="meas_name",
             value_name="meas_value"
         )
-        # write to temp table
         meteoschweizDf.to_sql(
-            'measurements_t',
+            'temp_measurements_t',
             self.engine,
             schema='core',
             if_exists='append',
-            index=False
+            index=False,
+            dtype={
+                "meas_date": Date,
+                "station": String,
+                "granularity": String,
+                "meas_name": String,
+                "meas_value": Float,
+                "source": String,
+                "valid_from": Date,
+                "valid_to": Date
+            }
         )
-        # via sql query write into meas
 
-    def idawebCoreETL(self):
-        # via sql query write into meas
         if self.conn is None:
             self.conn = self.engine.connect()
-        # INSERT INTO core.measurements_t 
-        # SELECT * FROM stage.idaweb_t
-        # ON CONFLICT DO NOTHING;
-        idawebDf = pd.read_sql_table(
-            "idaweb_t",
-            self.engine,
-            schema="stage"
+        self.conn.execute(
+            "INSERT INTO core.measurements_t " +
+            "SELECT " +
+            "meas_date, " +
+            "station, " +
+            "granularity, " +
+            "meas_name, " +
+            "meas_value, " +
+            "source, " +
+            "valid_from, " +
+            "valid_to " +
+            "FROM core.temp_measurements_t " +
+            "ON CONFLICT DO NOTHING;"
+        )
+        self.conn.execute(
+            "DROP TABLE IF EXISTS core.temp_measurements_t;"
         )
 
-        idawebDf.to_sql(
-            'measurements_t',
-            self.engine,
-            schema='core',
-            if_exists='append',
-            index=False
+    def idawebCoreETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "INSERT INTO core.measurements_t " +
+            "SELECT * FROM stage.idaweb_t " +
+            "ON CONFLICT DO NOTHING;"
         )

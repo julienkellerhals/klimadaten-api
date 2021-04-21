@@ -188,6 +188,11 @@ def _scrape_meteoschweiz(driver, engine, announcer):
         str: Scrapped data
     """
 
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
+
     url_list = []
     allStationsDf = pd.DataFrame(columns=[
         'year',
