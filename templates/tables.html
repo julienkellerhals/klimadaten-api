@@ -160,8 +160,8 @@
                 var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
                 stageReq(url)
             }
-            function runInitialLoad() {
-                var url = "/admin/db/etl/stage"
+            function runInitialLoad(tableName) {
+                var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
                 stageReq(url)
             }
             function load(tableName) {
@@ -210,7 +210,7 @@
                                     } else if (action == "Initial load") {
                                         bodyDiv.insertAdjacentHTML(
                                             "beforeend",
-                                            "<a href='javascript:runInitialLoad()' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
+                                            "<a href='javascript:runInitialLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
                                         )
                                     }
                                 })

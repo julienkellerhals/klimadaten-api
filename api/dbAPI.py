@@ -46,6 +46,21 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.runStageETL()
         return "Run Stage ETL"
 
+    @dbApi.route("/etl/stage/station", methods=["GET", "POST"])
+    @dbApi.route("/etl/stage/parameter", methods=["GET", "POST"])
+    def runStationParamStageETL():
+
+        instance.checkEngine()
+        instance.stationParamStageETL()
+        return "Run Station parameter ETL"
+
+    @dbApi.route("/etl/stage/idaweb", methods=["GET", "POST"])
+    def runIdawebStageETL():
+
+        instance.checkEngine()
+        instance.idaWebStageETL()
+        return "Run Station parameter ETL"
+
     @dbApi.route("/etl/core", methods=["GET", "POST"])
     def runCoreETL():
 
