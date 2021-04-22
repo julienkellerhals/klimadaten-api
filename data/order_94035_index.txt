@@ -1,0 +1,776 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94035
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94035_MMAEU_rsd700m0_1_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201211-201302
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_1_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201211-201302
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_2_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201304-201404
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_2_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201304-201404
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_3_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201405-201409
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_3_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201405-201409
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_4_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201410-201411
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_4_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201410-201411
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_5_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201501-201511
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_5_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201501-201511
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_6_data.txt   Data      Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201602-201704
+                                                                                       mm
+order_94035_MMAEU_rsd700m0_6_legend.txt Legend    Aeugst am Albis                      Days of the month with precipitation total exceeding 69.9   201602-201704
+                                                                                       mm
+order_94035_DLATT_rsd700m0_1_data.txt   Data      Attenkam                             Days of the month with precipitation total exceeding 69.9   194012-194504
+                                                                                       mm
+order_94035_DLATT_rsd700m0_1_legend.txt Legend    Attenkam                             Days of the month with precipitation total exceeding 69.9   194012-194504
+                                                                                       mm
+order_94035_DLATT_rsd700m0_2_data.txt   Data      Attenkam                             Days of the month with precipitation total exceeding 69.9   194508-197012
+                                                                                       mm
+order_94035_DLATT_rsd700m0_2_legend.txt Legend    Attenkam                             Days of the month with precipitation total exceeding 69.9   194508-197012
+                                                                                       mm
+order_94035_DLATT_rsd700m0_3_data.txt   Data      Attenkam                             Days of the month with precipitation total exceeding 69.9   197103-201512
+                                                                                       mm
+order_94035_DLATT_rsd700m0_3_legend.txt Legend    Attenkam                             Days of the month with precipitation total exceeding 69.9   197103-201512
+                                                                                       mm
+order_94035_DLATT_rsd700m0_4_data.txt   Data      Attenkam                             Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_DLATT_rsd700m0_4_legend.txt Legend    Attenkam                             Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_AUF_rsd700m0_1_data.txt     Data      Au bei Fischingen TG                 Days of the month with precipitation total exceeding 69.9   197212-199803
+                                                                                       mm
+order_94035_AUF_rsd700m0_1_legend.txt   Legend    Au bei Fischingen TG                 Days of the month with precipitation total exceeding 69.9   197212-199803
+                                                                                       mm
+order_94035_BAM_rsd700m0_1_data.txt     Data      Bauma                                Days of the month with precipitation total exceeding 69.9   189912-202103
+                                                                                       mm
+order_94035_BAM_rsd700m0_1_legend.txt   Legend    Bauma                                Days of the month with precipitation total exceeding 69.9   189912-202103
+                                                                                       mm
+order_94035_BIE_rsd700m0_1_data.txt     Data      Bière                                Days of the month with precipitation total exceeding 69.9   197404-202103
+                                                                                       mm
+order_94035_BIE_rsd700m0_1_legend.txt   Legend    Bière                                Days of the month with precipitation total exceeding 69.9   197404-202103
+                                                                                       mm
+order_94035_BLU_rsd700m0_1_data.txt     Data      Blumenstein                          Days of the month with precipitation total exceeding 69.9   197112-202103
+                                                                                       mm
+order_94035_BLU_rsd700m0_1_legend.txt   Legend    Blumenstein                          Days of the month with precipitation total exceeding 69.9   197112-202103
+                                                                                       mm
+order_94035_BRI_rsd700m0_1_data.txt     Data      Brig                                 Days of the month with precipitation total exceeding 69.9   189412-189504
+                                                                                       mm
+order_94035_BRI_rsd700m0_1_legend.txt   Legend    Brig                                 Days of the month with precipitation total exceeding 69.9   189412-189504
+                                                                                       mm
+order_94035_BRI_rsd700m0_2_data.txt     Data      Brig                                 Days of the month with precipitation total exceeding 69.9   189505-190608
+                                                                                       mm
+order_94035_BRI_rsd700m0_2_legend.txt   Legend    Brig                                 Days of the month with precipitation total exceeding 69.9   189505-190608
+                                                                                       mm
+order_94035_BRI_rsd700m0_3_data.txt     Data      Brig                                 Days of the month with precipitation total exceeding 69.9   196012-200310
+                                                                                       mm
+order_94035_BRI_rsd700m0_3_legend.txt   Legend    Brig                                 Days of the month with precipitation total exceeding 69.9   196012-200310
+                                                                                       mm
+order_94035_BRI_rsd700m0_4_data.txt     Data      Brig                                 Days of the month with precipitation total exceeding 69.9   200311-202103
+                                                                                       mm
+order_94035_BRI_rsd700m0_4_legend.txt   Legend    Brig                                 Days of the month with precipitation total exceeding 69.9   200311-202103
+                                                                                       mm
+order_94035_BRO_rsd700m0_1_data.txt     Data      Broc                                 Days of the month with precipitation total exceeding 69.9   196901-202103
+                                                                                       mm
+order_94035_BRO_rsd700m0_1_legend.txt   Legend    Broc                                 Days of the month with precipitation total exceeding 69.9   196901-202103
+                                                                                       mm
+order_94035_CBR_rsd700m0_1_data.txt     Data      Chambrelien                          Days of the month with precipitation total exceeding 69.9   189912-194512
+                                                                                       mm
+order_94035_CBR_rsd700m0_1_legend.txt   Legend    Chambrelien                          Days of the month with precipitation total exceeding 69.9   189912-194512
+                                                                                       mm
+order_94035_CGG_rsd700m0_1_data.txt     Data      Chiggiogna                           Days of the month with precipitation total exceeding 69.9   197212-198112
+                                                                                       mm
+order_94035_CGG_rsd700m0_1_legend.txt   Legend    Chiggiogna                           Days of the month with precipitation total exceeding 69.9   197212-198112
+                                                                                       mm
+order_94035_COY_rsd700m0_1_data.txt     Data      Courtelary                           Days of the month with precipitation total exceeding 69.9   191212-202103
+                                                                                       mm
+order_94035_COY_rsd700m0_1_legend.txt   Legend    Courtelary                           Days of the month with precipitation total exceeding 69.9   191212-202103
+                                                                                       mm
+order_94035_FAR_rsd700m0_1_data.txt     Data      Farvagny-le-Grand                    Days of the month with precipitation total exceeding 69.9   196912-198312
+                                                                                       mm
+order_94035_FAR_rsd700m0_1_legend.txt   Legend    Farvagny-le-Grand                    Days of the month with precipitation total exceeding 69.9   196912-198312
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_1_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   199902-199906
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_1_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   199902-199906
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_2_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   199907-199910
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_2_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   199907-199910
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_3_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200002-200011
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_3_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200002-200011
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_4_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200101-200111
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_4_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200101-200111
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_5_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200201-200207
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_5_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200201-200207
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_6_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200209-200211
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_6_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200209-200211
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_7_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200302-200310
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_7_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200302-200310
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_8_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200403-200411
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_8_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200403-200411
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_9_data.txt   Data      Forel                                Days of the month with precipitation total exceeding 69.9   200504-200510
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_9_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200504-200510
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_10_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200512-200601
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_10_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200512-200601
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_11_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200604-200606
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_11_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200604-200606
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_12_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200607-200612
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_12_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200607-200612
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_13_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200701-200705
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_13_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200701-200705
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_14_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200708-200804
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_14_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200708-200804
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_15_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200805-200806
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_15_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200805-200806
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_16_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200807-200809
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_16_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200807-200809
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_17_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   200902-200912
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_17_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   200902-200912
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_18_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   201001-201010
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_18_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   201001-201010
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_19_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   201012-201111
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_19_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   201012-201111
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_20_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   201112-201207
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_20_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   201112-201207
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_21_data.txt  Data      Forel                                Days of the month with precipitation total exceeding 69.9   201208-202103
+                                                                                       mm
+order_94035_VDFOL_rsd700m0_21_legend.txt Legend    Forel                                Days of the month with precipitation total exceeding 69.9   201208-202103
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_1_data.txt   Data      Geisingen                            Days of the month with precipitation total exceeding 69.9   197012-199707
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_1_legend.txt Legend    Geisingen                            Days of the month with precipitation total exceeding 69.9   197012-199707
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_2_data.txt   Data      Geisingen                            Days of the month with precipitation total exceeding 69.9   199803-200312
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_2_legend.txt Legend    Geisingen                            Days of the month with precipitation total exceeding 69.9   199803-200312
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_3_data.txt   Data      Geisingen                            Days of the month with precipitation total exceeding 69.9   200905-201512
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_3_legend.txt Legend    Geisingen                            Days of the month with precipitation total exceeding 69.9   200905-201512
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_4_data.txt   Data      Geisingen                            Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_DLGEI_rsd700m0_4_legend.txt Legend    Geisingen                            Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_GOL_rsd700m0_1_data.txt     Data      Goldingen                            Days of the month with precipitation total exceeding 69.9   196912-197712
+                                                                                       mm
+order_94035_GOL_rsd700m0_1_legend.txt   Legend    Goldingen                            Days of the month with precipitation total exceeding 69.9   196912-197712
+                                                                                       mm
+order_94035_HES_rsd700m0_1_data.txt     Data      Herisau                              Days of the month with precipitation total exceeding 69.9   190012-202103
+                                                                                       mm
+order_94035_HES_rsd700m0_1_legend.txt   Legend    Herisau                              Days of the month with precipitation total exceeding 69.9   190012-202103
+                                                                                       mm
+order_94035_DLHOL_rsd700m0_1_data.txt   Data      Holzkirchen                          Days of the month with precipitation total exceeding 69.9   198211-201512
+                                                                                       mm
+order_94035_DLHOL_rsd700m0_1_legend.txt Legend    Holzkirchen                          Days of the month with precipitation total exceeding 69.9   198211-201512
+                                                                                       mm
+order_94035_DLHOL_rsd700m0_2_data.txt   Data      Holzkirchen                          Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_DLHOL_rsd700m0_2_legend.txt Legend    Holzkirchen                          Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_ILZ_rsd700m0_1_data.txt     Data      Ilanz                                Days of the month with precipitation total exceeding 69.9   189112-202103
+                                                                                       mm
+order_94035_ILZ_rsd700m0_1_legend.txt   Legend    Ilanz                                Days of the month with precipitation total exceeding 69.9   189112-202103
+                                                                                       mm
+order_94035_DLKEM_rsd700m0_1_data.txt   Data      Kempten                              Days of the month with precipitation total exceeding 69.9   189504-201512
+                                                                                       mm
+order_94035_DLKEM_rsd700m0_1_legend.txt Legend    Kempten                              Days of the month with precipitation total exceeding 69.9   189504-201512
+                                                                                       mm
+order_94035_DLKEM_rsd700m0_2_data.txt   Data      Kempten                              Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_DLKEM_rsd700m0_2_legend.txt Legend    Kempten                              Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_GECOI_rsd700m0_1_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   199904-199910
+                                                                                       mm
+order_94035_GECOI_rsd700m0_1_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   199904-199910
+                                                                                       mm
+order_94035_GECOI_rsd700m0_2_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200002-200012
+                                                                                       mm
+order_94035_GECOI_rsd700m0_2_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200002-200012
+                                                                                       mm
+order_94035_GECOI_rsd700m0_3_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200101-200204
+                                                                                       mm
+order_94035_GECOI_rsd700m0_3_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200101-200204
+                                                                                       mm
+order_94035_GECOI_rsd700m0_4_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200205-200212
+                                                                                       mm
+order_94035_GECOI_rsd700m0_4_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200205-200212
+                                                                                       mm
+order_94035_GECOI_rsd700m0_5_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200302-200311
+                                                                                       mm
+order_94035_GECOI_rsd700m0_5_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200302-200311
+                                                                                       mm
+order_94035_GECOI_rsd700m0_6_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200401-200409
+                                                                                       mm
+order_94035_GECOI_rsd700m0_6_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200401-200409
+                                                                                       mm
+order_94035_GECOI_rsd700m0_7_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200410-200411
+                                                                                       mm
+order_94035_GECOI_rsd700m0_7_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200410-200411
+                                                                                       mm
+order_94035_GECOI_rsd700m0_8_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200412-200509
+                                                                                       mm
+order_94035_GECOI_rsd700m0_8_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200412-200509
+                                                                                       mm
+order_94035_GECOI_rsd700m0_9_data.txt   Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200601-200607
+                                                                                       mm
+order_94035_GECOI_rsd700m0_9_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200601-200607
+                                                                                       mm
+order_94035_GECOI_rsd700m0_10_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200608-200612
+                                                                                       mm
+order_94035_GECOI_rsd700m0_10_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200608-200612
+                                                                                       mm
+order_94035_GECOI_rsd700m0_11_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200701-200801
+                                                                                       mm
+order_94035_GECOI_rsd700m0_11_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200701-200801
+                                                                                       mm
+order_94035_GECOI_rsd700m0_12_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200804-200809
+                                                                                       mm
+order_94035_GECOI_rsd700m0_12_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200804-200809
+                                                                                       mm
+order_94035_GECOI_rsd700m0_13_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200810-200811
+                                                                                       mm
+order_94035_GECOI_rsd700m0_13_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200810-200811
+                                                                                       mm
+order_94035_GECOI_rsd700m0_14_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200903-200907
+                                                                                       mm
+order_94035_GECOI_rsd700m0_14_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200903-200907
+                                                                                       mm
+order_94035_GECOI_rsd700m0_15_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200908-200909
+                                                                                       mm
+order_94035_GECOI_rsd700m0_15_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200908-200909
+                                                                                       mm
+order_94035_GECOI_rsd700m0_16_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200910-200911
+                                                                                       mm
+order_94035_GECOI_rsd700m0_16_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   200910-200911
+                                                                                       mm
+order_94035_GECOI_rsd700m0_17_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201002-201011
+                                                                                       mm
+order_94035_GECOI_rsd700m0_17_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201002-201011
+                                                                                       mm
+order_94035_GECOI_rsd700m0_18_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201012-201104
+                                                                                       mm
+order_94035_GECOI_rsd700m0_18_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201012-201104
+                                                                                       mm
+order_94035_GECOI_rsd700m0_19_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201106-201111
+                                                                                       mm
+order_94035_GECOI_rsd700m0_19_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201106-201111
+                                                                                       mm
+order_94035_GECOI_rsd700m0_20_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201202-201203
+                                                                                       mm
+order_94035_GECOI_rsd700m0_20_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201202-201203
+                                                                                       mm
+order_94035_GECOI_rsd700m0_21_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201204-201208
+                                                                                       mm
+order_94035_GECOI_rsd700m0_21_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201204-201208
+                                                                                       mm
+order_94035_GECOI_rsd700m0_22_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201210-201211
+                                                                                       mm
+order_94035_GECOI_rsd700m0_22_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201210-201211
+                                                                                       mm
+order_94035_GECOI_rsd700m0_23_data.txt  Data      Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201212-201803
+                                                                                       mm
+order_94035_GECOI_rsd700m0_23_legend.txt Legend    Le Coin, France                      Days of the month with precipitation total exceeding 69.9   201212-201803
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_1_data.txt   Data      Leutkirch                            Days of the month with precipitation total exceeding 69.9   200703-201210
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_1_legend.txt Legend    Leutkirch                            Days of the month with precipitation total exceeding 69.9   200703-201210
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_2_data.txt   Data      Leutkirch                            Days of the month with precipitation total exceeding 69.9   201211-201512
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_2_legend.txt Legend    Leutkirch                            Days of the month with precipitation total exceeding 69.9   201211-201512
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_3_data.txt   Data      Leutkirch                            Days of the month with precipitation total exceeding 69.9   201604-201709
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_3_legend.txt Legend    Leutkirch                            Days of the month with precipitation total exceeding 69.9   201604-201709
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_4_data.txt   Data      Leutkirch                            Days of the month with precipitation total exceeding 69.9   201710-202103
+                                                                                       mm
+order_94035_DLLEU_rsd700m0_4_legend.txt Legend    Leutkirch                            Days of the month with precipitation total exceeding 69.9   201710-202103
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_1_data.txt   Data      Linthal                              Days of the month with precipitation total exceeding 69.9   201607-201808
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_1_legend.txt Legend    Linthal                              Days of the month with precipitation total exceeding 69.9   201607-201808
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_2_data.txt   Data      Linthal                              Days of the month with precipitation total exceeding 69.9   201809-201908
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_2_legend.txt Legend    Linthal                              Days of the month with precipitation total exceeding 69.9   201809-201908
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_3_data.txt   Data      Linthal                              Days of the month with precipitation total exceeding 69.9   201909-202006
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_3_legend.txt Legend    Linthal                              Days of the month with precipitation total exceeding 69.9   201909-202006
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_4_data.txt   Data      Linthal                              Days of the month with precipitation total exceeding 69.9   202007-202011
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_4_legend.txt Legend    Linthal                              Days of the month with precipitation total exceeding 69.9   202007-202011
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_5_data.txt   Data      Linthal                              Days of the month with precipitation total exceeding 69.9   202012-202103
+                                                                                       mm
+order_94035_MMLIN_rsd700m0_5_legend.txt Legend    Linthal                              Days of the month with precipitation total exceeding 69.9   202012-202103
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_1_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199102-199105
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_1_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199102-199105
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_2_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199106-199107
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_2_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199106-199107
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_3_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199108-199109
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_3_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199108-199109
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_4_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199301-199304
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_4_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199301-199304
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_5_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199307-199411
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_5_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199307-199411
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_6_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199412-199604
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_6_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199412-199604
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_7_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199605-199911
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_7_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   199605-199911
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_8_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200106-200108
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_8_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200106-200108
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_9_data.txt  Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200109-200110
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_9_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200109-200110
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_10_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200202-200206
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_10_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200202-200206
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_11_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200207-200210
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_11_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200207-200210
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_12_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200211-200412
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_12_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200211-200412
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_13_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200501-200504
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_13_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200501-200504
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_14_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200505-200804
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_14_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200505-200804
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_15_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200806-201008
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_15_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   200806-201008
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_16_data.txt Data      Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   201009-201712
+                                                                                       mm
+order_94035_NABLAE_rsd700m0_16_legend.txt Legend    Lägeren / Zindelen                   Days of the month with precipitation total exceeding 69.9   201009-201712
+                                                                                       mm
+order_94035_WSLLAE_rsd700m0_1_data.txt  Data      Lägern Turm                          Days of the month with precipitation total exceeding 69.9   201712-201910
+                                                                                       mm
+order_94035_WSLLAE_rsd700m0_1_legend.txt Legend    Lägern Turm                          Days of the month with precipitation total exceeding 69.9   201712-201910
+                                                                                       mm
+order_94035_MAD_rsd700m0_1_data.txt     Data      Madiswil                             Days of the month with precipitation total exceeding 69.9   197112-202103
+                                                                                       mm
+order_94035_MAD_rsd700m0_1_legend.txt   Legend    Madiswil                             Days of the month with precipitation total exceeding 69.9   197112-202103
+                                                                                       mm
+order_94035_DLMAL_rsd700m0_1_data.txt   Data      Malsburg-Marzell                     Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLMAL_rsd700m0_1_legend.txt Legend    Malsburg-Marzell                     Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLMER_rsd700m0_1_data.txt   Data      Merklingen                           Days of the month with precipitation total exceeding 69.9   194812-194912
+                                                                                       mm
+order_94035_DLMER_rsd700m0_1_legend.txt Legend    Merklingen                           Days of the month with precipitation total exceeding 69.9   194812-194912
+                                                                                       mm
+order_94035_DLMER_rsd700m0_2_data.txt   Data      Merklingen                           Days of the month with precipitation total exceeding 69.9   195012-198102
+                                                                                       mm
+order_94035_DLMER_rsd700m0_2_legend.txt Legend    Merklingen                           Days of the month with precipitation total exceeding 69.9   195012-198102
+                                                                                       mm
+order_94035_DLMER_rsd700m0_3_data.txt   Data      Merklingen                           Days of the month with precipitation total exceeding 69.9   198108-201512
+                                                                                       mm
+order_94035_DLMER_rsd700m0_3_legend.txt Legend    Merklingen                           Days of the month with precipitation total exceeding 69.9   198108-201512
+                                                                                       mm
+order_94035_DLMER_rsd700m0_4_data.txt   Data      Merklingen                           Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_DLMER_rsd700m0_4_legend.txt Legend    Merklingen                           Days of the month with precipitation total exceeding 69.9   201604-202103
+                                                                                       mm
+order_94035_MTO_rsd700m0_1_data.txt     Data      Montenol                             Days of the month with precipitation total exceeding 69.9   199709-202103
+                                                                                       mm
+order_94035_MTO_rsd700m0_1_legend.txt   Legend    Montenol                             Days of the month with precipitation total exceeding 69.9   199709-202103
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_1_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   199311-200403
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_1_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   199311-200403
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_2_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   200502-202003
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_2_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   200502-202003
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_3_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   202004-202103
+                                                                                       mm
+order_94035_DLNEU_rsd700m0_3_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Days of the month with precipitation total exceeding 69.9   202004-202103
+                                                                                       mm
+order_94035_OBD_rsd700m0_1_data.txt     Data      Obstalden                            Days of the month with precipitation total exceeding 69.9   190012-202103
+                                                                                       mm
+order_94035_OBD_rsd700m0_1_legend.txt   Legend    Obstalden                            Days of the month with precipitation total exceeding 69.9   190012-202103
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_1_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201008-201010
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_1_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201008-201010
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_2_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201102-201111
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_2_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201102-201111
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_3_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201203-201208
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_3_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201203-201208
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_4_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201305-201308
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_4_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201305-201308
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_5_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201309-201310
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_5_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201309-201310
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_6_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201403-201404
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_6_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201403-201404
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_7_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201405-201406
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_7_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201405-201406
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_8_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201407-201409
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_8_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201407-201409
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_9_data.txt   Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201503-201504
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_9_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201503-201504
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_10_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201508-201510
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_10_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201508-201510
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_11_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201511-201512
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_11_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201511-201512
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_12_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201605-201609
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_12_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201605-201609
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_13_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201704-201710
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_13_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201704-201710
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_14_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201803-201810
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_14_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201803-201810
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_15_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   201906-201910
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_15_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   201906-201910
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_16_data.txt  Data      Ottenberg                            Days of the month with precipitation total exceeding 69.9   202002-202009
+                                                                                       mm
+order_94035_TGOTT_rsd700m0_16_legend.txt Legend    Ottenberg                            Days of the month with precipitation total exceeding 69.9   202002-202009
+                                                                                       mm
+order_94035_DLOTT_rsd700m0_1_data.txt   Data      Ottobeuren                           Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLOTT_rsd700m0_1_legend.txt Legend    Ottobeuren                           Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLREI_rsd700m0_1_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   189812-193512
+                                                                                       mm
+order_94035_DLREI_rsd700m0_1_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   189812-193512
+                                                                                       mm
+order_94035_DLREI_rsd700m0_2_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   193703-193805
+                                                                                       mm
+order_94035_DLREI_rsd700m0_2_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   193703-193805
+                                                                                       mm
+order_94035_DLREI_rsd700m0_3_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   193807-194408
+                                                                                       mm
+order_94035_DLREI_rsd700m0_3_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   193807-194408
+                                                                                       mm
+order_94035_DLREI_rsd700m0_4_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   194409-194504
+                                                                                       mm
+order_94035_DLREI_rsd700m0_4_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   194409-194504
+                                                                                       mm
+order_94035_DLREI_rsd700m0_5_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   194507-195105
+                                                                                       mm
+order_94035_DLREI_rsd700m0_5_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   194507-195105
+                                                                                       mm
+order_94035_DLREI_rsd700m0_6_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   195107-200310
+                                                                                       mm
+order_94035_DLREI_rsd700m0_6_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   195107-200310
+                                                                                       mm
+order_94035_DLREI_rsd700m0_7_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   200702-201512
+                                                                                       mm
+order_94035_DLREI_rsd700m0_7_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   200702-201512
+                                                                                       mm
+order_94035_DLREI_rsd700m0_8_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   201604-202009
+                                                                                       mm
+order_94035_DLREI_rsd700m0_8_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   201604-202009
+                                                                                       mm
+order_94035_DLREI_rsd700m0_9_data.txt   Data      Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   202010-202103
+                                                                                       mm
+order_94035_DLREI_rsd700m0_9_legend.txt Legend    Reit im Winkl                        Days of the month with precipitation total exceeding 69.9   202010-202103
+                                                                                       mm
+order_94035_RMM_rsd700m0_1_data.txt     Data      Romainmôtier                         Days of the month with precipitation total exceeding 69.9   191712-193812
+                                                                                       mm
+order_94035_RMM_rsd700m0_1_legend.txt   Legend    Romainmôtier                         Days of the month with precipitation total exceeding 69.9   191712-193812
+                                                                                       mm
+order_94035_ROM_rsd700m0_1_data.txt     Data      Romont                               Days of the month with precipitation total exceeding 69.9   188209-189401
+                                                                                       mm
+order_94035_ROM_rsd700m0_1_legend.txt   Legend    Romont                               Days of the month with precipitation total exceeding 69.9   188209-189401
+                                                                                       mm
+order_94035_ROM_rsd700m0_2_data.txt     Data      Romont                               Days of the month with precipitation total exceeding 69.9   189705-189804
+                                                                                       mm
+order_94035_ROM_rsd700m0_2_legend.txt   Legend    Romont                               Days of the month with precipitation total exceeding 69.9   189705-189804
+                                                                                       mm
+order_94035_ROM_rsd700m0_3_data.txt     Data      Romont                               Days of the month with precipitation total exceeding 69.9   189906-202103
+                                                                                       mm
+order_94035_ROM_rsd700m0_3_legend.txt   Legend    Romont                               Days of the month with precipitation total exceeding 69.9   189906-202103
+                                                                                       mm
+order_94035_DLRAR_rsd700m0_1_data.txt   Data      Rot an der Rot                       Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLRAR_rsd700m0_1_legend.txt Legend    Rot an der Rot                       Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_1_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   192012-194311
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_1_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   192012-194311
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_2_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   194312-194409
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_2_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   194312-194409
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_3_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   194410-194512
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_3_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   194410-194512
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_4_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   194602-194712
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_4_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   194602-194712
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_5_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   194801-194805
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_5_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   194801-194805
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_6_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   194806-197905
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_6_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   194806-197905
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_7_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   197906-201902
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_7_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   197906-201902
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_8_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   201904-201908
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_8_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   201904-201908
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_9_data.txt   Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   201909-202004
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_9_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   201909-202004
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_10_data.txt  Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   202005-202006
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_10_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   202005-202006
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_11_data.txt  Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   202007-202009
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_11_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   202007-202009
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_12_data.txt  Data      Schlanders                           Days of the month with precipitation total exceeding 69.9   202010-202103
+                                                                                       mm
+order_94035_IYSCH_rsd700m0_12_legend.txt Legend    Schlanders                           Days of the month with precipitation total exceeding 69.9   202010-202103
+                                                                                       mm
+order_94035_SDB_rsd700m0_1_data.txt     Data      Signal-de-Bougy                      Days of the month with precipitation total exceeding 69.9   197112-198012
+                                                                                       mm
+order_94035_SDB_rsd700m0_1_legend.txt   Legend    Signal-de-Bougy                      Days of the month with precipitation total exceeding 69.9   197112-198012
+                                                                                       mm
+order_94035_SPZ_rsd700m0_1_data.txt     Data      St. Peterzell                        Days of the month with precipitation total exceeding 69.9   190012-195504
+                                                                                       mm
+order_94035_SPZ_rsd700m0_1_legend.txt   Legend    St. Peterzell                        Days of the month with precipitation total exceeding 69.9   190012-195504
+                                                                                       mm
+order_94035_SPZ_rsd700m0_2_data.txt     Data      St. Peterzell                        Days of the month with precipitation total exceeding 69.9   195506-195509
+                                                                                       mm
+order_94035_SPZ_rsd700m0_2_legend.txt   Legend    St. Peterzell                        Days of the month with precipitation total exceeding 69.9   195506-195509
+                                                                                       mm
+order_94035_SPZ_rsd700m0_3_data.txt     Data      St. Peterzell                        Days of the month with precipitation total exceeding 69.9   195510-202103
+                                                                                       mm
+order_94035_SPZ_rsd700m0_3_legend.txt   Legend    St. Peterzell                        Days of the month with precipitation total exceeding 69.9   195510-202103
+                                                                                       mm
+order_94035_AST_rsd700m0_1_data.txt     Data      Stalden / Ackersand                  Days of the month with precipitation total exceeding 69.9   196012-202103
+                                                                                       mm
+order_94035_AST_rsd700m0_1_legend.txt   Legend    Stalden / Ackersand                  Days of the month with precipitation total exceeding 69.9   196012-202103
+                                                                                       mm
+order_94035_TAM_rsd700m0_1_data.txt     Data      Tamins                               Days of the month with precipitation total exceeding 69.9   196712-202103
+                                                                                       mm
+order_94035_TAM_rsd700m0_1_legend.txt   Legend    Tamins                               Days of the month with precipitation total exceeding 69.9   196712-202103
+                                                                                       mm
+order_94035_THS_rsd700m0_1_data.txt     Data      Thusis                               Days of the month with precipitation total exceeding 69.9   189112-189905
+                                                                                       mm
+order_94035_THS_rsd700m0_1_legend.txt   Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   189112-189905
+                                                                                       mm
+order_94035_THS_rsd700m0_2_data.txt     Data      Thusis                               Days of the month with precipitation total exceeding 69.9   190008-190305
+                                                                                       mm
+order_94035_THS_rsd700m0_2_legend.txt   Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   190008-190305
+                                                                                       mm
+order_94035_THS_rsd700m0_3_data.txt     Data      Thusis                               Days of the month with precipitation total exceeding 69.9   190306-194509
+                                                                                       mm
+order_94035_THS_rsd700m0_3_legend.txt   Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   190306-194509
+                                                                                       mm
+order_94035_THS_rsd700m0_4_data.txt     Data      Thusis                               Days of the month with precipitation total exceeding 69.9   194511-194612
+                                                                                       mm
+order_94035_THS_rsd700m0_4_legend.txt   Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   194511-194612
+                                                                                       mm
+order_94035_THS_rsd700m0_5_data.txt     Data      Thusis                               Days of the month with precipitation total exceeding 69.9   194703-202103
+                                                                                       mm
+order_94035_THS_rsd700m0_5_legend.txt   Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   194703-202103
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_1_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201608-201610
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_1_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201608-201610
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_2_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201611-201612
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_2_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201611-201612
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_3_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201705-201710
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_3_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201705-201710
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_4_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201803-201806
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_4_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201803-201806
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_5_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201807-201808
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_5_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201807-201808
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_6_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201810-201811
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_6_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201810-201811
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_7_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201901-201902
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_7_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201901-201902
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_8_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201905-201908
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_8_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201905-201908
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_9_data.txt   Data      Thusis                               Days of the month with precipitation total exceeding 69.9   201909-202103
+                                                                                       mm
+order_94035_MMPRV_rsd700m0_9_legend.txt Legend    Thusis                               Days of the month with precipitation total exceeding 69.9   201909-202103
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_1_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201211-201404
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_1_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201211-201404
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_2_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201405-201511
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_2_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201405-201511
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_3_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201602-201607
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_3_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201602-201607
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_4_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201608-201809
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_4_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201608-201809
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_5_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201810-201811
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_5_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201810-201811
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_6_data.txt   Data      Titterten                            Days of the month with precipitation total exceeding 69.9   201902-202103
+                                                                                       mm
+order_94035_MMTIT_rsd700m0_6_legend.txt Legend    Titterten                            Days of the month with precipitation total exceeding 69.9   201902-202103
+                                                                                       mm
+order_94035_ISP_rsd700m0_1_data.txt     Data      Visp                                 Days of the month with precipitation total exceeding 69.9   195906-197012
+                                                                                       mm
+order_94035_ISP_rsd700m0_1_legend.txt   Legend    Visp                                 Days of the month with precipitation total exceeding 69.9   195906-197012
+                                                                                       mm
+order_94035_ISP_rsd700m0_2_data.txt     Data      Visp                                 Days of the month with precipitation total exceeding 69.9   197112-198212
+                                                                                       mm
+order_94035_ISP_rsd700m0_2_legend.txt   Legend    Visp                                 Days of the month with precipitation total exceeding 69.9   197112-198212
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_1_data.txt  Data      Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201712-201806
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_1_legend.txt Legend    Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201712-201806
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_2_data.txt  Data      Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201807-201901
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_2_legend.txt Legend    Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201807-201901
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_3_data.txt  Data      Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201903-201908
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_3_legend.txt Legend    Visp Bestand                         Days of the month with precipitation total exceeding 69.9   201903-201908
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_4_data.txt  Data      Visp Bestand                         Days of the month with precipitation total exceeding 69.9   202005-202103
+                                                                                       mm
+order_94035_WSLVSB_rsd700m0_4_legend.txt Legend    Visp Bestand                         Days of the month with precipitation total exceeding 69.9   202005-202103
+                                                                                       mm
+order_94035_DLWAN_rsd700m0_1_data.txt   Data      Wangen im Allgäu                     Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_DLWAN_rsd700m0_1_legend.txt Legend    Wangen im Allgäu                     Days of the month with precipitation total exceeding 69.9   202102-202103
+                                                                                       mm
+order_94035_WER_rsd700m0_1_data.txt     Data      Wernetshausen                        Days of the month with precipitation total exceeding 69.9   196012-198609
+                                                                                       mm
+order_94035_WER_rsd700m0_1_legend.txt   Legend    Wernetshausen                        Days of the month with precipitation total exceeding 69.9   196012-198609
+                                                                                       mm

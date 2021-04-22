@@ -1,7 +1,10 @@
 import re
+import io
+import os
 import math
 import time
-import yaml
+import zipfile
+import threading
 import numpy as np
 import pandas as pd
 from lxml import etree
@@ -11,26 +14,13 @@ from dateutil.relativedelta import relativedelta
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import NoSuchElementException
+# from selenium.common.exceptions import TimeoutException
+# from selenium.common.exceptions import NoSuchElementException
 import download
 
 
-def format_sse(data: str, event=None) -> str:
-    """ Converts string to sse format
-
-    Args:
-        data (str): String to be converted to sse format
-        event (string, optional): Event name. Defaults to None.
-
-    Returns:
-        str: sse string
-    """
-
-    msg = f'data: {data}\n\n'
-    if event is not None:
-        msg = f'event: {event}\n{msg}'
-    return msg
+username = "joel.grosjean@students.fhnw.ch"
+password = "AGEJ649GJAL02"
 
 
 def createJs(value):
@@ -174,7 +164,19 @@ def getUntil(since, timeDeltaList):
 
 
 # main function
-def scrape_meteoschweiz(driver, engine, announcer):
+def scrape_meteoschweiz(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_meteoschweiz,
+        args=(driver, engine, announcer)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
     """ Scrape data from meteo suisse
 
     Args:
@@ -185,6 +187,11 @@ def scrape_meteoschweiz(driver, engine, announcer):
     Returns:
         str: Scrapped data
     """
+
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
 
     url_list = []
     allStationsDf = pd.DataFrame(columns=[
@@ -208,7 +215,7 @@ def scrape_meteoschweiz(driver, engine, announcer):
         url = urlEl.get_attribute('href')
 
         msgTxt = "Scrapping: " + url
-        msg = format_sse(data=msgTxt)
+        msg = announcer.format_sse(data=msgTxt)
         announcer.announce(msg=msg)
 
         url_list.append(url)
@@ -261,6 +268,8 @@ def scrape_meteoschweiz(driver, engine, announcer):
         errors='coerce'
     )
 
+    allStationsDf["load_date"] = pd.to_datetime('today').normalize()
+
     allStationsDf.to_sql(
         'meteoschweiz_t',
         engine,
@@ -278,7 +287,67 @@ def scrape_meteoschweiz(driver, engine, announcer):
 
 
 # main function
-def scrape_idaweb(driver, engine):
+def scrape_idaweb(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_idaweb,
+        args=(driver, engine)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_idaweb(driver, engine):
+    if not os.path.isdir("data"):
+        os.mkdir("data")
+    savedDocuments = run_scrape_idaweb(driver, engine)
+    savedDocumentsDf = pd.DataFrame(
+        savedDocuments,
+        columns=["reference"]
+    )
+    orderDf = scrapeIdawebOrders(driver)
+    orderDf = orderDf.merge(
+        savedDocumentsDf,
+        on="reference",
+        how="inner"
+    )
+    inProductionBool = True
+    while inProductionBool:
+        if len(orderDf["status"].unique()) > 1:
+            time.sleep(300)
+            orderDf = scrapeIdawebOrders(driver)
+            orderDf = orderDf.merge(
+                savedDocumentsDf,
+                on="reference",
+                how="inner"
+            )
+        else:
+            inProductionBool = False
+            loginReq = download.getRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do"
+            )[0]
+            cred = {
+                "method": "validate",
+                "user": username,
+                "password": password
+            }
+            loginReq = download.postRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do",
+                loginReq.cookies,
+                cred
+            )[0]
+    for downloadUrl in orderDf["downloadLink"]:
+        downloadReq = download.getRequest(
+            downloadUrl,
+            loginReq.cookies
+        )[0]
+        dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
+        dataZip.extractall("data")
+
+
+def run_scrape_idaweb(driver, engine):
     """ Scrape idaweb
 
     Args:
@@ -298,9 +367,10 @@ def scrape_idaweb(driver, engine):
     # login
     scrape_idaweb_login(driver)
 
-
     # for every variable in idawebConfig.xml
     for config in configList:
+        time.sleep(30)
+
         orderNumber = 1
         # get date and time for order name
         now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
@@ -315,9 +385,28 @@ def scrape_idaweb(driver, engine):
         )
 
         # add the height selection
-        heightDeltaList = [3500,2000,1000,500,350,200,100,50,35,20,10,5,3,2,1]
+        heightDeltaList = [
+            3500,
+            2000,
+            1000,
+            500,
+            350,
+            200,
+            100,
+            50,
+            35,
+            20,
+            10,
+            5,
+            3,
+            2,
+            1
+        ]
         heightMin = 200
-        idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+        idaWebStationPreselection(
+            driver,
+            f"{heightMin}..{heightMin + heightDeltaList[0]}"
+        )
 
         # Start time preselection
         since = "01.01.1800"
@@ -336,21 +425,29 @@ def scrape_idaweb(driver, engine):
                 tooManyEntriesBool,
                 noEntriesBool
             )
-            # try selecting with select all as long as there are elements in timeDeltaList
+            # try selecting with select all as long
+            # as there are elements in timeDeltaList
             if not len(heightDeltaList) == 0:
 
                 # if hight delta too big, make it smaller
                 if tooManyEntriesBool:
                     heightDeltaList.remove(heightDeltaList[0])
-                    idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                    idaWebStationPreselection(
+                        driver,
+                        f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                    )
                     idaWebTimePreselection(driver, since, until)
                 else:
                     # if the selection has entries, but no too many
                     # order the data, move the hight period, redo order process
                     if not noEntriesBool:
                         idaWebDataInventory(driver)
-                        try:
-                            orderName = createOrderName(config, orderNumber, now)
+                        orderName = createOrderName(
+                            config,
+                            orderNumber,
+                            now
+                        )
+                        if not idaWebCheckOrder(driver):
                             idaWebOrder(driver, orderName)
                             orderNumber += 1
 
@@ -364,10 +461,26 @@ def scrape_idaweb(driver, engine):
                             if heightMin + heightDeltaList[0] >= 3700:
                                 notFinished = False
                                 break
-                            
+
                             # Go back to start and continue
                             heightMin = heightMin + heightDeltaList[0]
-                            heightDeltaList = [3500,2000,1000,500,350,200,100,50,35,20,10,5,3,2,1]
+                            heightDeltaList = [
+                                3500,
+                                2000,
+                                1000,
+                                500,
+                                350,
+                                200,
+                                100,
+                                50,
+                                35,
+                                20,
+                                10,
+                                5,
+                                3,
+                                2,
+                                1
+                            ]
 
                             # redo the whole order process
                             idaWebParameterPortal(driver)
@@ -377,22 +490,27 @@ def scrape_idaweb(driver, engine):
                                 config.attrib['granularity'],
                                 config.text
                             )
-                            idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
                             idaWebTimePreselection(driver, since, until)
-                        
+
                         # if selection has more than 2'000'000 values
-                        except:
-                            # accept alert
-                            # driver.switch_to.alert.accept()
-                            
-                            # make timeframe smaller 
+                        else:
+                            # make heightframe smaller
                             heightDeltaList.remove(heightDeltaList[0])
-                            idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
                             idaWebTimePreselection(driver, since, until)
 
                     # if selection has no entries, change time period
                     else:
-                        notFinished = False  
+                        notFinished = False
 
             # select junks manually if select all doesn't work
             # TODO make it work
@@ -402,7 +520,7 @@ def scrape_idaweb(driver, engine):
                 chunks = splitDf(inventoryDf, 400)
                 for chunk in chunks:
                     for value in chunk["value"]:
-                        createJs(value)
+                        js = createJs(value)
                         driver.execute_script(js)
 
                 orderName = createOrderName(config, orderNumber, now)
@@ -423,7 +541,10 @@ def scrape_idaweb(driver, engine):
                     config.attrib['granularity'],
                     config.text
                 )
-                idaWebStationPreselection(driver, f"{heightMin}..{heightMin + heightDeltaList[0]}")
+                idaWebStationPreselection(
+                    driver,
+                    f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                )
                 idaWebTimePreselection(driver, since, until)
 
     print(saved_documents)
@@ -439,11 +560,11 @@ def scrape_idaweb_login(driver):
     """
 
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
-    
-    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02 
+
+    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02
     # log into page
-    driver.find_element_by_name('user').send_keys('joel.grosjean@students.fhnw.ch')
-    driver.find_element_by_name('password').send_keys('AGEJ649GJAL02')
+    driver.find_element_by_name('user').send_keys(username)
+    driver.find_element_by_name('password').send_keys(password)
     driver.find_element_by_xpath(
         '//*[@id="content_block"]/form/fieldset/'
         + 'table/tbody/tr[3]/td/table/tbody/tr/td[1]/input'
@@ -513,7 +634,7 @@ def idaWebStationPreselection(driver, height):
     # click deselect
     driver.find_element_by_xpath(
         '//*[@id="list_actions"]/input[2]'
-    ).click()   
+    ).click()
 
     # clear height input
     driver.find_element_by_name('height').clear()
@@ -528,7 +649,6 @@ def idaWebStationPreselection(driver, height):
         '//*[@id="filter_actions"]/input[1]'
     ).click()
 
-    
     # click select all
     driver.find_element_by_xpath(
         '//*[@id="list_actions"]/input[1]'
@@ -625,6 +745,22 @@ def idaWebDataInventoryManual(driver):
     ).click()
 
     print("Here")
+
+
+def idaWebCheckOrder(driver):
+    tooManyValuesBool = False
+    driver.find_element_by_xpath(
+        '//*[@id="wizard"]//*[contains(., "Order")]'
+    ).click()
+
+    try:
+        alert = driver.switch_to.alert
+        alert.accept()
+        tooManyValuesBool = True
+    except EC.NoAlertPresentException:
+        tooManyValuesBool = False
+
+    return tooManyValuesBool
 
 
 def idaWebOrder(driver, orderName):
@@ -733,7 +869,12 @@ def scrapeIdawebInventory(driver):
 
     return inventoryDf
 
-# ['ld1_2021-04-15_17:17:12', 'ld2_2021-04-15_17:17:12', 'ld1_2021-04-15_17:19:52', 'ld2_2021-04-15_17:19:52', 'td1_2021-04-15_17:24:08', 'td2_2021-04-15_17:24:08', 'td3_2021-04-15_17:24:08', 'td4_2021-04-15_17:24:08', 'td5_2021-04-15_17:24:08']
+
+def idaWebOrderPortal(driver):
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[7]/a').click()
+
+
 def scrapeIdawebOrders(driver):
     """ Scrape made orders
 
@@ -744,8 +885,11 @@ def scrapeIdawebOrders(driver):
         df: Dataframe containing all orders
     """
 
-    # TODO join to made order and only download the new ones
-    # TODO if not available wait a few min
+    orderUrl = "https://gate.meteoswiss.ch/idaweb/system/ordersList.do"
+    if driver.current_url != orderUrl:
+        scrape_idaweb_login(driver)
+        idaWebOrderPortal(driver)
+
     rowHeaders = [
         "no",
         "reference",
@@ -777,5 +921,8 @@ def scrapeIdawebOrders(driver):
         lastPageBool = getLastPageBool(driver, lastPageBool)
 
     orderDf = pd.DataFrame(data=orderDataList)
+    driver.find_element_by_xpath(
+        '//*[@id="body_block"]/form/div[5]/a[@title="First page"]'
+    ).click()
 
     return orderDf

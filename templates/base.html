@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper grey darken-3">
+            <a href="/admin/" class="brand-logo">Klima API</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li {% if active_page == "admin" %} class="active"{% endif%}><a href="/admin/">Admin</a></li>
+                <li {% if active_page == "tables" %} class="active"{% endif%}><a href="/admin/tables">Tables</a></li>
+                <li {% if active_page == "source" %} class="active"{% endif%}><a href="/admin/source">Data source</a></li>
+                <li {% if active_page == "status" %} class="active"{% endif%}><a href="/admin/status">Data status</a></li>
+                <li {% if active_page == "tests" %} class="active"{% endif%}><a href="/admin/tests">Tests</a></li>
+                <li {% if active_page == "doc" %} class="active"{% endif%}><a href="/admin/doc">Help / Doc</a></li>
+                <li {% if active_page == "errors" %} class="active"{% endif%}><a id="error" class="right" href="/admin/errors">Errors</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        {% block container %}{% endblock %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,580 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94074
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94074_ALT_rhh150mx_1_data.txt     Data      Altdorf                              Precipitation; maximum total per hour of the month          198012-200811
+order_94074_ALT_rhh150mx_1_legend.txt   Legend    Altdorf                              Precipitation; maximum total per hour of the month          198012-200811
+order_94074_ALT_rhh150mx_2_data.txt     Data      Altdorf                              Precipitation; maximum total per hour of the month          200812-201411
+order_94074_ALT_rhh150mx_2_legend.txt   Legend    Altdorf                              Precipitation; maximum total per hour of the month          200812-201411
+order_94074_ALT_rhh150mx_3_data.txt     Data      Altdorf                              Precipitation; maximum total per hour of the month          201412-201708
+order_94074_ALT_rhh150mx_3_legend.txt   Legend    Altdorf                              Precipitation; maximum total per hour of the month          201412-201708
+order_94074_ALT_rhh150mx_4_data.txt     Data      Altdorf                              Precipitation; maximum total per hour of the month          201709-201711
+order_94074_ALT_rhh150mx_4_legend.txt   Legend    Altdorf                              Precipitation; maximum total per hour of the month          201709-201711
+order_94074_ALT_rhh150mx_5_data.txt     Data      Altdorf                              Precipitation; maximum total per hour of the month          201712-202103
+order_94074_ALT_rhh150mx_5_legend.txt   Legend    Altdorf                              Precipitation; maximum total per hour of the month          201712-202103
+order_94074_TGARE_rhh150mx_1_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201008-201107
+order_94074_TGARE_rhh150mx_1_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201008-201107
+order_94074_TGARE_rhh150mx_2_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201108-201112
+order_94074_TGARE_rhh150mx_2_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201108-201112
+order_94074_TGARE_rhh150mx_3_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201201-201211
+order_94074_TGARE_rhh150mx_3_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201201-201211
+order_94074_TGARE_rhh150mx_4_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201212-201303
+order_94074_TGARE_rhh150mx_4_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201212-201303
+order_94074_TGARE_rhh150mx_5_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGARE_rhh150mx_5_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGARE_rhh150mx_6_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201307-201308
+order_94074_TGARE_rhh150mx_6_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201307-201308
+order_94074_TGARE_rhh150mx_7_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201401-201404
+order_94074_TGARE_rhh150mx_7_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201401-201404
+order_94074_TGARE_rhh150mx_8_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGARE_rhh150mx_8_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGARE_rhh150mx_9_data.txt   Data      Arenenberg                           Precipitation; maximum total per hour of the month          201408-201504
+order_94074_TGARE_rhh150mx_9_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201408-201504
+order_94074_TGARE_rhh150mx_10_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201508-201703
+order_94074_TGARE_rhh150mx_10_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201508-201703
+order_94074_TGARE_rhh150mx_11_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201704-201707
+order_94074_TGARE_rhh150mx_11_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201704-201707
+order_94074_TGARE_rhh150mx_12_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201708-201712
+order_94074_TGARE_rhh150mx_12_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201708-201712
+order_94074_TGARE_rhh150mx_13_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201801-201811
+order_94074_TGARE_rhh150mx_13_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201801-201811
+order_94074_TGARE_rhh150mx_14_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201901-201910
+order_94074_TGARE_rhh150mx_14_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201901-201910
+order_94074_TGARE_rhh150mx_15_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          201911-202005
+order_94074_TGARE_rhh150mx_15_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          201911-202005
+order_94074_TGARE_rhh150mx_16_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          202007-202008
+order_94074_TGARE_rhh150mx_16_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          202007-202008
+order_94074_TGARE_rhh150mx_17_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          202009-202011
+order_94074_TGARE_rhh150mx_17_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          202009-202011
+order_94074_TGARE_rhh150mx_18_data.txt  Data      Arenenberg                           Precipitation; maximum total per hour of the month          202012-202103
+order_94074_TGARE_rhh150mx_18_legend.txt Legend    Arenenberg                           Precipitation; maximum total per hour of the month          202012-202103
+order_94074_DLAUG_rhh150mx_1_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          199701-199708
+order_94074_DLAUG_rhh150mx_1_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          199701-199708
+order_94074_DLAUG_rhh150mx_2_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          199709-199801
+order_94074_DLAUG_rhh150mx_2_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          199709-199801
+order_94074_DLAUG_rhh150mx_3_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          199809-199810
+order_94074_DLAUG_rhh150mx_3_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          199809-199810
+order_94074_DLAUG_rhh150mx_4_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          199812-200011
+order_94074_DLAUG_rhh150mx_4_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          199812-200011
+order_94074_DLAUG_rhh150mx_5_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLAUG_rhh150mx_5_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLAUG_rhh150mx_6_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          200104-201604
+order_94074_DLAUG_rhh150mx_6_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          200104-201604
+order_94074_DLAUG_rhh150mx_7_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          201605-201607
+order_94074_DLAUG_rhh150mx_7_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          201605-201607
+order_94074_DLAUG_rhh150mx_8_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          201608-201705
+order_94074_DLAUG_rhh150mx_8_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          201608-201705
+order_94074_DLAUG_rhh150mx_9_data.txt   Data      Augsburg                             Precipitation; maximum total per hour of the month          201707-201804
+order_94074_DLAUG_rhh150mx_9_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          201707-201804
+order_94074_DLAUG_rhh150mx_10_data.txt  Data      Augsburg                             Precipitation; maximum total per hour of the month          201805-202103
+order_94074_DLAUG_rhh150mx_10_legend.txt Legend    Augsburg                             Precipitation; maximum total per hour of the month          201805-202103
+order_94074_VDARP_rhh150mx_1_data.txt   Data      Avenches / IENA                      Precipitation; maximum total per hour of the month          201212-201901
+order_94074_VDARP_rhh150mx_1_legend.txt Legend    Avenches / IENA                      Precipitation; maximum total per hour of the month          201212-201901
+order_94074_VDAVS_rhh150mx_1_data.txt   Data      Bex / Avançon                        Precipitation; maximum total per hour of the month          201212-201901
+order_94074_VDAVS_rhh150mx_1_legend.txt Legend    Bex / Avançon                        Precipitation; maximum total per hour of the month          201212-201901
+order_94074_BEBIL_rhh150mx_1_data.txt   Data      Biel / Bözingen                      Precipitation; maximum total per hour of the month          200207-201403
+order_94074_BEBIL_rhh150mx_1_legend.txt Legend    Biel / Bözingen                      Precipitation; maximum total per hour of the month          200207-201403
+order_94074_ZHBID_rhh150mx_1_data.txt   Data      Birmensdorf                          Precipitation; maximum total per hour of the month          200311-202103
+order_94074_ZHBID_rhh150mx_1_legend.txt Legend    Birmensdorf                          Precipitation; maximum total per hour of the month          200311-202103
+order_94074_DLBUC_rhh150mx_1_data.txt   Data      Buchenbach                           Precipitation; maximum total per hour of the month          200406-201906
+order_94074_DLBUC_rhh150mx_1_legend.txt Legend    Buchenbach                           Precipitation; maximum total per hour of the month          200406-201906
+order_94074_DLBUC_rhh150mx_2_data.txt   Data      Buchenbach                           Precipitation; maximum total per hour of the month          201907-202103
+order_94074_DLBUC_rhh150mx_2_legend.txt Legend    Buchenbach                           Precipitation; maximum total per hour of the month          201907-202103
+order_94074_TICAM_rhh150mx_1_data.txt   Data      Camignolo                            Precipitation; maximum total per hour of the month          200910-201012
+order_94074_TICAM_rhh150mx_1_legend.txt Legend    Camignolo                            Precipitation; maximum total per hour of the month          200910-201012
+order_94074_TICAM_rhh150mx_2_data.txt   Data      Camignolo                            Precipitation; maximum total per hour of the month          201101-201109
+order_94074_TICAM_rhh150mx_2_legend.txt Legend    Camignolo                            Precipitation; maximum total per hour of the month          201101-201109
+order_94074_TICAM_rhh150mx_3_data.txt   Data      Camignolo                            Precipitation; maximum total per hour of the month          201111-201604
+order_94074_TICAM_rhh150mx_3_legend.txt Legend    Camignolo                            Precipitation; maximum total per hour of the month          201111-201604
+order_94074_TICAM_rhh150mx_4_data.txt   Data      Camignolo                            Precipitation; maximum total per hour of the month          201606-201803
+order_94074_TICAM_rhh150mx_4_legend.txt Legend    Camignolo                            Precipitation; maximum total per hour of the month          201606-201803
+order_94074_TICAM_rhh150mx_5_data.txt   Data      Camignolo                            Precipitation; maximum total per hour of the month          201804-202103
+order_94074_TICAM_rhh150mx_5_legend.txt Legend    Camignolo                            Precipitation; maximum total per hour of the month          201804-202103
+order_94074_TIBIG_rhh150mx_1_data.txt   Data      Cavergno Bignasco                    Precipitation; maximum total per hour of the month          200402-201612
+order_94074_TIBIG_rhh150mx_1_legend.txt Legend    Cavergno Bignasco                    Precipitation; maximum total per hour of the month          200402-201612
+order_94074_TIBIG_rhh150mx_2_data.txt   Data      Cavergno Bignasco                    Precipitation; maximum total per hour of the month          201701-201705
+order_94074_TIBIG_rhh150mx_2_legend.txt Legend    Cavergno Bignasco                    Precipitation; maximum total per hour of the month          201701-201705
+order_94074_TIBIG_rhh150mx_3_data.txt   Data      Cavergno Bignasco                    Precipitation; maximum total per hour of the month          201706-202005
+order_94074_TIBIG_rhh150mx_3_legend.txt Legend    Cavergno Bignasco                    Precipitation; maximum total per hour of the month          201706-202005
+order_94074_TIBIG_rhh150mx_4_data.txt   Data      Cavergno Bignasco                    Precipitation; maximum total per hour of the month          202006-202102
+order_94074_TIBIG_rhh150mx_4_legend.txt Legend    Cavergno Bignasco                    Precipitation; maximum total per hour of the month          202006-202102
+order_94074_CHZ_rhh150mx_1_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199306-199307
+order_94074_CHZ_rhh150mx_1_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199306-199307
+order_94074_CHZ_rhh150mx_2_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199310-199401
+order_94074_CHZ_rhh150mx_2_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199310-199401
+order_94074_CHZ_rhh150mx_3_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199403-199405
+order_94074_CHZ_rhh150mx_3_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199403-199405
+order_94074_CHZ_rhh150mx_4_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199407-199408
+order_94074_CHZ_rhh150mx_4_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199407-199408
+order_94074_CHZ_rhh150mx_5_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199409-199506
+order_94074_CHZ_rhh150mx_5_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199409-199506
+order_94074_CHZ_rhh150mx_6_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199507-199604
+order_94074_CHZ_rhh150mx_6_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199507-199604
+order_94074_CHZ_rhh150mx_7_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199606-199810
+order_94074_CHZ_rhh150mx_7_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199606-199810
+order_94074_CHZ_rhh150mx_8_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199811-199905
+order_94074_CHZ_rhh150mx_8_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199811-199905
+order_94074_CHZ_rhh150mx_9_data.txt     Data      Cham                                 Precipitation; maximum total per hour of the month          199906-199911
+order_94074_CHZ_rhh150mx_9_legend.txt   Legend    Cham                                 Precipitation; maximum total per hour of the month          199906-199911
+order_94074_CHZ_rhh150mx_10_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          199912-200002
+order_94074_CHZ_rhh150mx_10_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          199912-200002
+order_94074_CHZ_rhh150mx_11_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          200006-200010
+order_94074_CHZ_rhh150mx_11_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          200006-200010
+order_94074_CHZ_rhh150mx_12_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          200011-200811
+order_94074_CHZ_rhh150mx_12_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          200011-200811
+order_94074_CHZ_rhh150mx_13_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          200812-201403
+order_94074_CHZ_rhh150mx_13_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          200812-201403
+order_94074_CHZ_rhh150mx_14_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          201406-201904
+order_94074_CHZ_rhh150mx_14_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          201406-201904
+order_94074_CHZ_rhh150mx_15_data.txt    Data      Cham                                 Precipitation; maximum total per hour of the month          201905-202103
+order_94074_CHZ_rhh150mx_15_legend.txt  Legend    Cham                                 Precipitation; maximum total per hour of the month          201905-202103
+order_94074_TICOM_rhh150mx_1_data.txt   Data      Comano                               Precipitation; maximum total per hour of the month          200910-201012
+order_94074_TICOM_rhh150mx_1_legend.txt Legend    Comano                               Precipitation; maximum total per hour of the month          200910-201012
+order_94074_TICOM_rhh150mx_2_data.txt   Data      Comano                               Precipitation; maximum total per hour of the month          201101-201604
+order_94074_TICOM_rhh150mx_2_legend.txt Legend    Comano                               Precipitation; maximum total per hour of the month          201101-201604
+order_94074_DEM_rhh150mx_1_data.txt     Data      Delémont                             Precipitation; maximum total per hour of the month          201208-202103
+order_94074_DEM_rhh150mx_1_legend.txt   Legend    Delémont                             Precipitation; maximum total per hour of the month          201208-202103
+order_94074_DLELZ_rhh150mx_1_data.txt   Data      Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          200407-201211
+order_94074_DLELZ_rhh150mx_1_legend.txt Legend    Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          200407-201211
+order_94074_DLELZ_rhh150mx_2_data.txt   Data      Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          201212-201909
+order_94074_DLELZ_rhh150mx_2_legend.txt Legend    Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          201212-201909
+order_94074_DLELZ_rhh150mx_3_data.txt   Data      Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          201910-202103
+order_94074_DLELZ_rhh150mx_3_legend.txt Legend    Elzach / Fisnacht                    Precipitation; maximum total per hour of the month          201910-202103
+order_94074_DLFRH_rhh150mx_1_data.txt   Data      Friedrichshafen / Unterraderach      Precipitation; maximum total per hour of the month          200301-200403
+order_94074_DLFRH_rhh150mx_1_legend.txt Legend    Friedrichshafen / Unterraderach      Precipitation; maximum total per hour of the month          200301-200403
+order_94074_DLFRH_rhh150mx_2_data.txt   Data      Friedrichshafen / Unterraderach      Precipitation; maximum total per hour of the month          200404-202103
+order_94074_DLFRH_rhh150mx_2_legend.txt Legend    Friedrichshafen / Unterraderach      Precipitation; maximum total per hour of the month          200404-202103
+order_94074_VDFEC_rhh150mx_1_data.txt   Data      Féchy                                Precipitation; maximum total per hour of the month          201212-202103
+order_94074_VDFEC_rhh150mx_1_legend.txt Legend    Féchy                                Precipitation; maximum total per hour of the month          201212-202103
+order_94074_SOGER_rhh150mx_1_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          200301-201311
+order_94074_SOGER_rhh150mx_1_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          200301-201311
+order_94074_SOGER_rhh150mx_2_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          201401-201402
+order_94074_SOGER_rhh150mx_2_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          201401-201402
+order_94074_SOGER_rhh150mx_3_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          201404-201408
+order_94074_SOGER_rhh150mx_3_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          201404-201408
+order_94074_SOGER_rhh150mx_4_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          201409-201410
+order_94074_SOGER_rhh150mx_4_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          201409-201410
+order_94074_SOGER_rhh150mx_5_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          201502-201503
+order_94074_SOGER_rhh150mx_5_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          201502-201503
+order_94074_SOGER_rhh150mx_6_data.txt   Data      Gerlafingen                          Precipitation; maximum total per hour of the month          201505-201508
+order_94074_SOGER_rhh150mx_6_legend.txt Legend    Gerlafingen                          Precipitation; maximum total per hour of the month          201505-201508
+order_94074_DLGTT_rhh150mx_1_data.txt   Data      Gottmadingen                         Precipitation; maximum total per hour of the month          202102-202103
+order_94074_DLGTT_rhh150mx_1_legend.txt Legend    Gottmadingen                         Precipitation; maximum total per hour of the month          202102-202103
+order_94074_GUT_rhh150mx_1_data.txt     Data      Güttingen                            Precipitation; maximum total per hour of the month          198012-200504
+order_94074_GUT_rhh150mx_1_legend.txt   Legend    Güttingen                            Precipitation; maximum total per hour of the month          198012-200504
+order_94074_GUT_rhh150mx_2_data.txt     Data      Güttingen                            Precipitation; maximum total per hour of the month          200505-201406
+order_94074_GUT_rhh150mx_2_legend.txt   Legend    Güttingen                            Precipitation; maximum total per hour of the month          200505-201406
+order_94074_GUT_rhh150mx_3_data.txt     Data      Güttingen                            Precipitation; maximum total per hour of the month          201407-201906
+order_94074_GUT_rhh150mx_3_legend.txt   Legend    Güttingen                            Precipitation; maximum total per hour of the month          201407-201906
+order_94074_GUT_rhh150mx_4_data.txt     Data      Güttingen                            Precipitation; maximum total per hour of the month          201907-202005
+order_94074_GUT_rhh150mx_4_legend.txt   Legend    Güttingen                            Precipitation; maximum total per hour of the month          201907-202005
+order_94074_GUT_rhh150mx_5_data.txt     Data      Güttingen                            Precipitation; maximum total per hour of the month          202006-202103
+order_94074_GUT_rhh150mx_5_legend.txt   Legend    Güttingen                            Precipitation; maximum total per hour of the month          202006-202103
+order_94074_DLHEM_rhh150mx_1_data.txt   Data      Hermaringen                          Precipitation; maximum total per hour of the month          200508-202103
+order_94074_DLHEM_rhh150mx_1_legend.txt Legend    Hermaringen                          Precipitation; maximum total per hour of the month          200508-202103
+order_94074_BEINS_rhh150mx_1_data.txt   Data      Ins                                  Precipitation; maximum total per hour of the month          199908-201312
+order_94074_BEINS_rhh150mx_1_legend.txt Legend    Ins                                  Precipitation; maximum total per hour of the month          199908-201312
+order_94074_BEINS_rhh150mx_2_data.txt   Data      Ins                                  Precipitation; maximum total per hour of the month          201402-201403
+order_94074_BEINS_rhh150mx_2_legend.txt Legend    Ins                                  Precipitation; maximum total per hour of the month          201402-201403
+order_94074_BEINS_rhh150mx_3_data.txt   Data      Ins                                  Precipitation; maximum total per hour of the month          201410-202103
+order_94074_BEINS_rhh150mx_3_legend.txt Legend    Ins                                  Precipitation; maximum total per hour of the month          201410-202103
+order_94074_MBISL_rhh150mx_1_data.txt   Data      Isleten                              Precipitation; maximum total per hour of the month          201504-201506
+order_94074_MBISL_rhh150mx_1_legend.txt Legend    Isleten                              Precipitation; maximum total per hour of the month          201504-201506
+order_94074_MBISL_rhh150mx_2_data.txt   Data      Isleten                              Precipitation; maximum total per hour of the month          201507-201508
+order_94074_MBISL_rhh150mx_2_legend.txt Legend    Isleten                              Precipitation; maximum total per hour of the month          201507-201508
+order_94074_TGKAL_rhh150mx_1_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201008-201009
+order_94074_TGKAL_rhh150mx_1_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201008-201009
+order_94074_TGKAL_rhh150mx_2_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201010-201107
+order_94074_TGKAL_rhh150mx_2_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201010-201107
+order_94074_TGKAL_rhh150mx_3_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201108-201110
+order_94074_TGKAL_rhh150mx_3_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201108-201110
+order_94074_TGKAL_rhh150mx_4_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201111-201209
+order_94074_TGKAL_rhh150mx_4_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201111-201209
+order_94074_TGKAL_rhh150mx_5_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201212-201303
+order_94074_TGKAL_rhh150mx_5_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201212-201303
+order_94074_TGKAL_rhh150mx_6_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGKAL_rhh150mx_6_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGKAL_rhh150mx_7_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201307-201308
+order_94074_TGKAL_rhh150mx_7_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201307-201308
+order_94074_TGKAL_rhh150mx_8_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201309-201404
+order_94074_TGKAL_rhh150mx_8_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201309-201404
+order_94074_TGKAL_rhh150mx_9_data.txt   Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGKAL_rhh150mx_9_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGKAL_rhh150mx_10_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201411-201504
+order_94074_TGKAL_rhh150mx_10_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201411-201504
+order_94074_TGKAL_rhh150mx_11_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201508-201512
+order_94074_TGKAL_rhh150mx_11_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201508-201512
+order_94074_TGKAL_rhh150mx_12_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201601-201604
+order_94074_TGKAL_rhh150mx_12_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201601-201604
+order_94074_TGKAL_rhh150mx_13_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201605-201703
+order_94074_TGKAL_rhh150mx_13_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201605-201703
+order_94074_TGKAL_rhh150mx_14_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201704-201707
+order_94074_TGKAL_rhh150mx_14_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201704-201707
+order_94074_TGKAL_rhh150mx_15_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201708-201808
+order_94074_TGKAL_rhh150mx_15_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201708-201808
+order_94074_TGKAL_rhh150mx_16_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201809-201811
+order_94074_TGKAL_rhh150mx_16_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201809-201811
+order_94074_TGKAL_rhh150mx_17_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          201812-202011
+order_94074_TGKAL_rhh150mx_17_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          201812-202011
+order_94074_TGKAL_rhh150mx_18_data.txt  Data      Kaltenbach                           Precipitation; maximum total per hour of the month          202012-202103
+order_94074_TGKAL_rhh150mx_18_legend.txt Legend    Kaltenbach                           Precipitation; maximum total per hour of the month          202012-202103
+order_94074_BEKAP_rhh150mx_1_data.txt   Data      Kappelen                             Precipitation; maximum total per hour of the month          199606-202004
+order_94074_BEKAP_rhh150mx_1_legend.txt Legend    Kappelen                             Precipitation; maximum total per hour of the month          199606-202004
+order_94074_DLKON_rhh150mx_1_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          199508-199604
+order_94074_DLKON_rhh150mx_1_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          199508-199604
+order_94074_DLKON_rhh150mx_2_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          199605-199707
+order_94074_DLKON_rhh150mx_2_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          199605-199707
+order_94074_DLKON_rhh150mx_3_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          199709-199710
+order_94074_DLKON_rhh150mx_3_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          199709-199710
+order_94074_DLKON_rhh150mx_4_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          199801-200003
+order_94074_DLKON_rhh150mx_4_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          199801-200003
+order_94074_DLKON_rhh150mx_5_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          200004-200011
+order_94074_DLKON_rhh150mx_5_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          200004-200011
+order_94074_DLKON_rhh150mx_6_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLKON_rhh150mx_6_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLKON_rhh150mx_7_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          200104-200307
+order_94074_DLKON_rhh150mx_7_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          200104-200307
+order_94074_DLKON_rhh150mx_8_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          200308-201708
+order_94074_DLKON_rhh150mx_8_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          200308-201708
+order_94074_DLKON_rhh150mx_9_data.txt   Data      Konstanz                             Precipitation; maximum total per hour of the month          201709-201911
+order_94074_DLKON_rhh150mx_9_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          201709-201911
+order_94074_DLKON_rhh150mx_10_data.txt  Data      Konstanz                             Precipitation; maximum total per hour of the month          201912-202103
+order_94074_DLKON_rhh150mx_10_legend.txt Legend    Konstanz                             Precipitation; maximum total per hour of the month          201912-202103
+order_94074_LAC_rhh150mx_1_data.txt     Data      Lachen / Galgenen                    Precipitation; maximum total per hour of the month          201510-202005
+order_94074_LAC_rhh150mx_1_legend.txt   Legend    Lachen / Galgenen                    Precipitation; maximum total per hour of the month          201510-202005
+order_94074_LAC_rhh150mx_2_data.txt     Data      Lachen / Galgenen                    Precipitation; maximum total per hour of the month          202006-202103
+order_94074_LAC_rhh150mx_2_legend.txt   Legend    Lachen / Galgenen                    Precipitation; maximum total per hour of the month          202006-202103
+order_94074_BELAT_rhh150mx_1_data.txt   Data      Langenthal                           Precipitation; maximum total per hour of the month          199606-201403
+order_94074_BELAT_rhh150mx_1_legend.txt Legend    Langenthal                           Precipitation; maximum total per hour of the month          199606-201403
+order_94074_BELAT_rhh150mx_2_data.txt   Data      Langenthal                           Precipitation; maximum total per hour of the month          201409-201410
+order_94074_BELAT_rhh150mx_2_legend.txt Legend    Langenthal                           Precipitation; maximum total per hour of the month          201409-201410
+order_94074_TGLOM_rhh150mx_1_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201008-201009
+order_94074_TGLOM_rhh150mx_1_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201008-201009
+order_94074_TGLOM_rhh150mx_2_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201010-201104
+order_94074_TGLOM_rhh150mx_2_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201010-201104
+order_94074_TGLOM_rhh150mx_3_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201105-201106
+order_94074_TGLOM_rhh150mx_3_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201105-201106
+order_94074_TGLOM_rhh150mx_4_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201108-201209
+order_94074_TGLOM_rhh150mx_4_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201108-201209
+order_94074_TGLOM_rhh150mx_5_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201210-201303
+order_94074_TGLOM_rhh150mx_5_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201210-201303
+order_94074_TGLOM_rhh150mx_6_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGLOM_rhh150mx_6_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201304-201306
+order_94074_TGLOM_rhh150mx_7_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201309-201404
+order_94074_TGLOM_rhh150mx_7_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201309-201404
+order_94074_TGLOM_rhh150mx_8_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGLOM_rhh150mx_8_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201405-201407
+order_94074_TGLOM_rhh150mx_9_data.txt   Data      Lommis                               Precipitation; maximum total per hour of the month          201408-201503
+order_94074_TGLOM_rhh150mx_9_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201408-201503
+order_94074_TGLOM_rhh150mx_10_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          201508-201512
+order_94074_TGLOM_rhh150mx_10_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201508-201512
+order_94074_TGLOM_rhh150mx_11_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          201601-201805
+order_94074_TGLOM_rhh150mx_11_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201601-201805
+order_94074_TGLOM_rhh150mx_12_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          201806-201810
+order_94074_TGLOM_rhh150mx_12_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201806-201810
+order_94074_TGLOM_rhh150mx_13_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          201812-202006
+order_94074_TGLOM_rhh150mx_13_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          201812-202006
+order_94074_TGLOM_rhh150mx_14_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          202007-202012
+order_94074_TGLOM_rhh150mx_14_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          202007-202012
+order_94074_TGLOM_rhh150mx_15_data.txt  Data      Lommis                               Precipitation; maximum total per hour of the month          202101-202103
+order_94074_TGLOM_rhh150mx_15_legend.txt Legend    Lommis                               Precipitation; maximum total per hour of the month          202101-202103
+order_94074_LUZ_rhh150mx_1_data.txt     Data      Luzern                               Precipitation; maximum total per hour of the month          198012-201003
+order_94074_LUZ_rhh150mx_1_legend.txt   Legend    Luzern                               Precipitation; maximum total per hour of the month          198012-201003
+order_94074_LUZ_rhh150mx_2_data.txt     Data      Luzern                               Precipitation; maximum total per hour of the month          201005-201208
+order_94074_LUZ_rhh150mx_2_legend.txt   Legend    Luzern                               Precipitation; maximum total per hour of the month          201005-201208
+order_94074_LUZ_rhh150mx_3_data.txt     Data      Luzern                               Precipitation; maximum total per hour of the month          201209-201606
+order_94074_LUZ_rhh150mx_3_legend.txt   Legend    Luzern                               Precipitation; maximum total per hour of the month          201209-201606
+order_94074_LUZ_rhh150mx_4_data.txt     Data      Luzern                               Precipitation; maximum total per hour of the month          201607-201903
+order_94074_LUZ_rhh150mx_4_legend.txt   Legend    Luzern                               Precipitation; maximum total per hour of the month          201607-201903
+order_94074_LUZ_rhh150mx_5_data.txt     Data      Luzern                               Precipitation; maximum total per hour of the month          201904-202103
+order_94074_LUZ_rhh150mx_5_legend.txt   Legend    Luzern                               Precipitation; maximum total per hour of the month          201904-202103
+order_94074_MAB_rhh150mx_1_data.txt     Data      Martigny                             Precipitation; maximum total per hour of the month          201603-201811
+order_94074_MAB_rhh150mx_1_legend.txt   Legend    Martigny                             Precipitation; maximum total per hour of the month          201603-201811
+order_94074_MAB_rhh150mx_2_data.txt     Data      Martigny                             Precipitation; maximum total per hour of the month          201812-202103
+order_94074_MAB_rhh150mx_2_legend.txt   Legend    Martigny                             Precipitation; maximum total per hour of the month          201812-202103
+order_94074_MAH_rhh150mx_1_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199208-199209
+order_94074_MAH_rhh150mx_1_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199208-199209
+order_94074_MAH_rhh150mx_2_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199211-199404
+order_94074_MAH_rhh150mx_2_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199211-199404
+order_94074_MAH_rhh150mx_3_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199405-199406
+order_94074_MAH_rhh150mx_3_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199405-199406
+order_94074_MAH_rhh150mx_4_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199407-199408
+order_94074_MAH_rhh150mx_4_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199407-199408
+order_94074_MAH_rhh150mx_5_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199409-199411
+order_94074_MAH_rhh150mx_5_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199409-199411
+order_94074_MAH_rhh150mx_6_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199412-199505
+order_94074_MAH_rhh150mx_6_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199412-199505
+order_94074_MAH_rhh150mx_7_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199506-199605
+order_94074_MAH_rhh150mx_7_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199506-199605
+order_94074_MAH_rhh150mx_8_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199611-199706
+order_94074_MAH_rhh150mx_8_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199611-199706
+order_94074_MAH_rhh150mx_9_data.txt     Data      Mathod                               Precipitation; maximum total per hour of the month          199707-199810
+order_94074_MAH_rhh150mx_9_legend.txt   Legend    Mathod                               Precipitation; maximum total per hour of the month          199707-199810
+order_94074_MAH_rhh150mx_10_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          199811-199905
+order_94074_MAH_rhh150mx_10_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          199811-199905
+order_94074_MAH_rhh150mx_11_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          199906-199907
+order_94074_MAH_rhh150mx_11_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          199906-199907
+order_94074_MAH_rhh150mx_12_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          199908-199911
+order_94074_MAH_rhh150mx_12_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          199908-199911
+order_94074_MAH_rhh150mx_13_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          199912-200002
+order_94074_MAH_rhh150mx_13_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          199912-200002
+order_94074_MAH_rhh150mx_14_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200006-200010
+order_94074_MAH_rhh150mx_14_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200006-200010
+order_94074_MAH_rhh150mx_15_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200011-200110
+order_94074_MAH_rhh150mx_15_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200011-200110
+order_94074_MAH_rhh150mx_16_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200202-200306
+order_94074_MAH_rhh150mx_16_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200202-200306
+order_94074_MAH_rhh150mx_17_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200308-200406
+order_94074_MAH_rhh150mx_17_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200308-200406
+order_94074_MAH_rhh150mx_18_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200407-200711
+order_94074_MAH_rhh150mx_18_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200407-200711
+order_94074_MAH_rhh150mx_19_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200712-200804
+order_94074_MAH_rhh150mx_19_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200712-200804
+order_94074_MAH_rhh150mx_20_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200805-200806
+order_94074_MAH_rhh150mx_20_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200805-200806
+order_94074_MAH_rhh150mx_21_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200807-200811
+order_94074_MAH_rhh150mx_21_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200807-200811
+order_94074_MAH_rhh150mx_22_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200812-200906
+order_94074_MAH_rhh150mx_22_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200812-200906
+order_94074_MAH_rhh150mx_23_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          200908-201006
+order_94074_MAH_rhh150mx_23_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          200908-201006
+order_94074_MAH_rhh150mx_24_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          201007-201209
+order_94074_MAH_rhh150mx_24_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          201007-201209
+order_94074_MAH_rhh150mx_25_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          201210-201305
+order_94074_MAH_rhh150mx_25_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          201210-201305
+order_94074_MAH_rhh150mx_26_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          201307-201904
+order_94074_MAH_rhh150mx_26_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          201307-201904
+order_94074_MAH_rhh150mx_27_data.txt    Data      Mathod                               Precipitation; maximum total per hour of the month          201905-202103
+order_94074_MAH_rhh150mx_27_legend.txt  Legend    Mathod                               Precipitation; maximum total per hour of the month          201905-202103
+order_94074_ZHMEM_rhh150mx_1_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200406-200411
+order_94074_ZHMEM_rhh150mx_1_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200406-200411
+order_94074_ZHMEM_rhh150mx_2_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200502-200511
+order_94074_ZHMEM_rhh150mx_2_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200502-200511
+order_94074_ZHMEM_rhh150mx_3_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200602-200611
+order_94074_ZHMEM_rhh150mx_3_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200602-200611
+order_94074_ZHMEM_rhh150mx_4_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200702-200711
+order_94074_ZHMEM_rhh150mx_4_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200702-200711
+order_94074_ZHMEM_rhh150mx_5_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200802-200811
+order_94074_ZHMEM_rhh150mx_5_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200802-200811
+order_94074_ZHMEM_rhh150mx_6_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          200902-202001
+order_94074_ZHMEM_rhh150mx_6_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          200902-202001
+order_94074_ZHMEM_rhh150mx_7_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          202003-202005
+order_94074_ZHMEM_rhh150mx_7_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          202003-202005
+order_94074_ZHMEM_rhh150mx_8_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          202006-202012
+order_94074_ZHMEM_rhh150mx_8_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          202006-202012
+order_94074_ZHMEM_rhh150mx_9_data.txt   Data      Mettmenstetten                       Precipitation; maximum total per hour of the month          202102-202103
+order_94074_ZHMEM_rhh150mx_9_legend.txt Legend    Mettmenstetten                       Precipitation; maximum total per hour of the month          202102-202103
+order_94074_DLMIC_rhh150mx_1_data.txt   Data      Michelstadt / Vielbrunn              Precipitation; maximum total per hour of the month          202008-202009
+order_94074_DLMIC_rhh150mx_1_legend.txt Legend    Michelstadt / Vielbrunn              Precipitation; maximum total per hour of the month          202008-202009
+order_94074_DLMIC_rhh150mx_2_data.txt   Data      Michelstadt / Vielbrunn              Precipitation; maximum total per hour of the month          202101-202102
+order_94074_DLMIC_rhh150mx_2_legend.txt Legend    Michelstadt / Vielbrunn              Precipitation; maximum total per hour of the month          202101-202102
+order_94074_GLMOL_rhh150mx_1_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201401-201404
+order_94074_GLMOL_rhh150mx_1_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201401-201404
+order_94074_GLMOL_rhh150mx_2_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201407-201412
+order_94074_GLMOL_rhh150mx_2_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201407-201412
+order_94074_GLMOL_rhh150mx_3_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201501-201506
+order_94074_GLMOL_rhh150mx_3_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201501-201506
+order_94074_GLMOL_rhh150mx_4_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201507-201509
+order_94074_GLMOL_rhh150mx_4_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201507-201509
+order_94074_GLMOL_rhh150mx_5_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201511-201802
+order_94074_GLMOL_rhh150mx_5_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201511-201802
+order_94074_GLMOL_rhh150mx_6_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201804-201807
+order_94074_GLMOL_rhh150mx_6_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201804-201807
+order_94074_GLMOL_rhh150mx_7_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201808-201901
+order_94074_GLMOL_rhh150mx_7_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201808-201901
+order_94074_GLMOL_rhh150mx_8_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201907-201911
+order_94074_GLMOL_rhh150mx_8_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201907-201911
+order_94074_GLMOL_rhh150mx_9_data.txt   Data      Mollis                               Precipitation; maximum total per hour of the month          201912-202006
+order_94074_GLMOL_rhh150mx_9_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          201912-202006
+order_94074_GLMOL_rhh150mx_10_data.txt  Data      Mollis                               Precipitation; maximum total per hour of the month          202007-202008
+order_94074_GLMOL_rhh150mx_10_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          202007-202008
+order_94074_GLMOL_rhh150mx_11_data.txt  Data      Mollis                               Precipitation; maximum total per hour of the month          202010-202012
+order_94074_GLMOL_rhh150mx_11_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          202010-202012
+order_94074_GLMOL_rhh150mx_12_data.txt  Data      Mollis                               Precipitation; maximum total per hour of the month          202101-202103
+order_94074_GLMOL_rhh150mx_12_legend.txt Legend    Mollis                               Precipitation; maximum total per hour of the month          202101-202103
+order_94074_MOA_rhh150mx_1_data.txt     Data      Mosen                                Precipitation; maximum total per hour of the month          201210-202103
+order_94074_MOA_rhh150mx_1_legend.txt   Legend    Mosen                                Precipitation; maximum total per hour of the month          201210-202103
+order_94074_ZHMON_rhh150mx_1_data.txt   Data      Mönchaltorf                          Precipitation; maximum total per hour of the month          200008-202007
+order_94074_ZHMON_rhh150mx_1_legend.txt Legend    Mönchaltorf                          Precipitation; maximum total per hour of the month          200008-202007
+order_94074_ZHMON_rhh150mx_2_data.txt   Data      Mönchaltorf                          Precipitation; maximum total per hour of the month          202008-202103
+order_94074_ZHMON_rhh150mx_2_legend.txt Legend    Mönchaltorf                          Precipitation; maximum total per hour of the month          202008-202103
+order_94074_DLMUN_rhh150mx_1_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199508-199603
+order_94074_DLMUN_rhh150mx_1_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199508-199603
+order_94074_DLMUN_rhh150mx_2_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199604-199709
+order_94074_DLMUN_rhh150mx_2_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199604-199709
+order_94074_DLMUN_rhh150mx_3_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199711-199712
+order_94074_DLMUN_rhh150mx_3_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199711-199712
+order_94074_DLMUN_rhh150mx_4_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199801-199802
+order_94074_DLMUN_rhh150mx_4_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199801-199802
+order_94074_DLMUN_rhh150mx_5_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199804-199808
+order_94074_DLMUN_rhh150mx_5_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199804-199808
+order_94074_DLMUN_rhh150mx_6_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          199809-200007
+order_94074_DLMUN_rhh150mx_6_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          199809-200007
+order_94074_DLMUN_rhh150mx_7_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200009-200011
+order_94074_DLMUN_rhh150mx_7_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200009-200011
+order_94074_DLMUN_rhh150mx_8_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLMUN_rhh150mx_8_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200012-200103
+order_94074_DLMUN_rhh150mx_9_data.txt   Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200104-200204
+order_94074_DLMUN_rhh150mx_9_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200104-200204
+order_94074_DLMUN_rhh150mx_10_data.txt  Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200205-200303
+order_94074_DLMUN_rhh150mx_10_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200205-200303
+order_94074_DLMUN_rhh150mx_11_data.txt  Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200304-200406
+order_94074_DLMUN_rhh150mx_11_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200304-200406
+order_94074_DLMUN_rhh150mx_12_data.txt  Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200407-200711
+order_94074_DLMUN_rhh150mx_12_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200407-200711
+order_94074_DLMUN_rhh150mx_13_data.txt  Data      München / Flughafen                  Precipitation; maximum total per hour of the month          200801-201212
+order_94074_DLMUN_rhh150mx_13_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          200801-201212
+order_94074_DLMUN_rhh150mx_14_data.txt  Data      München / Flughafen                  Precipitation; maximum total per hour of the month          201302-202103
+order_94074_DLMUN_rhh150mx_14_legend.txt Legend    München / Flughafen                  Precipitation; maximum total per hour of the month          201302-202103
+order_94074_WSLNEF_rhh150mx_1_data.txt  Data      Neunkirch Freiland                   Precipitation; maximum total per hour of the month          201801-201810
+order_94074_WSLNEF_rhh150mx_1_legend.txt Legend    Neunkirch Freiland                   Precipitation; maximum total per hour of the month          201801-201810
+order_94074_WSLNEF_rhh150mx_2_data.txt  Data      Neunkirch Freiland                   Precipitation; maximum total per hour of the month          201812-201907
+order_94074_WSLNEF_rhh150mx_2_legend.txt Legend    Neunkirch Freiland                   Precipitation; maximum total per hour of the month          201812-201907
+order_94074_WSLNEF_rhh150mx_3_data.txt  Data      Neunkirch Freiland                   Precipitation; maximum total per hour of the month          202002-202008
+order_94074_WSLNEF_rhh150mx_3_legend.txt Legend    Neunkirch Freiland                   Precipitation; maximum total per hour of the month          202002-202008
+order_94074_CGI_rhh150mx_1_data.txt     Data      Nyon / Changins                      Precipitation; maximum total per hour of the month          198012-202103
+order_94074_CGI_rhh150mx_1_legend.txt   Legend    Nyon / Changins                      Precipitation; maximum total per hour of the month          198012-202103
+order_94074_VDORN_rhh150mx_1_data.txt   Data      Orbe                                 Precipitation; maximum total per hour of the month          201308-202103
+order_94074_VDORN_rhh150mx_1_legend.txt Legend    Orbe                                 Precipitation; maximum total per hour of the month          201308-202103
+order_94074_VDNOC_rhh150mx_1_data.txt   Data      Orny / Nozon                         Precipitation; maximum total per hour of the month          201212-201901
+order_94074_VDNOC_rhh150mx_1_legend.txt Legend    Orny / Nozon                         Precipitation; maximum total per hour of the month          201212-201901
+order_94074_WSLOTF_rhh150mx_1_data.txt  Data      Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201712-201803
+order_94074_WSLOTF_rhh150mx_1_legend.txt Legend    Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201712-201803
+order_94074_WSLOTF_rhh150mx_2_data.txt  Data      Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201805-201809
+order_94074_WSLOTF_rhh150mx_2_legend.txt Legend    Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201805-201809
+order_94074_WSLOTF_rhh150mx_3_data.txt  Data      Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201810-201811
+order_94074_WSLOTF_rhh150mx_3_legend.txt Legend    Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201810-201811
+order_94074_WSLOTF_rhh150mx_4_data.txt  Data      Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201902-201907
+order_94074_WSLOTF_rhh150mx_4_legend.txt Legend    Othmarsingen Freiland                Precipitation; maximum total per hour of the month          201902-201907
+order_94074_WSLOTF_rhh150mx_5_data.txt  Data      Othmarsingen Freiland                Precipitation; maximum total per hour of the month          202002-202010
+order_94074_WSLOTF_rhh150mx_5_legend.txt Legend    Othmarsingen Freiland                Precipitation; maximum total per hour of the month          202002-202010
+order_94074_PUY_rhh150mx_1_data.txt     Data      Pully                                Precipitation; maximum total per hour of the month          198012-201106
+order_94074_PUY_rhh150mx_1_legend.txt   Legend    Pully                                Precipitation; maximum total per hour of the month          198012-201106
+order_94074_PUY_rhh150mx_2_data.txt     Data      Pully                                Precipitation; maximum total per hour of the month          201107-201507
+order_94074_PUY_rhh150mx_2_legend.txt   Legend    Pully                                Precipitation; maximum total per hour of the month          201107-201507
+order_94074_PUY_rhh150mx_3_data.txt     Data      Pully                                Precipitation; maximum total per hour of the month          201508-201609
+order_94074_PUY_rhh150mx_3_legend.txt   Legend    Pully                                Precipitation; maximum total per hour of the month          201508-201609
+order_94074_PUY_rhh150mx_4_data.txt     Data      Pully                                Precipitation; maximum total per hour of the month          201610-202103
+order_94074_PUY_rhh150mx_4_legend.txt   Legend    Pully                                Precipitation; maximum total per hour of the month          201610-202103
+order_94074_DLROS_rhh150mx_1_data.txt   Data      Rosenheim                            Precipitation; maximum total per hour of the month          200602-202103
+order_94074_DLROS_rhh150mx_1_legend.txt Legend    Rosenheim                            Precipitation; maximum total per hour of the month          200602-202103
+order_94074_ZHRAT_rhh150mx_1_data.txt   Data      Räterschen                           Precipitation; maximum total per hour of the month          200311-202103
+order_94074_ZHRAT_rhh150mx_1_legend.txt Legend    Räterschen                           Precipitation; maximum total per hour of the month          200311-202103
+order_94074_SAX_rhh150mx_1_data.txt     Data      Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201611-201612
+order_94074_SAX_rhh150mx_1_legend.txt   Legend    Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201611-201612
+order_94074_SAX_rhh150mx_2_data.txt     Data      Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201701-201811
+order_94074_SAX_rhh150mx_2_legend.txt   Legend    Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201701-201811
+order_94074_SAX_rhh150mx_3_data.txt     Data      Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201812-202103
+order_94074_SAX_rhh150mx_3_legend.txt   Legend    Salez / Saxerriet                    Precipitation; maximum total per hour of the month          201812-202103
+order_94074_GESAV_rhh150mx_1_data.txt   Data      Sauverny                             Precipitation; maximum total per hour of the month          200406-200709
+order_94074_GESAV_rhh150mx_1_legend.txt Legend    Sauverny                             Precipitation; maximum total per hour of the month          200406-200709
+order_94074_GESAV_rhh150mx_2_data.txt   Data      Sauverny                             Precipitation; maximum total per hour of the month          200710-200906
+order_94074_GESAV_rhh150mx_2_legend.txt Legend    Sauverny                             Precipitation; maximum total per hour of the month          200710-200906
+order_94074_GESAV_rhh150mx_3_data.txt   Data      Sauverny                             Precipitation; maximum total per hour of the month          200907-202103
+order_94074_GESAV_rhh150mx_3_legend.txt Legend    Sauverny                             Precipitation; maximum total per hour of the month          200907-202103
+order_94074_SUA_rhh150mx_1_data.txt     Data      Schaan                               Precipitation; maximum total per hour of the month          201603-201811
+order_94074_SUA_rhh150mx_1_legend.txt   Legend    Schaan                               Precipitation; maximum total per hour of the month          201603-201811
+order_94074_SUA_rhh150mx_2_data.txt     Data      Schaan                               Precipitation; maximum total per hour of the month          201812-202103
+order_94074_SUA_rhh150mx_2_legend.txt   Legend    Schaan                               Precipitation; maximum total per hour of the month          201812-202103
+order_94074_SHA_rhh150mx_1_data.txt     Data      Schaffhausen                         Precipitation; maximum total per hour of the month          198106-200812
+order_94074_SHA_rhh150mx_1_legend.txt   Legend    Schaffhausen                         Precipitation; maximum total per hour of the month          198106-200812
+order_94074_SHA_rhh150mx_2_data.txt     Data      Schaffhausen                         Precipitation; maximum total per hour of the month          200901-201404
+order_94074_SHA_rhh150mx_2_legend.txt   Legend    Schaffhausen                         Precipitation; maximum total per hour of the month          200901-201404
+order_94074_SHA_rhh150mx_3_data.txt     Data      Schaffhausen                         Precipitation; maximum total per hour of the month          201405-202103
+order_94074_SHA_rhh150mx_3_legend.txt   Legend    Schaffhausen                         Precipitation; maximum total per hour of the month          201405-202103
+order_94074_MMSSE_rhh150mx_1_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201210-201310
+order_94074_MMSSE_rhh150mx_1_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201210-201310
+order_94074_MMSSE_rhh150mx_2_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201311-201404
+order_94074_MMSSE_rhh150mx_2_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201311-201404
+order_94074_MMSSE_rhh150mx_3_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201405-201610
+order_94074_MMSSE_rhh150mx_3_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201405-201610
+order_94074_MMSSE_rhh150mx_4_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201611-201612
+order_94074_MMSSE_rhh150mx_4_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201611-201612
+order_94074_MMSSE_rhh150mx_5_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201701-201811
+order_94074_MMSSE_rhh150mx_5_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201701-201811
+order_94074_MMSSE_rhh150mx_6_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201812-202003
+order_94074_MMSSE_rhh150mx_6_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          201812-202003
+order_94074_MMSSE_rhh150mx_7_data.txt   Data      Schwyz / Seewen                      Precipitation; maximum total per hour of the month          202004-202103
+order_94074_MMSSE_rhh150mx_7_legend.txt Legend    Schwyz / Seewen                      Precipitation; maximum total per hour of the month          202004-202103
+order_94074_AGSNG_rhh150mx_1_data.txt   Data      Seengen                              Precipitation; maximum total per hour of the month          200007-202103
+order_94074_AGSNG_rhh150mx_1_legend.txt Legend    Seengen                              Precipitation; maximum total per hour of the month          200007-202103
+order_94074_SIE_rhh150mx_1_data.txt     Data      Siebnen                              Precipitation; maximum total per hour of the month          201602-201811
+order_94074_SIE_rhh150mx_1_legend.txt   Legend    Siebnen                              Precipitation; maximum total per hour of the month          201602-201811
+order_94074_SIE_rhh150mx_2_data.txt     Data      Siebnen                              Precipitation; maximum total per hour of the month          201812-202103
+order_94074_SIE_rhh150mx_2_legend.txt   Legend    Siebnen                              Precipitation; maximum total per hour of the month          201812-202103
+order_94074_DLSIN_rhh150mx_1_data.txt   Data      Singen                               Precipitation; maximum total per hour of the month          200406-201908
+order_94074_DLSIN_rhh150mx_1_legend.txt Legend    Singen                               Precipitation; maximum total per hour of the month          200406-201908
+order_94074_DLSIN_rhh150mx_2_data.txt   Data      Singen                               Precipitation; maximum total per hour of the month          201909-202103
+order_94074_DLSIN_rhh150mx_2_legend.txt Legend    Singen                               Precipitation; maximum total per hour of the month          201909-202103
+order_94074_MMSTA_rhh150mx_1_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201210-201310
+order_94074_MMSTA_rhh150mx_1_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201210-201310
+order_94074_MMSTA_rhh150mx_2_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201401-201404
+order_94074_MMSTA_rhh150mx_2_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201401-201404
+order_94074_MMSTA_rhh150mx_3_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201406-201604
+order_94074_MMSTA_rhh150mx_3_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201406-201604
+order_94074_MMSTA_rhh150mx_4_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201605-201612
+order_94074_MMSTA_rhh150mx_4_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201605-201612
+order_94074_MMSTA_rhh150mx_5_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201701-201707
+order_94074_MMSTA_rhh150mx_5_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201701-201707
+order_94074_MMSTA_rhh150mx_6_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201708-201804
+order_94074_MMSTA_rhh150mx_6_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201708-201804
+order_94074_MMSTA_rhh150mx_7_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201806-201811
+order_94074_MMSTA_rhh150mx_7_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201806-201811
+order_94074_MMSTA_rhh150mx_8_data.txt   Data      Stans                                Precipitation; maximum total per hour of the month          201812-202103
+order_94074_MMSTA_rhh150mx_8_legend.txt Legend    Stans                                Precipitation; maximum total per hour of the month          201812-202103
+order_94074_UNK_rhh150mx_1_data.txt     Data      Unterkulm                            Precipitation; maximum total per hour of the month          201212-201301
+order_94074_UNK_rhh150mx_1_legend.txt   Legend    Unterkulm                            Precipitation; maximum total per hour of the month          201212-201301
+order_94074_UNK_rhh150mx_2_data.txt     Data      Unterkulm                            Precipitation; maximum total per hour of the month          201303-201807
+order_94074_UNK_rhh150mx_2_legend.txt   Legend    Unterkulm                            Precipitation; maximum total per hour of the month          201303-201807
+order_94074_UNK_rhh150mx_3_data.txt     Data      Unterkulm                            Precipitation; maximum total per hour of the month          201808-201811
+order_94074_UNK_rhh150mx_3_legend.txt   Legend    Unterkulm                            Precipitation; maximum total per hour of the month          201808-201811
+order_94074_UNK_rhh150mx_4_data.txt     Data      Unterkulm                            Precipitation; maximum total per hour of the month          201812-201903
+order_94074_UNK_rhh150mx_4_legend.txt   Legend    Unterkulm                            Precipitation; maximum total per hour of the month          201812-201903
+order_94074_UNK_rhh150mx_5_data.txt     Data      Unterkulm                            Precipitation; maximum total per hour of the month          201905-202103
+order_94074_UNK_rhh150mx_5_legend.txt   Legend    Unterkulm                            Precipitation; maximum total per hour of the month          201905-202103
+order_94074_VAD_rhh150mx_1_data.txt     Data      Vaduz                                Precipitation; maximum total per hour of the month          198012-200905
+order_94074_VAD_rhh150mx_1_legend.txt   Legend    Vaduz                                Precipitation; maximum total per hour of the month          198012-200905
+order_94074_VAD_rhh150mx_2_data.txt     Data      Vaduz                                Precipitation; maximum total per hour of the month          200906-201403
+order_94074_VAD_rhh150mx_2_legend.txt   Legend    Vaduz                                Precipitation; maximum total per hour of the month          200906-201403
+order_94074_VAD_rhh150mx_3_data.txt     Data      Vaduz                                Precipitation; maximum total per hour of the month          201404-201405
+order_94074_VAD_rhh150mx_3_legend.txt   Legend    Vaduz                                Precipitation; maximum total per hour of the month          201404-201405
+order_94074_VAD_rhh150mx_4_data.txt     Data      Vaduz                                Precipitation; maximum total per hour of the month          201406-201411
+order_94074_VAD_rhh150mx_4_legend.txt   Legend    Vaduz                                Precipitation; maximum total per hour of the month          201406-201411
+order_94074_VAD_rhh150mx_5_data.txt     Data      Vaduz                                Precipitation; maximum total per hour of the month          201412-202103
+order_94074_VAD_rhh150mx_5_legend.txt   Legend    Vaduz                                Precipitation; maximum total per hour of the month          201412-202103
+order_94074_WAR_rhh150mx_1_data.txt     Data      Wartau                               Precipitation; maximum total per hour of the month          201602-201703
+order_94074_WAR_rhh150mx_1_legend.txt   Legend    Wartau                               Precipitation; maximum total per hour of the month          201602-201703
+order_94074_WAR_rhh150mx_2_data.txt     Data      Wartau                               Precipitation; maximum total per hour of the month          201704-201811
+order_94074_WAR_rhh150mx_2_legend.txt   Legend    Wartau                               Precipitation; maximum total per hour of the month          201704-201811
+order_94074_WAR_rhh150mx_3_data.txt     Data      Wartau                               Precipitation; maximum total per hour of the month          201812-202103
+order_94074_WAR_rhh150mx_3_legend.txt   Legend    Wartau                               Precipitation; maximum total per hour of the month          201812-202103
+order_94074_DLWED_rhh150mx_1_data.txt   Data      Weiden                               Precipitation; maximum total per hour of the month          202008-202009
+order_94074_DLWED_rhh150mx_1_legend.txt Legend    Weiden                               Precipitation; maximum total per hour of the month          202008-202009
+order_94074_DLWED_rhh150mx_2_data.txt   Data      Weiden                               Precipitation; maximum total per hour of the month          202010-202103
+order_94074_DLWED_rhh150mx_2_legend.txt Legend    Weiden                               Precipitation; maximum total per hour of the month          202010-202103
+order_94074_DLWEI_rhh150mx_1_data.txt   Data      Weingarten                           Precipitation; maximum total per hour of the month          200405-200410
+order_94074_DLWEI_rhh150mx_1_legend.txt Legend    Weingarten                           Precipitation; maximum total per hour of the month          200405-200410
+order_94074_DLWEI_rhh150mx_2_data.txt   Data      Weingarten                           Precipitation; maximum total per hour of the month          200411-201211
+order_94074_DLWEI_rhh150mx_2_legend.txt Legend    Weingarten                           Precipitation; maximum total per hour of the month          200411-201211
+order_94074_DLWEI_rhh150mx_3_data.txt   Data      Weingarten                           Precipitation; maximum total per hour of the month          201212-202103
+order_94074_DLWEI_rhh150mx_3_legend.txt Legend    Weingarten                           Precipitation; maximum total per hour of the month          201212-202103
+order_94074_DLWEG_rhh150mx_1_data.txt   Data      Weissenburg                          Precipitation; maximum total per hour of the month          202008-202103
+order_94074_DLWEG_rhh150mx_1_legend.txt Legend    Weissenburg                          Precipitation; maximum total per hour of the month          202008-202103
+order_94074_ZHWIN_rhh150mx_1_data.txt   Data      Winterthur                           Precipitation; maximum total per hour of the month          200512-202001
+order_94074_ZHWIN_rhh150mx_1_legend.txt Legend    Winterthur                           Precipitation; maximum total per hour of the month          200512-202001
+order_94074_ZHWIN_rhh150mx_2_data.txt   Data      Winterthur                           Precipitation; maximum total per hour of the month          202003-202012
+order_94074_ZHWIN_rhh150mx_2_legend.txt Legend    Winterthur                           Precipitation; maximum total per hour of the month          202003-202012
+order_94074_WIT_rhh150mx_1_data.txt     Data      Wittnau                              Precipitation; maximum total per hour of the month          201309-201312
+order_94074_WIT_rhh150mx_1_legend.txt   Legend    Wittnau                              Precipitation; maximum total per hour of the month          201309-201312
+order_94074_WIT_rhh150mx_2_data.txt     Data      Wittnau                              Precipitation; maximum total per hour of the month          201401-202103
+order_94074_WIT_rhh150mx_2_legend.txt   Legend    Wittnau                              Precipitation; maximum total per hour of the month          201401-202103
+order_94074_AGZOF_rhh150mx_1_data.txt   Data      Zofingen                             Precipitation; maximum total per hour of the month          202008-202103
+order_94074_AGZOF_rhh150mx_1_legend.txt Legend    Zofingen                             Precipitation; maximum total per hour of the month          202008-202103
+order_94074_ZWK_rhh150mx_1_data.txt     Data      Zwillikon                            Precipitation; maximum total per hour of the month          201608-202103
+order_94074_ZWK_rhh150mx_1_legend.txt   Legend    Zwillikon                            Precipitation; maximum total per hour of the month          201608-202103
+order_94074_REH_rhh150mx_1_data.txt     Data      Zürich / Affoltern                   Precipitation; maximum total per hour of the month          198012-202103
+order_94074_REH_rhh150mx_1_legend.txt   Legend    Zürich / Affoltern                   Precipitation; maximum total per hour of the month          198012-202103
