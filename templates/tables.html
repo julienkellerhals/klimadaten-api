@@ -156,6 +156,19 @@
                 getTablesStatus()
             }
 
+            function runScrapping(tableName) {
+                var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
+                stageReq(url)
+            }
+            function runInitialLoad() {
+                var url = "/admin/db/etl/stage"
+                stageReq(url)
+            }
+            function load(tableName) {
+                var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
+                coreReq(url)
+            }
+
             function streamTablesStatus() {
                 var tablesEventSource = new EventSource("/admin/stream/getTablesStatus");
                 var previousStatusCode = null
@@ -189,7 +202,17 @@
                                     bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
                                 }
                                 element.action.forEach(action => {
-                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                    if (action == "Run scrapping") {
+                                        bodyDiv.insertAdjacentHTML(
+                                            "beforeend",
+                                            "<a href='javascript:runScrapping(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a>"
+                                        )
+                                    } else if (action == "Initial load") {
+                                        bodyDiv.insertAdjacentHTML(
+                                            "beforeend",
+                                            "<a href='javascript:runInitialLoad()' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
+                                        )
+                                    }
                                 })
 
                                 li.appendChild(headerDiv)
@@ -212,7 +235,12 @@
                                     bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
                                 }
                                 element.action.forEach(action => {
-                                    bodyDiv.insertAdjacentHTML("beforeend", "<a class='waves-effect waves-light btn-small'>" + action + "</a>")
+                                    if (action == "Load") {
+                                        bodyDiv.insertAdjacentHTML(
+                                            "beforeend",
+                                            "<a href='javascript:load(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a>"
+                                        )
+                                    }
                                 })
 
                                 li.appendChild(headerDiv)
@@ -266,31 +294,48 @@
             <div id="stage">
                 <h1>Stage</h1>
                 <ul id="stageTableGroup" class="collapsible popout"></ul>
+                <a id="execScrapping" class="waves-effect waves-light btn-small right">Run scrapping</a>
                 <a id="execStageETL" class="waves-effect waves-light btn-small right">Stage ETL</a>
                 <script>
                     M.AutoInit();
 
-                    function runStageETL() {
+                    function stageReq(url) {
                         var stageDiv = document.getElementById("stage")
-
+    
                         var progress = document.createElement("div")
                         progress.classList.add("progress")
                         var progressBar = document.createElement("div")
                         progressBar.classList.add("indeterminate")
                         progress.appendChild(progressBar)
-
+    
                         stageDiv.insertBefore(progress, stageDiv.children[1])
-
-                        document.getElementById("execStageETL").classList.add("disabled")
-
+    
+                        var anchorlist = stageDiv.getElementsByTagName("a")
+                        Array.from(anchorlist).forEach(anchor => {
+                            anchor.classList.add("disabled")
+                        })
+    
                         var xhr = new XMLHttpRequest();
                         xhr.onload = () => {
                             stageDiv.children[1].remove()
-                            document.getElementById("execStageETL").classList.remove("disabled")
+                            Array.from(anchorlist).forEach(anchor => {
+                                anchor.classList.remove("disabled")
+                            })
                         }
-                        xhr.open("POST", "/admin/db/etl/stage", true);
+                        xhr.open("POST", url, true);
                         xhr.send()
                     }
+
+                    function runStageETL() {
+                        var url = "/admin/db/etl/stage"
+                        stageReq(url)
+                    }
+
+                    function runAllScrapping() {
+                        var url = "/admin/scrape/"
+                        stageReq(url)
+                    }
+                    document.getElementById("execScrapping").addEventListener("click", runAllScrapping)
                     document.getElementById("execStageETL").addEventListener("click", runStageETL)
                 </script>
             </div>
@@ -302,8 +347,7 @@
                 <a id="execCoreETL" class="waves-effect waves-light btn-small right">Core ETL</a>
                 <script>
                     M.AutoInit();
-
-                    function runCoreETL() {
+                    function coreReq(url) {
                         var coreDiv = document.getElementById("core")
 
                         var progress = document.createElement("div")
@@ -314,15 +358,25 @@
 
                         coreDiv.insertBefore(progress, coreDiv.children[1])
 
-                        document.getElementById("execCoreETL").classList.add("disabled")
+                        var anchorlist = coreDiv.getElementsByTagName("a")
+                        Array.from(anchorlist).forEach(anchor => {
+                            anchor.classList.add("disabled")
+                        })
 
                         var xhr = new XMLHttpRequest();
                         xhr.onload = () => {
                             coreDiv.children[1].remove()
-                            document.getElementById("execCoreETL").classList.remove("disabled")
+                            Array.from(anchorlist).forEach(anchor => {
+                                anchor.classList.remove("disabled")
+                            })
                         }
-                        xhr.open("POST", "/admin/db/etl/core", true);
+                        xhr.open("POST", url, true);
                         xhr.send()
+                    }
+
+                    function runCoreETL() {
+                        var url = "/admin/db/etl/core"
+                        coreReq(url)
                     }
                     document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
                 </script>
