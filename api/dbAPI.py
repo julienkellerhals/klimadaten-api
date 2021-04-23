@@ -1,4 +1,5 @@
 from flask import Blueprint
+import webscraping
 
 
 def constructBlueprint(announcer, instance, abstractDriver):
@@ -59,7 +60,21 @@ def constructBlueprint(announcer, instance, abstractDriver):
 
         instance.checkEngine()
         instance.idaWebStageETL()
-        return "Run Station parameter ETL"
+        return "Run Idaweb ETL"
+
+    @dbApi.route("/etl/stage/increment/idaweb", methods=["GET", "POST"])
+    def runIdawebIncrementStageETL():
+        engine = instance.getEngine()
+        driver = abstractDriver.getDriver()
+        paramRefreshDateDf = instance.getParameterRefreshDate()
+        if not paramRefreshDateDf.empty:
+            savedDocumentsDf = webscraping._scrape_idaweb(
+                driver,
+                engine,
+                paramRefreshDateDf
+            )
+            instance.idaWebStageETL(savedDocumentsDf)
+        return "Run Idaweb increment ETL"
 
     @dbApi.route("/etl/core", methods=["GET", "POST"])
     def runCoreETL():

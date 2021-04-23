@@ -164,6 +164,10 @@
                 var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
                 stageReq(url)
             }
+            function runIncrementLoad(tableName) {
+                var url = "/admin/db/etl/stage/increment/" + tableName.replaceAll("_t", "")
+                stageReq(url)
+            }
             function load(tableName) {
                 var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
                 coreReq(url)
@@ -198,22 +202,27 @@
 
                                 var bodyDiv = document.createElement("div")
                                 bodyDiv.classList.add("collapsible-body")
-                                if (element.lastRefresh != null) {
-                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
-                                }
                                 element.action.forEach(action => {
                                     if (action == "Run scrapping") {
                                         bodyDiv.insertAdjacentHTML(
                                             "beforeend",
-                                            "<a href='javascript:runScrapping(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a>"
+                                            "<div class='row'><a href='javascript:runScrapping(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a></div>"
                                         )
                                     } else if (action == "Initial load") {
                                         bodyDiv.insertAdjacentHTML(
                                             "beforeend",
-                                            "<a href='javascript:runInitialLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
+                                            "<div class='row'><a href='javascript:runInitialLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a></div>"
+                                        )
+                                    } else if (action == "Increment load") {
+                                        bodyDiv.insertAdjacentHTML(
+                                            "beforeend",
+                                            "<div class='row'><a href='javascript:runIncrementLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a></div>"
                                         )
                                     }
                                 })
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<div class='row'><span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span></div>")
+                                }
 
                                 li.appendChild(headerDiv)
                                 li.appendChild(bodyDiv)
@@ -231,17 +240,17 @@
 
                                 var bodyDiv = document.createElement("div")
                                 bodyDiv.classList.add("collapsible-body")
-                                if (element.lastRefresh != null) {
-                                    bodyDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span>")
-                                }
                                 element.action.forEach(action => {
                                     if (action == "Load") {
                                         bodyDiv.insertAdjacentHTML(
                                             "beforeend",
-                                            "<a href='javascript:load(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a>"
+                                            "<div class='row'><a href='javascript:load(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a></div>"
                                         )
                                     }
                                 })
+                                if (element.lastRefresh != null) {
+                                    bodyDiv.insertAdjacentHTML("beforeend", "<div class='row'><span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span></div>")
+                                }
 
                                 li.appendChild(headerDiv)
                                 li.appendChild(bodyDiv)
