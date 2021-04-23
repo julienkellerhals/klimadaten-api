@@ -218,6 +218,18 @@ class Database:
                     self.tablesStatusStream.format_sse(msgTxt)
                 )
 
+    def getParameterRefreshDate(self):
+        paramRefreshDateDf = pd.read_sql(
+            "SELECT "
+            "meas_name, "
+            "max(valid_from) AS valid_from "
+            "FROM core.measurements_t "
+            "WHERE source = 'IdaWeb' "
+            "GROUP BY meas_name",
+            self.engine
+        )
+        return paramRefreshDateDf
+
     def createDatabase(self):
         """ Creates database
         """
@@ -476,6 +488,8 @@ class Database:
         for config in configList:
             idaWebPartDf = pd.DataFrame()
             dataDir = Path.cwd() / "data"
+            if type(orderList) is pd.DataFrame:
+                orderList = orderList["no"]
             for order in orderList:
                 dataFiles = dataDir.glob(
                     "**/order_{}_*_{}_*_data.txt".format(order, config.text)
@@ -521,22 +535,22 @@ class Database:
                         value_name="meas_value"
                     )
                     idaWebPartDf = idaWebPartDf.append(dataFileDf)
-                validFromDf = idaWebPartDf.groupby(
-                    ["meas_name"]
-                ).agg(valid_from=("meas_date", np.max))
-                idaWebPartDf = idaWebPartDf.merge(
-                    validFromDf,
-                    on="meas_name",
-                    how="outer"
-                )
-                idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
-                idaWebPartDf.to_sql(
-                    'idaweb_t',
-                    self.engine,
-                    schema='stage',
-                    if_exists='append',
-                    index=False
-                )
+            validFromDf = idaWebPartDf.groupby(
+                ["meas_name"]
+            ).agg(valid_from=("meas_date", np.max))
+            idaWebPartDf = idaWebPartDf.merge(
+                validFromDf,
+                on="meas_name",
+                how="outer"
+            )
+            idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
+            idaWebPartDf.to_sql(
+                'idaweb_t',
+                self.engine,
+                schema='stage',
+                if_exists='append',
+                index=False
+            )
 
     def runCoreETL(self):
         self.runMeasurementsETL()

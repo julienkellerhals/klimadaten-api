@@ -66,19 +66,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
     def runIdawebIncrementStageETL():
         engine = instance.getEngine()
         driver = abstractDriver.getDriver()
-        lastRefreshQuery = \
-            "SELECT max(valid_from) FROM core.measurements_t " \
-            "WHERE source = 'idaweb'"
-        lastRefresh = engine.connect().execute(
-            lastRefreshQuery
-        ).first()[0]
-        if lastRefresh is not None:
-            savedDocuments = webscraping._scrape_idaweb(
+        paramRefreshDateDf = instance.getParameterRefreshDate()
+        if not paramRefreshDateDf.empty:
+            savedDocumentsDf = webscraping._scrape_idaweb(
                 driver,
                 engine,
-                lastRefresh
+                paramRefreshDateDf
             )
-            instance.idaWebStageETL(savedDocuments)
+            instance.idaWebStageETL(savedDocumentsDf)
         return "Run Idaweb increment ETL"
 
     @dbApi.route("/etl/core", methods=["GET", "POST"])
