@@ -324,7 +324,43 @@ class Database:
                 Column('meas_name', String, primary_key=True),
                 Column('meas_value', Float),
                 Column('source', String, primary_key=True),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='station_t',
+            schema='core'
+        ):
+            self.station_t = Table(
+                'station_t',
+                self.meta,
+                Column('station_short_name', String, primary_key=True),
+                Column('station_name', String, primary_key=True),
+                Column('parameter', String, primary_key=True),
+                Column('data_source', String, primary_key=True),
+                Column('longitude', String, primary_key=True),
+                Column('latitude', String, primary_key=True),
+                Column('coordinates_x', Integer, primary_key=True),
+                Column('coordinates_y', Integer, primary_key=True),
+                Column('elevation', Integer, primary_key=True),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='parameter_t',
+            schema='core'
+        ):
+            self.parameter_t = Table(
+                'parameter_t',
+                self.meta,
+                Column('parameter', String, primary_key=True),
+                Column('unit', String, primary_key=True),
+                Column('description', String, primary_key=True),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
@@ -581,6 +617,24 @@ class Database:
         )
         self.conn.execute(
             "DROP TABLE IF EXISTS core.temp_measurements_t;"
+        )
+
+    def stationCoreETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "INSERT INTO core.station_t " +
+            "SELECT * FROM stage.station_t " +
+            "ON CONFLICT DO NOTHING;"
+        )
+
+    def parameterCoreETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "INSERT INTO core.parameter_t " +
+            "SELECT * FROM stage.parameter_t " +
+            "ON CONFLICT DO NOTHING;"
         )
 
     def idawebCoreETL(self):
