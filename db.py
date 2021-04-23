@@ -1,3 +1,4 @@
+import re
 import json
 import threading
 import sqlalchemy
@@ -152,26 +153,33 @@ class Database:
                         nrowQuery
                     ).first()[0]
 
-                    if stageTable == "idaweb_t":
-                        lastRefreshQuery = \
-                            "SELECT max(valid_from) FROM stage.{}".format(
-                                stageTable
-                            )
-                    elif stageTable == "meteoschweiz_t":
+                    if stageTable == "meteoschweiz_t":
                         lastRefreshQuery = \
                             "SELECT max(load_date) FROM stage.{}".format(
                                 stageTable
                             )
                     else:
-                        raise NotImplementedError
+                        lastRefreshQuery = \
+                            "SELECT max(valid_from) FROM stage.{}".format(
+                                stageTable
+                            )
+
                     tableDict["lastRefresh"] = self.conn.execute(
                         lastRefreshQuery
                     ).first()[0]
 
                     tableDict["action"] = []
+
                     if stageTable == "idaweb_t":
                         tableDict["action"].append("Initial load")
-                    tableDict["action"].append("Run scrapping")
+                        tableDict["action"].append("Run scrapping")
+                    elif stageTable == "meteoschweiz_t":
+                        tableDict["action"].append("Run scrapping")
+                    elif stageTable == "station_t":
+                        tableDict["action"].append("Initial load")
+                    elif stageTable == "parameter_t":
+                        tableDict["action"].append("Initial load")
+
                     dbTables["stage"].append(tableDict)
 
                 dbTables["core"] = []
@@ -245,7 +253,7 @@ class Database:
                 Column('station', String),
                 Column('temperature', Float),
                 Column('precipitation', Float),
-                Column("load_date", Date),
+                Column("load_date", Date, index=True),
                 schema='stage')
 
         if not self.engine.dialect.has_table(
@@ -262,7 +270,43 @@ class Database:
                 Column('meas_name', String),
                 Column('meas_value', Float),
                 Column('source', String),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='station_t',
+            schema='stage'
+        ):
+            self.station_t = Table(
+                'station_t',
+                self.meta,
+                Column('station_short_name', String),
+                Column('station_name', String),
+                Column('parameter', String),
+                Column('data_source', String),
+                Column('longitude', String),
+                Column('latitude', String),
+                Column('coordinates_x', Integer),
+                Column('coordinates_y', Integer),
+                Column('elevation', Integer),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='parameter_t',
+            schema='stage'
+        ):
+            self.parameter_t = Table(
+                'parameter_t',
+                self.meta,
+                Column('parameter', String),
+                Column('unit', String),
+                Column('description', String),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
 
@@ -280,14 +324,144 @@ class Database:
                 Column('meas_name', String, primary_key=True),
                 Column('meas_value', Float),
                 Column('source', String, primary_key=True),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='station_t',
+            schema='core'
+        ):
+            self.station_t = Table(
+                'station_t',
+                self.meta,
+                Column('station_short_name', String, primary_key=True),
+                Column('station_name', String, primary_key=True),
+                Column('parameter', String, primary_key=True),
+                Column('data_source', String, primary_key=True),
+                Column('longitude', String, primary_key=True),
+                Column('latitude', String, primary_key=True),
+                Column('coordinates_x', Integer, primary_key=True),
+                Column('coordinates_y', Integer, primary_key=True),
+                Column('elevation', Integer, primary_key=True),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='parameter_t',
+            schema='core'
+        ):
+            self.parameter_t = Table(
+                'parameter_t',
+                self.meta,
+                Column('parameter', String, primary_key=True),
+                Column('unit', String, primary_key=True),
+                Column('description', String, primary_key=True),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
         self.meta.create_all(self.engine)
 
     def runStageETL(self):
+        self.stationParamStageETL()
         self.idaWebStageETL()
+
+    def stationParamStageETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "TRUNCATE TABLE stage.station_t;"
+        )
+        self.conn.execute(
+            "TRUNCATE TABLE stage.parameter_t;"
+        )
+
+        configFileName = "idawebConfig.xml"
+        configList = self.readConfig(configFileName)
+        for config in configList:
+            stationPartDf = pd.DataFrame()
+            parameterPartDf = pd.DataFrame()
+            dataDir = Path.cwd() / "data"
+            legendFiles = dataDir.glob(
+                "**/*_{}_*legend.txt".format(config.text)
+            )
+            for legendFilePath in legendFiles:
+                with open(legendFilePath, 'r') as legendFile:
+                    print(legendFilePath.stem)
+                    legendFileList = legendFile.readlines()
+                    rawStationRow = legendFileList[31]
+                    longLat = re.findall(
+                        r"\d*°\d*'\/\d*°\d*'",
+                        rawStationRow
+                    )
+                    if type(longLat) is list:
+                        longLat = longLat[0]
+                    corr = re.findall(
+                        r"\d+\/\d+",
+                        rawStationRow
+                    )
+                    if type(corr) is list:
+                        if len(corr) > 0:
+                            corr = corr[0]
+                        else:
+                            corr = re.findall(
+                                r"\d+\/\d+|-\/-",
+                                rawStationRow
+                            )
+                            if corr == ["-/-"]:
+                                corr = "0/0"
+                    idx = re.search(
+                        r"\d+\/\d+|-\/-",
+                        rawStationRow
+                    ).span()[1] + 1
+                    stationDict = {
+                        "station_short_name": rawStationRow[0:10].strip(),
+                        "station_name": rawStationRow[10:47].strip(),
+                        "parameter": rawStationRow[47:63].strip(),
+                        "data_source": rawStationRow[64:115].strip(),
+                        "longitude": longLat.split("/")[0],
+                        "latitude": longLat.split("/")[1],
+                        "coordinates_x": int(corr.split("/")[0]),
+                        "coordinates_y": int(corr.split("/")[1]),
+                        "elevation": int(rawStationRow[idx:].strip())
+                    }
+                    stationPartDf = stationPartDf.append(
+                        stationDict,
+                        ignore_index=True
+                    )
+                    rawParameterRow = legendFileList[36]
+                    parameterDict = {
+                        "parameter": rawParameterRow[0:10].strip(),
+                        "unit": rawParameterRow[10:47].strip(),
+                        "description": rawParameterRow[47:].strip()
+                    }
+                    parameterPartDf = parameterPartDf.append(
+                        parameterDict,
+                        ignore_index=True
+                    )
+
+            stationPartDf["valid_from"] = pd.datetime.now().date()
+            stationPartDf["valid_to"] = pd.to_datetime("2262-04-11").date()
+            stationPartDf.to_sql(
+                'station_t',
+                self.engine,
+                schema='stage',
+                if_exists='append',
+                index=False
+            )
+            parameterPartDf["valid_from"] = pd.datetime.now().date()
+            parameterPartDf["valid_to"] = pd.to_datetime("2262-04-11").date()
+            parameterPartDf.to_sql(
+                'parameter_t',
+                self.engine,
+                schema='stage',
+                if_exists='append',
+                index=False
+            )
 
     def idaWebStageETL(self):
         if self.conn is None:
@@ -443,6 +617,24 @@ class Database:
         )
         self.conn.execute(
             "DROP TABLE IF EXISTS core.temp_measurements_t;"
+        )
+
+    def stationCoreETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "INSERT INTO core.station_t " +
+            "SELECT * FROM stage.station_t " +
+            "ON CONFLICT DO NOTHING;"
+        )
+
+    def parameterCoreETL(self):
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            "INSERT INTO core.parameter_t " +
+            "SELECT * FROM stage.parameter_t " +
+            "ON CONFLICT DO NOTHING;"
         )
 
     def idawebCoreETL(self):
