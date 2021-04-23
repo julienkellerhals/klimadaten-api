@@ -299,10 +299,10 @@ def scrape_idaweb(abstractDriver, instance, announcer):
     return announcer
 
 
-def _scrape_idaweb(driver, engine):
+def _scrape_idaweb(driver, engine, lastRefresh="01.01.1800"):
     if not os.path.isdir("data"):
         os.mkdir("data")
-    savedDocuments = run_scrape_idaweb(driver, engine)
+    savedDocuments = run_scrape_idaweb(driver, engine, lastRefresh)
     savedDocumentsDf = pd.DataFrame(
         savedDocuments,
         columns=["reference"]
@@ -346,8 +346,10 @@ def _scrape_idaweb(driver, engine):
         dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
         dataZip.extractall("data")
 
+    return savedDocuments
 
-def run_scrape_idaweb(driver, engine):
+
+def run_scrape_idaweb(driver, engine, lastRefresh):
     """ Scrape idaweb
 
     Args:
@@ -409,7 +411,7 @@ def run_scrape_idaweb(driver, engine):
         )
 
         # Start time preselection
-        since = "01.01.1800"
+        since = lastRefresh
         until = date.today().strftime('%d.%m.%Y')
         idaWebTimePreselection(driver, since, until)
 

@@ -164,6 +164,10 @@
                 var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
                 stageReq(url)
             }
+            function runIncrementLoad(tableName) {
+                var url = "/admin/db/etl/stage/increment/" + tableName.replaceAll("_t", "")
+                stageReq(url)
+            }
             function load(tableName) {
                 var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
                 coreReq(url)
@@ -211,6 +215,11 @@
                                         bodyDiv.insertAdjacentHTML(
                                             "beforeend",
                                             "<a href='javascript:runInitialLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
+                                        )
+                                    } else if (action == "Increment load") {
+                                        bodyDiv.insertAdjacentHTML(
+                                            "beforeend",
+                                            "<a href='javascript:runIncrementLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a>"
                                         )
                                     }
                                 })

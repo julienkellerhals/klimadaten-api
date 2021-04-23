@@ -172,6 +172,7 @@ class Database:
 
                     if stageTable == "idaweb_t":
                         tableDict["action"].append("Initial load")
+                        tableDict["action"].append("Increment load")
                         tableDict["action"].append("Run scrapping")
                     elif stageTable == "meteoschweiz_t":
                         tableDict["action"].append("Run scrapping")
@@ -463,7 +464,7 @@ class Database:
                 index=False
             )
 
-    def idaWebStageETL(self):
+    def idaWebStageETL(self, orderList=["*"]):
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -475,64 +476,67 @@ class Database:
         for config in configList:
             idaWebPartDf = pd.DataFrame()
             dataDir = Path.cwd() / "data"
-            dataFiles = dataDir.glob("**/*_{}_*_data.txt".format(config.text))
-            print(config.text)
-            for dataFile in dataFiles:
-                print(dataFile.stem)
-                dataFileDf = pd.read_csv(dataFile, sep=";")
-                shortName = dataFileDf.columns[-1]
-                dataFileDf.rename(
-                    columns={
-                        "stn": "station",
-                        "time": "meas_date"
-                    },
-                    inplace=True
+            for order in orderList:
+                dataFiles = dataDir.glob(
+                    "**/order_{}_*_{}_*_data.txt".format(order, config.text)
                 )
-                dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
-                dataFileDf["source"] = "IdaWeb"
-                dataFileDf["granularity"] = config.attrib['granularity']
-                if config.attrib['granularity'] == "M":
-                    dataFileDf["meas_date"] = pd.to_datetime(
-                        dataFileDf["meas_date"].map(str) + "01",
-                        format="%Y%m%d"
+                print(config.text)
+                for dataFile in dataFiles:
+                    print(dataFile.stem)
+                    dataFileDf = pd.read_csv(dataFile, sep=";")
+                    shortName = dataFileDf.columns[-1]
+                    dataFileDf.rename(
+                        columns={
+                            "stn": "station",
+                            "time": "meas_date"
+                        },
+                        inplace=True
                     )
-                elif config.attrib['granularity'] == "D":
-                    dataFileDf["meas_date"] = pd.to_datetime(
-                        dataFileDf["meas_date"],
-                        format="%Y%m%d"
+                    dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
+                    dataFileDf["source"] = "IdaWeb"
+                    dataFileDf["granularity"] = config.attrib['granularity']
+                    if config.attrib['granularity'] == "M":
+                        dataFileDf["meas_date"] = pd.to_datetime(
+                            dataFileDf["meas_date"].map(str) + "01",
+                            format="%Y%m%d"
+                        )
+                    elif config.attrib['granularity'] == "D":
+                        dataFileDf["meas_date"] = pd.to_datetime(
+                            dataFileDf["meas_date"],
+                            format="%Y%m%d"
+                        )
+                    else:
+                        NotImplementedError()
+                    dataFileDf = pd.melt(
+                        dataFileDf,
+                        id_vars=[
+                            "station",
+                            "valid_to",
+                            "meas_date",
+                            "granularity",
+                            "source"
+                        ],
+                        value_vars=[shortName],
+                        var_name="meas_name",
+                        value_name="meas_value"
                     )
-                else:
-                    NotImplementedError()
-                dataFileDf = pd.melt(
-                    dataFileDf,
-                    id_vars=[
-                        "station",
-                        "valid_to",
-                        "meas_date",
-                        "granularity",
-                        "source"
-                    ],
-                    value_vars=[shortName],
-                    var_name="meas_name",
-                    value_name="meas_value"
+                    idaWebPartDf = idaWebPartDf.append(dataFileDf)
+                validFromDf = idaWebPartDf.groupby(
+                    ["meas_name"]
+                ).agg(valid_from=("meas_date", np.max))
+                idaWebPartDf = idaWebPartDf.merge(
+                    validFromDf,
+                    on="meas_name",
+                    how="outer"
                 )
-                idaWebPartDf = idaWebPartDf.append(dataFileDf)
-            validFromDf = idaWebPartDf.groupby(
-                ["meas_name"]
-            ).agg(valid_from=("meas_date", np.max))
-            idaWebPartDf = idaWebPartDf.merge(
-                validFromDf,
-                on="meas_name",
-                how="outer"
-            )
-            idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
-            idaWebPartDf.to_sql(
-                'idaweb_t',
-                self.engine,
-                schema='stage',
-                if_exists='append',
-                index=False
-            )
+                idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
+                idaWebPartDf.to_sql(
+                    'idaweb_t',
+                    self.engine,
+                    schema='stage',
+                    if_exists='append',
+                    index=False
+                )
 
     def runCoreETL(self):
         self.runMeasurementsETL()
