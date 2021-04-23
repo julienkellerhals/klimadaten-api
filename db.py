@@ -253,7 +253,7 @@ class Database:
                 Column('station', String),
                 Column('temperature', Float),
                 Column('precipitation', Float),
-                Column("load_date", Date),
+                Column("load_date", Date, index=True),
                 schema='stage')
 
         if not self.engine.dialect.has_table(
@@ -270,7 +270,7 @@ class Database:
                 Column('meas_name', String),
                 Column('meas_value', Float),
                 Column('source', String),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
 
@@ -291,7 +291,7 @@ class Database:
                 Column('coordinates_x', Integer),
                 Column('coordinates_y', Integer),
                 Column('elevation', Integer),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
 
@@ -306,7 +306,7 @@ class Database:
                 Column('parameter', String),
                 Column('unit', String),
                 Column('description', String),
-                Column("valid_from", Date),
+                Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
 
@@ -377,9 +377,9 @@ class Database:
                                 rawStationRow
                             )
                             if corr == ["-/-"]:
-                                corr = ["0/0"]
+                                corr = "0/0"
                     idx = re.search(
-                        r"\d+\/\d+",
+                        r"\d+\/\d+|-\/-",
                         rawStationRow
                     ).span()[1] + 1
                     stationDict = {
