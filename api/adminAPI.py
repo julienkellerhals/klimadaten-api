@@ -1,5 +1,4 @@
 from flask import request
-from flask import Response
 from flask import Blueprint
 from flask import render_template
 
@@ -59,46 +58,16 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.getTablesStatus()
         return ""
 
-    @adminApi.route("/testFunc")
-    def testFunc():
-        # instance = db.Database()
-        # instance.test(announcer)
-        return Response(announcer.stream(), mimetype='text/event-stream')
-
-    @adminApi.route("/tables")
-    def tablesPage():
-        """ Tables page
+    @adminApi.route("/database")
+    def databasePage():
+        """ database page
 
         Returns:
-            html: Returns tables page
+            html: Returns database page
         """
 
         return render_template(
-            "tables.html",
-        )
-
-    @adminApi.route("/source")
-    def sourcePage():
-        """ Source page
-
-        Returns:
-            html: Returns source page
-        """
-
-        return render_template(
-            "source.html",
-        )
-
-    @adminApi.route("/status")
-    def statusPage():
-        """ Status page
-
-        Returns:
-            html: Returns status page
-        """
-
-        return render_template(
-            "status.html",
+            "database.html",
         )
 
     @adminApi.route("/tests")
@@ -157,16 +126,6 @@ def constructBlueprint(announcer, instance, abstractDriver):
             "stream.html",
             streamUrl=streamUrl
         )
-
-    @adminApi.route("/refresh")
-    def refreshData():
-        """ Temp route
-
-        Returns:
-            str: Temp
-        """
-
-        return "Run webscraping"
 
     @adminApi.route("/test")
     def runTests():
