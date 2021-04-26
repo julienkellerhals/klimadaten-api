@@ -1,3 +1,5 @@
+M.AutoInit();
+
 class RunETL {
     constructor(divId) {
         this.div = document.getElementById(divId)
@@ -78,7 +80,6 @@ function runAction(actionUrl, statusUrl) {
     getStatus(statusUrl)
 }
 
-M.AutoInit();
 var stageETL = new RunETL("stage")
 var coreETL = new RunETL("core")
 var datamartETL = new RunETL("datamart")

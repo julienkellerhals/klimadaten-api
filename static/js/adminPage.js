@@ -1,3 +1,5 @@
+M.AutoInit();
+
 // Other getStatus set in base
 setInterval(getStatus("/admin/getDriverPathStatus"), refreshInterval)
 setInterval(getStatus("/admin/getDriverStatus"), refreshInterval)
@@ -12,6 +14,125 @@ function streamEventLog() {
         eventContainer.appendChild(entry);
     }
 }
+
+var serviceList = {
+    "runningService": {
+        "1": {
+            "title": "Driver name",
+            "url": "",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Download driver",
+                    "actionUrl": "",
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        },
+        "2": {
+            "title": "Driver status",
+            "url": "",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Start driver",
+                    "actionUrl": "",
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        },
+        "3": {
+            "title": "Database connection",
+            "url": "",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Connect to db",
+                    "actionUrl": "",
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        },
+        "4": {
+            "title": "Engine status",
+            "url": "",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Start engine",
+                    "actionUrl": "",
+                    // "hrefScript": "javascript:runScrapping(\"" + element.name + "\")",
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        },
+    }
+}
+
+const keys = Object.keys(serviceList)
+keys.forEach((id) => {
+    const ul = document.getElementById(id)
+
+    const rows = Object.keys(serviceList[id]).sort()
+
+    rows.forEach((row) => {
+        var row = serviceList[id][row]
+        var li = document.createElement("li")
+
+        var headerDiv = document.createElement("div")
+        headerDiv.classList.add("collapsible-header")
+        var title = document.createTextNode(row.title)
+        headerDiv.appendChild(title)
+        headerDiv.insertAdjacentHTML(
+            "beforeend",
+            "<span class='badge' data-badge-caption='" + row.headerBadge.caption +"'>" + row.headerBadge.content + "</span>"
+        )
+
+        var bodyDiv = document.createElement("div")
+        bodyDiv.classList.add("collapsible-body")
+        row.action.forEach(action => {
+            bodyDiv.insertAdjacentHTML(
+                "beforeend",
+                "<div class='row'><a href='" + action.hrefScript + "' class='waves-effect waves-light btn-small'>" + action.name + "</a></div>"
+            )
+        })
+        
+        if (row.bodyBadge.content != null) {
+            bodyDiv.insertAdjacentHTML(
+                "beforeend",
+                "<div class='row'><span class='badge' data-badge-caption='" + row.bodyBadge.caption +"'>" + row.bodyBadge.content + "</span></div>"
+            )
+        }
+
+        li.appendChild(headerDiv)
+        li.appendChild(bodyDiv)
+        ul.appendChild(li)
+    })
+})
 
 function streamDatabaseStatus() {
     var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
