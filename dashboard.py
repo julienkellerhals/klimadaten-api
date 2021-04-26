@@ -30,6 +30,7 @@ class Dashboard():
         ])
 
     def createMeteoSchweizTempGraph(self):
+        # use pd.read_sql() instead
         measurementsDf = pd.read_sql_table(
                 "measurements_t",
                 self.engine,
