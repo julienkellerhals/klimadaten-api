@@ -272,106 +272,63 @@ setInterval(function () {
 
 M.AutoInit();
 
-function stageReq(url) {
-    var stageDiv = document.getElementById("stage")
-
-    var progress = document.createElement("div")
-    progress.classList.add("progress")
-    var progressBar = document.createElement("div")
-    progressBar.classList.add("indeterminate")
-    progress.appendChild(progressBar)
-
-    stageDiv.insertBefore(progress, stageDiv.children[1])
-
-    var anchorlist = stageDiv.getElementsByTagName("a")
-    Array.from(anchorlist).forEach(anchor => {
-        anchor.classList.add("disabled")
-    })
-
-    var xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        stageDiv.children[1].remove()
-        Array.from(anchorlist).forEach(anchor => {
-            anchor.classList.remove("disabled")
-        })
-    }
-    xhr.open("POST", url, true);
-    xhr.send()
-}
-
-function runStageETL() {
-    var url = "/admin/db/etl/stage"
-    stageReq(url)
-}
 
 function runAllScrapping() {
     var url = "/admin/scrape/"
     stageReq(url)
 }
 document.getElementById("execScrapping").addEventListener("click", runAllScrapping)
-document.getElementById("execStageETL").addEventListener("click", runStageETL)
 
 
+var stageETL = new RunETL(
+    "stage",
+    "/admin/db/etl/stage"
+)
+document.getElementById("execStageETL").addEventListener("click", stageETL.req)
+
+var coreETL = new RunETL(
+    "core",
+    "/admin/db/etl/core"
+)
+document.getElementById("execCoreETL").addEventListener("click", coreETL.req)
+
+var datamartETL = new RunETL(
+    "datamart",
+    // set url separatly
+    "/admin/db/etl/datamart"
+)
+document.getElementById("execDatamartETL").addEventListener("click", datamartETL.req)
 
 
+class RunETL {
+    constructor(divId, url) {
+        this.div = document.getElementById(divId)
+        this.url = url
+    }
+    req() {
+        // progress bar
+        var progress = document.createElement("div")
+        progress.classList.add("progress")
+        var progressBar = document.createElement("div")
+        progressBar.classList.add("indeterminate")
+        progress.appendChild(progressBar)
+        this.div.insertBefore(progress, this.div.children[1])
 
-M.AutoInit();
-function coreReq(url) {
-    var coreDiv = document.getElementById("core")
-
-    var progress = document.createElement("div")
-    progress.classList.add("progress")
-    var progressBar = document.createElement("div")
-    progressBar.classList.add("indeterminate")
-    progress.appendChild(progressBar)
-
-    coreDiv.insertBefore(progress, coreDiv.children[1])
-
-    var anchorlist = coreDiv.getElementsByTagName("a")
-    Array.from(anchorlist).forEach(anchor => {
-        anchor.classList.add("disabled")
-    })
-
-    var xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        coreDiv.children[1].remove()
+        // disable buttons
+        var anchorlist = this.div.getElementsByTagName("a")
         Array.from(anchorlist).forEach(anchor => {
-            anchor.classList.remove("disabled")
+            anchor.classList.add("disabled")
         })
+
+        // send requests
+        var xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            div.children[1].remove()
+            Array.from(anchorlist).forEach(anchor => {
+                anchor.classList.remove("disabled")
+            })
+        }
+        xhr.open("POST", this.url, true);
+        xhr.send()
     }
-    xhr.open("POST", url, true);
-    xhr.send()
 }
-
-function runCoreETL() {
-    var url = "/admin/db/etl/core"
-    coreReq(url)
-}
-document.getElementById("execCoreETL").addEventListener("click", runCoreETL)
-
-
-
-
-
-function runDatamartETL() {
-    var datamartDiv = document.getElementById("datamart")
-
-    var progress = document.createElement("div")
-    progress.classList.add("progress")
-    var progressBar = document.createElement("div")
-    progressBar.classList.add("indeterminate")
-    progress.appendChild(progressBar)
-
-    datamartDiv.insertBefore(progress, datamartDiv.children[1])
-
-    document.getElementById("execDatamartETL").classList.add("disabled")
-
-    var xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        datamartDiv.children[1].remove()
-        document.getElementById("execDatamartETL").classList.remove("disabled")
-    }
-    xhr.open("POST", "/admin/db/etl/core", true);
-    xhr.send()
-}
-document.getElementById("execDatamartETL").addEventListener("click", runDatamartETL)
