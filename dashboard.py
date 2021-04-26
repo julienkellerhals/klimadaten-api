@@ -22,12 +22,25 @@ class Dashboard():
             server=self.flaskApp,
             url_base_pathname='/dashboard/'
         )
-        meteoSchweizTempGraph = self.createMeteoSchweizTempGraph()
-        meteoSchweizPrecpGraph = self.createMeteoSchweizPrecpGraph()
+        #meteoSchweizTempGraph = self.createMeteoSchweizTempGraph()
+        #meteoSchweizPrecpGraph = self.createMeteoSchweizPrecpGraph()
+
         self.dashApp.layout = html.Div([
-            meteoSchweizTempGraph,
-            meteoSchweizPrecpGraph
-        ])
+            html.Br(), ' This is the outermost div!', html.Br(),'-',
+            html.Div([
+                'This is an inner div!'],
+                style={
+                    'color': 'red',
+                    'border': '2px red solid'}),
+            html.Div([
+                'This is an inner div!'],
+                style={
+                    'color': 'blue',
+                    'border': '2px blue solid'})], 
+            style={
+                'textAlign': 'center', 
+                'color': 'green',
+                'border': '2px green solid'})
 
     def createMeteoSchweizTempGraph(self):
         # use pd.read_sql() instead
