@@ -1,4 +1,5 @@
 from flask import Blueprint
+import webscraping
 
 
 def constructBlueprint(announcer, instance, abstractDriver):
@@ -46,6 +47,35 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.runStageETL()
         return "Run Stage ETL"
 
+    @dbApi.route("/etl/stage/station", methods=["GET", "POST"])
+    @dbApi.route("/etl/stage/parameter", methods=["GET", "POST"])
+    def runStationParamStageETL():
+
+        instance.checkEngine()
+        instance.stationParamStageETL()
+        return "Run Station parameter ETL"
+
+    @dbApi.route("/etl/stage/idaweb", methods=["GET", "POST"])
+    def runIdawebStageETL():
+
+        instance.checkEngine()
+        instance.idaWebStageETL()
+        return "Run Idaweb ETL"
+
+    @dbApi.route("/etl/stage/increment/idaweb", methods=["GET", "POST"])
+    def runIdawebIncrementStageETL():
+        engine = instance.getEngine()
+        driver = abstractDriver.getDriver()
+        paramRefreshDateDf = instance.getParameterRefreshDate()
+        if not paramRefreshDateDf.empty:
+            savedDocumentsDf = webscraping._scrape_idaweb(
+                driver,
+                engine,
+                paramRefreshDateDf
+            )
+            instance.idaWebStageETL(savedDocumentsDf)
+        return "Run Idaweb increment ETL"
+
     @dbApi.route("/etl/core", methods=["GET", "POST"])
     def runCoreETL():
 
@@ -59,5 +89,19 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.checkEngine()
         instance.runMeasurementsETL()
         return "Run Measurements ETL"
+
+    @dbApi.route("/etl/core/station", methods=["GET", "POST"])
+    def runStationETL():
+
+        instance.checkEngine()
+        instance.stationCoreETL()
+        return "Run Station ETL"
+
+    @dbApi.route("/etl/core/parameter", methods=["GET", "POST"])
+    def runParameterETL():
+
+        instance.checkEngine()
+        instance.parameterCoreETL()
+        return "Run Parameter ETL"
 
     return dbApi
