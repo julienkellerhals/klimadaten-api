@@ -1,30 +1,87 @@
-var currentStatus = null
-// var refreshInterval = 2000
-// Change page refresh interval
-var refreshInterval = 20000
+class RunETL {
+    constructor(divId) {
+        this.div = document.getElementById(divId)
+    }
+    req(url) {
+        // progress bar
+        var progress = document.createElement("div")
+        progress.classList.add("progress")
+        var progressBar = document.createElement("div")
+        progressBar.classList.add("indeterminate")
+        progress.appendChild(progressBar)
+        this.div.insertBefore(progress, this.div.children[1])
 
-function execCurrentAction() {
-    if (currentStatus == null) {
-        document.getElementById("dbAction").classList.add("disabled")
-        startEngine()
-    } else if (currentStatus == "dbConnection") {
-        document.getElementById("dbAction").classList.add("disabled")
-        createDb()
-    } else if (currentStatus == "dbCreate") {
-        document.getElementById("dbAction").classList.add("disabled")
-        createTb()
+        // disable buttons
+        var anchorlist = this.div.getElementsByTagName("a")
+        Array.from(anchorlist).forEach(anchor => {
+            anchor.classList.add("disabled")
+        })
+
+        // send requests
+        var xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            div.children[1].remove()
+            Array.from(anchorlist).forEach(anchor => {
+                anchor.classList.remove("disabled")
+            })
+        }
+        xhr.open("POST", url, true);
+        xhr.send()
     }
 }
 
-function startEngine() {
+function runScrapping(tableName) {
+    var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
+    stageETL.req(url)
+}
+function runInitialLoad(tableName) {
+    var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
+    stageETL.req(url)
+}
+function runIncrementLoad(tableName) {
+    var url = "/admin/db/etl/stage/increment/" + tableName.replaceAll("_t", "")
+    stageETL.req(url)
+}
+function load(tableName) {
+    var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
+    coreETL.req(url)
+}
+
+// Other getStatus set in base
+setInterval(getStatus("/admin/getTablesStatus"), refreshInterval)
+
+
+var currentStatus = null
+function checkStatus() {
+    if (currentStatus == "tbCreate") {
+        document.getElementById("dbAction").classList.add("disabled")
+    }
+}
+function execCurrentAction() {
+    if (currentStatus == null) {
+        runAction("/admin/db/connect", "/admin/getEngineStatus")
+    } else if (currentStatus == "dbConnection") {
+        runAction("/admin/db/create", "/admin/getDatabaseStatus")
+    } else if (currentStatus == "dbCreate") {
+        runAction("/admin/db/table", "/admin/getTablesStatus")
+    }
+}
+
+function runAction(actionUrl, statusUrl) {
+    document.getElementById("dbAction").classList.add("disabled")
     var xhr = new XMLHttpRequest();
     xhr.onload = () => {
         document.getElementById("dbAction").classList.remove("disabled")
     }
-    xhr.open("POST", "/admin/db/connect", true);
+    xhr.open("POST", actionUrl, true);
     xhr.send()
-    getEngineStatus()
+    getStatus(statusUrl)
 }
+
+M.AutoInit();
+var stageETL = new RunETL("stage")
+var coreETL = new RunETL("core")
+var datamartETL = new RunETL("datamart")
 
 function streamEngineStatus() {
     var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
@@ -46,24 +103,8 @@ function streamEngineStatus() {
                 currentStatus = "dbConnection"
             }
         }
-    };
-}
-function getEngineStatus() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/admin/getEngineStatus", true);
-    xhr.send()
-}
-streamEngineStatus();
-setInterval(getEngineStatus, refreshInterval);
-
-function createDb() {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        document.getElementById("dbAction").classList.remove("disabled")
+        checkStatus()
     }
-    xhr.open("POST", "/admin/db/create", true);
-    xhr.send()
-    getDatabaseStatus()
 }
 
 function streamDatabaseStatus() {
@@ -110,41 +151,8 @@ function streamDatabaseStatus() {
                 }
             }
         }
-    };
-}
-function getDatabaseStatus() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/admin/getDatabaseStatus", true);
-    xhr.send()
-}
-streamDatabaseStatus();
-setInterval(getDatabaseStatus, refreshInterval);
-
-function createTb() {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        document.getElementById("dbAction").classList.remove("disabled")
+        checkStatus()
     }
-    xhr.open("POST", "/admin/db/table", true);
-    xhr.send()
-    getTablesStatus()
-}
-
-function runScrapping(tableName) {
-    var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
-    stageReq(url)
-}
-function runInitialLoad(tableName) {
-    var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
-    stageReq(url)
-}
-function runIncrementLoad(tableName) {
-    var url = "/admin/db/etl/stage/increment/" + tableName.replaceAll("_t", "")
-    stageReq(url)
-}
-function load(tableName) {
-    var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
-    coreReq(url)
 }
 
 function streamTablesStatus() {
@@ -251,84 +259,41 @@ function streamTablesStatus() {
                 }
             }
         }
-    };
-}
-function getTablesStatus() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/admin/getTablesStatus", true);
-    xhr.send()
-}
-streamTablesStatus();
-setInterval(getTablesStatus, refreshInterval);
-
-document.getElementById("dbAction").addEventListener("click", execCurrentAction)
-setInterval(function () {
-    if (currentStatus == "tbCreate") {
-        document.getElementById("dbAction").classList.add("disabled")
-    }
-}, refreshInterval);
-
-
-
-M.AutoInit();
-
-
-function runAllScrapping() {
-    var url = "/admin/scrape/"
-    stageReq(url)
-}
-document.getElementById("execScrapping").addEventListener("click", runAllScrapping)
-
-
-var stageETL = new RunETL(
-    "stage",
-    "/admin/db/etl/stage"
-)
-document.getElementById("execStageETL").addEventListener("click", stageETL.req)
-
-var coreETL = new RunETL(
-    "core",
-    "/admin/db/etl/core"
-)
-document.getElementById("execCoreETL").addEventListener("click", coreETL.req)
-
-var datamartETL = new RunETL(
-    "datamart",
-    // set url separatly
-    "/admin/db/etl/datamart"
-)
-document.getElementById("execDatamartETL").addEventListener("click", datamartETL.req)
-
-
-class RunETL {
-    constructor(divId, url) {
-        this.div = document.getElementById(divId)
-        this.url = url
-    }
-    req() {
-        // progress bar
-        var progress = document.createElement("div")
-        progress.classList.add("progress")
-        var progressBar = document.createElement("div")
-        progressBar.classList.add("indeterminate")
-        progress.appendChild(progressBar)
-        this.div.insertBefore(progress, this.div.children[1])
-
-        // disable buttons
-        var anchorlist = this.div.getElementsByTagName("a")
-        Array.from(anchorlist).forEach(anchor => {
-            anchor.classList.add("disabled")
-        })
-
-        // send requests
-        var xhr = new XMLHttpRequest();
-        xhr.onload = () => {
-            div.children[1].remove()
-            Array.from(anchorlist).forEach(anchor => {
-                anchor.classList.remove("disabled")
-            })
-        }
-        xhr.open("POST", this.url, true);
-        xhr.send()
+        checkStatus()
     }
 }
+
+streamEngineStatus()
+streamDatabaseStatus()
+streamTablesStatus()
+
+document.getElementById("dbAction").addEventListener(
+    "click",
+    () => {
+        execCurrentAction()
+    }
+)
+document.getElementById("execScrapping").addEventListener(
+    "click",
+    () => {
+        stageETL.req("/admin/scrape/")
+    }
+)
+document.getElementById("execStageETL").addEventListener(
+    "click",
+    () => {
+        stageETL.req("/admin/db/etl/stage")
+    }
+)
+document.getElementById("execCoreETL").addEventListener(
+    "click",
+    () => {
+        coreETL.req("/admin/db/etl/core")
+    }
+)
+document.getElementById("execDatamartETL").addEventListener(
+    "click",
+    () => {
+        datamartETL.req("/admin/db/etl/datamart")
+    }
+)
