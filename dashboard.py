@@ -1,15 +1,16 @@
-from flask import Flask
 import pandas as pd
 import plotly.express as px
 # import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.graph_objs as go
+from flask import Flask
 from dash.dependencies import Input, Output, State
 from dash import Dash
-import plotly.graph_objs as go
+from dash.exceptions import PreventUpdate
 
 
-def mydashboard(flaskApp,instance):
+def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
     instance.checkEngine()
     engine = instance.engine
@@ -55,12 +56,15 @@ def mydashboard(flaskApp,instance):
         "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
         "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
         """
-        rhh150mx = pd.read_sql("""
-            SELECT AVG(meas_value) avg_highest_hour, meas_date 
-            FROM core.measurements_t 
-            WHERE meas_name = 'rhh150mx' 
+        rhh150mx = pd.read_sql(
+            """SELECT
+            AVG(meas_value) avg_highest_hour,
+            meas_date
+            FROM core.measurements_t
+            WHERE meas_name = 'rhh150mx'
             GROUP BY meas_date""",
-            engine)
+            engine
+        )
 
         dashApp.layout = html.Div([
             # header
@@ -78,11 +82,11 @@ def mydashboard(flaskApp,instance):
                 ),
                 html.Div([
                     html.Button('Datenstory', id='linkDatastory', n_clicks=0)
-                ], style={'display': 'inline-block'}                
+                ], style={'display': 'inline-block'}
                 ),
                 html.Div([
                     dcc.Link('Datenstory', href='/')
-                ], style={'display': 'inline-block'}                
+                ], style={'display': 'inline-block'}
                 ),
                 html.Div([], style={'width': '5%', 'display': 'inline-block'}),
                 html.Div([
@@ -99,17 +103,24 @@ def mydashboard(flaskApp,instance):
             ),
             # first row of plots
             html.Div([
-                html.Div([], style={'width': '10%', 'display': 'inline-block'}),
+                html.Div([
+
+                ],
+                    style={
+                        'width': '10%',
+                        'display': 'inline-block'
+                    }
+                ),
                 html.Div([
                     # scatterplot top left
                     dcc.Graph(
-                        id = 'scatterplot_1',
-                        figure = {
+                        id='scatterplot_1',
+                        figure={
                             'data': [go.Scatter(
-                                x= rhh150mx["meas_date"],
-                                y = rhh150mx['avg_highest_hour'],
-                                mode = 'markers',
-                                marker = {
+                                x=rhh150mx["meas_date"],
+                                y=rhh150mx['avg_highest_hour'],
+                                mode='markers',
+                                marker={
                                     'size': 12,
                                     'color': 'rgb(51,204,153)',
                                     'line': {'width': 2}
@@ -131,20 +142,22 @@ def mydashboard(flaskApp,instance):
             ),
         ])
 
-
     @dashApp.callback(
         Output('thisis', 'children'),
         [Input('linkDatastory', 'n_clicks')])
     def redirectToStory(n_clicks):
-        return dcc.Location(pathname="/", id="hello")
-    
+        if n_clicks is 0:
+            raise PreventUpdate
+        else:
+            return dcc.Location(pathname="/", id="hello")
+
+    """
     @dashApp.callback(
         Output('thisis', 'children'),
         [Input('linkDatastory', 'n_clicks')])
     def countClicking(n_clicks):
         return f"You entered: {n_clicks}"
-
-    
+    """
     '''
     df = pd.read_sql(('select "Timestamp","Value" from "MyTable" '
                      'where "Timestamp" BETWEEN %(dstart)s AND %(dfinish)s'),
@@ -160,7 +173,6 @@ def mydashboard(flaskApp,instance):
                 schema="core"
             )
 
-        
         # in future create datamart with only the required data
         measurementsDf = measurementsDf[
             measurementsDf["meas_name"] == "temperature"
@@ -224,5 +236,4 @@ def mydashboard(flaskApp,instance):
         return meteoSchweizPrecpGraph
 
     createDashboard()
-    
     return dashApp
