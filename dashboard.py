@@ -1,9 +1,12 @@
+from flask import Flask
 import pandas as pd
 import plotly.express as px
 # import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output, State
 from dash import Dash
+import plotly.graph_objs as go
 
 
 class Dashboard():
@@ -17,30 +20,74 @@ class Dashboard():
         self.engine = instance.engine
 
     def createDashboard(self):
+        external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
         self.dashApp = Dash(
             __name__,
             server=self.flaskApp,
-            url_base_pathname='/dashboard/'
+            url_base_pathname='/dashboard/',
+            external_stylesheets=external_stylesheets
         )
-        #meteoSchweizTempGraph = self.createMeteoSchweizTempGraph()
-        #meteoSchweizPrecpGraph = self.createMeteoSchweizPrecpGraph()
+        # meteoSchweizTempGraph = self.createMeteoSchweizTempGraph()
+        # meteoSchweizPrecpGraph = self.createMeteoSchweizPrecpGraph()
+
+        # add colors
+        colors = {
+            'background_d': '#05090C',
+            'background_l1': '#EBEFF2',
+            'background_l2': '#D8E0E5',
+            'text_d': '#05090C',
+            'text_l': '#EBEFF2'
+        }
 
         self.dashApp.layout = html.Div([
-            html.Br(), ' This is the outermost div!', html.Br(),'-',
+            # header
             html.Div([
-                'This is an inner div!'],
-                style={
-                    'color': 'red',
-                    'border': '2px red solid'}),
+                html.Div([
+                    html.H2(
+                        'Datenstory',
+                        style={
+                            'textAlign': 'center',
+                            'color': colors['text_l']
+                        }
+                    )
+                    # html.Button('Datenstory', id='linkDatastory', n_clicks=0)
+                ], style={'width': '30%', 'display': 'inline-block'}
+                ),
+                html.Div([
+                    html.H2(
+                        'Dashboard',
+                        style={
+                            'textAlign': 'center',
+                            'color': colors['text_l']
+                        }
+                    )
+                ], style={'width': '30%', 'display': 'inline-block'}
+                )
+            ], style={'backgroundColor': colors['background_d']}
+            ),
+            # first row of plots
             html.Div([
-                'This is an inner div!'],
-                style={
-                    'color': 'blue',
-                    'border': '2px blue solid'})], 
-            style={
-                'textAlign': 'center', 
-                'color': 'green',
-                'border': '2px green solid'})
+                html.Div([
+
+                ], style={'width': '70%', 'display': 'inline-block'}
+                ),
+                html.Div([
+
+                ], style={'width': '30%', 'display': 'inline-block'}
+                ),
+            ], style={'backgroundColor': colors['background_l1']}
+            ),
+        ])
+
+        """
+        @self.dashApp.callback(
+            Output('number_out', 'children'),
+            [Input('linkDatastory', 'n_clicks')])
+        def redirectToStory(self, n_clicks):
+            return " times"
+            #Flask.redirect('/')
+        """
 
     def createMeteoSchweizTempGraph(self):
         # use pd.read_sql() instead
