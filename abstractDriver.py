@@ -67,10 +67,10 @@ class AbstractDriver():
             self.getDriverPath(self.driverFolder, None)
             if self.driverInstalledBool is False:
                 respDict["status"] = 1
-                respDict["headerBadge"]["content"] = "Driver not installed"
-                + errorIcon
-                respDict["bodyBadge"]["content"] = "Driver not installed"
-                + errorIcon
+                respDict["headerBadge"]["caption"] = "Driver not installed"
+                respDict["headerBadge"]["content"] = errorIcon
+                respDict["bodyBadge"]["caption"] = "Driver not installed"
+                respDict["bodyBadge"]["content"] = errorIcon
                 msgText = json.dumps(
                     respDict,
                     default=str
@@ -129,16 +129,20 @@ class AbstractDriver():
             self.driver.window_handles
         except WebDriverException as e:
             respDict["status"] = 1
-            respDict["headerBadge"]["content"] = "Not started" + errorIcon
-            respDict["bodyBadge"]["content"] = str(e) + errorIcon
+            respDict["headerBadge"]["caption"] = "Not started"
+            respDict["headerBadge"]["content"] = errorIcon
+            respDict["bodyBadge"]["caption"] = str(e)
+            respDict["bodyBadge"]["content"] = errorIcon
             msgText = json.dumps(
                 respDict,
                 default=str
             )
         except AttributeError as e:
             respDict["status"] = 1
-            respDict["headerBadge"]["content"] = "Not started" + errorIcon
-            respDict["bodyBadge"]["content"] = str(e) + errorIcon
+            respDict["headerBadge"]["caption"] = "Not started"
+            respDict["headerBadge"]["content"] = errorIcon
+            respDict["bodyBadge"]["caption"] = str(e)
+            respDict["bodyBadge"]["content"] = errorIcon
             msgText = json.dumps(
                 respDict,
                 default=str

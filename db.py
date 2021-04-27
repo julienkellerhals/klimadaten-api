@@ -111,9 +111,10 @@ class Database:
                 database_exists(self.databaseUrl)
             except sqlalchemy.exc.OperationalError as e:
                 respDict["status"] = 2
-                respDict["headerBadge"]["content"] = \
-                    "Database not started" + errorIcon
-                respDict["bodyBadge"]["content"] = str(e) + errorIcon
+                respDict["headerBadge"]["caption"] = "Database not started"
+                respDict["headerBadge"]["content"] = errorIcon
+                respDict["bodyBadge"]["caption"] = str(e)
+                respDict["bodyBadge"]["content"] = errorIcon
                 msgText = json.dumps(
                     respDict,
                     default=str
@@ -123,9 +124,10 @@ class Database:
                 )
             else:
                 respDict["status"] = 1
-                respDict["headerBadge"]["content"] = \
-                    "Database not created" + errorIcon
-                respDict["bodyBadge"]["content"] = str(e) + errorIcon
+                respDict["headerBadge"]["caption"] = "Database not created"
+                respDict["headerBadge"]["content"] = errorIcon
+                respDict["bodyBadge"]["caption"] = str(e)
+                respDict["bodyBadge"]["content"] = errorIcon
                 msgText = json.dumps(
                     respDict,
                     default=str
@@ -173,10 +175,10 @@ class Database:
 
         if self.engine is None:
             respDict["status"] = 1
-            respDict["headerBadge"]["content"] = \
-                "Engine not started" + errorIcon
-            respDict["bodyBadge"]["content"] = \
-                "Connect to db" + errorIcon
+            respDict["headerBadge"]["caption"] = "Engine not started"
+            respDict["headerBadge"]["content"] = errorIcon
+            respDict["bodyBadge"]["caption"] = "Connect to db"
+            respDict["bodyBadge"]["content"] = errorIcon
             msgText = json.dumps(
                 respDict,
                 default=str
