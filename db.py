@@ -77,6 +77,31 @@ class Database:
         x.start()
 
     def _getDatabaseStatus(self):
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getDatabaseStatus",
+            "title": "Database connection",
+            "headerBadge": {
+                "caption": None,
+                "content": None,
+            },
+            "action": [
+                {
+                    "name": "Connect to db",
+                    "actionUrl": "http://localhost:5000/admin/db/connect"
+                },
+                {
+                    "name": "Create db",
+                    "actionUrl": "http://localhost:5000/admin/db/create"
+                }
+            ],
+            "bodyBadge": {
+                "caption": None,
+                "content": None,
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         try:
             create_engine(
                 self.databaseUrl
@@ -85,19 +110,37 @@ class Database:
             try:
                 database_exists(self.databaseUrl)
             except sqlalchemy.exc.OperationalError as e:
-                msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                respDict["status"] = 2
+                respDict["headerBadge"]["content"] = \
+                    "Database not started" + errorIcon
+                respDict["bodyBadge"]["content"] = str(e) + errorIcon
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
                 self.databaseStatusStream.announce(
-                    self.databaseStatusStream.format_sse(msgTxt)
+                    self.databaseStatusStream.format_sse(msgText)
                 )
             else:
-                msgTxt = "Status: 1; Database not created; Error: " + str(e)
-                self.databaseStatusStream.announce(
-                    self.databaseStatusStream.format_sse(msgTxt)
+                respDict["status"] = 1
+                respDict["headerBadge"]["content"] = \
+                    "Database not created" + errorIcon
+                respDict["bodyBadge"]["content"] = str(e) + errorIcon
+                msgText = json.dumps(
+                    respDict,
+                    default=str
                 )
         else:
-            msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+            respDict["status"] = 0
+            respDict["headerBadge"]["caption"] = "connection"
+            respDict["headerBadge"]["content"] = str(self.databaseUrl)
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        finally:
             self.databaseStatusStream.announce(
-                self.databaseStatusStream.format_sse(msgTxt)
+                self.databaseStatusStream.format_sse(msgText)
             )
 
     def getEngineStatus(self):
@@ -107,16 +150,47 @@ class Database:
         x.start()
 
     def _getEngineStatus(self):
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getEngineStatus",
+            "title": "Engine status",
+            "headerBadge": {
+                "caption": None,
+                "content": None,
+            },
+            "action": [
+                {
+                    "name": "Start engine",
+                    "actionUrl": "http://localhost:5000/admin/db/connect"
+                }
+            ],
+            "bodyBadge": {
+                "caption": None,
+                "content": None,
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         if self.engine is None:
-            msgTxt = "Status: 1; Engine not started; Error: Connect to db"
-            self.engineStatusStream.announce(
-                self.engineStatusStream.format_sse(msgTxt)
+            respDict["status"] = 1
+            respDict["headerBadge"]["content"] = \
+                "Engine not started" + errorIcon
+            respDict["bodyBadge"]["content"] = \
+                "Connect to db" + errorIcon
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
         else:
-            msgTxt = "Status: 0; Engine started"
-            self.engineStatusStream.announce(
-                self.engineStatusStream.format_sse(msgTxt)
+            respDict["status"] = 0
+            respDict["headerBadge"]["content"] = "Engine started"
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
+        self.engineStatusStream.announce(
+            self.engineStatusStream.format_sse(msgText)
+        )
 
     def getTablesStatus(self):
         x = threading.Thread(

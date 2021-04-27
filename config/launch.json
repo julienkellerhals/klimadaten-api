@@ -15,7 +15,7 @@
             "request": "launch",
             "type": "edge",
             "url": "http://localhost:5000/admin/",
-            "webRoot": "${workspaceFolder}",
+            "webRoot": "${workspaceFolder}"
         },
         {
             "name": "Python: Current File",

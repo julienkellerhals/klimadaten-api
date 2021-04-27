@@ -1,6 +1,7 @@
 import os
 import io
 import re
+import json
 import zipfile
 import threading
 from pathlib import Path
@@ -39,23 +40,60 @@ class AbstractDriver():
         x.start()
 
     def _getDriverPathStatus(self):
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getDriverPathStatus",
+            "title": "Driver name",
+            "headerBadge": {
+                "caption": None,
+                "content": None,
+            },
+            "action": [
+                {
+                    "name": "Download driver",
+                    # TODO make this work for all browser
+                    "actionUrl": "http://localhost:5000/admin/driver/"
+                                 "Edg?headless=false",
+                }
+            ],
+            "bodyBadge": {
+                "caption": None,
+                "content": None,
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         if self.driverPath is None:
             self.getDriverPath(self.driverFolder, None)
             if self.driverInstalledBool is False:
-                msgTxt = "Status: 1; Error: Driver not installed"
-                self.pathStatusStream.announce(
-                    self.pathStatusStream.format_sse(msgTxt)
+                respDict["status"] = 1
+                respDict["headerBadge"]["content"] = "Driver not installed"
+                + errorIcon
+                respDict["bodyBadge"]["content"] = "Driver not installed"
+                + errorIcon
+                msgText = json.dumps(
+                    respDict,
+                    default=str
                 )
             else:
-                msgTxt = "Status: 0; Driver: " + str(self.driverPath.stem)
-                self.pathStatusStream.announce(
-                    self.pathStatusStream.format_sse(msgTxt)
+                respDict["status"] = 0
+                respDict["headerBadge"]["caption"] = "driver"
+                respDict["headerBadge"]["content"] = str(self.driverPath.stem)
+                msgText = json.dumps(
+                    respDict,
+                    default=str
                 )
         else:
-            msgTxt = "Status: 0; Driver: " + str(self.driverPath.stem)
-            self.pathStatusStream.announce(
-                self.pathStatusStream.format_sse(msgTxt)
+            respDict["status"] = 0
+            respDict["headerBadge"]["caption"] = "driver"
+            respDict["headerBadge"]["content"] = str(self.driverPath.stem)
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
+        self.pathStatusStream.announce(
+            self.pathStatusStream.format_sse(msgText)
+        )
 
     def getDriverStatus(self):
         x = threading.Thread(
@@ -64,23 +102,59 @@ class AbstractDriver():
         x.start()
 
     def _getDriverStatus(self):
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getDriverStatus",
+            "title": "Driver status",
+            "headerBadge": {
+                "caption": None,
+                "content": None,
+            },
+            "action": [
+                {
+                    "name": "Start driver",
+                    # TODO make this work for all browser
+                    "actionUrl": "http://localhost:5000/admin/driver/"
+                                 "Edg?headless=false",
+                }
+            ],
+            "bodyBadge": {
+                "caption": None,
+                "content": None,
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         try:
             self.driver.window_handles
         except WebDriverException as e:
-            msgTxt = "Status: 1; not started; Error: " + str(e)
-            self.driverStatusStream.announce(
-                self.driverStatusStream.format_sse(msgTxt)
+            respDict["status"] = 1
+            respDict["headerBadge"]["content"] = "Not started" + errorIcon
+            respDict["bodyBadge"]["content"] = str(e) + errorIcon
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
         except AttributeError as e:
-            msgTxt = "Status: 1; not started; Error: " + str(e)
-            self.driverStatusStream.announce(
-                self.driverStatusStream.format_sse(msgTxt)
+            respDict["status"] = 1
+            respDict["headerBadge"]["content"] = "Not started" + errorIcon
+            respDict["bodyBadge"]["content"] = str(e) + errorIcon
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
         else:
-            msgTxt = "Status: 0; instance: " \
-                + str(self.driver.window_handles[0])
+            respDict["status"] = 0
+            respDict["headerBadge"]["caption"] = "instance"
+            respDict["headerBadge"]["content"] = \
+                str(self.driver.window_handles[0])
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        finally:
             self.driverStatusStream.announce(
-                self.driverStatusStream.format_sse(msgTxt)
+                self.driverStatusStream.format_sse(msgText)
             )
 
     def checkDriver(self):

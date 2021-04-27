@@ -17,7 +17,9 @@ function streamEventLog() {
 
 var serviceList = {
     "runningService": {
+        // "eventSourceUrl": "",
         "1": {
+            "eventSourceUrl": "/admin/stream/getDriverPathStatus",
             "title": "Driver name",
             "url": "",
             "headerBadge": {
@@ -36,6 +38,7 @@ var serviceList = {
             },
         },
         "2": {
+            "eventSourceUrl": "/admin/stream/getDriverStatus",
             "title": "Driver status",
             "url": "",
             "headerBadge": {
@@ -54,6 +57,7 @@ var serviceList = {
             },
         },
         "3": {
+            "eventSourceUrl": "/admin/stream/getDatabaseStatus",
             "title": "Database connection",
             "url": "",
             "headerBadge": {
@@ -72,6 +76,7 @@ var serviceList = {
             },
         },
         "4": {
+            "eventSourceUrl": "/admin/stream/getEngineStatus",
             "title": "Engine status",
             "url": "",
             "headerBadge": {
@@ -93,15 +98,86 @@ var serviceList = {
     }
 }
 
+function camelize(str) {
+    return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+}
+
+function diff(obj1, obj2) {
+    const result = {};
+    if (Object.is(obj1, obj2)) {
+        return undefined;
+    }
+    if (!obj2 || typeof obj2 !== 'object') {
+        return obj2;
+    }
+    Object.keys(obj1 || {}).concat(Object.keys(obj2 || {})).forEach(key => {
+        if (obj2[key] !== obj1[key] && !Object.is(obj1[key], obj2[key])) {
+            result[key] = obj2[key];
+        }
+        if (typeof obj2[key] === 'object' && typeof obj1[key] === 'object') {
+            const value = diff(obj1[key], obj2[key]);
+            if (value !== undefined) {
+                result[key] = value;
+            }
+        }
+    });
+    return result;
+}
+
 const keys = Object.keys(serviceList)
 keys.forEach((id) => {
     const ul = document.getElementById(id)
 
-    const rows = Object.keys(serviceList[id]).sort()
+    if (serviceList[id].eventSourceUrl != undefined) {
+        console.log("To be implemented")
+        var colEventSourceUrl = serviceList[id].eventSourceUrl
+        var rows = Object.keys(serviceList[id]).filter((r) => r != "eventSourceUrl").sort()
+    } else {
+        var rows = Object.keys(serviceList[id]).sort()
+    }
 
     rows.forEach((row) => {
         var row = serviceList[id][row]
         var li = document.createElement("li")
+        li.id = camelize(row.title)
+
+        if (row.eventSourceUrl != undefined) {
+            var rowEventSource = new EventSource(row.eventSourceUrl);
+            var previousContent = row
+            rowEventSource.onmessage = function (e) {
+                var content = JSON.parse(e.data);
+                var row = document.getElementById(camelize(content.title))
+                var contentDiff = diff(previousContent, content)
+                if (contentDiff != null) {
+                    if (contentDiff.title != undefined) {
+                        row.querySelector("div.collapsible-header").innerText = contentDiff.title
+                    }
+                    if (contentDiff.headerBadge.caption != undefined) {
+                        row.querySelector("div.collapsible-header > span").attributes["data-badge-caption"].value = contentDiff.headerBadge.caption
+                    }
+                    if (contentDiff.headerBadge.content != undefined) {
+                        row.querySelector("div.collapsible-header > span").innerHTML = contentDiff.headerBadge.content
+                    }
+                    if (contentDiff.action != undefined) {
+                        Array(contentDiff.action).forEach((a) => {
+                            if (a.name != undefined) {
+                                row.querySelector("div.collapsible-body > div:nth-child(1) > a").innerText = a.name
+                            }
+                            if (a.actionUrl != undefined) {
+                                row.querySelector("div.collapsible-body > div:nth-child(1) > a").href = a.actionUrl
+                            }
+                        })
+                    }
+                    if (contentDiff.bodyBadge.caption != undefined) {
+                        row.querySelector("div.collapsible-body > div:last-child > span").attributes["data-badge-caption"].value = contentDiff.bodyBadge.caption
+                    }
+                    if (contentDiff.bodyBadge.content != undefined) {
+                        row.querySelector("div.collapsible-body > div:last-child > span").innerHTML = contentDiff.bodyBadge.content
+                    }
+                    previousContent = content
+                }
+            };
+        }
 
         var headerDiv = document.createElement("div")
         headerDiv.classList.add("collapsible-header")
@@ -109,7 +185,7 @@ keys.forEach((id) => {
         headerDiv.appendChild(title)
         headerDiv.insertAdjacentHTML(
             "beforeend",
-            "<span class='badge' data-badge-caption='" + row.headerBadge.caption +"'>" + row.headerBadge.content + "</span>"
+            "<span class='badge' data-badge-caption='" + row.headerBadge.caption + "'>" + row.headerBadge.content + "</span>"
         )
 
         var bodyDiv = document.createElement("div")
@@ -120,11 +196,11 @@ keys.forEach((id) => {
                 "<div class='row'><a href='" + action.hrefScript + "' class='waves-effect waves-light btn-small'>" + action.name + "</a></div>"
             )
         })
-        
+
         if (row.bodyBadge.content != null) {
             bodyDiv.insertAdjacentHTML(
                 "beforeend",
-                "<div class='row'><span class='badge' data-badge-caption='" + row.bodyBadge.caption +"'>" + row.bodyBadge.content + "</span></div>"
+                "<div class='row'><span class='badge' data-badge-caption='" + row.bodyBadge.caption + "'>" + row.bodyBadge.content + "</span></div>"
             )
         }
 
@@ -133,114 +209,3 @@ keys.forEach((id) => {
         ul.appendChild(li)
     })
 })
-
-function streamDatabaseStatus() {
-    var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
-    var previousStatusCode = null
-    databaseEventSource.onmessage = function (e) {
-        var content = e.data;
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var msg = content.split(";")[1]
-        var errorMsg = content.split(";")[2]
-        var databaseStatusSpan = document.getElementById("databaseStatus").firstElementChild
-        var databaseStatusDot = document.getElementById("databaseStatus").lastElementChild
-        if (previousStatusCode != statusCode) {
-            previousStatusCode = statusCode
-            if (statusCode > 0) {
-                databaseStatusSpan.innerText = msg.trim()
-                databaseStatusDot.classList.remove("success")
-                databaseStatusDot.classList.add("error")
-                databaseStatusDot.title = errorMsg.trim()
-            } else if (statusCode == 0) {
-                databaseStatusSpan.innerText = msg.trim()
-                databaseStatusDot.classList.remove("error")
-                databaseStatusDot.classList.add("success")
-                databaseStatusDot.title = ""
-            }
-        }
-    };
-}
-
-function streamEngineStatus() {
-    var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
-    var previousStatusCode = null
-    engineEventSource.onmessage = function (e) {
-        var content = e.data
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var msg = content.split(";")[1]
-        var errorMsg = content.split(";")[2]
-        var engineStatusSpan = document.getElementById("engineStatus").firstElementChild
-        var engineStatusDot = document.getElementById("engineStatus").lastElementChild
-        if (previousStatusCode != statusCode) {
-            previousStatusCode = statusCode
-            if (statusCode == 1) {
-                engineStatusSpan.innerText = msg.trim()
-                engineStatusDot.classList.remove("success")
-                engineStatusDot.classList.add("error")
-                engineStatusDot.title = errorMsg.trim()
-            } else if (statusCode == 0) {
-                engineStatusSpan.innerText = msg.trim()
-                engineStatusDot.classList.remove("error")
-                engineStatusDot.classList.add("success")
-                engineStatusDot.title = ""
-            }
-        }
-    };
-}
-
-function streamDriverPathStatus() {
-    var driverPathEventSource = new EventSource("/admin/stream/getDriverPathStatus");
-    var previousStatusCode = null
-    driverPathEventSource.onmessage = function (e) {
-        var content = e.data;
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var msg = content.split(";")[1]
-        var driverLocSpan = document.getElementById("driverLoc").firstElementChild
-        var driverLocDot = document.getElementById("driverLoc").lastElementChild
-        if (previousStatusCode != statusCode) {
-            previousStatusCode = statusCode
-            if (statusCode == 1) {
-                driverLocSpan.innerText = msg.trim()
-                driverLocDot.classList.remove("success")
-                driverLocDot.classList.add("error")
-            } else if (statusCode == 0) {
-                driverLocSpan.innerText = msg.trim()
-                driverLocDot.classList.remove("error")
-                driverLocDot.classList.add("success")
-            }
-        }
-    };
-}
-
-function streamDriverStatus() {
-    var driverEventSource = new EventSource("/admin/stream/getDriverStatus");
-    var previousStatusCode = null
-    driverEventSource.onmessage = function (e) {
-        var content = e.data;
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var msg = content.split(";")[1]
-        var errorMsg = content.split(";")[2]
-        var driverStatusSpan = document.getElementById("driverStatus").firstElementChild
-        var driverStatusDot = document.getElementById("driverStatus").lastElementChild
-        if (previousStatusCode != statusCode) {
-            previousStatusCode = statusCode
-            if (statusCode == 1) {
-                driverStatusSpan.innerText = "Webdriver " + msg.trim()
-                driverStatusDot.classList.remove("success")
-                driverStatusDot.classList.add("error")
-                driverStatusDot.title = errorMsg.trim()
-            } else if (statusCode == 0) {
-                driverStatusSpan.innerText = "Webdriver " + msg.trim()
-                driverStatusDot.classList.remove("error")
-                driverStatusDot.classList.add("success")
-                driverStatusDot.title = ""
-            }
-        }
-    };
-}
-
-streamEventLog()
-streamEngineStatus()
-streamDatabaseStatus()
-streamDriverPathStatus()
-streamDriverStatus()
