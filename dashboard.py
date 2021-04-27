@@ -124,25 +124,14 @@ def mydashboard(flaskApp, instance):
                 }),
                 # scatterplot top left
                 html.Div([
-                    html.Div([
-                        dcc.Dropdown(
-                            id='yaxis',
-                            options=[{'label': i, 'value': i} for i in features],
-                            value='breclod0'
-                      )
-                    ]),
-                    html.Div([
-                        dcc.Graph(
-                            id='scatterplot'
-                            # make plotly figure bar invisible
-                            """
-                            config={
-                                'displayModeBar': False,
-                                'staticPlot': False
-                            }
-                            """
-                        )   
-                    ])    
+                    dcc.Dropdown(
+                        id='yaxis',
+                        options=[{'label': i, 'value': i} for i in features],
+                        value='breclod0'
+                    ),
+                    # make plotly figure bar invisible
+                    # config={'displayModeBar': False,'staticPlot': False}
+                    html.Div(id='scatterplot1')
                 ], style={
                     'backgroundColor': colors['l0'],
                     'width': '55%',
@@ -180,7 +169,7 @@ def mydashboard(flaskApp, instance):
                     'display': 'inline-block'
                 }),
                 html.Div([
-
+                    html.H1(id='thisis')
                 ], style={
                     'backgroundColor': colors['l0'],
                     'width': '30%',
@@ -235,7 +224,7 @@ def mydashboard(flaskApp, instance):
             return dcc.Location(pathname="/", id="hello")
 
     @dashApp.callback(
-        Output('scatterplot', 'figure'),
+        Output('scatterplot1', 'children'),
         [Input('yaxis', 'value')])
     def update_graph(yaxis_name):
         df = pd.read_sql(
@@ -251,7 +240,7 @@ def mydashboard(flaskApp, instance):
         return {
             'data': [go.Scatter(
                 x=df["meas_date"],
-                y=df[str(yaxis_name)],
+                y=df["avg"],
                 mode='lines+markers',
                 marker={
                     'size': 5,
