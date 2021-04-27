@@ -54,6 +54,7 @@ class AbstractDriver():
                     # TODO make this work for all browser
                     "actionUrl": "http://localhost:5000/admin/driver/"
                                  "Edg?headless=false",
+                    "enabled": True
                 }
             ],
             "bodyBadge": {
@@ -87,6 +88,7 @@ class AbstractDriver():
             respDict["status"] = 0
             respDict["headerBadge"]["caption"] = "driver"
             respDict["headerBadge"]["content"] = str(self.driverPath.stem)
+            respDict["action"][0]["enabled"] = False
             msgText = json.dumps(
                 respDict,
                 default=str
@@ -116,6 +118,7 @@ class AbstractDriver():
                     # TODO make this work for all browser
                     "actionUrl": "http://localhost:5000/admin/driver/"
                                  "Edg?headless=false",
+                    "enabled": True
                 }
             ],
             "bodyBadge": {
@@ -152,6 +155,7 @@ class AbstractDriver():
             respDict["headerBadge"]["caption"] = "instance"
             respDict["headerBadge"]["content"] = \
                 str(self.driver.window_handles[0])
+            respDict["action"][0]["enabled"] = False
             msgText = json.dumps(
                 respDict,
                 default=str

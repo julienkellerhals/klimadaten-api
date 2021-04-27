@@ -88,11 +88,13 @@ class Database:
             "action": [
                 {
                     "name": "Connect to db",
-                    "actionUrl": "http://localhost:5000/admin/db/connect"
+                    "actionUrl": "http://localhost:5000/admin/db/connect",
+                    "enabled": True
                 },
                 {
                     "name": "Create db",
-                    "actionUrl": "http://localhost:5000/admin/db/create"
+                    "actionUrl": "http://localhost:5000/admin/db/create",
+                    "enabled": True
                 }
             ],
             "bodyBadge": {
@@ -113,6 +115,8 @@ class Database:
                 respDict["status"] = 2
                 respDict["headerBadge"]["caption"] = "Database not started"
                 respDict["headerBadge"]["content"] = errorIcon
+                respDict["action"][0]["enabled"] = True
+                respDict["action"][1]["enabled"] = False
                 respDict["bodyBadge"]["caption"] = str(e)
                 respDict["bodyBadge"]["content"] = errorIcon
                 msgText = json.dumps(
@@ -126,6 +130,8 @@ class Database:
                 respDict["status"] = 1
                 respDict["headerBadge"]["caption"] = "Database not created"
                 respDict["headerBadge"]["content"] = errorIcon
+                respDict["action"][0]["enabled"] = False
+                respDict["action"][1]["enabled"] = True
                 respDict["bodyBadge"]["caption"] = str(e)
                 respDict["bodyBadge"]["content"] = errorIcon
                 msgText = json.dumps(
@@ -136,6 +142,8 @@ class Database:
             respDict["status"] = 0
             respDict["headerBadge"]["caption"] = "connection"
             respDict["headerBadge"]["content"] = str(self.databaseUrl)
+            respDict["action"][0]["enabled"] = False
+            respDict["action"][1]["enabled"] = False
             msgText = json.dumps(
                 respDict,
                 default=str
@@ -163,7 +171,8 @@ class Database:
             "action": [
                 {
                     "name": "Start engine",
-                    "actionUrl": "http://localhost:5000/admin/db/connect"
+                    "actionUrl": "http://localhost:5000/admin/db/connect",
+                    "enabled": True
                 }
             ],
             "bodyBadge": {
@@ -179,6 +188,7 @@ class Database:
             respDict["headerBadge"]["content"] = errorIcon
             respDict["bodyBadge"]["caption"] = "Connect to db"
             respDict["bodyBadge"]["content"] = errorIcon
+
             msgText = json.dumps(
                 respDict,
                 default=str
@@ -186,6 +196,7 @@ class Database:
         else:
             respDict["status"] = 0
             respDict["headerBadge"]["content"] = "Engine started"
+            respDict["action"][0]["enabled"] = False
             msgText = json.dumps(
                 respDict,
                 default=str

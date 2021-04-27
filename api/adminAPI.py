@@ -1,3 +1,4 @@
+import json
 from flask import request
 from flask import Blueprint
 from flask import render_template
@@ -17,6 +18,99 @@ def constructBlueprint(announcer, instance, abstractDriver):
         return render_template(
             "admin.html",
         )
+
+    @adminApi.route("/getServiceList", methods=["POST"])
+    def getServiceList():
+        serviceList = {
+            "runningService": {
+                "1": {
+                    "eventSourceUrl": "/admin/stream/getDriverPathStatus",
+                    "title": "Driver name",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Download driver",
+                            "actionUrl": "",
+                            "enabled": True
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "2": {
+                    "eventSourceUrl": "/admin/stream/getDriverStatus",
+                    "title": "Driver status",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Start driver",
+                            "actionUrl": "",
+                            "enabled": True
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "3": {
+                    "eventSourceUrl": "/admin/stream/getDatabaseStatus",
+                    "title": "Database connection",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Connect to db",
+                            "actionUrl": "",
+                            "enabled": True
+                        },
+                        {
+                            "name": "Create db",
+                            "actionUrl": "",
+                            "enabled": True
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "4": {
+                    "eventSourceUrl": "/admin/stream/getEngineStatus",
+                    "title": "Engine status",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Start engine",
+                            "actionUrl": "",
+                            "enabled": True
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+            }
+        }
+        return json.dumps(serviceList, default=str)
 
     @adminApi.route("/getEngineStatus", methods=["POST"])
     def getEngineStatus():

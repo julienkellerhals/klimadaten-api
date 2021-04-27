@@ -1,11 +1,11 @@
 from flask import Flask
 import db
+import abstractDriver
+import messageAnnouncer
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
-import abstractDriver
-import messageAnnouncer
 
 app = Flask(__name__)
 
