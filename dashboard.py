@@ -9,27 +9,22 @@ from dash import Dash
 import plotly.graph_objs as go
 
 
-class Dashboard():
-    flaskApp = None
-    dashApp = None
-    engine = None
+def mydashboard(flaskApp,instance):
+    flaskApp = flaskApp
+    instance.checkEngine()
+    engine = instance.engine
+    external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-    def __init__(self, flaskApp, instance):
-        self.flaskApp = flaskApp
-        instance.checkEngine()
-        self.engine = instance.engine
+    dashApp = Dash(
+        __name__,
+        server=flaskApp,
+        url_base_pathname='/dashboard/',
+        external_stylesheets=external_stylesheets
+    )
 
-    def createDashboard(self):
-        external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-        self.dashApp = Dash(
-            __name__,
-            server=self.flaskApp,
-            url_base_pathname='/dashboard/',
-            external_stylesheets=external_stylesheets
-        )
-        # meteoSchweizTempGraph = self.createMeteoSchweizTempGraph()
-        # meteoSchweizPrecpGraph = self.createMeteoSchweizPrecpGraph()
+    def createDashboard():
+        # meteoSchweizTempGraph = createMeteoSchweizTempGraph()
+        # meteoSchweizPrecpGraph = createMeteoSchweizPrecpGraph()
 
         # add colors
         colors = {
@@ -65,9 +60,9 @@ class Dashboard():
             FROM core.measurements_t 
             WHERE meas_name = 'rhh150mx' 
             GROUP BY meas_date""",
-            self.engine)
+            engine)
 
-        self.dashApp.layout = html.Div([
+        dashApp.layout = html.Div([
             # header
             html.Div([
                 html.Div([], style={'width': '5%', 'display': 'inline-block'}),
@@ -78,9 +73,16 @@ class Dashboard():
                             'textAlign': 'center',
                             'color': colors['text_l']
                         }
-                    )
-                    # html.Button('Datenstory', id='linkDatastory', n_clicks=0)
+                    ),
                 ], style={'display': 'inline-block'}
+                ),
+                html.Div([
+                    html.Button('Datenstory', id='linkDatastory', n_clicks=0)
+                ], style={'display': 'inline-block'}                
+                ),
+                html.Div([
+                    dcc.Link('Datenstory', href='/')
+                ], style={'display': 'inline-block'}                
                 ),
                 html.Div([], style={'width': '5%', 'display': 'inline-block'}),
                 html.Div([
@@ -122,21 +124,26 @@ class Dashboard():
                 ], style={'width': '60%', 'display': 'inline-block'}
                 ),
                 html.Div([
-
+                    html.H1(id='thisis')
                 ], style={'width': '30%', 'display': 'inline-block'}
                 ),
             ], style={'backgroundColor': colors['background_l1']}
             ),
         ])
 
-        """
-        @self.dashApp.callback(
-            Output('number_out', 'children'),
-            [Input('linkDatastory', 'n_clicks')])
-        def redirectToStory(self, n_clicks):
-            return " times"
-            #Flask.redirect('/')
-        """
+
+    @dashApp.callback(
+        Output('thisis', 'children'),
+        [Input('linkDatastory', 'n_clicks')])
+    def redirectToStory(n_clicks):
+        return dcc.Location(pathname="/", id="hello")
+    
+    @dashApp.callback(
+        Output('thisis', 'children'),
+        [Input('linkDatastory', 'n_clicks')])
+    def countClicking(n_clicks):
+        return f"You entered: {n_clicks}"
+
     
     '''
     df = pd.read_sql(('select "Timestamp","Value" from "MyTable" '
@@ -145,11 +152,11 @@ class Dashboard():
                    index_col=['Timestamp'])
     '''
 
-    def createMeteoSchweizTempGraph(self):
+    def createMeteoSchweizTempGraph():
         # use pd.read_sql() instead
         measurementsDf = pd.read_sql_table(
                 "measurements_t",
-                self.engine,
+                engine,
                 schema="core"
             )
 
@@ -188,10 +195,10 @@ class Dashboard():
 
         return meteoSchweizTempGraph
 
-    def createMeteoSchweizPrecpGraph(self):
+    def createMeteoSchweizPrecpGraph():
         measurementsDf = pd.read_sql_table(
                 "measurements_t",
-                self.engine,
+                engine,
                 schema="core"
             )
         measurementsDf = measurementsDf[
@@ -215,3 +222,7 @@ class Dashboard():
         ])
 
         return meteoSchweizPrecpGraph
+
+    createDashboard()
+    
+    return dashApp

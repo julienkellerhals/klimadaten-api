@@ -42,8 +42,7 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
     url_prefix="/admin/scrape"
 )
 
-dashApp = dashboard.Dashboard(app, instance)
-dashApp.createDashboard()
+dashApp = dashboard.mydashboard(app, instance)
 
 
 @app.route("/")
