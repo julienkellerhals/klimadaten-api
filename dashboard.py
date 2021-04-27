@@ -131,7 +131,10 @@ def mydashboard(flaskApp, instance):
                     ),
                     # make plotly figure bar invisible
                     # config={'displayModeBar': False,'staticPlot': False}
-                    dcc.Graph(id='scatterplot1', config={'displayModeBar': False,'staticPlot': False})
+                    dcc.Graph(
+                        id='scatterplot1',
+                        config={'displayModeBar': False, 'staticPlot': False}
+                        )
                 ], style={
                     'backgroundColor': colors['l0'],
                     'width': '55%',
@@ -254,7 +257,7 @@ def mydashboard(flaskApp, instance):
                 yaxis={'title': yaxis_name},
                 hovermode='closest',
                 margin={'l': 40, 'b': 40, 't': 50, 'r': 0}
-            )         
+            )
         }
 
     createDashboard()
