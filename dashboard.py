@@ -40,6 +40,7 @@ def mydashboard(flaskApp, instance):
             'd1': '#05090C',
             'd2': '#0C1419',
             'd3': '#121F26',
+            'l0': '#FFFFFF',
             'l1': '#EBEFF2',
             'l2': '#D8E0E5',
             'l3': '#C5D1D8',
@@ -69,6 +70,7 @@ def mydashboard(flaskApp, instance):
         """
 
         # db queries for plots
+        '''
         df = pd.read_sql(
             """SELECT
             AVG(meas_value) avg_highest_hour,
@@ -78,7 +80,13 @@ def mydashboard(flaskApp, instance):
             GROUP BY meas_date""",
             engine
         )
+        '''
         # df['meas_date'] = pd.to_datetime(df['meas_date'])
+        features = [
+            'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
+            'hns000d0', 'fklnd3m0', 'fu3010m1', 'hns000mx', 'rsd700m0',
+            'rs1000m0', 'rzz150mx', 'rhh150mx', 'rre150m0', 'rhs150m0'
+        ]
 
         dashApp.layout = html.Div([
             # header
@@ -108,7 +116,7 @@ def mydashboard(flaskApp, instance):
                 )
             ], style={'backgroundColor': colors['d3']}
             ),
-            # border above plots 
+            # border above plots
             html.Div([
                 html.Div([], style={
                     'height': 13,
@@ -119,44 +127,43 @@ def mydashboard(flaskApp, instance):
             # first row of plots
             html.Div([
                 html.Div([], style={
-                    'width': '10%',
+                    'width': '8%',
                     'display': 'inline-block'
                 }),
                 html.Div([
+                    dcc.Dropdown(
+                        id='yaxis',
+                        options=[{'label': i, 'value': i} for i in features],
+                        value='breclod0'
+                    ),
                     # scatterplot top left
                     dcc.Graph(
-                        id='scatterplot_1',
-                        figure={
-                            'data': [go.Scatter(
-                                x=df["meas_date"],
-                                y=df['avg_highest_hour'],
-                                mode='lines+markers',
-                                marker={
-                                    'size': 5,
-                                    'color': 'blue',
-                                    'line': {'width': 2}
-                                }
-                            )],
-                            'layout': go.Layout(
-                                title='My Scatterplot',
-                                xaxis={'title': 'Zeit in Jahren'},
-                                yaxis={'title': 'avg highest hour'},
-                                hovermode='closest')
-                        },
+                        id='scatterplot'
                         # make plotly figure bar invisible
+                        """
                         config={
                             'displayModeBar': False,
-                            'staticPlot': False}
+                            'staticPlot': False
+                        }
+                        """
                     )
-                ], style={'width': '60%', 'display': 'inline-block'}
+                ], style={'width': '56%', 'display': 'inline-block', 'backgroundColor': colors['l0'], 'height': 500}
                 ),
+                html.Div([], style={
+                    'width': '2%',
+                    'display': 'inline-block'
+                }),
                 html.Div([
                     html.H1(id='thisis')
-                ], style={'width': '30%', 'display': 'inline-block'}
+                ], style={'width': '26%', 'display': 'inline-block', 'backgroundColor': colors['l0'], 'height': 500}
                 ),
+                html.Div([], style={
+                    'width': '8%',
+                    'display': 'inline-block'
+                }),
             ], style={'backgroundColor': colors['l1']}
             ),
-            # border below plots 
+            # border below plots
             html.Div([
                 html.Div([], style={
                     'height': 13,
@@ -175,13 +182,37 @@ def mydashboard(flaskApp, instance):
         else:
             return dcc.Location(pathname="/", id="hello")
 
-    """
     @dashApp.callback(
-        Output('thisis', 'children'),
-        [Input('linkDatastory', 'n_clicks')])
-    def countClicking(n_clicks):
-        return f"You entered: {n_clicks}"
-    """
+        Output('scatterplot', 'figure'),
+        [Input('yaxis', 'value')])
+    def update_graph(yaxis_name):
+        df = pd.read_sql(
+            f"""SELECT
+            AVG(meas_value),
+            meas_date
+            FROM core.measurements_t
+            WHERE meas_name = {"'"+ yaxis_name +"'"}
+            GROUP BY meas_date""",
+            engine
+        )
+
+        return {
+            'data': [go.Scatter(
+                x=df["meas_date"],
+                y=df[str(yaxis_name)],
+                mode='lines+markers',
+                marker={
+                    'size': 5,
+                    'color': 'blue',
+                    'line': {'width': 2}
+                }
+            )],
+            'layout': go.Layout(
+                title='My Scatterplot',
+                xaxis={'title': yaxis_name},
+                yaxis={'title': 'avg highest hour'},
+                hovermode='closest')
+        }
 
     createDashboard()
     return dashApp
