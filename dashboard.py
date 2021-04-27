@@ -15,6 +15,14 @@ def mydashboard(flaskApp, instance):
     instance.checkEngine()
     engine = instance.engine
     external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+    '''
+    external_stylesheets = [
+        {
+        "href": "https://fonts.googleapis.com/css2?"
+                "family=Lato:wght@400;700&display=swap",
+        "rel": "stylesheet",
+    }]
+    '''
 
     dashApp = Dash(
         __name__,
@@ -29,14 +37,17 @@ def mydashboard(flaskApp, instance):
 
         # add colors
         colors = {
-            'background_d': '#05090C',
-            'background_l1': '#EBEFF2',
-            'background_l2': '#D8E0E5',
-            'text_d': '#05090C',
-            'text_l': '#EBEFF2'
+            'd1': '#05090C',
+            'd2': '#0C1419',
+            'd3': '#121F26',
+            'l1': '#EBEFF2',
+            'l2': '#D8E0E5',
+            'l3': '#C5D1D8',
+            'l4': '#B6C3CC',
+            'l5': '#A3B5BF',
+            'l6': '#96A8B2'
         }
 
-        # db queries for plots
         """
         "tre200d0"
         "temperature"
@@ -56,7 +67,9 @@ def mydashboard(flaskApp, instance):
         "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
         "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
         """
-        rhh150mx = pd.read_sql(
+
+        # db queries for plots
+        df = pd.read_sql(
             """SELECT
             AVG(meas_value) avg_highest_hour,
             meas_date
@@ -65,72 +78,75 @@ def mydashboard(flaskApp, instance):
             GROUP BY meas_date""",
             engine
         )
+        # df['meas_date'] = pd.to_datetime(df['meas_date'])
 
         dashApp.layout = html.Div([
             # header
             html.Div([
-                html.Div([], style={'width': '5%', 'display': 'inline-block'}),
+                html.Div([], style={'width': '2%', 'display': 'inline-block'}),
                 html.Div([
-                    html.H2(
-                        'Datenstory',
-                        style={
-                            'textAlign': 'center',
-                            'color': colors['text_l']
-                        }
-                    ),
-                ], style={'display': 'inline-block'}
-                ),
-                html.Div([
-                    html.Button('Datenstory', id='linkDatastory', n_clicks=0)
-                ], style={'display': 'inline-block'}
-                ),
-                html.Div([
-                    dcc.Link('Datenstory', href='/')
-                ], style={'display': 'inline-block'}
-                ),
-                html.Div([], style={'width': '5%', 'display': 'inline-block'}),
-                html.Div([
-                    html.H2(
+                    html.H3(
                         'Dashboard',
+                        id='linkDashboard',
                         style={
-                            'textAlign': 'center',
-                            'color': colors['text_l']
-                        }
+                            'color': colors['l1'],
+                            'margin-top': '20px',
+                            'margin-bottom': '20px',
+                            }
+                    )
+                ], style={'display': 'inline-block'}
+                ),
+                html.Div([], style={'width': '2%', 'display': 'inline-block'}),
+                html.Div([
+                    html.H3(
+                        'Datenstory',
+                        id='linkDatastory',
+                        n_clicks=0,
+                        style={'color': colors['l6']}
                     )
                 ], style={'display': 'inline-block'}
                 )
-            ], style={'backgroundColor': colors['background_d']}
+            ], style={'backgroundColor': colors['d3']}
+            ),
+            # border above plots 
+            html.Div([
+                html.Div([], style={
+                    'height': 13,
+                    'display': 'inline-block'
+                })
+            ], style={'backgroundColor': colors['l1']}
             ),
             # first row of plots
             html.Div([
-                html.Div([
-
-                ],
-                    style={
-                        'width': '10%',
-                        'display': 'inline-block'
-                    }
-                ),
+                html.Div([], style={
+                    'width': '10%',
+                    'display': 'inline-block'
+                }),
                 html.Div([
                     # scatterplot top left
                     dcc.Graph(
                         id='scatterplot_1',
                         figure={
                             'data': [go.Scatter(
-                                x=rhh150mx["meas_date"],
-                                y=rhh150mx['avg_highest_hour'],
-                                mode='markers',
+                                x=df["meas_date"],
+                                y=df['avg_highest_hour'],
+                                mode='lines+markers',
                                 marker={
-                                    'size': 12,
-                                    'color': 'rgb(51,204,153)',
+                                    'size': 5,
+                                    'color': 'blue',
                                     'line': {'width': 2}
                                 }
                             )],
                             'layout': go.Layout(
                                 title='My Scatterplot',
-                                xaxis={'title': 'x title'},
-                                yaxis={'title': 'y title'})
-                        }
+                                xaxis={'title': 'Zeit in Jahren'},
+                                yaxis={'title': 'avg highest hour'},
+                                hovermode='closest')
+                        },
+                        # make plotly figure bar invisible
+                        config={
+                            'displayModeBar': False,
+                            'staticPlot': False}
                     )
                 ], style={'width': '60%', 'display': 'inline-block'}
                 ),
@@ -138,8 +154,16 @@ def mydashboard(flaskApp, instance):
                     html.H1(id='thisis')
                 ], style={'width': '30%', 'display': 'inline-block'}
                 ),
-            ], style={'backgroundColor': colors['background_l1']}
+            ], style={'backgroundColor': colors['l1']}
             ),
+            # border below plots 
+            html.Div([
+                html.Div([], style={
+                    'height': 13,
+                    'display': 'inline-block'
+                })
+            ], style={'backgroundColor': colors['l1']}
+            )
         ])
 
     @dashApp.callback(
@@ -158,82 +182,6 @@ def mydashboard(flaskApp, instance):
     def countClicking(n_clicks):
         return f"You entered: {n_clicks}"
     """
-    '''
-    df = pd.read_sql(('select "Timestamp","Value" from "MyTable" '
-                     'where "Timestamp" BETWEEN %(dstart)s AND %(dfinish)s'),
-                   db,params={"dstart":datetime(2014,6,24,16,0),"dfinish":datetime(2014,6,24,17,0)},
-                   index_col=['Timestamp'])
-    '''
-
-    def createMeteoSchweizTempGraph():
-        # use pd.read_sql() instead
-        measurementsDf = pd.read_sql_table(
-                "measurements_t",
-                engine,
-                schema="core"
-            )
-
-        # in future create datamart with only the required data
-        measurementsDf = measurementsDf[
-            measurementsDf["meas_name"] == "temperature"
-        ]
-
-        # pv = pd.pivot_table(
-        #     measurementsDf,
-        #     index=['meas_date'],
-        #     columns=["station"],
-        #     values=['meas_value'],
-        #     aggfunc="mean",
-        #     fill_value=0
-        # )
-
-        # avgTemp = go.Line(x=pv.index, y=pv.values)
-
-        fig = px.line(
-            measurementsDf,
-            x="meas_date",
-            y="meas_value",
-            color="station"
-        )
-
-        meteoSchweizTempGraph = html.Div(children=[
-            html.H1(children='Meteosuisse'),
-            html.Div(children='''Temperature evolution over time'''),
-            dcc.Graph(
-                id='ms-temp-overtime',
-                figure=fig
-            )
-        ])
-
-        return meteoSchweizTempGraph
-
-    def createMeteoSchweizPrecpGraph():
-        measurementsDf = pd.read_sql_table(
-                "measurements_t",
-                engine,
-                schema="core"
-            )
-        measurementsDf = measurementsDf[
-            measurementsDf["meas_name"] == "precipitation"
-        ]
-
-        fig = px.line(
-            measurementsDf,
-            x="meas_date",
-            y="meas_value",
-            color="station"
-        )
-
-        meteoSchweizPrecpGraph = html.Div(children=[
-            html.H1(children='Meteosuisse'),
-            html.Div(children='''Precipitation evolution over time'''),
-            dcc.Graph(
-                id='ms-precp-overtime',
-                figure=fig
-            )
-        ])
-
-        return meteoSchweizPrecpGraph
 
     createDashboard()
     return dashApp
