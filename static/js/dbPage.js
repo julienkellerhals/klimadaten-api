@@ -49,8 +49,8 @@ function load(tableName) {
     coreETL.req(url)
 }
 
-// Other getStatus set in base
-setInterval(getStatus("/admin/getTablesStatus"), refreshInterval)
+// Other postReq set in base
+setInterval(postReq("/admin/getTablesStatus"), refreshInterval)
 
 
 var currentStatus = null
@@ -77,7 +77,7 @@ function runAction(actionUrl, statusUrl) {
     }
     xhr.open("POST", actionUrl, true);
     xhr.send()
-    getStatus(statusUrl)
+    postReq(statusUrl)
 }
 
 var stageETL = new RunETL("stage")

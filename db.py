@@ -82,8 +82,8 @@ class Database:
             "eventSourceUrl": "/admin/stream/getDatabaseStatus",
             "title": "Database connection",
             "headerBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
             "action": [
                 {
@@ -98,8 +98,8 @@ class Database:
                 }
             ],
             "bodyBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
         }
         errorIcon = '<i class="material-icons">error</i>'
@@ -165,8 +165,8 @@ class Database:
             "eventSourceUrl": "/admin/stream/getEngineStatus",
             "title": "Engine status",
             "headerBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
             "action": [
                 {
@@ -176,8 +176,8 @@ class Database:
                 }
             ],
             "bodyBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
         }
         errorIcon = '<i class="material-icons">error</i>'

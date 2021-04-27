@@ -27,14 +27,14 @@ function diff(obj1, obj2) {
     return result;
 }
 
-function getStatus(url) {
+function postReq(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.send()
 }
 
-setInterval(getStatus("/admin/getEngineStatus"), refreshInterval)
-setInterval(getStatus("/admin/getDatabaseStatus"), refreshInterval)
+setInterval(postReq("/admin/getEngineStatus"), refreshInterval)
+setInterval(postReq("/admin/getDatabaseStatus"), refreshInterval)
 
 function createCollapsibleElements(baseStructure) {
     const keys = Object.keys(baseStructure)
@@ -72,14 +72,19 @@ function createCollapsibleElements(baseStructure) {
                             row.querySelector("div.collapsible-header > span").innerHTML = contentDiff.headerBadge.content
                         }
                         if (contentDiff.action != undefined) {
-                            // FIXME Does not work with multiple actions
                             Object.keys(contentDiff.action).forEach((idx) => {
                                 var nthChild = String(parseInt(idx)+1)
                                 if (contentDiff.action[idx].name != undefined) {
                                     row.querySelector("div.collapsible-body > div:nth-child(" + nthChild + ") > a").innerText = contentDiff.action[idx].name
                                 }
                                 if (contentDiff.action[idx].actionUrl != undefined) {
-                                    row.querySelector("div.collapsible-body > div:nth-child(" + nthChild + ") > a").href = contentDiff.action[idx].actionUrl
+                                    row.querySelector("div.collapsible-body > div:nth-child(" + nthChild + ") > a").addEventListener(
+                                        "click",
+                                        () => {
+                                            // event.stopPropagation()
+                                            postReq(contentDiff.action[idx].actionUrl)
+                                        }
+                                    )
                                 }
                                 if (contentDiff.action[idx].enabled != undefined) {
                                     if (contentDiff.action[idx].enabled == false) {
@@ -117,13 +122,10 @@ function createCollapsibleElements(baseStructure) {
             var bodyDiv = document.createElement("div")
             bodyDiv.classList.add("collapsible-body")
             row.action.forEach(action => {
-                // FIXME Does not work with multiple actions
-                // disabled
                 var actionRow = document.createElement("div")
                 actionRow.classList.add("row")
 
                 var actionButton = document.createElement("a")
-                actionButton.href = action.actionUrl
                 actionButton.classList.add("waves-effect")
                 actionButton.classList.add("waves-light")
                 actionButton.classList.add("btn-small")

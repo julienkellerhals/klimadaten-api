@@ -35,7 +35,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
                         {
                             "name": "Download driver",
                             "actionUrl": "",
-                            "enabled": True
+                            "enabled": False
                         }
                     ],
                     "bodyBadge": {
@@ -55,7 +55,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
                         {
                             "name": "Start driver",
                             "actionUrl": "",
-                            "enabled": True
+                            "enabled": False
                         }
                     ],
                     "bodyBadge": {
@@ -75,12 +75,12 @@ def constructBlueprint(announcer, instance, abstractDriver):
                         {
                             "name": "Connect to db",
                             "actionUrl": "",
-                            "enabled": True
+                            "enabled": False
                         },
                         {
                             "name": "Create db",
                             "actionUrl": "",
-                            "enabled": True
+                            "enabled": False
                         }
                     ],
                     "bodyBadge": {
@@ -100,7 +100,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
                         {
                             "name": "Start engine",
                             "actionUrl": "",
-                            "enabled": True
+                            "enabled": False
                         }
                     ],
                     "bodyBadge": {
@@ -200,7 +200,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
             "error.html",
         )
 
-    @adminApi.route("/driver/<browser>")
+    @adminApi.route("/driver/<browser>", methods=["GET"])
     def driver(browser):
         """ Returns driver page
 
@@ -220,6 +220,21 @@ def constructBlueprint(announcer, instance, abstractDriver):
             "stream.html",
             streamUrl=streamUrl
         )
+
+    @adminApi.route("/driver/<browser>", methods=["POST"])
+    def driverInstallPost(browser):
+
+        headlessStr = request.args['headless']
+        userAgent = request.headers.get('User-Agent')
+
+        abstractDriver.downloadDriver(browser, headlessStr, userAgent)
+        return ""
+
+    @adminApi.route("/startDriver", methods=["POST"])
+    def startDriver():
+
+        abstractDriver.checkDriver()
+        return ""
 
     @adminApi.route("/test")
     def runTests():

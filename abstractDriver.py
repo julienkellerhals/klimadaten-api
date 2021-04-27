@@ -45,8 +45,8 @@ class AbstractDriver():
             "eventSourceUrl": "/admin/stream/getDriverPathStatus",
             "title": "Driver name",
             "headerBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
             "action": [
                 {
@@ -58,8 +58,8 @@ class AbstractDriver():
                 }
             ],
             "bodyBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
         }
         errorIcon = '<i class="material-icons">error</i>'
@@ -109,21 +109,19 @@ class AbstractDriver():
             "eventSourceUrl": "/admin/stream/getDriverStatus",
             "title": "Driver status",
             "headerBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
             "action": [
                 {
                     "name": "Start driver",
-                    # TODO make this work for all browser
-                    "actionUrl": "http://localhost:5000/admin/driver/"
-                                 "Edg?headless=false",
+                    "actionUrl": "http://localhost:5000/admin/startDriver",
                     "enabled": True
                 }
             ],
             "bodyBadge": {
-                "caption": None,
-                "content": None,
+                "caption": "",
+                "content": "",
             },
         }
         errorIcon = '<i class="material-icons">error</i>'
