@@ -40,9 +40,37 @@ class Dashboard():
             'text_l': '#EBEFF2'
         }
 
+        # db queries for plots
+        """
+        "tre200d0"
+        "temperature"
+        "brefard0"
+        "fu3010m1"
+        "breclod0"
+        "tre200dx"
+        "tre200dn"
+        "hns000d0"
+        "hns000mx"
+        "fklnd3m0"
+        "precipitation"
+        "rhs150m0" Precipitation; homogeneous monthly total
+        "rzz150mx" Precipitation; maximum ten minute total of the month
+        "rhh150mx" Precipitation; maximum total per hour of the month
+        "rre150m0" Precipitation; monthly total
+        "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
+        "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
+        """
+        rhh150mx = pd.read_sql("""
+            SELECT AVG(meas_value) avg_highest_hour, meas_date 
+            FROM core.measurements_t 
+            WHERE meas_name = 'rhh150mx' 
+            GROUP BY meas_date""",
+            self.engine)
+
         self.dashApp.layout = html.Div([
             # header
             html.Div([
+                html.Div([], style={'width': '5%', 'display': 'inline-block'}),
                 html.Div([
                     html.H2(
                         'Datenstory',
@@ -52,8 +80,9 @@ class Dashboard():
                         }
                     )
                     # html.Button('Datenstory', id='linkDatastory', n_clicks=0)
-                ], style={'width': '30%', 'display': 'inline-block'}
+                ], style={'display': 'inline-block'}
                 ),
+                html.Div([], style={'width': '5%', 'display': 'inline-block'}),
                 html.Div([
                     html.H2(
                         'Dashboard',
@@ -62,15 +91,35 @@ class Dashboard():
                             'color': colors['text_l']
                         }
                     )
-                ], style={'width': '30%', 'display': 'inline-block'}
+                ], style={'display': 'inline-block'}
                 )
             ], style={'backgroundColor': colors['background_d']}
             ),
             # first row of plots
             html.Div([
+                html.Div([], style={'width': '10%', 'display': 'inline-block'}),
                 html.Div([
-
-                ], style={'width': '70%', 'display': 'inline-block'}
+                    # scatterplot top left
+                    dcc.Graph(
+                        id = 'scatterplot_1',
+                        figure = {
+                            'data': [go.Scatter(
+                                x= rhh150mx["meas_date"],
+                                y = rhh150mx['avg_highest_hour'],
+                                mode = 'markers',
+                                marker = {
+                                    'size': 12,
+                                    'color': 'rgb(51,204,153)',
+                                    'line': {'width': 2}
+                                }
+                            )],
+                            'layout': go.Layout(
+                                title='My Scatterplot',
+                                xaxis={'title': 'x title'},
+                                yaxis={'title': 'y title'})
+                        }
+                    )
+                ], style={'width': '60%', 'display': 'inline-block'}
                 ),
                 html.Div([
 
@@ -88,6 +137,13 @@ class Dashboard():
             return " times"
             #Flask.redirect('/')
         """
+    
+    '''
+    df = pd.read_sql(('select "Timestamp","Value" from "MyTable" '
+                     'where "Timestamp" BETWEEN %(dstart)s AND %(dfinish)s'),
+                   db,params={"dstart":datetime(2014,6,24,16,0),"dfinish":datetime(2014,6,24,17,0)},
+                   index_col=['Timestamp'])
+    '''
 
     def createMeteoSchweizTempGraph(self):
         # use pd.read_sql() instead
@@ -96,6 +152,8 @@ class Dashboard():
                 self.engine,
                 schema="core"
             )
+
+        
         # in future create datamart with only the required data
         measurementsDf = measurementsDf[
             measurementsDf["meas_name"] == "temperature"
