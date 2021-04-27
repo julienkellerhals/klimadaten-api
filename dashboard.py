@@ -116,62 +116,114 @@ def mydashboard(flaskApp, instance):
                 )
             ], style={'backgroundColor': colors['d3']}
             ),
-            # border above plots
-            html.Div([
-                html.Div([], style={
-                    'height': 13,
-                    'display': 'inline-block'
-                })
-            ], style={'backgroundColor': colors['l1']}
-            ),
             # first row of plots
             html.Div([
                 html.Div([], style={
-                    'width': '8%',
+                    'width': '5%',
                     'display': 'inline-block'
                 }),
+                # scatterplot top left
                 html.Div([
-                    dcc.Dropdown(
-                        id='yaxis',
-                        options=[{'label': i, 'value': i} for i in features],
-                        value='breclod0'
-                    ),
-                    # scatterplot top left
-                    dcc.Graph(
-                        id='scatterplot'
-                        # make plotly figure bar invisible
-                        """
-                        config={
-                            'displayModeBar': False,
-                            'staticPlot': False
-                        }
-                        """
-                    )
-                ], style={'width': '56%', 'display': 'inline-block', 'backgroundColor': colors['l0'], 'height': 500}
+                    html.Div([
+                        dcc.Dropdown(
+                            id='yaxis',
+                            options=[{'label': i, 'value': i} for i in features],
+                            value='breclod0'
+                      )
+                    ]),
+                    html.Div([
+                        dcc.Graph(
+                            id='scatterplot'
+                            # make plotly figure bar invisible
+                            """
+                            config={
+                                'displayModeBar': False,
+                                'staticPlot': False
+                            }
+                            """
+                        )   
+                    ])    
+                ], style={
+                    'backgroundColor': colors['l0'],
+                    'width': '55%',
+                    'height': 500,
+                    'box-shadow': '8px 8px 8px lightgrey',
+                    'display': 'inline-block',
+                    'position': 'relative',
+                    'border-radius': 15,
+                    'padding': '10px',
+                    'margin': '10px'
+                }
                 ),
                 html.Div([], style={
-                    'width': '2%',
-                    'display': 'inline-block'
-                }),
-                html.Div([
-                    html.H1(id='thisis')
-                ], style={'width': '26%', 'display': 'inline-block', 'backgroundColor': colors['l0'], 'height': 500}
+                    'backgroundColor': colors['l0'],
+                    'width': '27.5%',
+                    'height': 500,
+                    'box-shadow': '8px 8px 8px lightgrey',
+                    'display': 'inline-block',
+                    'position': 'relative',
+                    'border-radius': 15,
+                    'padding': '10px',
+                    'margin': '10px'
+                }
                 ),
                 html.Div([], style={
-                    'width': '8%',
+                    'width': '5%',
                     'display': 'inline-block'
                 }),
             ], style={'backgroundColor': colors['l1']}
             ),
-            # border below plots
+            # second row of plots
             html.Div([
                 html.Div([], style={
-                    'height': 13,
+                    'width': '5%',
                     'display': 'inline-block'
-                })
-            ], style={'backgroundColor': colors['l1']}
-            )
-        ])
+                }),
+                html.Div([
+
+                ], style={
+                    'backgroundColor': colors['l0'],
+                    'width': '30%',
+                    'height': 285,
+                    'box-shadow': '8px 8px 8px lightgrey',
+                    'display': 'inline-block',
+                    'position': 'relative',
+                    'border-radius': 15,
+                    'padding': '10px',
+                    'margin': '10px'
+                }
+                ),
+                html.Div([], style={
+                    'backgroundColor': colors['l0'],
+                    'width': '30%',
+                    'height': 285,
+                    'box-shadow': '8px 8px 8px lightgrey',
+                    'display': 'inline-block',
+                    'position': 'relative',
+                    'border-radius': 15,
+                    'padding': '10px',
+                    'margin': '10px'
+                }
+                ),
+                html.Div([], style={
+                    'backgroundColor': colors['l0'],
+                    'width': '20.3%',
+                    'height': 285,
+                    'box-shadow': '8px 8px 8px lightgrey',
+                    'display': 'inline-block',
+                    'position': 'relative',
+                    'border-radius': 15,
+                    'padding': '10px',
+                    'margin': '10px'
+                }
+                ),
+                html.Div([], style={
+                    'width': '5%',
+                    'display': 'inline-block'
+                }),
+            ])
+        ], style={'backgroundColor': colors['l1']}
+        )
 
     @dashApp.callback(
         Output('thisis', 'children'),
@@ -209,8 +261,8 @@ def mydashboard(flaskApp, instance):
             )],
             'layout': go.Layout(
                 title='My Scatterplot',
-                xaxis={'title': yaxis_name},
-                yaxis={'title': 'avg highest hour'},
+                xaxis={'title': 'time in years'},
+                yaxis={'title': yaxis_name},
                 hovermode='closest')
         }
 
