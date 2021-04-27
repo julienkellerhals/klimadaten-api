@@ -131,7 +131,7 @@ def mydashboard(flaskApp, instance):
                     ),
                     # make plotly figure bar invisible
                     # config={'displayModeBar': False,'staticPlot': False}
-                    html.Div(id='scatterplot1')
+                    dcc.Graph(id='scatterplot1', config={'displayModeBar': False,'staticPlot': False})
                 ], style={
                     'backgroundColor': colors['l0'],
                     'width': '55%',
@@ -224,7 +224,7 @@ def mydashboard(flaskApp, instance):
             return dcc.Location(pathname="/", id="hello")
 
     @dashApp.callback(
-        Output('scatterplot1', 'children'),
+        Output('scatterplot1', 'figure'),
         [Input('yaxis', 'value')])
     def update_graph(yaxis_name):
         df = pd.read_sql(
@@ -249,10 +249,12 @@ def mydashboard(flaskApp, instance):
                 }
             )],
             'layout': go.Layout(
-                title='My Scatterplot',
+                title='Veränderungen der Variabeln über Zeit',
                 xaxis={'title': 'time in years'},
                 yaxis={'title': yaxis_name},
-                hovermode='closest')
+                hovermode='closest',
+                margin={'l': 40, 'b': 40, 't': 50, 'r': 0}
+            )         
         }
 
     createDashboard()
