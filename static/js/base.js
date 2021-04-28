@@ -6,16 +6,8 @@ function postReq(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.send()
+    return xhr
 }
-
-setInterval( function() {
-    postReq("/admin/getEngineStatus")
-}
-, refreshInterval)
-setInterval( function() {
-    postReq("/admin/getDatabaseStatus")
-}
-, refreshInterval)
 
 function camelize(str) {
     return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
@@ -68,6 +60,7 @@ function createCollapsibleElements(baseStructure) {
                     var content = JSON.parse(e.data);
                     var row = document.getElementById(camelize(content.title))
                     var contentDiff = diff(previousContent, content)
+                    // FIXME None check may not work
                     if (contentDiff != null) {
                         if (contentDiff.title != undefined) {
                             row.querySelector("div.collapsible-header").innerText = contentDiff.title

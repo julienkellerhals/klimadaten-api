@@ -112,6 +112,27 @@ def constructBlueprint(announcer, instance, abstractDriver):
         }
         return json.dumps(serviceList, default=str)
 
+    @adminApi.route("/getDbServiceList", methods=["POST"])
+    def getDbServiceList():
+        dbServiceList = {
+            "runningService": {
+                "eventSourceUrl": "/admin/stream/getDbServiceStatus",
+                "dbConnection": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "dbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "tbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+            }
+        }
+        return json.dumps(dbServiceList, default=str)
+
     @adminApi.route("/getEngineStatus", methods=["POST"])
     def getEngineStatus():
         """ Runs function get engine status
@@ -150,6 +171,12 @@ def constructBlueprint(announcer, instance, abstractDriver):
         """
 
         instance.getTablesStatus()
+        return ""
+
+    @adminApi.route("/getDbServiceStatus", methods=["POST"])
+    def getDbServiceStatus():
+
+        instance.getDbServiceStatus()
         return ""
 
     @adminApi.route("/database")

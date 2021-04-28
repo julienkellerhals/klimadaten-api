@@ -25,6 +25,7 @@ class Database:
     databaseStatusStream = None
     engineStatusStream = None
     tablesStatusStream = None
+    dbServiceStatusStream = None
 
     def __init__(self, announcer):
         """ Init engine
@@ -33,6 +34,7 @@ class Database:
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
         self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.dbServiceStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
 
     def readConfig(self, configFileName):
@@ -69,6 +71,133 @@ class Database:
             self.databaseUrl,
             echo=True
         )
+
+    def getDbServiceStatus(self):
+        x = threading.Thread(
+            target=self._getDbServiceStatus
+        )
+        x.start()
+
+    def _getDbServiceStatus(self):
+        respDict = {
+            "runningService": {
+                "eventSourceUrl": "/admin/stream/getDbServiceStatus",
+                "dbConnection": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "dbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "tbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+            }
+        }
+
+        if self.engine is None:
+            respDict["runningService"][
+                "dbConnection"
+            ]["currentAction"] = True
+            respDict["runningService"][
+                "dbConnection"
+            ]["actionUrl"] = "/admin/db/connect"
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        else:
+            respDict["runningService"]["dbConnection"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        self.dbServiceStatusStream.announce(
+            self.dbServiceStatusStream.format_sse(msgText)
+        )
+
+        try:
+            create_engine(
+                self.databaseUrl
+            ).connect()
+        except sqlalchemy.exc.OperationalError:
+            try:
+                database_exists(self.databaseUrl)
+            except sqlalchemy.exc.OperationalError:
+                respDict["runningService"][
+                    "dbConnection"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "dbConnection"
+                ]["actionUrl"] = "/admin/db/connect"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+            else:
+                respDict["runningService"][
+                    "dbCreate"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "dbCreate"
+                ]["actionUrl"] = "/admin/db/create"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+        else:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        finally:
+            self.dbServiceStatusStream.announce(
+                self.dbServiceStatusStream.format_sse(msgText)
+            )
+
+        try:
+            inspector = inspect(self.engine)
+        except sqlalchemy.exc.NoInspectionAvailable:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        except sqlalchemy.exc.OperationalError:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        else:
+            self.conn = self.engine.connect()
+
+            stageTables = inspector.get_table_names("stage")
+            coreTables = inspector.get_table_names("core")
+            if len(stageTables) > 0 or len(coreTables) > 0:
+                respDict["runningService"]["tbCreate"]["currentAction"] = False
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+            else:
+                respDict["runningService"][
+                    "tbCreate"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "tbCreate"
+                ]["actionUrl"] = "/admin/db/table"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+        finally:
+            self.dbServiceStatusStream.announce(
+                    self.dbServiceStatusStream.format_sse(msgText)
+                )
 
     def getDatabaseStatus(self):
         x = threading.Thread(

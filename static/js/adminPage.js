@@ -11,7 +11,14 @@ function streamEventLog() {
     }
 }
 
-// Other postReq set in base
+setInterval( function() {
+    postReq("/admin/getEngineStatus")
+}
+, refreshInterval)
+setInterval( function() {
+    postReq("/admin/getDatabaseStatus")
+}
+, refreshInterval)
 setInterval( function() {
     postReq("/admin/getDriverPathStatus")
 }, refreshInterval)

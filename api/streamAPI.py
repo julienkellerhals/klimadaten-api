@@ -22,6 +22,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
+    @streamApi.route("/getDbServiceStatus")
+    def streamDbServiceStatus():
+        instance.getDbServiceStatus()
+        return Response(
+            instance.dbServiceStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
     @streamApi.route("/getEngineStatus")
     def streamEngineStatus():
         """ Stream engine status
