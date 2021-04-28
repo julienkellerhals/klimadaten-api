@@ -179,6 +179,7 @@ class Database:
             coreTables = inspector.get_table_names("core")
             if len(stageTables) > 0 or len(coreTables) > 0:
                 respDict["runningService"]["tbCreate"]["currentAction"] = False
+                respDict["runningService"]["tbCreate"]["dbReady"] = True
                 msgText = json.dumps(
                     respDict,
                     default=str

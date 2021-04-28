@@ -133,6 +133,15 @@ def constructBlueprint(announcer, instance, abstractDriver):
         }
         return json.dumps(dbServiceList, default=str)
 
+    @adminApi.route("/getTablesList", methods=["POST"])
+    def getTablesList():
+        tablesList = {
+            "eventSourceUrl": "/admin/stream/getTablesStatus",
+            "stage": {},
+            "core": {},
+        }
+        return json.dumps(tablesList, default=str)
+
     @adminApi.route("/getEngineStatus", methods=["POST"])
     def getEngineStatus():
         """ Runs function get engine status

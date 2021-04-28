@@ -8,12 +8,27 @@ xhr.onload = () => {
 xhr.open("POST", "/admin/getDbServiceList", true);
 xhr.send()
 
+function createTableLists() {
+    // Horrible hack but it works
+    createTableLists = function(){}
+    var xhr = new XMLHttpRequest();
+    xhr.onload = () => {
+        var tableStruct = JSON.parse(xhr.response)
+        createCollapsibleElements(tableStruct)
+    }
+    xhr.open("POST", "/admin/getTablesList", true);
+    xhr.send()
+}
+
 function updateBreadcrumbNav(serviceList) {
     var navEventSource = new EventSource(serviceList.runningService.eventSourceUrl)
     var previousContent = serviceList
     document.getElementById("dbAction").classList.add("disabled")
     navEventSource.onmessage = function (e) {
         var content = JSON.parse(e.data)
+        if (content.runningService.tbCreate.dbReady == true) {
+            createTableLists()
+        }
         var contentDiff = diff(previousContent, content)
         if (Object.keys(contentDiff.runningService).length > 0) {
             if (Object.keys(contentDiff.runningService.dbConnection).length > 0) {
@@ -166,78 +181,6 @@ function load(tableName) {
 var stageETL = new RunETL("stage")
 var coreETL = new RunETL("core")
 var datamartETL = new RunETL("datamart")
-
-function streamEngineStatus() {
-    var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
-    var previousStatusCode = null
-    engineEventSource.onmessage = function (e) {
-        var content = e.data
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var dbConnection = document.getElementById("dbConnection")
-        if (previousStatusCode != statusCode || currentStatus == "null") {
-            previousStatusCode = statusCode
-            if (statusCode == 1) {
-                document.getElementById("dbAction").classList.remove("disabled")
-                dbConnection.classList.remove("text-darken-1")
-                dbConnection.classList.add("text-lighten-5")
-                currentStatus = null
-            } else if (statusCode == 0) {
-                dbConnection.classList.remove("text-lighten-5")
-                dbConnection.classList.add("text-darken-1")
-                currentStatus = "dbConnection"
-            }
-        }
-        checkStatus()
-    }
-}
-
-function streamDatabaseStatus() {
-    var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
-    var previousStatusCode = null
-    databaseEventSource.onmessage = function (e) {
-        var content = e.data;
-        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-        var dbCreate = document.getElementById("dbCreate")
-        if (previousStatusCode != statusCode || currentStatus == "dbConnection") {
-            previousStatusCode = statusCode
-            if (statusCode == 0) {
-                // msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
-                dbCreate.classList.remove("text-lighten-5")
-                dbCreate.classList.add("text-darken-1")
-                if (currentStatus == null) {
-                    currentStatus = null
-                } else if (currentStatus == "dbConnection") {
-                    currentStatus = "dbCreate"
-                }
-            } else if (statusCode == 1) {
-                // msgTxt = "Status: 1; Database not created; Error: " + str(e)
-                document.getElementById("dbAction").classList.remove("disabled")
-                dbCreate.classList.remove("text-darken-1")
-                dbCreate.classList.add("text-lighten-5")
-                if (currentStatus == null) {
-                    currentStatus = null
-                } else if (currentStatus == "dbConnection") {
-                    currentStatus = "dbConnection"
-                } else if (currentStatus == "dbCreate") {
-                    currentStatus = null
-                }
-            } else if (statusCode == 2) {
-                // msgTxt = "Status: 2; Database not started; Error: " + str(e)
-                document.getElementById("dbAction").classList.remove("disabled")
-                dbCreate.classList.remove("text-darken-1")
-                dbCreate.classList.add("text-lighten-5")
-                if (currentStatus == null) {
-                    currentStatus = null
-                } else if (currentStatus == "dbConnection") {
-                    currentStatus = "dbConnection"
-                } else if (currentStatus == "dbCreate") {
-                    currentStatus = null
-                }
-            }
-        }
-        checkStatus()
-    }
-}
 
 function streamTablesStatus() {
     var tablesEventSource = new EventSource("/admin/stream/getTablesStatus");
