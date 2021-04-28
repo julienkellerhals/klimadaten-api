@@ -180,12 +180,16 @@ def constructBlueprint(announcer, instance, abstractDriver):
         abstractDriver.getDriverStatus()
         return ""
 
-    @adminApi.route("/getTablesStatus", methods=["POST"])
-    def getTablesStatus():
-        """ Runs function get database status
-        """
+    @adminApi.route("/getStageTablesStatus", methods=["POST"])
+    def getStageTablesStatus():
 
-        instance.getTablesStatus()
+        instance.getStageTablesStatus()
+        return ""
+
+    @adminApi.route("/getCoreTablesStatus", methods=["POST"])
+    def getCoreTablesStatus():
+
+        instance.getStageTablesStatus()
         return ""
 
     @adminApi.route("/getDbServiceStatus", methods=["POST"])

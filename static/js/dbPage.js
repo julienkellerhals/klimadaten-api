@@ -128,6 +128,13 @@ function updateBreadcrumbNav(serviceList) {
 setInterval( function() {
     postReq("/admin/getDbServiceStatus")
 }, refreshInterval)
+setInterval( function() {
+    postReq("/admin/getStageTablesStatus")
+}, refreshInterval)
+setInterval( function() {
+    postReq("/admin/getCoreTablesStatus")
+}, refreshInterval)
+
 
 class RunETL {
     constructor(divId) {
