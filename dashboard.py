@@ -108,8 +108,8 @@ def mydashboard(flaskApp, instance):
                         id='linkDashboard',
                         style={
                             'color': colors['l1'],
-                            'margin-top': '20px',
-                            'margin-bottom': '20px',
+                            'margin-top': '10px',
+                            'margin-bottom': '10px',
                             }
                     )
                 ], style={'display': 'inline-block'}
@@ -135,42 +135,44 @@ def mydashboard(flaskApp, instance):
                 # map top left
                 html.Div([
                     html.Div([
-                        html.H4('Map')
+                        html.H4('Karte mit Schneetagen pro Station')
                     ]),
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
-                        'height': 420,
+                        'height': 400,
                         'box-shadow': '8px 8px 8px lightgrey',
                         'position': 'relative',
                         'border-radius': 15,
-                        'padding': '10px',
                         'margin': '10px'
                     }
                     ),
                 ], style={
-                    'width': '55%',
-                    'display': 'inline-block'
+                    'width': '37.5%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top'
                 }
                 ),
                 html.Div([
                     html.Div([
-                        html.H4('top right')
+                        html.H4("""
+                            Totaler Schneefall und Regenfall im Durchschnitt
+                        """)
                     ]),
                     html.Div([
 
                     ], style={
                         'backgroundColor': colors['l0'],
-                        'height': 420,
+                        'height': 400,
                         'box-shadow': '8px 8px 8px lightgrey',
                         'position': 'relative',
                         'border-radius': 15,
-                        'padding': '10px',
                         'margin': '10px'
                     }
                     )
                 ], style={
-                    'width': '27.5%',
-                    'display': 'inline-block'
+                    'width': '45%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top'
                 }
                 ),
                 html.Div([], style={
@@ -187,76 +189,95 @@ def mydashboard(flaskApp, instance):
                 }),
                 # scatterplot bottom left
                 html.Div([
+                    html.H4('Temperatur'),
                     html.Div([
-                        # make plotly figure bar invisible
-                        # config={'displayModeBar': False,'staticPlot': False}
-                        dcc.Graph(
-                            id='scatterplot1',
-                            config={
-                                'displayModeBar': False,
-                                'staticPlot': False
-                            }
+                        html.Div([
+                            # make plotly figure bar invisible
+                            # config={'displayModeBar': False,'staticPlot': False}
+                            dcc.Graph(
+                                id='scatterplot1',
+                                config={
+                                    'displayModeBar': False,
+                                    'staticPlot': False
+                                }
+                            )
+                        ], style={
+                            'backgroundColor': colors['l4'],
+                            'width': '70%',
+                            'display': 'inline-block',
+                            'position': 'relative',
+                            'border-radius': 15
+                        }
+                        ),
+                        html.Div([
+                            dcc.Dropdown(
+                                id='yaxis',
+                                options=[
+                                    {'label': i, 'value': i}
+                                    for i in features
+                                ],
+                                value='breclod0'
+                            ),
+                            html.H4('Some random text i guess')
+                        ], style={
+                            'backgroundColor': colors['l0'],
+                            'width': '25%',
+                            'padding': '10px',
+                            'display': 'inline-block',
+                            'vertical-align': 'top'
+                        }
                         )
                     ], style={
-                        'backgroundColor': colors['l4'],
-                        'width': '70%',
-                        'display': 'inline-block',
-                        'position': 'relative',
-                        'border-radius': 15
-                    }
-                    ),
-                    html.Div([
-                        dcc.Dropdown(
-                            id='yaxis',
-                            options=[
-                                {'label': i, 'value': i}
-                                for i in features
-                            ],
-                            value='breclod0'
-                        ),
-                        html.H4('Some random text i guess')
-                    ], style={
                         'backgroundColor': colors['l0'],
-                        'width': '25%',
-                        'padding': '10px',
-                        'display': 'inline-block',
+                        'height': 335,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
+                        # 'padding': '10px',
+                        'margin': '10px',
                         'vertical-align': 'top'
                     }
-                    )
+                    ),
                 ], style={
-                    'backgroundColor': colors['l0'],
                     'width': '40%',
-                    'height': 335,
-                    'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
-                    'position': 'relative',
-                    'border-radius': 15,
-                    # 'padding': '10px',
-                    'margin': '10px',
                     'vertical-align': 'top'
                 }
                 ),
-                html.Div([], style={
-                    'backgroundColor': colors['l0'],
+                # 2nd plot 2nd row
+                html.Div([
+                    html.H4('Bodentemperatur'),
+                    html.Div([], style={
+                        'backgroundColor': colors['l0'],
+                        'height': 335,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
+                        'margin': '10px',
+                        'vertical-align': 'top'
+                    }
+                    ),
+                ], style={
                     'width': '20.15%',
-                    'height': 335,
-                    'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
-                    'position': 'relative',
-                    'border-radius': 15,
-                    'margin': '10px',
                     'vertical-align': 'top'
                 }
                 ),
-                html.Div([html.H1(id='thisis')], style={
-                    'backgroundColor': colors['l0'],
+                # 3nd plot 2nd row
+                html.Div([
+                    html.H4('Extreme Regenfälle'),
+                    html.Div([], style={
+                        'backgroundColor': colors['l0'],
+                        'height': 335,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
+                        'margin': '10px',
+                    }
+                    ),
+                ], style={
                     'width': '20.15%',
-                    'height': 335,
-                    'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
-                    'position': 'relative',
-                    'border-radius': 15,
-                    'margin': '10px',
                     'vertical-align': 'top'
                 }
                 ),
