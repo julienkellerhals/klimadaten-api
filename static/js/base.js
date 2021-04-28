@@ -156,8 +156,9 @@ function updateRowStructure(content, previousContent, colName) {
 function createCollapsibleElementsRows(structure, rows, ul, previousContent, colName) {
     rows.forEach((rowName) => {
         var row = structure[rowName]
-        createRowStructure(row, colName, ul)
         if (row.eventSourceUrl != undefined) {
+            // TODO combine create structure and update
+            createRowStructure(row, colName, ul)
             var rowEventSource = new EventSource(row.eventSourceUrl);
             previousContent = row
             rowEventSource.onmessage = function (e) {
