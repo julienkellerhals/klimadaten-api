@@ -35,8 +35,8 @@ function diff(obj1, obj2) {
     return result;
 }
 
-function updateStructure(content, previousContent) {
-    var row = document.getElementById(camelize(content.title))
+function updateStructure(content, previousContent, colName) {
+    var row = document.getElementById(camelize(colName + " " + content.title))
     var contentDiff = diff(previousContent, content)
     // FIXME None check may not work
     if (contentDiff != null) {
@@ -83,11 +83,11 @@ function updateStructure(content, previousContent) {
     }
 }
 
-function createCollapsibleElementsRows(structure, rows, ul, previousContent) {
-    rows.forEach((row) => {
-        var row = structure[row]
+function createCollapsibleElementsRows(structure, rows, ul, previousContent, colName) {
+    rows.forEach((rowName) => {
+        var row = structure[rowName]
         var li = document.createElement("li")
-        li.id = camelize(row.title)
+        li.id = camelize(colName + " " + row.title)
 
         var headerDiv = document.createElement("div")
         headerDiv.classList.add("collapsible-header")
@@ -159,10 +159,10 @@ function createCollapsibleElementsRows(structure, rows, ul, previousContent) {
             previousContent = row
             rowEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data)
-                updateStructure(content, previousContent)
+                updateStructure(content, previousContent, colName)
             }
         } else {
-            updateStructure(row, previousContent)
+            updateStructure(row, previousContent, colName)
         }
     })
 }
@@ -180,11 +180,11 @@ function createCollapsibleElements(baseStructure) {
             colEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data);
                 var rows = Object.keys(content[id]).filter((r) => r != "eventSourceUrl").sort()
-                createCollapsibleElementsRows(content[id], rows, ul, previousContent)
+                createCollapsibleElementsRows(content[id], rows, ul, previousContent, id)
             }
         } else {
             var rows = Object.keys(baseStructure[id]).sort()
-            createCollapsibleElementsRows(baseStructure[id], rows, ul, previousContent)
+            createCollapsibleElementsRows(baseStructure[id], rows, ul, previousContent, id)
         }
     })
 }
