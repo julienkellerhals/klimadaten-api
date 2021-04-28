@@ -434,6 +434,67 @@ class Database:
             self.stageTablesStatusStream.format_sse(msgText)
         )
 
+    def getCoreTablesStatus(self):
+        x = threading.Thread(
+            target=self._getCoreTablesStatus
+        )
+        x.start()
+
+    def _getCoreTablesStatus(self):
+        respDict = {
+            "core": {
+                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+            }
+        }
+        inspector = inspect(self.engine)
+        coreTables = inspector.get_table_names("core")
+        for coreTable in coreTables:
+            if "temp_" not in coreTable:
+                respDict["core"][coreTable] = {}
+                respDict["core"][coreTable]["title"] = coreTable
+
+                nrowQuery = "SELECT count(*) FROM core.{}".format(coreTable)
+                respDict["core"][coreTable]["headerBadge"] = {}
+                respDict["core"][coreTable]["headerBadge"]["caption"] = "rows"
+                respDict["core"][coreTable]["headerBadge"]["content"] = \
+                    "{:,}".format(self.conn.execute(
+                        nrowQuery
+                    ).first()[0])
+
+                actionList = []
+
+                actionDict = {}
+                actionDict["name"] = "Load"
+                actionDict["actionUrl"] = \
+                    "/admin/db/etl/core/" + coreTable.strip("_t")
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+
+                respDict["core"][coreTable]["action"] = actionList
+
+                lastRefreshQuery = \
+                    "SELECT max(valid_from) FROM core.{}".format(
+                        coreTable
+                    )
+
+                respDict["core"][coreTable]["bodyBadge"] = {}
+                lastRefresh = self.conn.execute(
+                    lastRefreshQuery
+                ).first()[0]
+                if lastRefresh is not None:
+                    respDict["core"][coreTable]["bodyBadge"]["caption"] = \
+                        "last refresh"
+                    respDict["core"][coreTable]["bodyBadge"]["content"] = \
+                        lastRefresh
+
+        msgText = json.dumps(
+            respDict,
+            default=str
+        )
+        self.coreTablesStatusStream.announce(
+            self.coreTablesStatusStream.format_sse(msgText)
+        )
+
     # Remove when done
     def getTablesStatus(self):
         x = threading.Thread(
