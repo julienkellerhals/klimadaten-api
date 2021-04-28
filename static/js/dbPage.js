@@ -168,23 +168,6 @@ class RunETL {
     }
 }
 
-function runScrapping(tableName) {
-    var url = "/admin/scrape/" + tableName.replaceAll("_t", "")
-    stageETL.req(url)
-}
-function runInitialLoad(tableName) {
-    var url = "/admin/db/etl/stage/" + tableName.replaceAll("_t", "")
-    stageETL.req(url)
-}
-function runIncrementLoad(tableName) {
-    var url = "/admin/db/etl/stage/increment/" + tableName.replaceAll("_t", "")
-    stageETL.req(url)
-}
-function load(tableName) {
-    var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
-    coreETL.req(url)
-}
-
 var stageETL = new RunETL("stage")
 var coreETL = new RunETL("core")
 var datamartETL = new RunETL("datamart")

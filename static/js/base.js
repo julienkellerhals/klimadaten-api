@@ -35,7 +35,77 @@ function diff(obj1, obj2) {
     return result;
 }
 
-function updateStructure(content, previousContent, colName) {
+function createRowStructure(row, colName, ul) {
+    var li = document.createElement("li")
+    li.id = camelize(colName + " " + row.title)
+
+    var headerDiv = document.createElement("div")
+    headerDiv.classList.add("collapsible-header")
+    var title = document.createTextNode(row.title)
+    headerDiv.appendChild(title)
+
+    var headerBadge = document.createElement("span")
+    headerBadge.classList.add("badge")
+    var badgeAttribute = document.createAttribute("data-badge-caption")
+    badgeAttribute.value = row.headerBadge.caption
+    headerBadge.setAttributeNode(badgeAttribute)
+    headerBadge.innerHTML = row.headerBadge.content
+    headerDiv.appendChild(headerBadge)
+
+    var bodyDiv = document.createElement("div")
+    bodyDiv.classList.add("collapsible-body")
+    row.action.forEach(action => {
+        var actionRow = document.createElement("div")
+        actionRow.classList.add("row")
+
+        var actionButton = document.createElement("a")
+        actionButton.classList.add("waves-effect")
+        actionButton.classList.add("waves-light")
+        actionButton.classList.add("btn-small")
+        actionButton.innerHTML = action.name
+        if (action.enabled == true) {
+            actionButton.classList.remove("disabled")
+        } else {
+            actionButton.classList.add("disabled")
+        }
+        actionRow.appendChild(actionButton)
+        bodyDiv.appendChild(actionRow)
+    })
+
+    if (row.bodyBadge.content != null) {
+        var bodyBadgeRow = document.createElement("div")
+        bodyBadgeRow.classList.add("row")
+
+        var bodyBadge = document.createElement("span")
+        bodyBadge.classList.add("badge")
+        var badgeAttribute = document.createAttribute("data-badge-caption")
+        badgeAttribute.value = row.bodyBadge.caption
+        bodyBadge.setAttributeNode(badgeAttribute)
+        bodyBadge.innerHTML = row.bodyBadge.content
+
+        bodyBadgeRow.appendChild(bodyBadge)
+        bodyDiv.appendChild(bodyBadgeRow)
+    } else {
+        var bodyBadgeRow = document.createElement("div")
+        bodyBadgeRow.classList.add("row")
+
+        var bodyBadge = document.createElement("span")
+        bodyBadge.classList.add("badge")
+        var badgeAttribute = document.createAttribute("data-badge-caption")
+        badgeAttribute.value = ""
+        bodyBadge.setAttributeNode(badgeAttribute)
+        bodyBadge.innerHTML = ""
+
+        bodyBadgeRow.appendChild(bodyBadge)
+        bodyDiv.appendChild(bodyBadgeRow)
+    }
+
+    li.appendChild(headerDiv)
+    li.appendChild(bodyDiv)
+    ul.appendChild(li)
+}
+
+function updateRowStructure(content, previousContent, colName) {
     var row = document.getElementById(camelize(colName + " " + content.title))
     var contentDiff = diff(previousContent, content)
     // FIXME None check may not work
@@ -51,7 +121,7 @@ function updateStructure(content, previousContent, colName) {
         }
         if (contentDiff.action != undefined) {
             Object.keys(contentDiff.action).forEach((idx) => {
-                var nthChild = String(parseInt(idx)+1)
+                var nthChild = String(parseInt(idx) + 1)
                 if (contentDiff.action[idx].name != undefined) {
                     row.querySelector("div.collapsible-body > div:nth-child(" + nthChild + ") > a").innerText = contentDiff.action[idx].name
                 }
@@ -86,83 +156,16 @@ function updateStructure(content, previousContent, colName) {
 function createCollapsibleElementsRows(structure, rows, ul, previousContent, colName) {
     rows.forEach((rowName) => {
         var row = structure[rowName]
-        var li = document.createElement("li")
-        li.id = camelize(colName + " " + row.title)
-
-        var headerDiv = document.createElement("div")
-        headerDiv.classList.add("collapsible-header")
-        var title = document.createTextNode(row.title)
-        headerDiv.appendChild(title)
-
-        var headerBadge = document.createElement("span")
-        headerBadge.classList.add("badge")
-        var badgeAttribute = document.createAttribute("data-badge-caption")
-        badgeAttribute.value = row.headerBadge.caption
-        headerBadge.setAttributeNode(badgeAttribute)
-        headerBadge.innerHTML = row.headerBadge.content
-        headerDiv.appendChild(headerBadge)
-
-        var bodyDiv = document.createElement("div")
-        bodyDiv.classList.add("collapsible-body")
-        row.action.forEach(action => {
-            var actionRow = document.createElement("div")
-            actionRow.classList.add("row")
-
-            var actionButton = document.createElement("a")
-            actionButton.classList.add("waves-effect")
-            actionButton.classList.add("waves-light")
-            actionButton.classList.add("btn-small")
-            actionButton.innerHTML = action.name
-            if (action.enabled == true) {
-                actionButton.classList.remove("disabled")
-            } else {
-                actionButton.classList.add("disabled")
-            }
-            actionRow.appendChild(actionButton)
-            bodyDiv.appendChild(actionRow)
-        })
-
-        if (row.bodyBadge.content != null) {    
-            var bodyBadgeRow = document.createElement("div")
-            bodyBadgeRow.classList.add("row")
-        
-            var bodyBadge = document.createElement("span")
-            bodyBadge.classList.add("badge")
-            var badgeAttribute = document.createAttribute("data-badge-caption")
-            badgeAttribute.value = row.bodyBadge.caption
-            bodyBadge.setAttributeNode(badgeAttribute)
-            bodyBadge.innerHTML = row.bodyBadge.content
-
-            bodyBadgeRow.appendChild(bodyBadge)
-            bodyDiv.appendChild(bodyBadgeRow)
-        } else {
-            var bodyBadgeRow = document.createElement("div")
-            bodyBadgeRow.classList.add("row")
-        
-            var bodyBadge = document.createElement("span")
-            bodyBadge.classList.add("badge")
-            var badgeAttribute = document.createAttribute("data-badge-caption")
-            badgeAttribute.value = ""
-            bodyBadge.setAttributeNode(badgeAttribute)
-            bodyBadge.innerHTML = ""
-
-            bodyBadgeRow.appendChild(bodyBadge)
-            bodyDiv.appendChild(bodyBadgeRow)
-        }
-
-        li.appendChild(headerDiv)
-        li.appendChild(bodyDiv)
-        ul.appendChild(li)
-
+        createRowStructure(row, colName, ul)
         if (row.eventSourceUrl != undefined) {
             var rowEventSource = new EventSource(row.eventSourceUrl);
             previousContent = row
             rowEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data)
-                updateStructure(content, previousContent, colName)
+                updateRowStructure(content, previousContent, colName)
             }
         } else {
-            updateStructure(row, previousContent, colName)
+            updateRowStructure(row, previousContent, colName)
         }
     })
 }
