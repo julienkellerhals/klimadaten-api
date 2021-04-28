@@ -417,12 +417,14 @@ class Database:
                     )
 
             respDict["stage"][stageTable]["bodyBadge"] = {}
-            respDict["stage"][stageTable]["bodyBadge"]["caption"] = \
-                "last refresh"
-            respDict["stage"][stageTable]["bodyBadge"]["content"] = \
-                self.conn.execute(
-                    lastRefreshQuery
-                ).first()[0]
+            lastRefresh = self.conn.execute(
+                lastRefreshQuery
+            ).first()[0]
+            if lastRefresh is not None:
+                respDict["stage"][stageTable]["bodyBadge"]["caption"] = \
+                    "last refresh"
+                respDict["stage"][stageTable]["bodyBadge"]["content"] = \
+                    lastRefresh
 
         msgText = json.dumps(
             respDict,

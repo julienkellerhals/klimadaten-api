@@ -41,7 +41,7 @@ function updateStructure(content, previousContent) {
     // FIXME None check may not work
     if (contentDiff != null) {
         if (contentDiff.title != undefined) {
-            row.querySelector("div.collapsible-header").innerText = contentDiff.title
+            row.querySelector("div.collapsible-header").childNodes[0].nodeValue = contentDiff.title
         }
         if (contentDiff.headerBadge.caption != undefined) {
             row.querySelector("div.collapsible-header > span").attributes["data-badge-caption"].value = contentDiff.headerBadge.caption
@@ -132,6 +132,19 @@ function createCollapsibleElementsRows(structure, rows, ul, previousContent) {
             badgeAttribute.value = row.bodyBadge.caption
             bodyBadge.setAttributeNode(badgeAttribute)
             bodyBadge.innerHTML = row.bodyBadge.content
+
+            bodyBadgeRow.appendChild(bodyBadge)
+            bodyDiv.appendChild(bodyBadgeRow)
+        } else {
+            var bodyBadgeRow = document.createElement("div")
+            bodyBadgeRow.classList.add("row")
+        
+            var bodyBadge = document.createElement("span")
+            bodyBadge.classList.add("badge")
+            var badgeAttribute = document.createAttribute("data-badge-caption")
+            badgeAttribute.value = ""
+            bodyBadge.setAttributeNode(badgeAttribute)
+            bodyBadge.innerHTML = ""
 
             bodyBadgeRow.appendChild(bodyBadge)
             bodyDiv.appendChild(bodyBadgeRow)
