@@ -12,8 +12,12 @@ function streamEventLog() {
 }
 
 // Other postReq set in base
-setInterval(postReq("/admin/getDriverPathStatus"), refreshInterval)
-setInterval(postReq("/admin/getDriverStatus"), refreshInterval)
+setInterval( function() {
+    postReq("/admin/getDriverPathStatus")
+}, refreshInterval)
+setInterval( function() {
+    postReq("/admin/getDriverStatus")
+}, refreshInterval)
 
 var xhr = new XMLHttpRequest();
 xhr.onload = () => {

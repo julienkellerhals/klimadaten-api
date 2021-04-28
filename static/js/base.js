@@ -1,6 +1,22 @@
 var refreshInterval = 20000
 // TODO maybe remove these and add them on on message event
 
+function postReq(url) {
+    console.log(url)
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.send()
+}
+
+setInterval( function() {
+    postReq("/admin/getEngineStatus")
+}
+, refreshInterval)
+setInterval( function() {
+    postReq("/admin/getDatabaseStatus")
+}
+, refreshInterval)
+
 function camelize(str) {
     return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
@@ -26,15 +42,6 @@ function diff(obj1, obj2) {
     });
     return result;
 }
-
-function postReq(url) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.send()
-}
-
-setInterval(postReq("/admin/getEngineStatus"), refreshInterval)
-setInterval(postReq("/admin/getDatabaseStatus"), refreshInterval)
 
 function createCollapsibleElements(baseStructure) {
     const keys = Object.keys(baseStructure)

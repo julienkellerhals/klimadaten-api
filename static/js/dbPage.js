@@ -1,5 +1,10 @@
 M.AutoInit();
 
+// Other postReq set in base
+setInterval( function() {
+    postReq("/admin/getTablesStatus")
+}, refreshInterval)
+
 class RunETL {
     constructor(divId) {
         this.div = document.getElementById(divId)
@@ -48,10 +53,6 @@ function load(tableName) {
     var url = "/admin/db/etl/core/" + tableName.replaceAll("_t", "")
     coreETL.req(url)
 }
-
-// Other postReq set in base
-setInterval(postReq("/admin/getTablesStatus"), refreshInterval)
-
 
 var currentStatus = null
 function checkStatus() {
