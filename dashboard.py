@@ -1,14 +1,15 @@
+import datetime
+import numpy as np
 import pandas as pd
 import plotly.express as px
-# import plotly.graph_objs as go
+import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
-import plotly.graph_objs as go
-from flask import Flask
-from dash.dependencies import Input, Output, State
 from dash import Dash
+from flask import Flask
 from dash.exceptions import PreventUpdate
-
+from sklearn.linear_model import LinearRegression
+from dash.dependencies import Input, Output, State
 
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
@@ -24,6 +25,27 @@ def mydashboard(flaskApp, instance):
     }]
     '''
 
+    colors = {
+            'd1': '#05090C',
+            'd2': '#0C1419',
+            'd3': '#121F26',
+            'l0': '#FFFFFF',
+            'l1': '#EBEFF2',
+            'l2': '#D8E0E5',
+            'l3': '#C5D1D8',
+            'l4': '#B6C3CC',
+            'l5': '#A3B5BF',
+            'l6': '#96A8B2',
+            'c1': '#ED90A4',
+            'c2': '#ABB150',
+            'c3': '#00C1B2',
+            'c4': '#ACA2EC',
+            'b1': '#ADD8E5',
+            'b2': '#BCDFEB',
+            'rbb': '#285D8F',
+            'rbr': '#DE3143'
+        }
+
     dashApp = Dash(
         __name__,
         server=flaskApp,
@@ -36,18 +58,6 @@ def mydashboard(flaskApp, instance):
         # meteoSchweizPrecpGraph = createMeteoSchweizPrecpGraph()
 
         # add colors
-        colors = {
-            'd1': '#05090C',
-            'd2': '#0C1419',
-            'd3': '#121F26',
-            'l0': '#FFFFFF',
-            'l1': '#EBEFF2',
-            'l2': '#D8E0E5',
-            'l3': '#C5D1D8',
-            'l4': '#B6C3CC',
-            'l5': '#A3B5BF',
-            'l6': '#96A8B2'
-        }
 
         """
         "tre200d0"
@@ -122,41 +132,45 @@ def mydashboard(flaskApp, instance):
                     'width': '5%',
                     'display': 'inline-block'
                 }),
-                # scatterplot top left
+                # map top left
                 html.Div([
-                    dcc.Dropdown(
-                        id='yaxis',
-                        options=[{'label': i, 'value': i} for i in features],
-                        value='breclod0'
+                    html.Div([
+                        html.H4('Map')
+                    ]),
+                    html.Div([], style={
+                        'backgroundColor': colors['l0'],
+                        'height': 420,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
+                        'padding': '10px',
+                        'margin': '10px'
+                    }
                     ),
-                    # make plotly figure bar invisible
-                    # config={'displayModeBar': False,'staticPlot': False}
-                    dcc.Graph(
-                        id='scatterplot1',
-                        config={'displayModeBar': False, 'staticPlot': False}
-                        )
                 ], style={
-                    'backgroundColor': colors['l0'],
                     'width': '55%',
-                    'height': 500,
-                    'box-shadow': '8px 8px 8px lightgrey',
-                    'display': 'inline-block',
-                    'position': 'relative',
-                    'border-radius': 15,
-                    'padding': '10px',
-                    'margin': '10px'
+                    'display': 'inline-block'
                 }
                 ),
-                html.Div([], style={
-                    'backgroundColor': colors['l0'],
+                html.Div([
+                    html.Div([
+                        html.H4('top right')
+                    ]),
+                    html.Div([
+
+                    ], style={
+                        'backgroundColor': colors['l0'],
+                        'height': 420,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
+                        'padding': '10px',
+                        'margin': '10px'
+                    }
+                    )
+                ], style={
                     'width': '27.5%',
-                    'height': 500,
-                    'box-shadow': '8px 8px 8px lightgrey',
-                    'display': 'inline-block',
-                    'position': 'relative',
-                    'border-radius': 15,
-                    'padding': '10px',
-                    'margin': '10px'
+                    'display': 'inline-block'
                 }
                 ),
                 html.Div([], style={
@@ -171,42 +185,79 @@ def mydashboard(flaskApp, instance):
                     'width': '5%',
                     'display': 'inline-block'
                 }),
+                # scatterplot bottom left
                 html.Div([
-                    html.H1(id='thisis')
+                    html.Div([
+                        # make plotly figure bar invisible
+                        # config={'displayModeBar': False,'staticPlot': False}
+                        dcc.Graph(
+                            id='scatterplot1',
+                            config={
+                                'displayModeBar': False,
+                                'staticPlot': False
+                            }
+                        )
+                    ], style={
+                        'backgroundColor': colors['l4'],
+                        'width': '70%',
+                        'display': 'inline-block',
+                        'position': 'relative',
+                        'border-radius': 15
+                    }
+                    ),
+                    html.Div([
+                        dcc.Dropdown(
+                            id='yaxis',
+                            options=[
+                                {'label': i, 'value': i}
+                                for i in features
+                            ],
+                            value='breclod0'
+                        ),
+                        html.H4('Some random text i guess')
+                    ], style={
+                        'backgroundColor': colors['l0'],
+                        'width': '25%',
+                        'padding': '10px',
+                        'display': 'inline-block',
+                        'vertical-align': 'top'
+                    }
+                    )
                 ], style={
                     'backgroundColor': colors['l0'],
-                    'width': '30%',
-                    'height': 285,
+                    'width': '40%',
+                    'height': 335,
                     'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
                     'position': 'relative',
                     'border-radius': 15,
-                    'padding': '10px',
-                    'margin': '10px'
+                    # 'padding': '10px',
+                    'margin': '10px',
+                    'vertical-align': 'top'
                 }
                 ),
                 html.Div([], style={
                     'backgroundColor': colors['l0'],
-                    'width': '30%',
-                    'height': 285,
+                    'width': '20.15%',
+                    'height': 335,
                     'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
                     'position': 'relative',
                     'border-radius': 15,
-                    'padding': '10px',
-                    'margin': '10px'
+                    'margin': '10px',
+                    'vertical-align': 'top'
                 }
                 ),
-                html.Div([], style={
+                html.Div([html.H1(id='thisis')], style={
                     'backgroundColor': colors['l0'],
-                    'width': '20.3%',
-                    'height': 285,
+                    'width': '20.15%',
+                    'height': 335,
                     'box-shadow': '8px 8px 8px lightgrey',
                     'display': 'inline-block',
                     'position': 'relative',
                     'border-radius': 15,
-                    'padding': '10px',
-                    'margin': '10px'
+                    'margin': '10px',
+                    'vertical-align': 'top'
                 }
                 ),
                 html.Div([], style={
@@ -240,23 +291,48 @@ def mydashboard(flaskApp, instance):
             engine
         )
 
+        # simple regression line
+        reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
+        df['bestfit'] = reg.predict(np.vstack(df.index))
+
         return {
             'data': [go.Scatter(
+                name=yaxis_name,
                 x=df["meas_date"],
                 y=df["avg"],
                 mode='lines+markers',
                 marker={
                     'size': 5,
-                    'color': 'blue',
+                    'color': colors['rbb'],
                     'line': {'width': 2}
                 }
-            )],
+            ), go.Scatter(
+                name='regression line',
+                x=df["meas_date"],
+                y=df["bestfit"],
+                mode='lines',
+                marker={
+                    'size': 5,
+                    'color': colors['rbr'],
+                    'line': {'width': 2}
+                }
+            )
+            ],
             'layout': go.Layout(
                 title='Veränderungen der Variabeln über Zeit',
                 xaxis={'title': 'time in years'},
                 yaxis={'title': yaxis_name},
                 hovermode='closest',
-                margin={'l': 40, 'b': 40, 't': 50, 'r': 0}
+                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
+                height=335,
+                paper_bgcolor=colors['b1'],
+                plot_bgcolor='rgba(0,0,0,0)',
+                legend={
+                    'yanchor': 'top',
+                    'y': 0.99,
+                    'xanchor': 'right',
+                    'x': 0.99
+                }
             )
         }
 
