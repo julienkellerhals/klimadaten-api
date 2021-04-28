@@ -24,7 +24,9 @@ class Database:
     announcer = None
     databaseStatusStream = None
     engineStatusStream = None
-    tablesStatusStream = None
+    stageTablesStatusStream = None
+    coreTablesStatusStream = None
+    datamartTablesStatusStream = None
     dbServiceStatusStream = None
 
     def __init__(self, announcer):
@@ -33,7 +35,9 @@ class Database:
 
         self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
         self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.stageTablesStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.coreTablesStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.datamartTablesStatusStream = messageAnnouncer.MessageAnnouncer()
         self.dbServiceStatusStream = messageAnnouncer.MessageAnnouncer()
         self.announcer = announcer
 
@@ -335,6 +339,100 @@ class Database:
             self.engineStatusStream.format_sse(msgText)
         )
 
+    def getStageTablesStatus(self):
+        x = threading.Thread(
+            target=self._getStageTablesStatus
+        )
+        x.start()
+
+    def _getStageTablesStatus(self):
+        respDict = {
+            "stage": {
+                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+            }
+        }
+        inspector = inspect(self.engine)
+        stageTables = inspector.get_table_names("stage")
+        for stageTable in stageTables:
+            respDict["stage"][stageTable] = {}
+            respDict["stage"][stageTable]["title"] = stageTable
+
+            nrowQuery = "SELECT count(*) FROM stage.{}".format(stageTable)
+            respDict["stage"][stageTable]["headerBadge"] = {}
+            respDict["stage"][stageTable]["headerBadge"]["caption"] = "rows"
+            respDict["stage"][stageTable]["headerBadge"]["content"] = \
+                "{:,}".format(self.conn.execute(
+                    nrowQuery
+                ).first()[0])
+
+            actionList = []
+
+            if stageTable == "idaweb_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/idaweb"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+                actionDict = {}
+                actionDict["name"] = "Increment load"
+                actionDict["actionUrl"] = \
+                    "/admin/db/etl/stage/increment/idaweb"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+                actionDict = {}
+                actionDict["name"] = "Run scrapping"
+                actionDict["actionUrl"] = "/admin/scrape/idaweb"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+            elif stageTable == "meteoschweiz_t":
+                actionDict = {}
+                actionDict["name"] = "Run scrapping"
+                actionDict["actionUrl"] = "/admin/scrape/meteoschweiz"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+            elif stageTable == "station_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/etc/stage/station"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+            elif stageTable == "parameter_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/etc/stage/parameter"
+                actionDict["enabled"] = True
+                actionList.append(actionDict)
+
+            respDict["stage"][stageTable]["action"] = actionList
+
+            if stageTable == "meteoschweiz_t":
+                lastRefreshQuery = \
+                    "SELECT max(load_date) FROM stage.{}".format(
+                        stageTable
+                    )
+            else:
+                lastRefreshQuery = \
+                    "SELECT max(valid_from) FROM stage.{}".format(
+                        stageTable
+                    )
+
+            respDict["stage"][stageTable]["bodyBadge"] = {}
+            respDict["stage"][stageTable]["bodyBadge"]["caption"] = \
+                "last refresh"
+            respDict["stage"][stageTable]["bodyBadge"]["content"] = \
+                self.conn.execute(
+                    lastRefreshQuery
+                ).first()[0]
+
+        msgText = json.dumps(
+            respDict,
+            default=str
+        )
+        self.stageTablesStatusStream.announce(
+            self.stageTablesStatusStream.format_sse(msgText)
+        )
+
+    # Remove when done
     def getTablesStatus(self):
         x = threading.Thread(
             target=self._getTablesStatus

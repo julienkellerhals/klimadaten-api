@@ -136,9 +136,15 @@ def constructBlueprint(announcer, instance, abstractDriver):
     @adminApi.route("/getTablesList", methods=["POST"])
     def getTablesList():
         tablesList = {
-            "eventSourceUrl": "/admin/stream/getTablesStatus",
-            "stage": {},
-            "core": {},
+            "stage": {
+                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+            },
+            "core": {
+                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+            },
+            "datamart": {
+                "eventSourceUrl": "/admin/stream/getDatamartTablesStatus",
+            },
         }
         return json.dumps(tablesList, default=str)
 
