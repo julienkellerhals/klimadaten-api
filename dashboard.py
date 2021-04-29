@@ -202,7 +202,11 @@ def mydashboard(flaskApp, instance):
                                     height=400,
                                     paper_bgcolor=colors['b1'],
                                     # plot_bgcolor='rgba(0,0,0,0)',
-                                    geo={'scope': 'europe'}
+                                    geo={
+                                        'scope': 'europe',
+                                        'lonaxis_range': [5.7,10.6],
+                                        'lataxis_range': [45.7, 47.9]
+                                    }
                                     # legend={
                                     #     'yanchor': 'top',
                                     #     'y': 0.99,
