@@ -131,6 +131,8 @@ def mydashboard(flaskApp, instance):
             right_on='station_name'
         )
 
+        df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + str(round(df_map['avg_then'])) + '<br>Ø Schneefall pro Tag 2010-2020: ' + str(round(df_map['avg_now'])) + '<br>Veränderung: ' + str(round(1 - df_map['avg_now'] / df_map['avg_then'])) + '%'
+
         # df['meas_date'] = pd.to_datetime(df['meas_date'])
         features = [
             'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
@@ -186,7 +188,7 @@ def mydashboard(flaskApp, instance):
                                     locations=['Switzerland'],
                                     lon=df_map["longitude"],
                                     lat=df_map["latitude"],
-                                    text=df_map['station_name'],
+                                    text=df_map['text'],
                                     marker={
                                         'size': df_map['avg_now'],
                                         'color': 'blue',
