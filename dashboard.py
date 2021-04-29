@@ -80,17 +80,57 @@ def mydashboard(flaskApp, instance):
         """
 
         # db queries for plots
-        '''
-        df = pd.read_sql(
-            """SELECT
-            AVG(meas_value) avg_highest_hour,
-            meas_date
-            FROM core.measurements_t
-            WHERE meas_name = 'rhh150mx'
-            GROUP BY meas_date""",
+        df_map_1 = pd.read_sql(
+            """
+            SELECT
+            avg(m.meas_value) avg_now,
+            k.station_name,
+            k.longitude,
+            k.latitude,
+            k.elevation
+            FROM core.measurements_t m
+            LEFT JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_date >= '2010-01-01'
+            AND m.meas_date < '2020-01-01'
+            AND m.meas_name = 'hns000d0'
+            AND m.valid_to = '2262-04-11'
+            AND k.parameter = 'hns000d0'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY k.station_name,
+            k.longitude,
+            k.latitude,
+            k.elevation;
+            """,
             engine
         )
-        '''
+
+        df_map_2 = pd.read_sql(
+            """
+            SELECT
+            avg(m.meas_value) avg_then,
+            k.station_name
+            FROM core.measurements_t m
+            LEFT JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_date >= '1970-01-01'
+            AND m.meas_date < '1980-01-01'
+            AND m.meas_name = 'hns000d0'
+            AND m.valid_to = '2262-04-11'
+            AND k.parameter = 'hns000d0'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY k.station_name
+            """,
+            engine
+        )
+
+        df_map = pd.merge(
+            left=df_map_1,
+            right=df_map_2,
+            left_on='station_name',
+            right_on='station_name'
+        )
+
         # df['meas_date'] = pd.to_datetime(df['meas_date'])
         features = [
             'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
@@ -137,7 +177,46 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.H4('Karte mit Schneetagen pro Station')
                     ]),
-                    html.Div([], style={
+                    html.Div([
+                        dcc.Graph(
+                            id='map1',
+                            figure={
+                                'data': [go.Scattergeo(
+                                    locationmode='country names',
+                                    locations=['Switzerland'],
+                                    lon=df_map["longitude"],
+                                    lat=df_map["latitude"],
+                                    text=df_map['station_name'],
+                                    marker={
+                                        'size': df_map['avg_now'],
+                                        'color': 'blue',
+                                        'line': {'width': 2, 'color': 'rgb(40,40,40)'},
+                                        'sizemode': 'area'
+                                    }
+                                    )
+                                ],
+                                'layout': go.Layout(
+                                    title='Schneefall',
+                                    hovermode='closest',
+                                    margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
+                                    height=400,
+                                    paper_bgcolor=colors['b1'],
+                                    # plot_bgcolor='rgba(0,0,0,0)',
+                                    geo={'scope': 'europe'}
+                                    # legend={
+                                    #     'yanchor': 'top',
+                                    #     'y': 0.99,
+                                    #     'xanchor': 'right',
+                                    #     'x': 0.99
+                                    # }
+                                )
+                            },
+                            config={
+                                'displayModeBar': False,
+                                'staticPlot': False
+                            }
+                        )
+                    ], style={
                         'backgroundColor': colors['l0'],
                         'height': 400,
                         'box-shadow': '8px 8px 8px lightgrey',
@@ -193,7 +272,10 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.Div([
                             # make plotly figure bar invisible
-                            # config={'displayModeBar': False,'staticPlot': False}
+                            # config={
+                            # 'displayModeBar': False,
+                            # 'staticPlot': False
+                            # }
                             dcc.Graph(
                                 id='scatterplot1',
                                 config={
