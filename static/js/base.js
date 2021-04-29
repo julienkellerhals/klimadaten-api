@@ -203,24 +203,6 @@ function updateRowStructure(content, previousContent, colName) {
     }
 }
 
-function createCollapsibleElementsRows(structure, rows, ul, previousContent, colName) {
-    rows.forEach((rowName) => {
-        var row = structure[rowName]
-        if (row.eventSourceUrl != undefined) {
-            // TODO combine create structure and update
-            createRowStructure(row, colName, ul)
-            var rowEventSource = new EventSource(row.eventSourceUrl);
-            previousContent = row
-            rowEventSource.onmessage = function (e) {
-                var content = JSON.parse(e.data)
-                updateRowStructure(content, previousContent, colName)
-            }
-        } else {
-            updateRowStructure(row, previousContent, colName)
-        }
-    })
-}
-
 function createCollapsibleElements(baseStructure) {
     const keys = Object.keys(baseStructure)
     keys.forEach((id) => {
@@ -230,15 +212,37 @@ function createCollapsibleElements(baseStructure) {
         if (baseStructure[id].eventSourceUrl != undefined) {
             var colEventSourceUrl = baseStructure[id].eventSourceUrl
             var colEventSource = new EventSource(colEventSourceUrl)
+
+            var rows = Object.keys(baseStructure[id]).filter((r) => r != "eventSourceUrl").sort()
+            rows.forEach((rowName) => {
+                var row = baseStructure[id][rowName]
+                createRowStructure(row, id, ul)
+            })
+
             previousContent = baseStructure[id]
+
             colEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data);
                 var rows = Object.keys(content[id]).filter((r) => r != "eventSourceUrl").sort()
-                createCollapsibleElementsRows(content[id], rows, ul, previousContent, id)
+                rows.forEach((rowName) => {
+                    var row = baseStructure[id][rowName]
+                    updateRowStructure(row, previousContent, id)
+                })
             }
         } else {
             var rows = Object.keys(baseStructure[id]).sort()
-            createCollapsibleElementsRows(baseStructure[id], rows, ul, previousContent, id)
+            rows.forEach((rowName) => {
+                var row = baseStructure[id][rowName]
+                createRowStructure(row, id, ul)
+                if (row.eventSourceUrl != undefined) {
+                    var rowEventSource = new EventSource(row.eventSourceUrl);
+                    previousContent = row
+                    rowEventSource.onmessage = function (e) {
+                        var content = JSON.parse(e.data)
+                        updateRowStructure(content, previousContent, id)
+                    }
+                }
+            })
         }
     })
 }
