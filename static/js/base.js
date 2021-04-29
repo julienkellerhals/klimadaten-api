@@ -35,74 +35,124 @@ function diff(obj1, obj2) {
     return result;
 }
 
-function createRowStructure(row, colName, ul) {
+function createLi(colName, title) {
     var li = document.createElement("li")
-    li.id = camelize(colName + " " + row.title)
+    li.id = camelize(colName + " " + title)
+    return li
+}
 
+function createHeaderDiv() {
     var headerDiv = document.createElement("div")
     headerDiv.classList.add("collapsible-header")
-    var title = document.createTextNode(row.title)
-    headerDiv.appendChild(title)
+    return headerDiv
+}
 
+function createHeaderTitle(headerDiv, title) {
+    var title = document.createTextNode(title)
+    headerDiv.appendChild(title)
+    return headerDiv
+}
+
+function createHeaderBadge(headerDiv, caption, content) {
     var headerBadge = document.createElement("span")
     headerBadge.classList.add("badge")
     var badgeAttribute = document.createAttribute("data-badge-caption")
-    badgeAttribute.value = row.headerBadge.caption
+    badgeAttribute.value = caption
     headerBadge.setAttributeNode(badgeAttribute)
-    headerBadge.innerHTML = row.headerBadge.content
+    headerBadge.innerHTML = content
     headerDiv.appendChild(headerBadge)
+    return headerDiv
+}
 
+function createBodyDiv() {
     var bodyDiv = document.createElement("div")
     bodyDiv.classList.add("collapsible-body")
-    row.action.forEach(action => {
-        var actionRow = document.createElement("div")
-        actionRow.classList.add("row")
+    return bodyDiv
+}
 
-        var actionButton = document.createElement("a")
-        actionButton.classList.add("waves-effect")
-        actionButton.classList.add("waves-light")
-        actionButton.classList.add("btn-small")
-        actionButton.innerHTML = action.name
-        if (action.enabled == true) {
-            actionButton.classList.remove("disabled")
-        } else {
-            actionButton.classList.add("disabled")
-        }
-        actionRow.appendChild(actionButton)
-        bodyDiv.appendChild(actionRow)
-    })
+function createActionRow() {
+    var actionRow = document.createElement("div")
+    actionRow.classList.add("row")
+    return actionRow
+}
 
-    if (row.bodyBadge.content != null) {
-        var bodyBadgeRow = document.createElement("div")
-        bodyBadgeRow.classList.add("row")
+function createActionButton(name, enabled) {
+    var actionButton = document.createElement("a")
+    actionButton.classList.add("waves-effect")
+    actionButton.classList.add("waves-light")
+    actionButton.classList.add("btn-small")
+    actionButton.innerHTML = name
+    if (enabled == true) {
+        actionButton.classList.remove("disabled")
+    } else {
+        actionButton.classList.add("disabled")
+    }
+    return actionButton
+}
 
+function appendAction(bodyDiv, actionRow, actionButton) {
+    actionRow.appendChild(actionButton)
+    bodyDiv.appendChild(actionRow)
+    return bodyDiv
+}
+
+function createBodyBadgeRow() {
+    var bodyBadgeRow = document.createElement("div")
+    bodyBadgeRow.classList.add("row")
+    return bodyBadgeRow
+}
+
+function createBodyBadge(bodyBadgeRow, caption, content) {
+    if (content != null) {
         var bodyBadge = document.createElement("span")
         bodyBadge.classList.add("badge")
         var badgeAttribute = document.createAttribute("data-badge-caption")
-        badgeAttribute.value = row.bodyBadge.caption
+        badgeAttribute.value = caption
         bodyBadge.setAttributeNode(badgeAttribute)
-        bodyBadge.innerHTML = row.bodyBadge.content
-
-        bodyBadgeRow.appendChild(bodyBadge)
-        bodyDiv.appendChild(bodyBadgeRow)
+        bodyBadge.innerHTML = content
     } else {
-        var bodyBadgeRow = document.createElement("div")
-        bodyBadgeRow.classList.add("row")
-
         var bodyBadge = document.createElement("span")
         bodyBadge.classList.add("badge")
         var badgeAttribute = document.createAttribute("data-badge-caption")
         badgeAttribute.value = ""
         bodyBadge.setAttributeNode(badgeAttribute)
         bodyBadge.innerHTML = ""
-
-        bodyBadgeRow.appendChild(bodyBadge)
-        bodyDiv.appendChild(bodyBadgeRow)
     }
+    return bodyBadge
+}
 
+function appendBodyBadge(bodyDiv, bodyBadgeRow, bodyBadge) {
+    bodyBadgeRow.appendChild(bodyBadge)
+    bodyDiv.appendChild(bodyBadgeRow)
+    return bodyDiv
+}
+
+function appendLi(ul, li, headerDiv, bodyDiv) {
     li.appendChild(headerDiv)
     li.appendChild(bodyDiv)
     ul.appendChild(li)
+}
+
+function createRowStructure(row, colName, ul) {
+    var li = createLi(colName, row.title)
+
+    var headerDiv = createHeaderDiv()
+    headerDiv = createHeaderTitle(headerDiv, row.title)
+    headerDiv = createHeaderBadge(headerDiv, row.headerBadge.caption, row.headerBadge.content)
+
+    var bodyDiv = createBodyDiv()
+
+    row.action.forEach(action => {
+        var actionRow = createActionRow()
+        var actionButton = createActionButton(action.name, action.enabled)
+        bodyDiv = appendAction(bodyDiv, actionRow, actionButton)
+    })
+
+    var bodyBadgeRow = createBodyBadgeRow()
+    var bodyBadge = createBodyBadge(bodyBadgeRow, row.bodyBadge.caption, row.bodyBadge.content)
+    bodyDiv = appendBodyBadge(bodyDiv, bodyBadgeRow, bodyBadge)
+
+    appendLi(ul, li, headerDiv, bodyDiv)
 }
 
 function updateRowStructure(content, previousContent, colName) {
