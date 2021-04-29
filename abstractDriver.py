@@ -80,6 +80,7 @@ class AbstractDriver():
                 respDict["status"] = 0
                 respDict["headerBadge"]["caption"] = "driver"
                 respDict["headerBadge"]["content"] = str(self.driverPath.stem)
+                respDict["action"][0]["enabled"] = False
                 msgText = json.dumps(
                     respDict,
                     default=str
