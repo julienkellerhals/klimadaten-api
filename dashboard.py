@@ -147,7 +147,7 @@ def mydashboard(flaskApp, instance):
         df_map = df_map.drop('lat', axis = 1)
 
         plotMap = go.Figure()
-        
+
         plotMap.add_trace(go.Scattergeo(
             # locationmode='country names', # if locationmode and locations are active, one can see adelboden
             # locations=['Switzerland'], # puts point in the middle of country
@@ -418,7 +418,7 @@ def mydashboard(flaskApp, instance):
                 marker={
                     'size': 5,
                     'color': colors['rbb'],
-                    'line': {'width': 2}
+                    'line': {'width': 1, 'color': 'black'}
                 }
             ), go.Scatter(
                 name='regression line',
@@ -428,7 +428,7 @@ def mydashboard(flaskApp, instance):
                 marker={
                     'size': 5,
                     'color': colors['rbr'],
-                    'line': {'width': 2}
+                    'line': {'width': 1, 'color': 'black'}
                 }
             )
             ],
