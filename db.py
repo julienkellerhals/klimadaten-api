@@ -393,13 +393,13 @@ class Database:
             elif stageTable == "station_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
-                actionDict["actionUrl"] = "/admin/etc/stage/station"
+                actionDict["actionUrl"] = "/admin/etl/stage/station"
                 actionDict["enabled"] = True
                 actionList.append(actionDict)
             elif stageTable == "parameter_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
-                actionDict["actionUrl"] = "/admin/etc/stage/parameter"
+                actionDict["actionUrl"] = "/admin/etl/stage/parameter"
                 actionDict["enabled"] = True
                 actionList.append(actionDict)
 

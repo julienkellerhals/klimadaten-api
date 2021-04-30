@@ -102,7 +102,7 @@ function createBodyBadgeRow() {
     return bodyBadgeRow
 }
 
-function createBodyBadge(bodyBadgeRow, caption, content) {
+function createBodyBadge(caption, content) {
     if (content != null) {
         var bodyBadge = document.createElement("span")
         bodyBadge.classList.add("badge")
@@ -149,14 +149,20 @@ function createRowStructure(row, colName, ul) {
     })
 
     var bodyBadgeRow = createBodyBadgeRow()
-    var bodyBadge = createBodyBadge(bodyBadgeRow, row.bodyBadge.caption, row.bodyBadge.content)
+    var bodyBadge = createBodyBadge(row.bodyBadge.caption, row.bodyBadge.content)
     bodyDiv = appendBodyBadge(bodyDiv, bodyBadgeRow, bodyBadge)
 
     appendLi(ul, li, headerDiv, bodyDiv)
 }
 
-function updateRowStructure(content, previousContent, colName) {
+function updateRowStructure(content, previousContent, colName, ul) {
+    // TODO Update still not working
+    // Use table trigger maybe
     var row = document.getElementById(camelize(colName + " " + content.title))
+    if (row == null) {
+        createRowStructure(content, colName, ul)
+        var row = document.getElementById(camelize(colName + " " + content.title))
+    }
     var contentDiff = diff(previousContent, content)
     // FIXME None check may not work
     if (contentDiff != null) {
@@ -219,14 +225,15 @@ function createCollapsibleElements(baseStructure) {
                 createRowStructure(row, id, ul)
             })
 
+            delete baseStructure[id].eventSourceUrl
             previousContent = baseStructure[id]
 
             colEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data);
                 var rows = Object.keys(content[id]).filter((r) => r != "eventSourceUrl").sort()
                 rows.forEach((rowName) => {
-                    var row = baseStructure[id][rowName]
-                    updateRowStructure(row, previousContent, id)
+                    var row = content[id][rowName]
+                    updateRowStructure(row, previousContent, id, ul)
                 })
             }
         } else {
@@ -239,7 +246,7 @@ function createCollapsibleElements(baseStructure) {
                     previousContent = row
                     rowEventSource.onmessage = function (e) {
                         var content = JSON.parse(e.data)
-                        updateRowStructure(content, previousContent, id)
+                        updateRowStructure(content, previousContent, id, ul)
                     }
                 }
             })
