@@ -131,7 +131,77 @@ def mydashboard(flaskApp, instance):
             right_on='station_name'
         )
 
-        df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + str(round(df_map['avg_then'])) + '<br>Ø Schneefall pro Tag 2010-2020: ' + str(round(df_map['avg_now'])) + '<br>Veränderung: ' + str(round(1 - df_map['avg_now'] / df_map['avg_then'])) + '%'
+        df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
+
+        plotMap = go.Figure()
+
+        plotMap.add_trace(go.Scattergeo(
+            locationmode='country names',
+            locations=['Switzerland'],
+            lon=df_map["longitude"],
+            lat=df_map["latitude"],
+            text=df_map['text'],
+            marker={
+                'size': df_map['avg_now'],
+                'color': 'blue',
+                'line': {'width': 2, 'color': 'rgb(40,40,40)'},
+                'sizemode': 'area'
+            }
+        ))
+
+        plotMap.update_layout(
+            title_text='Schneefall',
+            hovermode='closest',
+            margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
+            height=400,
+            paper_bgcolor=colors['b1'],
+            geo=dict(
+                scope='europe',
+                landcolor='rgb(217, 217, 217)',
+                lonaxis_range=[5.7, 10.6],
+                lataxis_range=[45.7, 47.9]
+            )
+        )
+        
+        # figure={
+        #     'data': [go.Scattergeo(
+        #         locationmode='country names',
+        #         locations=['Switzerland'],
+        #         lon=df_map["longitude"],
+        #         lat=df_map["latitude"],
+        #         text=df_map['text'],
+        #         marker={
+        #             'size': df_map['avg_now'],
+        #             'color': 'blue',
+        #             'line': {'width': 2, 'color': 'rgb(40,40,40)'},
+        #             'sizemode': 'area'
+        #         }
+        #         )
+        #     ],
+        #     'layout': go.Layout(
+        #         title='Schneefall',
+        #         hovermode='closest',
+        #         margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
+        #         height=400,
+        #         paper_bgcolor=colors['b1'],
+        #         # plot_bgcolor='rgba(0,0,0,0)',
+        #         geo={
+        #             'scope': 'europe',
+        #             'lonaxis_range': [5.7,10.6],
+        #             'lataxis_range': [45.7, 47.9]
+        #         }
+        #         # legend={
+        #         #     'yanchor': 'top',
+        #         #     'y': 0.99,
+        #         #     'xanchor': 'right',
+        #         #     'x': 0.99
+        #         # }
+        #     )
+        # },
+        # config={
+        #     'displayModeBar': False,
+        #     'staticPlot': False
+        # }
 
         # df['meas_date'] = pd.to_datetime(df['meas_date'])
         features = [
@@ -182,45 +252,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         dcc.Graph(
                             id='map1',
-                            figure={
-                                'data': [go.Scattergeo(
-                                    locationmode='country names',
-                                    locations=['Switzerland'],
-                                    lon=df_map["longitude"],
-                                    lat=df_map["latitude"],
-                                    text=df_map['text'],
-                                    marker={
-                                        'size': df_map['avg_now'],
-                                        'color': 'blue',
-                                        'line': {'width': 2, 'color': 'rgb(40,40,40)'},
-                                        'sizemode': 'area'
-                                    }
-                                    )
-                                ],
-                                'layout': go.Layout(
-                                    title='Schneefall',
-                                    hovermode='closest',
-                                    margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-                                    height=400,
-                                    paper_bgcolor=colors['b1'],
-                                    # plot_bgcolor='rgba(0,0,0,0)',
-                                    geo={
-                                        'scope': 'europe',
-                                        'lonaxis_range': [5.7,10.6],
-                                        'lataxis_range': [45.7, 47.9]
-                                    }
-                                    # legend={
-                                    #     'yanchor': 'top',
-                                    #     'y': 0.99,
-                                    #     'xanchor': 'right',
-                                    #     'x': 0.99
-                                    # }
-                                )
-                            },
-                            config={
-                                'displayModeBar': False,
-                                'staticPlot': False
-                            }
+                            figure=plotMap
                         )
                     ], style={
                         'backgroundColor': colors['l0'],
