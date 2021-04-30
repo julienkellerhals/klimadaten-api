@@ -1,3 +1,4 @@
+import re
 import datetime
 import numpy as np
 import pandas as pd
@@ -79,7 +80,7 @@ def mydashboard(flaskApp, instance):
         "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
         """
 
-        # db queries for plots
+
         df_map_1 = pd.read_sql(
             """
             SELECT
@@ -132,19 +133,32 @@ def mydashboard(flaskApp, instance):
         )
 
         df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
+        df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
+        df_map['lon'] = pd.to_numeric(df_map['lon'])
+        df_map['lon'] = round(df_map['lon']/60  * 1000)
+        df_map['lon'] = df_map['lon'].apply(str)
+        df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + df_map['lon'].str.extract(r'(^\d+)')
+        df_map = df_map.drop('lon', axis = 1)
+        df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
+        df_map['lat'] = pd.to_numeric(df_map['lat'])
+        df_map['lat'] = round(df_map['lat']/60  * 1000)
+        df_map['lat'] = df_map['lat'].apply(str)
+        df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + df_map['lat'].str.extract(r'(^\d+)')
+        df_map = df_map.drop('lat', axis = 1)
 
         plotMap = go.Figure()
-
+        
         plotMap.add_trace(go.Scattergeo(
-            locationmode='country names',
-            locations=['Switzerland'],
+            # locationmode='country names', # if locationmode and locations are active, one can see adelboden
+            # locations=['Switzerland'], # puts point in the middle of country
             lon=df_map["longitude"],
             lat=df_map["latitude"],
             text=df_map['text'],
+            mode='markers',
             marker={
-                'size': df_map['avg_now'],
-                'color': 'blue',
-                'line': {'width': 2, 'color': 'rgb(40,40,40)'},
+                'size': df_map['avg_now'] * 15,
+                'color': df_map['avg_now'] - df_map['avg_then'],
+                'line': {'width': 1, 'color': 'black'},
                 'sizemode': 'area'
             }
         ))
@@ -156,54 +170,13 @@ def mydashboard(flaskApp, instance):
             height=400,
             paper_bgcolor=colors['b1'],
             geo=dict(
-                scope='europe',
+                scope='europe', # changes layout so one can see only europe and borders
                 landcolor='rgb(217, 217, 217)',
                 lonaxis_range=[5.7, 10.6],
                 lataxis_range=[45.7, 47.9]
             )
         )
-        
-        # figure={
-        #     'data': [go.Scattergeo(
-        #         locationmode='country names',
-        #         locations=['Switzerland'],
-        #         lon=df_map["longitude"],
-        #         lat=df_map["latitude"],
-        #         text=df_map['text'],
-        #         marker={
-        #             'size': df_map['avg_now'],
-        #             'color': 'blue',
-        #             'line': {'width': 2, 'color': 'rgb(40,40,40)'},
-        #             'sizemode': 'area'
-        #         }
-        #         )
-        #     ],
-        #     'layout': go.Layout(
-        #         title='Schneefall',
-        #         hovermode='closest',
-        #         margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-        #         height=400,
-        #         paper_bgcolor=colors['b1'],
-        #         # plot_bgcolor='rgba(0,0,0,0)',
-        #         geo={
-        #             'scope': 'europe',
-        #             'lonaxis_range': [5.7,10.6],
-        #             'lataxis_range': [45.7, 47.9]
-        #         }
-        #         # legend={
-        #         #     'yanchor': 'top',
-        #         #     'y': 0.99,
-        #         #     'xanchor': 'right',
-        #         #     'x': 0.99
-        #         # }
-        #     )
-        # },
-        # config={
-        #     'displayModeBar': False,
-        #     'staticPlot': False
-        # }
 
-        # df['meas_date'] = pd.to_datetime(df['meas_date'])
         features = [
             'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
             'hns000d0', 'fklnd3m0', 'fu3010m1', 'hns000mx', 'rsd700m0',
