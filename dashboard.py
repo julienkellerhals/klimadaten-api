@@ -227,7 +227,11 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         dcc.Graph(
                             id='map1',
-                            figure=plotMap
+                            figure=plotMap,
+                            config={
+                                'displayModeBar': False,
+                                'staticPlot': False
+                            }
                         )
                     ], style={
                         'backgroundColor': colors['l0'],
@@ -245,50 +249,9 @@ def mydashboard(flaskApp, instance):
                 }
                 ),
                 html.Div([
-                    html.Div([
-                        html.H4("""
-                            Totaler Schneefall und Regenfall im Durchschnitt
-                        """)
-                    ]),
-                    html.Div([
-
-                    ], style={
-                        'backgroundColor': colors['l0'],
-                        'height': 400,
-                        'box-shadow': '8px 8px 8px lightgrey',
-                        'position': 'relative',
-                        'border-radius': 15,
-                        'margin': '10px'
-                    }
-                    )
-                ], style={
-                    'width': '45%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top'
-                }
-                ),
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
-            ], style={'backgroundColor': colors['l1']}
-            ),
-            # second row of plots
-            html.Div([
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
-                # scatterplot bottom left
-                html.Div([
-                    html.H4('Temperatur'),
+                    html.H4("Totaler Schneefall und Regenfall im Durchschnitt"),
                     html.Div([
                         html.Div([
-                            # make plotly figure bar invisible
-                            # config={
-                            # 'displayModeBar': False,
-                            # 'staticPlot': False
-                            # }
                             dcc.Graph(
                                 id='scatterplot1',
                                 config={
@@ -324,11 +287,42 @@ def mydashboard(flaskApp, instance):
                         )
                     ], style={
                         'backgroundColor': colors['l0'],
-                        'height': 335,
+                        'height': 400,
                         'box-shadow': '8px 8px 8px lightgrey',
                         'position': 'relative',
                         'border-radius': 15,
                         # 'padding': '10px',
+                        'margin': '10px',
+                        'vertical-align': 'top'
+                    }
+                    ),
+                ], style={
+                    'width': '45%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top'
+                }
+                ),
+                html.Div([], style={
+                    'width': '5%',
+                    'display': 'inline-block'
+                }),
+            ], style={'backgroundColor': colors['l1']}
+            ),
+            # second row of plots
+            html.Div([
+                html.Div([], style={
+                    'width': '5%',
+                    'display': 'inline-block'
+                }),
+                # scatterplot bottom left
+                html.Div([
+                    html.H4('Schnee- & Regenfall bei Stationen'),
+                    html.Div([], style={
+                        'backgroundColor': colors['l0'],
+                        'height': 335,
+                        'box-shadow': '8px 8px 8px lightgrey',
+                        'position': 'relative',
+                        'border-radius': 15,
                         'margin': '10px',
                         'vertical-align': 'top'
                     }
@@ -441,7 +435,7 @@ def mydashboard(flaskApp, instance):
                 yaxis={'title': yaxis_name},
                 hovermode='closest',
                 margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-                height=335,
+                height=400,
                 paper_bgcolor=colors['b1'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
