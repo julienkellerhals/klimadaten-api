@@ -249,7 +249,7 @@ def mydashboard(flaskApp, instance):
                 }
                 ),
                 html.Div([
-                    html.H4("Totaler Schneefall und Regenfall im Durchschnitt"),
+                    html.H4("Totaler Schneefall und Regenfall or Temp"),
                     html.Div([
                         html.Div([
                             dcc.Graph(
@@ -317,7 +317,22 @@ def mydashboard(flaskApp, instance):
                 # scatterplot bottom left
                 html.Div([
                     html.H4('Schnee- & Regenfall bei Stationen'),
-                    html.Div([], style={
+                    html.Div([
+                        html.Div([
+                            dcc.Graph(
+                                id='scatterplot2',
+                                config={
+                                    'displayModeBar': False,
+                                    'staticPlot': False
+                                }
+                            )
+                        ], style={
+                            'backgroundColor': colors['l4'],
+                            'border-radius': 15,
+                            'height': 335
+                        }
+                        )
+                    ], style={
                         'backgroundColor': colors['l0'],
                         'height': 335,
                         'box-shadow': '8px 8px 8px lightgrey',
