@@ -211,7 +211,13 @@ def mydashboard(flaskApp, instance):
             paper_bgcolor=colors['b1'],
             geo=dict(
                 scope='europe', # changes layout so one can see only europe and borders
-                landcolor='rgb(217, 217, 217)',
+                resolution = 50,
+                showcoastlines=True, coastlinecolor="Black",
+                showland=True, landcolor=colors['l5'],
+                showocean=False, # oceancolor="LightBlue",
+                showlakes=False, # lakecolor="Blue",
+                showrivers=False, # rivercolor="Blue"
+                bgcolor='rgba(0,0,0,0)',
                 lonaxis_range=[5.7, 10.6],
                 lataxis_range=[45.7, 47.9]
             )
