@@ -462,5 +462,49 @@ def mydashboard(flaskApp, instance):
             )
         }
 
+    # TODO Store in callback which station is selected and then use this information as input in scatterplot function
+    # use dcc.Store() for this
+
+    @dashApp.callback(
+        Output('scatterplot2', 'figure'),
+        [Input('map1', 'hoverData')])
+    def callback_graph(hoverData):
+        v_index = hoverData['points'][0]['pointIndex']
+        station = df_map.iloc[v_index]['station_name']
+        
+        # hns000d0
+        # rre150m0
+
+        df = pd.read_sql(
+            f"""SELECT extract(year from m.meas_date) as meas_year,
+            sum(m.meas_value) snow
+            FROM core.measurements_t m
+            JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_name = 'hns000d0'
+            AND k.parameter = 'hns000d0'
+            AND k.station_name = {"'"+ station +"'"}
+            GROUP BY meas_year
+            ORDER BY meas_year ASC
+            OFFSET 1""",
+            engine
+        )
+
+        fig = {
+            'data': [go.Scatter(
+                x = [0,1],
+                y = [0,60/df.iloc[v_index]['acceleration']],
+                mode='lines',
+                line={'width':2*df.iloc[v_index]['cylinders']}
+            )],
+            'layout': go.Layout(
+                title = df.iloc[v_index]['name'],
+                xaxis = {'visible':True, 'title': 'seconds'},
+                yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
+            )
+        }
+        return fig
+
+
     createDashboard()
     return dashApp
