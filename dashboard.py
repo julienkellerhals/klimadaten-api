@@ -476,11 +476,6 @@ def mydashboard(flaskApp, instance):
             )
         }
 
-    # TODO Store in callback which station is selected and then use this information as input in scatterplot function
-    # use dcc.Store() for this
-
-    # TODO maybe my callback just has the wrong indentation.
-
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
         [Input('map1', 'hoverData')])
@@ -500,6 +495,7 @@ def mydashboard(flaskApp, instance):
         fig = {
             'data': [
                 go.Scatter(
+                    name='Schneefall',
                     x = dfTemp['meas_year'],
                     y = dfTemp['snow'],
                     mode='lines+markers',
@@ -510,6 +506,7 @@ def mydashboard(flaskApp, instance):
                     }
                 ),
                 go.Scatter(
+                    name='Regressionsline',
                     x = dfTemp['meas_year'],
                     y = dfTemp['snow_bestfit'],
                     mode='lines',
@@ -522,8 +519,16 @@ def mydashboard(flaskApp, instance):
             ],
             'layout': go.Layout(
                 title = station,
-                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-                height=335
+                margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
+                height=335,
+                paper_bgcolor=colors['b1'],
+                plot_bgcolor='rgba(0,0,0,0)',
+                legend={
+                    'yanchor': 'top',
+                    'y': 1.40,
+                    'xanchor': 'right',
+                    'x': 0.99
+                }
                 # xaxis = {'visible':True, 'title': 'seconds'},
                 # yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
             )
