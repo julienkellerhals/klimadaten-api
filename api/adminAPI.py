@@ -189,7 +189,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
     @adminApi.route("/getCoreTablesStatus", methods=["POST"])
     def getCoreTablesStatus():
 
-        instance.getStageTablesStatus()
+        instance.getCoreTablesStatus()
         return ""
 
     @adminApi.route("/getDbServiceStatus", methods=["POST"])
