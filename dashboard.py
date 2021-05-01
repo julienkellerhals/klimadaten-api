@@ -91,8 +91,8 @@ def mydashboard(flaskApp, instance):
         WHERE m.meas_date >= '1970-01-01'
         AND m.meas_date < '1980-01-01'
         AND m.meas_name = 'hns000d0'
-        AND m.valid_to = '2262-04-11'
         AND k.parameter = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name
         """,
@@ -134,6 +134,32 @@ def mydashboard(flaskApp, instance):
         WHERE m.meas_name = 'hns000d0'
         AND k.parameter = 'hns000d0'
         GROUP BY meas_year, k.station_name
+        ORDER BY meas_year ASC
+        """,
+        engine
+    )
+
+    # df for showing scatterplot for all stations under 1000 m.ü.M.
+    dfScatter2 = pd.read_sql(
+        """
+        SELECT 
+        avg(meas_value),
+        meas_year
+        FROM
+        (SELECT
+        extract(year from m.meas_date) as meas_year,
+        m.station,
+        sum(m.meas_value) meas_value
+        FROM core.measurements_t m
+        JOIN core.station_t k
+        ON (m.station = k.station_short_name)
+        WHERE m.meas_name = 'hns000d0'
+        AND k.parameter = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
+        AND k.valid_to = '2262-04-11'
+        AND k.elevation < 1000
+        GROUP BY meas_year, m.station) AS stations
+        GROUP BY meas_year
         ORDER BY meas_year ASC
         """,
         engine
