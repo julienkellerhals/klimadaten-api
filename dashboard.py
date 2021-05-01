@@ -191,11 +191,7 @@ def mydashboard(flaskApp, instance):
                     html.H3(
                         'Dashboard',
                         id='linkDashboard',
-                        style={
-                            'color': colors['l1'],
-                            'margin-top': '10px',
-                            'margin-bottom': '10px',
-                            }
+                        style={'color': colors['l1']}
                     )
                 ], style={'display': 'inline-block'}
                 ),
@@ -208,8 +204,14 @@ def mydashboard(flaskApp, instance):
                         style={'color': colors['l6']}
                     )
                 ], style={'display': 'inline-block'}
-                )
-            ], style={'backgroundColor': colors['d3']}
+                ),
+                html.Div(id='linkDatastoryOutput')
+            ], style={
+                'backgroundColor': colors['d3'],
+                'box-shadow': '4px 4px 4px lightgrey',
+                'position': 'relative',
+                'padding': '5px'
+            }
             ),
             # first row of plots
             html.Div([
@@ -359,7 +361,8 @@ def mydashboard(flaskApp, instance):
                 # 3nd plot 2nd row
                 html.Div([
                     html.H4('Extreme Regenfälle'),
-                    html.Div([], style={
+                    html.Div([
+                    ], style={
                         'backgroundColor': colors['l0'],
                         'height': 335,
                         'box-shadow': '8px 8px 8px lightgrey',
@@ -383,7 +386,7 @@ def mydashboard(flaskApp, instance):
         )
 
     @dashApp.callback(
-        Output('thisis', 'children'),
+        Output('linkDatastoryOutput', 'children'),
         [Input('linkDatastory', 'n_clicks')])
     def redirectToStory(n_clicks):
         if n_clicks is 0:

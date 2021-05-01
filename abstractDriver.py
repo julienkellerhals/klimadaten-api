@@ -273,7 +273,7 @@ class AbstractDriver():
                 # don't know the chrome command
             self.driver = webdriver.Chrome(
                 executable_path=str(driverPath),
-                options=chrome_options
+                    options=chrome_options
             )
         else:
             print("Browser not supported yet")
