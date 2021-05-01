@@ -618,6 +618,32 @@ class Database:
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.measurements_count_mv" +
+            "AS SELECT count(*) FROM core.measurements_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.measurements_max_valid_from_mv" +
+            "AS SELECT max(valid_from) FROM core.measurements_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION core.refresh_meas_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.measurements_count_mv; " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.measurements_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$; " +
+            "CREATE TRIGGER refresh_meas_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON core.measurements_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE core.refresh_meas_t_fn();"
+        )
+
         if not self.engine.dialect.has_table(
             connection=self.engine,
             table_name='station_t',
