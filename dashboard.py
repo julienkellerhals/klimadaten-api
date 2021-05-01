@@ -120,6 +120,22 @@ def mydashboard(flaskApp, instance):
     df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + df_map['lat'].str.extract(r'(^\d+)')
     df_map = df_map.drop('lat', axis = 1)
 
+    # data wrangling scatterplot
+    dfScatter = pd.read_sql(
+        """
+        SELECT extract(year from m.meas_date) as meas_year,
+        sum(m.meas_value) snow,
+        k.station_name
+        FROM core.measurements_t m
+        JOIN core.station_t k
+        ON (m.station = k.station_short_name)
+        WHERE m.meas_name = 'hns000d0'
+        AND k.parameter = 'hns000d0'
+        GROUP BY meas_year, k.station_name
+        ORDER BY meas_year ASC
+        """,
+        engine
+    )
 
     def createDashboard():
         """
@@ -473,26 +489,15 @@ def mydashboard(flaskApp, instance):
         # hns000d0
         # rre150m0
 
-        dfScatter = pd.read_sql(
-            f"""SELECT extract(year from m.meas_date) as meas_year,
-            sum(m.meas_value) snow
-            FROM core.measurements_t m
-            JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_name = 'hns000d0'
-            AND k.parameter = 'hns000d0'
-            AND k.station_name = {"'"+ station +"'"}
-            GROUP BY meas_year
-            ORDER BY meas_year ASC
-            OFFSET 1""",
-            engine
-        )
+        dfTemp = dfScatter[dfScatter['station_name'] == station]
 
         fig = {
             'data': [go.Scatter(
-                x = dfScatter['meas_year'],
-                y = dfScatter['snow'],
-                mode='lines+markers'
+                x = dfTemp['meas_year'],
+                y = dfTemp['snow'],
+                mode='lines+markers',
+                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
+                height=400
             )],
             'layout': go.Layout(
                 title = station,
