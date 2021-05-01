@@ -207,13 +207,15 @@ def mydashboard(flaskApp, instance):
             title_text='Schneefall',
             hovermode='closest',
             margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-            height=400,
-            paper_bgcolor=colors['b1'],
+            height=390,
+            paper_bgcolor=colors['l0'],
             geo=dict(
                 scope='europe', # changes layout so one can see only europe and borders
                 resolution = 50,
+                visible=False,
+                showcountries=True, countrycolor="Black",
                 showcoastlines=True, coastlinecolor="Black",
-                showland=True, landcolor=colors['l5'],
+                showland=True, landcolor=colors['l0'],
                 showocean=False, # oceancolor="LightBlue",
                 showlakes=False, # lakecolor="Blue",
                 showrivers=False, # rivercolor="Blue"
@@ -261,10 +263,6 @@ def mydashboard(flaskApp, instance):
             ),
             # first row of plots
             html.Div([
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
                 # map top left
                 html.Div([
                     html.Div([
@@ -282,18 +280,21 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'backgroundColor': colors['l0'],
                         'height': 400,
-                        'box-shadow': '8px 8px 8px lightgrey',
+                        'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
-                        'border-radius': 15,
-                        'margin': '10px'
+                        'border-radius': 5,
+                        'margin': '10px',
+                        'padding': '5px'
                     }
                     ),
                 ], style={
-                    'width': '37.5%',
+                    'width': '50%',
                     'display': 'inline-block',
-                    'vertical-align': 'top'
+                    'vertical-align': 'top',
+                    'horizontal-align': 'left'
                 }
                 ),
+                # second plot first row
                 html.Div([
                     html.H4("Totaler Schneefall und Regenfall or Temp"),
                     html.Div([
@@ -306,11 +307,11 @@ def mydashboard(flaskApp, instance):
                                 }
                             )
                         ], style={
-                            'backgroundColor': colors['l4'],
+                            'backgroundColor': colors['b1'],
                             'width': '70%',
                             'display': 'inline-block',
                             'position': 'relative',
-                            'border-radius': 15
+                            'horizontal-align': 'left'
                         }
                         ),
                         html.Div([
@@ -324,42 +325,40 @@ def mydashboard(flaskApp, instance):
                             ),
                             html.H4('Some random text i guess')
                         ], style={
-                            'backgroundColor': colors['l0'],
-                            'width': '25%',
-                            'padding': '10px',
+                            'backgroundColor': colors['b1'],
+                            'width': '28%',
                             'display': 'inline-block',
-                            'vertical-align': 'top'
+                            'vertical-align': 'top',
+                            'horizontal-align': 'right',
+                            'padding' : 5
                         }
                         )
                     ], style={
-                        'backgroundColor': colors['l0'],
+                        'backgroundColor': colors['b1'],
                         'height': 400,
-                        'box-shadow': '8px 8px 8px lightgrey',
+                        'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
-                        'border-radius': 15,
-                        # 'padding': '10px',
+                        'border-radius': 5,
                         'margin': '10px',
-                        'vertical-align': 'top'
+                        'vertical-align': 'top',
+                        'padding': '5px'
                     }
                     ),
                 ], style={
-                    'width': '45%',
+                    'width': '50%',
                     'display': 'inline-block',
-                    'vertical-align': 'top'
+                    'vertical-align': 'top',
+                    'horizontal-align': 'right'
                 }
-                ),
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
-            ], style={'backgroundColor': colors['l1']}
+                )
+            ], style={
+                'backgroundColor': colors['l1'],
+                'padding-left' : 30,
+                'padding-right' : 30
+            }
             ),
             # second row of plots
             html.Div([
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
                 # scatterplot bottom left
                 html.Div([
                     html.H4('Schnee- & Regenfall bei Stationen'),
@@ -374,24 +373,25 @@ def mydashboard(flaskApp, instance):
                             )
                         ], style={
                             'backgroundColor': colors['l4'],
-                            'border-radius': 15,
-                            'height': 335
+                            'height': 325
                         }
                         )
                     ], style={
-                        'backgroundColor': colors['l0'],
-                        'height': 335,
-                        'box-shadow': '8px 8px 8px lightgrey',
+                        'backgroundColor': colors['b1'],
+                        'height': 325,
+                        'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
-                        'border-radius': 15,
+                        'border-radius': 5,
                         'margin': '10px',
-                        'vertical-align': 'top'
+                        'vertical-align': 'top',
+                        'padding' : 5
                     }
                     ),
                 ], style={
-                    'width': '40%',
+                    'width': '50%',
                     'display': 'inline-block',
-                    'vertical-align': 'top'
+                    'vertical-align': 'top',
+                    'horizontal-align' : 'left'
                 }
                 ),
                 # 2nd plot 2nd row
@@ -400,17 +400,18 @@ def mydashboard(flaskApp, instance):
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
                         'height': 335,
-                        'box-shadow': '8px 8px 8px lightgrey',
+                        'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
-                        'border-radius': 15,
+                        'border-radius': 5,
                         'margin': '10px',
                         'vertical-align': 'top'
                     }
                     ),
                 ], style={
-                    'width': '20.15%',
+                    'width': '25%',
                     'display': 'inline-block',
-                    'vertical-align': 'top'
+                    'vertical-align': 'top',
+                    'horizontal-align' : 'center'
                 }
                 ),
                 # 3nd plot 2nd row
@@ -420,24 +421,32 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'backgroundColor': colors['l0'],
                         'height': 335,
-                        'box-shadow': '8px 8px 8px lightgrey',
+                        'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
-                        'border-radius': 15,
-                        'margin': '10px',
+                        'border-radius': 5,
+                        'margin': '10px'
                     }
                     ),
                 ], style={
-                    'width': '20.15%',
+                    'width': '25%',
                     'display': 'inline-block',
-                    'vertical-align': 'top'
+                    'vertical-align': 'top',
+                    'horizontal-align' : 'right'
                 }
                 ),
                 html.Div([], style={
                     'width': '5%',
                     'display': 'inline-block'
                 }),
-            ])
-        ], style={'backgroundColor': colors['l1']}
+            ], style={
+                'backgroundColor': colors['l1'],
+                'padding-left' : 30,
+                'padding-right' : 30
+            }
+            ),
+        ], style={
+            'backgroundColor': colors['l1']
+        }
         )
 
     @dashApp.callback(
@@ -552,7 +561,7 @@ def mydashboard(flaskApp, instance):
             'layout': go.Layout(
                 title = station,
                 margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
-                height=335,
+                height=325,
                 paper_bgcolor=colors['b1'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
