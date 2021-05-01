@@ -453,7 +453,9 @@ class Database:
                 respDict["core"][coreTable] = {}
                 respDict["core"][coreTable]["title"] = coreTable
 
-                nrowQuery = "SELECT count(*) FROM core.{}".format(coreTable)
+                nrowQuery = "SELECT * FROM core.{}_count_mv".format(
+                    coreTable.strip("_t")
+                )
                 respDict["core"][coreTable]["headerBadge"] = {}
                 respDict["core"][coreTable]["headerBadge"]["caption"] = "rows"
                 respDict["core"][coreTable]["headerBadge"]["content"] = \
@@ -473,8 +475,8 @@ class Database:
                 respDict["core"][coreTable]["action"] = actionList
 
                 lastRefreshQuery = \
-                    "SELECT max(valid_from) FROM core.{}".format(
-                        coreTable
+                    "SELECT * FROM core.{}_max_valid_from_mv".format(
+                        coreTable.strip("_t")
                     )
 
                 respDict["core"][coreTable]["bodyBadge"] = {}
