@@ -106,7 +106,9 @@ def mydashboard(flaskApp, instance):
         right_on='station_name'
     )
 
+    # add text column for map pop-up
     df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
+    # data wrangling for longitude and latitude
     df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
     df_map['lon'] = pd.to_numeric(df_map['lon'])
     df_map['lon'] = round(df_map['lon']/60  * 1000)
@@ -491,16 +493,37 @@ def mydashboard(flaskApp, instance):
 
         dfTemp = dfScatter[dfScatter['station_name'] == station]
 
+        # simple regression line
+        reg = LinearRegression().fit(np.vstack(dfTemp.index), dfTemp['snow'])
+        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.index))
+
         fig = {
-            'data': [go.Scatter(
-                x = dfTemp['meas_year'],
-                y = dfTemp['snow'],
-                mode='lines+markers',
-                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-                height=400
-            )],
+            'data': [
+                go.Scatter(
+                    x = dfTemp['meas_year'],
+                    y = dfTemp['snow'],
+                    mode='lines+markers',
+                    marker={
+                        'size': 5,
+                        'color': colors['rbb'],
+                        'line': {'width': 1, 'color': 'black'}
+                    }
+                ),
+                go.Scatter(
+                    x = dfTemp['meas_year'],
+                    y = dfTemp['snow_bestfit'],
+                    mode='lines',
+                    marker={
+                        'size': 5,
+                        'color': colors['rbr'],
+                        'line': {'width': 1, 'color': 'black'}
+                    }
+                )
+            ],
             'layout': go.Layout(
                 title = station,
+                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
+                height=335
                 # xaxis = {'visible':True, 'title': 'seconds'},
                 # yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
             )
