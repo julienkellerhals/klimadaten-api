@@ -619,12 +619,12 @@ class Database:
                 schema='core')
 
         self.conn.execute(
-            "CREATE MATERIALIZED VIEW core.measurements_count_mv" +
+            "CREATE MATERIALIZED VIEW core.measurements_count_mv " +
             "AS SELECT count(*) FROM core.measurements_t"
         )
 
         self.conn.execute(
-            "CREATE MATERIALIZED VIEW core.measurements_max_valid_from_mv" +
+            "CREATE MATERIALIZED VIEW core.measurements_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM core.measurements_t"
         )
 
@@ -633,10 +633,15 @@ class Database:
             "RETURNS TRIGGER LANGUAGE plpgsql " +
             "AS $$ " +
             "BEGIN " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.measurements_count_mv; " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.measurements_max_valid_from_mv; " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "core.measurements_count_mv; " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "core.measurements_max_valid_from_mv; " +
             "RETURN NULL; " +
-            "END $$; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
             "CREATE TRIGGER refresh_meas_t " +
             "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
             "ON core.measurements_t " +
@@ -665,6 +670,36 @@ class Database:
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.station_count_mv " +
+            "AS SELECT count(*) FROM core.station_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.station_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM core.station_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION core.refresh_station_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.station_count_mv; " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "core.station_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_station_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON core.station_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE core.refresh_station_t_fn();"
+        )
+
         if not self.engine.dialect.has_table(
             connection=self.engine,
             table_name='parameter_t',
@@ -679,6 +714,37 @@ class Database:
                 Column("valid_from", Date, index=True),
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.parameter_count_mv " +
+            "AS SELECT count(*) FROM core.parameter_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW core.parameter_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM core.parameter_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION core.refresh_parameter_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "core.parameter_count_mv; " +
+            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "core.parameter_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_parameter_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON core.parameter_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE core.refresh_parameter_t_fn();"
+        )
 
         self.meta.create_all(self.engine)
 
