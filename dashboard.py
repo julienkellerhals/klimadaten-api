@@ -54,12 +54,74 @@ def mydashboard(flaskApp, instance):
         external_stylesheets=external_stylesheets
     )
 
+    # data wrangling map data
+    df_map_1 = pd.read_sql(
+        """
+        SELECT
+        avg(m.meas_value) avg_now,
+        k.station_name,
+        k.longitude,
+        k.latitude,
+        k.elevation
+        FROM core.measurements_t m
+        LEFT JOIN core.station_t k
+        ON (m.station = k.station_short_name)
+        WHERE m.meas_date >= '2010-01-01'
+        AND m.meas_date < '2020-01-01'
+        AND m.meas_name = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
+        AND k.parameter = 'hns000d0'
+        AND k.valid_to = '2262-04-11'
+        GROUP BY k.station_name,
+        k.longitude,
+        k.latitude,
+        k.elevation;
+        """,
+        engine
+    )
+
+    df_map_2 = pd.read_sql(
+        """
+        SELECT
+        avg(m.meas_value) avg_then,
+        k.station_name
+        FROM core.measurements_t m
+        LEFT JOIN core.station_t k
+        ON (m.station = k.station_short_name)
+        WHERE m.meas_date >= '1970-01-01'
+        AND m.meas_date < '1980-01-01'
+        AND m.meas_name = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
+        AND k.parameter = 'hns000d0'
+        AND k.valid_to = '2262-04-11'
+        GROUP BY k.station_name
+        """,
+        engine
+    )
+
+    df_map = pd.merge(
+        left=df_map_1,
+        right=df_map_2,
+        left_on='station_name',
+        right_on='station_name'
+    )
+
+    df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
+    df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
+    df_map['lon'] = pd.to_numeric(df_map['lon'])
+    df_map['lon'] = round(df_map['lon']/60  * 1000)
+    df_map['lon'] = df_map['lon'].apply(str)
+    df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + df_map['lon'].str.extract(r'(^\d+)')
+    df_map = df_map.drop('lon', axis = 1)
+    df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
+    df_map['lat'] = pd.to_numeric(df_map['lat'])
+    df_map['lat'] = round(df_map['lat']/60  * 1000)
+    df_map['lat'] = df_map['lat'].apply(str)
+    df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + df_map['lat'].str.extract(r'(^\d+)')
+    df_map = df_map.drop('lat', axis = 1)
+
+
     def createDashboard():
-        # meteoSchweizTempGraph = createMeteoSchweizTempGraph()
-        # meteoSchweizPrecpGraph = createMeteoSchweizPrecpGraph()
-
-        # add colors
-
         """
         "tre200d0"
         "temperature"
@@ -79,73 +141,7 @@ def mydashboard(flaskApp, instance):
         "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
         "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
         """
-
-
-        df_map_1 = pd.read_sql(
-            """
-            SELECT
-            avg(m.meas_value) avg_now,
-            k.station_name,
-            k.longitude,
-            k.latitude,
-            k.elevation
-            FROM core.measurements_t m
-            LEFT JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_date >= '2010-01-01'
-            AND m.meas_date < '2020-01-01'
-            AND m.meas_name = 'hns000d0'
-            AND m.valid_to = '2262-04-11'
-            AND k.parameter = 'hns000d0'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY k.station_name,
-            k.longitude,
-            k.latitude,
-            k.elevation;
-            """,
-            engine
-        )
-
-        df_map_2 = pd.read_sql(
-            """
-            SELECT
-            avg(m.meas_value) avg_then,
-            k.station_name
-            FROM core.measurements_t m
-            LEFT JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_date >= '1970-01-01'
-            AND m.meas_date < '1980-01-01'
-            AND m.meas_name = 'hns000d0'
-            AND m.valid_to = '2262-04-11'
-            AND k.parameter = 'hns000d0'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY k.station_name
-            """,
-            engine
-        )
-
-        df_map = pd.merge(
-            left=df_map_1,
-            right=df_map_2,
-            left_on='station_name',
-            right_on='station_name'
-        )
-
-        df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
-        df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
-        df_map['lon'] = pd.to_numeric(df_map['lon'])
-        df_map['lon'] = round(df_map['lon']/60  * 1000)
-        df_map['lon'] = df_map['lon'].apply(str)
-        df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + df_map['lon'].str.extract(r'(^\d+)')
-        df_map = df_map.drop('lon', axis = 1)
-        df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
-        df_map['lat'] = pd.to_numeric(df_map['lat'])
-        df_map['lat'] = round(df_map['lat']/60  * 1000)
-        df_map['lat'] = df_map['lat'].apply(str)
-        df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + df_map['lat'].str.extract(r'(^\d+)')
-        df_map = df_map.drop('lat', axis = 1)
-
+        
         plotMap = go.Figure()
 
         plotMap.add_trace(go.Scattergeo(
@@ -465,6 +461,8 @@ def mydashboard(flaskApp, instance):
     # TODO Store in callback which station is selected and then use this information as input in scatterplot function
     # use dcc.Store() for this
 
+    # TODO maybe my callback just has the wrong indentation.
+
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
         [Input('map1', 'hoverData')])
@@ -475,7 +473,7 @@ def mydashboard(flaskApp, instance):
         # hns000d0
         # rre150m0
 
-        df = pd.read_sql(
+        dfScatter = pd.read_sql(
             f"""SELECT extract(year from m.meas_date) as meas_year,
             sum(m.meas_value) snow
             FROM core.measurements_t m
@@ -492,15 +490,14 @@ def mydashboard(flaskApp, instance):
 
         fig = {
             'data': [go.Scatter(
-                x = [0,1],
-                y = [0,60/df.iloc[v_index]['acceleration']],
-                mode='lines',
-                line={'width':2*df.iloc[v_index]['cylinders']}
+                x = dfScatter['meas_year'],
+                y = dfScatter['snow'],
+                mode='lines+markers'
             )],
             'layout': go.Layout(
-                title = df.iloc[v_index]['name'],
-                xaxis = {'visible':True, 'title': 'seconds'},
-                yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
+                title = station,
+                # xaxis = {'visible':True, 'title': 'seconds'},
+                # yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
             )
         }
         return fig
