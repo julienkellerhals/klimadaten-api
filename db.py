@@ -357,7 +357,9 @@ class Database:
             respDict["stage"][stageTable] = {}
             respDict["stage"][stageTable]["title"] = stageTable
 
-            nrowQuery = "SELECT count(*) FROM stage.{}".format(stageTable)
+            nrowQuery = "SELECT * FROM stage.{}_count_mv".format(
+                stageTable.strip("_t")
+            )
             respDict["stage"][stageTable]["headerBadge"] = {}
             respDict["stage"][stageTable]["headerBadge"]["caption"] = "rows"
             respDict["stage"][stageTable]["headerBadge"]["content"] = \
@@ -393,28 +395,22 @@ class Database:
             elif stageTable == "station_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
-                actionDict["actionUrl"] = "/admin/etl/stage/station"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/station"
                 actionDict["enabled"] = True
                 actionList.append(actionDict)
             elif stageTable == "parameter_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
-                actionDict["actionUrl"] = "/admin/etl/stage/parameter"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/parameter"
                 actionDict["enabled"] = True
                 actionList.append(actionDict)
 
             respDict["stage"][stageTable]["action"] = actionList
 
-            if stageTable == "meteoschweiz_t":
-                lastRefreshQuery = \
-                    "SELECT max(load_date) FROM stage.{}".format(
-                        stageTable
-                    )
-            else:
-                lastRefreshQuery = \
-                    "SELECT max(valid_from) FROM stage.{}".format(
-                        stageTable
-                    )
+            lastRefreshQuery = \
+                "SELECT * FROM stage.{}_max_valid_from_mv".format(
+                    stageTable.strip("_t")
+                )
 
             respDict["stage"][stageTable]["bodyBadge"] = {}
             lastRefresh = self.conn.execute(
