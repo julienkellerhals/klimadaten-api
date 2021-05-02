@@ -548,6 +548,37 @@ class Database:
                 Column("load_date", Date, index=True),
                 schema='stage')
 
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.meteoschweiz_count_mv " +
+            "AS SELECT count(*) FROM stage.meteoschweiz_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv " +
+            "AS SELECT max(load_date) FROM stage.meteoschweiz_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION stage.refresh_meteoschweiz_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.meteoschweiz_count_mv; " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.meteoschweiz_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_meteoschweiz_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON stage.meteoschweiz_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE stage.refresh_meteoschweiz_t_fn();"
+        )
+
         if not self.engine.dialect.has_table(
             connection=self.engine,
             table_name='idaweb_t',
@@ -565,6 +596,37 @@ class Database:
                 Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.idaweb_count_mv " +
+            "AS SELECT count(*) FROM stage.idaweb_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.idaweb_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.idaweb_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION stage.refresh_idaweb_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.idaweb_count_mv; " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.idaweb_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_idaweb_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON stage.idaweb_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE stage.refresh_idaweb_t_fn();"
+        )
 
         if not self.engine.dialect.has_table(
             connection=self.engine,
@@ -587,6 +649,37 @@ class Database:
                 Column("valid_to", Date),
                 schema='stage')
 
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.station_count_mv " +
+            "AS SELECT count(*) FROM stage.station_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.station_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.station_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION stage.refresh_station_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.station_count_mv; " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.station_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_station_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON stage.station_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE stage.refresh_station_t_fn();"
+        )
+
         if not self.engine.dialect.has_table(
             connection=self.engine,
             table_name='parameter_t',
@@ -601,6 +694,37 @@ class Database:
                 Column("valid_from", Date, index=True),
                 Column("valid_to", Date),
                 schema='stage')
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.parameter_count_mv " +
+            "AS SELECT count(*) FROM stage.parameter_t"
+        )
+
+        self.conn.execute(
+            "CREATE MATERIALIZED VIEW stage.parameter_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.parameter_t"
+        )
+
+        self.conn.execute(
+            "CREATE OR REPLACE FUNCTION stage.refresh_parameter_t_fn() " +
+            "RETURNS TRIGGER LANGUAGE plpgsql " +
+            "AS $$ " +
+            "BEGIN " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.parameter_count_mv; " +
+            "REFRESH MATERIALIZED VIEW " +
+            "stage.parameter_max_valid_from_mv; " +
+            "RETURN NULL; " +
+            "END $$;"
+        )
+
+        self.conn.execute(
+            "CREATE TRIGGER refresh_parameter_t " +
+            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
+            "ON stage.parameter_t " +
+            "FOR EACH STATEMENT " +
+            "EXECUTE PROCEDURE stage.refresh_parameter_t_fn();"
+        )
 
         if not self.engine.dialect.has_table(
             connection=self.engine,
