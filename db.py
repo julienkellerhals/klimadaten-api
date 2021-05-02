@@ -635,9 +635,9 @@ class Database:
             "RETURNS TRIGGER LANGUAGE plpgsql " +
             "AS $$ " +
             "BEGIN " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "REFRESH MATERIALIZED VIEW " +
             "core.measurements_count_mv; " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "REFRESH MATERIALIZED VIEW " +
             "core.measurements_max_valid_from_mv; " +
             "RETURN NULL; " +
             "END $$;"
@@ -687,8 +687,9 @@ class Database:
             "RETURNS TRIGGER LANGUAGE plpgsql " +
             "AS $$ " +
             "BEGIN " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY core.station_count_mv; " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "REFRESH MATERIALIZED VIEW " +
+            "core.station_count_mv; " +
+            "REFRESH MATERIALIZED VIEW " +
             "core.station_max_valid_from_mv; " +
             "RETURN NULL; " +
             "END $$;"
@@ -732,9 +733,9 @@ class Database:
             "RETURNS TRIGGER LANGUAGE plpgsql " +
             "AS $$ " +
             "BEGIN " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "REFRESH MATERIALIZED VIEW " +
             "core.parameter_count_mv; " +
-            "REFRESH MATERIALIZED VIEW CONCURRENTLY " +
+            "REFRESH MATERIALIZED VIEW " +
             "core.parameter_max_valid_from_mv; " +
             "RETURN NULL; " +
             "END $$;"

@@ -8,6 +8,10 @@ xhr.onload = () => {
 xhr.open("POST", "/admin/getDbServiceList", true);
 xhr.send()
 
+setInterval( function() {
+    postReq("/admin/getDbServiceStatus")
+}, refreshInterval)
+
 function createTableLists() {
     // Horrible hack but it works
     createTableLists = function(){}
@@ -18,6 +22,13 @@ function createTableLists() {
     }
     xhr.open("POST", "/admin/getTablesList", true);
     xhr.send()
+
+    setInterval( function() {
+        postReq("/admin/getStageTablesStatus")
+    }, refreshInterval)
+    setInterval( function() {
+        postReq("/admin/getCoreTablesStatus")
+    }, refreshInterval)
 }
 
 function updateBreadcrumbNav(serviceList) {
@@ -124,17 +135,6 @@ function updateBreadcrumbNav(serviceList) {
         }
     }
 }
-
-setInterval( function() {
-    postReq("/admin/getDbServiceStatus")
-}, refreshInterval)
-setInterval( function() {
-    postReq("/admin/getStageTablesStatus")
-}, refreshInterval)
-setInterval( function() {
-    postReq("/admin/getCoreTablesStatus")
-}, refreshInterval)
-
 
 class RunETL {
     constructor(divId) {
