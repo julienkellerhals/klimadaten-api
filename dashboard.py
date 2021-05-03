@@ -44,7 +44,12 @@ def mydashboard(flaskApp, instance):
             'b1': '#ADD8E5',
             'b2': '#BCDFEB',
             'rbb': '#285D8F',
-            'rbr': '#DE3143'
+            'rbr': '#DE3143',
+            'BgPlot1': '#FFFFFF',
+            'BgPlot2': '#B4DFFF',
+            'BgPlot3': '#B4DFFF',
+            'BgPlot4': '#ADD8E5',
+            'BgPlot5': '#B4DFFF',
         }
 
     dashApp = Dash(
@@ -312,9 +317,9 @@ def mydashboard(flaskApp, instance):
             # title='Veränderungen extreme Niederschläge',
             yaxis={'title': 'maximaler Niederschlag in cm'},
             hovermode='closest',
-            margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
+            margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
             height=325,
-            paper_bgcolor=colors['b1'],
+            paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
             # legend={
             #     'yanchor': 'top',
@@ -410,7 +415,7 @@ def mydashboard(flaskApp, instance):
                                 }
                             )
                         ], style={
-                            'backgroundColor': colors['b1'],
+                            'backgroundColor': colors['BgPlot2'],
                             'width': '70%',
                             'display': 'inline-block',
                             'position': 'relative',
@@ -428,7 +433,7 @@ def mydashboard(flaskApp, instance):
                             ),
                             html.H4('Some random text i guess')
                         ], style={
-                            'backgroundColor': colors['b1'],
+                            'backgroundColor': colors['BgPlot2'],
                             'width': '28%',
                             'display': 'inline-block',
                             'vertical-align': 'top',
@@ -437,7 +442,7 @@ def mydashboard(flaskApp, instance):
                         }
                         )
                     ], style={
-                        'backgroundColor': colors['b1'],
+                        'backgroundColor': colors['BgPlot2'],
                         'height': 400,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
@@ -483,7 +488,7 @@ def mydashboard(flaskApp, instance):
                         }
                         )
                     ], style={
-                        'backgroundColor': colors['b1'],
+                        'backgroundColor': colors['BgPlot3'],
                         'height': 325,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
@@ -545,7 +550,7 @@ def mydashboard(flaskApp, instance):
                         }
                         )
                     ], style={
-                        'backgroundColor': colors['b1'],
+                        'backgroundColor': colors['BgPlot5'],
                         'height': 325,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
@@ -634,7 +639,7 @@ def mydashboard(flaskApp, instance):
                 hovermode='closest',
                 margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
                 height=400,
-                paper_bgcolor=colors['b1'],
+                paper_bgcolor=colors['BgPlot2'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
                     'yanchor': 'top',
@@ -692,7 +697,7 @@ def mydashboard(flaskApp, instance):
                 title=station,
                 margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
                 height=325,
-                paper_bgcolor=colors['b1'],
+                paper_bgcolor=colors['BgPlot3'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
                     'yanchor': 'top',
