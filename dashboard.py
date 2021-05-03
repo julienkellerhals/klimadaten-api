@@ -170,7 +170,7 @@ def mydashboard(flaskApp, instance):
     # df for showing scatterplot for all stations under 1000 m.ü.M.
     dfScatter2 = pd.read_sql(
         """
-        SELECT 
+        SELECT
         avg(meas_value),
         meas_year
         FROM
@@ -193,7 +193,8 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
-    # avg of highest 10 minute total of rain of a month per year of all stations available
+    # avg of highest 10 minute total of rain of
+    # a month per year of all stations available
     dfScatterRain1 = pd.read_sql(
         """
         SELECT
@@ -209,7 +210,8 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
-    # avg of highest 1 hour total of rain of a month every year of all stations available
+    # avg of highest 1 hour total of rain of
+    # a month every year of all stations available
     dfScatterRain2 = pd.read_sql(
         """
         SELECT
@@ -427,7 +429,7 @@ def mydashboard(flaskApp, instance):
                             'display': 'inline-block',
                             'vertical-align': 'top',
                             'horizontal-align': 'right',
-                            'padding' : 5
+                            'padding': 5
                         }
                         )
                     ], style={
@@ -450,8 +452,8 @@ def mydashboard(flaskApp, instance):
                 )
             ], style={
                 'backgroundColor': colors['l1'],
-                'padding-left' : 30,
-                'padding-right' : 30
+                'padding-left': 30,
+                'padding-right': 30
             }
             ),
             # second row of plots
@@ -488,7 +490,7 @@ def mydashboard(flaskApp, instance):
                     'width': '50%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
-                    'horizontal-align' : 'left'
+                    'horizontal-align': 'left'
                 }
                 ),
                 # 2nd plot 2nd row
@@ -508,7 +510,7 @@ def mydashboard(flaskApp, instance):
                     'width': '25%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
-                    'horizontal-align' : 'center'
+                    'horizontal-align': 'center'
                 }
                 ),
                 # 3nd plot 2nd row
@@ -544,7 +546,7 @@ def mydashboard(flaskApp, instance):
                     'width': '25%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
-                    'horizontal-align' : 'right'
+                    'horizontal-align': 'right'
                 }
                 ),
                 html.Div([], style={
@@ -553,8 +555,8 @@ def mydashboard(flaskApp, instance):
                 }),
             ], style={
                 'backgroundColor': colors['l1'],
-                'padding-left' : 30,
-                'padding-right' : 30
+                'padding-left': 30,
+                'padding-right': 30
             }
             ),
         ], style={
@@ -638,7 +640,7 @@ def mydashboard(flaskApp, instance):
     def callback_graph(hoverData):
         v_index = hoverData['points'][0]['pointIndex']
         station = df_map.iloc[v_index]['station_name']
-        
+
         # hns000d0
         # rre150m0
 
@@ -652,8 +654,8 @@ def mydashboard(flaskApp, instance):
             'data': [
                 go.Scatter(
                     name='Schneefall',
-                    x = dfTemp['meas_year'],
-                    y = dfTemp['snow'],
+                    x=dfTemp['meas_year'],
+                    y=dfTemp['snow'],
                     mode='lines+markers',
                     marker={
                         'size': 5,
@@ -663,8 +665,8 @@ def mydashboard(flaskApp, instance):
                 ),
                 go.Scatter(
                     name='Regressionsline',
-                    x = dfTemp['meas_year'],
-                    y = dfTemp['snow_bestfit'],
+                    x=dfTemp['meas_year'],
+                    y=dfTemp['snow_bestfit'],
                     mode='lines',
                     marker={
                         'size': 5,
@@ -674,7 +676,7 @@ def mydashboard(flaskApp, instance):
                 )
             ],
             'layout': go.Layout(
-                title = station,
+                title=station,
                 margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
                 height=325,
                 paper_bgcolor=colors['b1'],
@@ -685,13 +687,10 @@ def mydashboard(flaskApp, instance):
                     'xanchor': 'right',
                     'x': 0.99
                 }
-                # xaxis = {'visible':True, 'title': 'seconds'},
-                # yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
             )
         }
 
         return fig
-
 
     createDashboard()
     return dashApp
