@@ -12,6 +12,10 @@ from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
+# TODO height of dash elements as percentage of the whole
+# TODO map pop-up fix percentage change
+
+
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
     instance.checkEngine()
@@ -140,20 +144,30 @@ def mydashboard(flaskApp, instance):
     )
 
     # add text column for map pop-up
-    df_map['text'] = df_map['station_name'] + '<br>Ø Schneefall pro Tag 1970-1980: ' + (round(df_map['avg_then'],2)).astype(str) + 'cm' + '<br>Ø Schneefall pro Tag 2010-2020: ' + (round(df_map['avg_now'],2)).astype(str) + 'cm' + '<br>Veränderung: ' + (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100,0)).astype(str) + '%'
+    df_map['text'] = df_map['station_name'] + \
+        ' (' + (df_map['elevation']).astype(str) + ' m.ü.M.)' + \
+        '<br>Ø Schneefall pro Tag 1970-1980: ' + \
+        (round(df_map['avg_then'], 2)).astype(str) + 'cm' + \
+        '<br>Ø Schneefall pro Tag 2010-2020: ' + \
+        (round(df_map['avg_now'], 2)).astype(str) + 'cm' + \
+        '<br>Veränderung: ' + \
+        (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100, 0)) \
+        .astype(str) + '%'
     # data wrangling for longitude and latitude
     df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
     df_map['lon'] = pd.to_numeric(df_map['lon'])
-    df_map['lon'] = round(df_map['lon']/60  * 1000)
+    df_map['lon'] = round(df_map['lon']/60 * 100 * 10)
     df_map['lon'] = df_map['lon'].apply(str)
-    df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + df_map['lon'].str.extract(r'(^\d+)')
-    df_map = df_map.drop('lon', axis = 1)
+    df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + \
+        df_map['lon'].str.extract(r'(^\d+)')
+    df_map = df_map.drop('lon', axis=1)
     df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
     df_map['lat'] = pd.to_numeric(df_map['lat'])
-    df_map['lat'] = round(df_map['lat']/60  * 1000)
+    df_map['lat'] = round(df_map['lat']/60 * 100 * 10)
     df_map['lat'] = df_map['lat'].apply(str)
-    df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + df_map['lat'].str.extract(r'(^\d+)')
-    df_map = df_map.drop('lat', axis = 1)
+    df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + \
+        df_map['lat'].str.extract(r'(^\d+)')
+    df_map = df_map.drop('lat', axis=1)
 
     # data wrangling scatterplot
     dfScatter = pd.read_sql(
@@ -663,6 +677,8 @@ def mydashboard(flaskApp, instance):
         # rre150m0
 
         dfTemp = dfScatter[dfScatter['station_name'] == station]
+        # remove first entry because it is often wrong
+        dfTemp = dfTemp.iloc[1:]
 
         # simple regression line
         reg = LinearRegression().fit(np.vstack(dfTemp.index), dfTemp['snow'])
