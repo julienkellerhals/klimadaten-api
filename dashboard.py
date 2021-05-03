@@ -193,6 +193,38 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
+    # avg of highest 10 minute total of rain of a month per year of all stations available
+    dfScatterRain1 = pd.read_sql(
+        """
+        SELECT
+        extract(year from m.meas_date) as meas_year,
+        avg(meas_value) avg_rain
+        FROM core.measurements_t m
+        WHERE m.meas_name = 'rzz150mx'
+        AND extract(year from m.meas_date) >= 1981
+        AND extract(year from m.meas_date) <= 2020
+        AND m.valid_to = '2262-04-11'
+        GROUP BY meas_year
+        """,
+        engine
+    )
+
+    # avg of highest 1 hour total of rain of a month every year of all stations available
+    dfScatterRain2 = pd.read_sql(
+        """
+        SELECT
+        extract(year from m.meas_date) as meas_year,
+        avg(meas_value) avg_rain
+        FROM core.measurements_t m
+        WHERE m.meas_name = 'rhh150mx'
+        AND extract(year from m.meas_date) >= 1981
+        AND extract(year from m.meas_date) <= 2020
+        AND m.valid_to = '2262-04-11'
+        GROUP BY meas_year
+        """,
+        engine
+    )
+
     def createDashboard():
         """
         "tre200d0"
@@ -213,11 +245,13 @@ def mydashboard(flaskApp, instance):
         "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
         "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
         """
-        
+
+        # creating the map
         plotMap = go.Figure()
 
         plotMap.add_trace(go.Scattergeo(
-            # locationmode='country names', # if locationmode and locations are active, one can see adelboden
+            # locationmode='country names', # if locationmode and locations
+            # are active, one can see adelboden
             # locations=['Switzerland'], # puts point in the middle of country
             lon=df_map["longitude"],
             lat=df_map["latitude"],
@@ -238,19 +272,54 @@ def mydashboard(flaskApp, instance):
             height=390,
             paper_bgcolor=colors['l0'],
             geo=dict(
-                scope='europe', # changes layout so one can see only europe and borders
-                resolution = 50,
+                # scope changes layout so one can see only europe and borders
+                scope='europe',
+                resolution=50,
                 visible=False,
                 showcountries=True, countrycolor="Black",
                 showcoastlines=True, coastlinecolor="Black",
                 showland=True, landcolor=colors['l0'],
-                showocean=False, # oceancolor="LightBlue",
-                showlakes=False, # lakecolor="Blue",
-                showrivers=False, # rivercolor="Blue"
+                showocean=False,
+                # oceancolor="LightBlue",
+                showlakes=False,
+                # lakecolor="Blue",
+                showrivers=False,
+                # rivercolor="Blue"
                 bgcolor='rgba(0,0,0,0)',
                 lonaxis_range=[5.7, 10.6],
                 lataxis_range=[45.7, 47.9]
             )
+        )
+
+        # creating the rain scatterplot
+        plotRain = go.Figure()
+
+        plotRain.add_trace(go.Scatter(
+            # name='Rain',
+            x=dfScatterRain2["meas_year"],
+            y=dfScatterRain2["avg_rain"],
+            mode='lines+markers',
+            marker={
+                'size': 5,
+                'color': colors['rbb'],
+                'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plotRain.update_layout(
+            # title='Veränderungen extreme Niederschläge',
+            yaxis={'title': 'maximaler Niederschlag in cm'},
+            hovermode='closest',
+            margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
+            height=325,
+            paper_bgcolor=colors['b1'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            # legend={
+            #     'yanchor': 'top',
+            #     'y': 0.99,
+            #     'xanchor': 'right',
+            #     'x': 0.99
+            # }
         )
 
         features = [
@@ -412,7 +481,7 @@ def mydashboard(flaskApp, instance):
                         'border-radius': 5,
                         'margin': '10px',
                         'vertical-align': 'top',
-                        'padding' : 5
+                        'padding': 5
                     }
                     ),
                 ], style={
@@ -446,13 +515,29 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.H4('Extreme Regenfälle'),
                     html.Div([
+                        html.Div([
+                            dcc.Graph(
+                                id='scatterRain',
+                                figure=plotRain,
+                                config={
+                                    'displayModeBar': False,
+                                    'staticPlot': False
+                                }
+                            )
+                        ], style={
+                            'backgroundColor': colors['l4'],
+                            'height': 325
+                        }
+                        )
                     ], style={
-                        'backgroundColor': colors['l0'],
-                        'height': 335,
+                        'backgroundColor': colors['b1'],
+                        'height': 325,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
-                        'margin': '10px'
+                        'margin': '10px',
+                        'vertical-align': 'top',
+                        'padding': 5
                     }
                     ),
                 ], style={
@@ -504,7 +589,7 @@ def mydashboard(flaskApp, instance):
         reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
         df['bestfit'] = reg.predict(np.vstack(df.index))
 
-        return {
+        fig = {
             'data': [go.Scatter(
                 name=yaxis_name,
                 x=df["meas_date"],
@@ -544,6 +629,8 @@ def mydashboard(flaskApp, instance):
                 }
             )
         }
+
+        return fig
 
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
@@ -602,6 +689,7 @@ def mydashboard(flaskApp, instance):
                 # yaxis = {'visible':True, 'title': 'time','range':[0,60/df['acceleration'].min()]}
             )
         }
+
         return fig
 
 
