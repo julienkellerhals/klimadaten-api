@@ -99,9 +99,37 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
+    df_map_3 = pd.read_sql(
+        """
+        SELECT station_name, COUNT(*) FROM(
+            SELECT extract(year from m.meas_date) as meas_year,
+            k.station_name
+            FROM core.measurements_t m
+            JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_name = 'hns000d0'
+            AND k.parameter = 'hns000d0'
+            GROUP BY meas_year, k.station_name
+            HAVING extract(year from m.meas_date) >= 1970
+        ) AS filtered
+        GROUP BY station_name
+        HAVING COUNT(*) >= 35
+        """,
+        engine
+    )
+
     df_map = pd.merge(
+        how='inner',
         left=df_map_1,
         right=df_map_2,
+        left_on='station_name',
+        right_on='station_name'
+    )
+
+    df_map = pd.merge(
+        how='inner',
+        left=df_map,
+        right=df_map_3,
         left_on='station_name',
         right_on='station_name'
     )
