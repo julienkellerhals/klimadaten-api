@@ -298,8 +298,8 @@ def mydashboard(flaskApp, instance):
 
         plotRain.add_trace(go.Scatter(
             # name='Rain',
-            x=dfScatterRain2["meas_year"],
-            y=dfScatterRain2["avg_rain"],
+            x=dfScatterRain1["meas_year"],
+            y=dfScatterRain1["avg_rain"],
             mode='lines+markers',
             marker={
                 'size': 5,
@@ -366,7 +366,8 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4('Karte mit Schneetagen pro Station')
-                    ]),
+                    ], style={'padding-left': 20}
+                    ),
                     html.Div([
                         dcc.Graph(
                             id='map1',
@@ -395,7 +396,10 @@ def mydashboard(flaskApp, instance):
                 ),
                 # second plot first row
                 html.Div([
-                    html.H4("Totaler Schneefall und Regenfall or Temp"),
+                    html.Div([
+                        html.H4("Totaler Schneefall und Regenfall or Temp")
+                    ], style={'padding-left': 20}
+                    ),
                     html.Div([
                         html.Div([
                             dcc.Graph(
@@ -460,7 +464,10 @@ def mydashboard(flaskApp, instance):
             html.Div([
                 # scatterplot bottom left
                 html.Div([
-                    html.H4('Schnee- & Regenfall bei Stationen'),
+                    html.Div([
+                        html.H4('Schnee- & Regenfall bei Stationen')
+                    ], style={'padding-left': 20}
+                    ),
                     html.Div([
                         html.Div([
                             dcc.Graph(
@@ -495,7 +502,10 @@ def mydashboard(flaskApp, instance):
                 ),
                 # 2nd plot 2nd row
                 html.Div([
-                    html.H4('Bodentemperatur'),
+                    html.Div([
+                        html.H4('Bodentemperatur')
+                    ], style={'padding-left': 20}
+                    ),
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
                         'height': 335,
@@ -515,7 +525,10 @@ def mydashboard(flaskApp, instance):
                 ),
                 # 3nd plot 2nd row
                 html.Div([
-                    html.H4('Extreme Regenfälle'),
+                    html.Div([
+                        html.H4('Extreme Regenfälle')
+                    ], style={'padding-left': 20}
+                    ),
                     html.Div([
                         html.Div([
                             dcc.Graph(
