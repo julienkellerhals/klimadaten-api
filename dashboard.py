@@ -14,6 +14,7 @@ from dash.dependencies import Input, Output, State
 
 # TODO height of dash elements as percentage of the whole
 # TODO map pop-up fix percentage change
+# TODO only update plot below map on click
 
 
 def mydashboard(flaskApp, instance):
@@ -279,9 +280,15 @@ def mydashboard(flaskApp, instance):
             text=df_map['text'],
             mode='markers',
             marker={
-                'size': df_map['avg_now'] * 15,
-                'color': df_map['avg_now'] - df_map['avg_then'],
-                'line': {'width': 1, 'color': 'black'},
+                'size': df_map['avg_now'] * 35,
+                'color': df_map['avg_now'] / df_map['avg_then'],
+                # 'colorscale': px.colors.diverging.BrBG,
+                'colorscale': [
+                    [0, colors['rbr']],
+                    [0.4, colors['l3']],
+                    [1, colors['rbb']]
+                ],
+                'line': {'width': 1, 'color': colors['d3']},
                 'sizemode': 'area'
             }
         ))
