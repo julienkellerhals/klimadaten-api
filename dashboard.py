@@ -152,22 +152,25 @@ def mydashboard(flaskApp, instance):
         '<br>Ø Schneefall pro Tag 2010-2020: ' + \
         (round(df_map['avg_now'], 2)).astype(str) + 'cm' + \
         '<br>Veränderung: ' + \
-        (round((1 - df_map['avg_then'] / df_map['avg_now']) * 100, 0)) \
+        (round(
+            (
+                (df_map['avg_now'] - df_map['avg_then']) / df_map['avg_then']
+            ) * 100, 0)) \
         .astype(str) + '%'
     # data wrangling for longitude and latitude
     df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
     df_map['lon'] = pd.to_numeric(df_map['lon'])
-    df_map['lon'] = round(df_map['lon']/60 * 100 * 10)
+    df_map['lon'] = round(df_map['lon']/60, 3)
     df_map['lon'] = df_map['lon'].apply(str)
     df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + \
-        df_map['lon'].str.extract(r'(^\d+)')
+        df_map['lon'].str.extract(r'(\d+)$')
     df_map = df_map.drop('lon', axis=1)
     df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
     df_map['lat'] = pd.to_numeric(df_map['lat'])
-    df_map['lat'] = round(df_map['lat']/60 * 100 * 10)
+    df_map['lat'] = round(df_map['lat']/60, 3)
     df_map['lat'] = df_map['lat'].apply(str)
     df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + \
-        df_map['lat'].str.extract(r'(^\d+)')
+        df_map['lat'].str.extract(r'(\d+)$')
     df_map = df_map.drop('lat', axis=1)
 
     # data wrangling scatterplot
@@ -281,7 +284,7 @@ def mydashboard(flaskApp, instance):
             mode='markers',
             marker={
                 'size': df_map['avg_now'] * 35,
-                'color': df_map['avg_now'] / df_map['avg_then'],
+                'color': (df_map['avg_now'] - df_map['avg_then']) / df_map['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
                 'colorscale': [
                     [0, colors['rbr']],
