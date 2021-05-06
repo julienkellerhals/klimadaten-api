@@ -15,6 +15,44 @@ from dash.dependencies import Input, Output, State
 # TODO height of dash elements as percentage of the whole
 # TODO map pop-up fix percentage change
 # TODO only update plot below map on click
+# TODO remove duplicates from map (avg. everything else)
+
+"""
+wind
+"fklnd3m0" Days of the month with gust peak exceeding 27.8 m/s (100 km/h)
+"fu3010m1" Gust peak (one second); monthly maximum
+
+lightning
+"breclod0" Close range lightning (distance below 3 km); daily total
+"brefard0" Distant lightning (distance 3 - 30 km); daily total
+
+precipitation
+"precipitation" meteoschweiz
+"rhs150m0" Precipitation; homogeneous monthly total
+"rzz150mx" Precipitation; maximum ten minute total of the month
+"rhh150mx" Precipitation; maximum total per hour of the month
+"rre150m0" Precipitation; monthly total
+"rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
+"rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
+
+snow
+"hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day
+"hns000mx" Fresh snow; maximum daily total of the month
+"hto000y0" Snow depth; annual mean
+"hns000y0" Fresh snow; annual total of the daily merasurements
+
+temperature
+"temperature" meteoschweiz
+"tre200dn" Air temperature 2 m above ground; daily minimum
+"tre200d0" Air temperature 2 m above ground; daily mean
+"tre200dx" Air temperature 2 m above ground; daily maximum
+"tre200y0" Air temperature 2 m above ground; annual mean
+"tnd00xy0" Ice days (maximum lower than 0 degrees C); annual total
+
+soil temperature
+"tso100m0" Soil temperature at 100 cm depth; monthly mean
+"tso100mx" Soil temperature at 100 cm depth; absolute monthly maximum
+"""
 
 
 def mydashboard(flaskApp, instance):
@@ -251,26 +289,6 @@ def mydashboard(flaskApp, instance):
     )
 
     def createDashboard():
-        """
-        "tre200d0"
-        "temperature"
-        "brefard0"
-        "fu3010m1"
-        "breclod0"
-        "tre200dx"
-        "tre200dn"
-        "hns000d0"
-        "hns000mx"
-        "fklnd3m0"
-        "precipitation"
-        "rhs150m0" Precipitation; homogeneous monthly total
-        "rzz150mx" Precipitation; maximum ten minute total of the month
-        "rhh150mx" Precipitation; maximum total per hour of the month
-        "rre150m0" Precipitation; monthly total
-        "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
-        "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
-        """
-
         # creating the map
         plotMap = go.Figure()
 
@@ -284,7 +302,9 @@ def mydashboard(flaskApp, instance):
             mode='markers',
             marker={
                 'size': df_map['avg_now'] * 35,
-                'color': (df_map['avg_now'] - df_map['avg_then']) / df_map['avg_then'],
+                'color': (
+                    df_map['avg_now'] - df_map['avg_then']
+                    ) / df_map['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
                 'colorscale': [
                     [0, colors['rbr']],
