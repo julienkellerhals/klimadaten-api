@@ -34,6 +34,11 @@ precipitation
 "rre150m0" Precipitation; monthly total
 "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
 "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
+"rsd700y0" Days of the year with precipitation total exceeding 69.9 mm
+"rs1000y0" Days in a year with precipitation total exceeding 99.9 mm
+"rre150y0" Precipitation; annual total
+"rti150yx" Precipitation; date of the maximum daily total of the year
+"rzz150yx" Precipitation; maximum ten minute total of the year
 
 snow
 "hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day

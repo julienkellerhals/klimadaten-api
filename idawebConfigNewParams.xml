@@ -1,4 +1,13 @@
 <root>
     <config granularity="Y" group="snow">hto000y0</config>
     <config granularity="Y" group="snow">hns000y0</config>
+    <config granularity="Y" group="temperature">tre200y0</config>
+    <config granularity="Y" group="temperature">tnd00xy0</config>
+    <config granularity="M" group="soil temperature">tso100m0</config>
+    <config granularity="M" group="soil temperature">tso100mx</config>
+    <config granularity="Y" group="precipitation">rsd700y0</config>
+    <config granularity="Y" group="precipitation">rs1000y0</config>
+    <config granularity="Y" group="precipitation">rre150y0</config>
+    <config granularity="Y" group="precipitation">rti150yx</config>
+    <config granularity="Y" group="precipitation">rzz150yx</config>
 </root>
