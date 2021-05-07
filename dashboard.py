@@ -78,6 +78,7 @@ def mydashboard(flaskApp, instance):
             'l4': '#B6C3CC',
             'l5': '#A3B5BF',
             'l6': '#96A8B2',
+            'l8': '#748B99',
             'c1': '#ED90A4',
             'c2': '#ABB150',
             'c3': '#00C1B2',
@@ -90,8 +91,10 @@ def mydashboard(flaskApp, instance):
             'BgPlot2': '#B4DFFF',
             'BgPlot3': '#B4DFFF',
             'BgPlot4': '#ADD8E5',
-            'BgPlot5': '#B4DFFF',
-            'PlotTitle': '#121F26'
+            'BgPlot5': '#FFFFFF',
+            'plotTitle': '#121F26',
+            'plotGrid': '#B6C3CC',
+            'plotAxisTitle': '#748B99'
         }
 
     dashApp = Dash(
@@ -319,7 +322,7 @@ def mydashboard(flaskApp, instance):
             title_text='Schneefall',
             hovermode='closest',
             margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-            height=390,
+            height=420,
             paper_bgcolor=colors['l0'],
             geo=dict(
                 # scope changes layout so one can see only europe and borders
@@ -358,7 +361,17 @@ def mydashboard(flaskApp, instance):
 
         plotRain.update_layout(
             # title='Veränderungen extreme Niederschläge',
-            yaxis={'title': 'maximaler Niederschlag in cm'},
+            yaxis={
+                'title': 'maximaler Niederschlag in cm',
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid']
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle']
+            },
             hovermode='closest',
             margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
             height=360,
@@ -415,7 +428,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.H4(
                             'Karte mit Schneetagen pro Station',
-                            style={'color': colors['PlotTitle']}
+                            style={'color': colors['plotTitle']}
                         )
                     ], style={
                         'padding-left': 20,
@@ -535,7 +548,7 @@ def mydashboard(flaskApp, instance):
                                 }
                             )
                         ], style={
-                            'backgroundColor': colors['l4'],
+                            'backgroundColor': colors['BgPlot3'],
                             'height': 360
                         }
                         )
@@ -597,7 +610,7 @@ def mydashboard(flaskApp, instance):
                                 }
                             )
                         ], style={
-                            'backgroundColor': colors['l4'],
+                            'backgroundColor': colors['BgPlot5'],
                             'height': 360
                         }
                         )
