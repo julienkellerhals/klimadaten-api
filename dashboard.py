@@ -13,7 +13,6 @@ from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
 # TODO height of dash elements as percentage of the whole
-# TODO map pop-up fix percentage change
 # TODO only update plot below map on click
 # TODO remove duplicates from map (avg. everything else)
 
@@ -354,7 +353,7 @@ def mydashboard(flaskApp, instance):
             # name='Rain',
             x=dfScatterRain1["meas_year"],
             y=dfScatterRain1["avg_rain"],
-            mode='lines+markers',
+            mode='lines',
             marker={
                 'size': 5,
                 'color': colors['rbb'],
@@ -663,7 +662,7 @@ def mydashboard(flaskApp, instance):
                 name=yaxis_name,
                 x=df["meas_date"],
                 y=df["avg"],
-                mode='lines+markers',
+                mode='lines',
                 marker={
                     'size': 5,
                     'color': colors['rbb'],
@@ -725,7 +724,7 @@ def mydashboard(flaskApp, instance):
                     name='Schneefall',
                     x=dfTemp['meas_year'],
                     y=dfTemp['snow'],
-                    mode='lines+markers',
+                    mode='lines',
                     marker={
                         'size': 5,
                         'color': colors['rbb'],
