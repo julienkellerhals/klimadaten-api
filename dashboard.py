@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_bootstrap_components as dbc
 from dash import Dash
 from flask import Flask
 from dash.exceptions import PreventUpdate
@@ -63,15 +64,8 @@ def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
     instance.checkEngine()
     engine = instance.engine
-    external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-    '''
-    external_stylesheets = [
-        {
-        "href": "https://fonts.googleapis.com/css2?"
-                "family=Lato:wght@400;700&display=swap",
-        "rel": "stylesheet",
-    }]
-    '''
+    # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
+    external_stylesheets = [dbc.themes.UNITED]
 
     colors = {
             'd1': '#05090C',
@@ -97,6 +91,7 @@ def mydashboard(flaskApp, instance):
             'BgPlot3': '#B4DFFF',
             'BgPlot4': '#ADD8E5',
             'BgPlot5': '#B4DFFF',
+            'PlotTitle': '#121F26'
         }
 
     dashApp = Dash(
@@ -366,7 +361,7 @@ def mydashboard(flaskApp, instance):
             yaxis={'title': 'maximaler Niederschlag in cm'},
             hovermode='closest',
             margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
-            height=325,
+            height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
             # legend={
@@ -418,8 +413,14 @@ def mydashboard(flaskApp, instance):
                 # map top left
                 html.Div([
                     html.Div([
-                        html.H4('Karte mit Schneetagen pro Station')
-                    ], style={'padding-left': 20}
+                        html.H4(
+                            'Karte mit Schneetagen pro Station',
+                            style={'color': colors['PlotTitle']}
+                        )
+                    ], style={
+                        'padding-left': 20,
+                        'padding-top': 5
+                    }
                     ),
                     html.Div([
                         dcc.Graph(
@@ -432,7 +433,7 @@ def mydashboard(flaskApp, instance):
                         )
                     ], style={
                         'backgroundColor': colors['l0'],
-                        'height': 400,
+                        'height': 430,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
@@ -451,7 +452,10 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4("Totaler Schneefall und Regenfall or Temp")
-                    ], style={'padding-left': 20}
+                    ], style={
+                        'padding-left': 20,
+                        'padding-top': 5
+                    }
                     ),
                     html.Div([
                         html.Div([
@@ -491,7 +495,7 @@ def mydashboard(flaskApp, instance):
                         )
                     ], style={
                         'backgroundColor': colors['BgPlot2'],
-                        'height': 400,
+                        'height': 430,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
@@ -532,12 +536,12 @@ def mydashboard(flaskApp, instance):
                             )
                         ], style={
                             'backgroundColor': colors['l4'],
-                            'height': 325
+                            'height': 360
                         }
                         )
                     ], style={
                         'backgroundColor': colors['BgPlot3'],
-                        'height': 325,
+                        'height': 370,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
@@ -561,7 +565,7 @@ def mydashboard(flaskApp, instance):
                     ),
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
-                        'height': 335,
+                        'height': 370,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
@@ -594,12 +598,12 @@ def mydashboard(flaskApp, instance):
                             )
                         ], style={
                             'backgroundColor': colors['l4'],
-                            'height': 325
+                            'height': 360
                         }
                         )
                     ], style={
                         'backgroundColor': colors['BgPlot5'],
-                        'height': 325,
+                        'height': 370,
                         'box-shadow': '4px 4px 4px lightgrey',
                         'position': 'relative',
                         'border-radius': 5,
@@ -686,7 +690,7 @@ def mydashboard(flaskApp, instance):
                 yaxis={'title': yaxis_name},
                 hovermode='closest',
                 margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-                height=400,
+                height=420,
                 paper_bgcolor=colors['BgPlot2'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
@@ -746,7 +750,7 @@ def mydashboard(flaskApp, instance):
             'layout': go.Layout(
                 title=station,
                 margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
-                height=325,
+                height=360,
                 paper_bgcolor=colors['BgPlot3'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
