@@ -274,6 +274,11 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
+    # simple regression line
+    dfScatterRain1 = dfScatterRain1.reset_index()
+    reg = LinearRegression().fit(np.vstack(dfScatterRain1.index), dfScatterRain1['avg_rain'])
+    dfScatterRain1['rain_bestfit'] = reg.predict(np.vstack(dfScatterRain1.index))
+
     # avg of highest 1 hour total of rain of
     # a month every year of all stations available
     dfScatterRain2 = pd.read_sql(
@@ -349,13 +354,25 @@ def mydashboard(flaskApp, instance):
         plotRain = go.Figure()
 
         plotRain.add_trace(go.Scatter(
-            # name='Rain',
+            name='Regenfall',
             x=dfScatterRain1["meas_year"],
             y=dfScatterRain1["avg_rain"],
             mode='lines',
             marker={
                 'size': 5,
                 'color': colors['rbb'],
+                'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plotRain.add_trace(go.Scatter(
+            name='Regressionslinie',
+            x=dfScatterRain1["meas_year"],
+            y=dfScatterRain1["rain_bestfit"],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
                 'line': {'width': 1, 'color': 'black'}
             }
         ))
@@ -367,7 +384,8 @@ def mydashboard(flaskApp, instance):
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
-                'gridcolor': colors['plotGrid']
+                'gridcolor': colors['plotGrid'],
+                # 'rangemode': "tozero"
             },
             xaxis={
                 'showgrid': False,
@@ -378,12 +396,12 @@ def mydashboard(flaskApp, instance):
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
-            # legend={
-            #     'yanchor': 'top',
-            #     'y': 0.99,
-            #     'xanchor': 'right',
-            #     'x': 0.99
-            # }
+            legend={
+                'yanchor': 'top',
+                'y': 0.99,
+                'xanchor': 'left',
+                'x': 0.01
+            }
         )
 
         features = [
