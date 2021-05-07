@@ -90,7 +90,7 @@ def mydashboard(flaskApp, instance):
             'rbr': '#DE3143',
             'BgPlot1': '#FFFFFF',
             'BgPlot2': '#B4DFFF',
-            'BgPlot3': '#B4DFFF',
+            'BgPlot3': '#FFFFFF',
             'BgPlot4': '#ADD8E5',
             'BgPlot5': '#FFFFFF',
             'plotTitle': '#121F26',
@@ -784,13 +784,25 @@ def mydashboard(flaskApp, instance):
             ],
             'layout': go.Layout(
                 title=station,
-                margin={'l': 35, 'b': 20, 't': 40, 'r': 10},
+                margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
                 height=360,
+                yaxis={
+                    'title': 'Schneefall in cm',
+                    'color': colors['plotAxisTitle'],
+                    'showgrid': True,
+                    'gridwidth': 1,
+                    'gridcolor': colors['plotGrid'],
+                    'rangemode': "tozero"
+                },
+                xaxis={
+                    'showgrid': False,
+                    'color': colors['plotAxisTitle']
+                },
                 paper_bgcolor=colors['BgPlot3'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
                     'yanchor': 'top',
-                    'y': 1.40,
+                    'y': 1.20,
                     'xanchor': 'right',
                     'x': 0.99
                 }
