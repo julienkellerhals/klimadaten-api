@@ -3,6 +3,7 @@ import datetime
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import statsmodels.api as sm
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
@@ -670,6 +671,8 @@ def mydashboard(flaskApp, instance):
             engine
         )
 
+        df = df.reset_index()
+
         # simple regression line
         reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
         df['bestfit'] = reg.predict(np.vstack(df.index))
@@ -730,6 +733,7 @@ def mydashboard(flaskApp, instance):
         dfTemp = dfScatter[dfScatter['station_name'] == station]
         # remove first entry because it is often wrong
         dfTemp = dfTemp.iloc[1:]
+        dfTemp = dfTemp.reset_index()
 
         # simple regression line
         reg = LinearRegression().fit(np.vstack(dfTemp.index), dfTemp['snow'])
