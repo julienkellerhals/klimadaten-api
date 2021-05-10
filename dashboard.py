@@ -15,8 +15,8 @@ from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
 # TODO height of dash elements as percentage of the whole
-# TODO only update plot below map on click
 # TODO remove duplicates from map (avg. everything else)
+# TODO Add Rain for all Stations with button
 
 """
 wind
@@ -289,6 +289,8 @@ def mydashboard(flaskApp, instance):
 
     mean_rain = dfScatterRain1['avg_rain'].mean()
     dfScatterRain1['dev_rain'] = dfScatterRain1['avg_rain'] - mean_rain
+    dfScatterRain1['color'] = np.where(
+        dfScatterRain1['dev_rain'] >= 0, True, False)
 
     # avg of highest 1 hour total of rain of
     # a month every year of all stations available
