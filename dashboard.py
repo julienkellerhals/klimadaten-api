@@ -42,7 +42,7 @@ precipitation
 "rzz150yx" Precipitation; maximum ten minute total of the year
 
 snow
-"hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day
+"hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day (cm)
 "hns000mx" Fresh snow; maximum daily total of the month
 "hto000y0" Snow depth; annual mean
 "hns000y0" Fresh snow; annual total of the daily merasurements
@@ -230,6 +230,9 @@ def mydashboard(flaskApp, instance):
         """,
         engine
     )
+
+    # change measurement unit to meters
+    dfScatter['snow'] = round(dfScatter.snow / 100, 2)
 
     # df for showing scatterplot for all stations under 1000 m.ü.M.
     dfScatter2 = pd.read_sql(
@@ -794,7 +797,7 @@ def mydashboard(flaskApp, instance):
                 margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
                 height=360,
                 yaxis={
-                    'title': 'Schneefall in cm',
+                    'title': 'Schneefall (Meter)',
                     'color': colors['plotAxisTitle'],
                     'showgrid': True,
                     'gridwidth': 1,
