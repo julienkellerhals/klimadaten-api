@@ -749,9 +749,9 @@ def mydashboard(flaskApp, instance):
 
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
-        [Input('map1', 'hoverData')])
-    def callback_graph(hoverData):
-        v_index = hoverData['points'][0]['pointIndex']
+        [Input('map1', 'clickData')])
+    def callback_graph(clickData):
+        v_index = clickData['points'][0]['pointIndex']
         station = df_map.iloc[v_index]['station_name']
 
         # hns000d0
@@ -763,7 +763,8 @@ def mydashboard(flaskApp, instance):
         dfTemp = dfTemp.reset_index()
 
         # simple regression line
-        reg = LinearRegression().fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
+        reg = LinearRegression(
+            ).fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
         dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
 
         fig = {
