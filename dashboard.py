@@ -363,6 +363,7 @@ def mydashboard(flaskApp, instance):
             x=dfScatterRain1["meas_year"],
             y=dfScatterRain1["avg_rain"],
             mode='lines',
+            line_shape='spline',
             marker={
                 'size': 5,
                 'color': colors['rbb'],
@@ -769,6 +770,7 @@ def mydashboard(flaskApp, instance):
                     x=dfTemp['meas_year'],
                     y=dfTemp['snow'],
                     mode='lines',
+                    line_shape='spline',
                     marker={
                         'size': 5,
                         'color': colors['rbb'],
