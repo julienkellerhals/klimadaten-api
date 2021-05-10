@@ -276,8 +276,13 @@ def mydashboard(flaskApp, instance):
 
     # simple regression line
     dfScatterRain1 = dfScatterRain1.reset_index()
-    reg = LinearRegression().fit(np.vstack(dfScatterRain1.index), dfScatterRain1['avg_rain'])
-    dfScatterRain1['rain_bestfit'] = reg.predict(np.vstack(dfScatterRain1.index))
+    reg = LinearRegression().fit(np.vstack(
+        dfScatterRain1.index),
+        dfScatterRain1['avg_rain']
+    )
+    dfScatterRain1['rain_bestfit'] = reg.predict(np.vstack(
+        dfScatterRain1.index)
+    )
 
     # avg of highest 1 hour total of rain of
     # a month every year of all stations available
