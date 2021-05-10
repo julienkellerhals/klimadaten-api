@@ -760,8 +760,8 @@ def mydashboard(flaskApp, instance):
         dfTemp = dfTemp.reset_index()
 
         # simple regression line
-        reg = LinearRegression().fit(np.vstack(dfTemp.index), dfTemp['snow'])
-        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.index))
+        reg = LinearRegression().fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
+        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
 
         fig = {
             'data': [
