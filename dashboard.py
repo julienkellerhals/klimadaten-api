@@ -287,6 +287,9 @@ def mydashboard(flaskApp, instance):
         dfScatterRain1.index)
     )
 
+    mean_rain = dfScatterRain1['avg_rain'].mean()
+    dfScatterRain1['dev_rain'] = dfScatterRain1['avg_rain'] - mean_rain
+
     # avg of highest 1 hour total of rain of
     # a month every year of all stations available
     dfScatterRain2 = pd.read_sql(
@@ -359,18 +362,71 @@ def mydashboard(flaskApp, instance):
         )
 
         # creating the rain scatterplot
+        # plotRain = go.Figure()
+
+        # plotRain.add_trace(go.Scatter(
+        #     name='Regenfall',
+        #     x=dfScatterRain1["meas_year"],
+        #     y=dfScatterRain1["avg_rain"],
+        #     mode='lines',
+        #     line_shape='spline',
+        #     marker={
+        #         'size': 5,
+        #         'color': colors['rbb'],
+        #         'line': {'width': 1, 'color': 'black'}
+        #     }
+        # ))
+
+        # plotRain.add_trace(go.Scatter(
+        #     name='Regressionslinie',
+        #     x=dfScatterRain1["meas_year"],
+        #     y=dfScatterRain1["rain_bestfit"],
+        #     mode='lines',
+        #     marker={
+        #         'size': 5,
+        #         'color': colors['rbr'],
+        #         'line': {'width': 1, 'color': 'black'}
+        #     }
+        # ))
+
+        # plotRain.update_layout(
+        #     # title='Veränderungen extreme Niederschläge',
+        #     yaxis={
+        #         'title': 'maximaler Niederschlag in cm',
+        #         'color': colors['plotAxisTitle'],
+        #         'showgrid': True,
+        #         'gridwidth': 1,
+        #         'gridcolor': colors['plotGrid'],
+        #         # 'rangemode': "tozero"
+        #     },
+        #     xaxis={
+        #         'showgrid': False,
+        #         'color': colors['plotAxisTitle']
+        #     },
+        #     hovermode='closest',
+        #     margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
+        #     height=360,
+        #     paper_bgcolor=colors['BgPlot5'],
+        #     plot_bgcolor='rgba(0,0,0,0)',
+        #     legend={
+        #         'yanchor': 'top',
+        #         'y': 0.99,
+        #         'xanchor': 'left',
+        #         'x': 0.01
+        #     }
+        # )
+
+        # creating the rain scatterplot
         plotRain = go.Figure()
 
-        plotRain.add_trace(go.Scatter(
+        plotRain.add_trace(go.Bar(
             name='Regenfall',
             x=dfScatterRain1["meas_year"],
-            y=dfScatterRain1["avg_rain"],
-            mode='lines',
-            line_shape='spline',
+            y=dfScatterRain1["dev_rain"],
+            base=mean_rain,
             marker={
-                'size': 5,
                 'color': colors['rbb'],
-                'line': {'width': 1, 'color': 'black'}
+                # 'line': {'width': 1, 'color': 'black'}
             }
         ))
 
@@ -395,6 +451,10 @@ def mydashboard(flaskApp, instance):
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
                 # 'rangemode': "tozero"
+                'range': [
+                    dfScatterRain1.avg_rain.min() * 0.95,
+                    dfScatterRain1.avg_rain.max() * 1.05
+                ]
             },
             xaxis={
                 'showgrid': False,
