@@ -88,8 +88,9 @@ def mydashboard(flaskApp, instance):
             'b2': '#BCDFEB',
             'rbb': '#285D8F',
             'rbr': '#DE3143',
+            'lightblue': '#B4DFFF',
             'BgPlot1': '#FFFFFF',
-            'BgPlot2': '#B4DFFF',
+            'BgPlot2': '#FFFFFF',
             'BgPlot3': '#FFFFFF',
             'BgPlot4': '#ADD8E5',
             'BgPlot5': '#FFFFFF',
@@ -322,12 +323,8 @@ def mydashboard(flaskApp, instance):
     # removing fancy pandas index because not needed
     dfScatterSnow2 = dfScatterSnow2.reset_index(level=0)
 
-    # select the Stations under 1000 m
-    dfSnowU1000 = dfScatterSnow2[dfScatterSnow2.elevation <= 1000].groupby(
-        'meas_year'
-    ).agg(
-        snow=('meas_value', 'mean')
-    )
+    # changing measurement unit to meters
+    dfScatterSnow2['meas_value'] = round(dfScatterSnow2.meas_value / 100, 2)
 
     # select all Stations
     dfSnowAll = dfScatterSnow2.groupby(
@@ -336,13 +333,23 @@ def mydashboard(flaskApp, instance):
         snow=('meas_value', 'mean')
     )
 
+    # select the Stations over 1500 m
+    dfSnowO1500 = dfScatterSnow2[
+        (dfScatterSnow2.elevation >= 1500) &
+        (dfScatterSnow2.meas_year >= 1900)
+    ].groupby(
+        'meas_year'
+    ).agg(
+        snow=('meas_value', 'mean')
+    )
+
     # simple regression line
     reg = LinearRegression(
-        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['snow'])
-    dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
+        ).fit(np.vstack(dfSnowO1500.index), dfSnowO1500['snow'])
+    dfSnowO1500['bestfit'] = reg.predict(np.vstack(dfSnowO1500.index))
 
     # reset the index of the data frame
-    dfSnowAll = dfSnowAll.reset_index()
+    dfSnowO1500 = dfSnowO1500.reset_index()
 
     # avg of highest 10 minute total of rain of
     # a month per year of all stations available
@@ -502,7 +509,7 @@ def mydashboard(flaskApp, instance):
         #     }
         # )
 
-        # creating the rain scatterplot
+        # creating the rain barplot
         plotRain = go.Figure()
 
         plotRain.add_trace(go.Bar(
@@ -564,8 +571,8 @@ def mydashboard(flaskApp, instance):
 
         plotSnow.add_trace(go.Scatter(
             name='Schneefall',
-            x=dfSnowAll['meas_year'],
-            y=dfSnowAll['snow'],
+            x=dfSnowO1500['meas_year'],
+            y=dfSnowO1500['snow'],
             mode='lines',
             line_shape='spline',
             marker={
@@ -580,8 +587,8 @@ def mydashboard(flaskApp, instance):
 
         plotSnow.add_trace(go.Scatter(
             name='Regression',
-            x=dfSnowAll['meas_year'],
-            y=dfSnowAll['bestfit'],
+            x=dfSnowO1500['meas_year'],
+            y=dfSnowO1500['bestfit'],
             mode='lines',
             marker={
                 'size': 5,
@@ -594,7 +601,7 @@ def mydashboard(flaskApp, instance):
         ))
 
         plotSnow.update_layout(
-            title='Durchschnitt aller Stationen',
+            title='Durchschnitt aller Stationen oberhalb 1500 m.ü.M.',
             margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
             height=360,
             yaxis={
@@ -612,8 +619,8 @@ def mydashboard(flaskApp, instance):
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
             legend={
-                'yanchor': 'top',
-                'y': 1.20,
+                'yanchor': 'bottom',
+                'y': 0.99,
                 'xanchor': 'right',
                 'x': 0.99
             }
@@ -705,41 +712,41 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                     html.Div([
-                        html.Div([
-                            dcc.Graph(
-                                id='scatterplot1',
-                                config={
-                                    'displayModeBar': False,
-                                    'staticPlot': False
-                                }
-                            )
-                        ], style={
-                            'backgroundColor': colors['BgPlot2'],
-                            'width': '70%',
-                            'display': 'inline-block',
-                            'position': 'relative',
-                            'horizontal-align': 'left'
-                        }
-                        ),
-                        html.Div([
-                            dcc.Dropdown(
-                                id='yaxis',
-                                options=[
-                                    {'label': i, 'value': i}
-                                    for i in features
-                                ],
-                                value='breclod0'
-                            ),
-                            html.H4('Some random text i guess')
-                        ], style={
-                            'backgroundColor': colors['BgPlot2'],
-                            'width': '28%',
-                            'display': 'inline-block',
-                            'vertical-align': 'top',
-                            'horizontal-align': 'right',
-                            'padding': 5
-                        }
-                        )
+                        # html.Div([
+                        #     dcc.Graph(
+                        #         id='scatterplot1',
+                        #         config={
+                        #             'displayModeBar': False,
+                        #             'staticPlot': False
+                        #         }
+                        #     )
+                        # ], style={
+                        #     'backgroundColor': colors['BgPlot2'],
+                        #     'width': '70%',
+                        #     'display': 'inline-block',
+                        #     'position': 'relative',
+                        #     'horizontal-align': 'left'
+                        # }
+                        # ),
+                        # html.Div([
+                        #     dcc.Dropdown(
+                        #         id='yaxis',
+                        #         options=[
+                        #             {'label': i, 'value': i}
+                        #             for i in features
+                        #         ],
+                        #         value='breclod0'
+                        #     ),
+                        #     html.H4('Some random text i guess')
+                        # ], style={
+                        #     'backgroundColor': colors['BgPlot2'],
+                        #     'width': '28%',
+                        #     'display': 'inline-block',
+                        #     'vertical-align': 'top',
+                        #     'horizontal-align': 'right',
+                        #     'padding': 5
+                        # }
+                        # )
                     ], style={
                         'backgroundColor': colors['BgPlot2'],
                         'height': 430,
@@ -891,68 +898,68 @@ def mydashboard(flaskApp, instance):
         else:
             return dcc.Location(pathname="/", id="hello")
 
-    @dashApp.callback(
-        Output('scatterplot1', 'figure'),
-        [Input('yaxis', 'value')])
-    def update_graph(yaxis_name):
-        df = pd.read_sql(
-            f"""SELECT
-            AVG(meas_value),
-            meas_date
-            FROM core.measurements_t
-            WHERE meas_name = {"'"+ yaxis_name +"'"}
-            GROUP BY meas_date""",
-            engine
-        )
+    # @dashApp.callback(
+    #     Output('scatterplot1', 'figure'),
+    #     [Input('yaxis', 'value')])
+    # def update_graph(yaxis_name):
+    #     df = pd.read_sql(
+    #         f"""SELECT
+    #         AVG(meas_value),
+    #         meas_date
+    #         FROM core.measurements_t
+    #         WHERE meas_name = {"'"+ yaxis_name +"'"}
+    #         GROUP BY meas_date""",
+    #         engine
+    #     )
 
-        df = df.reset_index()
+    #     df = df.reset_index()
 
-        # simple regression line
-        reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
-        df['bestfit'] = reg.predict(np.vstack(df.index))
+    #     # simple regression line
+    #     reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
+    #     df['bestfit'] = reg.predict(np.vstack(df.index))
 
-        fig = {
-            'data': [go.Scatter(
-                name=yaxis_name,
-                x=df["meas_date"],
-                y=df["avg"],
-                mode='lines',
-                marker={
-                    'size': 5,
-                    'color': colors['rbb'],
-                    'line': {'width': 1, 'color': 'black'}
-                }
-            ), go.Scatter(
-                name='regression line',
-                x=df["meas_date"],
-                y=df["bestfit"],
-                mode='lines',
-                marker={
-                    'size': 5,
-                    'color': colors['rbr'],
-                    'line': {'width': 1, 'color': 'black'}
-                }
-            )
-            ],
-            'layout': go.Layout(
-                title='Veränderungen der Variabeln über Zeit',
-                xaxis={'title': 'time in years'},
-                yaxis={'title': yaxis_name},
-                hovermode='closest',
-                margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-                height=420,
-                paper_bgcolor=colors['BgPlot2'],
-                plot_bgcolor='rgba(0,0,0,0)',
-                legend={
-                    'yanchor': 'top',
-                    'y': 0.99,
-                    'xanchor': 'right',
-                    'x': 0.99
-                }
-            )
-        }
+    #     fig = {
+    #         'data': [go.Scatter(
+    #             name=yaxis_name,
+    #             x=df["meas_date"],
+    #             y=df["avg"],
+    #             mode='lines',
+    #             marker={
+    #                 'size': 5,
+    #                 'color': colors['rbb'],
+    #                 'line': {'width': 1, 'color': 'black'}
+    #             }
+    #         ), go.Scatter(
+    #             name='regression line',
+    #             x=df["meas_date"],
+    #             y=df["bestfit"],
+    #             mode='lines',
+    #             marker={
+    #                 'size': 5,
+    #                 'color': colors['rbr'],
+    #                 'line': {'width': 1, 'color': 'black'}
+    #             }
+    #         )
+    #         ],
+    #         'layout': go.Layout(
+    #             title='Veränderungen der Variabeln über Zeit',
+    #             xaxis={'title': 'time in years'},
+    #             yaxis={'title': yaxis_name},
+    #             hovermode='closest',
+    #             margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
+    #             height=420,
+    #             paper_bgcolor=colors['BgPlot2'],
+    #             plot_bgcolor='rgba(0,0,0,0)',
+    #             legend={
+    #                 'yanchor': 'top',
+    #                 'y': 0.99,
+    #                 'xanchor': 'right',
+    #                 'x': 0.99
+    #             }
+    #         )
+    #     }
 
-        return fig
+    #     return fig
 
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
