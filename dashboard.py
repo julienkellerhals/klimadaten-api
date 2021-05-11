@@ -336,6 +336,14 @@ def mydashboard(flaskApp, instance):
         snow=('meas_value', 'mean')
     )
 
+    # simple regression line
+    reg = LinearRegression(
+        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['snow'])
+    dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
+
+    # reset the index of the data frame
+    dfSnowAll = dfSnowAll.reset_index()
+
     # avg of highest 10 minute total of rain of
     # a month per year of all stations available
     dfScatterRain1 = pd.read_sql(
@@ -551,6 +559,66 @@ def mydashboard(flaskApp, instance):
             }
         )
 
+        # creating the snow scatterplot with all stations
+        plotSnow = go.Figure()
+
+        plotSnow.add_trace(go.Scatter(
+            name='Schneefall',
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['snow'],
+            mode='lines',
+            line_shape='spline',
+            marker={
+                'size': 5,
+                'color': colors['rbb'],
+                'line': {
+                    'width': 1,
+                    'color': 'black'
+                }
+            }
+        ))
+
+        plotSnow.add_trace(go.Scatter(
+            name='Regression',
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['bestfit'],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
+                'line': {
+                    'width': 1,
+                    'color': 'black'
+                }
+            }
+        ))
+
+        plotSnow.update_layout(
+            title='Durchschnitt aller Stationen',
+            margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
+            height=360,
+            yaxis={
+                'title': 'Schneefall (Meter)',
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid'],
+                'rangemode': "tozero"
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle']
+            },
+            paper_bgcolor=colors['BgPlot3'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            legend={
+                'yanchor': 'top',
+                'y': 1.20,
+                'xanchor': 'right',
+                'x': 0.99
+            }
+        )
+
         features = [
             'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
             'hns000d0', 'fklnd3m0', 'fu3010m1', 'hns000mx', 'rsd700m0',
@@ -708,6 +776,7 @@ def mydashboard(flaskApp, instance):
                         html.Div([
                             dcc.Graph(
                                 id='scatterplot2',
+                                figure=plotSnow,
                                 config={
                                     'displayModeBar': False,
                                     'staticPlot': False
