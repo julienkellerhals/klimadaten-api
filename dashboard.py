@@ -668,7 +668,7 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4(
-                            'Karte mit Schneetagen pro Station',
+                            'Veränderung des Schneefalls',
                             style={'color': colors['plotTitle']}
                         )
                     ], style={
@@ -706,7 +706,7 @@ def mydashboard(flaskApp, instance):
                 # second plot first row
                 html.Div([
                     html.Div([
-                        html.H4("Totaler Schneefall und Regenfall or Temp")
+                        html.H4("Veränderung des Regenfalls")
                     ], style={
                         'padding-left': 20,
                         'padding-top': 5,
@@ -779,7 +779,7 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.H4('Schnee- & Regenfall bei Stationen')
+                            html.H4('Schneefall bei den Stationen')
                         ], style={
                             'padding-left': 20,
                             'width': '70%',
