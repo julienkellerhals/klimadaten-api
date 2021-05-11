@@ -120,8 +120,8 @@ def mydashboard(flaskApp, instance):
         WHERE m.meas_date >= '2010-01-01'
         AND m.meas_date < '2020-01-01'
         AND m.meas_name = 'hns000d0'
-        AND m.valid_to = '2262-04-11'
         AND k.parameter = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name,
         k.longitude,
@@ -160,6 +160,8 @@ def mydashboard(flaskApp, instance):
             ON (m.station = k.station_short_name)
             WHERE m.meas_name = 'hns000d0'
             AND k.parameter = 'hns000d0'
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
             GROUP BY meas_year, k.station_name
             HAVING extract(year from m.meas_date) >= 1970
         ) AS filtered
@@ -225,6 +227,8 @@ def mydashboard(flaskApp, instance):
         ON (m.station = k.station_short_name)
         WHERE m.meas_name = 'hns000d0'
         AND k.parameter = 'hns000d0'
+        AND m.valid_to = '2262-04-11'
+        AND k.valid_to = '2262-04-11'
         GROUP BY meas_year, k.station_name
         ORDER BY meas_year ASC
         """,
@@ -380,7 +384,7 @@ def mydashboard(flaskApp, instance):
         # ))
 
         # plotRain.add_trace(go.Scatter(
-        #     name='Regressionslinie',
+        #     name='Regression',
         #     x=dfScatterRain1["meas_year"],
         #     y=dfScatterRain1["rain_bestfit"],
         #     mode='lines',
@@ -433,7 +437,7 @@ def mydashboard(flaskApp, instance):
         ))
 
         plotRain.add_trace(go.Scatter(
-            name='Regressionslinie',
+            name='Regression',
             x=dfScatterRain1["meas_year"],
             y=dfScatterRain1["rain_bestfit"],
             mode='lines',
@@ -844,7 +848,7 @@ def mydashboard(flaskApp, instance):
                     }
                 ),
                 go.Scatter(
-                    name='Regressionsline',
+                    name='Regression',
                     x=dfTemp['meas_year'],
                     y=dfTemp['snow_bestfit'],
                     mode='lines',
