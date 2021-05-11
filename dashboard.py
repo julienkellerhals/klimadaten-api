@@ -673,7 +673,8 @@ def mydashboard(flaskApp, instance):
                         )
                     ], style={
                         'padding-left': 20,
-                        'padding-top': 5
+                        'padding-top': 5,
+                        'height': 30,
                     }
                     ),
                     html.Div([
@@ -708,7 +709,8 @@ def mydashboard(flaskApp, instance):
                         html.H4("Totaler Schneefall und Regenfall or Temp")
                     ], style={
                         'padding-left': 20,
-                        'padding-top': 5
+                        'padding-top': 5,
+                        'height': 30,
                     }
                     ),
                     html.Div([
@@ -776,8 +778,36 @@ def mydashboard(flaskApp, instance):
                 # scatterplot bottom left
                 html.Div([
                     html.Div([
-                        html.H4('Schnee- & Regenfall bei Stationen')
-                    ], style={'padding-left': 20}
+                        html.Div([
+                            html.H4('Schnee- & Regenfall bei Stationen')
+                        ], style={
+                            'padding-left': 20,
+                            'width': '70%',
+                            'display': 'inline-block',
+                            'vertical-align': 'top',
+                            'horizontal-align': 'left',
+                        }
+                        ),
+                        html.Div([
+                            dbc.Button(
+                                id='stationsOver1500',
+                                n_clicks=0,
+                                children='> 1500 m.ü.M.',
+                                # style={'fontSize': 12},
+                                color='secondary',
+                                size="sm",
+                            ),
+                        ], style={
+                            'width': '30%',
+                            'display': 'inline-block',
+                            'vertical-align': 'top',
+                            'horizontal-align': 'right',
+                            # 'padding-left': 40,
+                        }
+                        ),
+                    ], style={
+                            'height': 30,
+                        }
                     ),
                     html.Div([
                         html.Div([
@@ -816,7 +846,10 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4('Bodentemperatur')
-                    ], style={'padding-left': 20}
+                    ], style={
+                        'height': 30,
+                        'padding-left': 20
+                    }
                     ),
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
@@ -839,7 +872,10 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4('Extreme Regenfälle')
-                    ], style={'padding-left': 20}
+                    ], style={
+                        'height': 30,
+                        'padding-left': 20
+                    }
                     ),
                     html.Div([
                         html.Div([
@@ -874,18 +910,15 @@ def mydashboard(flaskApp, instance):
                     'horizontal-align': 'right'
                 }
                 ),
-                html.Div([], style={
-                    'width': '5%',
-                    'display': 'inline-block'
-                }),
             ], style={
                 'backgroundColor': colors['l1'],
                 'padding-left': 30,
-                'padding-right': 30
+                'padding-right': 30,
+                'padding-bottom': 12,
             }
             ),
         ], style={
-            'backgroundColor': colors['l1']
+            'backgroundColor': colors['l1'],
         }
         )
 
@@ -1035,6 +1068,72 @@ def mydashboard(flaskApp, instance):
         }
 
         return fig
+
+    # @dashApp.callback(
+    #     Output('scatterplot2', 'figure'),
+    #     [Input('stationsOver1500', 'n_clicks')])
+    # def callback_button(n_clicks):
+    #     # creating the snow scatterplot with all stations
+    #     plotSnow = go.Figure()
+
+    #     plotSnow.add_trace(go.Scatter(
+    #         name='Schneefall',
+    #         x=dfSnowO1500['meas_year'],
+    #         y=dfSnowO1500['snow'],
+    #         mode='lines',
+    #         line_shape='spline',
+    #         marker={
+    #             'size': 5,
+    #             'color': colors['rbb'],
+    #             'line': {
+    #                 'width': 1,
+    #                 'color': 'black'
+    #             }
+    #         }
+    #     ))
+
+    #     plotSnow.add_trace(go.Scatter(
+    #         name='Regression',
+    #         x=dfSnowO1500['meas_year'],
+    #         y=dfSnowO1500['bestfit'],
+    #         mode='lines',
+    #         marker={
+    #             'size': 5,
+    #             'color': colors['rbr'],
+    #             'line': {
+    #                 'width': 1,
+    #                 'color': 'black'
+    #             }
+    #         }
+    #     ))
+
+    #     plotSnow.update_layout(
+    #         title='Durchschnitt aller Stationen oberhalb 1500 m.ü.M.',
+    #         margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
+    #         height=360,
+    #         yaxis={
+    #             'title': 'Schneefall (Meter)',
+    #             'color': colors['plotAxisTitle'],
+    #             'showgrid': True,
+    #             'gridwidth': 1,
+    #             'gridcolor': colors['plotGrid'],
+    #             'rangemode': "tozero"
+    #         },
+    #         xaxis={
+    #             'showgrid': False,
+    #             'color': colors['plotAxisTitle']
+    #         },
+    #         paper_bgcolor=colors['BgPlot3'],
+    #         plot_bgcolor='rgba(0,0,0,0)',
+    #         legend={
+    #             'yanchor': 'bottom',
+    #             'y': 0.99,
+    #             'xanchor': 'right',
+    #             'x': 0.99
+    #         }
+    #     )
+
+    #     return plotSnow
 
     createDashboard()
     return dashApp
