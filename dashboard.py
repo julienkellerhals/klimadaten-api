@@ -217,7 +217,7 @@ def mydashboard(flaskApp, instance):
     df_map = df_map.drop('lat', axis=1)
 
     # data wrangling scatterplot
-    dfScatter = pd.read_sql(
+    dfScatterSnow1 = pd.read_sql(
         """
         SELECT extract(year from m.meas_date) as meas_year,
         sum(m.meas_value) snow,
@@ -236,10 +236,10 @@ def mydashboard(flaskApp, instance):
     )
 
     # change measurement unit to meters
-    dfScatter['snow'] = round(dfScatter.snow / 100, 2)
+    dfScatterSnow1['snow'] = round(dfScatterSnow1.snow / 100, 2)
 
     # df for showing scatterplot for all stations under 1000 m.ü.M.
-    dfScatter2 = pd.read_sql(
+    dfScatterSnow2 = pd.read_sql(
         """
         SELECT
         avg(meas_value),
@@ -823,7 +823,7 @@ def mydashboard(flaskApp, instance):
         # hns000d0
         # rre150m0
 
-        dfTemp = dfScatter[dfScatter['station_name'] == station]
+        dfTemp = dfScatterSnow1[dfScatterSnow1['station_name'] == station]
         # remove first entry because it is often wrong
         dfTemp = dfTemp.iloc[1:]
         dfTemp = dfTemp.reset_index()
