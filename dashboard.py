@@ -152,9 +152,10 @@ def mydashboard(flaskApp, instance):
 
     df_map_3 = pd.read_sql(
         """
-        SELECT station_name, COUNT(*) FROM(
+        SELECT station_name, station_short_name, COUNT(*) FROM(
             SELECT extract(year from m.meas_date) as meas_year,
-            k.station_name
+            k.station_name,
+            k.station_short_name
             FROM core.measurements_t m
             JOIN core.station_t k
             ON (m.station = k.station_short_name)
@@ -162,10 +163,10 @@ def mydashboard(flaskApp, instance):
             AND k.parameter = 'hns000d0'
             AND m.valid_to = '2262-04-11'
             AND k.valid_to = '2262-04-11'
-            GROUP BY meas_year, k.station_name
+            GROUP BY meas_year, k.station_name, k.station_short_name
             HAVING extract(year from m.meas_date) >= 1970
         ) AS filtered
-        GROUP BY station_name
+        GROUP BY station_name, station_short_name
         HAVING COUNT(*) >= 35
         """,
         engine
@@ -242,12 +243,9 @@ def mydashboard(flaskApp, instance):
     dfScatterSnow2 = pd.read_sql(
         """
         SELECT
-        avg(meas_value),
-        meas_year
-        FROM
-        (SELECT
         extract(year from m.meas_date) as meas_year,
         m.station,
+        k.elevation,
         sum(m.meas_value) meas_value
         FROM core.measurements_t m
         JOIN core.station_t k
@@ -256,13 +254,36 @@ def mydashboard(flaskApp, instance):
         AND k.parameter = 'hns000d0'
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
-        AND k.elevation < 1000
-        GROUP BY meas_year, m.station) AS stations
-        GROUP BY meas_year
-        ORDER BY meas_year ASC
+        GROUP BY meas_year, m.station, k.elevation
         """,
         engine
     )
+
+    dfScatterSnow2 = pd.merge(
+        how='inner',
+        left=df_map_3,
+        right=dfScatterSnow2,
+        left_on='station_short_name',
+        right_on='station'
+    )
+
+    dfScatterSnow2 = dfScatterSnow2[[
+        'station_short_name',
+        'meas_year',
+        'meas_value',
+        'elevation'
+    ]]
+
+    dfScatterSnow2.sort_values([
+        'station_short_name',
+        'meas_year'
+    ], inplace=True)
+
+    dfScatterSnow2 = dfScatterSnow2.groupby(
+        'station_short_name'
+    ).apply(lambda group: group.iloc[1:, 1:])
+
+    dfScatterSnow2 = dfScatterSnow2.reset_index(level=0)
 
     # avg of highest 10 minute total of rain of
     # a month per year of all stations available
