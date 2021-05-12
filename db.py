@@ -17,6 +17,7 @@ class Database:
     """ Database functions
     """
 
+    configFileName = "idawebConfig.xml"
     engine = None
     conn = None
     databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
@@ -885,8 +886,7 @@ class Database:
             "TRUNCATE TABLE stage.parameter_t;"
         )
 
-        configFileName = "idawebConfig.xml"
-        configList = self.readConfig(configFileName)
+        configList = self.readConfig(self.configFileName)
         for config in configList:
             stationPartDf = pd.DataFrame()
             parameterPartDf = pd.DataFrame()
@@ -975,8 +975,7 @@ class Database:
             "TRUNCATE TABLE stage.idaweb_t;"
         )
 
-        configFileName = "idawebConfig.xml"
-        configList = self.readConfig(configFileName)
+        configList = self.readConfig(self.configFileName)
         for config in configList:
             idaWebPartDf = pd.DataFrame()
             dataDir = Path.cwd() / "data"

@@ -6,6 +6,7 @@ import time
 import zipfile
 import threading
 import numpy as np
+from numpy.core.numeric import NaN
 import pandas as pd
 from lxml import etree
 from datetime import date
@@ -415,7 +416,10 @@ def run_scrape_idaweb(driver, engine, lastRefresh):
             since = lastRefresh["valid_from"].loc[
                 lastRefresh["meas_name"] == config.text
             ]
-            since = since[0].strftime('%d.%m.%Y')
+            if since[0] is NaN:
+                since = "01.01.1800"
+            else:
+                since = since[0].strftime('%d.%m.%Y')
         else:
             since = lastRefresh
         until = date.today().strftime('%d.%m.%Y')
