@@ -635,31 +635,54 @@ def mydashboard(flaskApp, instance):
         dashApp.layout = html.Div([
             # header
             html.Div([
-                html.Div([], style={'width': '2%', 'display': 'inline-block'}),
+                html.Div([
+                    html.H2(
+                        'Erdrutsche und ihre Ursachen',
+                        id='titleDashboard',
+                        style={
+                            'color': colors['l1'],
+                            'display': 'inline-block',
+                            'padding-left': 45,
+                        }
+                    ),
+                ], style={
+                    'text-align': 'left',
+                    'width': '50%',
+                    'display': 'inline-block',
+                }
+                ),
                 html.Div([
                     html.H3(
                         'Dashboard',
                         id='linkDashboard',
-                        style={'color': colors['l1']}
-                    )
-                ], style={'display': 'inline-block'}
-                ),
-                html.Div([], style={'width': '2%', 'display': 'inline-block'}),
-                html.Div([
+                        style={
+                            'color': colors['l1'],
+                            'display': 'inline-block',
+                            'padding-right': 30,
+                        }
+                    ),
                     html.H3(
                         'Datenstory',
                         id='linkDatastory',
                         n_clicks=0,
-                        style={'color': colors['l6']}
-                    )
-                ], style={'display': 'inline-block'}
+                        style={
+                            'color': colors['l6'],
+                            'display': 'inline-block',
+                            'padding-right': 45,
+                        }
+                    ),
+                    html.Div(id='linkDatastoryOutput')
+                ], style={
+                    'text-align': 'right',
+                    'width': '50%',
+                    'display': 'inline-block',
+                }
                 ),
-                html.Div(id='linkDatastoryOutput')
             ], style={
                 'backgroundColor': colors['d3'],
                 'box-shadow': '4px 4px 4px lightgrey',
                 'position': 'relative',
-                'padding': '5px'
+                'padding': '5px',
             }
             ),
             # first row of plots
