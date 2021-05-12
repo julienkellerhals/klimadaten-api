@@ -785,7 +785,7 @@ def mydashboard(flaskApp, instance):
                             'width': '70%',
                             'display': 'inline-block',
                             'vertical-align': 'top',
-                            'horizontal-align': 'left',
+                            # 'horizontal-align': 'left',
                         }
                         ),
                         html.Div([
@@ -801,7 +801,11 @@ def mydashboard(flaskApp, instance):
                             'width': '30%',
                             'display': 'inline-block',
                             'vertical-align': 'top',
-                            'horizontal-align': 'right',
+                            'text-align': 'right',
+                            'padding-right': 10,
+                            'padding-bottom': 5,
+                            # 'horizontal-align': 'right',
+                            # 'justify': 'right'
                             # 'padding-left': 40,
                         }
                         ),
