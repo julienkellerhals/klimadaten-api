@@ -404,12 +404,9 @@ def mydashboard(flaskApp, instance):
         # creating the map
         plotMap = go.Figure()
 
-        plotMap.add_trace(go.Scattergeo(
-            # locationmode='country names', # if locationmode and locations
-            # are active, one can see adelboden
-            # locations=['Switzerland'], # puts point in the middle of country
-            lon=df_map["longitude"],
-            lat=df_map["latitude"],
+        plotMap.add_trace(go.Scattermapbox(
+            lat=df_map['latitude'],
+            lon=df_map['longitude'],
             text=df_map['text'],
             mode='markers',
             marker={
@@ -423,7 +420,7 @@ def mydashboard(flaskApp, instance):
                     [0.4, colors['l3']],
                     [1, colors['rbb']]
                 ],
-                'line': {'width': 1, 'color': colors['d3']},
+                # 'line': {'width': 1, 'color': colors['d3']},
                 'sizemode': 'area'
             }
         ))
@@ -434,23 +431,17 @@ def mydashboard(flaskApp, instance):
             margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
             height=420,
             paper_bgcolor=colors['l0'],
-            geo=dict(
-                # scope changes layout so one can see only europe and borders
-                scope='europe',
-                resolution=50,
-                visible=False,
-                showcountries=True, countrycolor="Black",
-                showcoastlines=True, coastlinecolor="Black",
-                showland=True, landcolor=colors['l0'],
-                showocean=False,
-                # oceancolor="LightBlue",
-                showlakes=False,
-                # lakecolor="Blue",
-                showrivers=False,
-                # rivercolor="Blue"
-                bgcolor='rgba(0,0,0,0)',
-                lonaxis_range=[5.7, 10.6],
-                lataxis_range=[45.7, 47.9]
+            mapbox_style="open-street-map",
+            mapbox=dict(
+                accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
+                # bearing=0,
+                center=dict(
+                    lat=46.9,
+                    lon=8.2
+                ),
+                zoom=6,
+                pitch=0,
+                style='light'
             )
         )
 
