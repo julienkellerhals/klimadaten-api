@@ -525,6 +525,8 @@ class Database:
         ):  # Check if schema etl exists else create
             self.engine.execute(sqlalchemy.schema.CreateSchema('stage'))
 
+    # TODO Fix this function, cannot be run twice due to create mv functions
+    # Check if they exist before, then drop them
     def createTable(self):
         """ Creates tables
         """
