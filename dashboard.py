@@ -437,12 +437,12 @@ def mydashboard(flaskApp, instance):
             marker={
                 'size': df_map['avg_now'] * 45 + 8,
                 'color': colors['d3'],
-                #'line': {'width': 1, 'color': colors['d3']},
+                # 'line': {'width': 1, 'color': colors['d3']},
                 'sizemode': 'area'
             },
             hoverinfo='none'
         ))
-       
+
         plotMap.add_trace(go.Scattermapbox(
             lat=df_map['latitude'],
             lon=df_map['longitude'],
@@ -473,13 +473,14 @@ def mydashboard(flaskApp, instance):
             paper_bgcolor=colors['l0'],
             mapbox_style="open-street-map",
             mapbox=dict(
-                accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
+                accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb' +
+                '24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
                 # bearing=0,
                 center=dict(
                     lat=46.9,
                     lon=8.2
                 ),
-                zoom=6,
+                zoom=6.5,
                 style='mapbox://styles/joelgrosjean/ckon48gdw1yob17ozstokzg9c'
             )
         )
