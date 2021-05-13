@@ -183,7 +183,7 @@ function updateRowStructure(content, previousContent, colName, ul) {
                 }
                 if (contentDiff.action[idx].actionUrl != undefined) {
                     row.querySelector("div.collapsible-body > div:nth-child(" + nthChild + ") > a").addEventListener(
-                        "click",
+                        "mouseup",
                         () => {
                             // event.stopPropagation()
                             postReq(contentDiff.action[idx].actionUrl)

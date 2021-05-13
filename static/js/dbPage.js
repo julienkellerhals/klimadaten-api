@@ -57,7 +57,7 @@ function updateBreadcrumbNav(serviceList) {
                 if (contentDiff.runningService.dbConnection.actionUrl != undefined) {
                     document.getElementById("dbAction").classList.remove("disabled")
                     document.getElementById("dbAction").addEventListener(
-                        "click",
+                        "mouseup",
                         () => {
                             document.getElementById("dbAction").classList.add("disabled")
                             var actionReq = postReq(contentDiff.runningService.dbConnection.actionUrl)
@@ -87,7 +87,7 @@ function updateBreadcrumbNav(serviceList) {
                 if (contentDiff.runningService.dbCreate.actionUrl != undefined) {
                     document.getElementById("dbAction").classList.remove("disabled")
                     document.getElementById("dbAction").addEventListener(
-                        "click",
+                        "mouseup",
                         () => {
                             document.getElementById("dbAction").classList.add("disabled")
                             var actionReq = postReq(contentDiff.runningService.dbCreate.actionUrl)
@@ -117,7 +117,7 @@ function updateBreadcrumbNav(serviceList) {
                 if (contentDiff.runningService.tbCreate.actionUrl != undefined) {
                     document.getElementById("dbAction").classList.remove("disabled")
                     document.getElementById("dbAction").addEventListener(
-                        "click",
+                        "mouseup",
                         () => {
                             document.getElementById("dbAction").classList.add("disabled")
                             var actionReq = postReq(contentDiff.runningService.tbCreate.actionUrl)
@@ -285,25 +285,25 @@ function streamTablesStatus() {
 // streamTablesStatus()
 
 document.getElementById("execScrapping").addEventListener(
-    "click",
+    "mouseup",
     () => {
         stageETL.req("/admin/scrape/")
     }
 )
 document.getElementById("execStageETL").addEventListener(
-    "click",
+    "mouseup",
     () => {
         stageETL.req("/admin/db/etl/stage")
     }
 )
 document.getElementById("execCoreETL").addEventListener(
-    "click",
+    "mouseup",
     () => {
         coreETL.req("/admin/db/etl/core")
     }
 )
 document.getElementById("execDatamartETL").addEventListener(
-    "click",
+    "mouseup",
     () => {
         datamartETL.req("/admin/db/etl/datamart")
     }
