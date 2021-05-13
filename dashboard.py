@@ -440,8 +440,7 @@ def mydashboard(flaskApp, instance):
                     lon=8.2
                 ),
                 zoom=6,
-                pitch=0,
-                style='light'
+                style='mapbox://styles/joelgrosjean/ckon48gdw1yob17ozstokzg9c'
             )
         )
 
