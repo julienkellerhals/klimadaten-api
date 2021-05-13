@@ -60,6 +60,31 @@ soil temperature
 "tso100mx" Soil temperature at 100 cm depth; absolute monthly maximum
 """
 
+"""
+$white #FFFFFF
+$gray1 #EBEFF2
+$gray2 #E2E8ED
+$gray3 #D8E0E5
+$gray4 #C5D1D8
+$gray5 #B6C3CC
+$gray6 #A3B5BF
+$gray7 #96A8B2
+$gray8 #889AA5
+$gray9 #748B99
+$gray10 #677E8C
+$gray11 #59717F
+$gray12 #4C6472
+Sgray 13 #425866
+Sgray14 #364C59
+$gray 15 #2C404C
+Sgray16 #23343F
+Sgray17 #1B2A33
+Sgray 18 #121F26
+Sgray 19 #0C1419
+Sgray20 #05090C
+$black #000000
+"""
+
 
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
@@ -224,7 +249,7 @@ def mydashboard(flaskApp, instance):
     )
 
     # add text column for map pop-up
-    df_map['text'] = df_map['station_name'] + \
+    df_map['text'] = '<b>' + df_map['station_name'] + '</b>' +\
         ' (' + (df_map['elevation']).astype(str) + ' m.ü.M.)' + \
         '<br>Ø Schneefall pro Tag 1970-1980: ' + \
         (round(df_map['avg_then'], 2)).astype(str) + 'cm' + \
@@ -235,7 +260,7 @@ def mydashboard(flaskApp, instance):
             (
                 (df_map['avg_now'] - df_map['avg_then']) / df_map['avg_then']
             ) * 100, 0)) \
-        .astype(str) + '%'
+        .astype(str) + '%' + '<extra></extra>'
     # data wrangling for longitude and latitude
     df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
     df_map['lon'] = pd.to_numeric(df_map['lon'])
@@ -410,6 +435,20 @@ def mydashboard(flaskApp, instance):
             text=df_map['text'],
             mode='markers',
             marker={
+                'size': df_map['avg_now'] * 45 + 8,
+                'color': colors['d3'],
+                #'line': {'width': 1, 'color': colors['d3']},
+                'sizemode': 'area'
+            },
+            hoverinfo='none'
+        ))
+       
+        plotMap.add_trace(go.Scattermapbox(
+            lat=df_map['latitude'],
+            lon=df_map['longitude'],
+            hovertemplate=df_map['text'],
+            mode='markers',
+            marker={
                 'size': df_map['avg_now'] * 35,
                 'color': (
                     df_map['avg_now'] - df_map['avg_then']
@@ -420,14 +459,15 @@ def mydashboard(flaskApp, instance):
                     [0.4, colors['l3']],
                     [1, colors['rbb']]
                 ],
-                # 'line': {'width': 1, 'color': colors['d3']},
-                'sizemode': 'area'
+                'sizemode': 'area',
+                'opacity': 1
             }
         ))
 
         plotMap.update_layout(
             title_text='Schneefall',
             hovermode='closest',
+            showlegend=False,
             margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
             height=420,
             paper_bgcolor=colors['l0'],
