@@ -545,6 +545,117 @@ class Database:
                 Column("load_date", Date, index=True),
                 schema='stage')
 
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='idaweb_t',
+            schema='stage'
+        ):
+            self.idaweb_t = Table(
+                'idaweb_t',
+                self.meta,
+                Column('meas_date', Date),
+                Column('station', String),
+                Column('granularity', String),
+                Column('meas_name', String),
+                Column('meas_value', Float),
+                Column('source', String),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='station_t',
+            schema='stage'
+        ):
+            self.station_t = Table(
+                'station_t',
+                self.meta,
+                Column('station_short_name', String),
+                Column('station_name', String),
+                Column('parameter', String),
+                Column('data_source', String),
+                Column('longitude', String),
+                Column('latitude', String),
+                Column('coordinates_x', Integer),
+                Column('coordinates_y', Integer),
+                Column('elevation', Integer),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='parameter_t',
+            schema='stage'
+        ):
+            self.parameter_t = Table(
+                'parameter_t',
+                self.meta,
+                Column('parameter', String),
+                Column('unit', String),
+                Column('description', String),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date),
+                schema='stage')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='measurements_t',
+            schema='core'
+        ):
+            self.measurements_t = Table(
+                'measurements_t',
+                self.meta,
+                Column('meas_date', Date, primary_key=True),
+                Column('station', String, primary_key=True),
+                Column('granularity', String, primary_key=True),
+                Column('meas_name', String, primary_key=True),
+                Column('meas_value', Float),
+                Column('source', String, primary_key=True),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='station_t',
+            schema='core'
+        ):
+            self.station_t = Table(
+                'station_t',
+                self.meta,
+                Column('station_short_name', String, primary_key=True),
+                Column('station_name', String, primary_key=True),
+                Column('parameter', String, primary_key=True),
+                Column('data_source', String, primary_key=True),
+                Column('longitude', String, primary_key=True),
+                Column('latitude', String, primary_key=True),
+                Column('coordinates_x', Integer, primary_key=True),
+                Column('coordinates_y', Integer, primary_key=True),
+                Column('elevation', Integer, primary_key=True),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        if not self.engine.dialect.has_table(
+            connection=self.engine,
+            table_name='parameter_t',
+            schema='core'
+        ):
+            self.parameter_t = Table(
+                'parameter_t',
+                self.meta,
+                Column('parameter', String, primary_key=True),
+                Column('unit', String, primary_key=True),
+                Column('description', String, primary_key=True),
+                Column("valid_from", Date, index=True),
+                Column("valid_to", Date, primary_key=True),
+                schema='core')
+
+        self.meta.create_all(self.engine)
+
+        # stage.meteoschweiz_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW stage.meteoschweiz_count_mv " +
             "AS SELECT count(*) FROM stage.meteoschweiz_t"
@@ -576,24 +687,7 @@ class Database:
             "EXECUTE PROCEDURE stage.refresh_meteoschweiz_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='idaweb_t',
-            schema='stage'
-        ):
-            self.idaweb_t = Table(
-                'idaweb_t',
-                self.meta,
-                Column('meas_date', Date),
-                Column('station', String),
-                Column('granularity', String),
-                Column('meas_name', String),
-                Column('meas_value', Float),
-                Column('source', String),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date),
-                schema='stage')
-
+        # stage.idaweb_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW stage.idaweb_count_mv " +
             "AS SELECT count(*) FROM stage.idaweb_t"
@@ -625,27 +719,7 @@ class Database:
             "EXECUTE PROCEDURE stage.refresh_idaweb_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='station_t',
-            schema='stage'
-        ):
-            self.station_t = Table(
-                'station_t',
-                self.meta,
-                Column('station_short_name', String),
-                Column('station_name', String),
-                Column('parameter', String),
-                Column('data_source', String),
-                Column('longitude', String),
-                Column('latitude', String),
-                Column('coordinates_x', Integer),
-                Column('coordinates_y', Integer),
-                Column('elevation', Integer),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date),
-                schema='stage')
-
+        # stage.station_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW stage.station_count_mv " +
             "AS SELECT count(*) FROM stage.station_t"
@@ -677,21 +751,7 @@ class Database:
             "EXECUTE PROCEDURE stage.refresh_station_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='parameter_t',
-            schema='stage'
-        ):
-            self.parameter_t = Table(
-                'parameter_t',
-                self.meta,
-                Column('parameter', String),
-                Column('unit', String),
-                Column('description', String),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date),
-                schema='stage')
-
+        # stage.parameter_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW stage.parameter_count_mv " +
             "AS SELECT count(*) FROM stage.parameter_t"
@@ -723,24 +783,7 @@ class Database:
             "EXECUTE PROCEDURE stage.refresh_parameter_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='measurements_t',
-            schema='core'
-        ):
-            self.measurements_t = Table(
-                'measurements_t',
-                self.meta,
-                Column('meas_date', Date, primary_key=True),
-                Column('station', String, primary_key=True),
-                Column('granularity', String, primary_key=True),
-                Column('meas_name', String, primary_key=True),
-                Column('meas_value', Float),
-                Column('source', String, primary_key=True),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date, primary_key=True),
-                schema='core')
-
+        # core.measurements_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW core.measurements_count_mv " +
             "AS SELECT count(*) FROM core.measurements_t"
@@ -772,27 +815,7 @@ class Database:
             "EXECUTE PROCEDURE core.refresh_meas_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='station_t',
-            schema='core'
-        ):
-            self.station_t = Table(
-                'station_t',
-                self.meta,
-                Column('station_short_name', String, primary_key=True),
-                Column('station_name', String, primary_key=True),
-                Column('parameter', String, primary_key=True),
-                Column('data_source', String, primary_key=True),
-                Column('longitude', String, primary_key=True),
-                Column('latitude', String, primary_key=True),
-                Column('coordinates_x', Integer, primary_key=True),
-                Column('coordinates_y', Integer, primary_key=True),
-                Column('elevation', Integer, primary_key=True),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date, primary_key=True),
-                schema='core')
-
+        # core.station_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW core.station_count_mv " +
             "AS SELECT count(*) FROM core.station_t"
@@ -824,21 +847,7 @@ class Database:
             "EXECUTE PROCEDURE core.refresh_station_t_fn();"
         )
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
-            table_name='parameter_t',
-            schema='core'
-        ):
-            self.parameter_t = Table(
-                'parameter_t',
-                self.meta,
-                Column('parameter', String, primary_key=True),
-                Column('unit', String, primary_key=True),
-                Column('description', String, primary_key=True),
-                Column("valid_from", Date, index=True),
-                Column("valid_to", Date, primary_key=True),
-                schema='core')
-
+        # core.parameter_t
         self.conn.execute(
             "CREATE MATERIALIZED VIEW core.parameter_count_mv " +
             "AS SELECT count(*) FROM core.parameter_t"
@@ -869,8 +878,6 @@ class Database:
             "FOR EACH STATEMENT " +
             "EXECUTE PROCEDURE core.refresh_parameter_t_fn();"
         )
-
-        self.meta.create_all(self.engine)
 
     def runStageETL(self):
         self.stationParamStageETL()
