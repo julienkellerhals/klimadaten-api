@@ -121,7 +121,8 @@ def mydashboard(flaskApp, instance):
             'BgPlot5': '#FFFFFF',
             'plotTitle': '#121F26',
             'plotGrid': '#B6C3CC',
-            'plotAxisTitle': '#748B99'
+            'plotAxisTitle': '#748B99',
+            'BgDashboard': '#D8E0E5',
         }
 
     dashApp = Dash(
@@ -825,7 +826,6 @@ def mydashboard(flaskApp, instance):
                 }
                 )
             ], style={
-                'backgroundColor': colors['l1'],
                 'padding-left': 30,
                 'padding-right': 30
             }
@@ -972,14 +972,13 @@ def mydashboard(flaskApp, instance):
                 }
                 ),
             ], style={
-                'backgroundColor': colors['l1'],
                 'padding-left': 30,
                 'padding-right': 30,
                 'padding-bottom': 12,
             }
             ),
         ], style={
-            'backgroundColor': colors['l1'],
+            'backgroundColor': colors['BgDashboard'],
         }
         )
 
