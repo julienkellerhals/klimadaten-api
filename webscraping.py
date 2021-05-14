@@ -303,7 +303,79 @@ def scrape_idaweb(abstractDriver, instance, announcer):
 def _scrape_idaweb(driver, engine, lastRefresh="01.01.1800"):
     if not os.path.isdir("data"):
         os.mkdir("data")
-    savedDocuments = run_scrape_idaweb(driver, engine, lastRefresh)
+    # savedDocuments = run_scrape_idaweb(driver, engine, lastRefresh)
+    savedDocuments = [
+        'ld1_2021-05-14_09:11:13',
+        'ld2_2021-05-14_09:11:13',
+        'ld1_2021-05-14_09:13:29',
+        'ld2_2021-05-14_09:13:29',
+        'td1_2021-05-14_09:15:29',
+        'td2_2021-05-14_09:15:29',
+        'td1_2021-05-14_09:17:46',
+        'td2_2021-05-14_09:17:46',
+        'td1_2021-05-14_09:19:52',
+        'td2_2021-05-14_09:19:52',
+        'sd1_2021-05-14_09:22:00', 
+        'wm1_2021-05-14_09:23:13',
+        'wm1_2021-05-14_09:24:20',
+        'sm1_2021-05-14_09:25:26',
+        'pm1_2021-05-14_09:26:29',
+        'pm2_2021-05-14_09:26:29',
+        'pm3_2021-05-14_09:26:29',
+        'pm1_2021-05-14_09:29:49',
+        'pm2_2021-05-14_09:29:49',
+        'pm3_2021-05-14_09:29:49',
+        'pm1_2021-05-14_09:33:45',
+        'pm2_2021-05-14_09:33:45',
+        'pm1_2021-05-14_09:35:59',
+        'pm2_2021-05-14_09:35:59',
+        'pm1_2021-05-14_09:38:25',
+        'pm2_2021-05-14_09:38:25',
+        'pm3_2021-05-14_09:38:25',
+        'pm1_2021-05-14_09:41:37',
+        'sm1_2021-05-14_09:42:33',
+        'sm1_2021-05-14_09:43:35',
+        'sy1_2021-05-14_09:44:36',
+        'sy2_2021-05-14_09:44:36',
+        'sy1_2021-05-14_09:46:58',
+        'sy2_2021-05-14_09:46:58',
+        'ty1_2021-05-14_09:49:32',
+        'ty2_2021-05-14_09:49:32',
+        'ty3_2021-05-14_09:49:32',
+        'ty4_2021-05-14_09:49:32',
+        'ty1_2021-05-14_09:54:47',
+        'ty2_2021-05-14_09:54:47',
+        'ty3_2021-05-14_09:54:47',
+        'ty4_2021-05-14_09:54:47',
+        'py1_2021-05-14_09:59:22',
+        'py2_2021-05-14_09:59:22',
+        'py3_2021-05-14_09:59:22',
+        'py4_2021-05-14_09:59:22',
+        'py5_2021-05-14_09:59:22',
+        'py6_2021-05-14_09:59:22',
+        'py1_2021-05-14_10:11:50',
+        'py2_2021-05-14_10:11:50',
+        'py3_2021-05-14_10:11:50',
+        'py4_2021-05-14_10:11:50',
+        'py5_2021-05-14_10:11:50',
+        'py6_2021-05-14_10:11:50',
+        'py1_2021-05-14_10:21:02',
+        'py2_2021-05-14_10:21:02',
+        'py3_2021-05-14_10:21:02',
+        'py4_2021-05-14_10:21:02',
+        'py5_2021-05-14_10:21:02',
+        'py6_2021-05-14_10:21:02',
+        'py1_2021-05-14_10:29:44',
+        'py2_2021-05-14_10:29:44',
+        'py3_2021-05-14_10:29:44',
+        'py4_2021-05-14_10:29:44',
+        'py5_2021-05-14_10:29:44',
+        'py6_2021-05-14_10:29:44',
+        'py1_2021-05-14_10:38:19',
+        'py2_2021-05-14_10:38:19',
+        'py3_2021-05-14_10:38:19'
+    ]
+
     savedDocumentsDf = pd.DataFrame(
         savedDocuments,
         columns=["reference"]
@@ -339,13 +411,14 @@ def _scrape_idaweb(driver, engine, lastRefresh="01.01.1800"):
                 loginReq.cookies,
                 cred
             )[0]
-    for downloadUrl in orderDf["downloadLink"]:
-        downloadReq = download.getRequest(
-            downloadUrl,
-            loginReq.cookies
-        )[0]
-        dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
-        dataZip.extractall("data")
+    # for downloadUrl in orderDf["downloadLink"]:
+    #     downloadReq = download.getRequest(
+    #         downloadUrl,
+    #         loginReq.cookies
+    #     )[0]
+    #     print(downloadUrl)
+    #     dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
+    #     dataZip.extractall("data")
 
     return orderDf
 
@@ -415,7 +488,7 @@ def run_scrape_idaweb(driver, engine, lastRefresh):
         if type(lastRefresh) is pd.DataFrame:
             since = lastRefresh["valid_from"].loc[
                 lastRefresh["meas_name"] == config.text
-            ]
+            ].reset_index(drop=True)
             if since[0] is NaN:
                 since = "01.01.1800"
             else:

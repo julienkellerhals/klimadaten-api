@@ -9,6 +9,7 @@ from pathlib import Path
 from sqlalchemy import inspect
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
+from sqlalchemy.pool import NullPool
 from sqlalchemy_utils import database_exists, create_database
 import messageAnnouncer
 
@@ -74,7 +75,9 @@ class Database:
     def createEngine(self):
         self.engine = create_engine(
             self.databaseUrl,
-            echo=True
+            echo=True,
+            # maybe not a good solution, test on other computer
+            poolclass=NullPool
         )
 
     def getDbServiceStatus(self):
