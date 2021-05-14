@@ -691,6 +691,7 @@ def mydashboard(flaskApp, instance):
                             'color': colors['l1'],
                             'display': 'inline-block',
                             'padding-right': 30,
+                            'font-weight': 'bold'
                         }
                     ),
                     html.H3(
@@ -698,7 +699,7 @@ def mydashboard(flaskApp, instance):
                         id='linkDatastory',
                         n_clicks=0,
                         style={
-                            'color': colors['l6'],
+                            'color': colors['l1'],
                             'display': 'inline-block',
                             'padding-right': 45,
                         }
