@@ -469,7 +469,7 @@ def mydashboard(flaskApp, instance):
             hovermode='closest',
             showlegend=False,
             margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-            height=420,
+            height=430,
             paper_bgcolor=colors['l0'],
             mapbox_style="open-street-map",
             mapbox=dict(
@@ -733,6 +733,7 @@ def mydashboard(flaskApp, instance):
                     ),
                     html.Div([
                         dcc.Graph(
+                            className='map-plot',
                             id='map1',
                             figure=plotMap,
                             config={
@@ -747,7 +748,7 @@ def mydashboard(flaskApp, instance):
                         'position': 'relative',
                         'border-radius': 5,
                         'margin': '10px',
-                        'padding': '5px'
+                        # 'padding': '5px'
                     }
                     ),
                 ], style={
