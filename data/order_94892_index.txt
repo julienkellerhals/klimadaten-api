@@ -1,0 +1,784 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94892
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94892_AAF_rsd700y0_1_data.txt     Data      Aadorf                               Days of the year with precipitation total exceeding 69.9 mm 1899-1997
+order_94892_AAF_rsd700y0_1_legend.txt   Legend    Aadorf                               Days of the year with precipitation total exceeding 69.9 mm 1899-1997
+order_94892_TAE_rsd700y0_1_data.txt     Data      Aadorf / Tänikon                     Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_TAE_rsd700y0_1_legend.txt   Legend    Aadorf / Tänikon                     Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_COM_rsd700y0_1_data.txt     Data      Acquarossa / Comprovasco             Days of the year with precipitation total exceeding 69.9 mm 1899-1976
+order_94892_COM_rsd700y0_1_legend.txt   Legend    Acquarossa / Comprovasco             Days of the year with precipitation total exceeding 69.9 mm 1899-1976
+order_94892_COM_rsd700y0_2_data.txt     Data      Acquarossa / Comprovasco             Days of the year with precipitation total exceeding 69.9 mm 1988-2020
+order_94892_COM_rsd700y0_2_legend.txt   Legend    Acquarossa / Comprovasco             Days of the year with precipitation total exceeding 69.9 mm 1988-2020
+order_94892_SOAET_rsd700y0_1_data.txt   Data      Aetigkofen                           Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_SOAET_rsd700y0_1_legend.txt Legend    Aetigkofen                           Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_AFT_rsd700y0_1_data.txt     Data      Affeltrangen                         Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_AFT_rsd700y0_1_legend.txt   Legend    Affeltrangen                         Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_DLALH_rsd700y0_1_data.txt   Data      Altheim                              Days of the year with precipitation total exceeding 69.9 mm 1950-2003
+order_94892_DLALH_rsd700y0_1_legend.txt Legend    Altheim                              Days of the year with precipitation total exceeding 69.9 mm 1950-2003
+order_94892_DLALH_rsd700y0_2_data.txt   Data      Altheim                              Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLALH_rsd700y0_2_legend.txt Legend    Altheim                              Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLALH_rsd700y0_3_data.txt   Data      Altheim                              Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLALH_rsd700y0_3_legend.txt Legend    Altheim                              Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLALM_rsd700y0_1_data.txt   Data      Altomünster                          Days of the year with precipitation total exceeding 69.9 mm 1954-2015
+order_94892_DLALM_rsd700y0_1_legend.txt Legend    Altomünster                          Days of the year with precipitation total exceeding 69.9 mm 1954-2015
+order_94892_DLALM_rsd700y0_2_data.txt   Data      Altomünster                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLALM_rsd700y0_2_legend.txt Legend    Altomünster                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLAME_rsd700y0_1_data.txt   Data      Amerang / Pfaffing                   Days of the year with precipitation total exceeding 69.9 mm 1993-2015
+order_94892_DLAME_rsd700y0_1_legend.txt Legend    Amerang / Pfaffing                   Days of the year with precipitation total exceeding 69.9 mm 1993-2015
+order_94892_DLAME_rsd700y0_2_data.txt   Data      Amerang / Pfaffing                   Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLAME_rsd700y0_2_legend.txt Legend    Amerang / Pfaffing                   Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_ARN_rsd700y0_1_data.txt     Data      Arni-Islisberg                       Days of the year with precipitation total exceeding 69.9 mm 1968-1972
+order_94892_ARN_rsd700y0_1_legend.txt   Legend    Arni-Islisberg                       Days of the year with precipitation total exceeding 69.9 mm 1968-1972
+order_94892_DLATT_rsd700y0_1_data.txt   Data      Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1940-1944
+order_94892_DLATT_rsd700y0_1_legend.txt Legend    Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1940-1944
+order_94892_DLATT_rsd700y0_2_data.txt   Data      Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1945-1970
+order_94892_DLATT_rsd700y0_2_legend.txt Legend    Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1945-1970
+order_94892_DLATT_rsd700y0_3_data.txt   Data      Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1971-2015
+order_94892_DLATT_rsd700y0_3_legend.txt Legend    Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 1971-2015
+order_94892_DLATT_rsd700y0_4_data.txt   Data      Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLATT_rsd700y0_4_legend.txt Legend    Attenkam                             Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_AUF_rsd700y0_1_data.txt     Data      Au bei Fischingen TG                 Days of the year with precipitation total exceeding 69.9 mm 1972-1997
+order_94892_AUF_rsd700y0_1_legend.txt   Legend    Au bei Fischingen TG                 Days of the year with precipitation total exceeding 69.9 mm 1972-1997
+order_94892_BAT_rsd700y0_1_data.txt     Data      Balsthal                             Days of the year with precipitation total exceeding 69.9 mm 1900-1948
+order_94892_BAT_rsd700y0_1_legend.txt   Legend    Balsthal                             Days of the year with precipitation total exceeding 69.9 mm 1900-1948
+order_94892_BAT_rsd700y0_2_data.txt     Data      Balsthal                             Days of the year with precipitation total exceeding 69.9 mm 1951-2020
+order_94892_BAT_rsd700y0_2_legend.txt   Legend    Balsthal                             Days of the year with precipitation total exceeding 69.9 mm 1951-2020
+order_94892_BAU_rsd700y0_1_data.txt     Data      Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 1903-2020
+order_94892_BAU_rsd700y0_1_legend.txt   Legend    Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 1903-2020
+order_94892_VDBAU_rsd700y0_1_data.txt   Data      Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDBAU_rsd700y0_1_legend.txt Legend    Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDBAU_rsd700y0_2_data.txt   Data      Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDBAU_rsd700y0_2_legend.txt Legend    Baulmes                              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_BAM_rsd700y0_1_data.txt     Data      Bauma                                Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_BAM_rsd700y0_1_legend.txt   Legend    Bauma                                Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_ZHBAM_rsd700y0_1_data.txt   Data      Bauma                                Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_ZHBAM_rsd700y0_1_legend.txt Legend    Bauma                                Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_BEP_rsd700y0_1_data.txt     Data      Belp                                 Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BEP_rsd700y0_1_legend.txt   Legend    Belp                                 Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BNW_rsd700y0_1_data.txt     Data      Bennwil BL                           Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_BNW_rsd700y0_1_legend.txt   Legend    Bennwil BL                           Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_VDBER_rsd700y0_1_data.txt   Data      Bercher                              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDBER_rsd700y0_1_legend.txt Legend    Bercher                              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDBER_rsd700y0_2_data.txt   Data      Bercher                              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDBER_rsd700y0_2_legend.txt Legend    Bercher                              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_BER_rsd700y0_1_data.txt     Data      Bern / Zollikofen                    Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_BER_rsd700y0_1_legend.txt   Legend    Bern / Zollikofen                    Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_NABBER_rsd700y0_1_data.txt  Data      Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2001-2004
+order_94892_NABBER_rsd700y0_1_legend.txt Legend    Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2001-2004
+order_94892_NABBER_rsd700y0_2_data.txt  Data      Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2005-2014
+order_94892_NABBER_rsd700y0_2_legend.txt Legend    Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2005-2014
+order_94892_NABBER_rsd700y0_3_data.txt  Data      Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2015-2016
+order_94892_NABBER_rsd700y0_3_legend.txt Legend    Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2015-2016
+order_94892_NABBER_rsd700y0_4_data.txt  Data      Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_NABBER_rsd700y0_4_legend.txt Legend    Bern-Bollwerk                        Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_BMU_rsd700y0_1_data.txt     Data      Beromünster                          Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_BMU_rsd700y0_1_legend.txt   Legend    Beromünster                          Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_SOBIB_rsd700y0_1_data.txt   Data      Bibern                               Days of the year with precipitation total exceeding 69.9 mm 1998-2012
+order_94892_SOBIB_rsd700y0_1_legend.txt Legend    Bibern                               Days of the year with precipitation total exceeding 69.9 mm 1998-2012
+order_94892_BIZ_rsd700y0_1_data.txt     Data      Bischofszell                         Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_BIZ_rsd700y0_1_legend.txt   Legend    Bischofszell                         Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_BIE_rsd700y0_1_data.txt     Data      Bière                                Days of the year with precipitation total exceeding 69.9 mm 1974-2020
+order_94892_BIE_rsd700y0_1_legend.txt   Legend    Bière                                Days of the year with precipitation total exceeding 69.9 mm 1974-2020
+order_94892_BLU_rsd700y0_1_data.txt     Data      Blumenstein                          Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_BLU_rsd700y0_1_legend.txt   Legend    Blumenstein                          Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_MMBOY_rsd700y0_1_data.txt   Data      Boudry                               Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_MMBOY_rsd700y0_1_legend.txt Legend    Boudry                               Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_BNU_rsd700y0_1_data.txt     Data      Braunau                              Days of the year with precipitation total exceeding 69.9 mm 1977-2016
+order_94892_BNU_rsd700y0_1_legend.txt   Legend    Braunau                              Days of the year with precipitation total exceeding 69.9 mm 1977-2016
+order_94892_BNU_rsd700y0_2_data.txt     Data      Braunau                              Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_BNU_rsd700y0_2_legend.txt   Legend    Braunau                              Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_BHO_rsd700y0_1_data.txt     Data      Breitenhof BL                        Days of the year with precipitation total exceeding 69.9 mm 1968-1994
+order_94892_BHO_rsd700y0_1_legend.txt   Legend    Breitenhof BL                        Days of the year with precipitation total exceeding 69.9 mm 1968-1994
+order_94892_BRZ_rsd700y0_1_data.txt     Data      Brienz                               Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BRZ_rsd700y0_1_legend.txt   Legend    Brienz                               Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BRI_rsd700y0_1_data.txt     Data      Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1895-1896
+order_94892_BRI_rsd700y0_1_legend.txt   Legend    Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1895-1896
+order_94892_BRI_rsd700y0_2_data.txt     Data      Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1897-1905
+order_94892_BRI_rsd700y0_2_legend.txt   Legend    Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1897-1905
+order_94892_BRI_rsd700y0_3_data.txt     Data      Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1960-2002
+order_94892_BRI_rsd700y0_3_legend.txt   Legend    Brig                                 Days of the year with precipitation total exceeding 69.9 mm 1960-2002
+order_94892_BRI_rsd700y0_4_data.txt     Data      Brig                                 Days of the year with precipitation total exceeding 69.9 mm 2003-2015
+order_94892_BRI_rsd700y0_4_legend.txt   Legend    Brig                                 Days of the year with precipitation total exceeding 69.9 mm 2003-2015
+order_94892_BRI_rsd700y0_5_data.txt     Data      Brig                                 Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_BRI_rsd700y0_5_legend.txt   Legend    Brig                                 Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_IYBRI_rsd700y0_1_data.txt   Data      Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1920-1945
+order_94892_IYBRI_rsd700y0_1_legend.txt Legend    Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1920-1945
+order_94892_IYBRI_rsd700y0_2_data.txt   Data      Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1946-1968
+order_94892_IYBRI_rsd700y0_2_legend.txt Legend    Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1946-1968
+order_94892_IYBRI_rsd700y0_3_data.txt   Data      Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1970-2018
+order_94892_IYBRI_rsd700y0_3_legend.txt Legend    Brixen / Vahrn                       Days of the year with precipitation total exceeding 69.9 mm 1970-2018
+order_94892_BRO_rsd700y0_1_data.txt     Data      Broc                                 Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_BRO_rsd700y0_1_legend.txt   Legend    Broc                                 Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_BZL_rsd700y0_1_data.txt     Data      Bruzella                             Days of the year with precipitation total exceeding 69.9 mm 1973-2006
+order_94892_BZL_rsd700y0_1_legend.txt   Legend    Bruzella                             Days of the year with precipitation total exceeding 69.9 mm 1973-2006
+order_94892_BUD_rsd700y0_1_data.txt     Data      Burgdorf                             Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BUD_rsd700y0_1_legend.txt   Legend    Burgdorf                             Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_BEBUD_rsd700y0_1_data.txt   Data      Burgdorf / Buchmatt                  Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_BEBUD_rsd700y0_1_legend.txt Legend    Burgdorf / Buchmatt                  Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_BEBUD_rsd700y0_2_data.txt   Data      Burgdorf / Buchmatt                  Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_BEBUD_rsd700y0_2_legend.txt Legend    Burgdorf / Buchmatt                  Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_BEBUE_rsd700y0_1_data.txt   Data      Burgdorf / Einschlag                 Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_BEBUE_rsd700y0_1_legend.txt Legend    Burgdorf / Einschlag                 Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_BEBUE_rsd700y0_2_data.txt   Data      Burgdorf / Einschlag                 Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_BEBUE_rsd700y0_2_legend.txt Legend    Burgdorf / Einschlag                 Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_BEBUV_rsd700y0_1_data.txt   Data      Burgdorf / Viehmarktplatz            Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_BEBUV_rsd700y0_1_legend.txt Legend    Burgdorf / Viehmarktplatz            Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_UBB_rsd700y0_1_data.txt     Data      Bözberg                              Days of the year with precipitation total exceeding 69.9 mm 1913-2020
+order_94892_UBB_rsd700y0_1_legend.txt   Legend    Bözberg                              Days of the year with precipitation total exceeding 69.9 mm 1913-2020
+order_94892_TICAB_rsd700y0_1_data.txt   Data      Cabbio                               Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_TICAB_rsd700y0_1_legend.txt Legend    Cabbio                               Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_TICAB_rsd700y0_2_data.txt   Data      Cabbio                               Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_TICAB_rsd700y0_2_legend.txt Legend    Cabbio                               Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_CMD_rsd700y0_1_data.txt     Data      Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1900-1938
+order_94892_CMD_rsd700y0_1_legend.txt   Legend    Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1900-1938
+order_94892_CMD_rsd700y0_2_data.txt     Data      Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1939-2020
+order_94892_CMD_rsd700y0_2_legend.txt   Legend    Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1939-2020
+order_94892_TICMD_rsd700y0_1_data.txt   Data      Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1979-2016
+order_94892_TICMD_rsd700y0_1_legend.txt Legend    Camedo                               Days of the year with precipitation total exceeding 69.9 mm 1979-2016
+order_94892_TICMD_rsd700y0_2_data.txt   Data      Camedo                               Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_TICMD_rsd700y0_2_legend.txt Legend    Camedo                               Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_CAC_rsd700y0_1_data.txt     Data      Campocologno                         Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_CAC_rsd700y0_1_legend.txt   Legend    Campocologno                         Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_CBR_rsd700y0_1_data.txt     Data      Chambrelien                          Days of the year with precipitation total exceeding 69.9 mm 1899-1945
+order_94892_CBR_rsd700y0_1_legend.txt   Legend    Chambrelien                          Days of the year with precipitation total exceeding 69.9 mm 1899-1945
+order_94892_CGG_rsd700y0_1_data.txt     Data      Chiggiogna                           Days of the year with precipitation total exceeding 69.9 mm 1972-1981
+order_94892_CGG_rsd700y0_1_legend.txt   Legend    Chiggiogna                           Days of the year with precipitation total exceeding 69.9 mm 1972-1981
+order_94892_CPP_rsd700y0_1_data.txt     Data      Chippis                              Days of the year with precipitation total exceeding 69.9 mm 1958-1970
+order_94892_CPP_rsd700y0_1_legend.txt   Legend    Chippis                              Days of the year with precipitation total exceeding 69.9 mm 1958-1970
+order_94892_CHU_rsd700y0_1_data.txt     Data      Chur                                 Days of the year with precipitation total exceeding 69.9 mm 1886-2020
+order_94892_CHU_rsd700y0_1_legend.txt   Legend    Chur                                 Days of the year with precipitation total exceeding 69.9 mm 1886-2020
+order_94892_CBS_rsd700y0_1_data.txt     Data      Châbles                              Days of the year with precipitation total exceeding 69.9 mm 1963-1980
+order_94892_CBS_rsd700y0_1_legend.txt   Legend    Châbles                              Days of the year with precipitation total exceeding 69.9 mm 1963-1980
+order_94892_CBS_rsd700y0_2_data.txt     Data      Châbles                              Days of the year with precipitation total exceeding 69.9 mm 1999-2020
+order_94892_CBS_rsd700y0_2_legend.txt   Legend    Châbles                              Days of the year with precipitation total exceeding 69.9 mm 1999-2020
+order_94892_CHX_rsd700y0_1_data.txt     Data      Chéserex                             Days of the year with precipitation total exceeding 69.9 mm 1974-2005
+order_94892_CHX_rsd700y0_1_legend.txt   Legend    Chéserex                             Days of the year with precipitation total exceeding 69.9 mm 1974-2005
+order_94892_COG_rsd700y0_1_data.txt     Data      Combe-Garot                          Days of the year with precipitation total exceeding 69.9 mm 1945-2020
+order_94892_COG_rsd700y0_1_legend.txt   Legend    Combe-Garot                          Days of the year with precipitation total exceeding 69.9 mm 1945-2020
+order_94892_COC_rsd700y0_1_data.txt     Data      Corcelles-sur-Chavornay              Days of the year with precipitation total exceeding 69.9 mm 1906-1986
+order_94892_COC_rsd700y0_1_legend.txt   Legend    Corcelles-sur-Chavornay              Days of the year with precipitation total exceeding 69.9 mm 1906-1986
+order_94892_VDCOR_rsd700y0_1_data.txt   Data      Corcelles-sur-Chavronay              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDCOR_rsd700y0_1_legend.txt Legend    Corcelles-sur-Chavronay              Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDCOR_rsd700y0_2_data.txt   Data      Corcelles-sur-Chavronay              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDCOR_rsd700y0_2_legend.txt Legend    Corcelles-sur-Chavronay              Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_COS_rsd700y0_1_data.txt     Data      Cossonay                             Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_COS_rsd700y0_1_legend.txt   Legend    Cossonay                             Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_COY_rsd700y0_1_data.txt     Data      Courtelary                           Days of the year with precipitation total exceeding 69.9 mm 1912-2020
+order_94892_COY_rsd700y0_1_legend.txt   Legend    Courtelary                           Days of the year with precipitation total exceeding 69.9 mm 1912-2020
+order_94892_COP_rsd700y0_1_data.txt     Data      Courtepin                            Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_COP_rsd700y0_1_legend.txt   Legend    Courtepin                            Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_GLDBA_rsd700y0_1_data.txt   Data      Diesbach                             Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLDBA_rsd700y0_1_legend.txt Legend    Diesbach                             Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLDBA_rsd700y0_2_data.txt   Data      Diesbach                             Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_GLDBA_rsd700y0_2_legend.txt Legend    Diesbach                             Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_TGDUS_rsd700y0_1_data.txt   Data      Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2010-2012
+order_94892_TGDUS_rsd700y0_1_legend.txt Legend    Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2010-2012
+order_94892_TGDUS_rsd700y0_2_data.txt   Data      Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2015-2018
+order_94892_TGDUS_rsd700y0_2_legend.txt Legend    Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2015-2018
+order_94892_TGDUS_rsd700y0_3_data.txt   Data      Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_TGDUS_rsd700y0_3_legend.txt Legend    Dussnang                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_DLEBE_rsd700y0_1_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1930-1944
+order_94892_DLEBE_rsd700y0_1_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1930-1944
+order_94892_DLEBE_rsd700y0_2_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1946-1988
+order_94892_DLEBE_rsd700y0_2_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1946-1988
+order_94892_DLEBE_rsd700y0_3_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1989-2005
+order_94892_DLEBE_rsd700y0_3_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 1989-2005
+order_94892_DLEBE_rsd700y0_4_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2006-2015
+order_94892_DLEBE_rsd700y0_4_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2006-2015
+order_94892_DLEBE_rsd700y0_5_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_DLEBE_rsd700y0_5_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_DLEBE_rsd700y0_6_data.txt   Data      Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_DLEBE_rsd700y0_6_legend.txt Legend    Ebersberg                            Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_EBW_rsd700y0_1_data.txt     Data      Ebertswil Hausen                     Days of the year with precipitation total exceeding 69.9 mm 1960-1974
+order_94892_EBW_rsd700y0_1_legend.txt   Legend    Ebertswil Hausen                     Days of the year with precipitation total exceeding 69.9 mm 1960-1974
+order_94892_EBK_rsd700y0_1_data.txt     Data      Ebnat-Kappel                         Days of the year with precipitation total exceeding 69.9 mm 1879-2012
+order_94892_EBK_rsd700y0_1_legend.txt   Legend    Ebnat-Kappel                         Days of the year with precipitation total exceeding 69.9 mm 1879-2012
+order_94892_EBK_rsd700y0_2_data.txt     Data      Ebnat-Kappel                         Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_EBK_rsd700y0_2_legend.txt   Legend    Ebnat-Kappel                         Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_ECH_rsd700y0_1_data.txt     Data      Echallens                            Days of the year with precipitation total exceeding 69.9 mm 1933-2020
+order_94892_ECH_rsd700y0_1_legend.txt   Legend    Echallens                            Days of the year with precipitation total exceeding 69.9 mm 1933-2020
+order_94892_EGO_rsd700y0_1_data.txt     Data      Egolzwil                             Days of the year with precipitation total exceeding 69.9 mm 1973-2020
+order_94892_EGO_rsd700y0_1_legend.txt   Legend    Egolzwil                             Days of the year with precipitation total exceeding 69.9 mm 1973-2020
+order_94892_DLEGN_rsd700y0_1_data.txt   Data      Engen                                Days of the year with precipitation total exceeding 69.9 mm 1986-1991
+order_94892_DLEGN_rsd700y0_1_legend.txt Legend    Engen                                Days of the year with precipitation total exceeding 69.9 mm 1986-1991
+order_94892_DLEGN_rsd700y0_2_data.txt   Data      Engen                                Days of the year with precipitation total exceeding 69.9 mm 1993-1997
+order_94892_DLEGN_rsd700y0_2_legend.txt Legend    Engen                                Days of the year with precipitation total exceeding 69.9 mm 1993-1997
+order_94892_DLEGN_rsd700y0_3_data.txt   Data      Engen                                Days of the year with precipitation total exceeding 69.9 mm 2004-2007
+order_94892_DLEGN_rsd700y0_3_legend.txt Legend    Engen                                Days of the year with precipitation total exceeding 69.9 mm 2004-2007
+order_94892_EPT_rsd700y0_1_data.txt     Data      Eptingen                             Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_EPT_rsd700y0_1_legend.txt   Legend    Eptingen                             Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_KAEPT_rsd700y0_1_data.txt   Data      Eptingen                             Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_KAEPT_rsd700y0_1_legend.txt Legend    Eptingen                             Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_SOERS_rsd700y0_1_data.txt   Data      Erschwil                             Days of the year with precipitation total exceeding 69.9 mm 1998-2011
+order_94892_SOERS_rsd700y0_1_legend.txt Legend    Erschwil                             Days of the year with precipitation total exceeding 69.9 mm 1998-2011
+order_94892_SOERS_rsd700y0_2_data.txt   Data      Erschwil                             Days of the year with precipitation total exceeding 69.9 mm 2013-2019
+order_94892_SOERS_rsd700y0_2_legend.txt Legend    Erschwil                             Days of the year with precipitation total exceeding 69.9 mm 2013-2019
+order_94892_EKO_rsd700y0_1_data.txt     Data      Eschlikon                            Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_EKO_rsd700y0_1_legend.txt   Legend    Eschlikon                            Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_AGFAW_rsd700y0_1_data.txt   Data      Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2000-2008
+order_94892_AGFAW_rsd700y0_1_legend.txt Legend    Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2000-2008
+order_94892_AGFAW_rsd700y0_2_data.txt   Data      Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2009-2010
+order_94892_AGFAW_rsd700y0_2_legend.txt Legend    Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2009-2010
+order_94892_AGFAW_rsd700y0_3_data.txt   Data      Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_AGFAW_rsd700y0_3_legend.txt Legend    Fahrwangen                           Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_FAH_rsd700y0_1_data.txt     Data      Fahy                                 Days of the year with precipitation total exceeding 69.9 mm 1956-2020
+order_94892_FAH_rsd700y0_1_legend.txt   Legend    Fahy                                 Days of the year with precipitation total exceeding 69.9 mm 1956-2020
+order_94892_FAR_rsd700y0_1_data.txt     Data      Farvagny-le-Grand                    Days of the year with precipitation total exceeding 69.9 mm 1969-1983
+order_94892_FAR_rsd700y0_1_legend.txt   Legend    Farvagny-le-Grand                    Days of the year with precipitation total exceeding 69.9 mm 1969-1983
+order_94892_FEH_rsd700y0_1_data.txt     Data      Fehraltdorf                          Days of the year with precipitation total exceeding 69.9 mm 1900-1952
+order_94892_FEH_rsd700y0_1_legend.txt   Legend    Fehraltdorf                          Days of the year with precipitation total exceeding 69.9 mm 1900-1952
+order_94892_DLFEL_rsd700y0_1_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 1958-1996
+order_94892_DLFEL_rsd700y0_1_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 1958-1996
+order_94892_DLFEL_rsd700y0_2_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 1997-1999
+order_94892_DLFEL_rsd700y0_2_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 1997-1999
+order_94892_DLFEL_rsd700y0_3_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_DLFEL_rsd700y0_3_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_FLW_rsd700y0_1_data.txt     Data      Flawil                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_FLW_rsd700y0_1_legend.txt   Legend    Flawil                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_VDFOL_rsd700y0_1_data.txt   Data      Forel                                Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDFOL_rsd700y0_1_legend.txt Legend    Forel                                Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDFOL_rsd700y0_2_data.txt   Data      Forel                                Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDFOL_rsd700y0_2_legend.txt Legend    Forel                                Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_GRA_rsd700y0_1_data.txt     Data      Fribourg / Grangeneuve               Days of the year with precipitation total exceeding 69.9 mm 1900-2004
+order_94892_GRA_rsd700y0_1_legend.txt   Legend    Fribourg / Grangeneuve               Days of the year with precipitation total exceeding 69.9 mm 1900-2004
+order_94892_GRA_rsd700y0_2_data.txt     Data      Fribourg / Grangeneuve               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_GRA_rsd700y0_2_legend.txt   Legend    Fribourg / Grangeneuve               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_DLGEI_rsd700y0_1_data.txt   Data      Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 1970-1996
+order_94892_DLGEI_rsd700y0_1_legend.txt Legend    Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 1970-1996
+order_94892_DLGEI_rsd700y0_2_data.txt   Data      Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 1998-2003
+order_94892_DLGEI_rsd700y0_2_legend.txt Legend    Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 1998-2003
+order_94892_DLGEI_rsd700y0_3_data.txt   Data      Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 2009-2015
+order_94892_DLGEI_rsd700y0_3_legend.txt Legend    Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 2009-2015
+order_94892_DLGEI_rsd700y0_4_data.txt   Data      Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLGEI_rsd700y0_4_legend.txt Legend    Geisingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_GEP_rsd700y0_1_data.txt     Data      Gempen, SO                           Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_GEP_rsd700y0_1_legend.txt   Legend    Gempen, SO                           Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_GPN_rsd700y0_1_data.txt     Data      Gempenach                            Days of the year with precipitation total exceeding 69.9 mm 1971-1979
+order_94892_GPN_rsd700y0_1_legend.txt   Legend    Gempenach                            Days of the year with precipitation total exceeding 69.9 mm 1971-1979
+order_94892_VDGEN_rsd700y0_1_data.txt   Data      Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2008-2009
+order_94892_VDGEN_rsd700y0_1_legend.txt Legend    Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2008-2009
+order_94892_VDGEN_rsd700y0_2_data.txt   Data      Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDGEN_rsd700y0_2_legend.txt Legend    Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDGEN_rsd700y0_3_data.txt   Data      Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDGEN_rsd700y0_3_legend.txt Legend    Genoiler                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_GES_rsd700y0_1_data.txt     Data      Gersau                               Days of the year with precipitation total exceeding 69.9 mm 1998-2020
+order_94892_GES_rsd700y0_1_legend.txt   Legend    Gersau                               Days of the year with precipitation total exceeding 69.9 mm 1998-2020
+order_94892_GGI_rsd700y0_1_data.txt     Data      Gingins                              Days of the year with precipitation total exceeding 69.9 mm 1899-1929
+order_94892_GGI_rsd700y0_1_legend.txt   Legend    Gingins                              Days of the year with precipitation total exceeding 69.9 mm 1899-1929
+order_94892_GLA_rsd700y0_1_data.txt     Data      Glarus                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_GLA_rsd700y0_1_legend.txt   Legend    Glarus                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_GLGLA_rsd700y0_1_data.txt   Data      Glarus                               Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_GLGLA_rsd700y0_1_legend.txt Legend    Glarus                               Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_GOL_rsd700y0_1_data.txt     Data      Goldingen                            Days of the year with precipitation total exceeding 69.9 mm 1969-1977
+order_94892_GOL_rsd700y0_1_legend.txt   Legend    Goldingen                            Days of the year with precipitation total exceeding 69.9 mm 1969-1977
+order_94892_VDGOU_rsd700y0_1_data.txt   Data      Goumoëns                             Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDGOU_rsd700y0_1_legend.txt Legend    Goumoëns                             Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDGOU_rsd700y0_2_data.txt   Data      Goumoëns                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDGOU_rsd700y0_2_legend.txt Legend    Goumoëns                             Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_GIN_rsd700y0_1_data.txt     Data      Grüningen                            Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_GIN_rsd700y0_1_legend.txt   Legend    Grüningen                            Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_GIN_rsd700y0_2_data.txt     Data      Grüningen                            Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_GIN_rsd700y0_2_legend.txt   Legend    Grüningen                            Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_GUS_rsd700y0_1_data.txt     Data      Grüsch                               Days of the year with precipitation total exceeding 69.9 mm 1992-2013
+order_94892_GUS_rsd700y0_1_legend.txt   Legend    Grüsch                               Days of the year with precipitation total exceeding 69.9 mm 1992-2013
+order_94892_HAU_rsd700y0_1_data.txt     Data      Hausen am Albis                      Days of the year with precipitation total exceeding 69.9 mm 1975-2020
+order_94892_HAU_rsd700y0_1_legend.txt   Legend    Hausen am Albis                      Days of the year with precipitation total exceeding 69.9 mm 1975-2020
+order_94892_DLHEC_rsd700y0_1_data.txt   Data      Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 1930-1945
+order_94892_DLHEC_rsd700y0_1_legend.txt Legend    Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 1930-1945
+order_94892_DLHEC_rsd700y0_2_data.txt   Data      Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 1946-2011
+order_94892_DLHEC_rsd700y0_2_legend.txt Legend    Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 1946-2011
+order_94892_DLHEC_rsd700y0_3_data.txt   Data      Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_DLHEC_rsd700y0_3_legend.txt Legend    Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_DLHEC_rsd700y0_4_data.txt   Data      Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLHEC_rsd700y0_4_legend.txt Legend    Hechingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_HTW_rsd700y0_1_data.txt     Data      Herbetswil                           Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_HTW_rsd700y0_1_legend.txt   Legend    Herbetswil                           Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_HES_rsd700y0_1_data.txt     Data      Herisau                              Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_HES_rsd700y0_1_legend.txt   Legend    Herisau                              Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_HEK_rsd700y0_1_data.txt     Data      Hessigkofen                          Days of the year with precipitation total exceeding 69.9 mm 1976-2020
+order_94892_HEK_rsd700y0_1_legend.txt   Legend    Hessigkofen                          Days of the year with precipitation total exceeding 69.9 mm 1976-2020
+order_94892_SOHIM_rsd700y0_1_data.txt   Data      Himmelried                           Days of the year with precipitation total exceeding 69.9 mm 1999-2011
+order_94892_SOHIM_rsd700y0_1_legend.txt Legend    Himmelried                           Days of the year with precipitation total exceeding 69.9 mm 1999-2011
+order_94892_SOHIM_rsd700y0_2_data.txt   Data      Himmelried                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_SOHIM_rsd700y0_2_legend.txt Legend    Himmelried                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_HIW_rsd700y0_1_data.txt     Data      Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_HIW_rsd700y0_1_legend.txt   Legend    Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_MMHIW_rsd700y0_1_data.txt   Data      Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 2016-2018
+order_94892_MMHIW_rsd700y0_1_legend.txt Legend    Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 2016-2018
+order_94892_MMHIW_rsd700y0_2_data.txt   Data      Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_MMHIW_rsd700y0_2_legend.txt Legend    Hinwil                               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_DLHOL_rsd700y0_1_data.txt   Data      Holzkirchen                          Days of the year with precipitation total exceeding 69.9 mm 1982-2015
+order_94892_DLHOL_rsd700y0_1_legend.txt Legend    Holzkirchen                          Days of the year with precipitation total exceeding 69.9 mm 1982-2015
+order_94892_DLHOL_rsd700y0_2_data.txt   Data      Holzkirchen                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLHOL_rsd700y0_2_legend.txt Legend    Holzkirchen                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_HUN_rsd700y0_1_data.txt     Data      Hunzikon                             Days of the year with precipitation total exceeding 69.9 mm 1972-1991
+order_94892_HUN_rsd700y0_1_legend.txt   Legend    Hunzikon                             Days of the year with precipitation total exceeding 69.9 mm 1972-1991
+order_94892_HUT_rsd700y0_1_data.txt     Data      Huttwil                              Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_HUT_rsd700y0_1_legend.txt   Legend    Huttwil                              Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_WSLHOB_rsd700y0_1_data.txt  Data      Hölstein Bestand                     Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_WSLHOB_rsd700y0_1_legend.txt Legend    Hölstein Bestand                     Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_ILZ_rsd700y0_1_data.txt     Data      Ilanz                                Days of the year with precipitation total exceeding 69.9 mm 1891-2020
+order_94892_ILZ_rsd700y0_1_legend.txt   Legend    Ilanz                                Days of the year with precipitation total exceeding 69.9 mm 1891-2020
+order_94892_ILH_rsd700y0_1_data.txt     Data      Illhart                              Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_ILH_rsd700y0_1_legend.txt   Legend    Illhart                              Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_INT_rsd700y0_1_data.txt     Data      Interlaken                           Days of the year with precipitation total exceeding 69.9 mm 1899-2012
+order_94892_INT_rsd700y0_1_legend.txt   Legend    Interlaken                           Days of the year with precipitation total exceeding 69.9 mm 1899-2012
+order_94892_INT_rsd700y0_2_data.txt     Data      Interlaken                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_INT_rsd700y0_2_legend.txt   Legend    Interlaken                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_GEFOR_rsd700y0_1_data.txt   Data      Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1991-1993
+order_94892_GEFOR_rsd700y0_1_legend.txt Legend    Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1991-1993
+order_94892_GEFOR_rsd700y0_2_data.txt   Data      Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1994-1995
+order_94892_GEFOR_rsd700y0_2_legend.txt Legend    Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1994-1995
+order_94892_GEFOR_rsd700y0_3_data.txt   Data      Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1999-2004
+order_94892_GEFOR_rsd700y0_3_legend.txt Legend    Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 1999-2004
+order_94892_GEFOR_rsd700y0_4_data.txt   Data      Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 2007-2020
+order_94892_GEFOR_rsd700y0_4_legend.txt Legend    Jussy / Maison de la foret           Days of the year with precipitation total exceeding 69.9 mm 2007-2020
+order_94892_WSLJUF_rsd700y0_1_data.txt  Data      Jussy Freiland                       Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_WSLJUF_rsd700y0_1_legend.txt Legend    Jussy Freiland                       Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_KAL_rsd700y0_1_data.txt     Data      Kalchrain                            Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_KAL_rsd700y0_1_legend.txt   Legend    Kalchrain                            Days of the year with precipitation total exceeding 69.9 mm 1899-2011
+order_94892_DLKIF_rsd700y0_1_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1940-1987
+order_94892_DLKIF_rsd700y0_1_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1940-1987
+order_94892_DLKIF_rsd700y0_2_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1988-1994
+order_94892_DLKIF_rsd700y0_2_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1988-1994
+order_94892_DLKIF_rsd700y0_3_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1996-1997
+order_94892_DLKIF_rsd700y0_3_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1996-1997
+order_94892_DLKIF_rsd700y0_4_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1998-2001
+order_94892_DLKIF_rsd700y0_4_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 1998-2001
+order_94892_DLKIF_rsd700y0_5_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 2006-2015
+order_94892_DLKIF_rsd700y0_5_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 2006-2015
+order_94892_DLKIF_rsd700y0_6_data.txt   Data      Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLKIF_rsd700y0_6_legend.txt Legend    Kiefersfelden                        Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_KIS_rsd700y0_1_data.txt     Data      Kiesen                               Days of the year with precipitation total exceeding 69.9 mm 1986-2020
+order_94892_KIS_rsd700y0_1_legend.txt   Legend    Kiesen                               Days of the year with precipitation total exceeding 69.9 mm 1986-2020
+order_94892_KIG_rsd700y0_1_data.txt     Data      Kilchberg BL                         Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_KIG_rsd700y0_1_legend.txt   Legend    Kilchberg BL                         Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_BEKRL_rsd700y0_1_data.txt   Data      Krauchthal / Lindenfeld              Days of the year with precipitation total exceeding 69.9 mm 1999-2009
+order_94892_BEKRL_rsd700y0_1_legend.txt Legend    Krauchthal / Lindenfeld              Days of the year with precipitation total exceeding 69.9 mm 1999-2009
+order_94892_BEKRL_rsd700y0_2_data.txt   Data      Krauchthal / Lindenfeld              Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_BEKRL_rsd700y0_2_legend.txt Legend    Krauchthal / Lindenfeld              Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_KAR_rsd700y0_1_data.txt     Data      Küssnacht am Rigi                    Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_KAR_rsd700y0_1_legend.txt   Legend    Küssnacht am Rigi                    Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_ABG_rsd700y0_1_data.txt     Data      L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 1930-1933
+order_94892_ABG_rsd700y0_1_legend.txt   Legend    L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 1930-1933
+order_94892_ABG_rsd700y0_2_data.txt     Data      L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 1960-2009
+order_94892_ABG_rsd700y0_2_legend.txt   Legend    L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 1960-2009
+order_94892_ABG_rsd700y0_3_data.txt     Data      L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 2010-2020
+order_94892_ABG_rsd700y0_3_legend.txt   Legend    L'Abergement                         Days of the year with precipitation total exceeding 69.9 mm 2010-2020
+order_94892_LPG_rsd700y0_1_data.txt     Data      Lampenberg BL                        Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_LPG_rsd700y0_1_legend.txt   Legend    Lampenberg BL                        Days of the year with precipitation total exceeding 69.9 mm 1899-1994
+order_94892_LAN_rsd700y0_1_data.txt     Data      Landquart                            Days of the year with precipitation total exceeding 69.9 mm 1908-2013
+order_94892_LAN_rsd700y0_1_legend.txt   Legend    Landquart                            Days of the year with precipitation total exceeding 69.9 mm 1908-2013
+order_94892_LAN_rsd700y0_2_data.txt     Data      Landquart                            Days of the year with precipitation total exceeding 69.9 mm 2014-2020
+order_94892_LAN_rsd700y0_2_legend.txt   Legend    Landquart                            Days of the year with precipitation total exceeding 69.9 mm 2014-2020
+order_94892_LGA_rsd700y0_1_data.txt     Data      Langnau am Albis                     Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_LGA_rsd700y0_1_legend.txt   Legend    Langnau am Albis                     Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_TGLAN_rsd700y0_1_data.txt   Data      Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2010-2012
+order_94892_TGLAN_rsd700y0_1_legend.txt Legend    Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2010-2012
+order_94892_TGLAN_rsd700y0_2_data.txt   Data      Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2015-2016
+order_94892_TGLAN_rsd700y0_2_legend.txt Legend    Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2015-2016
+order_94892_TGLAN_rsd700y0_3_data.txt   Data      Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_TGLAN_rsd700y0_3_legend.txt Legend    Lanzenneunforn                       Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_MMLAF_rsd700y0_1_data.txt   Data      Laufen / Dittingen                   Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_MMLAF_rsd700y0_1_legend.txt Legend    Laufen / Dittingen                   Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_LSN_rsd700y0_1_data.txt     Data      Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 1873-2020
+order_94892_LSN_rsd700y0_1_legend.txt   Legend    Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 1873-2020
+order_94892_NABLAU_rsd700y0_1_data.txt  Data      Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2003-2011
+order_94892_NABLAU_rsd700y0_1_legend.txt Legend    Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2003-2011
+order_94892_NABLAU_rsd700y0_2_data.txt  Data      Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2012-2017
+order_94892_NABLAU_rsd700y0_2_legend.txt Legend    Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2012-2017
+order_94892_NABLAU_rsd700y0_3_data.txt  Data      Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_NABLAU_rsd700y0_3_legend.txt Legend    Lausanne                             Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_TILAV_rsd700y0_1_data.txt   Data      Lavertezzo                           Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_TILAV_rsd700y0_1_legend.txt Legend    Lavertezzo                           Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_LAO_rsd700y0_1_data.txt     Data      Lavorgo                              Days of the year with precipitation total exceeding 69.9 mm 1960-1972
+order_94892_LAO_rsd700y0_1_legend.txt   Legend    Lavorgo                              Days of the year with precipitation total exceeding 69.9 mm 1960-1972
+order_94892_GECOI_rsd700y0_1_data.txt   Data      Le Coin, France                      Days of the year with precipitation total exceeding 69.9 mm 2012-2017
+order_94892_GECOI_rsd700y0_1_legend.txt Legend    Le Coin, France                      Days of the year with precipitation total exceeding 69.9 mm 2012-2017
+order_94892_DLLEU_rsd700y0_1_data.txt   Data      Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2007-2011
+order_94892_DLLEU_rsd700y0_1_legend.txt Legend    Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2007-2011
+order_94892_DLLEU_rsd700y0_2_data.txt   Data      Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_DLLEU_rsd700y0_2_legend.txt Legend    Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_DLLEU_rsd700y0_3_data.txt   Data      Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_DLLEU_rsd700y0_3_legend.txt Legend    Leutkirch                            Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_GLLIN_rsd700y0_1_data.txt   Data      Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLLIN_rsd700y0_1_legend.txt Legend    Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLLIN_rsd700y0_2_data.txt   Data      Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_GLLIN_rsd700y0_2_legend.txt Legend    Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMLIN_rsd700y0_1_data.txt   Data      Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMLIN_rsd700y0_1_legend.txt Legend    Linthal                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_LOH_rsd700y0_1_data.txt     Data      Lohn, SH                             Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_LOH_rsd700y0_1_legend.txt   Legend    Lohn, SH                             Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_MMLOP_rsd700y0_1_data.txt   Data      Lopagno                              Days of the year with precipitation total exceeding 69.9 mm 2012-2013
+order_94892_MMLOP_rsd700y0_1_legend.txt Legend    Lopagno                              Days of the year with precipitation total exceeding 69.9 mm 2012-2013
+order_94892_MMLOP_rsd700y0_2_data.txt   Data      Lopagno                              Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_MMLOP_rsd700y0_2_legend.txt Legend    Lopagno                              Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_LOT_rsd700y0_1_data.txt     Data      Lorzentobel                          Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_LOT_rsd700y0_1_legend.txt   Legend    Lorzentobel                          Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_NABLAE_rsd700y0_1_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 1994-1995
+order_94892_NABLAE_rsd700y0_1_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 1994-1995
+order_94892_NABLAE_rsd700y0_2_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 1996-1998
+order_94892_NABLAE_rsd700y0_2_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 1996-1998
+order_94892_NABLAE_rsd700y0_3_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2002-2004
+order_94892_NABLAE_rsd700y0_3_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2002-2004
+order_94892_NABLAE_rsd700y0_4_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2005-2007
+order_94892_NABLAE_rsd700y0_4_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2005-2007
+order_94892_NABLAE_rsd700y0_5_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2008-2009
+order_94892_NABLAE_rsd700y0_5_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2008-2009
+order_94892_NABLAE_rsd700y0_6_data.txt  Data      Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2010-2017
+order_94892_NABLAE_rsd700y0_6_legend.txt Legend    Lägeren / Zindelen                   Days of the year with precipitation total exceeding 69.9 mm 2010-2017
+order_94892_WSLLAE_rsd700y0_1_data.txt  Data      Lägern Turm                          Days of the year with precipitation total exceeding 69.9 mm 2017-2018
+order_94892_WSLLAE_rsd700y0_1_legend.txt Legend    Lägern Turm                          Days of the year with precipitation total exceeding 69.9 mm 2017-2018
+order_94892_LUE_rsd700y0_1_data.txt     Data      Lüterswil                            Days of the year with precipitation total exceeding 69.9 mm 1972-1976
+order_94892_LUE_rsd700y0_1_legend.txt   Legend    Lüterswil                            Days of the year with precipitation total exceeding 69.9 mm 1972-1976
+order_94892_MAD_rsd700y0_1_data.txt     Data      Madiswil                             Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_MAD_rsd700y0_1_legend.txt   Legend    Madiswil                             Days of the year with precipitation total exceeding 69.9 mm 1971-2020
+order_94892_DLMAI_rsd700y0_1_data.txt   Data      Maisach / Galgen                     Days of the year with precipitation total exceeding 69.9 mm 2005-2015
+order_94892_DLMAI_rsd700y0_1_legend.txt Legend    Maisach / Galgen                     Days of the year with precipitation total exceeding 69.9 mm 2005-2015
+order_94892_DLMAI_rsd700y0_2_data.txt   Data      Maisach / Galgen                     Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLMAI_rsd700y0_2_legend.txt Legend    Maisach / Galgen                     Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_MAV_rsd700y0_1_data.txt     Data      Martigny-Ville                       Days of the year with precipitation total exceeding 69.9 mm 1899-1988
+order_94892_MAV_rsd700y0_1_legend.txt   Legend    Martigny-Ville                       Days of the year with precipitation total exceeding 69.9 mm 1899-1988
+order_94892_SOMAT_rsd700y0_1_data.txt   Data      Matzendorf                           Days of the year with precipitation total exceeding 69.9 mm 1999-2011
+order_94892_SOMAT_rsd700y0_1_legend.txt Legend    Matzendorf                           Days of the year with precipitation total exceeding 69.9 mm 1999-2011
+order_94892_SOMAT_rsd700y0_2_data.txt   Data      Matzendorf                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_SOMAT_rsd700y0_2_legend.txt Legend    Matzendorf                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_MER_rsd700y0_1_data.txt     Data      Meiringen                            Days of the year with precipitation total exceeding 69.9 mm 1889-2020
+order_94892_MER_rsd700y0_1_legend.txt   Legend    Meiringen                            Days of the year with precipitation total exceeding 69.9 mm 1889-2020
+order_94892_DLMEM_rsd700y0_1_data.txt   Data      Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 1950-1999
+order_94892_DLMEM_rsd700y0_1_legend.txt Legend    Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 1950-1999
+order_94892_DLMEM_rsd700y0_2_data.txt   Data      Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 2000-2015
+order_94892_DLMEM_rsd700y0_2_legend.txt Legend    Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 2000-2015
+order_94892_DLMEM_rsd700y0_3_data.txt   Data      Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLMEM_rsd700y0_3_legend.txt Legend    Memmingen                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_MHA_rsd700y0_1_data.txt     Data      Merishausen                          Days of the year with precipitation total exceeding 69.9 mm 1934-2011
+order_94892_MHA_rsd700y0_1_legend.txt   Legend    Merishausen                          Days of the year with precipitation total exceeding 69.9 mm 1934-2011
+order_94892_DLMER_rsd700y0_1_data.txt   Data      Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1948-1949
+order_94892_DLMER_rsd700y0_1_legend.txt Legend    Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1948-1949
+order_94892_DLMER_rsd700y0_2_data.txt   Data      Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1950-1980
+order_94892_DLMER_rsd700y0_2_legend.txt Legend    Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1950-1980
+order_94892_DLMER_rsd700y0_3_data.txt   Data      Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1981-2015
+order_94892_DLMER_rsd700y0_3_legend.txt Legend    Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 1981-2015
+order_94892_DLMER_rsd700y0_4_data.txt   Data      Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLMER_rsd700y0_4_legend.txt Legend    Merklingen                           Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_MEV_rsd700y0_1_data.txt     Data      Mervelier                            Days of the year with precipitation total exceeding 69.9 mm 1905-2011
+order_94892_MEV_rsd700y0_1_legend.txt   Legend    Mervelier                            Days of the year with precipitation total exceeding 69.9 mm 1905-2011
+order_94892_MEV_rsd700y0_2_data.txt     Data      Mervelier                            Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_MEV_rsd700y0_2_legend.txt   Legend    Mervelier                            Days of the year with precipitation total exceeding 69.9 mm 2012-2020
+order_94892_MCD_rsd700y0_1_data.txt     Data      Montcherand                          Days of the year with precipitation total exceeding 69.9 mm 1901-1933
+order_94892_MCD_rsd700y0_1_legend.txt   Legend    Montcherand                          Days of the year with precipitation total exceeding 69.9 mm 1901-1933
+order_94892_MTO_rsd700y0_1_data.txt     Data      Montenol                             Days of the year with precipitation total exceeding 69.9 mm 1997-2020
+order_94892_MTO_rsd700y0_1_legend.txt   Legend    Montenol                             Days of the year with precipitation total exceeding 69.9 mm 1997-2020
+order_94892_MOS_rsd700y0_1_data.txt     Data      Morbio Superiore                     Days of the year with precipitation total exceeding 69.9 mm 1973-2020
+order_94892_MOS_rsd700y0_1_legend.txt   Legend    Morbio Superiore                     Days of the year with precipitation total exceeding 69.9 mm 1973-2020
+order_94892_MMO_rsd700y0_1_data.txt     Data      Mormont                              Days of the year with precipitation total exceeding 69.9 mm 1888-2020
+order_94892_MMO_rsd700y0_1_legend.txt   Legend    Mormont                              Days of the year with precipitation total exceeding 69.9 mm 1888-2020
+order_94892_MDO_rsd700y0_1_data.txt     Data      Moudon                               Days of the year with precipitation total exceeding 69.9 mm 1900-2005
+order_94892_MDO_rsd700y0_1_legend.txt   Legend    Moudon                               Days of the year with precipitation total exceeding 69.9 mm 1900-2005
+order_94892_MDO_rsd700y0_2_data.txt     Data      Moudon                               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_MDO_rsd700y0_2_legend.txt   Legend    Moudon                               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_MOU_rsd700y0_1_data.txt     Data      Moutier                              Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_MOU_rsd700y0_1_legend.txt   Legend    Moutier                              Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_MMMOU_rsd700y0_1_data.txt   Data      Moutier                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMMOU_rsd700y0_1_legend.txt Legend    Moutier                              Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMMOU_rsd700y0_2_data.txt   Data      Moutier                              Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_MMMOU_rsd700y0_2_legend.txt Legend    Moutier                              Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_MUO_rsd700y0_1_data.txt     Data      Muotathal                            Days of the year with precipitation total exceeding 69.9 mm 1960-2005
+order_94892_MUO_rsd700y0_1_legend.txt   Legend    Muotathal                            Days of the year with precipitation total exceeding 69.9 mm 1960-2005
+order_94892_MUR_rsd700y0_1_data.txt     Data      Muri, AG                             Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_MUR_rsd700y0_1_legend.txt   Legend    Muri, AG                             Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_MRW_rsd700y0_1_data.txt     Data      Möriswang                            Days of the year with precipitation total exceeding 69.9 mm 1991-1997
+order_94892_MRW_rsd700y0_1_legend.txt   Legend    Möriswang                            Days of the year with precipitation total exceeding 69.9 mm 1991-1997
+order_94892_MHT_rsd700y0_1_data.txt     Data      Mühleturnen                          Days of the year with precipitation total exceeding 69.9 mm 1971-1985
+order_94892_MHT_rsd700y0_1_legend.txt   Legend    Mühleturnen                          Days of the year with precipitation total exceeding 69.9 mm 1971-1985
+order_94892_MMMUM_rsd700y0_1_data.txt   Data      Mümliswil                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMMUM_rsd700y0_1_legend.txt Legend    Mümliswil                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMMUM_rsd700y0_2_data.txt   Data      Mümliswil                            Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_MMMUM_rsd700y0_2_legend.txt Legend    Mümliswil                            Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_DLMUC_rsd700y0_1_data.txt   Data      München                              Days of the year with precipitation total exceeding 69.9 mm 1954-2015
+order_94892_DLMUC_rsd700y0_1_legend.txt Legend    München                              Days of the year with precipitation total exceeding 69.9 mm 1954-2015
+order_94892_DLMUC_rsd700y0_2_data.txt   Data      München                              Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLMUC_rsd700y0_2_legend.txt Legend    München                              Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_IYNAT_rsd700y0_1_data.txt   Data      Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1919-1943
+order_94892_IYNAT_rsd700y0_1_legend.txt Legend    Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1919-1943
+order_94892_IYNAT_rsd700y0_2_data.txt   Data      Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1958-1964
+order_94892_IYNAT_rsd700y0_2_legend.txt Legend    Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1958-1964
+order_94892_IYNAT_rsd700y0_3_data.txt   Data      Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1966-1983
+order_94892_IYNAT_rsd700y0_3_legend.txt Legend    Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1966-1983
+order_94892_IYNAT_rsd700y0_4_data.txt   Data      Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1984-2007
+order_94892_IYNAT_rsd700y0_4_legend.txt Legend    Naturns                              Days of the year with precipitation total exceeding 69.9 mm 1984-2007
+order_94892_IYNAT_rsd700y0_5_data.txt   Data      Naturns                              Days of the year with precipitation total exceeding 69.9 mm 2009-2018
+order_94892_IYNAT_rsd700y0_5_legend.txt Legend    Naturns                              Days of the year with precipitation total exceeding 69.9 mm 2009-2018
+order_94892_DLNBL_rsd700y0_1_data.txt   Data      Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 1995-2000
+order_94892_DLNBL_rsd700y0_1_legend.txt Legend    Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 1995-2000
+order_94892_DLNBL_rsd700y0_2_data.txt   Data      Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLNBL_rsd700y0_2_legend.txt Legend    Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLNBL_rsd700y0_3_data.txt   Data      Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLNBL_rsd700y0_3_legend.txt Legend    Neubulach                            Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLNEU_rsd700y0_1_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Days of the year with precipitation total exceeding 69.9 mm 1993-2003
+order_94892_DLNEU_rsd700y0_1_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Days of the year with precipitation total exceeding 69.9 mm 1993-2003
+order_94892_DLNEU_rsd700y0_2_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Days of the year with precipitation total exceeding 69.9 mm 2005-2019
+order_94892_DLNEU_rsd700y0_2_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Days of the year with precipitation total exceeding 69.9 mm 2005-2019
+order_94892_TINOV_rsd700y0_1_data.txt   Data      Novaggio                             Days of the year with precipitation total exceeding 69.9 mm 2005-2016
+order_94892_TINOV_rsd700y0_1_legend.txt Legend    Novaggio                             Days of the year with precipitation total exceeding 69.9 mm 2005-2016
+order_94892_TINOV_rsd700y0_2_data.txt   Data      Novaggio                             Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_TINOV_rsd700y0_2_legend.txt Legend    Novaggio                             Days of the year with precipitation total exceeding 69.9 mm 2017-2020
+order_94892_ZHNUR_rsd700y0_1_data.txt   Data      Nürensdorf                           Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_ZHNUR_rsd700y0_1_legend.txt Legend    Nürensdorf                           Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_DLOBH_rsd700y0_1_data.txt   Data      Oberhaching                          Days of the year with precipitation total exceeding 69.9 mm 2007-2015
+order_94892_DLOBH_rsd700y0_1_legend.txt Legend    Oberhaching                          Days of the year with precipitation total exceeding 69.9 mm 2007-2015
+order_94892_DLOBH_rsd700y0_2_data.txt   Data      Oberhaching                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLOBH_rsd700y0_2_legend.txt Legend    Oberhaching                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_OBD_rsd700y0_1_data.txt     Data      Obstalden                            Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_OBD_rsd700y0_1_legend.txt   Legend    Obstalden                            Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_OTI_rsd700y0_1_data.txt     Data      Oltingen                             Days of the year with precipitation total exceeding 69.9 mm 1968-1986
+order_94892_OTI_rsd700y0_1_legend.txt   Legend    Oltingen                             Days of the year with precipitation total exceeding 69.9 mm 1968-1986
+order_94892_ORZ_rsd700y0_1_data.txt     Data      Orzens                               Days of the year with precipitation total exceeding 69.9 mm 1972-2020
+order_94892_ORZ_rsd700y0_1_legend.txt   Legend    Orzens                               Days of the year with precipitation total exceeding 69.9 mm 1972-2020
+order_94892_DLPFU_rsd700y0_1_data.txt   Data      Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 1957-2001
+order_94892_DLPFU_rsd700y0_1_legend.txt Legend    Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 1957-2001
+order_94892_DLPFU_rsd700y0_2_data.txt   Data      Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 2003-2015
+order_94892_DLPFU_rsd700y0_2_legend.txt Legend    Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 2003-2015
+order_94892_DLPFU_rsd700y0_3_data.txt   Data      Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLPFU_rsd700y0_3_legend.txt Legend    Pfullendorf                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_PFA_rsd700y0_1_data.txt     Data      Pfäffikon, ZH                        Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_PFA_rsd700y0_1_legend.txt   Legend    Pfäffikon, ZH                        Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_REG_rsd700y0_1_data.txt     Data      Reigoldswil                          Days of the year with precipitation total exceeding 69.9 mm 1960-2012
+order_94892_REG_rsd700y0_1_legend.txt   Legend    Reigoldswil                          Days of the year with precipitation total exceeding 69.9 mm 1960-2012
+order_94892_REG_rsd700y0_2_data.txt     Data      Reigoldswil                          Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_REG_rsd700y0_2_legend.txt   Legend    Reigoldswil                          Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_AGREH_rsd700y0_1_data.txt   Data      Reinach                              Days of the year with precipitation total exceeding 69.9 mm 1999-2012
+order_94892_AGREH_rsd700y0_1_legend.txt Legend    Reinach                              Days of the year with precipitation total exceeding 69.9 mm 1999-2012
+order_94892_AGREH_rsd700y0_2_data.txt   Data      Reinach                              Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_AGREH_rsd700y0_2_legend.txt Legend    Reinach                              Days of the year with precipitation total exceeding 69.9 mm 2014-2016
+order_94892_DLREI_rsd700y0_1_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1898-1935
+order_94892_DLREI_rsd700y0_1_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1898-1935
+order_94892_DLREI_rsd700y0_2_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1938-1943
+order_94892_DLREI_rsd700y0_2_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1938-1943
+order_94892_DLREI_rsd700y0_3_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1945-1950
+order_94892_DLREI_rsd700y0_3_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1945-1950
+order_94892_DLREI_rsd700y0_4_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1951-2002
+order_94892_DLREI_rsd700y0_4_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 1951-2002
+order_94892_DLREI_rsd700y0_5_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 2007-2015
+order_94892_DLREI_rsd700y0_5_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 2007-2015
+order_94892_DLREI_rsd700y0_6_data.txt   Data      Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_DLREI_rsd700y0_6_legend.txt Legend    Reit im Winkl                        Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_REM_rsd700y0_1_data.txt     Data      Rempen                               Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_REM_rsd700y0_1_legend.txt   Legend    Rempen                               Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_VDREV_rsd700y0_1_data.txt   Data      Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2010-2011
+order_94892_VDREV_rsd700y0_1_legend.txt Legend    Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2010-2011
+order_94892_VDREV_rsd700y0_2_data.txt   Data      Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDREV_rsd700y0_2_legend.txt Legend    Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDREV_rsd700y0_3_data.txt   Data      Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDREV_rsd700y0_3_legend.txt Legend    Reverolle                            Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_WHF_rsd700y0_1_data.txt     Data      Riedholz / Wallierhof                Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_WHF_rsd700y0_1_legend.txt   Legend    Riedholz / Wallierhof                Days of the year with precipitation total exceeding 69.9 mm 1968-2020
+order_94892_RMM_rsd700y0_1_data.txt     Data      Romainmôtier                         Days of the year with precipitation total exceeding 69.9 mm 1917-1938
+order_94892_RMM_rsd700y0_1_legend.txt   Legend    Romainmôtier                         Days of the year with precipitation total exceeding 69.9 mm 1917-1938
+order_94892_ROM_rsd700y0_1_data.txt     Data      Romont                               Days of the year with precipitation total exceeding 69.9 mm 1882-1893
+order_94892_ROM_rsd700y0_1_legend.txt   Legend    Romont                               Days of the year with precipitation total exceeding 69.9 mm 1882-1893
+order_94892_ROM_rsd700y0_2_data.txt     Data      Romont                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_ROM_rsd700y0_2_legend.txt   Legend    Romont                               Days of the year with precipitation total exceeding 69.9 mm 1899-2020
+order_94892_ROT_rsd700y0_1_data.txt     Data      Rothenbrunnen                        Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_ROT_rsd700y0_1_legend.txt   Legend    Rothenbrunnen                        Days of the year with precipitation total exceeding 69.9 mm 1969-2020
+order_94892_DLROT_rsd700y0_1_data.txt   Data      Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1940-1944
+order_94892_DLROT_rsd700y0_1_legend.txt Legend    Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1940-1944
+order_94892_DLROT_rsd700y0_2_data.txt   Data      Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1946-1977
+order_94892_DLROT_rsd700y0_2_legend.txt Legend    Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1946-1977
+order_94892_DLROT_rsd700y0_3_data.txt   Data      Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1984-2002
+order_94892_DLROT_rsd700y0_3_legend.txt Legend    Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 1984-2002
+order_94892_DLROT_rsd700y0_4_data.txt   Data      Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLROT_rsd700y0_4_legend.txt Legend    Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 2004-2015
+order_94892_DLROT_rsd700y0_5_data.txt   Data      Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLROT_rsd700y0_5_legend.txt Legend    Rottweil                             Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_RUE_rsd700y0_1_data.txt     Data      Rünenberg                            Days of the year with precipitation total exceeding 69.9 mm 1982-2020
+order_94892_RUE_rsd700y0_1_legend.txt   Legend    Rünenberg                            Days of the year with precipitation total exceeding 69.9 mm 1982-2020
+order_94892_SAR_rsd700y0_1_data.txt     Data      Sargans                              Days of the year with precipitation total exceeding 69.9 mm 1863-1886
+order_94892_SAR_rsd700y0_1_legend.txt   Legend    Sargans                              Days of the year with precipitation total exceeding 69.9 mm 1863-1886
+order_94892_SAR_rsd700y0_2_data.txt     Data      Sargans                              Days of the year with precipitation total exceeding 69.9 mm 1888-2020
+order_94892_SAR_rsd700y0_2_legend.txt   Legend    Sargans                              Days of the year with precipitation total exceeding 69.9 mm 1888-2020
+order_94892_FLSAA_rsd700y0_1_data.txt   Data      Schaanwald                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_FLSAA_rsd700y0_1_legend.txt Legend    Schaanwald                           Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_SRS_rsd700y0_1_data.txt     Data      Schiers                              Days of the year with precipitation total exceeding 69.9 mm 1899-1990
+order_94892_SRS_rsd700y0_1_legend.txt   Legend    Schiers                              Days of the year with precipitation total exceeding 69.9 mm 1899-1990
+order_94892_SRS_rsd700y0_2_data.txt     Data      Schiers                              Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_SRS_rsd700y0_2_legend.txt   Legend    Schiers                              Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_IYSCH_rsd700y0_1_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1920-1942
+order_94892_IYSCH_rsd700y0_1_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1920-1942
+order_94892_IYSCH_rsd700y0_2_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1944-1945
+order_94892_IYSCH_rsd700y0_2_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1944-1945
+order_94892_IYSCH_rsd700y0_3_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1946-1947
+order_94892_IYSCH_rsd700y0_3_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1946-1947
+order_94892_IYSCH_rsd700y0_4_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1948-1963
+order_94892_IYSCH_rsd700y0_4_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1948-1963
+order_94892_IYSCH_rsd700y0_5_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1964-1978
+order_94892_IYSCH_rsd700y0_5_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1964-1978
+order_94892_IYSCH_rsd700y0_6_data.txt   Data      Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1979-2018
+order_94892_IYSCH_rsd700y0_6_legend.txt Legend    Schlanders                           Days of the year with precipitation total exceeding 69.9 mm 1979-2018
+order_94892_GLSWA_rsd700y0_1_data.txt   Data      Schwanden                            Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLSWA_rsd700y0_1_legend.txt Legend    Schwanden                            Days of the year with precipitation total exceeding 69.9 mm 2014-2015
+order_94892_GLSWA_rsd700y0_2_data.txt   Data      Schwanden                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_GLSWA_rsd700y0_2_legend.txt Legend    Schwanden                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_WSLSCF_rsd700y0_1_data.txt  Data      Schänis Freiland                     Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_WSLSCF_rsd700y0_1_legend.txt Legend    Schänis Freiland                     Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_SOE_rsd700y0_1_data.txt     Data      Schönenberg                          Days of the year with precipitation total exceeding 69.9 mm 1960-1975
+order_94892_SOE_rsd700y0_1_legend.txt   Legend    Schönenberg                          Days of the year with precipitation total exceeding 69.9 mm 1960-1975
+order_94892_SWE_rsd700y0_1_data.txt     Data      Seewen                               Days of the year with precipitation total exceeding 69.9 mm 1960-1983
+order_94892_SWE_rsd700y0_1_legend.txt   Legend    Seewen                               Days of the year with precipitation total exceeding 69.9 mm 1960-1983
+order_94892_SPA_rsd700y0_1_data.txt     Data      Sempach                              Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_SPA_rsd700y0_1_legend.txt   Legend    Sempach                              Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_LUSEM_rsd700y0_1_data.txt   Data      Sempach                              Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_LUSEM_rsd700y0_1_legend.txt Legend    Sempach                              Days of the year with precipitation total exceeding 69.9 mm 2018-2019
+order_94892_SRE_rsd700y0_1_data.txt     Data      Sierre                               Days of the year with precipitation total exceeding 69.9 mm 1900-1923
+order_94892_SRE_rsd700y0_1_legend.txt   Legend    Sierre                               Days of the year with precipitation total exceeding 69.9 mm 1900-1923
+order_94892_SRE_rsd700y0_2_data.txt     Data      Sierre                               Days of the year with precipitation total exceeding 69.9 mm 1924-2005
+order_94892_SRE_rsd700y0_2_legend.txt   Legend    Sierre                               Days of the year with precipitation total exceeding 69.9 mm 1924-2005
+order_94892_SRE_rsd700y0_3_data.txt     Data      Sierre                               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_SRE_rsd700y0_3_legend.txt   Legend    Sierre                               Days of the year with precipitation total exceeding 69.9 mm 2006-2020
+order_94892_VSSIE_rsd700y0_1_data.txt   Data      Sierre                               Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_VSSIE_rsd700y0_1_legend.txt Legend    Sierre                               Days of the year with precipitation total exceeding 69.9 mm 2013-2020
+order_94892_DLSIG_rsd700y0_1_data.txt   Data      Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 1950-1975
+order_94892_DLSIG_rsd700y0_1_legend.txt Legend    Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 1950-1975
+order_94892_DLSIG_rsd700y0_2_data.txt   Data      Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 1977-2015
+order_94892_DLSIG_rsd700y0_2_legend.txt Legend    Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 1977-2015
+order_94892_DLSIG_rsd700y0_3_data.txt   Data      Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLSIG_rsd700y0_3_legend.txt Legend    Sigmaringen                          Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLSIZ_rsd700y0_1_data.txt   Data      Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 1930-1944
+order_94892_DLSIZ_rsd700y0_1_legend.txt Legend    Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 1930-1944
+order_94892_DLSIZ_rsd700y0_2_data.txt   Data      Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 1946-2015
+order_94892_DLSIZ_rsd700y0_2_legend.txt Legend    Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 1946-2015
+order_94892_DLSIZ_rsd700y0_3_data.txt   Data      Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_DLSIZ_rsd700y0_3_legend.txt Legend    Sigmarszell-Zeisertsweiler           Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_SDB_rsd700y0_1_data.txt     Data      Signal-de-Bougy                      Days of the year with precipitation total exceeding 69.9 mm 1971-1980
+order_94892_SDB_rsd700y0_1_legend.txt   Legend    Signal-de-Bougy                      Days of the year with precipitation total exceeding 69.9 mm 1971-1980
+order_94892_SIH_rsd700y0_1_data.txt     Data      Sihlbrugg                            Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_SIH_rsd700y0_1_legend.txt   Legend    Sihlbrugg                            Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_ION_rsd700y0_1_data.txt     Data      Sion                                 Days of the year with precipitation total exceeding 69.9 mm 1864-1977
+order_94892_ION_rsd700y0_1_legend.txt   Legend    Sion                                 Days of the year with precipitation total exceeding 69.9 mm 1864-1977
+order_94892_TISOM_rsd700y0_1_data.txt   Data      Somazzo                              Days of the year with precipitation total exceeding 69.9 mm 1995-2007
+order_94892_TISOM_rsd700y0_1_legend.txt Legend    Somazzo                              Days of the year with precipitation total exceeding 69.9 mm 1995-2007
+order_94892_TISOM_rsd700y0_2_data.txt   Data      Somazzo                              Days of the year with precipitation total exceeding 69.9 mm 2013-2014
+order_94892_TISOM_rsd700y0_2_legend.txt Legend    Somazzo                              Days of the year with precipitation total exceeding 69.9 mm 2013-2014
+order_94892_SCS_rsd700y0_1_data.txt     Data      St. Chrischona BS                    Days of the year with precipitation total exceeding 69.9 mm 1916-1994
+order_94892_SCS_rsd700y0_1_legend.txt   Legend    St. Chrischona BS                    Days of the year with precipitation total exceeding 69.9 mm 1916-1994
+order_94892_IYSMP_rsd700y0_1_data.txt   Data      St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1920-1944
+order_94892_IYSMP_rsd700y0_1_legend.txt Legend    St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1920-1944
+order_94892_IYSMP_rsd700y0_2_data.txt   Data      St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1945-1950
+order_94892_IYSMP_rsd700y0_2_legend.txt Legend    St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1945-1950
+order_94892_IYSMP_rsd700y0_3_data.txt   Data      St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1951-2011
+order_94892_IYSMP_rsd700y0_3_legend.txt Legend    St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 1951-2011
+order_94892_IYSMP_rsd700y0_4_data.txt   Data      St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_IYSMP_rsd700y0_4_legend.txt Legend    St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 2012-2015
+order_94892_IYSMP_rsd700y0_5_data.txt   Data      St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 2016-2018
+order_94892_IYSMP_rsd700y0_5_legend.txt Legend    St. Martin in Passeier               Days of the year with precipitation total exceeding 69.9 mm 2016-2018
+order_94892_SPZ_rsd700y0_1_data.txt     Data      St. Peterzell                        Days of the year with precipitation total exceeding 69.9 mm 1900-1954
+order_94892_SPZ_rsd700y0_1_legend.txt   Legend    St. Peterzell                        Days of the year with precipitation total exceeding 69.9 mm 1900-1954
+order_94892_SPZ_rsd700y0_2_data.txt     Data      St. Peterzell                        Days of the year with precipitation total exceeding 69.9 mm 1955-2020
+order_94892_SPZ_rsd700y0_2_legend.txt   Legend    St. Peterzell                        Days of the year with precipitation total exceeding 69.9 mm 1955-2020
+order_94892_AST_rsd700y0_1_data.txt     Data      Stalden / Ackersand                  Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_AST_rsd700y0_1_legend.txt   Legend    Stalden / Ackersand                  Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_LUSUR_rsd700y0_1_data.txt   Data      Sursee                               Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_LUSUR_rsd700y0_1_legend.txt Legend    Sursee                               Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_TAF_rsd700y0_1_data.txt     Data      Tafers                               Days of the year with precipitation total exceeding 69.9 mm 1988-2020
+order_94892_TAF_rsd700y0_1_legend.txt   Legend    Tafers                               Days of the year with precipitation total exceeding 69.9 mm 1988-2020
+order_94892_TAM_rsd700y0_1_data.txt     Data      Tamins                               Days of the year with precipitation total exceeding 69.9 mm 1967-2020
+order_94892_TAM_rsd700y0_1_legend.txt   Legend    Tamins                               Days of the year with precipitation total exceeding 69.9 mm 1967-2020
+order_94892_TAN_rsd700y0_1_data.txt     Data      Tannegg                              Days of the year with precipitation total exceeding 69.9 mm 1899-1978
+order_94892_TAN_rsd700y0_1_legend.txt   Legend    Tannegg                              Days of the year with precipitation total exceeding 69.9 mm 1899-1978
+order_94892_THU_rsd700y0_1_data.txt     Data      Thun                                 Days of the year with precipitation total exceeding 69.9 mm 1875-2020
+order_94892_THU_rsd700y0_1_legend.txt   Legend    Thun                                 Days of the year with precipitation total exceeding 69.9 mm 1875-2020
+order_94892_TDO_rsd700y0_1_data.txt     Data      Thundorf                             Days of the year with precipitation total exceeding 69.9 mm 1900-1933
+order_94892_TDO_rsd700y0_1_legend.txt   Legend    Thundorf                             Days of the year with precipitation total exceeding 69.9 mm 1900-1933
+order_94892_TDO_rsd700y0_2_data.txt     Data      Thundorf                             Days of the year with precipitation total exceeding 69.9 mm 1960-2004
+order_94892_TDO_rsd700y0_2_legend.txt   Legend    Thundorf                             Days of the year with precipitation total exceeding 69.9 mm 1960-2004
+order_94892_THS_rsd700y0_1_data.txt     Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1891-1898
+order_94892_THS_rsd700y0_1_legend.txt   Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1891-1898
+order_94892_THS_rsd700y0_2_data.txt     Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1900-1902
+order_94892_THS_rsd700y0_2_legend.txt   Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1900-1902
+order_94892_THS_rsd700y0_3_data.txt     Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1903-1944
+order_94892_THS_rsd700y0_3_legend.txt   Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1903-1944
+order_94892_THS_rsd700y0_4_data.txt     Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1945-1946
+order_94892_THS_rsd700y0_4_legend.txt   Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1945-1946
+order_94892_THS_rsd700y0_5_data.txt     Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1947-2020
+order_94892_THS_rsd700y0_5_legend.txt   Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 1947-2020
+order_94892_MMPRV_rsd700y0_1_data.txt   Data      Thusis                               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_MMPRV_rsd700y0_1_legend.txt Legend    Thusis                               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_MMTIT_rsd700y0_1_data.txt   Data      Titterten                            Days of the year with precipitation total exceeding 69.9 mm 2012-2013
+order_94892_MMTIT_rsd700y0_1_legend.txt Legend    Titterten                            Days of the year with precipitation total exceeding 69.9 mm 2012-2013
+order_94892_MMTIT_rsd700y0_2_data.txt   Data      Titterten                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_MMTIT_rsd700y0_2_legend.txt Legend    Titterten                            Days of the year with precipitation total exceeding 69.9 mm 2016-2017
+order_94892_ZHTUR_rsd700y0_1_data.txt   Data      Turbenthal                           Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_ZHTUR_rsd700y0_1_legend.txt Legend    Turbenthal                           Days of the year with precipitation total exceeding 69.9 mm 2017-2019
+order_94892_TUR_rsd700y0_1_data.txt     Data      Turtmann                             Days of the year with precipitation total exceeding 69.9 mm 1970-1982
+order_94892_TUR_rsd700y0_1_legend.txt   Legend    Turtmann                             Days of the year with precipitation total exceeding 69.9 mm 1970-1982
+order_94892_WSLUIB_rsd700y0_1_data.txt  Data      Uitikon Bestand                      Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_WSLUIB_rsd700y0_1_legend.txt Legend    Uitikon Bestand                      Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_WSLUIF_rsd700y0_1_data.txt  Data      Uitikon Freiland                     Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_WSLUIF_rsd700y0_1_legend.txt Legend    Uitikon Freiland                     Days of the year with precipitation total exceeding 69.9 mm 2018-2020
+order_94892_DLULM_rsd700y0_1_data.txt   Data      Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1893-1923
+order_94892_DLULM_rsd700y0_1_legend.txt Legend    Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1893-1923
+order_94892_DLULM_rsd700y0_2_data.txt   Data      Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1925-1944
+order_94892_DLULM_rsd700y0_2_legend.txt Legend    Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1925-1944
+order_94892_DLULM_rsd700y0_3_data.txt   Data      Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1946-2013
+order_94892_DLULM_rsd700y0_3_legend.txt Legend    Ulm                                  Days of the year with precipitation total exceeding 69.9 mm 1946-2013
+order_94892_VDVAL_rsd700y0_1_data.txt   Data      Valeyres-sous-Montagny               Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDVAL_rsd700y0_1_legend.txt Legend    Valeyres-sous-Montagny               Days of the year with precipitation total exceeding 69.9 mm 2012-2018
+order_94892_VDVAL_rsd700y0_2_data.txt   Data      Valeyres-sous-Montagny               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VDVAL_rsd700y0_2_legend.txt Legend    Valeyres-sous-Montagny               Days of the year with precipitation total exceeding 69.9 mm 2019-2020
+order_94892_VAR_rsd700y0_1_data.txt     Data      Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1882-1886
+order_94892_VAR_rsd700y0_1_legend.txt   Legend    Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1882-1886
+order_94892_VAR_rsd700y0_2_data.txt     Data      Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1887-1889
+order_94892_VAR_rsd700y0_2_legend.txt   Legend    Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1887-1889
+order_94892_VAR_rsd700y0_3_data.txt     Data      Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1892-1897
+order_94892_VAR_rsd700y0_3_legend.txt   Legend    Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1892-1897
+order_94892_VAR_rsd700y0_4_data.txt     Data      Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1898-2020
+order_94892_VAR_rsd700y0_4_legend.txt   Legend    Valeyres-sous-Rances                 Days of the year with precipitation total exceeding 69.9 mm 1898-2020
+order_94892_VDPPI_rsd700y0_1_data.txt   Data      Villeneuve, Le Pissot                Days of the year with precipitation total exceeding 69.9 mm 2010-2018
+order_94892_VDPPI_rsd700y0_1_legend.txt Legend    Villeneuve, Le Pissot                Days of the year with precipitation total exceeding 69.9 mm 2010-2018
+order_94892_VIS_rsd700y0_1_data.txt     Data      Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1979-2020
+order_94892_VIS_rsd700y0_1_legend.txt   Legend    Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1979-2020
+order_94892_VSP_rsd700y0_1_data.txt     Data      Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1899-1971
+order_94892_VSP_rsd700y0_1_legend.txt   Legend    Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1899-1971
+order_94892_ISP_rsd700y0_1_data.txt     Data      Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1971-1982
+order_94892_ISP_rsd700y0_1_legend.txt   Legend    Visp                                 Days of the year with precipitation total exceeding 69.9 mm 1971-1982
+order_94892_WSLVSF_rsd700y0_1_data.txt  Data      Visp Freiland                        Days of the year with precipitation total exceeding 69.9 mm 2017-2018
+order_94892_WSLVSF_rsd700y0_1_legend.txt Legend    Visp Freiland                        Days of the year with precipitation total exceeding 69.9 mm 2017-2018
+order_94892_WAG_rsd700y0_1_data.txt     Data      Waldegg                              Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_WAG_rsd700y0_1_legend.txt   Legend    Waldegg                              Days of the year with precipitation total exceeding 69.9 mm 1960-2020
+order_94892_WAB_rsd700y0_1_data.txt     Data      Waldenburg                           Days of the year with precipitation total exceeding 69.9 mm 1899-2002
+order_94892_WAB_rsd700y0_1_legend.txt   Legend    Waldenburg                           Days of the year with precipitation total exceeding 69.9 mm 1899-2002
+order_94892_WWM_rsd700y0_1_data.txt     Data      Wauwilermoos                         Days of the year with precipitation total exceeding 69.9 mm 1960-1973
+order_94892_WWM_rsd700y0_1_legend.txt   Legend    Wauwilermoos                         Days of the year with precipitation total exceeding 69.9 mm 1960-1973
+order_94892_WER_rsd700y0_1_data.txt     Data      Wernetshausen                        Days of the year with precipitation total exceeding 69.9 mm 1960-1985
+order_94892_WER_rsd700y0_1_legend.txt   Legend    Wernetshausen                        Days of the year with precipitation total exceeding 69.9 mm 1960-1985
+order_94892_DLWIE_rsd700y0_1_data.txt   Data      Wielenbach                           Days of the year with precipitation total exceeding 69.9 mm 1999-2015
+order_94892_DLWIE_rsd700y0_1_legend.txt Legend    Wielenbach                           Days of the year with precipitation total exceeding 69.9 mm 1999-2015
+order_94892_DLWIE_rsd700y0_2_data.txt   Data      Wielenbach                           Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_DLWIE_rsd700y0_2_legend.txt Legend    Wielenbach                           Days of the year with precipitation total exceeding 69.9 mm 2016-2020
+order_94892_SGWIL_rsd700y0_1_data.txt   Data      Wil                                  Days of the year with precipitation total exceeding 69.9 mm 1993-2013
+order_94892_SGWIL_rsd700y0_1_legend.txt Legend    Wil                                  Days of the year with precipitation total exceeding 69.9 mm 1993-2013
+order_94892_SGWIL_rsd700y0_2_data.txt   Data      Wil                                  Days of the year with precipitation total exceeding 69.9 mm 2014-2020
+order_94892_SGWIL_rsd700y0_2_legend.txt Legend    Wil                                  Days of the year with precipitation total exceeding 69.9 mm 2014-2020
+order_94892_LUWIL_rsd700y0_1_data.txt   Data      Willisau                             Days of the year with precipitation total exceeding 69.9 mm 2015-2019
+order_94892_LUWIL_rsd700y0_1_legend.txt Legend    Willisau                             Days of the year with precipitation total exceeding 69.9 mm 2015-2019
+order_94892_WIS_rsd700y0_1_data.txt     Data      Wimmis                               Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_WIS_rsd700y0_1_legend.txt   Legend    Wimmis                               Days of the year with precipitation total exceeding 69.9 mm 1900-2020
+order_94892_WIN_rsd700y0_1_data.txt     Data      Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1863-1870
+order_94892_WIN_rsd700y0_1_legend.txt   Legend    Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1863-1870
+order_94892_WIN_rsd700y0_2_data.txt     Data      Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1871-1875
+order_94892_WIN_rsd700y0_2_legend.txt   Legend    Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1871-1875
+order_94892_WIN_rsd700y0_3_data.txt     Data      Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1877-2020
+order_94892_WIN_rsd700y0_3_legend.txt   Legend    Winterthur / Seen                    Days of the year with precipitation total exceeding 69.9 mm 1877-2020
+order_94892_LUWOL_rsd700y0_1_data.txt   Data      Wolhusen                             Days of the year with precipitation total exceeding 69.9 mm 2015-2020
+order_94892_LUWOL_rsd700y0_1_legend.txt Legend    Wolhusen                             Days of the year with precipitation total exceeding 69.9 mm 2015-2020
+order_94892_ZHZEL_rsd700y0_1_data.txt   Data      Zell / Rämismühle                    Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_ZHZEL_rsd700y0_1_legend.txt Legend    Zell / Rämismühle                    Days of the year with precipitation total exceeding 69.9 mm 2016-2019
+order_94892_SMA_rsd700y0_1_data.txt     Data      Zürich / Fluntern                    Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_SMA_rsd700y0_1_legend.txt   Legend    Zürich / Fluntern                    Days of the year with precipitation total exceeding 69.9 mm 1863-2020
+order_94892_ZST_rsd700y0_1_data.txt     Data      Zürich-Strickhof                     Days of the year with precipitation total exceeding 69.9 mm 1960-1975
+order_94892_ZST_rsd700y0_1_legend.txt   Legend    Zürich-Strickhof                     Days of the year with precipitation total exceeding 69.9 mm 1960-1975

@@ -1,0 +1,572 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94906
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94906_ABO_rre150y0_1_data.txt     Data      Adelboden                            Precipitation; annual total                                 1900-2020
+order_94906_ABO_rre150y0_1_legend.txt   Legend    Adelboden                            Precipitation; annual total                                 1900-2020
+order_94906_AIR_rre150y0_1_data.txt     Data      Airolo                               Precipitation; annual total                                 1883-2020
+order_94906_AIR_rre150y0_1_legend.txt   Legend    Airolo                               Precipitation; annual total                                 1883-2020
+order_94906_ALV_rre150y0_1_data.txt     Data      Alvaneu Dorf                         Precipitation; annual total                                 1972-2020
+order_94906_ALV_rre150y0_1_legend.txt   Legend    Alvaneu Dorf                         Precipitation; annual total                                 1972-2020
+order_94906_ANT_rre150y0_1_data.txt     Data      Andermatt                            Precipitation; annual total                                 1880-2020
+order_94906_ANT_rre150y0_1_legend.txt   Legend    Andermatt                            Precipitation; annual total                                 1880-2020
+order_94906_URANT_rre150y0_1_data.txt   Data      Andermatt / ARA                      Precipitation; annual total                                 2018-2019
+order_94906_URANT_rre150y0_1_legend.txt Legend    Andermatt / ARA                      Precipitation; annual total                                 2018-2019
+order_94906_IYANT_rre150y0_1_data.txt   Data      Antholz Obertal                      Precipitation; annual total                                 1990-2018
+order_94906_IYANT_rre150y0_1_legend.txt Legend    Antholz Obertal                      Precipitation; annual total                                 1990-2018
+order_94906_BAC_rre150y0_1_data.txt     Data      Bachtel                              Precipitation; annual total                                 1960-2002
+order_94906_BAC_rre150y0_1_legend.txt   Legend    Bachtel                              Precipitation; annual total                                 1960-2002
+order_94906_BSW_rre150y0_1_data.txt     Data      Bad Schwendi                         Precipitation; annual total                                 1973-2004
+order_94906_BSW_rre150y0_1_legend.txt   Legend    Bad Schwendi                         Precipitation; annual total                                 1973-2004
+order_94906_BAL_rre150y0_1_data.txt     Data      Balmberg                             Precipitation; annual total                                 1973-1995
+order_94906_BAL_rre150y0_1_legend.txt   Legend    Balmberg                             Precipitation; annual total                                 1973-1995
+order_94906_VSBAS_rre150y0_1_data.txt   Data      Baltschiedertal                      Precipitation; annual total                                 2013-2015
+order_94906_VSBAS_rre150y0_1_legend.txt Legend    Baltschiedertal                      Precipitation; annual total                                 2013-2015
+order_94906_VSBAS_rre150y0_2_data.txt   Data      Baltschiedertal                      Precipitation; annual total                                 2016-2018
+order_94906_VSBAS_rre150y0_2_legend.txt Legend    Baltschiedertal                      Precipitation; annual total                                 2016-2018
+order_94906_BEA_rre150y0_1_data.txt     Data      Beatenberg                           Precipitation; annual total                                 1958-1980
+order_94906_BEA_rre150y0_1_legend.txt   Legend    Beatenberg                           Precipitation; annual total                                 1958-1980
+order_94906_TIBED_rre150y0_1_data.txt   Data      Bedretto                             Precipitation; annual total                                 1982-1996
+order_94906_TIBED_rre150y0_1_legend.txt Legend    Bedretto                             Precipitation; annual total                                 1982-1996
+order_94906_TIBED_rre150y0_2_data.txt   Data      Bedretto                             Precipitation; annual total                                 1999-2010
+order_94906_TIBED_rre150y0_2_legend.txt Legend    Bedretto                             Precipitation; annual total                                 1999-2010
+order_94906_TIBED_rre150y0_3_data.txt   Data      Bedretto                             Precipitation; annual total                                 2011-2016
+order_94906_TIBED_rre150y0_3_legend.txt Legend    Bedretto                             Precipitation; annual total                                 2011-2016
+order_94906_TIBED_rre150y0_4_data.txt   Data      Bedretto                             Precipitation; annual total                                 2017-2020
+order_94906_TIBED_rre150y0_4_legend.txt Legend    Bedretto                             Precipitation; annual total                                 2017-2020
+order_94906_LAT_rre150y0_1_data.txt     Data      Bergün / Latsch                      Precipitation; annual total                                 1972-2020
+order_94906_LAT_rre150y0_1_legend.txt   Legend    Bergün / Latsch                      Precipitation; annual total                                 1972-2020
+order_94906_WSLBTB_rre150y0_1_data.txt  Data      Bettlachstock Bestand                Precipitation; annual total                                 2017-2018
+order_94906_WSLBTB_rre150y0_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; annual total                                 2017-2018
+order_94906_TIBIA_rre150y0_1_data.txt   Data      Biasca / Pontirone                   Precipitation; annual total                                 2007-2016
+order_94906_TIBIA_rre150y0_1_legend.txt Legend    Biasca / Pontirone                   Precipitation; annual total                                 2007-2016
+order_94906_TIBIA_rre150y0_2_data.txt   Data      Biasca / Pontirone                   Precipitation; annual total                                 2017-2018
+order_94906_TIBIA_rre150y0_2_legend.txt Legend    Biasca / Pontirone                   Precipitation; annual total                                 2017-2018
+order_94906_BIN_rre150y0_1_data.txt     Data      Binn                                 Precipitation; annual total                                 1899-2020
+order_94906_BIN_rre150y0_1_legend.txt   Legend    Binn                                 Precipitation; annual total                                 1899-2020
+order_94906_BLA_rre150y0_1_data.txt     Data      Blatten, Lötschental                 Precipitation; annual total                                 2001-2020
+order_94906_BLA_rre150y0_1_legend.txt   Legend    Blatten, Lötschental                 Precipitation; annual total                                 2001-2020
+order_94906_VSBLI_rre150y0_1_data.txt   Data      Blinnen                              Precipitation; annual total                                 2014-2017
+order_94906_VSBLI_rre150y0_1_legend.txt Legend    Blinnen                              Precipitation; annual total                                 2014-2017
+order_94906_BOS_rre150y0_1_data.txt     Data      Bosco/Gurin                          Precipitation; annual total                                 1958-2020
+order_94906_BOS_rre150y0_1_legend.txt   Legend    Bosco/Gurin                          Precipitation; annual total                                 1958-2020
+order_94906_BRA_rre150y0_1_data.txt     Data      Braggio                              Precipitation; annual total                                 1900-1960
+order_94906_BRA_rre150y0_1_legend.txt   Legend    Braggio                              Precipitation; annual total                                 1900-1960
+order_94906_BRA_rre150y0_2_data.txt     Data      Braggio                              Precipitation; annual total                                 1963-1967
+order_94906_BRA_rre150y0_2_legend.txt   Legend    Braggio                              Precipitation; annual total                                 1963-1967
+order_94906_BRA_rre150y0_3_data.txt     Data      Braggio                              Precipitation; annual total                                 1969-2020
+order_94906_BRA_rre150y0_3_legend.txt   Legend    Braggio                              Precipitation; annual total                                 1969-2020
+order_94906_BRW_rre150y0_1_data.txt     Data      Braunwald                            Precipitation; annual total                                 1918-2020
+order_94906_BRW_rre150y0_1_legend.txt   Legend    Braunwald                            Precipitation; annual total                                 1918-2020
+order_94906_FRE_rre150y0_1_data.txt     Data      Bullet / La Frétaz                   Precipitation; annual total                                 1977-2020
+order_94906_FRE_rre150y0_1_legend.txt   Legend    Bullet / La Frétaz                   Precipitation; annual total                                 1977-2020
+order_94906_TICVM_rre150y0_1_data.txt   Data      Campo Vallemaggia                    Precipitation; annual total                                 2001-2016
+order_94906_TICVM_rre150y0_1_legend.txt Legend    Campo Vallemaggia                    Precipitation; annual total                                 2001-2016
+order_94906_TICVM_rre150y0_2_data.txt   Data      Campo Vallemaggia                    Precipitation; annual total                                 2017-2020
+order_94906_TICVM_rre150y0_2_legend.txt Legend    Campo Vallemaggia                    Precipitation; annual total                                 2017-2020
+order_94906_VSCHY_rre150y0_1_data.txt   Data      Champéry                             Precipitation; annual total                                 2010-2012
+order_94906_VSCHY_rre150y0_1_legend.txt Legend    Champéry                             Precipitation; annual total                                 2010-2012
+order_94906_VSCHY_rre150y0_2_data.txt   Data      Champéry                             Precipitation; annual total                                 2013-2014
+order_94906_VSCHY_rre150y0_2_legend.txt Legend    Champéry                             Precipitation; annual total                                 2013-2014
+order_94906_VSCHY_rre150y0_3_data.txt   Data      Champéry                             Precipitation; annual total                                 2015-2016
+order_94906_VSCHY_rre150y0_3_legend.txt Legend    Champéry                             Precipitation; annual total                                 2015-2016
+order_94906_VSCHY_rre150y0_4_data.txt   Data      Champéry                             Precipitation; annual total                                 2017-2018
+order_94906_VSCHY_rre150y0_4_legend.txt Legend    Champéry                             Precipitation; annual total                                 2017-2018
+order_94906_CHM_rre150y0_1_data.txt     Data      Chaumont                             Precipitation; annual total                                 1863-2020
+order_94906_CHM_rre150y0_1_legend.txt   Legend    Chaumont                             Precipitation; annual total                                 1863-2020
+order_94906_NABCHA_rre150y0_1_data.txt  Data      Chaumont / Bosset                    Precipitation; annual total                                 2010-2012
+order_94906_NABCHA_rre150y0_1_legend.txt Legend    Chaumont / Bosset                    Precipitation; annual total                                 2010-2012
+order_94906_NABCHA_rre150y0_2_data.txt  Data      Chaumont / Bosset                    Precipitation; annual total                                 2013-2014
+order_94906_NABCHA_rre150y0_2_legend.txt Legend    Chaumont / Bosset                    Precipitation; annual total                                 2013-2014
+order_94906_TICHI_rre150y0_1_data.txt   Data      Chironico                            Precipitation; annual total                                 2011-2013
+order_94906_TICHI_rre150y0_1_legend.txt Legend    Chironico                            Precipitation; annual total                                 2011-2013
+order_94906_TICHI_rre150y0_2_data.txt   Data      Chironico                            Precipitation; annual total                                 2014-2016
+order_94906_TICHI_rre150y0_2_legend.txt Legend    Chironico                            Precipitation; annual total                                 2014-2016
+order_94906_TICHI_rre150y0_3_data.txt   Data      Chironico                            Precipitation; annual total                                 2017-2020
+order_94906_TICHI_rre150y0_3_legend.txt Legend    Chironico                            Precipitation; annual total                                 2017-2020
+order_94906_WSLCIF_rre150y0_1_data.txt  Data      Chironico Freiland                   Precipitation; annual total                                 2017-2018
+order_94906_WSLCIF_rre150y0_1_legend.txt Legend    Chironico Freiland                   Precipitation; annual total                                 2017-2018
+order_94906_CTB_rre150y0_1_data.txt     Data      Chuttelbad                           Precipitation; annual total                                 1971-1977
+order_94906_CTB_rre150y0_1_legend.txt   Legend    Chuttelbad                           Precipitation; annual total                                 1971-1977
+order_94906_CDM_rre150y0_1_data.txt     Data      Col des Mosses                       Precipitation; annual total                                 1971-2020
+order_94906_CDM_rre150y0_1_legend.txt   Legend    Col des Mosses                       Precipitation; annual total                                 1971-2020
+order_94906_TICOL_rre150y0_1_data.txt   Data      Colla                                Precipitation; annual total                                 2006-2016
+order_94906_TICOL_rre150y0_1_legend.txt Legend    Colla                                Precipitation; annual total                                 2006-2016
+order_94906_TICOL_rre150y0_2_data.txt   Data      Colla                                Precipitation; annual total                                 2017-2020
+order_94906_TICOL_rre150y0_2_legend.txt Legend    Colla                                Precipitation; annual total                                 2017-2020
+order_94906_VSDER_rre150y0_1_data.txt   Data      Derborence                           Precipitation; annual total                                 2013-2020
+order_94906_VSDER_rre150y0_1_legend.txt Legend    Derborence                           Precipitation; annual total                                 2013-2020
+order_94906_IYDEU_rre150y0_1_data.txt   Data      Deutschnofen                         Precipitation; annual total                                 1926-1938
+order_94906_IYDEU_rre150y0_1_legend.txt Legend    Deutschnofen                         Precipitation; annual total                                 1926-1938
+order_94906_IYDEU_rre150y0_2_data.txt   Data      Deutschnofen                         Precipitation; annual total                                 1939-1943
+order_94906_IYDEU_rre150y0_2_legend.txt Legend    Deutschnofen                         Precipitation; annual total                                 1939-1943
+order_94906_IYDEU_rre150y0_3_data.txt   Data      Deutschnofen                         Precipitation; annual total                                 1981-1982
+order_94906_IYDEU_rre150y0_3_legend.txt Legend    Deutschnofen                         Precipitation; annual total                                 1981-1982
+order_94906_IYDEU_rre150y0_4_data.txt   Data      Deutschnofen                         Precipitation; annual total                                 1990-2018
+order_94906_IYDEU_rre150y0_4_legend.txt Legend    Deutschnofen                         Precipitation; annual total                                 1990-2018
+order_94906_DIS_rre150y0_1_data.txt     Data      Disentis                             Precipitation; annual total                                 1958-2020
+order_94906_DIS_rre150y0_1_legend.txt   Legend    Disentis                             Precipitation; annual total                                 1958-2020
+order_94906_VSDUR_rre150y0_1_data.txt   Data      Durnand                              Precipitation; annual total                                 2012-2020
+order_94906_VSDUR_rre150y0_1_legend.txt Legend    Durnand                              Precipitation; annual total                                 2012-2020
+order_94906_EIT_rre150y0_1_data.txt     Data      Eigenthal                            Precipitation; annual total                                 1900-2020
+order_94906_EIT_rre150y0_1_legend.txt   Legend    Eigenthal                            Precipitation; annual total                                 1900-2020
+order_94906_VSERG_rre150y0_1_data.txt   Data      Ergisch                              Precipitation; annual total                                 2014-2020
+order_94906_VSERG_rre150y0_1_legend.txt Legend    Ergisch                              Precipitation; annual total                                 2014-2020
+order_94906_EVL_rre150y0_1_data.txt     Data      Evolène                              Precipitation; annual total                                 1979-2004
+order_94906_EVL_rre150y0_1_legend.txt   Legend    Evolène                              Precipitation; annual total                                 1979-2004
+order_94906_DLFEB_rre150y0_1_data.txt   Data      Feldberg, Schwarzwald                Precipitation; annual total                                 1940-1944
+order_94906_DLFEB_rre150y0_1_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; annual total                                 1940-1944
+order_94906_DLFEB_rre150y0_2_data.txt   Data      Feldberg, Schwarzwald                Precipitation; annual total                                 1945-2016
+order_94906_DLFEB_rre150y0_2_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; annual total                                 1945-2016
+order_94906_DLFEB_rre150y0_3_data.txt   Data      Feldberg, Schwarzwald                Precipitation; annual total                                 2017-2018
+order_94906_DLFEB_rre150y0_3_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; annual total                                 2017-2018
+order_94906_DLFEB_rre150y0_4_data.txt   Data      Feldberg, Schwarzwald                Precipitation; annual total                                 2019-2020
+order_94906_DLFEB_rre150y0_4_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; annual total                                 2019-2020
+order_94906_FIE_rre150y0_1_data.txt     Data      Fiesch                               Precipitation; annual total                                 1900-1960
+order_94906_FIE_rre150y0_1_legend.txt   Legend    Fiesch                               Precipitation; annual total                                 1900-1960
+order_94906_FIE_rre150y0_2_data.txt     Data      Fiesch                               Precipitation; annual total                                 1974-1990
+order_94906_FIE_rre150y0_2_legend.txt   Legend    Fiesch                               Precipitation; annual total                                 1974-1990
+order_94906_FIT_rre150y0_1_data.txt     Data      Fieschertal                          Precipitation; annual total                                 1999-2020
+order_94906_FIT_rre150y0_1_legend.txt   Legend    Fieschertal                          Precipitation; annual total                                 1999-2020
+order_94906_CTA_rre150y0_1_data.txt     Data      Finhaut                              Precipitation; annual total                                 1968-2020
+order_94906_CTA_rre150y0_1_legend.txt   Legend    Finhaut                              Precipitation; annual total                                 1968-2020
+order_94906_FIO_rre150y0_1_data.txt     Data      Fionnay                              Precipitation; annual total                                 1996-2020
+order_94906_FIO_rre150y0_1_legend.txt   Legend    Fionnay                              Precipitation; annual total                                 1996-2020
+order_94906_FLI_rre150y0_1_data.txt     Data      Flims                                Precipitation; annual total                                 1960-2020
+order_94906_FLI_rre150y0_1_legend.txt   Legend    Flims                                Precipitation; annual total                                 1960-2020
+order_94906_FUS_rre150y0_1_data.txt     Data      Fusio                                Precipitation; annual total                                 1960-1973
+order_94906_FUS_rre150y0_1_legend.txt   Legend    Fusio                                Precipitation; annual total                                 1960-1973
+order_94906_TIFUS_rre150y0_1_data.txt   Data      Fusio                                Precipitation; annual total                                 2004-2006
+order_94906_TIFUS_rre150y0_1_legend.txt Legend    Fusio                                Precipitation; annual total                                 2004-2006
+order_94906_TIFUS_rre150y0_2_data.txt   Data      Fusio                                Precipitation; annual total                                 2010-2016
+order_94906_TIFUS_rre150y0_2_legend.txt Legend    Fusio                                Precipitation; annual total                                 2010-2016
+order_94906_TIFUS_rre150y0_3_data.txt   Data      Fusio                                Precipitation; annual total                                 2017-2020
+order_94906_TIFUS_rre150y0_3_legend.txt Legend    Fusio                                Precipitation; annual total                                 2017-2020
+order_94906_GAD_rre150y0_1_data.txt     Data      Gadmen                               Precipitation; annual total                                 1911-1920
+order_94906_GAD_rre150y0_1_legend.txt   Legend    Gadmen                               Precipitation; annual total                                 1911-1920
+order_94906_GAD_rre150y0_2_data.txt     Data      Gadmen                               Precipitation; annual total                                 1923-2020
+order_94906_GAD_rre150y0_2_legend.txt   Legend    Gadmen                               Precipitation; annual total                                 1923-2020
+order_94906_BEGAD_rre150y0_1_data.txt   Data      Gadmen                               Precipitation; annual total                                 2008-2012
+order_94906_BEGAD_rre150y0_1_legend.txt Legend    Gadmen                               Precipitation; annual total                                 2008-2012
+order_94906_BEGAD_rre150y0_2_data.txt   Data      Gadmen                               Precipitation; annual total                                 2013-2020
+order_94906_BEGAD_rre150y0_2_legend.txt Legend    Gadmen                               Precipitation; annual total                                 2013-2020
+order_94906_TIGAN_rre150y0_1_data.txt   Data      Gambarogno / Alpe di Neggia          Precipitation; annual total                                 2019-2020
+order_94906_TIGAN_rre150y0_1_legend.txt Legend    Gambarogno / Alpe di Neggia          Precipitation; annual total                                 2019-2020
+order_94906_GSM_rre150y0_1_data.txt     Data      Grand Som Martel                     Precipitation; annual total                                 1970-1974
+order_94906_GSM_rre150y0_1_legend.txt   Legend    Grand Som Martel                     Precipitation; annual total                                 1970-1974
+order_94906_GRI_rre150y0_1_data.txt     Data      Grimentz                             Precipitation; annual total                                 1906-2020
+order_94906_GRI_rre150y0_1_legend.txt   Legend    Grimentz                             Precipitation; annual total                                 1906-2020
+order_94906_GWA_rre150y0_1_data.txt     Data      Grindelwald                          Precipitation; annual total                                 1913-2020
+order_94906_GWA_rre150y0_1_legend.txt   Legend    Grindelwald                          Precipitation; annual total                                 1913-2020
+order_94906_GRY_rre150y0_1_data.txt     Data      Gryon                                Precipitation; annual total                                 1902-2020
+order_94906_GRY_rre150y0_1_legend.txt   Legend    Gryon                                Precipitation; annual total                                 1902-2020
+order_94906_GST_rre150y0_1_data.txt     Data      Gstaad                               Precipitation; annual total                                 1981-2010
+order_94906_GST_rre150y0_1_legend.txt   Legend    Gstaad                               Precipitation; annual total                                 1981-2010
+order_94906_GSG_rre150y0_1_data.txt     Data      Gsteig, Gstaad                       Precipitation; annual total                                 1900-2020
+order_94906_GSG_rre150y0_1_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; annual total                                 1900-2020
+order_94906_BERIF_rre150y0_1_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; annual total                                 2002-2012
+order_94906_BERIF_rre150y0_1_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; annual total                                 2002-2012
+order_94906_BERIF_rre150y0_2_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; annual total                                 2013-2015
+order_94906_BERIF_rre150y0_2_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; annual total                                 2013-2015
+order_94906_BERIF_rre150y0_3_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; annual total                                 2016-2018
+order_94906_BERIF_rre150y0_3_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; annual total                                 2016-2018
+order_94906_BERIF_rre150y0_4_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; annual total                                 2019-2020
+order_94906_BERIF_rre150y0_4_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; annual total                                 2019-2020
+order_94906_GNB_rre150y0_1_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; annual total                                 1971-1975
+order_94906_GNB_rre150y0_1_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; annual total                                 1971-1975
+order_94906_GNB_rre150y0_2_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; annual total                                 1981-1994
+order_94906_GNB_rre150y0_2_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; annual total                                 1981-1994
+order_94906_GTT_rre150y0_1_data.txt     Data      Guttannen                            Precipitation; annual total                                 1876-2020
+order_94906_GTT_rre150y0_1_legend.txt   Legend    Guttannen                            Precipitation; annual total                                 1876-2020
+order_94906_BEHAK_rre150y0_1_data.txt   Data      Habkern                              Precipitation; annual total                                 2008-2012
+order_94906_BEHAK_rre150y0_1_legend.txt Legend    Habkern                              Precipitation; annual total                                 2008-2012
+order_94906_BEHAK_rre150y0_2_data.txt   Data      Habkern                              Precipitation; annual total                                 2013-2020
+order_94906_BEHAK_rre150y0_2_legend.txt Legend    Habkern                              Precipitation; annual total                                 2013-2020
+order_94906_BEHAB_rre150y0_1_data.txt   Data      Hasliberg                            Precipitation; annual total                                 2008-2012
+order_94906_BEHAB_rre150y0_1_legend.txt Legend    Hasliberg                            Precipitation; annual total                                 2008-2012
+order_94906_BEHAB_rre150y0_2_data.txt   Data      Hasliberg                            Precipitation; annual total                                 2013-2020
+order_94906_BEHAB_rre150y0_2_legend.txt Legend    Hasliberg                            Precipitation; annual total                                 2013-2020
+order_94906_HDI_rre150y0_1_data.txt     Data      Heiligenschwendi                     Precipitation; annual total                                 1930-1970
+order_94906_HDI_rre150y0_1_legend.txt   Legend    Heiligenschwendi                     Precipitation; annual total                                 1930-1970
+order_94906_GLSAN_rre150y0_1_data.txt   Data      Hinter Sand                          Precipitation; annual total                                 2014-2015
+order_94906_GLSAN_rre150y0_1_legend.txt Legend    Hinter Sand                          Precipitation; annual total                                 2014-2015
+order_94906_GLSAN_rre150y0_2_data.txt   Data      Hinter Sand                          Precipitation; annual total                                 2016-2017
+order_94906_GLSAN_rre150y0_2_legend.txt Legend    Hinter Sand                          Precipitation; annual total                                 2016-2017
+order_94906_GLSAN_rre150y0_3_data.txt   Data      Hinter Sand                          Precipitation; annual total                                 2018-2019
+order_94906_GLSAN_rre150y0_3_legend.txt Legend    Hinter Sand                          Precipitation; annual total                                 2018-2019
+order_94906_HOY_rre150y0_1_data.txt     Data      Hoch-Ybrig                           Precipitation; annual total                                 1972-2020
+order_94906_HOY_rre150y0_1_legend.txt   Legend    Hoch-Ybrig                           Precipitation; annual total                                 1972-2020
+order_94906_HER_rre150y0_1_data.txt     Data      Hérémence                            Precipitation; annual total                                 1906-2020
+order_94906_HER_rre150y0_1_legend.txt   Legend    Hérémence                            Precipitation; annual total                                 1906-2020
+order_94906_HOE_rre150y0_1_data.txt     Data      Hörnli                               Precipitation; annual total                                 2005-2020
+order_94906_HOE_rre150y0_1_legend.txt   Legend    Hörnli                               Precipitation; annual total                                 2005-2020
+order_94906_INF_rre150y0_1_data.txt     Data      Innerferrera                         Precipitation; annual total                                 1960-2020
+order_94906_INF_rre150y0_1_legend.txt   Legend    Innerferrera                         Precipitation; annual total                                 1960-2020
+order_94906_WSLISB_rre150y0_1_data.txt  Data      Isone Bestand                        Precipitation; annual total                                 2017-2019
+order_94906_WSLISB_rre150y0_1_legend.txt Legend    Isone Bestand                        Precipitation; annual total                                 2017-2019
+order_94906_WSLISF_rre150y0_1_data.txt  Data      Isone Freiland                       Precipitation; annual total                                 2019-2020
+order_94906_WSLISF_rre150y0_1_legend.txt Legend    Isone Freiland                       Precipitation; annual total                                 2019-2020
+order_94906_VSISE_rre150y0_1_data.txt   Data      Isérables                            Precipitation; annual total                                 2013-2020
+order_94906_VSISE_rre150y0_1_legend.txt Legend    Isérables                            Precipitation; annual total                                 2013-2020
+order_94906_KAS_rre150y0_1_data.txt     Data      Kandersteg                           Precipitation; annual total                                 1899-2020
+order_94906_KAS_rre150y0_1_legend.txt   Legend    Kandersteg                           Precipitation; annual total                                 1899-2020
+order_94906_KIL_rre150y0_1_data.txt     Data      Kiley-Alp                            Precipitation; annual total                                 1968-1972
+order_94906_KIL_rre150y0_1_legend.txt   Legend    Kiley-Alp                            Precipitation; annual total                                 1968-1972
+order_94906_KIP_rre150y0_1_data.txt     Data      Kippel                               Precipitation; annual total                                 1914-1973
+order_94906_KIP_rre150y0_1_legend.txt   Legend    Kippel                               Precipitation; annual total                                 1914-1973
+order_94906_KLA_rre150y0_1_data.txt     Data      Klosters                             Precipitation; annual total                                 1863-1876
+order_94906_KLA_rre150y0_1_legend.txt   Legend    Klosters                             Precipitation; annual total                                 1863-1876
+order_94906_KLA_rre150y0_2_data.txt     Data      Klosters                             Precipitation; annual total                                 1885-1887
+order_94906_KLA_rre150y0_2_legend.txt   Legend    Klosters                             Precipitation; annual total                                 1885-1887
+order_94906_KLA_rre150y0_3_data.txt     Data      Klosters                             Precipitation; annual total                                 1898-2020
+order_94906_KLA_rre150y0_3_legend.txt   Legend    Klosters                             Precipitation; annual total                                 1898-2020
+order_94906_AUB_rre150y0_1_data.txt     Data      L' Auberson                          Precipitation; annual total                                 1914-2020
+order_94906_AUB_rre150y0_1_legend.txt   Legend    L' Auberson                          Precipitation; annual total                                 1914-2020
+order_94906_BRL_rre150y0_1_data.txt     Data      La Brévine                           Precipitation; annual total                                 1900-1930
+order_94906_BRL_rre150y0_1_legend.txt   Legend    La Brévine                           Precipitation; annual total                                 1900-1930
+order_94906_BRL_rre150y0_2_data.txt     Data      La Brévine                           Precipitation; annual total                                 1932-2020
+order_94906_BRL_rre150y0_2_legend.txt   Legend    La Brévine                           Precipitation; annual total                                 1932-2020
+order_94906_CUE_rre150y0_1_data.txt     Data      La Cure                              Precipitation; annual total                                 1900-2020
+order_94906_CUE_rre150y0_1_legend.txt   Legend    La Cure                              Precipitation; annual total                                 1900-2020
+order_94906_LSE_rre150y0_1_data.txt     Data      La Sagne Eglise                      Precipitation; annual total                                 1969-1974
+order_94906_LSE_rre150y0_1_legend.txt   Legend    La Sagne Eglise                      Precipitation; annual total                                 1969-1974
+order_94906_LTO_rre150y0_1_data.txt     Data      La Tourne                            Precipitation; annual total                                 1972-1974
+order_94906_LTO_rre150y0_1_legend.txt   Legend    La Tourne                            Precipitation; annual total                                 1972-1974
+order_94906_LBG_rre150y0_1_data.txt     Data      Lauenen bei Gstaad                   Precipitation; annual total                                 1971-1999
+order_94906_LBG_rre150y0_1_legend.txt   Legend    Lauenen bei Gstaad                   Precipitation; annual total                                 1971-1999
+order_94906_BOI_rre150y0_1_data.txt     Data      Le Boinod                            Precipitation; annual total                                 1969-1974
+order_94906_BOI_rre150y0_1_legend.txt   Legend    Le Boinod                            Precipitation; annual total                                 1969-1974
+order_94906_LBA_rre150y0_1_data.txt     Data      Le Brassus                           Precipitation; annual total                                 1971-1991
+order_94906_LBA_rre150y0_1_legend.txt   Legend    Le Brassus                           Precipitation; annual total                                 1971-1991
+order_94906_SEP_rre150y0_1_data.txt     Data      Le Sepey                             Precipitation; annual total                                 1976-1996
+order_94906_SEP_rre150y0_1_legend.txt   Legend    Le Sepey                             Precipitation; annual total                                 1976-1996
+order_94906_LEN_rre150y0_1_data.txt     Data      Lenk                                 Precipitation; annual total                                 1900-1934
+order_94906_LEN_rre150y0_1_legend.txt   Legend    Lenk                                 Precipitation; annual total                                 1900-1934
+order_94906_LEN_rre150y0_2_data.txt     Data      Lenk                                 Precipitation; annual total                                 2000-2020
+order_94906_LEN_rre150y0_2_legend.txt   Legend    Lenk                                 Precipitation; annual total                                 2000-2020
+order_94906_MMLEN_rre150y0_1_data.txt   Data      Lenk                                 Precipitation; annual total                                 2016-2020
+order_94906_MMLEN_rre150y0_1_legend.txt Legend    Lenk                                 Precipitation; annual total                                 2016-2020
+order_94906_LEH_rre150y0_1_data.txt     Data      Lenzerheide                          Precipitation; annual total                                 1960-2020
+order_94906_LEH_rre150y0_1_legend.txt   Legend    Lenzerheide                          Precipitation; annual total                                 1960-2020
+order_94906_DIB_rre150y0_1_data.txt     Data      Les Diablerets                       Precipitation; annual total                                 1960-2020
+order_94906_DIB_rre150y0_1_legend.txt   Legend    Les Diablerets                       Precipitation; annual total                                 1960-2020
+order_94906_PSB_rre150y0_1_data.txt     Data      Les Plans-sur-Bex                    Precipitation; annual total                                 1960-2002
+order_94906_PSB_rre150y0_1_legend.txt   Legend    Les Plans-sur-Bex                    Precipitation; annual total                                 1960-2002
+order_94906_PDM_rre150y0_1_data.txt     Data      Les Ponts-de-Martel                  Precipitation; annual total                                 1900-2020
+order_94906_PDM_rre150y0_1_legend.txt   Legend    Les Ponts-de-Martel                  Precipitation; annual total                                 1900-2020
+order_94906_LRO_rre150y0_1_data.txt     Data      Les Rots                             Precipitation; annual total                                 1969-1974
+order_94906_LRO_rre150y0_1_legend.txt   Legend    Les Rots                             Precipitation; annual total                                 1969-1974
+order_94906_LEU_rre150y0_1_data.txt     Data      Leukerbad                            Precipitation; annual total                                 1884-2020
+order_94906_LEU_rre150y0_1_legend.txt   Legend    Leukerbad                            Precipitation; annual total                                 1884-2020
+order_94906_LYN_rre150y0_1_data.txt     Data      Leysin                               Precipitation; annual total                                 1930-1976
+order_94906_LYN_rre150y0_1_legend.txt   Legend    Leysin                               Precipitation; annual total                                 1930-1976
+order_94906_BELUA_rre150y0_1_data.txt   Data      Lüderenalp                           Precipitation; annual total                                 2013-2017
+order_94906_BELUA_rre150y0_1_legend.txt Legend    Lüderenalp                           Precipitation; annual total                                 2013-2017
+order_94906_BELUA_rre150y0_2_data.txt   Data      Lüderenalp                           Precipitation; annual total                                 2018-2020
+order_94906_BELUA_rre150y0_2_legend.txt Legend    Lüderenalp                           Precipitation; annual total                                 2018-2020
+order_94906_FLMAI_rre150y0_1_data.txt   Data      Maienfeld / Guscha                   Precipitation; annual total                                 2013-2020
+order_94906_FLMAI_rre150y0_1_legend.txt Legend    Maienfeld / Guscha                   Precipitation; annual total                                 2013-2020
+order_94906_BEMBE_rre150y0_1_data.txt   Data      Marbachegg                           Precipitation; annual total                                 2013-2020
+order_94906_BEMBE_rre150y0_1_legend.txt Legend    Marbachegg                           Precipitation; annual total                                 2013-2020
+order_94906_IYMMR_rre150y0_1_data.txt   Data      Marienberg                           Precipitation; annual total                                 1923-2018
+order_94906_IYMMR_rre150y0_1_legend.txt Legend    Marienberg                           Precipitation; annual total                                 1923-2018
+order_94906_VSMAT_rre150y0_1_data.txt   Data      Mattsand                             Precipitation; annual total                                 2010-2020
+order_94906_VSMAT_rre150y0_1_legend.txt Legend    Mattsand                             Precipitation; annual total                                 2010-2020
+order_94906_MSO_rre150y0_1_data.txt     Data      Mont-Soleil                          Precipitation; annual total                                 1907-1993
+order_94906_MSO_rre150y0_1_legend.txt   Legend    Mont-Soleil                          Precipitation; annual total                                 1907-1993
+order_94906_MOD_rre150y0_1_data.txt     Data      Montagne du Droit                    Precipitation; annual total                                 1994-2020
+order_94906_MOD_rre150y0_1_legend.txt   Legend    Montagne du Droit                    Precipitation; annual total                                 1994-2020
+order_94906_MVE_rre150y0_1_data.txt     Data      Montana                              Precipitation; annual total                                 1930-2020
+order_94906_MVE_rre150y0_1_legend.txt   Legend    Montana                              Precipitation; annual total                                 1930-2020
+order_94906_MGI_rre150y0_1_data.txt     Data      Morgins                              Precipitation; annual total                                 1974-2020
+order_94906_MGI_rre150y0_1_legend.txt   Legend    Morgins                              Precipitation; annual total                                 1974-2020
+order_94906_GLMUL_rre150y0_1_data.txt   Data      Mullern                              Precipitation; annual total                                 2014-2018
+order_94906_GLMUL_rre150y0_1_legend.txt Legend    Mullern                              Precipitation; annual total                                 2014-2018
+order_94906_IYMUW_rre150y0_1_data.txt   Data      Mühlwald                             Precipitation; annual total                                 1970-1984
+order_94906_IYMUW_rre150y0_1_legend.txt Legend    Mühlwald                             Precipitation; annual total                                 1970-1984
+order_94906_IYMUW_rre150y0_2_data.txt   Data      Mühlwald                             Precipitation; annual total                                 1985-1986
+order_94906_IYMUW_rre150y0_2_legend.txt Legend    Mühlwald                             Precipitation; annual total                                 1985-1986
+order_94906_IYMUW_rre150y0_3_data.txt   Data      Mühlwald                             Precipitation; annual total                                 1987-2018
+order_94906_IYMUW_rre150y0_3_legend.txt Legend    Mühlwald                             Precipitation; annual total                                 1987-2018
+order_94906_MUS_rre150y0_1_data.txt     Data      Müstair                              Precipitation; annual total                                 1972-2020
+order_94906_MUS_rre150y0_1_legend.txt   Legend    Müstair                              Precipitation; annual total                                 1972-2020
+order_94906_NAP_rre150y0_1_data.txt     Data      Napf                                 Precipitation; annual total                                 1977-2020
+order_94906_NAP_rre150y0_1_legend.txt   Legend    Napf                                 Precipitation; annual total                                 1977-2020
+order_94906_NEB_rre150y0_1_data.txt     Data      Nesselboden                          Precipitation; annual total                                 1972-2008
+order_94906_NEB_rre150y0_1_legend.txt   Legend    Nesselboden                          Precipitation; annual total                                 1972-2008
+order_94906_NEB_rre150y0_2_data.txt     Data      Nesselboden                          Precipitation; annual total                                 2014-2020
+order_94906_NEB_rre150y0_2_legend.txt   Legend    Nesselboden                          Precipitation; annual total                                 2014-2020
+order_94906_OBI_rre150y0_1_data.txt     Data      Oberiberg                            Precipitation; annual total                                 1883-2020
+order_94906_OBI_rre150y0_1_legend.txt   Legend    Oberiberg                            Precipitation; annual total                                 1883-2020
+order_94906_OBW_rre150y0_1_data.txt     Data      Oberwald                             Precipitation; annual total                                 1900-1929
+order_94906_OBW_rre150y0_1_legend.txt   Legend    Oberwald                             Precipitation; annual total                                 1900-1929
+order_94906_OBW_rre150y0_2_data.txt     Data      Oberwald                             Precipitation; annual total                                 1951-2001
+order_94906_OBW_rre150y0_2_legend.txt   Legend    Oberwald                             Precipitation; annual total                                 1951-2001
+order_94906_IYPEN_rre150y0_1_data.txt   Data      Pens                                 Precipitation; annual total                                 1984-1985
+order_94906_IYPEN_rre150y0_1_legend.txt Legend    Pens                                 Precipitation; annual total                                 1984-1985
+order_94906_IYPEN_rre150y0_2_data.txt   Data      Pens                                 Precipitation; annual total                                 1991-2002
+order_94906_IYPEN_rre150y0_2_legend.txt Legend    Pens                                 Precipitation; annual total                                 1991-2002
+order_94906_IYPEN_rre150y0_3_data.txt   Data      Pens                                 Precipitation; annual total                                 2003-2008
+order_94906_IYPEN_rre150y0_3_legend.txt Legend    Pens                                 Precipitation; annual total                                 2003-2008
+order_94906_IYPEN_rre150y0_4_data.txt   Data      Pens                                 Precipitation; annual total                                 2009-2018
+order_94906_IYPEN_rre150y0_4_legend.txt Legend    Pens                                 Precipitation; annual total                                 2009-2018
+order_94906_PSL_rre150y0_1_data.txt     Data      Petit Som Martel                     Precipitation; annual total                                 1969-1973
+order_94906_PSL_rre150y0_1_legend.txt   Legend    Petit Som Martel                     Precipitation; annual total                                 1969-1973
+order_94906_PJO_rre150y0_1_data.txt     Data      Petite Joux                          Precipitation; annual total                                 1973-1974
+order_94906_PJO_rre150y0_1_legend.txt   Legend    Petite Joux                          Precipitation; annual total                                 1973-1974
+order_94906_IYPFI_rre150y0_1_data.txt   Data      Pfitsch / St. Jakob                  Precipitation; annual total                                 2010-2018
+order_94906_IYPFI_rre150y0_1_legend.txt Legend    Pfitsch / St. Jakob                  Precipitation; annual total                                 2010-2018
+order_94906_PIG_rre150y0_1_data.txt     Data      Pigniu                               Precipitation; annual total                                 1900-2020
+order_94906_PIG_rre150y0_1_legend.txt   Legend    Pigniu                               Precipitation; annual total                                 1900-2020
+order_94906_PLA_rre150y0_1_data.txt     Data      Platta (Medel)                       Precipitation; annual total                                 1960-1974
+order_94906_PLA_rre150y0_1_legend.txt   Legend    Platta (Medel)                       Precipitation; annual total                                 1960-1974
+order_94906_ROB_rre150y0_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; annual total                                 1958-2020
+order_94906_ROB_rre150y0_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; annual total                                 1958-2020
+order_94906_IYPRU_rre150y0_1_data.txt   Data      Prettau                              Precipitation; annual total                                 1979-1983
+order_94906_IYPRU_rre150y0_1_legend.txt Legend    Prettau                              Precipitation; annual total                                 1979-1983
+order_94906_IYPRU_rre150y0_2_data.txt   Data      Prettau                              Precipitation; annual total                                 1984-1986
+order_94906_IYPRU_rre150y0_2_legend.txt Legend    Prettau                              Precipitation; annual total                                 1984-1986
+order_94906_IYPRU_rre150y0_3_data.txt   Data      Prettau                              Precipitation; annual total                                 1988-2003
+order_94906_IYPRU_rre150y0_3_legend.txt Legend    Prettau                              Precipitation; annual total                                 1988-2003
+order_94906_IYPRU_rre150y0_4_data.txt   Data      Prettau                              Precipitation; annual total                                 2004-2018
+order_94906_IYPRU_rre150y0_4_legend.txt Legend    Prettau                              Precipitation; annual total                                 2004-2018
+order_94906_REC_rre150y0_1_data.txt     Data      Reckingen                            Precipitation; annual total                                 1900-1981
+order_94906_REC_rre150y0_1_legend.txt   Legend    Reckingen                            Precipitation; annual total                                 1900-1981
+order_94906_IYRID_rre150y0_1_data.txt   Data      Ridnaun                              Precipitation; annual total                                 1924-1933
+order_94906_IYRID_rre150y0_1_legend.txt Legend    Ridnaun                              Precipitation; annual total                                 1924-1933
+order_94906_IYRID_rre150y0_2_data.txt   Data      Ridnaun                              Precipitation; annual total                                 1934-1940
+order_94906_IYRID_rre150y0_2_legend.txt Legend    Ridnaun                              Precipitation; annual total                                 1934-1940
+order_94906_IYRID_rre150y0_3_data.txt   Data      Ridnaun                              Precipitation; annual total                                 1941-1959
+order_94906_IYRID_rre150y0_3_legend.txt Legend    Ridnaun                              Precipitation; annual total                                 1941-1959
+order_94906_IYRID_rre150y0_4_data.txt   Data      Ridnaun                              Precipitation; annual total                                 1960-2018
+order_94906_IYRID_rre150y0_4_legend.txt Legend    Ridnaun                              Precipitation; annual total                                 1960-2018
+order_94906_RIE_rre150y0_1_data.txt     Data      Ried, Lötschen                       Precipitation; annual total                                 1973-1998
+order_94906_RIE_rre150y0_1_legend.txt   Legend    Ried, Lötschen                       Precipitation; annual total                                 1973-1998
+order_94906_RIE_rre150y0_2_data.txt     Data      Ried, Lötschen                       Precipitation; annual total                                 1999-2004
+order_94906_RIE_rre150y0_2_legend.txt   Legend    Ried, Lötschen                       Precipitation; annual total                                 1999-2004
+order_94906_RIK_rre150y0_1_data.txt     Data      Rigi-Kaltbad                         Precipitation; annual total                                 1960-1979
+order_94906_RIK_rre150y0_1_legend.txt   Legend    Rigi-Kaltbad                         Precipitation; annual total                                 1960-1979
+order_94906_ROG_rre150y0_1_data.txt     Data      Rossberg                             Precipitation; annual total                                 2012-2015
+order_94906_ROG_rre150y0_1_legend.txt   Legend    Rossberg                             Precipitation; annual total                                 2012-2015
+order_94906_ROG_rre150y0_2_data.txt     Data      Rossberg                             Precipitation; annual total                                 2018-2020
+order_94906_ROG_rre150y0_2_legend.txt   Legend    Rossberg                             Precipitation; annual total                                 2018-2020
+order_94906_RUM_rre150y0_1_data.txt     Data      Rumein / Igels                       Precipitation; annual total                                 1968-1996
+order_94906_RUM_rre150y0_1_legend.txt   Legend    Rumein / Igels                       Precipitation; annual total                                 1968-1996
+order_94906_SNE_rre150y0_1_data.txt     Data      Saanen                               Precipitation; annual total                                 1965-1980
+order_94906_SNE_rre150y0_1_legend.txt   Legend    Saanen                               Precipitation; annual total                                 1965-1980
+order_94906_SBA_rre150y0_1_data.txt     Data      Saas Balen                           Precipitation; annual total                                 1994-2020
+order_94906_SBA_rre150y0_1_legend.txt   Legend    Saas Balen                           Precipitation; annual total                                 1994-2020
+order_94906_VSSAB_rre150y0_1_data.txt   Data      Saas Balen                           Precipitation; annual total                                 2010-2020
+order_94906_VSSAB_rre150y0_1_legend.txt Legend    Saas Balen                           Precipitation; annual total                                 2010-2020
+order_94906_SAP_rre150y0_1_data.txt     Data      Safien Platz                         Precipitation; annual total                                 1900-2020
+order_94906_SAP_rre150y0_1_legend.txt   Legend    Safien Platz                         Precipitation; annual total                                 1900-2020
+order_94906_SVG_rre150y0_1_data.txt     Data      Savognin                             Precipitation; annual total                                 1892-2020
+order_94906_SVG_rre150y0_1_legend.txt   Legend    Savognin                             Precipitation; annual total                                 1892-2020
+order_94906_BESCB_rre150y0_1_data.txt   Data      Schallenberg                         Precipitation; annual total                                 2013-2014
+order_94906_BESCB_rre150y0_1_legend.txt Legend    Schallenberg                         Precipitation; annual total                                 2013-2014
+order_94906_BESCB_rre150y0_2_data.txt   Data      Schallenberg                         Precipitation; annual total                                 2015-2020
+order_94906_BESCB_rre150y0_2_legend.txt Legend    Schallenberg                         Precipitation; annual total                                 2015-2020
+order_94906_SZS_rre150y0_1_data.txt     Data      Schwarzsee Bad                       Precipitation; annual total                                 1971-1974
+order_94906_SZS_rre150y0_1_legend.txt   Legend    Schwarzsee Bad                       Precipitation; annual total                                 1971-1974
+order_94906_SWB_rre150y0_1_data.txt     Data      Schwäbrig                            Precipitation; annual total                                 1973-1975
+order_94906_SWB_rre150y0_1_legend.txt   Legend    Schwäbrig                            Precipitation; annual total                                 1973-1975
+order_94906_SWI_rre150y0_1_data.txt     Data      Schwäbrig                            Precipitation; annual total                                 1960-1973
+order_94906_SWI_rre150y0_1_legend.txt   Legend    Schwäbrig                            Precipitation; annual total                                 1960-1973
+order_94906_SWA_rre150y0_1_data.txt     Data      Schwägalp                            Precipitation; annual total                                 1971-2020
+order_94906_SWA_rre150y0_1_legend.txt   Legend    Schwägalp                            Precipitation; annual total                                 1971-2020
+order_94906_SOB_rre150y0_1_data.txt     Data      Schönenboden                         Precipitation; annual total                                 1972-1979
+order_94906_SOB_rre150y0_1_legend.txt   Legend    Schönenboden                         Precipitation; annual total                                 1972-1979
+order_94906_SCU_rre150y0_1_data.txt     Data      Scuol                                Precipitation; annual total                                 1880-1883
+order_94906_SCU_rre150y0_1_legend.txt   Legend    Scuol                                Precipitation; annual total                                 1880-1883
+order_94906_SCU_rre150y0_2_data.txt     Data      Scuol                                Precipitation; annual total                                 1884-1896
+order_94906_SCU_rre150y0_2_legend.txt   Legend    Scuol                                Precipitation; annual total                                 1884-1896
+order_94906_SCU_rre150y0_3_data.txt     Data      Scuol                                Precipitation; annual total                                 1898-2020
+order_94906_SCU_rre150y0_3_legend.txt   Legend    Scuol                                Precipitation; annual total                                 1898-2020
+order_94906_SED_rre150y0_1_data.txt     Data      Sedrun                               Precipitation; annual total                                 1900-2020
+order_94906_SED_rre150y0_1_legend.txt   Legend    Sedrun                               Precipitation; annual total                                 1900-2020
+order_94906_SIM_rre150y0_1_data.txt     Data      Simplon-Dorf                         Precipitation; annual total                                 1960-2020
+order_94906_SIM_rre150y0_1_legend.txt   Legend    Simplon-Dorf                         Precipitation; annual total                                 1960-2020
+order_94906_SOG_rre150y0_1_data.txt     Data      Soglio                               Precipitation; annual total                                 1884-2020
+order_94906_SOG_rre150y0_1_legend.txt   Legend    Soglio                               Precipitation; annual total                                 1884-2020
+order_94906_SDO_rre150y0_1_data.txt     Data      Splügen                              Precipitation; annual total                                 1900-1967
+order_94906_SDO_rre150y0_1_legend.txt   Legend    Splügen                              Precipitation; annual total                                 1900-1967
+order_94906_SDO_rre150y0_2_data.txt     Data      Splügen                              Precipitation; annual total                                 1969-2020
+order_94906_SDO_rre150y0_2_legend.txt   Legend    Splügen                              Precipitation; annual total                                 1969-2020
+order_94906_SPL_rre150y0_1_data.txt     Data      Splügen                              Precipitation; annual total                                 1963-1967
+order_94906_SPL_rre150y0_1_legend.txt   Legend    Splügen                              Precipitation; annual total                                 1963-1967
+order_94906_SAN_rre150y0_1_data.txt     Data      St. Antönien                         Precipitation; annual total                                 1960-1971
+order_94906_SAN_rre150y0_1_legend.txt   Legend    St. Antönien                         Precipitation; annual total                                 1960-1971
+order_94906_SAN_rre150y0_2_data.txt     Data      St. Antönien                         Precipitation; annual total                                 1993-2020
+order_94906_SAN_rre150y0_2_legend.txt   Legend    St. Antönien                         Precipitation; annual total                                 1993-2020
+order_94906_IYSMG_rre150y0_1_data.txt   Data      St. Magdalena in Gsies               Precipitation; annual total                                 1979-2018
+order_94906_IYSMG_rre150y0_1_legend.txt Legend    St. Magdalena in Gsies               Precipitation; annual total                                 1979-2018
+order_94906_IYSMT_rre150y0_1_data.txt   Data      St. Martin in Thurn                  Precipitation; annual total                                 1988-2002
+order_94906_IYSMT_rre150y0_1_legend.txt Legend    St. Martin in Thurn                  Precipitation; annual total                                 1988-2002
+order_94906_IYSMT_rre150y0_2_data.txt   Data      St. Martin in Thurn                  Precipitation; annual total                                 2003-2018
+order_94906_IYSMT_rre150y0_2_legend.txt Legend    St. Martin in Thurn                  Precipitation; annual total                                 2003-2018
+order_94906_IYVAL_rre150y0_1_data.txt   Data      St. Valentin a.d. Haide              Precipitation; annual total                                 1920-1930
+order_94906_IYVAL_rre150y0_1_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; annual total                                 1920-1930
+order_94906_IYVAL_rre150y0_2_data.txt   Data      St. Valentin a.d. Haide              Precipitation; annual total                                 1931-1932
+order_94906_IYVAL_rre150y0_2_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; annual total                                 1931-1932
+order_94906_IYVAL_rre150y0_3_data.txt   Data      St. Valentin a.d. Haide              Precipitation; annual total                                 1933-1948
+order_94906_IYVAL_rre150y0_3_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; annual total                                 1933-1948
+order_94906_IYVAL_rre150y0_4_data.txt   Data      St. Valentin a.d. Haide              Precipitation; annual total                                 1951-2018
+order_94906_IYVAL_rre150y0_4_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; annual total                                 1951-2018
+order_94906_IYSVP_rre150y0_1_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1925-1926
+order_94906_IYSVP_rre150y0_1_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1925-1926
+order_94906_IYSVP_rre150y0_2_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1928-1940
+order_94906_IYSVP_rre150y0_2_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1928-1940
+order_94906_IYSVP_rre150y0_3_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1941-1944
+order_94906_IYSVP_rre150y0_3_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1941-1944
+order_94906_IYSVP_rre150y0_4_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1945-1948
+order_94906_IYSVP_rre150y0_4_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1945-1948
+order_94906_IYSVP_rre150y0_5_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1951-1958
+order_94906_IYSVP_rre150y0_5_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1951-1958
+order_94906_IYSVP_rre150y0_6_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1959-1962
+order_94906_IYSVP_rre150y0_6_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1959-1962
+order_94906_IYSVP_rre150y0_7_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1963-1968
+order_94906_IYSVP_rre150y0_7_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1963-1968
+order_94906_IYSVP_rre150y0_8_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1969-1977
+order_94906_IYSVP_rre150y0_8_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1969-1977
+order_94906_IYSVP_rre150y0_9_data.txt   Data      St. Veit in Prags                    Precipitation; annual total                                 1978-1995
+order_94906_IYSVP_rre150y0_9_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1978-1995
+order_94906_IYSVP_rre150y0_10_data.txt  Data      St. Veit in Prags                    Precipitation; annual total                                 1996-2000
+order_94906_IYSVP_rre150y0_10_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 1996-2000
+order_94906_IYSVP_rre150y0_11_data.txt  Data      St. Veit in Prags                    Precipitation; annual total                                 2001-2003
+order_94906_IYSVP_rre150y0_11_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 2001-2003
+order_94906_IYSVP_rre150y0_12_data.txt  Data      St. Veit in Prags                    Precipitation; annual total                                 2004-2018
+order_94906_IYSVP_rre150y0_12_legend.txt Legend    St. Veit in Prags                    Precipitation; annual total                                 2004-2018
+order_94906_IYSWA_rre150y0_1_data.txt   Data      St. Walburg                          Precipitation; annual total                                 1979-2018
+order_94906_IYSWA_rre150y0_1_legend.txt Legend    St. Walburg                          Precipitation; annual total                                 1979-2018
+order_94906_SMM_rre150y0_1_data.txt     Data      Sta. Maria, Val Müstair              Precipitation; annual total                                 1900-2020
+order_94906_SMM_rre150y0_1_legend.txt   Legend    Sta. Maria, Val Müstair              Precipitation; annual total                                 1900-2020
+order_94906_SEG_rre150y0_1_data.txt     Data      Steg FL                              Precipitation; annual total                                 1968-1970
+order_94906_SEG_rre150y0_1_legend.txt   Legend    Steg FL                              Precipitation; annual total                                 1968-1970
+order_94906_SGD_rre150y0_1_data.txt     Data      Stiegelschwand                       Precipitation; annual total                                 1972-2020
+order_94906_SGD_rre150y0_1_legend.txt   Legend    Stiegelschwand                       Precipitation; annual total                                 1972-2020
+order_94906_STP_rre150y0_1_data.txt     Data      Stöckalp                             Precipitation; annual total                                 1984-2020
+order_94906_STP_rre150y0_1_legend.txt   Legend    Stöckalp                             Precipitation; annual total                                 1984-2020
+order_94906_SUS_rre150y0_1_data.txt     Data      Susch                                Precipitation; annual total                                 1900-2020
+order_94906_SUS_rre150y0_1_legend.txt   Legend    Susch                                Precipitation; annual total                                 1900-2020
+order_94906_IYTAU_rre150y0_1_data.txt   Data      Taufers i.M.                         Precipitation; annual total                                 1921-1947
+order_94906_IYTAU_rre150y0_1_legend.txt Legend    Taufers i.M.                         Precipitation; annual total                                 1921-1947
+order_94906_IYTAU_rre150y0_2_data.txt   Data      Taufers i.M.                         Precipitation; annual total                                 1948-1999
+order_94906_IYTAU_rre150y0_2_legend.txt Legend    Taufers i.M.                         Precipitation; annual total                                 1948-1999
+order_94906_IYTAU_rre150y0_3_data.txt   Data      Taufers i.M.                         Precipitation; annual total                                 2000-2018
+order_94906_IYTAU_rre150y0_3_legend.txt Legend    Taufers i.M.                         Precipitation; annual total                                 2000-2018
+order_94906_IYTER_rre150y0_1_data.txt   Data      Terenten                             Precipitation; annual total                                 1981-1989
+order_94906_IYTER_rre150y0_1_legend.txt Legend    Terenten                             Precipitation; annual total                                 1981-1989
+order_94906_IYTER_rre150y0_2_data.txt   Data      Terenten                             Precipitation; annual total                                 1990-2018
+order_94906_IYTER_rre150y0_2_legend.txt Legend    Terenten                             Precipitation; annual total                                 1990-2018
+order_94906_IYTOB_rre150y0_1_data.txt   Data      Toblach                              Precipitation; annual total                                 1921-1948
+order_94906_IYTOB_rre150y0_1_legend.txt Legend    Toblach                              Precipitation; annual total                                 1921-1948
+order_94906_IYTOB_rre150y0_2_data.txt   Data      Toblach                              Precipitation; annual total                                 1949-1955
+order_94906_IYTOB_rre150y0_2_legend.txt Legend    Toblach                              Precipitation; annual total                                 1949-1955
+order_94906_IYTOB_rre150y0_3_data.txt   Data      Toblach                              Precipitation; annual total                                 1956-1959
+order_94906_IYTOB_rre150y0_3_legend.txt Legend    Toblach                              Precipitation; annual total                                 1956-1959
+order_94906_IYTOB_rre150y0_4_data.txt   Data      Toblach                              Precipitation; annual total                                 1960-1963
+order_94906_IYTOB_rre150y0_4_legend.txt Legend    Toblach                              Precipitation; annual total                                 1960-1963
+order_94906_IYTOB_rre150y0_5_data.txt   Data      Toblach                              Precipitation; annual total                                 1964-1967
+order_94906_IYTOB_rre150y0_5_legend.txt Legend    Toblach                              Precipitation; annual total                                 1964-1967
+order_94906_IYTOB_rre150y0_6_data.txt   Data      Toblach                              Precipitation; annual total                                 1968-2018
+order_94906_IYTOB_rre150y0_6_legend.txt Legend    Toblach                              Precipitation; annual total                                 1968-2018
+order_94906_VSTRI_rre150y0_1_data.txt   Data      Trient                               Precipitation; annual total                                 2013-2020
+order_94906_VSTRI_rre150y0_1_legend.txt Legend    Trient                               Precipitation; annual total                                 2013-2020
+order_94906_FLTRB_rre150y0_1_data.txt   Data      Triesenberg                          Precipitation; annual total                                 2013-2019
+order_94906_FLTRB_rre150y0_1_legend.txt Legend    Triesenberg                          Precipitation; annual total                                 2013-2019
+order_94906_TST_rre150y0_1_data.txt     Data      Tschiertschen                        Precipitation; annual total                                 1897-2020
+order_94906_TST_rre150y0_1_legend.txt   Legend    Tschiertschen                        Precipitation; annual total                                 1897-2020
+order_94906_TDR_rre150y0_1_data.txt     Data      Tête-de-Ran                          Precipitation; annual total                                 1969-1974
+order_94906_TDR_rre150y0_1_legend.txt   Legend    Tête-de-Ran                          Precipitation; annual total                                 1969-1974
+order_94906_ULR_rre150y0_1_data.txt     Data      Ulrichen                             Precipitation; annual total                                 1980-2020
+order_94906_ULR_rre150y0_1_legend.txt   Legend    Ulrichen                             Precipitation; annual total                                 1980-2020
+order_94906_BEGTH_rre150y0_1_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; annual total                                 1997-2012
+order_94906_BEGTH_rre150y0_1_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; annual total                                 1997-2012
+order_94906_BEGTH_rre150y0_2_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; annual total                                 2013-2020
+order_94906_BEGTH_rre150y0_2_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; annual total                                 2013-2020
+order_94906_UNS_rre150y0_1_data.txt     Data      Unterschächen                        Precipitation; annual total                                 1981-2020
+order_94906_UNS_rre150y0_1_legend.txt   Legend    Unterschächen                        Precipitation; annual total                                 1981-2020
+order_94906_URB_rre150y0_1_data.txt     Data      Urnerboden                           Precipitation; annual total                                 1960-2020
+order_94906_URB_rre150y0_1_legend.txt   Legend    Urnerboden                           Precipitation; annual total                                 1960-2020
+order_94906_VAL_rre150y0_1_data.txt     Data      Val                                  Precipitation; annual total                                 1960-1979
+order_94906_VAL_rre150y0_1_legend.txt   Legend    Val                                  Precipitation; annual total                                 1960-1979
+order_94906_VLS_rre150y0_1_data.txt     Data      Vals                                 Precipitation; annual total                                 1892-2020
+order_94906_VLS_rre150y0_1_legend.txt   Legend    Vals                                 Precipitation; annual total                                 1892-2020
+order_94906_IYVAA_rre150y0_1_data.txt   Data      Vals                                 Precipitation; annual total                                 1923-1940
+order_94906_IYVAA_rre150y0_1_legend.txt Legend    Vals                                 Precipitation; annual total                                 1923-1940
+order_94906_IYVAA_rre150y0_2_data.txt   Data      Vals                                 Precipitation; annual total                                 1941-1944
+order_94906_IYVAA_rre150y0_2_legend.txt Legend    Vals                                 Precipitation; annual total                                 1941-1944
+order_94906_IYVAA_rre150y0_3_data.txt   Data      Vals                                 Precipitation; annual total                                 1945-1946
+order_94906_IYVAA_rre150y0_3_legend.txt Legend    Vals                                 Precipitation; annual total                                 1945-1946
+order_94906_IYVAA_rre150y0_4_data.txt   Data      Vals                                 Precipitation; annual total                                 1950-1951
+order_94906_IYVAA_rre150y0_4_legend.txt Legend    Vals                                 Precipitation; annual total                                 1950-1951
+order_94906_IYVAA_rre150y0_5_data.txt   Data      Vals                                 Precipitation; annual total                                 1953-1975
+order_94906_IYVAA_rre150y0_5_legend.txt Legend    Vals                                 Precipitation; annual total                                 1953-1975
+order_94906_IYVAA_rre150y0_6_data.txt   Data      Vals                                 Precipitation; annual total                                 1988-2018
+order_94906_IYVAA_rre150y0_6_legend.txt Legend    Vals                                 Precipitation; annual total                                 1988-2018
+order_94906_VEL_rre150y0_1_data.txt     Data      Vella                                Precipitation; annual total                                 1997-2020
+order_94906_VEL_rre150y0_1_legend.txt   Legend    Vella                                Precipitation; annual total                                 1997-2020
+order_94906_VIO_rre150y0_1_data.txt     Data      Vicosoprano                          Precipitation; annual total                                 1911-1975
+order_94906_VIO_rre150y0_1_legend.txt   Legend    Vicosoprano                          Precipitation; annual total                                 1911-1975
+order_94906_VIO_rre150y0_2_data.txt     Data      Vicosoprano                          Precipitation; annual total                                 2005-2020
+order_94906_VIO_rre150y0_2_legend.txt   Legend    Vicosoprano                          Precipitation; annual total                                 2005-2020
+order_94906_LOE_rre150y0_1_data.txt     Data      Vicosoprano / Löbbia                 Precipitation; annual total                                 1976-2004
+order_94906_LOE_rre150y0_1_legend.txt   Legend    Vicosoprano / Löbbia                 Precipitation; annual total                                 1976-2004
+order_94906_VSVIS_rre150y0_1_data.txt   Data      Visperterminen                       Precipitation; annual total                                 2013-2018
+order_94906_VSVIS_rre150y0_1_legend.txt Legend    Visperterminen                       Precipitation; annual total                                 2013-2018
+order_94906_VSVIS_rre150y0_2_data.txt   Data      Visperterminen                       Precipitation; annual total                                 2019-2020
+order_94906_VSVIS_rre150y0_2_legend.txt Legend    Visperterminen                       Precipitation; annual total                                 2019-2020
+order_94906_VRI_rre150y0_1_data.txt     Data      Vrin                                 Precipitation; annual total                                 1900-1913
+order_94906_VRI_rre150y0_1_legend.txt   Legend    Vrin                                 Precipitation; annual total                                 1900-1913
+order_94906_VRI_rre150y0_2_data.txt     Data      Vrin                                 Precipitation; annual total                                 1915-1917
+order_94906_VRI_rre150y0_2_legend.txt   Legend    Vrin                                 Precipitation; annual total                                 1915-1917
+order_94906_VRI_rre150y0_3_data.txt     Data      Vrin                                 Precipitation; annual total                                 1918-1926
+order_94906_VRI_rre150y0_3_legend.txt   Legend    Vrin                                 Precipitation; annual total                                 1918-1926
+order_94906_VRI_rre150y0_4_data.txt     Data      Vrin                                 Precipitation; annual total                                 1927-1928
+order_94906_VRI_rre150y0_4_legend.txt   Legend    Vrin                                 Precipitation; annual total                                 1927-1928
+order_94906_VRI_rre150y0_5_data.txt     Data      Vrin                                 Precipitation; annual total                                 1932-2020
+order_94906_VRI_rre150y0_5_legend.txt   Legend    Vrin                                 Precipitation; annual total                                 1932-2020
+order_94906_TAW_rre150y0_1_data.txt     Data      Wald / Tanne                         Precipitation; annual total                                 1975-2020
+order_94906_TAW_rre150y0_1_legend.txt   Legend    Wald / Tanne                         Precipitation; annual total                                 1975-2020
+order_94906_WSS_rre150y0_1_data.txt     Data      Weissenstein                         Precipitation; annual total                                 1960-1972
+order_94906_WSS_rre150y0_1_legend.txt   Legend    Weissenstein                         Precipitation; annual total                                 1960-1972
+order_94906_IYWEL_rre150y0_1_data.txt   Data      Welsberg                             Precipitation; annual total                                 1922-1948
+order_94906_IYWEL_rre150y0_1_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1922-1948
+order_94906_IYWEL_rre150y0_2_data.txt   Data      Welsberg                             Precipitation; annual total                                 1949-1950
+order_94906_IYWEL_rre150y0_2_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1949-1950
+order_94906_IYWEL_rre150y0_3_data.txt   Data      Welsberg                             Precipitation; annual total                                 1951-1954
+order_94906_IYWEL_rre150y0_3_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1951-1954
+order_94906_IYWEL_rre150y0_4_data.txt   Data      Welsberg                             Precipitation; annual total                                 1956-1958
+order_94906_IYWEL_rre150y0_4_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1956-1958
+order_94906_IYWEL_rre150y0_5_data.txt   Data      Welsberg                             Precipitation; annual total                                 1959-1967
+order_94906_IYWEL_rre150y0_5_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1959-1967
+order_94906_IYWEL_rre150y0_6_data.txt   Data      Welsberg                             Precipitation; annual total                                 1968-1979
+order_94906_IYWEL_rre150y0_6_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1968-1979
+order_94906_IYWEL_rre150y0_7_data.txt   Data      Welsberg                             Precipitation; annual total                                 1981-1985
+order_94906_IYWEL_rre150y0_7_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1981-1985
+order_94906_IYWEL_rre150y0_8_data.txt   Data      Welsberg                             Precipitation; annual total                                 1986-2018
+order_94906_IYWEL_rre150y0_8_legend.txt Legend    Welsberg                             Precipitation; annual total                                 1986-2018
+order_94906_IYWEN_rre150y0_1_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1920-1925
+order_94906_IYWEN_rre150y0_1_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1920-1925
+order_94906_IYWEN_rre150y0_2_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1927-1940
+order_94906_IYWEN_rre150y0_2_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1927-1940
+order_94906_IYWEN_rre150y0_3_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1942-1944
+order_94906_IYWEN_rre150y0_3_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1942-1944
+order_94906_IYWEN_rre150y0_4_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1945-1950
+order_94906_IYWEN_rre150y0_4_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1945-1950
+order_94906_IYWEN_rre150y0_5_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1951-1969
+order_94906_IYWEN_rre150y0_5_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1951-1969
+order_94906_IYWEN_rre150y0_6_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1971-1978
+order_94906_IYWEN_rre150y0_6_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1971-1978
+order_94906_IYWEN_rre150y0_7_data.txt   Data      Welschnofen                          Precipitation; annual total                                 1985-2018
+order_94906_IYWEN_rre150y0_7_legend.txt Legend    Welschnofen                          Precipitation; annual total                                 1985-2018
+order_94906_KAWEG_rre150y0_1_data.txt   Data      Wengen                               Precipitation; annual total                                 2018-2020
+order_94906_KAWEG_rre150y0_1_legend.txt Legend    Wengen                               Precipitation; annual total                                 2018-2020
+order_94906_ZNZ_rre150y0_1_data.txt     Data      Zernez                               Precipitation; annual total                                 1960-2020
+order_94906_ZNZ_rre150y0_1_legend.txt   Legend    Zernez                               Precipitation; annual total                                 1960-2020
+order_94906_MMZNZ_rre150y0_1_data.txt   Data      Zernez                               Precipitation; annual total                                 2017-2019
+order_94906_MMZNZ_rre150y0_1_legend.txt Legend    Zernez                               Precipitation; annual total                                 2017-2019
