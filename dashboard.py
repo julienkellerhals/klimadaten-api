@@ -991,6 +991,7 @@ def mydashboard(flaskApp, instance):
             ),
         ], style={
             'backgroundColor': colors['BgDashboard'],
+            'height': '100vh'
         }
         )
 
