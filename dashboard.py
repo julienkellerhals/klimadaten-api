@@ -429,19 +429,19 @@ def mydashboard(flaskApp, instance):
         # creating the map
         plotMap = go.Figure()
 
-        plotMap.add_trace(go.Scattermapbox(
-            lat=df_map['latitude'],
-            lon=df_map['longitude'],
-            text=df_map['text'],
-            mode='markers',
-            marker={
-                'size': df_map['avg_now'] * 45 + 8,
-                'color': colors['d3'],
-                # 'line': {'width': 1, 'color': colors['d3']},
-                'sizemode': 'area'
-            },
-            hoverinfo='none'
-        ))
+        # plotMap.add_trace(go.Scattermapbox(
+        #     lat=df_map['latitude'],
+        #     lon=df_map['longitude'],
+        #     text=df_map['text'],
+        #     mode='markers',
+        #     marker={
+        #         'size': df_map['avg_now'] * 45 + 8,
+        #         'color': colors['d3'],
+        #         # 'line': {'width': 1, 'color': colors['d3']},
+        #         'sizemode': 'area'
+        #     },
+        #     hoverinfo='none'
+        # ))
 
         plotMap.add_trace(go.Scattermapbox(
             lat=df_map['latitude'],
@@ -449,18 +449,19 @@ def mydashboard(flaskApp, instance):
             hovertemplate=df_map['text'],
             mode='markers',
             marker={
-                'size': df_map['avg_now'] * 35,
+                'size': df_map['avg_now'] * 45,
+                'sizemin': 3,
                 'color': (
                     df_map['avg_now'] - df_map['avg_then']
                     ) / df_map['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
                 'colorscale': [
                     [0, colors['rbr']],
-                    [0.4, colors['l3']],
+                    [0.30, colors['l6']],
                     [1, colors['rbb']]
                 ],
                 'sizemode': 'area',
-                'opacity': 1
+                'opacity': 0.7
             }
         ))
 
