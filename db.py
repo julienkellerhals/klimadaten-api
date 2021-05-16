@@ -889,6 +889,7 @@ class Database:
         self.idaWebStageETL()
 
     def stationParamStageETL(self):
+        self.stageTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -979,8 +980,11 @@ class Database:
                 if_exists='append',
                 index=False
             )
+        self.stageTableRespDict.enableAllButtons()
 
     def idaWebStageETL(self, orderList=["*"]):
+        self.stageTableRespDict.disableAllButtons()
+
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1054,6 +1058,8 @@ class Database:
                 if_exists='append',
                 index=False
             )
+
+        self.stageTableRespDict.enableAllButtons()
 
     def runCoreETL(self):
         self.runMeasurementsETL()
@@ -1141,6 +1147,7 @@ class Database:
         )
 
     def stationCoreETL(self):
+        self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1148,8 +1155,10 @@ class Database:
             "SELECT * FROM stage.station_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.enableAllButtons()
 
     def parameterCoreETL(self):
+        self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1157,8 +1166,10 @@ class Database:
             "SELECT * FROM stage.parameter_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.enableAllButtons()
 
     def idawebCoreETL(self):
+        self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1166,3 +1177,4 @@ class Database:
             "SELECT * FROM stage.idaweb_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.enableAllButtons()
