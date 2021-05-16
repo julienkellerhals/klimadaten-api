@@ -11,7 +11,8 @@ from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
 from sqlalchemy.pool import QueuePool
 from sqlalchemy_utils import database_exists, create_database
-import messageAnnouncer
+from messageAnnouncer import MessageAnnouncer
+from responseDict import ResponseDictionary
 
 
 class Database:
@@ -30,18 +31,34 @@ class Database:
     coreTablesStatusStream = None
     datamartTablesStatusStream = None
     dbServiceStatusStream = None
+    stageTableRespDict = None
+    coreTableRespDict = None
 
     def __init__(self, announcer):
         """ Init engine
         """
 
-        self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.stageTablesStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.coreTablesStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.datamartTablesStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.dbServiceStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.databaseStatusStream = MessageAnnouncer()
+        self.engineStatusStream = MessageAnnouncer()
+        self.stageTablesStatusStream = MessageAnnouncer()
+        self.coreTablesStatusStream = MessageAnnouncer()
+        self.datamartTablesStatusStream = MessageAnnouncer()
+        self.dbServiceStatusStream = MessageAnnouncer()
         self.announcer = announcer
+        self.stageTableRespDict = ResponseDictionary({
+                "stage": {
+                    "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+                }
+            },
+            self.stageTablesStatusStream
+        )
+        self.coreTableRespDict = ResponseDictionary({
+                "core": {
+                    "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+                }
+            },
+            self.coreTablesStatusStream
+        )
 
     def readConfig(self, configFileName):
         """ Read config file
@@ -351,11 +368,8 @@ class Database:
         x.start()
 
     def _getStageTablesStatus(self):
-        respDict = {
-            "stage": {
-                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
-            }
-        }
+        respDict = self.stageTableRespDict.respDict
+
         inspector = inspect(self.engine)
         stageTables = inspector.get_table_names("stage")
         for stageTable in stageTables:
@@ -427,13 +441,7 @@ class Database:
                 respDict["stage"][stageTable]["bodyBadge"]["content"] = \
                     lastRefresh
 
-        msgText = json.dumps(
-            respDict,
-            default=str
-        )
-        self.stageTablesStatusStream.announce(
-            self.stageTablesStatusStream.format_sse(msgText)
-        )
+        self.stageTableRespDict.send()
 
     def getCoreTablesStatus(self):
         x = threading.Thread(
@@ -442,11 +450,8 @@ class Database:
         x.start()
 
     def _getCoreTablesStatus(self):
-        respDict = {
-            "core": {
-                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
-            }
-        }
+        respDict = self.coreTableRespDict.respDict
+
         inspector = inspect(self.engine)
         coreTables = inspector.get_table_names("core")
         for coreTable in coreTables:
@@ -490,13 +495,7 @@ class Database:
                     respDict["core"][coreTable]["bodyBadge"]["content"] = \
                         lastRefresh
 
-        msgText = json.dumps(
-            respDict,
-            default=str
-        )
-        self.coreTablesStatusStream.announce(
-            self.coreTablesStatusStream.format_sse(msgText)
-        )
+        self.coreTableRespDict.send()
 
     def getParameterRefreshDate(self):
         paramRefreshDateDf = pd.read_sql(
