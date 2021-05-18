@@ -1,0 +1,772 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94886
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94886_TAE_tnd00xy0_1_data.txt     Data      Aadorf / Tänikon                     Ice days (maximum lower than 0 degrees C); annual total     1970-2020
+order_94886_TAE_tnd00xy0_1_legend.txt   Legend    Aadorf / Tänikon                     Ice days (maximum lower than 0 degrees C); annual total     1970-2020
+order_94886_AAR_tnd00xy0_1_data.txt     Data      Aarau-Unterentfelden                 Ice days (maximum lower than 0 degrees C); annual total     1930-1984
+order_94886_AAR_tnd00xy0_1_legend.txt   Legend    Aarau-Unterentfelden                 Ice days (maximum lower than 0 degrees C); annual total     1930-1984
+order_94886_AIG_tnd00xy0_1_data.txt     Data      Aigle                                Ice days (maximum lower than 0 degrees C); annual total     1981-2020
+order_94886_AIG_tnd00xy0_1_legend.txt   Legend    Aigle                                Ice days (maximum lower than 0 degrees C); annual total     1981-2020
+order_94886_ALP_tnd00xy0_1_data.txt     Data      Alpnach                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_ALP_tnd00xy0_1_legend.txt   Legend    Alpnach                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_ALT_tnd00xy0_1_data.txt     Data      Altdorf                              Ice days (maximum lower than 0 degrees C); annual total     1908-2020
+order_94886_ALT_tnd00xy0_1_legend.txt   Legend    Altdorf                              Ice days (maximum lower than 0 degrees C); annual total     1908-2020
+order_94886_ARH_tnd00xy0_1_data.txt     Data      Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     1993-1995
+order_94886_ARH_tnd00xy0_1_legend.txt   Legend    Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     1993-1995
+order_94886_ARH_tnd00xy0_2_data.txt     Data      Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     1996-1999
+order_94886_ARH_tnd00xy0_2_legend.txt   Legend    Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     1996-1999
+order_94886_ARH_tnd00xy0_3_data.txt     Data      Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_ARH_tnd00xy0_3_legend.txt   Legend    Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_ARH_tnd00xy0_4_data.txt     Data      Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2003-2014
+order_94886_ARH_tnd00xy0_4_legend.txt   Legend    Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2003-2014
+order_94886_ARH_tnd00xy0_5_data.txt     Data      Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_ARH_tnd00xy0_5_legend.txt   Legend    Altenrhein                           Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_DLALH_tnd00xy0_1_data.txt   Data      Altheim                              Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLALH_tnd00xy0_1_legend.txt Legend    Altheim                              Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLALH_tnd00xy0_2_data.txt   Data      Altheim                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLALH_tnd00xy0_2_legend.txt Legend    Altheim                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLALM_tnd00xy0_1_data.txt   Data      Altomünster                          Ice days (maximum lower than 0 degrees C); annual total     1954-2015
+order_94886_DLALM_tnd00xy0_1_legend.txt Legend    Altomünster                          Ice days (maximum lower than 0 degrees C); annual total     1954-2015
+order_94886_DLALM_tnd00xy0_2_data.txt   Data      Altomünster                          Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLALM_tnd00xy0_2_legend.txt Legend    Altomünster                          Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_ALS_tnd00xy0_1_data.txt     Data      Altstätten, SG                       Ice days (maximum lower than 0 degrees C); annual total     1971-1996
+order_94886_ALS_tnd00xy0_1_legend.txt   Legend    Altstätten, SG                       Ice days (maximum lower than 0 degrees C); annual total     1971-1996
+order_94886_DLAME_tnd00xy0_1_data.txt   Data      Amerang / Pfaffing                   Ice days (maximum lower than 0 degrees C); annual total     1993-2015
+order_94886_DLAME_tnd00xy0_1_legend.txt Legend    Amerang / Pfaffing                   Ice days (maximum lower than 0 degrees C); annual total     1993-2015
+order_94886_DLAME_tnd00xy0_2_data.txt   Data      Amerang / Pfaffing                   Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLAME_tnd00xy0_2_legend.txt Legend    Amerang / Pfaffing                   Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_TGAMR_tnd00xy0_1_data.txt   Data      Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGAMR_tnd00xy0_1_legend.txt Legend    Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGAMR_tnd00xy0_2_data.txt   Data      Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TGAMR_tnd00xy0_2_legend.txt Legend    Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TGAMR_tnd00xy0_3_data.txt   Data      Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TGAMR_tnd00xy0_3_legend.txt Legend    Amriswil                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TGARE_tnd00xy0_1_data.txt   Data      Arenenberg                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_TGARE_tnd00xy0_1_legend.txt Legend    Arenenberg                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_IYAUE_tnd00xy0_1_data.txt   Data      Auer                                 Ice days (maximum lower than 0 degrees C); annual total     1982-2018
+order_94886_IYAUE_tnd00xy0_1_legend.txt Legend    Auer                                 Ice days (maximum lower than 0 degrees C); annual total     1982-2018
+order_94886_DLAUG_tnd00xy0_1_data.txt   Data      Augsburg                             Ice days (maximum lower than 0 degrees C); annual total     1946-2015
+order_94886_DLAUG_tnd00xy0_1_legend.txt Legend    Augsburg                             Ice days (maximum lower than 0 degrees C); annual total     1946-2015
+order_94886_DLAUG_tnd00xy0_2_data.txt   Data      Augsburg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLAUG_tnd00xy0_2_legend.txt Legend    Augsburg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_RAG_tnd00xy0_1_data.txt     Data      Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     1938-1997
+order_94886_RAG_tnd00xy0_1_legend.txt   Legend    Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     1938-1997
+order_94886_RAG_tnd00xy0_2_data.txt     Data      Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     1999-2011
+order_94886_RAG_tnd00xy0_2_legend.txt   Legend    Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     1999-2011
+order_94886_RAG_tnd00xy0_3_data.txt     Data      Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     2012-2020
+order_94886_RAG_tnd00xy0_3_legend.txt   Legend    Bad Ragaz                            Ice days (maximum lower than 0 degrees C); annual total     2012-2020
+order_94886_DLBWB_tnd00xy0_1_data.txt   Data      Bad Wildbad                          Ice days (maximum lower than 0 degrees C); annual total     1948-2000
+order_94886_DLBWB_tnd00xy0_1_legend.txt Legend    Bad Wildbad                          Ice days (maximum lower than 0 degrees C); annual total     1948-2000
+order_94886_DLBAB_tnd00xy0_1_data.txt   Data      Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     1948-1983
+order_94886_DLBAB_tnd00xy0_1_legend.txt Legend    Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     1948-1983
+order_94886_DLBAB_tnd00xy0_2_data.txt   Data      Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     1984-2015
+order_94886_DLBAB_tnd00xy0_2_legend.txt Legend    Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     1984-2015
+order_94886_DLBAB_tnd00xy0_3_data.txt   Data      Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLBAB_tnd00xy0_3_legend.txt Legend    Baden-Baden / Geroldsau              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_IYBAR_tnd00xy0_1_data.txt   Data      Barbian / Kollmann                   Ice days (maximum lower than 0 degrees C); annual total     2002-2010
+order_94886_IYBAR_tnd00xy0_1_legend.txt Legend    Barbian / Kollmann                   Ice days (maximum lower than 0 degrees C); annual total     2002-2010
+order_94886_IYBAR_tnd00xy0_2_data.txt   Data      Barbian / Kollmann                   Ice days (maximum lower than 0 degrees C); annual total     2011-2018
+order_94886_IYBAR_tnd00xy0_2_legend.txt Legend    Barbian / Kollmann                   Ice days (maximum lower than 0 degrees C); annual total     2011-2018
+order_94886_BAS_tnd00xy0_1_data.txt     Data      Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1876-1880
+order_94886_BAS_tnd00xy0_1_legend.txt   Legend    Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1876-1880
+order_94886_BAS_tnd00xy0_2_data.txt     Data      Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1881-1882
+order_94886_BAS_tnd00xy0_2_legend.txt   Legend    Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1881-1882
+order_94886_BAS_tnd00xy0_3_data.txt     Data      Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1897-2020
+order_94886_BAS_tnd00xy0_3_legend.txt   Legend    Basel / Binningen                    Ice days (maximum lower than 0 degrees C); annual total     1897-2020
+order_94886_KADER_tnd00xy0_1_data.txt   Data      Basel / Dreispitz                    Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KADER_tnd00xy0_1_legend.txt Legend    Basel / Dreispitz                    Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_NABBER_tnd00xy0_1_data.txt  Data      Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     1992-1994
+order_94886_NABBER_tnd00xy0_1_legend.txt Legend    Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     1992-1994
+order_94886_NABBER_tnd00xy0_2_data.txt  Data      Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2001-2004
+order_94886_NABBER_tnd00xy0_2_legend.txt Legend    Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2001-2004
+order_94886_NABBER_tnd00xy0_3_data.txt  Data      Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2005-2016
+order_94886_NABBER_tnd00xy0_3_legend.txt Legend    Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2005-2016
+order_94886_NABBER_tnd00xy0_4_data.txt  Data      Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_NABBER_tnd00xy0_4_legend.txt Legend    Bern-Bollwerk                        Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_BZN_tnd00xy0_1_data.txt     Data      Beznau                               Ice days (maximum lower than 0 degrees C); annual total     1958-1979
+order_94886_BZN_tnd00xy0_1_legend.txt   Legend    Beznau                               Ice days (maximum lower than 0 degrees C); annual total     1958-1979
+order_94886_BEZ_tnd00xy0_1_data.txt     Data      Beznau                               Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_BEZ_tnd00xy0_1_legend.txt   Legend    Beznau                               Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_BIA_tnd00xy0_1_data.txt     Data      Biasca                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_BIA_tnd00xy0_1_legend.txt   Legend    Biasca                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TIBIC_tnd00xy0_1_data.txt   Data      Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2012-2014
+order_94886_TIBIC_tnd00xy0_1_legend.txt Legend    Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2012-2014
+order_94886_TIBIC_tnd00xy0_2_data.txt   Data      Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2015-2016
+order_94886_TIBIC_tnd00xy0_2_legend.txt Legend    Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2015-2016
+order_94886_TIBIC_tnd00xy0_3_data.txt   Data      Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TIBIC_tnd00xy0_3_legend.txt Legend    Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TIBIC_tnd00xy0_4_data.txt   Data      Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TIBIC_tnd00xy0_4_legend.txt Legend    Biasca A2                            Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_BIL_tnd00xy0_1_data.txt     Data      Biel/Bienne                          Ice days (maximum lower than 0 degrees C); annual total     1958-1998
+order_94886_BIL_tnd00xy0_1_legend.txt   Legend    Biel/Bienne                          Ice days (maximum lower than 0 degrees C); annual total     1958-1998
+order_94886_BIL_tnd00xy0_2_data.txt     Data      Biel/Bienne                          Ice days (maximum lower than 0 degrees C); annual total     1999-2011
+order_94886_BIL_tnd00xy0_2_legend.txt   Legend    Biel/Bienne                          Ice days (maximum lower than 0 degrees C); annual total     1999-2011
+order_94886_TIBIO_tnd00xy0_1_data.txt   Data      Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TIBIO_tnd00xy0_1_legend.txt Legend    Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TIBIO_tnd00xy0_2_data.txt   Data      Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TIBIO_tnd00xy0_2_legend.txt Legend    Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TIBIO_tnd00xy0_3_data.txt   Data      Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2013-2018
+order_94886_TIBIO_tnd00xy0_3_legend.txt Legend    Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2013-2018
+order_94886_TIBIO_tnd00xy0_4_data.txt   Data      Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TIBIO_tnd00xy0_4_legend.txt Legend    Bioggio                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_BIZ_tnd00xy0_1_data.txt     Data      Bischofszell                         Ice days (maximum lower than 0 degrees C); annual total     2010-2015
+order_94886_BIZ_tnd00xy0_1_legend.txt   Legend    Bischofszell                         Ice days (maximum lower than 0 degrees C); annual total     2010-2015
+order_94886_BIZ_tnd00xy0_2_data.txt     Data      Bischofszell                         Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_BIZ_tnd00xy0_2_legend.txt   Legend    Bischofszell                         Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_BOU_tnd00xy0_1_data.txt     Data      Bouveret                             Ice days (maximum lower than 0 degrees C); annual total     2012-2015
+order_94886_BOU_tnd00xy0_1_legend.txt   Legend    Bouveret                             Ice days (maximum lower than 0 degrees C); annual total     2012-2015
+order_94886_BOU_tnd00xy0_2_data.txt     Data      Bouveret                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_BOU_tnd00xy0_2_legend.txt   Legend    Bouveret                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_IYBOZ_tnd00xy0_1_data.txt   Data      Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1955-1965
+order_94886_IYBOZ_tnd00xy0_1_legend.txt Legend    Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1955-1965
+order_94886_IYBOZ_tnd00xy0_2_data.txt   Data      Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1966-1967
+order_94886_IYBOZ_tnd00xy0_2_legend.txt Legend    Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1966-1967
+order_94886_IYBOZ_tnd00xy0_3_data.txt   Data      Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1968-1978
+order_94886_IYBOZ_tnd00xy0_3_legend.txt Legend    Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1968-1978
+order_94886_IYBOZ_tnd00xy0_4_data.txt   Data      Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1979-2018
+order_94886_IYBOZ_tnd00xy0_4_legend.txt Legend    Bozen                                Ice days (maximum lower than 0 degrees C); annual total     1979-2018
+order_94886_IYBRZ_tnd00xy0_1_data.txt   Data      Branzoll                             Ice days (maximum lower than 0 degrees C); annual total     1976-2004
+order_94886_IYBRZ_tnd00xy0_1_legend.txt Legend    Branzoll                             Ice days (maximum lower than 0 degrees C); annual total     1976-2004
+order_94886_IYBRZ_tnd00xy0_2_data.txt   Data      Branzoll                             Ice days (maximum lower than 0 degrees C); annual total     2005-2017
+order_94886_IYBRZ_tnd00xy0_2_legend.txt Legend    Branzoll                             Ice days (maximum lower than 0 degrees C); annual total     2005-2017
+order_94886_DLBUC_tnd00xy0_1_data.txt   Data      Buchenbach                           Ice days (maximum lower than 0 degrees C); annual total     1990-2015
+order_94886_DLBUC_tnd00xy0_1_legend.txt Legend    Buchenbach                           Ice days (maximum lower than 0 degrees C); annual total     1990-2015
+order_94886_DLBUC_tnd00xy0_2_data.txt   Data      Buchenbach                           Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLBUC_tnd00xy0_2_legend.txt Legend    Buchenbach                           Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_BUS_tnd00xy0_1_data.txt     Data      Buchs / Aarau                        Ice days (maximum lower than 0 degrees C); annual total     1984-2020
+order_94886_BUS_tnd00xy0_1_legend.txt   Legend    Buchs / Aarau                        Ice days (maximum lower than 0 degrees C); annual total     1984-2020
+order_94886_BMH_tnd00xy0_1_data.txt     Data      Bâle-Mulhouse (ehemalige Station)    Ice days (maximum lower than 0 degrees C); annual total     1950-1980
+order_94886_BMH_tnd00xy0_1_legend.txt   Legend    Bâle-Mulhouse (ehemalige Station)    Ice days (maximum lower than 0 degrees C); annual total     1950-1980
+order_94886_KABAT_tnd00xy0_1_data.txt   Data      Bättwil                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_KABAT_tnd00xy0_1_legend.txt Legend    Bättwil                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_UBB_tnd00xy0_1_data.txt     Data      Bözberg                              Ice days (maximum lower than 0 degrees C); annual total     1976-1994
+order_94886_UBB_tnd00xy0_1_legend.txt   Legend    Bözberg                              Ice days (maximum lower than 0 degrees C); annual total     1976-1994
+order_94886_TICAM_tnd00xy0_1_data.txt   Data      Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TICAM_tnd00xy0_1_legend.txt Legend    Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TICAM_tnd00xy0_2_data.txt   Data      Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2011-2018
+order_94886_TICAM_tnd00xy0_2_legend.txt Legend    Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2011-2018
+order_94886_TICAM_tnd00xy0_3_data.txt   Data      Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TICAM_tnd00xy0_3_legend.txt Legend    Camignolo                            Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TICAN_tnd00xy0_1_data.txt   Data      Canobbio                             Ice days (maximum lower than 0 degrees C); annual total     2012-2014
+order_94886_TICAN_tnd00xy0_1_legend.txt Legend    Canobbio                             Ice days (maximum lower than 0 degrees C); annual total     2012-2014
+order_94886_TICAN_tnd00xy0_2_data.txt   Data      Canobbio                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_TICAN_tnd00xy0_2_legend.txt Legend    Canobbio                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_TIBIG_tnd00xy0_1_data.txt   Data      Cavergno Bignasco                    Ice days (maximum lower than 0 degrees C); annual total     2012-2016
+order_94886_TIBIG_tnd00xy0_1_legend.txt Legend    Cavergno Bignasco                    Ice days (maximum lower than 0 degrees C); annual total     2012-2016
+order_94886_TIBIG_tnd00xy0_2_data.txt   Data      Cavergno Bignasco                    Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_TIBIG_tnd00xy0_2_legend.txt Legend    Cavergno Bignasco                    Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_CEV_tnd00xy0_1_data.txt     Data      Cevio                                Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_CEV_tnd00xy0_1_legend.txt   Legend    Cevio                                Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_CHZ_tnd00xy0_1_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     1993-1994
+order_94886_CHZ_tnd00xy0_1_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     1993-1994
+order_94886_CHZ_tnd00xy0_2_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     1995-1999
+order_94886_CHZ_tnd00xy0_2_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     1995-1999
+order_94886_CHZ_tnd00xy0_3_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_CHZ_tnd00xy0_3_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_CHZ_tnd00xy0_4_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2003-2004
+order_94886_CHZ_tnd00xy0_4_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2003-2004
+order_94886_CHZ_tnd00xy0_5_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2005-2009
+order_94886_CHZ_tnd00xy0_5_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2005-2009
+order_94886_CHZ_tnd00xy0_6_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2010-2013
+order_94886_CHZ_tnd00xy0_6_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2010-2013
+order_94886_CHZ_tnd00xy0_7_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2014-2018
+order_94886_CHZ_tnd00xy0_7_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2014-2018
+order_94886_CHZ_tnd00xy0_8_data.txt     Data      Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_CHZ_tnd00xy0_8_legend.txt   Legend    Cham                                 Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TICIA_tnd00xy0_1_data.txt   Data      Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2013-2016
+order_94886_TICIA_tnd00xy0_1_legend.txt Legend    Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2013-2016
+order_94886_TICIA_tnd00xy0_2_data.txt   Data      Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TICIA_tnd00xy0_2_legend.txt Legend    Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TICIA_tnd00xy0_3_data.txt   Data      Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TICIA_tnd00xy0_3_legend.txt Legend    Chiasso                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_CPP_tnd00xy0_1_data.txt     Data      Chippis                              Ice days (maximum lower than 0 degrees C); annual total     1958-1970
+order_94886_CPP_tnd00xy0_1_legend.txt   Legend    Chippis                              Ice days (maximum lower than 0 degrees C); annual total     1958-1970
+order_94886_TICOM_tnd00xy0_1_data.txt   Data      Comano                               Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TICOM_tnd00xy0_1_legend.txt Legend    Comano                               Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TICOM_tnd00xy0_2_data.txt   Data      Comano                               Ice days (maximum lower than 0 degrees C); annual total     2011-2014
+order_94886_TICOM_tnd00xy0_2_legend.txt Legend    Comano                               Ice days (maximum lower than 0 degrees C); annual total     2011-2014
+order_94886_CRM_tnd00xy0_1_data.txt     Data      Cressier                             Ice days (maximum lower than 0 degrees C); annual total     1994-1999
+order_94886_CRM_tnd00xy0_1_legend.txt   Legend    Cressier                             Ice days (maximum lower than 0 degrees C); annual total     1994-1999
+order_94886_CRM_tnd00xy0_2_data.txt     Data      Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_CRM_tnd00xy0_2_legend.txt   Legend    Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_CRM_tnd00xy0_3_data.txt     Data      Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2003-2009
+order_94886_CRM_tnd00xy0_3_legend.txt   Legend    Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2003-2009
+order_94886_CRM_tnd00xy0_4_data.txt     Data      Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_CRM_tnd00xy0_4_legend.txt   Legend    Cressier                             Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_DEM_tnd00xy0_1_data.txt     Data      Delémont                             Ice days (maximum lower than 0 degrees C); annual total     1958-1998
+order_94886_DEM_tnd00xy0_1_legend.txt   Legend    Delémont                             Ice days (maximum lower than 0 degrees C); annual total     1958-1998
+order_94886_DEM_tnd00xy0_2_data.txt     Data      Delémont                             Ice days (maximum lower than 0 degrees C); annual total     1999-2010
+order_94886_DEM_tnd00xy0_2_legend.txt   Legend    Delémont                             Ice days (maximum lower than 0 degrees C); annual total     1999-2010
+order_94886_DEM_tnd00xy0_3_data.txt     Data      Delémont                             Ice days (maximum lower than 0 degrees C); annual total     2011-2020
+order_94886_DEM_tnd00xy0_3_legend.txt   Legend    Delémont                             Ice days (maximum lower than 0 degrees C); annual total     2011-2020
+order_94886_DLDIG_tnd00xy0_1_data.txt   Data      Dillingen                            Ice days (maximum lower than 0 degrees C); annual total     2006-2015
+order_94886_DLDIG_tnd00xy0_1_legend.txt Legend    Dillingen                            Ice days (maximum lower than 0 degrees C); annual total     2006-2015
+order_94886_DLDIG_tnd00xy0_2_data.txt   Data      Dillingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLDIG_tnd00xy0_2_legend.txt Legend    Dillingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLDRE_tnd00xy0_1_data.txt   Data      Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     1935-1944
+order_94886_DLDRE_tnd00xy0_1_legend.txt Legend    Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     1935-1944
+order_94886_DLDRE_tnd00xy0_2_data.txt   Data      Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     1960-2015
+order_94886_DLDRE_tnd00xy0_2_legend.txt Legend    Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     1960-2015
+order_94886_DLDRE_tnd00xy0_3_data.txt   Data      Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLDRE_tnd00xy0_3_legend.txt Legend    Dresden / Klotzsche                  Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DUB_tnd00xy0_1_data.txt     Data      Dübendorf                            Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DUB_tnd00xy0_1_legend.txt   Legend    Dübendorf                            Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_NABDUE_tnd00xy0_1_data.txt  Data      Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     1996-1997
+order_94886_NABDUE_tnd00xy0_1_legend.txt Legend    Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     1996-1997
+order_94886_NABDUE_tnd00xy0_2_data.txt  Data      Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     1998-2001
+order_94886_NABDUE_tnd00xy0_2_legend.txt Legend    Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     1998-2001
+order_94886_NABDUE_tnd00xy0_3_data.txt  Data      Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     2002-2013
+order_94886_NABDUE_tnd00xy0_3_legend.txt Legend    Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     2002-2013
+order_94886_NABDUE_tnd00xy0_4_data.txt  Data      Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_NABDUE_tnd00xy0_4_legend.txt Legend    Dübendorf / Giessen                  Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_INNEBI_tnd00xy0_1_data.txt  Data      Ebikon                               Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_INNEBI_tnd00xy0_1_legend.txt Legend    Ebikon                               Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_INNEBI_tnd00xy0_2_data.txt  Data      Ebikon                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_INNEBI_tnd00xy0_2_legend.txt Legend    Ebikon                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_EGO_tnd00xy0_1_data.txt     Data      Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2010-2011
+order_94886_EGO_tnd00xy0_1_legend.txt   Legend    Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2010-2011
+order_94886_EGO_tnd00xy0_2_data.txt     Data      Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2014-2018
+order_94886_EGO_tnd00xy0_2_legend.txt   Legend    Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2014-2018
+order_94886_EGO_tnd00xy0_3_data.txt     Data      Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_EGO_tnd00xy0_3_legend.txt   Legend    Egolzwil                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_DLELZ_tnd00xy0_1_data.txt   Data      Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     1987-1998
+order_94886_DLELZ_tnd00xy0_1_legend.txt Legend    Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     1987-1998
+order_94886_DLELZ_tnd00xy0_2_data.txt   Data      Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLELZ_tnd00xy0_2_legend.txt Legend    Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLELZ_tnd00xy0_3_data.txt   Data      Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLELZ_tnd00xy0_3_legend.txt Legend    Elzach / Fisnacht                    Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_EMM_tnd00xy0_1_data.txt     Data      Emmen                                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_EMM_tnd00xy0_1_legend.txt   Legend    Emmen                                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_DLEMM_tnd00xy0_1_data.txt   Data      Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     1975-2002
+order_94886_DLEMM_tnd00xy0_1_legend.txt Legend    Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     1975-2002
+order_94886_DLEMM_tnd00xy0_2_data.txt   Data      Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     2003-2015
+order_94886_DLEMM_tnd00xy0_2_legend.txt Legend    Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     2003-2015
+order_94886_DLEMM_tnd00xy0_3_data.txt   Data      Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLEMM_tnd00xy0_3_legend.txt Legend    Emmendingen / Mundingen              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLEGN_tnd00xy0_1_data.txt   Data      Engen                                Ice days (maximum lower than 0 degrees C); annual total     1986-1991
+order_94886_DLEGN_tnd00xy0_1_legend.txt Legend    Engen                                Ice days (maximum lower than 0 degrees C); annual total     1986-1991
+order_94886_DLEGN_tnd00xy0_2_data.txt   Data      Engen                                Ice days (maximum lower than 0 degrees C); annual total     1993-1997
+order_94886_DLEGN_tnd00xy0_2_legend.txt Legend    Engen                                Ice days (maximum lower than 0 degrees C); annual total     1993-1997
+order_94886_DLEGN_tnd00xy0_3_data.txt   Data      Engen                                Ice days (maximum lower than 0 degrees C); annual total     2004-2007
+order_94886_DLEGN_tnd00xy0_3_legend.txt Legend    Engen                                Ice days (maximum lower than 0 degrees C); annual total     2004-2007
+order_94886_ENN_tnd00xy0_1_data.txt     Data      Ennetbaden                           Ice days (maximum lower than 0 degrees C); annual total     1963-1980
+order_94886_ENN_tnd00xy0_1_legend.txt   Legend    Ennetbaden                           Ice days (maximum lower than 0 degrees C); annual total     1963-1980
+order_94886_KAEPT_tnd00xy0_1_data.txt   Data      Eptingen                             Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAEPT_tnd00xy0_1_legend.txt Legend    Eptingen                             Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLERF_tnd00xy0_1_data.txt   Data      Erfurt / Bindersleben                Ice days (maximum lower than 0 degrees C); annual total     1950-2015
+order_94886_DLERF_tnd00xy0_1_legend.txt Legend    Erfurt / Bindersleben                Ice days (maximum lower than 0 degrees C); annual total     1950-2015
+order_94886_DLERF_tnd00xy0_2_data.txt   Data      Erfurt / Bindersleben                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLERF_tnd00xy0_2_legend.txt Legend    Erfurt / Bindersleben                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_TGERM_tnd00xy0_1_data.txt   Data      Ermatingen                           Ice days (maximum lower than 0 degrees C); annual total     2017-2019
+order_94886_TGERM_tnd00xy0_1_legend.txt Legend    Ermatingen                           Ice days (maximum lower than 0 degrees C); annual total     2017-2019
+order_94886_INNESF_tnd00xy0_1_data.txt  Data      Erstfeld                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_INNESF_tnd00xy0_1_legend.txt Legend    Erstfeld                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_KAETT_tnd00xy0_1_data.txt   Data      Ettingen                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_KAETT_tnd00xy0_1_legend.txt Legend    Ettingen                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_EVI_tnd00xy0_1_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1993-1994
+order_94886_EVI_tnd00xy0_1_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1993-1994
+order_94886_EVI_tnd00xy0_2_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1995-1997
+order_94886_EVI_tnd00xy0_2_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1995-1997
+order_94886_EVI_tnd00xy0_3_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1998-1999
+order_94886_EVI_tnd00xy0_3_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     1998-1999
+order_94886_EVI_tnd00xy0_4_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_EVI_tnd00xy0_4_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_EVI_tnd00xy0_5_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2004-2005
+order_94886_EVI_tnd00xy0_5_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2004-2005
+order_94886_EVI_tnd00xy0_6_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2007-2009
+order_94886_EVI_tnd00xy0_6_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2007-2009
+order_94886_EVI_tnd00xy0_7_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2010-2012
+order_94886_EVI_tnd00xy0_7_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2010-2012
+order_94886_EVI_tnd00xy0_8_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2013-2017
+order_94886_EVI_tnd00xy0_8_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2013-2017
+order_94886_EVI_tnd00xy0_9_data.txt     Data      Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_EVI_tnd00xy0_9_legend.txt   Legend    Evionnaz                             Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLFEL_tnd00xy0_1_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Ice days (maximum lower than 0 degrees C); annual total     1958-1981
+order_94886_DLFEL_tnd00xy0_1_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Ice days (maximum lower than 0 degrees C); annual total     1958-1981
+order_94886_FRF_tnd00xy0_1_data.txt     Data      Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     1963-1980
+order_94886_FRF_tnd00xy0_1_legend.txt   Legend    Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     1963-1980
+order_94886_TGFRA_tnd00xy0_1_data.txt   Data      Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_TGFRA_tnd00xy0_1_legend.txt Legend    Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_TGFRA_tnd00xy0_2_data.txt   Data      Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_TGFRA_tnd00xy0_2_legend.txt Legend    Frauenfeld                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLFRB_tnd00xy0_1_data.txt   Data      Freiburg                             Ice days (maximum lower than 0 degrees C); annual total     1949-2015
+order_94886_DLFRB_tnd00xy0_1_legend.txt Legend    Freiburg                             Ice days (maximum lower than 0 degrees C); annual total     1949-2015
+order_94886_DLFRB_tnd00xy0_2_data.txt   Data      Freiburg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLFRB_tnd00xy0_2_legend.txt Legend    Freiburg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLFRI_tnd00xy0_1_data.txt   Data      Friedrichshafen                      Ice days (maximum lower than 0 degrees C); annual total     1946-1979
+order_94886_DLFRI_tnd00xy0_1_legend.txt Legend    Friedrichshafen                      Ice days (maximum lower than 0 degrees C); annual total     1946-1979
+order_94886_DLFRH_tnd00xy0_1_data.txt   Data      Friedrichshafen / Unterraderach      Ice days (maximum lower than 0 degrees C); annual total     2002-2015
+order_94886_DLFRH_tnd00xy0_1_legend.txt Legend    Friedrichshafen / Unterraderach      Ice days (maximum lower than 0 degrees C); annual total     2002-2015
+order_94886_DLFRH_tnd00xy0_2_data.txt   Data      Friedrichshafen / Unterraderach      Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLFRH_tnd00xy0_2_legend.txt Legend    Friedrichshafen / Unterraderach      Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_IYGAR_tnd00xy0_1_data.txt   Data      Gargazon                             Ice days (maximum lower than 0 degrees C); annual total     2016-2018
+order_94886_IYGAR_tnd00xy0_1_legend.txt Legend    Gargazon                             Ice days (maximum lower than 0 degrees C); annual total     2016-2018
+order_94886_GVE_tnd00xy0_1_data.txt     Data      Genève / Cointrin                    Ice days (maximum lower than 0 degrees C); annual total     1949-2020
+order_94886_GVE_tnd00xy0_1_legend.txt   Legend    Genève / Cointrin                    Ice days (maximum lower than 0 degrees C); annual total     1949-2020
+order_94886_GEO_tnd00xy0_1_data.txt     Data      Genève-Observatoire                  Ice days (maximum lower than 0 degrees C); annual total     1863-1928
+order_94886_GEO_tnd00xy0_1_legend.txt   Legend    Genève-Observatoire                  Ice days (maximum lower than 0 degrees C); annual total     1863-1928
+order_94886_GEO_tnd00xy0_2_data.txt     Data      Genève-Observatoire                  Ice days (maximum lower than 0 degrees C); annual total     1929-1965
+order_94886_GEO_tnd00xy0_2_legend.txt   Legend    Genève-Observatoire                  Ice days (maximum lower than 0 degrees C); annual total     1929-1965
+order_94886_GES_tnd00xy0_1_data.txt     Data      Gersau                               Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_GES_tnd00xy0_1_legend.txt   Legend    Gersau                               Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_GIH_tnd00xy0_1_data.txt     Data      Giswil                               Ice days (maximum lower than 0 degrees C); annual total     2010-2013
+order_94886_GIH_tnd00xy0_1_legend.txt   Legend    Giswil                               Ice days (maximum lower than 0 degrees C); annual total     2010-2013
+order_94886_GIH_tnd00xy0_2_data.txt     Data      Giswil                               Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_GIH_tnd00xy0_2_legend.txt   Legend    Giswil                               Ice days (maximum lower than 0 degrees C); annual total     2014-2020
+order_94886_GLA_tnd00xy0_1_data.txt     Data      Glarus                               Ice days (maximum lower than 0 degrees C); annual total     1959-2020
+order_94886_GLA_tnd00xy0_1_legend.txt   Legend    Glarus                               Ice days (maximum lower than 0 degrees C); annual total     1959-2020
+order_94886_TIGRA_tnd00xy0_1_data.txt   Data      Grancia                              Ice days (maximum lower than 0 degrees C); annual total     2012-2016
+order_94886_TIGRA_tnd00xy0_1_legend.txt Legend    Grancia                              Ice days (maximum lower than 0 degrees C); annual total     2012-2016
+order_94886_TIGRA_tnd00xy0_2_data.txt   Data      Grancia                              Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TIGRA_tnd00xy0_2_legend.txt Legend    Grancia                              Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_GRE_tnd00xy0_1_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     1992-1999
+order_94886_GRE_tnd00xy0_1_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     1992-1999
+order_94886_GRE_tnd00xy0_2_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_GRE_tnd00xy0_2_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_GRE_tnd00xy0_3_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2003-2008
+order_94886_GRE_tnd00xy0_3_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2003-2008
+order_94886_GRE_tnd00xy0_4_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2009-2012
+order_94886_GRE_tnd00xy0_4_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2009-2012
+order_94886_GRE_tnd00xy0_5_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2013-2016
+order_94886_GRE_tnd00xy0_5_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2013-2016
+order_94886_GRE_tnd00xy0_6_data.txt     Data      Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_GRE_tnd00xy0_6_legend.txt   Legend    Grenchen                             Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_GRO_tnd00xy0_1_data.txt     Data      Grono                                Ice days (maximum lower than 0 degrees C); annual total     1970-1998
+order_94886_GRO_tnd00xy0_1_legend.txt   Legend    Grono                                Ice days (maximum lower than 0 degrees C); annual total     1970-1998
+order_94886_GRO_tnd00xy0_2_data.txt     Data      Grono                                Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_GRO_tnd00xy0_2_legend.txt   Legend    Grono                                Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_GOE_tnd00xy0_1_data.txt     Data      Gösgen                               Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_GOE_tnd00xy0_1_legend.txt   Legend    Gösgen                               Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_GUT_tnd00xy0_1_data.txt     Data      Güttingen                            Ice days (maximum lower than 0 degrees C); annual total     1976-2020
+order_94886_GUT_tnd00xy0_1_legend.txt   Legend    Güttingen                            Ice days (maximum lower than 0 degrees C); annual total     1976-2020
+order_94886_HLL_tnd00xy0_1_data.txt     Data      Hallau                               Ice days (maximum lower than 0 degrees C); annual total     1975-1998
+order_94886_HLL_tnd00xy0_1_legend.txt   Legend    Hallau                               Ice days (maximum lower than 0 degrees C); annual total     1975-1998
+order_94886_HLL_tnd00xy0_2_data.txt     Data      Hallau                               Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_HLL_tnd00xy0_2_legend.txt   Legend    Hallau                               Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_DLHEC_tnd00xy0_1_data.txt   Data      Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     1947-1967
+order_94886_DLHEC_tnd00xy0_1_legend.txt Legend    Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     1947-1967
+order_94886_DLHEC_tnd00xy0_2_data.txt   Data      Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     1969-2011
+order_94886_DLHEC_tnd00xy0_2_legend.txt Legend    Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     1969-2011
+order_94886_DLHEC_tnd00xy0_3_data.txt   Data      Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     2012-2015
+order_94886_DLHEC_tnd00xy0_3_legend.txt Legend    Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     2012-2015
+order_94886_DLHEC_tnd00xy0_4_data.txt   Data      Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLHEC_tnd00xy0_4_legend.txt Legend    Hechingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLHEM_tnd00xy0_1_data.txt   Data      Hermaringen                          Ice days (maximum lower than 0 degrees C); annual total     2005-2015
+order_94886_DLHEM_tnd00xy0_1_legend.txt Legend    Hermaringen                          Ice days (maximum lower than 0 degrees C); annual total     2005-2015
+order_94886_DLHEM_tnd00xy0_2_data.txt   Data      Hermaringen                          Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLHEM_tnd00xy0_2_legend.txt Legend    Hermaringen                          Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLHER_tnd00xy0_1_data.txt   Data      Herrenberg                           Ice days (maximum lower than 0 degrees C); annual total     1978-1984
+order_94886_DLHER_tnd00xy0_1_legend.txt Legend    Herrenberg                           Ice days (maximum lower than 0 degrees C); annual total     1978-1984
+order_94886_NABHAE_tnd00xy0_1_data.txt  Data      Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     1999-2001
+order_94886_NABHAE_tnd00xy0_1_legend.txt Legend    Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     1999-2001
+order_94886_NABHAE_tnd00xy0_2_data.txt  Data      Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2003-2006
+order_94886_NABHAE_tnd00xy0_2_legend.txt Legend    Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2003-2006
+order_94886_NABHAE_tnd00xy0_3_data.txt  Data      Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2008-2014
+order_94886_NABHAE_tnd00xy0_3_legend.txt Legend    Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2008-2014
+order_94886_NABHAE_tnd00xy0_4_data.txt  Data      Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2015-2016
+order_94886_NABHAE_tnd00xy0_4_legend.txt Legend    Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2015-2016
+order_94886_NABHAE_tnd00xy0_5_data.txt  Data      Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_NABHAE_tnd00xy0_5_legend.txt Legend    Härkingen                            Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_WSLHOB_tnd00xy0_1_data.txt  Data      Hölstein Bestand                     Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_WSLHOB_tnd00xy0_1_legend.txt Legend    Hölstein Bestand                     Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_WSLHOC_tnd00xy0_1_data.txt  Data      Hölstein Turm                        Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_WSLHOC_tnd00xy0_1_legend.txt Legend    Hölstein Turm                        Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_BEINS_tnd00xy0_1_data.txt   Data      Ins                                  Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_BEINS_tnd00xy0_1_legend.txt Legend    Ins                                  Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_MBISL_tnd00xy0_1_data.txt   Data      Isleten                              Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_MBISL_tnd00xy0_1_legend.txt Legend    Isleten                              Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_JON_tnd00xy0_1_data.txt     Data      Jona                                 Ice days (maximum lower than 0 degrees C); annual total     1993-1995
+order_94886_JON_tnd00xy0_1_legend.txt   Legend    Jona                                 Ice days (maximum lower than 0 degrees C); annual total     1993-1995
+order_94886_WSLJUF_tnd00xy0_1_data.txt  Data      Jussy Freiland                       Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_WSLJUF_tnd00xy0_1_legend.txt Legend    Jussy Freiland                       Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_TGKAL_tnd00xy0_1_data.txt   Data      Kaltenbach                           Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_TGKAL_tnd00xy0_1_legend.txt Legend    Kaltenbach                           Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_IYKAL_tnd00xy0_1_data.txt   Data      Kaltern / Oberplanitzing             Ice days (maximum lower than 0 degrees C); annual total     2013-2018
+order_94886_IYKAL_tnd00xy0_1_legend.txt Legend    Kaltern / Oberplanitzing             Ice days (maximum lower than 0 degrees C); annual total     2013-2018
+order_94886_BEKAP_tnd00xy0_1_data.txt   Data      Kappelen                             Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_BEKAP_tnd00xy0_1_legend.txt Legend    Kappelen                             Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_DLKIF_tnd00xy0_1_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1946-1948
+order_94886_DLKIF_tnd00xy0_1_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1946-1948
+order_94886_DLKIF_tnd00xy0_2_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1949-1971
+order_94886_DLKIF_tnd00xy0_2_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1949-1971
+order_94886_DLKIF_tnd00xy0_3_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1972-1976
+order_94886_DLKIF_tnd00xy0_3_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1972-1976
+order_94886_DLKIF_tnd00xy0_4_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1977-1987
+order_94886_DLKIF_tnd00xy0_4_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1977-1987
+order_94886_DLKIF_tnd00xy0_5_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1988-1994
+order_94886_DLKIF_tnd00xy0_5_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1988-1994
+order_94886_DLKIF_tnd00xy0_6_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1996-1997
+order_94886_DLKIF_tnd00xy0_6_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1996-1997
+order_94886_DLKIF_tnd00xy0_7_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1998-2001
+order_94886_DLKIF_tnd00xy0_7_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     1998-2001
+order_94886_DLKIF_tnd00xy0_8_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     2006-2015
+order_94886_DLKIF_tnd00xy0_8_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     2006-2015
+order_94886_DLKIF_tnd00xy0_9_data.txt   Data      Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLKIF_tnd00xy0_9_legend.txt Legend    Kiefersfelden                        Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLKON_tnd00xy0_1_data.txt   Data      Konstanz                             Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_DLKON_tnd00xy0_1_legend.txt Legend    Konstanz                             Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_KOP_tnd00xy0_1_data.txt     Data      Koppigen                             Ice days (maximum lower than 0 degrees C); annual total     1960-1998
+order_94886_KOP_tnd00xy0_1_legend.txt   Legend    Koppigen                             Ice days (maximum lower than 0 degrees C); annual total     1960-1998
+order_94886_KOP_tnd00xy0_2_data.txt     Data      Koppigen                             Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_KOP_tnd00xy0_2_legend.txt   Legend    Koppigen                             Ice days (maximum lower than 0 degrees C); annual total     1999-2020
+order_94886_KRZ_tnd00xy0_1_data.txt     Data      Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     1959-1975
+order_94886_KRZ_tnd00xy0_1_legend.txt   Legend    Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     1959-1975
+order_94886_TGKRE_tnd00xy0_1_data.txt   Data      Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGKRE_tnd00xy0_1_legend.txt Legend    Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGKRE_tnd00xy0_2_data.txt   Data      Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TGKRE_tnd00xy0_2_legend.txt Legend    Kreuzlingen                          Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_LAC_tnd00xy0_1_data.txt     Data      Lachen / Galgenen                    Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_LAC_tnd00xy0_1_legend.txt   Legend    Lachen / Galgenen                    Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_IYLAI_tnd00xy0_1_data.txt   Data      Laimburg                             Ice days (maximum lower than 0 degrees C); annual total     2009-2018
+order_94886_IYLAI_tnd00xy0_1_legend.txt Legend    Laimburg                             Ice days (maximum lower than 0 degrees C); annual total     2009-2018
+order_94886_DLLAN_tnd00xy0_1_data.txt   Data      Landshut / Reithof                   Ice days (maximum lower than 0 degrees C); annual total     2008-2015
+order_94886_DLLAN_tnd00xy0_1_legend.txt Legend    Landshut / Reithof                   Ice days (maximum lower than 0 degrees C); annual total     2008-2015
+order_94886_DLLAN_tnd00xy0_2_data.txt   Data      Landshut / Reithof                   Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLLAN_tnd00xy0_2_legend.txt Legend    Landshut / Reithof                   Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MMLBB_tnd00xy0_1_data.txt   Data      Langenthal / Bleienbach              Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_MMLBB_tnd00xy0_1_legend.txt Legend    Langenthal / Bleienbach              Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_MMLAF_tnd00xy0_1_data.txt   Data      Laufen / Dittingen                   Ice days (maximum lower than 0 degrees C); annual total     2015-2017
+order_94886_MMLAF_tnd00xy0_1_legend.txt Legend    Laufen / Dittingen                   Ice days (maximum lower than 0 degrees C); annual total     2015-2017
+order_94886_MMLAF_tnd00xy0_2_data.txt   Data      Laufen / Dittingen                   Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_MMLAF_tnd00xy0_2_legend.txt Legend    Laufen / Dittingen                   Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_NABLAU_tnd00xy0_1_data.txt  Data      Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     1992-1995
+order_94886_NABLAU_tnd00xy0_1_legend.txt Legend    Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     1992-1995
+order_94886_NABLAU_tnd00xy0_2_data.txt  Data      Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     1996-2000
+order_94886_NABLAU_tnd00xy0_2_legend.txt Legend    Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     1996-2000
+order_94886_NABLAU_tnd00xy0_3_data.txt  Data      Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2001-2011
+order_94886_NABLAU_tnd00xy0_3_legend.txt Legend    Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2001-2011
+order_94886_NABLAU_tnd00xy0_4_data.txt  Data      Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2012-2017
+order_94886_NABLAU_tnd00xy0_4_legend.txt Legend    Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2012-2017
+order_94886_NABLAU_tnd00xy0_5_data.txt  Data      Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_NABLAU_tnd00xy0_5_legend.txt Legend    Lausanne                             Ice days (maximum lower than 0 degrees C); annual total     2018-2019
+order_94886_LEI_tnd00xy0_1_data.txt     Data      Leibstadt                            Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_LEI_tnd00xy0_1_legend.txt   Legend    Leibstadt                            Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_OTL_tnd00xy0_1_data.txt     Data      Locarno / Monti                      Ice days (maximum lower than 0 degrees C); annual total     1935-2020
+order_94886_OTL_tnd00xy0_1_legend.txt   Legend    Locarno / Monti                      Ice days (maximum lower than 0 degrees C); annual total     1935-2020
+order_94886_TGLOM_tnd00xy0_1_data.txt   Data      Lommis                               Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGLOM_tnd00xy0_1_legend.txt Legend    Lommis                               Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGLOM_tnd00xy0_2_data.txt   Data      Lommis                               Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_TGLOM_tnd00xy0_2_legend.txt Legend    Lommis                               Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_LUG_tnd00xy0_1_data.txt     Data      Lugano                               Ice days (maximum lower than 0 degrees C); annual total     1864-1878
+order_94886_LUG_tnd00xy0_1_legend.txt   Legend    Lugano                               Ice days (maximum lower than 0 degrees C); annual total     1864-1878
+order_94886_LUG_tnd00xy0_2_data.txt     Data      Lugano                               Ice days (maximum lower than 0 degrees C); annual total     1879-2020
+order_94886_LUG_tnd00xy0_2_legend.txt   Legend    Lugano                               Ice days (maximum lower than 0 degrees C); annual total     1879-2020
+order_94886_MMBIR_tnd00xy0_1_data.txt   Data      Lupfig / Flugplatz Birrfeld          Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MMBIR_tnd00xy0_1_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_LUZ_tnd00xy0_1_data.txt     Data      Luzern                               Ice days (maximum lower than 0 degrees C); annual total     1930-2020
+order_94886_LUZ_tnd00xy0_1_legend.txt   Legend    Luzern                               Ice days (maximum lower than 0 degrees C); annual total     1930-2020
+order_94886_INNLUZ_tnd00xy0_1_data.txt  Data      Luzern                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_INNLUZ_tnd00xy0_1_legend.txt Legend    Luzern                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_MAG_tnd00xy0_1_data.txt     Data      Magadino / Cadenazzo                 Ice days (maximum lower than 0 degrees C); annual total     1953-2020
+order_94886_MAG_tnd00xy0_1_legend.txt   Legend    Magadino / Cadenazzo                 Ice days (maximum lower than 0 degrees C); annual total     1953-2020
+order_94886_DLMAI_tnd00xy0_1_data.txt   Data      Maisach / Galgen                     Ice days (maximum lower than 0 degrees C); annual total     2005-2015
+order_94886_DLMAI_tnd00xy0_1_legend.txt Legend    Maisach / Galgen                     Ice days (maximum lower than 0 degrees C); annual total     2005-2015
+order_94886_DLMAI_tnd00xy0_2_data.txt   Data      Maisach / Galgen                     Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMAI_tnd00xy0_2_legend.txt Legend    Maisach / Galgen                     Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MMMAT_tnd00xy0_1_data.txt   Data      Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMMAT_tnd00xy0_1_legend.txt Legend    Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMMAT_tnd00xy0_2_data.txt   Data      Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2014-2016
+order_94886_MMMAT_tnd00xy0_2_legend.txt Legend    Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2014-2016
+order_94886_MMMAT_tnd00xy0_3_data.txt   Data      Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_MMMAT_tnd00xy0_3_legend.txt Legend    Marthalen                            Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_MAB_tnd00xy0_1_data.txt     Data      Martigny                             Ice days (maximum lower than 0 degrees C); annual total     1959-1969
+order_94886_MAB_tnd00xy0_1_legend.txt   Legend    Martigny                             Ice days (maximum lower than 0 degrees C); annual total     1959-1969
+order_94886_MAH_tnd00xy0_1_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     1995-1996
+order_94886_MAH_tnd00xy0_1_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     1995-1996
+order_94886_MAH_tnd00xy0_2_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     1997-1998
+order_94886_MAH_tnd00xy0_2_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     1997-1998
+order_94886_MAH_tnd00xy0_3_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2001-2002
+order_94886_MAH_tnd00xy0_3_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2001-2002
+order_94886_MAH_tnd00xy0_4_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2004-2006
+order_94886_MAH_tnd00xy0_4_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2004-2006
+order_94886_MAH_tnd00xy0_5_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2007-2010
+order_94886_MAH_tnd00xy0_5_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2007-2010
+order_94886_MAH_tnd00xy0_6_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MAH_tnd00xy0_6_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MAH_tnd00xy0_7_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2014-2015
+order_94886_MAH_tnd00xy0_7_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2014-2015
+order_94886_MAH_tnd00xy0_8_data.txt     Data      Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MAH_tnd00xy0_8_legend.txt   Legend    Mathod                               Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MMMEL_tnd00xy0_1_data.txt   Data      Mels / Heiligkreuz                   Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MMMEL_tnd00xy0_1_legend.txt Legend    Mels / Heiligkreuz                   Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_IYMER_tnd00xy0_1_data.txt   Data      Meran                                Ice days (maximum lower than 0 degrees C); annual total     1982-1995
+order_94886_IYMER_tnd00xy0_1_legend.txt Legend    Meran                                Ice days (maximum lower than 0 degrees C); annual total     1982-1995
+order_94886_IYMER_tnd00xy0_2_data.txt   Data      Meran                                Ice days (maximum lower than 0 degrees C); annual total     1996-2018
+order_94886_IYMER_tnd00xy0_2_legend.txt Legend    Meran                                Ice days (maximum lower than 0 degrees C); annual total     1996-2018
+order_94886_DLMEZ_tnd00xy0_1_data.txt   Data      Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2002-2007
+order_94886_DLMEZ_tnd00xy0_1_legend.txt Legend    Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2002-2007
+order_94886_DLMEZ_tnd00xy0_2_data.txt   Data      Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2009-2015
+order_94886_DLMEZ_tnd00xy0_2_legend.txt Legend    Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2009-2015
+order_94886_DLMEZ_tnd00xy0_3_data.txt   Data      Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMEZ_tnd00xy0_3_legend.txt Legend    Metzingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_TIMOL_tnd00xy0_1_data.txt   Data      Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TIMOL_tnd00xy0_1_legend.txt Legend    Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2009-2010
+order_94886_TIMOL_tnd00xy0_2_data.txt   Data      Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2013-2015
+order_94886_TIMOL_tnd00xy0_2_legend.txt Legend    Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2013-2015
+order_94886_TIMOL_tnd00xy0_3_data.txt   Data      Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TIMOL_tnd00xy0_3_legend.txt Legend    Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_TIMOL_tnd00xy0_4_data.txt   Data      Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_TIMOL_tnd00xy0_4_legend.txt Legend    Moleno                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_MON_tnd00xy0_1_data.txt     Data      Monthey                              Ice days (maximum lower than 0 degrees C); annual total     1965-1982
+order_94886_MON_tnd00xy0_1_legend.txt   Legend    Monthey                              Ice days (maximum lower than 0 degrees C); annual total     1965-1982
+order_94886_CLA_tnd00xy0_1_data.txt     Data      Montreux-Clarens                     Ice days (maximum lower than 0 degrees C); annual total     1930-1998
+order_94886_CLA_tnd00xy0_1_legend.txt   Legend    Montreux-Clarens                     Ice days (maximum lower than 0 degrees C); annual total     1930-1998
+order_94886_CLA_tnd00xy0_2_data.txt     Data      Montreux-Clarens                     Ice days (maximum lower than 0 degrees C); annual total     1999-2004
+order_94886_CLA_tnd00xy0_2_legend.txt   Legend    Montreux-Clarens                     Ice days (maximum lower than 0 degrees C); annual total     1999-2004
+order_94886_MOA_tnd00xy0_1_data.txt     Data      Mosen                                Ice days (maximum lower than 0 degrees C); annual total     2013-2014
+order_94886_MOA_tnd00xy0_1_legend.txt   Legend    Mosen                                Ice days (maximum lower than 0 degrees C); annual total     2013-2014
+order_94886_MOA_tnd00xy0_2_data.txt     Data      Mosen                                Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MOA_tnd00xy0_2_legend.txt   Legend    Mosen                                Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MMMOU_tnd00xy0_1_data.txt   Data      Moutier                              Ice days (maximum lower than 0 degrees C); annual total     2014-2015
+order_94886_MMMOU_tnd00xy0_1_legend.txt Legend    Moutier                              Ice days (maximum lower than 0 degrees C); annual total     2014-2015
+order_94886_MMMOU_tnd00xy0_2_data.txt   Data      Moutier                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MMMOU_tnd00xy0_2_legend.txt Legend    Moutier                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MOE_tnd00xy0_1_data.txt     Data      Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2010-2011
+order_94886_MOE_tnd00xy0_1_legend.txt   Legend    Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2010-2011
+order_94886_MOE_tnd00xy0_2_data.txt     Data      Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2012-2017
+order_94886_MOE_tnd00xy0_2_legend.txt   Legend    Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2012-2017
+order_94886_MOE_tnd00xy0_3_data.txt     Data      Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_MOE_tnd00xy0_3_legend.txt   Legend    Möhlin                               Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLMUD_tnd00xy0_1_data.txt   Data      Mühldorf                             Ice days (maximum lower than 0 degrees C); annual total     1952-2015
+order_94886_DLMUD_tnd00xy0_1_legend.txt Legend    Mühldorf                             Ice days (maximum lower than 0 degrees C); annual total     1952-2015
+order_94886_DLMUD_tnd00xy0_2_data.txt   Data      Mühldorf                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUD_tnd00xy0_2_legend.txt Legend    Mühldorf                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MUB_tnd00xy0_1_data.txt     Data      Mühleberg                            Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_MUB_tnd00xy0_1_legend.txt   Legend    Mühleberg                            Ice days (maximum lower than 0 degrees C); annual total     2008-2020
+order_94886_DLMUE_tnd00xy0_1_data.txt   Data      Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     1946-2000
+order_94886_DLMUE_tnd00xy0_1_legend.txt Legend    Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     1946-2000
+order_94886_DLMUE_tnd00xy0_2_data.txt   Data      Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLMUE_tnd00xy0_2_legend.txt Legend    Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLMUE_tnd00xy0_3_data.txt   Data      Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUE_tnd00xy0_3_legend.txt Legend    Müllheim                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUC_tnd00xy0_1_data.txt   Data      München                              Ice days (maximum lower than 0 degrees C); annual total     1954-2015
+order_94886_DLMUC_tnd00xy0_1_legend.txt Legend    München                              Ice days (maximum lower than 0 degrees C); annual total     1954-2015
+order_94886_DLMUC_tnd00xy0_2_data.txt   Data      München                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUC_tnd00xy0_2_legend.txt Legend    München                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUN_tnd00xy0_1_data.txt   Data      München / Flughafen                  Ice days (maximum lower than 0 degrees C); annual total     1992-2015
+order_94886_DLMUN_tnd00xy0_1_legend.txt Legend    München / Flughafen                  Ice days (maximum lower than 0 degrees C); annual total     1992-2015
+order_94886_DLMUN_tnd00xy0_2_data.txt   Data      München / Flughafen                  Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLMUN_tnd00xy0_2_legend.txt Legend    München / Flughafen                  Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_KAMUN_tnd00xy0_1_data.txt   Data      Münchenstein                         Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAMUN_tnd00xy0_1_legend.txt Legend    Münchenstein                         Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_IYNAT_tnd00xy0_1_data.txt   Data      Naturns                              Ice days (maximum lower than 0 degrees C); annual total     1972-2007
+order_94886_IYNAT_tnd00xy0_1_legend.txt Legend    Naturns                              Ice days (maximum lower than 0 degrees C); annual total     1972-2007
+order_94886_IYNAT_tnd00xy0_2_data.txt   Data      Naturns                              Ice days (maximum lower than 0 degrees C); annual total     2009-2018
+order_94886_IYNAT_tnd00xy0_2_legend.txt Legend    Naturns                              Ice days (maximum lower than 0 degrees C); annual total     2009-2018
+order_94886_DLNEB_tnd00xy0_1_data.txt   Data      Neuburg an der Kammel                Ice days (maximum lower than 0 degrees C); annual total     1991-2015
+order_94886_DLNEB_tnd00xy0_1_legend.txt Legend    Neuburg an der Kammel                Ice days (maximum lower than 0 degrees C); annual total     1991-2015
+order_94886_DLNEB_tnd00xy0_2_data.txt   Data      Neuburg an der Kammel                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLNEB_tnd00xy0_2_legend.txt Legend    Neuburg an der Kammel                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_NEU_tnd00xy0_1_data.txt     Data      Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1864-1866
+order_94886_NEU_tnd00xy0_1_legend.txt   Legend    Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1864-1866
+order_94886_NEU_tnd00xy0_2_data.txt     Data      Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1867-1869
+order_94886_NEU_tnd00xy0_2_legend.txt   Legend    Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1867-1869
+order_94886_NEU_tnd00xy0_3_data.txt     Data      Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1870-1873
+order_94886_NEU_tnd00xy0_3_legend.txt   Legend    Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1870-1873
+order_94886_NEU_tnd00xy0_4_data.txt     Data      Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1874-2020
+order_94886_NEU_tnd00xy0_4_legend.txt   Legend    Neuchâtel                            Ice days (maximum lower than 0 degrees C); annual total     1874-2020
+order_94886_DLNOT_tnd00xy0_1_data.txt   Data      Notzingen                            Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLNOT_tnd00xy0_1_legend.txt Legend    Notzingen                            Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLNOT_tnd00xy0_2_data.txt   Data      Notzingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLNOT_tnd00xy0_2_legend.txt Legend    Notzingen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_TGNUS_tnd00xy0_1_data.txt   Data      Nussbaumen                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_TGNUS_tnd00xy0_1_legend.txt Legend    Nussbaumen                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_CGI_tnd00xy0_1_data.txt     Data      Nyon / Changins                      Ice days (maximum lower than 0 degrees C); annual total     1964-2020
+order_94886_CGI_tnd00xy0_1_legend.txt   Legend    Nyon / Changins                      Ice days (maximum lower than 0 degrees C); annual total     1964-2020
+order_94886_DLNUE_tnd00xy0_1_data.txt   Data      Nürnberg                             Ice days (maximum lower than 0 degrees C); annual total     1955-2015
+order_94886_DLNUE_tnd00xy0_1_legend.txt Legend    Nürnberg                             Ice days (maximum lower than 0 degrees C); annual total     1955-2015
+order_94886_DLNUE_tnd00xy0_2_data.txt   Data      Nürnberg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLNUE_tnd00xy0_2_legend.txt Legend    Nürnberg                             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_OBR_tnd00xy0_1_data.txt     Data      Oberriet / Kriessern                 Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_OBR_tnd00xy0_1_legend.txt   Legend    Oberriet / Kriessern                 Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_DLOBS_tnd00xy0_1_data.txt   Data      Oberschleissheim                     Ice days (maximum lower than 0 degrees C); annual total     1976-2005
+order_94886_DLOBS_tnd00xy0_1_legend.txt Legend    Oberschleissheim                     Ice days (maximum lower than 0 degrees C); annual total     1976-2005
+order_94886_KAOWL_tnd00xy0_1_data.txt   Data      Oberwil                              Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAOWL_tnd00xy0_1_legend.txt Legend    Oberwil                              Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_OTN_tnd00xy0_1_data.txt     Data      Olten                                Ice days (maximum lower than 0 degrees C); annual total     1958-1986
+order_94886_OTN_tnd00xy0_1_legend.txt   Legend    Olten                                Ice days (maximum lower than 0 degrees C); annual total     1958-1986
+order_94886_BOZ_tnd00xy0_1_data.txt     Data      Orbe                                 Ice days (maximum lower than 0 degrees C); annual total     1964-1989
+order_94886_BOZ_tnd00xy0_1_legend.txt   Legend    Orbe                                 Ice days (maximum lower than 0 degrees C); annual total     1964-1989
+order_94886_WSLOTF_tnd00xy0_1_data.txt  Data      Othmarsingen Freiland                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_WSLOTF_tnd00xy0_1_legend.txt Legend    Othmarsingen Freiland                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_PAY_tnd00xy0_1_data.txt     Data      Payerne                              Ice days (maximum lower than 0 degrees C); annual total     1964-2020
+order_94886_PAY_tnd00xy0_1_legend.txt   Legend    Payerne                              Ice days (maximum lower than 0 degrees C); annual total     1964-2020
+order_94886_PAA_tnd00xy0_1_data.txt     Data      Payerne                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_PAA_tnd00xy0_1_legend.txt   Legend    Payerne                              Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_PUY_tnd00xy0_1_data.txt     Data      Pully                                Ice days (maximum lower than 0 degrees C); annual total     1977-2020
+order_94886_PUY_tnd00xy0_1_legend.txt   Legend    Pully                                Ice days (maximum lower than 0 degrees C); annual total     1977-2020
+order_94886_MMRAF_tnd00xy0_1_data.txt   Data      Rafz                                 Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MMRAF_tnd00xy0_1_legend.txt Legend    Rafz                                 Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_RAP_tnd00xy0_1_data.txt     Data      Rapperswil SG                        Ice days (maximum lower than 0 degrees C); annual total     1970-1992
+order_94886_RAP_tnd00xy0_1_legend.txt   Legend    Rapperswil SG                        Ice days (maximum lower than 0 degrees C); annual total     1970-1992
+order_94886_INNRED_tnd00xy0_1_data.txt  Data      Reiden                               Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_INNRED_tnd00xy0_1_legend.txt Legend    Reiden                               Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAREH_tnd00xy0_1_data.txt   Data      Reinach                              Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAREH_tnd00xy0_1_legend.txt Legend    Reinach                              Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLREN_tnd00xy0_1_data.txt   Data      Renningen                            Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLREN_tnd00xy0_1_legend.txt Legend    Renningen                            Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLREN_tnd00xy0_2_data.txt   Data      Renningen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLREN_tnd00xy0_2_legend.txt Legend    Renningen                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_RHF_tnd00xy0_1_data.txt     Data      Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1970-1998
+order_94886_RHF_tnd00xy0_1_legend.txt   Legend    Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1970-1998
+order_94886_RHF_tnd00xy0_2_data.txt     Data      Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1999-2004
+order_94886_RHF_tnd00xy0_2_legend.txt   Legend    Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1999-2004
+order_94886_DLRFE_tnd00xy0_1_data.txt   Data      Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1953-2014
+order_94886_DLRFE_tnd00xy0_1_legend.txt Legend    Rheinfelden                          Ice days (maximum lower than 0 degrees C); annual total     1953-2014
+order_94886_TGRIC_tnd00xy0_1_data.txt   Data      Rickenbach                           Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGRIC_tnd00xy0_1_legend.txt Legend    Rickenbach                           Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_KAROD_tnd00xy0_1_data.txt   Data      Rodersdorf                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_KAROD_tnd00xy0_1_legend.txt Legend    Rodersdorf                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_ROS_tnd00xy0_1_data.txt     Data      Rorschach                            Ice days (maximum lower than 0 degrees C); annual total     1964-1980
+order_94886_ROS_tnd00xy0_1_legend.txt   Legend    Rorschach                            Ice days (maximum lower than 0 degrees C); annual total     1964-1980
+order_94886_DLROS_tnd00xy0_1_data.txt   Data      Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     1949-1986
+order_94886_DLROS_tnd00xy0_1_legend.txt Legend    Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     1949-1986
+order_94886_DLROS_tnd00xy0_2_data.txt   Data      Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     1987-2015
+order_94886_DLROS_tnd00xy0_2_legend.txt Legend    Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     1987-2015
+order_94886_DLROS_tnd00xy0_3_data.txt   Data      Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLROS_tnd00xy0_3_legend.txt Legend    Rosenheim                            Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLRON_tnd00xy0_1_data.txt   Data      Rottenburg am Neckar                 Ice days (maximum lower than 0 degrees C); annual total     1979-1993
+order_94886_DLRON_tnd00xy0_1_legend.txt Legend    Rottenburg am Neckar                 Ice days (maximum lower than 0 degrees C); annual total     1979-1993
+order_94886_DLRON_tnd00xy0_2_data.txt   Data      Rottenburg am Neckar                 Ice days (maximum lower than 0 degrees C); annual total     1995-2001
+order_94886_DLRON_tnd00xy0_2_legend.txt Legend    Rottenburg am Neckar                 Ice days (maximum lower than 0 degrees C); annual total     1995-2001
+order_94886_DLSAA_tnd00xy0_1_data.txt   Data      Saarbrücken / Ensheim                Ice days (maximum lower than 0 degrees C); annual total     1950-2015
+order_94886_DLSAA_tnd00xy0_1_legend.txt Legend    Saarbrücken / Ensheim                Ice days (maximum lower than 0 degrees C); annual total     1950-2015
+order_94886_DLSAA_tnd00xy0_2_data.txt   Data      Saarbrücken / Ensheim                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLSAA_tnd00xy0_2_legend.txt Legend    Saarbrücken / Ensheim                Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_IYSAU_tnd00xy0_1_data.txt   Data      Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1976-1980
+order_94886_IYSAU_tnd00xy0_1_legend.txt Legend    Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1976-1980
+order_94886_IYSAU_tnd00xy0_2_data.txt   Data      Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1987-1988
+order_94886_IYSAU_tnd00xy0_2_legend.txt Legend    Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1987-1988
+order_94886_IYSAU_tnd00xy0_3_data.txt   Data      Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1991-1999
+order_94886_IYSAU_tnd00xy0_3_legend.txt Legend    Salurn                               Ice days (maximum lower than 0 degrees C); annual total     1991-1999
+order_94886_IYSAU_tnd00xy0_4_data.txt   Data      Salurn                               Ice days (maximum lower than 0 degrees C); annual total     2000-2018
+order_94886_IYSAU_tnd00xy0_4_legend.txt Legend    Salurn                               Ice days (maximum lower than 0 degrees C); annual total     2000-2018
+order_94886_SRN_tnd00xy0_1_data.txt     Data      Sarnen                               Ice days (maximum lower than 0 degrees C); annual total     1963-1986
+order_94886_SRN_tnd00xy0_1_legend.txt   Legend    Sarnen                               Ice days (maximum lower than 0 degrees C); annual total     1963-1986
+order_94886_MMSAX_tnd00xy0_1_data.txt   Data      Sax                                  Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSAX_tnd00xy0_1_legend.txt Legend    Sax                                  Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSAX_tnd00xy0_2_data.txt   Data      Sax                                  Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_MMSAX_tnd00xy0_2_legend.txt Legend    Sax                                  Ice days (maximum lower than 0 degrees C); annual total     2015-2020
+order_94886_SHA_tnd00xy0_1_data.txt     Data      Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1881-1882
+order_94886_SHA_tnd00xy0_1_legend.txt   Legend    Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1881-1882
+order_94886_SHA_tnd00xy0_2_data.txt     Data      Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1929-1930
+order_94886_SHA_tnd00xy0_2_legend.txt   Legend    Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1929-1930
+order_94886_SHA_tnd00xy0_3_data.txt     Data      Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1959-2020
+order_94886_SHA_tnd00xy0_3_legend.txt   Legend    Schaffhausen                         Ice days (maximum lower than 0 degrees C); annual total     1959-2020
+order_94886_INNSWZ_tnd00xy0_1_data.txt  Data      Schwyz                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_INNSWZ_tnd00xy0_1_legend.txt Legend    Schwyz                               Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_MMSSE_tnd00xy0_1_data.txt   Data      Schwyz / Seewen                      Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSSE_tnd00xy0_1_legend.txt Legend    Schwyz / Seewen                      Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSSE_tnd00xy0_2_data.txt   Data      Schwyz / Seewen                      Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_MMSSE_tnd00xy0_2_legend.txt Legend    Schwyz / Seewen                      Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_SCI_tnd00xy0_1_data.txt     Data      Schwyz-Ibach                         Ice days (maximum lower than 0 degrees C); annual total     1970-1980
+order_94886_SCI_tnd00xy0_1_legend.txt   Legend    Schwyz-Ibach                         Ice days (maximum lower than 0 degrees C); annual total     1970-1980
+order_94886_DLSIZ_tnd00xy0_1_data.txt   Data      Sigmarszell-Zeisertsweiler           Ice days (maximum lower than 0 degrees C); annual total     1988-2015
+order_94886_DLSIZ_tnd00xy0_1_legend.txt Legend    Sigmarszell-Zeisertsweiler           Ice days (maximum lower than 0 degrees C); annual total     1988-2015
+order_94886_DLSIZ_tnd00xy0_2_data.txt   Data      Sigmarszell-Zeisertsweiler           Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_DLSIZ_tnd00xy0_2_legend.txt Legend    Sigmarszell-Zeisertsweiler           Ice days (maximum lower than 0 degrees C); annual total     2016-2019
+order_94886_DLSIN_tnd00xy0_1_data.txt   Data      Singen                               Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLSIN_tnd00xy0_1_legend.txt Legend    Singen                               Ice days (maximum lower than 0 degrees C); annual total     2004-2015
+order_94886_DLSIN_tnd00xy0_2_data.txt   Data      Singen                               Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLSIN_tnd00xy0_2_legend.txt Legend    Singen                               Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_SIO_tnd00xy0_1_data.txt     Data      Sion                                 Ice days (maximum lower than 0 degrees C); annual total     1953-2020
+order_94886_SIO_tnd00xy0_1_legend.txt   Legend    Sion                                 Ice days (maximum lower than 0 degrees C); annual total     1953-2020
+order_94886_ION_tnd00xy0_1_data.txt     Data      Sion                                 Ice days (maximum lower than 0 degrees C); annual total     1964-1977
+order_94886_ION_tnd00xy0_1_legend.txt   Legend    Sion                                 Ice days (maximum lower than 0 degrees C); annual total     1964-1977
+order_94886_STH_tnd00xy0_1_data.txt     Data      Solothurn                            Ice days (maximum lower than 0 degrees C); annual total     1963-1978
+order_94886_STH_tnd00xy0_1_legend.txt   Legend    Solothurn                            Ice days (maximum lower than 0 degrees C); annual total     1963-1978
+order_94886_STC_tnd00xy0_1_data.txt     Data      St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     1995-1997
+order_94886_STC_tnd00xy0_1_legend.txt   Legend    St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     1995-1997
+order_94886_STC_tnd00xy0_2_data.txt     Data      St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     1998-1999
+order_94886_STC_tnd00xy0_2_legend.txt   Legend    St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     1998-1999
+order_94886_STC_tnd00xy0_3_data.txt     Data      St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_STC_tnd00xy0_3_legend.txt   Legend    St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2000-2002
+order_94886_STC_tnd00xy0_4_data.txt     Data      St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2003-2004
+order_94886_STC_tnd00xy0_4_legend.txt   Legend    St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2003-2004
+order_94886_STC_tnd00xy0_5_data.txt     Data      St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2008-2009
+order_94886_STC_tnd00xy0_5_legend.txt   Legend    St. Chrischona                       Ice days (maximum lower than 0 degrees C); annual total     2008-2009
+order_94886_SBO_tnd00xy0_1_data.txt     Data      Stabio                               Ice days (maximum lower than 0 degrees C); annual total     1981-2020
+order_94886_SBO_tnd00xy0_1_legend.txt   Legend    Stabio                               Ice days (maximum lower than 0 degrees C); annual total     1981-2020
+order_94886_MMSTA_tnd00xy0_1_data.txt   Data      Stans                                Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSTA_tnd00xy0_1_legend.txt Legend    Stans                                Ice days (maximum lower than 0 degrees C); annual total     2012-2013
+order_94886_MMSTA_tnd00xy0_2_data.txt   Data      Stans                                Ice days (maximum lower than 0 degrees C); annual total     2014-2016
+order_94886_MMSTA_tnd00xy0_2_legend.txt Legend    Stans                                Ice days (maximum lower than 0 degrees C); annual total     2014-2016
+order_94886_MMSTA_tnd00xy0_3_data.txt   Data      Stans                                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_MMSTA_tnd00xy0_3_legend.txt Legend    Stans                                Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_DLSTU_tnd00xy0_1_data.txt   Data      Stuttgart / Echterdingen             Ice days (maximum lower than 0 degrees C); annual total     1952-2015
+order_94886_DLSTU_tnd00xy0_1_legend.txt Legend    Stuttgart / Echterdingen             Ice days (maximum lower than 0 degrees C); annual total     1952-2015
+order_94886_DLSTU_tnd00xy0_2_data.txt   Data      Stuttgart / Echterdingen             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLSTU_tnd00xy0_2_legend.txt Legend    Stuttgart / Echterdingen             Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_MMTRG_tnd00xy0_1_data.txt   Data      Triengen                             Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_MMTRG_tnd00xy0_1_legend.txt Legend    Triengen                             Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_VAD_tnd00xy0_1_data.txt     Data      Vaduz                                Ice days (maximum lower than 0 degrees C); annual total     1970-2020
+order_94886_VAD_tnd00xy0_1_legend.txt   Legend    Vaduz                                Ice days (maximum lower than 0 degrees C); annual total     1970-2020
+order_94886_VAZ_tnd00xy0_1_data.txt     Data      Vernayaz                             Ice days (maximum lower than 0 degrees C); annual total     1969-1985
+order_94886_VAZ_tnd00xy0_1_legend.txt   Legend    Vernayaz                             Ice days (maximum lower than 0 degrees C); annual total     1969-1985
+order_94886_VEV_tnd00xy0_1_data.txt     Data      Vevey / Corseaux                     Ice days (maximum lower than 0 degrees C); annual total     2015-2017
+order_94886_VEV_tnd00xy0_1_legend.txt   Legend    Vevey / Corseaux                     Ice days (maximum lower than 0 degrees C); annual total     2015-2017
+order_94886_VEV_tnd00xy0_2_data.txt     Data      Vevey / Corseaux                     Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_VEV_tnd00xy0_2_legend.txt   Legend    Vevey / Corseaux                     Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_WSLVOF_tnd00xy0_1_data.txt  Data      Vordemwald Freiland                  Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_WSLVOF_tnd00xy0_1_legend.txt Legend    Vordemwald Freiland                  Ice days (maximum lower than 0 degrees C); annual total     2017-2018
+order_94886_WSLVOF_tnd00xy0_2_data.txt  Data      Vordemwald Freiland                  Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_WSLVOF_tnd00xy0_2_legend.txt Legend    Vordemwald Freiland                  Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_WWI_tnd00xy0_1_data.txt     Data      Walchwil                             Ice days (maximum lower than 0 degrees C); annual total     1965-1980
+order_94886_WWI_tnd00xy0_1_legend.txt   Legend    Walchwil                             Ice days (maximum lower than 0 degrees C); annual total     1965-1980
+order_94886_DLWEI_tnd00xy0_1_data.txt   Data      Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     1945-1985
+order_94886_DLWEI_tnd00xy0_1_legend.txt Legend    Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     1945-1985
+order_94886_DLWEI_tnd00xy0_2_data.txt   Data      Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     1990-2015
+order_94886_DLWEI_tnd00xy0_2_legend.txt Legend    Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     1990-2015
+order_94886_DLWEI_tnd00xy0_3_data.txt   Data      Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLWEI_tnd00xy0_3_legend.txt Legend    Weingarten                           Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLWIE_tnd00xy0_1_data.txt   Data      Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     1999-2015
+order_94886_DLWIE_tnd00xy0_1_legend.txt Legend    Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     1999-2015
+order_94886_DLWIE_tnd00xy0_2_data.txt   Data      Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_DLWIE_tnd00xy0_2_legend.txt Legend    Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     2016-2017
+order_94886_DLWIE_tnd00xy0_3_data.txt   Data      Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_DLWIE_tnd00xy0_3_legend.txt Legend    Wielenbach                           Ice days (maximum lower than 0 degrees C); annual total     2018-2020
+order_94886_TGWIG_tnd00xy0_1_data.txt   Data      Wigoltingen                          Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_TGWIG_tnd00xy0_1_legend.txt Legend    Wigoltingen                          Ice days (maximum lower than 0 degrees C); annual total     2011-2012
+order_94886_WIN_tnd00xy0_1_data.txt     Data      Winterthur / Seen                    Ice days (maximum lower than 0 degrees C); annual total     1969-1983
+order_94886_WIN_tnd00xy0_1_legend.txt   Legend    Winterthur / Seen                    Ice days (maximum lower than 0 degrees C); annual total     1969-1983
+order_94886_DLWOL_tnd00xy0_1_data.txt   Data      Wolfach                              Ice days (maximum lower than 0 degrees C); annual total     1957-2015
+order_94886_DLWOL_tnd00xy0_1_legend.txt Legend    Wolfach                              Ice days (maximum lower than 0 degrees C); annual total     1957-2015
+order_94886_DLWOL_tnd00xy0_2_data.txt   Data      Wolfach                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLWOL_tnd00xy0_2_legend.txt Legend    Wolfach                              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLWOF_tnd00xy0_1_data.txt   Data      Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     1960-1995
+order_94886_DLWOF_tnd00xy0_1_legend.txt Legend    Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     1960-1995
+order_94886_DLWOF_tnd00xy0_2_data.txt   Data      Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     1996-2015
+order_94886_DLWOF_tnd00xy0_2_legend.txt Legend    Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     1996-2015
+order_94886_DLWOF_tnd00xy0_3_data.txt   Data      Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_DLWOF_tnd00xy0_3_legend.txt Legend    Wutöschingen-Ofteringen              Ice days (maximum lower than 0 degrees C); annual total     2016-2020
+order_94886_WYN_tnd00xy0_1_data.txt     Data      Wynau                                Ice days (maximum lower than 0 degrees C); annual total     1977-2020
+order_94886_WYN_tnd00xy0_1_legend.txt   Legend    Wynau                                Ice days (maximum lower than 0 degrees C); annual total     1977-2020
+order_94886_WAE_tnd00xy0_1_data.txt     Data      Wädenswil                            Ice days (maximum lower than 0 degrees C); annual total     1980-2020
+order_94886_WAE_tnd00xy0_1_legend.txt   Legend    Wädenswil                            Ice days (maximum lower than 0 degrees C); annual total     1980-2020
+order_94886_PSI_tnd00xy0_1_data.txt     Data      Würenlingen / PSI                    Ice days (maximum lower than 0 degrees C); annual total     1992-2020
+order_94886_PSI_tnd00xy0_1_legend.txt   Legend    Würenlingen / PSI                    Ice days (maximum lower than 0 degrees C); annual total     1992-2020
+order_94886_INNZUG_tnd00xy0_1_data.txt  Data      Zug                                  Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_INNZUG_tnd00xy0_1_legend.txt Legend    Zug                                  Ice days (maximum lower than 0 degrees C); annual total     2019-2020
+order_94886_NABZUE_tnd00xy0_1_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     1994-1995
+order_94886_NABZUE_tnd00xy0_1_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     1994-1995
+order_94886_NABZUE_tnd00xy0_2_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     1997-1998
+order_94886_NABZUE_tnd00xy0_2_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     1997-1998
+order_94886_NABZUE_tnd00xy0_3_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2000-2003
+order_94886_NABZUE_tnd00xy0_3_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2000-2003
+order_94886_NABZUE_tnd00xy0_4_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2004-2005
+order_94886_NABZUE_tnd00xy0_4_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2004-2005
+order_94886_NABZUE_tnd00xy0_5_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2006-2016
+order_94886_NABZUE_tnd00xy0_5_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2006-2016
+order_94886_NABZUE_tnd00xy0_6_data.txt  Data      Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_NABZUE_tnd00xy0_6_legend.txt Legend    Zürich                               Ice days (maximum lower than 0 degrees C); annual total     2017-2020
+order_94886_REH_tnd00xy0_1_data.txt     Data      Zürich / Affoltern                   Ice days (maximum lower than 0 degrees C); annual total     1978-2020
+order_94886_REH_tnd00xy0_1_legend.txt   Legend    Zürich / Affoltern                   Ice days (maximum lower than 0 degrees C); annual total     1978-2020
+order_94886_KLO_tnd00xy0_1_data.txt     Data      Zürich / Kloten                      Ice days (maximum lower than 0 degrees C); annual total     1950-2020
+order_94886_KLO_tnd00xy0_1_legend.txt   Legend    Zürich / Kloten                      Ice days (maximum lower than 0 degrees C); annual total     1950-2020
+order_94886_ZBO_tnd00xy0_1_data.txt     Data      Zürich-Bot.Garten                    Ice days (maximum lower than 0 degrees C); annual total     1958-1975
+order_94886_ZBO_tnd00xy0_1_legend.txt   Legend    Zürich-Bot.Garten                    Ice days (maximum lower than 0 degrees C); annual total     1958-1975

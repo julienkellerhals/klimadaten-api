@@ -1,0 +1,442 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94873
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94873_ABO_rre150m0_1_data.txt     Data      Adelboden                            Precipitation; monthly total                                202102-202104
+order_94873_ABO_rre150m0_1_legend.txt   Legend    Adelboden                            Precipitation; monthly total                                202102-202104
+order_94873_AIR_rre150m0_1_data.txt     Data      Airolo                               Precipitation; monthly total                                202102-202104
+order_94873_AIR_rre150m0_1_legend.txt   Legend    Airolo                               Precipitation; monthly total                                202102-202104
+order_94873_TIAIR_rre150m0_1_data.txt   Data      Airolo                               Precipitation; monthly total                                202102-202104
+order_94873_TIAIR_rre150m0_1_legend.txt Legend    Airolo                               Precipitation; monthly total                                202102-202104
+order_94873_WSLALB_rre150m0_1_data.txt  Data      Alpthal Bestand                      Precipitation; monthly total                                202102-202104
+order_94873_WSLALB_rre150m0_1_legend.txt Legend    Alpthal Bestand                      Precipitation; monthly total                                202102-202104
+order_94873_ALV_rre150m0_1_data.txt     Data      Alvaneu Dorf                         Precipitation; monthly total                                202102-202104
+order_94873_ALV_rre150m0_1_legend.txt   Legend    Alvaneu Dorf                         Precipitation; monthly total                                202102-202104
+order_94873_ANT_rre150m0_1_data.txt     Data      Andermatt                            Precipitation; monthly total                                202102-202104
+order_94873_ANT_rre150m0_1_legend.txt   Legend    Andermatt                            Precipitation; monthly total                                202102-202104
+order_94873_URANT_rre150m0_1_data.txt   Data      Andermatt / ARA                      Precipitation; monthly total                                202102-202104
+order_94873_URANT_rre150m0_1_legend.txt Legend    Andermatt / ARA                      Precipitation; monthly total                                202102-202104
+order_94873_IYANT_rre150m0_1_data.txt   Data      Antholz Obertal                      Precipitation; monthly total                                202102-202104
+order_94873_IYANT_rre150m0_1_legend.txt Legend    Antholz Obertal                      Precipitation; monthly total                                202102-202104
+order_94873_VSANZ_rre150m0_1_data.txt   Data      Anzère                               Precipitation; monthly total                                202102-202104
+order_94873_VSANZ_rre150m0_1_legend.txt Legend    Anzère                               Precipitation; monthly total                                202102-202104
+order_94873_VSARO_rre150m0_1_data.txt   Data      Arolla                               Precipitation; monthly total                                202102-202104
+order_94873_VSARO_rre150m0_1_legend.txt Legend    Arolla                               Precipitation; monthly total                                202102-202104
+order_94873_AVB_rre150m0_1_data.txt     Data      Avers / Am Bach                      Precipitation; monthly total                                202102-202104
+order_94873_AVB_rre150m0_1_legend.txt   Legend    Avers / Am Bach                      Precipitation; monthly total                                202102-202104
+order_94873_VSBAS_rre150m0_1_data.txt   Data      Baltschiedertal                      Precipitation; monthly total                                202102-202104
+order_94873_VSBAS_rre150m0_1_legend.txt Legend    Baltschiedertal                      Precipitation; monthly total                                202102-202104
+order_94873_VSGDX_rre150m0_1_data.txt   Data      Barrage Grande Dixence               Precipitation; monthly total                                202102-202104
+order_94873_VSGDX_rre150m0_1_legend.txt Legend    Barrage Grande Dixence               Precipitation; monthly total                                202102-202104
+order_94873_WSLBAB_rre150m0_1_data.txt  Data      Beatenberg Bestand                   Precipitation; monthly total                                202102-202104
+order_94873_WSLBAB_rre150m0_1_legend.txt Legend    Beatenberg Bestand                   Precipitation; monthly total                                202102-202104
+order_94873_WSLBAF_rre150m0_1_data.txt  Data      Beatenberg Freiland                  Precipitation; monthly total                                202102-202104
+order_94873_WSLBAF_rre150m0_1_legend.txt Legend    Beatenberg Freiland                  Precipitation; monthly total                                202102-202104
+order_94873_LAT_rre150m0_1_data.txt     Data      Bergün / Latsch                      Precipitation; monthly total                                202102-202104
+order_94873_LAT_rre150m0_1_legend.txt   Legend    Bergün / Latsch                      Precipitation; monthly total                                202102-202104
+order_94873_BEC_rre150m0_1_data.txt     Data      Bernina / Curtinatsch                Precipitation; monthly total                                202102-202104
+order_94873_BEC_rre150m0_1_legend.txt   Legend    Bernina / Curtinatsch                Precipitation; monthly total                                202102-202104
+order_94873_WSLBTB_rre150m0_1_data.txt  Data      Bettlachstock Bestand                Precipitation; monthly total                                202102-202104
+order_94873_WSLBTB_rre150m0_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; monthly total                                202102-202104
+order_94873_WSLBTF_rre150m0_1_data.txt  Data      Bettlachstock Freiland               Precipitation; monthly total                                202102-202104
+order_94873_WSLBTF_rre150m0_1_legend.txt Legend    Bettlachstock Freiland               Precipitation; monthly total                                202102-202104
+order_94873_BIN_rre150m0_1_data.txt     Data      Binn                                 Precipitation; monthly total                                202102-202104
+order_94873_BIN_rre150m0_1_legend.txt   Legend    Binn                                 Precipitation; monthly total                                202102-202104
+order_94873_BIV_rre150m0_1_data.txt     Data      Bivio                                Precipitation; monthly total                                202102-202104
+order_94873_BIV_rre150m0_1_legend.txt   Legend    Bivio                                Precipitation; monthly total                                202102-202104
+order_94873_BLA_rre150m0_1_data.txt     Data      Blatten, Lötschental                 Precipitation; monthly total                                202102-202104
+order_94873_BLA_rre150m0_1_legend.txt   Legend    Blatten, Lötschental                 Precipitation; monthly total                                202102-202104
+order_94873_BOS_rre150m0_1_data.txt     Data      Bosco/Gurin                          Precipitation; monthly total                                202102-202104
+order_94873_BOS_rre150m0_1_legend.txt   Legend    Bosco/Gurin                          Precipitation; monthly total                                202102-202104
+order_94873_BSP_rre150m0_1_data.txt     Data      Bourg-St-Pierre                      Precipitation; monthly total                                202102-202104
+order_94873_BSP_rre150m0_1_legend.txt   Legend    Bourg-St-Pierre                      Precipitation; monthly total                                202102-202104
+order_94873_VSBSP_rre150m0_1_data.txt   Data      Bourg-St-Pierre                      Precipitation; monthly total                                202102-202104
+order_94873_VSBSP_rre150m0_1_legend.txt Legend    Bourg-St-Pierre                      Precipitation; monthly total                                202102-202104
+order_94873_BRA_rre150m0_1_data.txt     Data      Braggio                              Precipitation; monthly total                                202102-202104
+order_94873_BRA_rre150m0_1_legend.txt   Legend    Braggio                              Precipitation; monthly total                                202102-202104
+order_94873_BRW_rre150m0_1_data.txt     Data      Braunwald                            Precipitation; monthly total                                202102-202104
+order_94873_BRW_rre150m0_1_legend.txt   Legend    Braunwald                            Precipitation; monthly total                                202102-202104
+order_94873_VSBRU_rre150m0_1_data.txt   Data      Bruchji                              Precipitation; monthly total                                202102-202104
+order_94873_VSBRU_rre150m0_1_legend.txt Legend    Bruchji                              Precipitation; monthly total                                202102-202104
+order_94873_BUF_rre150m0_1_data.txt     Data      Buffalora                            Precipitation; monthly total                                202102-202104
+order_94873_BUF_rre150m0_1_legend.txt   Legend    Buffalora                            Precipitation; monthly total                                202102-202104
+order_94873_FRE_rre150m0_1_data.txt     Data      Bullet / La Frétaz                   Precipitation; monthly total                                202102-202104
+order_94873_FRE_rre150m0_1_legend.txt   Legend    Bullet / La Frétaz                   Precipitation; monthly total                                202102-202104
+order_94873_CAV_rre150m0_1_data.txt     Data      Cavaglia                             Precipitation; monthly total                                202102-202104
+order_94873_CAV_rre150m0_1_legend.txt   Legend    Cavaglia                             Precipitation; monthly total                                202102-202104
+order_94873_WSLCLB_rre150m0_1_data.txt  Data      Celerina Bestand                     Precipitation; monthly total                                202102-202104
+order_94873_WSLCLB_rre150m0_1_legend.txt Legend    Celerina Bestand                     Precipitation; monthly total                                202102-202104
+order_94873_WSLCLF_rre150m0_1_data.txt  Data      Celerina Freiland                    Precipitation; monthly total                                202102-202104
+order_94873_WSLCLF_rre150m0_1_legend.txt Legend    Celerina Freiland                    Precipitation; monthly total                                202102-202104
+order_94873_VSCHY_rre150m0_1_data.txt   Data      Champéry                             Precipitation; monthly total                                202102-202104
+order_94873_VSCHY_rre150m0_1_legend.txt Legend    Champéry                             Precipitation; monthly total                                202102-202104
+order_94873_MMCPY_rre150m0_1_data.txt   Data      Champéry                             Precipitation; monthly total                                202102-202104
+order_94873_MMCPY_rre150m0_1_legend.txt Legend    Champéry                             Precipitation; monthly total                                202102-202104
+order_94873_CHA_rre150m0_1_data.txt     Data      Chasseral                            Precipitation; monthly total                                202102-202104
+order_94873_CHA_rre150m0_1_legend.txt   Legend    Chasseral                            Precipitation; monthly total                                202102-202104
+order_94873_CHM_rre150m0_1_data.txt     Data      Chaumont                             Precipitation; monthly total                                202102-202104
+order_94873_CHM_rre150m0_1_legend.txt   Legend    Chaumont                             Precipitation; monthly total                                202102-202104
+order_94873_CIM_rre150m0_1_data.txt     Data      Cimetta                              Precipitation; monthly total                                202102-202104
+order_94873_CIM_rre150m0_1_legend.txt   Legend    Cimetta                              Precipitation; monthly total                                202102-202104
+order_94873_VSCLU_rre150m0_1_data.txt   Data      Clusanfe                             Precipitation; monthly total                                202102-202104
+order_94873_VSCLU_rre150m0_1_legend.txt Legend    Clusanfe                             Precipitation; monthly total                                202102-202104
+order_94873_CDM_rre150m0_1_data.txt     Data      Col des Mosses                       Precipitation; monthly total                                202102-202104
+order_94873_CDM_rre150m0_1_legend.txt   Legend    Col des Mosses                       Precipitation; monthly total                                202102-202104
+order_94873_GSB_rre150m0_1_data.txt     Data      Col du Grand St-Bernard              Precipitation; monthly total                                202102-202104
+order_94873_GSB_rre150m0_1_legend.txt   Legend    Col du Grand St-Bernard              Precipitation; monthly total                                202102-202104
+order_94873_DAV_rre150m0_1_data.txt     Data      Davos                                Precipitation; monthly total                                202102-202104
+order_94873_DAV_rre150m0_1_legend.txt   Legend    Davos                                Precipitation; monthly total                                202102-202104
+order_94873_NABDAV_rre150m0_1_data.txt  Data      Davos / Seehornwald                  Precipitation; monthly total                                202102-202104
+order_94873_NABDAV_rre150m0_1_legend.txt Legend    Davos / Seehornwald                  Precipitation; monthly total                                202102-202104
+order_94873_VSDER_rre150m0_1_data.txt   Data      Derborence                           Precipitation; monthly total                                202102-202104
+order_94873_VSDER_rre150m0_1_legend.txt Legend    Derborence                           Precipitation; monthly total                                202102-202104
+order_94873_IYDEU_rre150m0_1_data.txt   Data      Deutschnofen                         Precipitation; monthly total                                202102-202104
+order_94873_IYDEU_rre150m0_1_legend.txt Legend    Deutschnofen                         Precipitation; monthly total                                202102-202104
+order_94873_DMA_rre150m0_1_data.txt     Data      Dischma                              Precipitation; monthly total                                202102-202104
+order_94873_DMA_rre150m0_1_legend.txt   Legend    Dischma                              Precipitation; monthly total                                202102-202104
+order_94873_DIS_rre150m0_1_data.txt     Data      Disentis                             Precipitation; monthly total                                202102-202104
+order_94873_DIS_rre150m0_1_legend.txt   Legend    Disentis                             Precipitation; monthly total                                202102-202104
+order_94873_VSDUR_rre150m0_1_data.txt   Data      Durnand                              Precipitation; monthly total                                202102-202104
+order_94873_VSDUR_rre150m0_1_legend.txt Legend    Durnand                              Precipitation; monthly total                                202102-202104
+order_94873_EIT_rre150m0_1_data.txt     Data      Eigenthal                            Precipitation; monthly total                                202102-202104
+order_94873_EIT_rre150m0_1_legend.txt   Legend    Eigenthal                            Precipitation; monthly total                                202102-202104
+order_94873_VSERG_rre150m0_1_data.txt   Data      Ergisch                              Precipitation; monthly total                                202102-202104
+order_94873_VSERG_rre150m0_1_legend.txt Legend    Ergisch                              Precipitation; monthly total                                202102-202104
+order_94873_EVO_rre150m0_1_data.txt     Data      Evolène / Villa                      Precipitation; monthly total                                202102-202104
+order_94873_EVO_rre150m0_1_legend.txt   Legend    Evolène / Villa                      Precipitation; monthly total                                202102-202104
+order_94873_DLFEB_rre150m0_1_data.txt   Data      Feldberg, Schwarzwald                Precipitation; monthly total                                202102-202104
+order_94873_DLFEB_rre150m0_1_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; monthly total                                202102-202104
+order_94873_FIT_rre150m0_1_data.txt     Data      Fieschertal                          Precipitation; monthly total                                202102-202104
+order_94873_FIT_rre150m0_1_legend.txt   Legend    Fieschertal                          Precipitation; monthly total                                202102-202104
+order_94873_VSFIN_rre150m0_1_data.txt   Data      Findelen                             Precipitation; monthly total                                202102-202104
+order_94873_VSFIN_rre150m0_1_legend.txt Legend    Findelen                             Precipitation; monthly total                                202102-202104
+order_94873_CTA_rre150m0_1_data.txt     Data      Finhaut                              Precipitation; monthly total                                202102-202104
+order_94873_CTA_rre150m0_1_legend.txt   Legend    Finhaut                              Precipitation; monthly total                                202102-202104
+order_94873_FIO_rre150m0_1_data.txt     Data      Fionnay                              Precipitation; monthly total                                202102-202104
+order_94873_FIO_rre150m0_1_legend.txt   Legend    Fionnay                              Precipitation; monthly total                                202102-202104
+order_94873_FLI_rre150m0_1_data.txt     Data      Flims                                Precipitation; monthly total                                202102-202104
+order_94873_FLI_rre150m0_1_legend.txt   Legend    Flims                                Precipitation; monthly total                                202102-202104
+order_94873_GAD_rre150m0_1_data.txt     Data      Gadmen                               Precipitation; monthly total                                202102-202104
+order_94873_GAD_rre150m0_1_legend.txt   Legend    Gadmen                               Precipitation; monthly total                                202102-202104
+order_94873_BEGAD_rre150m0_1_data.txt   Data      Gadmen                               Precipitation; monthly total                                202102-202104
+order_94873_BEGAD_rre150m0_1_legend.txt Legend    Gadmen                               Precipitation; monthly total                                202102-202104
+order_94873_GRI_rre150m0_1_data.txt     Data      Grimentz                             Precipitation; monthly total                                202102-202104
+order_94873_GRI_rre150m0_1_legend.txt   Legend    Grimentz                             Precipitation; monthly total                                202102-202104
+order_94873_GRH_rre150m0_1_data.txt     Data      Grimsel Hospiz                       Precipitation; monthly total                                202102-202104
+order_94873_GRH_rre150m0_1_legend.txt   Legend    Grimsel Hospiz                       Precipitation; monthly total                                202102-202104
+order_94873_GWA_rre150m0_1_data.txt     Data      Grindelwald                          Precipitation; monthly total                                202102-202104
+order_94873_GWA_rre150m0_1_legend.txt   Legend    Grindelwald                          Precipitation; monthly total                                202102-202104
+order_94873_BEGWA_rre150m0_1_data.txt   Data      Grindelwald / Oberläger              Precipitation; monthly total                                202102-202104
+order_94873_BEGWA_rre150m0_1_legend.txt Legend    Grindelwald / Oberläger              Precipitation; monthly total                                202102-202104
+order_94873_DLGRO_rre150m0_1_data.txt   Data      Grosser Arber                        Precipitation; monthly total                                202102-202104
+order_94873_DLGRO_rre150m0_1_legend.txt Legend    Grosser Arber                        Precipitation; monthly total                                202102-202104
+order_94873_GRY_rre150m0_1_data.txt     Data      Gryon                                Precipitation; monthly total                                202102-202104
+order_94873_GRY_rre150m0_1_legend.txt   Legend    Gryon                                Precipitation; monthly total                                202102-202104
+order_94873_GRC_rre150m0_1_data.txt     Data      Grächen                              Precipitation; monthly total                                202102-202104
+order_94873_GRC_rre150m0_1_legend.txt   Legend    Grächen                              Precipitation; monthly total                                202102-202104
+order_94873_GSG_rre150m0_1_data.txt     Data      Gsteig, Gstaad                       Precipitation; monthly total                                202102-202104
+order_94873_GSG_rre150m0_1_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; monthly total                                202102-202104
+order_94873_BERIF_rre150m0_1_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; monthly total                                202102-202104
+order_94873_BERIF_rre150m0_1_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; monthly total                                202102-202104
+order_94873_GTT_rre150m0_1_data.txt     Data      Guttannen                            Precipitation; monthly total                                202102-202104
+order_94873_GTT_rre150m0_1_legend.txt   Legend    Guttannen                            Precipitation; monthly total                                202102-202104
+order_94873_MMGTT_rre150m0_1_data.txt   Data      Guttannen                            Precipitation; monthly total                                202102-202104
+order_94873_MMGTT_rre150m0_1_legend.txt Legend    Guttannen                            Precipitation; monthly total                                202102-202104
+order_94873_GOA_rre150m0_1_data.txt     Data      Göscheneralp                         Precipitation; monthly total                                202102-202104
+order_94873_GOA_rre150m0_1_legend.txt   Legend    Göscheneralp                         Precipitation; monthly total                                202102-202104
+order_94873_GUE_rre150m0_1_data.txt     Data      Gütsch, Andermatt                    Precipitation; monthly total                                202102-202104
+order_94873_GUE_rre150m0_1_legend.txt   Legend    Gütsch, Andermatt                    Precipitation; monthly total                                202102-202104
+order_94873_BEHAK_rre150m0_1_data.txt   Data      Habkern                              Precipitation; monthly total                                202102-202104
+order_94873_BEHAK_rre150m0_1_legend.txt Legend    Habkern                              Precipitation; monthly total                                202102-202104
+order_94873_BEHAB_rre150m0_1_data.txt   Data      Hasliberg                            Precipitation; monthly total                                202102-202104
+order_94873_BEHAB_rre150m0_1_legend.txt Legend    Hasliberg                            Precipitation; monthly total                                202102-202104
+order_94873_GLSAN_rre150m0_1_data.txt   Data      Hinter Sand                          Precipitation; monthly total                                202102-202104
+order_94873_GLSAN_rre150m0_1_legend.txt Legend    Hinter Sand                          Precipitation; monthly total                                202102-202104
+order_94873_IYHIN_rre150m0_1_data.txt   Data      Hintermartell                        Precipitation; monthly total                                202102-202104
+order_94873_IYHIN_rre150m0_1_legend.txt Legend    Hintermartell                        Precipitation; monthly total                                202102-202104
+order_94873_MMHIR_rre150m0_1_data.txt   Data      Hinterrhein                          Precipitation; monthly total                                202102-202104
+order_94873_MMHIR_rre150m0_1_legend.txt Legend    Hinterrhein                          Precipitation; monthly total                                202102-202104
+order_94873_HOY_rre150m0_1_data.txt     Data      Hoch-Ybrig                           Precipitation; monthly total                                202102-202104
+order_94873_HOY_rre150m0_1_legend.txt   Legend    Hoch-Ybrig                           Precipitation; monthly total                                202102-202104
+order_94873_HER_rre150m0_1_data.txt     Data      Hérémence                            Precipitation; monthly total                                202102-202104
+order_94873_HER_rre150m0_1_legend.txt   Legend    Hérémence                            Precipitation; monthly total                                202102-202104
+order_94873_HOE_rre150m0_1_data.txt     Data      Hörnli                               Precipitation; monthly total                                202102-202104
+order_94873_HOE_rre150m0_1_legend.txt   Legend    Hörnli                               Precipitation; monthly total                                202102-202104
+order_94873_INF_rre150m0_1_data.txt     Data      Innerferrera                         Precipitation; monthly total                                202102-202104
+order_94873_INF_rre150m0_1_legend.txt   Legend    Innerferrera                         Precipitation; monthly total                                202102-202104
+order_94873_VSISE_rre150m0_1_data.txt   Data      Isérables                            Precipitation; monthly total                                202102-202104
+order_94873_VSISE_rre150m0_1_legend.txt Legend    Isérables                            Precipitation; monthly total                                202102-202104
+order_94873_VSJEI_rre150m0_1_data.txt   Data      Jeizinen                             Precipitation; monthly total                                202102-202104
+order_94873_VSJEI_rre150m0_1_legend.txt Legend    Jeizinen                             Precipitation; monthly total                                202102-202104
+order_94873_MMJUF_rre150m0_1_data.txt   Data      Juf                                  Precipitation; monthly total                                202102-202104
+order_94873_MMJUF_rre150m0_1_legend.txt Legend    Juf                                  Precipitation; monthly total                                202102-202104
+order_94873_KAS_rre150m0_1_data.txt     Data      Kandersteg                           Precipitation; monthly total                                202102-202104
+order_94873_KAS_rre150m0_1_legend.txt   Legend    Kandersteg                           Precipitation; monthly total                                202102-202104
+order_94873_KSE_rre150m0_1_data.txt     Data      Kleine Scheidegg                     Precipitation; monthly total                                202102-202104
+order_94873_KSE_rre150m0_1_legend.txt   Legend    Kleine Scheidegg                     Precipitation; monthly total                                202102-202104
+order_94873_BEKSE_rre150m0_1_data.txt   Data      Kleine Scheidegg                     Precipitation; monthly total                                202102-202104
+order_94873_BEKSE_rre150m0_1_legend.txt Legend    Kleine Scheidegg                     Precipitation; monthly total                                202102-202104
+order_94873_KLA_rre150m0_1_data.txt     Data      Klosters                             Precipitation; monthly total                                202102-202104
+order_94873_KLA_rre150m0_1_legend.txt   Legend    Klosters                             Precipitation; monthly total                                202102-202104
+order_94873_KRO_rre150m0_1_data.txt     Data      Kronberg                             Precipitation; monthly total                                202102-202104
+order_94873_KRO_rre150m0_1_legend.txt   Legend    Kronberg                             Precipitation; monthly total                                202102-202104
+order_94873_AUB_rre150m0_1_data.txt     Data      L' Auberson                          Precipitation; monthly total                                202102-202104
+order_94873_AUB_rre150m0_1_legend.txt   Legend    L' Auberson                          Precipitation; monthly total                                202102-202104
+order_94873_BRL_rre150m0_1_data.txt     Data      La Brévine                           Precipitation; monthly total                                202102-202104
+order_94873_BRL_rre150m0_1_legend.txt   Legend    La Brévine                           Precipitation; monthly total                                202102-202104
+order_94873_CUE_rre150m0_1_data.txt     Data      La Cure                              Precipitation; monthly total                                202102-202104
+order_94873_CUE_rre150m0_1_legend.txt   Legend    La Cure                              Precipitation; monthly total                                202102-202104
+order_94873_DOL_rre150m0_1_data.txt     Data      La Dôle                              Precipitation; monthly total                                202102-202104
+order_94873_DOL_rre150m0_1_legend.txt   Legend    La Dôle                              Precipitation; monthly total                                202102-202104
+order_94873_VSFLY_rre150m0_1_data.txt   Data      La Fouly                             Precipitation; monthly total                                202102-202104
+order_94873_VSFLY_rre150m0_1_legend.txt Legend    La Fouly                             Precipitation; monthly total                                202102-202104
+order_94873_MLS_rre150m0_1_data.txt     Data      Le Moléson                           Precipitation; monthly total                                202102-202104
+order_94873_MLS_rre150m0_1_legend.txt   Legend    Le Moléson                           Precipitation; monthly total                                202102-202104
+order_94873_LEN_rre150m0_1_data.txt     Data      Lenk                                 Precipitation; monthly total                                202102-202104
+order_94873_LEN_rre150m0_1_legend.txt   Legend    Lenk                                 Precipitation; monthly total                                202102-202104
+order_94873_MMLEN_rre150m0_1_data.txt   Data      Lenk                                 Precipitation; monthly total                                202102-202104
+order_94873_MMLEN_rre150m0_1_legend.txt Legend    Lenk                                 Precipitation; monthly total                                202102-202104
+order_94873_LEH_rre150m0_1_data.txt     Data      Lenzerheide                          Precipitation; monthly total                                202102-202104
+order_94873_LEH_rre150m0_1_legend.txt   Legend    Lenzerheide                          Precipitation; monthly total                                202102-202104
+order_94873_VSCOL_rre150m0_1_data.txt   Data      Les Collons                          Precipitation; monthly total                                202102-202104
+order_94873_VSCOL_rre150m0_1_legend.txt Legend    Les Collons                          Precipitation; monthly total                                202102-202104
+order_94873_DIB_rre150m0_1_data.txt     Data      Les Diablerets                       Precipitation; monthly total                                202102-202104
+order_94873_DIB_rre150m0_1_legend.txt   Legend    Les Diablerets                       Precipitation; monthly total                                202102-202104
+order_94873_PDM_rre150m0_1_data.txt     Data      Les Ponts-de-Martel                  Precipitation; monthly total                                202102-202104
+order_94873_PDM_rre150m0_1_legend.txt   Legend    Les Ponts-de-Martel                  Precipitation; monthly total                                202102-202104
+order_94873_LEU_rre150m0_1_data.txt     Data      Leukerbad                            Precipitation; monthly total                                202102-202104
+order_94873_LEU_rre150m0_1_legend.txt   Legend    Leukerbad                            Precipitation; monthly total                                202102-202104
+order_94873_BELUA_rre150m0_1_data.txt   Data      Lüderenalp                           Precipitation; monthly total                                202102-202104
+order_94873_BELUA_rre150m0_1_legend.txt Legend    Lüderenalp                           Precipitation; monthly total                                202102-202104
+order_94873_FLMAI_rre150m0_1_data.txt   Data      Maienfeld / Guscha                   Precipitation; monthly total                                202102-202104
+order_94873_FLMAI_rre150m0_1_legend.txt Legend    Maienfeld / Guscha                   Precipitation; monthly total                                202102-202104
+order_94873_MAL_rre150m0_1_data.txt     Data      Malbun                               Precipitation; monthly total                                202102-202104
+order_94873_MAL_rre150m0_1_legend.txt   Legend    Malbun                               Precipitation; monthly total                                202102-202104
+order_94873_BEMBE_rre150m0_1_data.txt   Data      Marbachegg                           Precipitation; monthly total                                202102-202104
+order_94873_BEMBE_rre150m0_1_legend.txt Legend    Marbachegg                           Precipitation; monthly total                                202102-202104
+order_94873_IYMMR_rre150m0_1_data.txt   Data      Marienberg                           Precipitation; monthly total                                202102-202104
+order_94873_IYMMR_rre150m0_1_legend.txt Legend    Marienberg                           Precipitation; monthly total                                202102-202104
+order_94873_VSMAT_rre150m0_1_data.txt   Data      Mattsand                             Precipitation; monthly total                                202102-202104
+order_94873_VSMAT_rre150m0_1_legend.txt Legend    Mattsand                             Precipitation; monthly total                                202102-202104
+order_94873_VSMOI_rre150m0_1_data.txt   Data      Moiry                                Precipitation; monthly total                                202102-202104
+order_94873_VSMOI_rre150m0_1_legend.txt Legend    Moiry                                Precipitation; monthly total                                202102-202104
+order_94873_MST_rre150m0_1_data.txt     Data      Monstein                             Precipitation; monthly total                                202102-202104
+order_94873_MST_rre150m0_1_legend.txt   Legend    Monstein                             Precipitation; monthly total                                202102-202104
+order_94873_MOD_rre150m0_1_data.txt     Data      Montagne du Droit                    Precipitation; monthly total                                202102-202104
+order_94873_MOD_rre150m0_1_legend.txt   Legend    Montagne du Droit                    Precipitation; monthly total                                202102-202104
+order_94873_MVE_rre150m0_1_data.txt     Data      Montana                              Precipitation; monthly total                                202102-202104
+order_94873_MVE_rre150m0_1_legend.txt   Legend    Montana                              Precipitation; monthly total                                202102-202104
+order_94873_GEN_rre150m0_1_data.txt     Data      Monte Generoso                       Precipitation; monthly total                                202102-202104
+order_94873_GEN_rre150m0_1_legend.txt   Legend    Monte Generoso                       Precipitation; monthly total                                202102-202104
+order_94873_MGI_rre150m0_1_data.txt     Data      Morgins                              Precipitation; monthly total                                202102-202104
+order_94873_MGI_rre150m0_1_legend.txt   Legend    Morgins                              Precipitation; monthly total                                202102-202104
+order_94873_MTE_rre150m0_1_data.txt     Data      Mottec                               Precipitation; monthly total                                202102-202104
+order_94873_MTE_rre150m0_1_legend.txt   Legend    Mottec                               Precipitation; monthly total                                202102-202104
+order_94873_GLMUL_rre150m0_1_data.txt   Data      Mullern                              Precipitation; monthly total                                202102-202104
+order_94873_GLMUL_rre150m0_1_legend.txt Legend    Mullern                              Precipitation; monthly total                                202102-202104
+order_94873_IYMUW_rre150m0_1_data.txt   Data      Mühlwald                             Precipitation; monthly total                                202102-202104
+order_94873_IYMUW_rre150m0_1_legend.txt Legend    Mühlwald                             Precipitation; monthly total                                202102-202104
+order_94873_MUE_rre150m0_1_data.txt     Data      Mürren                               Precipitation; monthly total                                202102-202104
+order_94873_MUE_rre150m0_1_legend.txt   Legend    Mürren                               Precipitation; monthly total                                202102-202104
+order_94873_MMMUE_rre150m0_1_data.txt   Data      Mürren                               Precipitation; monthly total                                202102-202104
+order_94873_MMMUE_rre150m0_1_legend.txt Legend    Mürren                               Precipitation; monthly total                                202102-202104
+order_94873_MUS_rre150m0_1_data.txt     Data      Müstair                              Precipitation; monthly total                                202102-202104
+order_94873_MUS_rre150m0_1_legend.txt   Legend    Müstair                              Precipitation; monthly total                                202102-202104
+order_94873_NAP_rre150m0_1_data.txt     Data      Napf                                 Precipitation; monthly total                                202102-202104
+order_94873_NAP_rre150m0_1_legend.txt   Legend    Napf                                 Precipitation; monthly total                                202102-202104
+order_94873_WSLNAB_rre150m0_1_data.txt  Data      Nationalpark Bestand                 Precipitation; monthly total                                202102-202104
+order_94873_WSLNAB_rre150m0_1_legend.txt Legend    Nationalpark Bestand                 Precipitation; monthly total                                202102-202104
+order_94873_WSLNAF_rre150m0_1_data.txt  Data      Nationalpark Freiland                Precipitation; monthly total                                202102-202104
+order_94873_WSLNAF_rre150m0_1_legend.txt Legend    Nationalpark Freiland                Precipitation; monthly total                                202102-202104
+order_94873_VSNEN_rre150m0_1_data.txt   Data      Nendaz                               Precipitation; monthly total                                202102-202104
+order_94873_VSNEN_rre150m0_1_legend.txt Legend    Nendaz                               Precipitation; monthly total                                202102-202104
+order_94873_NEB_rre150m0_1_data.txt     Data      Nesselboden                          Precipitation; monthly total                                202102-202104
+order_94873_NEB_rre150m0_1_legend.txt   Legend    Nesselboden                          Precipitation; monthly total                                202102-202104
+order_94873_WSLNOF_rre150m0_1_data.txt  Data      Novaggio Freiland                    Precipitation; monthly total                                202102-202104
+order_94873_WSLNOF_rre150m0_1_legend.txt Legend    Novaggio Freiland                    Precipitation; monthly total                                202102-202104
+order_94873_OBI_rre150m0_1_data.txt     Data      Oberiberg                            Precipitation; monthly total                                202102-202104
+order_94873_OBI_rre150m0_1_legend.txt   Legend    Oberiberg                            Precipitation; monthly total                                202102-202104
+order_94873_MMOES_rre150m0_1_data.txt   Data      Oeschinensee                         Precipitation; monthly total                                202102-202104
+order_94873_MMOES_rre150m0_1_legend.txt Legend    Oeschinensee                         Precipitation; monthly total                                202102-202104
+order_94873_BEH_rre150m0_1_data.txt     Data      Passo del Bernina                    Precipitation; monthly total                                202102-202104
+order_94873_BEH_rre150m0_1_legend.txt   Legend    Passo del Bernina                    Precipitation; monthly total                                202102-202104
+order_94873_IYPEN_rre150m0_1_data.txt   Data      Pens                                 Precipitation; monthly total                                202102-202104
+order_94873_IYPEN_rre150m0_1_legend.txt Legend    Pens                                 Precipitation; monthly total                                202102-202104
+order_94873_IYPFE_rre150m0_1_data.txt   Data      Pfelders                             Precipitation; monthly total                                202102-202104
+order_94873_IYPFE_rre150m0_1_legend.txt Legend    Pfelders                             Precipitation; monthly total                                202102-202104
+order_94873_IYPFI_rre150m0_1_data.txt   Data      Pfitsch / St. Jakob                  Precipitation; monthly total                                202102-202104
+order_94873_IYPFI_rre150m0_1_legend.txt Legend    Pfitsch / St. Jakob                  Precipitation; monthly total                                202102-202104
+order_94873_PIG_rre150m0_1_data.txt     Data      Pigniu                               Precipitation; monthly total                                202102-202104
+order_94873_PIG_rre150m0_1_legend.txt   Legend    Pigniu                               Precipitation; monthly total                                202102-202104
+order_94873_PIL_rre150m0_1_data.txt     Data      Pilatus                              Precipitation; monthly total                                202102-202104
+order_94873_PIL_rre150m0_1_legend.txt   Legend    Pilatus                              Precipitation; monthly total                                202102-202104
+order_94873_COV_rre150m0_1_data.txt     Data      Piz Corvatsch                        Precipitation; monthly total                                202102-202104
+order_94873_COV_rre150m0_1_legend.txt   Legend    Piz Corvatsch                        Precipitation; monthly total                                202102-202104
+order_94873_PMA_rre150m0_1_data.txt     Data      Piz Martegnas                        Precipitation; monthly total                                202102-202104
+order_94873_PMA_rre150m0_1_legend.txt   Legend    Piz Martegnas                        Precipitation; monthly total                                202102-202104
+order_94873_PON_rre150m0_1_data.txt     Data      Pontresina                           Precipitation; monthly total                                202102-202104
+order_94873_PON_rre150m0_1_legend.txt   Legend    Pontresina                           Precipitation; monthly total                                202102-202104
+order_94873_ROB_rre150m0_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; monthly total                                202102-202104
+order_94873_ROB_rre150m0_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; monthly total                                202102-202104
+order_94873_IYPRU_rre150m0_1_data.txt   Data      Prettau                              Precipitation; monthly total                                202102-202104
+order_94873_IYPRU_rre150m0_1_legend.txt Legend    Prettau                              Precipitation; monthly total                                202102-202104
+order_94873_PUD_rre150m0_1_data.txt     Data      Punt la Drossa                       Precipitation; monthly total                                202102-202104
+order_94873_PUD_rre150m0_1_legend.txt   Legend    Punt la Drossa                       Precipitation; monthly total                                202102-202104
+order_94873_URREA_rre150m0_1_data.txt   Data      Realp / Bahnhof DFB                  Precipitation; monthly total                                202102-202104
+order_94873_URREA_rre150m0_1_legend.txt Legend    Realp / Bahnhof DFB                  Precipitation; monthly total                                202102-202104
+order_94873_URREE_rre150m0_1_data.txt   Data      Realp / Ebnen                        Precipitation; monthly total                                202102-202104
+order_94873_URREE_rre150m0_1_legend.txt Legend    Realp / Ebnen                        Precipitation; monthly total                                202102-202104
+order_94873_URRET_rre150m0_1_data.txt   Data      Realp / Tiefenbach                   Precipitation; monthly total                                202102-202104
+order_94873_URRET_rre150m0_1_legend.txt Legend    Realp / Tiefenbach                   Precipitation; monthly total                                202102-202104
+order_94873_IYREI_rre150m0_1_data.txt   Data      Rein in Taufers                      Precipitation; monthly total                                202102-202104
+order_94873_IYREI_rre150m0_1_legend.txt Legend    Rein in Taufers                      Precipitation; monthly total                                202102-202104
+order_94873_IYRID_rre150m0_1_data.txt   Data      Ridnaun                              Precipitation; monthly total                                202102-202104
+order_94873_IYRID_rre150m0_1_legend.txt Legend    Ridnaun                              Precipitation; monthly total                                202102-202104
+order_94873_ROE_rre150m0_1_data.txt     Data      Robièi                               Precipitation; monthly total                                202102-202104
+order_94873_ROE_rre150m0_1_legend.txt   Legend    Robièi                               Precipitation; monthly total                                202102-202104
+order_94873_ROG_rre150m0_1_data.txt     Data      Rossberg                             Precipitation; monthly total                                202102-202104
+order_94873_ROG_rre150m0_1_legend.txt   Legend    Rossberg                             Precipitation; monthly total                                202102-202104
+order_94873_SRL_rre150m0_1_data.txt     Data      S-charl                              Precipitation; monthly total                                202102-202104
+order_94873_SRL_rre150m0_1_legend.txt   Legend    S-charl                              Precipitation; monthly total                                202102-202104
+order_94873_SBE_rre150m0_1_data.txt     Data      S. Bernardino                        Precipitation; monthly total                                202102-202104
+order_94873_SBE_rre150m0_1_legend.txt   Legend    S. Bernardino                        Precipitation; monthly total                                202102-202104
+order_94873_SBA_rre150m0_1_data.txt     Data      Saas Balen                           Precipitation; monthly total                                202102-202104
+order_94873_SBA_rre150m0_1_legend.txt   Legend    Saas Balen                           Precipitation; monthly total                                202102-202104
+order_94873_VSSAB_rre150m0_1_data.txt   Data      Saas Balen                           Precipitation; monthly total                                202102-202104
+order_94873_VSSAB_rre150m0_1_legend.txt Legend    Saas Balen                           Precipitation; monthly total                                202102-202104
+order_94873_SAF_rre150m0_1_data.txt     Data      Saas Fee                             Precipitation; monthly total                                202102-202104
+order_94873_SAF_rre150m0_1_legend.txt   Legend    Saas Fee                             Precipitation; monthly total                                202102-202104
+order_94873_MMSAF_rre150m0_1_data.txt   Data      Saas Fee                             Precipitation; monthly total                                202102-202104
+order_94873_MMSAF_rre150m0_1_legend.txt Legend    Saas Fee                             Precipitation; monthly total                                202102-202104
+order_94873_MMSAP_rre150m0_1_data.txt   Data      Safien / Thalkirch                   Precipitation; monthly total                                202102-202104
+order_94873_MMSAP_rre150m0_1_legend.txt Legend    Safien / Thalkirch                   Precipitation; monthly total                                202102-202104
+order_94873_SAP_rre150m0_1_data.txt     Data      Safien Platz                         Precipitation; monthly total                                202102-202104
+order_94873_SAP_rre150m0_1_legend.txt   Legend    Safien Platz                         Precipitation; monthly total                                202102-202104
+order_94873_VSSFE_rre150m0_1_data.txt   Data      Salanfe                              Precipitation; monthly total                                202102-202104
+order_94873_VSSFE_rre150m0_1_legend.txt Legend    Salanfe                              Precipitation; monthly total                                202102-202104
+order_94873_VSSAL_rre150m0_1_data.txt   Data      Saleina                              Precipitation; monthly total                                202102-202104
+order_94873_VSSAL_rre150m0_1_legend.txt Legend    Saleina                              Precipitation; monthly total                                202102-202104
+order_94873_SAM_rre150m0_1_data.txt     Data      Samedan                              Precipitation; monthly total                                202102-202104
+order_94873_SAM_rre150m0_1_legend.txt   Legend    Samedan                              Precipitation; monthly total                                202102-202104
+order_94873_SVG_rre150m0_1_data.txt     Data      Savognin                             Precipitation; monthly total                                202102-202104
+order_94873_SVG_rre150m0_1_legend.txt   Legend    Savognin                             Precipitation; monthly total                                202102-202104
+order_94873_MMSVG_rre150m0_1_data.txt   Data      Savognin                             Precipitation; monthly total                                202102-202104
+order_94873_MMSVG_rre150m0_1_legend.txt Legend    Savognin                             Precipitation; monthly total                                202102-202104
+order_94873_BESCB_rre150m0_1_data.txt   Data      Schallenberg                         Precipitation; monthly total                                202102-202104
+order_94873_BESCB_rre150m0_1_legend.txt Legend    Schallenberg                         Precipitation; monthly total                                202102-202104
+order_94873_IYSVE_rre150m0_1_data.txt   Data      Schnals / Vernagt                    Precipitation; monthly total                                202102-202104
+order_94873_IYSVE_rre150m0_1_legend.txt Legend    Schnals / Vernagt                    Precipitation; monthly total                                202102-202104
+order_94873_SWA_rre150m0_1_data.txt     Data      Schwägalp                            Precipitation; monthly total                                202102-202104
+order_94873_SWA_rre150m0_1_legend.txt   Legend    Schwägalp                            Precipitation; monthly total                                202102-202104
+order_94873_SCU_rre150m0_1_data.txt     Data      Scuol                                Precipitation; monthly total                                202102-202104
+order_94873_SCU_rre150m0_1_legend.txt   Legend    Scuol                                Precipitation; monthly total                                202102-202104
+order_94873_SED_rre150m0_1_data.txt     Data      Sedrun                               Precipitation; monthly total                                202102-202104
+order_94873_SED_rre150m0_1_legend.txt   Legend    Sedrun                               Precipitation; monthly total                                202102-202104
+order_94873_SIA_rre150m0_1_data.txt     Data      Segl-Maria                           Precipitation; monthly total                                202102-202104
+order_94873_SIA_rre150m0_1_legend.txt   Legend    Segl-Maria                           Precipitation; monthly total                                202102-202104
+order_94873_IYSEI_rre150m0_1_data.txt   Data      Seiser Alm Zallinger                 Precipitation; monthly total                                202102-202104
+order_94873_IYSEI_rre150m0_1_legend.txt Legend    Seiser Alm Zallinger                 Precipitation; monthly total                                202102-202104
+order_94873_SIM_rre150m0_1_data.txt     Data      Simplon-Dorf                         Precipitation; monthly total                                202102-202104
+order_94873_SIM_rre150m0_1_legend.txt   Legend    Simplon-Dorf                         Precipitation; monthly total                                202102-202104
+order_94873_SOG_rre150m0_1_data.txt     Data      Soglio                               Precipitation; monthly total                                202102-202104
+order_94873_SOG_rre150m0_1_legend.txt   Legend    Soglio                               Precipitation; monthly total                                202102-202104
+order_94873_VSSOR_rre150m0_1_data.txt   Data      Sorniot-Lac Inférieur                Precipitation; monthly total                                202102-202104
+order_94873_VSSOR_rre150m0_1_legend.txt Legend    Sorniot-Lac Inférieur                Precipitation; monthly total                                202102-202104
+order_94873_SDO_rre150m0_1_data.txt     Data      Splügen                              Precipitation; monthly total                                202102-202104
+order_94873_SDO_rre150m0_1_legend.txt   Legend    Splügen                              Precipitation; monthly total                                202102-202104
+order_94873_SAN_rre150m0_1_data.txt     Data      St. Antönien                         Precipitation; monthly total                                202102-202104
+order_94873_SAN_rre150m0_1_legend.txt   Legend    St. Antönien                         Precipitation; monthly total                                202102-202104
+order_94873_IYSMG_rre150m0_1_data.txt   Data      St. Magdalena in Gsies               Precipitation; monthly total                                202102-202104
+order_94873_IYSMG_rre150m0_1_legend.txt Legend    St. Magdalena in Gsies               Precipitation; monthly total                                202102-202104
+order_94873_IYSMT_rre150m0_1_data.txt   Data      St. Martin in Thurn                  Precipitation; monthly total                                202102-202104
+order_94873_IYSMT_rre150m0_1_legend.txt Legend    St. Martin in Thurn                  Precipitation; monthly total                                202102-202104
+order_94873_IYVAL_rre150m0_1_data.txt   Data      St. Valentin a.d. Haide              Precipitation; monthly total                                202102-202104
+order_94873_IYVAL_rre150m0_1_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; monthly total                                202102-202104
+order_94873_IYSVP_rre150m0_1_data.txt   Data      St. Veit in Prags                    Precipitation; monthly total                                202102-202104
+order_94873_IYSVP_rre150m0_1_legend.txt Legend    St. Veit in Prags                    Precipitation; monthly total                                202102-202104
+order_94873_IYSWA_rre150m0_1_data.txt   Data      St. Walburg                          Precipitation; monthly total                                202102-202104
+order_94873_IYSWA_rre150m0_1_legend.txt Legend    St. Walburg                          Precipitation; monthly total                                202102-202104
+order_94873_SMM_rre150m0_1_data.txt     Data      Sta. Maria, Val Müstair              Precipitation; monthly total                                202102-202104
+order_94873_SMM_rre150m0_1_legend.txt   Legend    Sta. Maria, Val Müstair              Precipitation; monthly total                                202102-202104
+order_94873_VSSTA_rre150m0_1_data.txt   Data      Stafel                               Precipitation; monthly total                                202102-202104
+order_94873_VSSTA_rre150m0_1_legend.txt Legend    Stafel                               Precipitation; monthly total                                202102-202104
+order_94873_SGD_rre150m0_1_data.txt     Data      Stiegelschwand                       Precipitation; monthly total                                202102-202104
+order_94873_SGD_rre150m0_1_legend.txt   Legend    Stiegelschwand                       Precipitation; monthly total                                202102-202104
+order_94873_STP_rre150m0_1_data.txt     Data      Stöckalp                             Precipitation; monthly total                                202102-202104
+order_94873_STP_rre150m0_1_legend.txt   Legend    Stöckalp                             Precipitation; monthly total                                202102-202104
+order_94873_IYSUL_rre150m0_1_data.txt   Data      Sulden                               Precipitation; monthly total                                202102-202104
+order_94873_IYSUL_rre150m0_1_legend.txt Legend    Sulden                               Precipitation; monthly total                                202102-202104
+order_94873_SUS_rre150m0_1_data.txt     Data      Susch                                Precipitation; monthly total                                202102-202104
+order_94873_SUS_rre150m0_1_legend.txt   Legend    Susch                                Precipitation; monthly total                                202102-202104
+order_94873_SAE_rre150m0_1_data.txt     Data      Säntis                               Precipitation; monthly total                                202102-202104
+order_94873_SAE_rre150m0_1_legend.txt   Legend    Säntis                               Precipitation; monthly total                                202102-202104
+order_94873_IYTAU_rre150m0_1_data.txt   Data      Taufers i.M.                         Precipitation; monthly total                                202102-202104
+order_94873_IYTAU_rre150m0_1_legend.txt Legend    Taufers i.M.                         Precipitation; monthly total                                202102-202104
+order_94873_IYTER_rre150m0_1_data.txt   Data      Terenten                             Precipitation; monthly total                                202102-202104
+order_94873_IYTER_rre150m0_1_legend.txt Legend    Terenten                             Precipitation; monthly total                                202102-202104
+order_94873_IYTOB_rre150m0_1_data.txt   Data      Toblach                              Precipitation; monthly total                                202102-202104
+order_94873_IYTOB_rre150m0_1_legend.txt Legend    Toblach                              Precipitation; monthly total                                202102-202104
+order_94873_VSTRI_rre150m0_1_data.txt   Data      Trient                               Precipitation; monthly total                                202102-202104
+order_94873_VSTRI_rre150m0_1_legend.txt Legend    Trient                               Precipitation; monthly total                                202102-202104
+order_94873_FLTRB_rre150m0_1_data.txt   Data      Triesenberg                          Precipitation; monthly total                                202102-202104
+order_94873_FLTRB_rre150m0_1_legend.txt Legend    Triesenberg                          Precipitation; monthly total                                202102-202104
+order_94873_TST_rre150m0_1_data.txt     Data      Tschiertschen                        Precipitation; monthly total                                202102-202104
+order_94873_TST_rre150m0_1_legend.txt   Legend    Tschiertschen                        Precipitation; monthly total                                202102-202104
+order_94873_VSTUR_rre150m0_1_data.txt   Data      Turtmann                             Precipitation; monthly total                                202102-202104
+order_94873_VSTUR_rre150m0_1_legend.txt Legend    Turtmann                             Precipitation; monthly total                                202102-202104
+order_94873_ULR_rre150m0_1_data.txt     Data      Ulrichen                             Precipitation; monthly total                                202102-202104
+order_94873_ULR_rre150m0_1_legend.txt   Legend    Ulrichen                             Precipitation; monthly total                                202102-202104
+order_94873_IYULT_rre150m0_1_data.txt   Data      Ulten / Weissbrunn                   Precipitation; monthly total                                202102-202104
+order_94873_IYULT_rre150m0_1_legend.txt Legend    Ulten / Weissbrunn                   Precipitation; monthly total                                202102-202104
+order_94873_BEGTH_rre150m0_1_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; monthly total                                202102-202104
+order_94873_BEGTH_rre150m0_1_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; monthly total                                202102-202104
+order_94873_UNS_rre150m0_1_data.txt     Data      Unterschächen                        Precipitation; monthly total                                202102-202104
+order_94873_UNS_rre150m0_1_legend.txt   Legend    Unterschächen                        Precipitation; monthly total                                202102-202104
+order_94873_URB_rre150m0_1_data.txt     Data      Urnerboden                           Precipitation; monthly total                                202102-202104
+order_94873_URB_rre150m0_1_legend.txt   Legend    Urnerboden                           Precipitation; monthly total                                202102-202104
+order_94873_GLURB_rre150m0_1_data.txt   Data      Urnerboden                           Precipitation; monthly total                                202103-202104
+order_94873_GLURB_rre150m0_1_legend.txt Legend    Urnerboden                           Precipitation; monthly total                                202103-202104
+order_94873_VAB_rre150m0_1_data.txt     Data      Valbella                             Precipitation; monthly total                                202102-202104
+order_94873_VAB_rre150m0_1_legend.txt   Legend    Valbella                             Precipitation; monthly total                                202102-202104
+order_94873_VLS_rre150m0_1_data.txt     Data      Vals                                 Precipitation; monthly total                                202102-202104
+order_94873_VLS_rre150m0_1_legend.txt   Legend    Vals                                 Precipitation; monthly total                                202102-202104
+order_94873_IYVAA_rre150m0_1_data.txt   Data      Vals                                 Precipitation; monthly total                                202102-202104
+order_94873_IYVAA_rre150m0_1_legend.txt Legend    Vals                                 Precipitation; monthly total                                202102-202104
+order_94873_VEL_rre150m0_1_data.txt     Data      Vella                                Precipitation; monthly total                                202102-202104
+order_94873_VEL_rre150m0_1_legend.txt   Legend    Vella                                Precipitation; monthly total                                202102-202104
+order_94873_VSVER_rre150m0_1_data.txt   Data      Vercorin                             Precipitation; monthly total                                202102-202104
+order_94873_VSVER_rre150m0_1_legend.txt Legend    Vercorin                             Precipitation; monthly total                                202102-202104
+order_94873_VIO_rre150m0_1_data.txt     Data      Vicosoprano                          Precipitation; monthly total                                202102-202104
+order_94873_VIO_rre150m0_1_legend.txt   Legend    Vicosoprano                          Precipitation; monthly total                                202102-202104
+order_94873_VSVIS_rre150m0_1_data.txt   Data      Visperterminen                       Precipitation; monthly total                                202102-202104
+order_94873_VSVIS_rre150m0_1_legend.txt Legend    Visperterminen                       Precipitation; monthly total                                202102-202104
+order_94873_VRI_rre150m0_1_data.txt     Data      Vrin                                 Precipitation; monthly total                                202102-202104
+order_94873_VRI_rre150m0_1_legend.txt   Legend    Vrin                                 Precipitation; monthly total                                202102-202104
+order_94873_TAW_rre150m0_1_data.txt     Data      Wald / Tanne                         Precipitation; monthly total                                202102-202104
+order_94873_TAW_rre150m0_1_legend.txt   Legend    Wald / Tanne                         Precipitation; monthly total                                202102-202104
+order_94873_WFJ_rre150m0_1_data.txt     Data      Weissfluhjoch                        Precipitation; monthly total                                202102-202104
+order_94873_WFJ_rre150m0_1_legend.txt   Legend    Weissfluhjoch                        Precipitation; monthly total                                202102-202104
+order_94873_IYWEL_rre150m0_1_data.txt   Data      Welsberg                             Precipitation; monthly total                                202102-202104
+order_94873_IYWEL_rre150m0_1_legend.txt Legend    Welsberg                             Precipitation; monthly total                                202102-202104
+order_94873_IYWEN_rre150m0_1_data.txt   Data      Welschnofen                          Precipitation; monthly total                                202102-202104
+order_94873_IYWEN_rre150m0_1_legend.txt Legend    Welschnofen                          Precipitation; monthly total                                202102-202104
+order_94873_KAWEG_rre150m0_1_data.txt   Data      Wengen                               Precipitation; monthly total                                202102-202104
+order_94873_KAWEG_rre150m0_1_legend.txt Legend    Wengen                               Precipitation; monthly total                                202102-202104
+order_94873_IYWOL_rre150m0_1_data.txt   Data      Wolkenstein                          Precipitation; monthly total                                202102-202104
+order_94873_IYWOL_rre150m0_1_legend.txt Legend    Wolkenstein                          Precipitation; monthly total                                202102-202104
+order_94873_ZER_rre150m0_1_data.txt     Data      Zermatt                              Precipitation; monthly total                                202102-202104
+order_94873_ZER_rre150m0_1_legend.txt   Legend    Zermatt                              Precipitation; monthly total                                202102-202104
+order_94873_ZNZ_rre150m0_1_data.txt     Data      Zernez                               Precipitation; monthly total                                202102-202104
+order_94873_ZNZ_rre150m0_1_legend.txt   Legend    Zernez                               Precipitation; monthly total                                202102-202104
+order_94873_MMZNZ_rre150m0_1_data.txt   Data      Zernez                               Precipitation; monthly total                                202102-202104
+order_94873_MMZNZ_rre150m0_1_legend.txt Legend    Zernez                               Precipitation; monthly total                                202102-202104
+order_94873_ZEV_rre150m0_1_data.txt     Data      Zervreila                            Precipitation; monthly total                                202102-202104
+order_94873_ZEV_rre150m0_1_legend.txt   Legend    Zervreila                            Precipitation; monthly total                                202102-202104
+order_94873_DLZUG_rre150m0_1_data.txt   Data      Zugspitze                            Precipitation; monthly total                                202102-202104
+order_94873_DLZUG_rre150m0_1_legend.txt Legend    Zugspitze                            Precipitation; monthly total                                202102-202104
+order_94873_MMZOZ_rre150m0_1_data.txt   Data      Zuoz                                 Precipitation; monthly total                                202102-202104
+order_94873_MMZOZ_rre150m0_1_legend.txt Legend    Zuoz                                 Precipitation; monthly total                                202102-202104

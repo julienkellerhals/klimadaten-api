@@ -1,0 +1,794 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94917
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94917_COM_rzz150yx_1_data.txt     Data      Acquarossa / Comprovasco             Precipitation; maximum ten minute total of the year         1988-2020
+order_94917_COM_rzz150yx_1_legend.txt   Legend    Acquarossa / Comprovasco             Precipitation; maximum ten minute total of the year         1988-2020
+order_94917_ABO_rzz150yx_1_data.txt     Data      Adelboden                            Precipitation; maximum ten minute total of the year         1983-2020
+order_94917_ABO_rzz150yx_1_legend.txt   Legend    Adelboden                            Precipitation; maximum ten minute total of the year         1983-2020
+order_94917_SOAET_rzz150yx_1_data.txt   Data      Aetigkofen                           Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_SOAET_rzz150yx_1_legend.txt Legend    Aetigkofen                           Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_MMAEU_rzz150yx_1_data.txt   Data      Aeugst am Albis                      Precipitation; maximum ten minute total of the year         2012-2016
+order_94917_MMAEU_rzz150yx_1_legend.txt Legend    Aeugst am Albis                      Precipitation; maximum ten minute total of the year         2012-2016
+order_94917_AIE_rzz150yx_1_data.txt     Data      Affoltern i. E.                      Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_AIE_rzz150yx_1_legend.txt   Legend    Affoltern i. E.                      Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_AIE_rzz150yx_2_data.txt     Data      Affoltern i. E.                      Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_AIE_rzz150yx_2_legend.txt   Legend    Affoltern i. E.                      Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_AIR_rzz150yx_1_data.txt     Data      Airolo                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_AIR_rzz150yx_1_legend.txt   Legend    Airolo                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TIAIR_rzz150yx_1_data.txt   Data      Airolo                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_TIAIR_rzz150yx_1_legend.txt Legend    Airolo                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLALB_rzz150yx_1_data.txt   Data      Albstadt                             Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_DLALB_rzz150yx_1_legend.txt Legend    Albstadt                             Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_AND_rzz150yx_1_data.txt     Data      Andeer                               Precipitation; maximum ten minute total of the year         2008-2020
+order_94917_AND_rzz150yx_1_legend.txt   Legend    Andeer                               Precipitation; maximum ten minute total of the year         2008-2020
+order_94917_ANT_rzz150yx_1_data.txt     Data      Andermatt                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_ANT_rzz150yx_1_legend.txt   Legend    Andermatt                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_URANT_rzz150yx_1_data.txt   Data      Andermatt / ARA                      Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_URANT_rzz150yx_1_legend.txt Legend    Andermatt / ARA                      Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_IYANT_rzz150yx_1_data.txt   Data      Antholz Obertal                      Precipitation; maximum ten minute total of the year         2002-2009
+order_94917_IYANT_rzz150yx_1_legend.txt Legend    Antholz Obertal                      Precipitation; maximum ten minute total of the year         2002-2009
+order_94917_IYANT_rzz150yx_2_data.txt   Data      Antholz Obertal                      Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_IYANT_rzz150yx_2_legend.txt Legend    Antholz Obertal                      Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_APP_rzz150yx_1_data.txt     Data      Appenzell                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_APP_rzz150yx_1_legend.txt   Legend    Appenzell                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_TIARO_rzz150yx_1_data.txt   Data      Arosio                               Precipitation; maximum ten minute total of the year         2007-2020
+order_94917_TIARO_rzz150yx_1_legend.txt Legend    Arosio                               Precipitation; maximum ten minute total of the year         2007-2020
+order_94917_DLATT_rzz150yx_1_data.txt   Data      Attenkam                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLATT_rzz150yx_1_legend.txt Legend    Attenkam                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLBKO_rzz150yx_1_data.txt   Data      Bad Kohlgrub                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLBKO_rzz150yx_1_legend.txt Legend    Bad Kohlgrub                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VSBAS_rzz150yx_1_data.txt   Data      Baltschiedertal                      Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_VSBAS_rzz150yx_1_legend.txt Legend    Baltschiedertal                      Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_VSBAS_rzz150yx_2_data.txt   Data      Baltschiedertal                      Precipitation; maximum ten minute total of the year         2013-2018
+order_94917_VSBAS_rzz150yx_2_legend.txt Legend    Baltschiedertal                      Precipitation; maximum ten minute total of the year         2013-2018
+order_94917_BAW_rzz150yx_1_data.txt     Data      Barmelweid                           Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_BAW_rzz150yx_1_legend.txt   Legend    Barmelweid                           Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_VDBAU_rzz150yx_1_data.txt   Data      Baulmes                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDBAU_rzz150yx_1_legend.txt Legend    Baulmes                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_ZHBAM_rzz150yx_1_data.txt   Data      Bauma                                Precipitation; maximum ten minute total of the year         2001-2020
+order_94917_ZHBAM_rzz150yx_1_legend.txt Legend    Bauma                                Precipitation; maximum ten minute total of the year         2001-2020
+order_94917_TIBED_rzz150yx_1_data.txt   Data      Bedretto                             Precipitation; maximum ten minute total of the year         1999-2020
+order_94917_TIBED_rzz150yx_1_legend.txt Legend    Bedretto                             Precipitation; maximum ten minute total of the year         1999-2020
+order_94917_BEY_rzz150yx_1_data.txt     Data      Bellelay                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_BEY_rzz150yx_1_legend.txt   Legend    Bellelay                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VDBER_rzz150yx_1_data.txt   Data      Bercher                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDBER_rzz150yx_1_legend.txt Legend    Bercher                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_LAT_rzz150yx_1_data.txt     Data      Bergün / Latsch                      Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_LAT_rzz150yx_1_legend.txt   Legend    Bergün / Latsch                      Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_BER_rzz150yx_1_data.txt     Data      Bern / Zollikofen                    Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_BER_rzz150yx_1_legend.txt   Legend    Bern / Zollikofen                    Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_NABBRM_rzz150yx_1_data.txt  Data      Beromünster                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_NABBRM_rzz150yx_1_legend.txt Legend    Beromünster                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_WSLBTB_rzz150yx_1_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLBTB_rzz150yx_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLBTF_rzz150yx_1_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLBTF_rzz150yx_1_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_TIBIA_rzz150yx_1_data.txt   Data      Biasca / Pontirone                   Precipitation; maximum ten minute total of the year         2007-2020
+order_94917_TIBIA_rzz150yx_1_legend.txt Legend    Biasca / Pontirone                   Precipitation; maximum ten minute total of the year         2007-2020
+order_94917_BIN_rzz150yx_1_data.txt     Data      Binn                                 Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BIN_rzz150yx_1_legend.txt   Legend    Binn                                 Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MMBIS_rzz150yx_1_data.txt   Data      Bisisthal                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMBIS_rzz150yx_1_legend.txt Legend    Bisisthal                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_BIE_rzz150yx_1_data.txt     Data      Bière                                Precipitation; maximum ten minute total of the year         2009-2020
+order_94917_BIE_rzz150yx_1_legend.txt   Legend    Bière                                Precipitation; maximum ten minute total of the year         2009-2020
+order_94917_BLA_rzz150yx_1_data.txt     Data      Blatten, Lötschental                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BLA_rzz150yx_1_legend.txt   Legend    Blatten, Lötschental                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VSBLI_rzz150yx_1_data.txt   Data      Blinnen                              Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_VSBLI_rzz150yx_1_legend.txt Legend    Blinnen                              Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_VSBLI_rzz150yx_2_data.txt   Data      Blinnen                              Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_VSBLI_rzz150yx_2_legend.txt Legend    Blinnen                              Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_BOL_rzz150yx_1_data.txt     Data      Boltigen                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_BOL_rzz150yx_1_legend.txt   Legend    Boltigen                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_BOS_rzz150yx_1_data.txt     Data      Bosco/Gurin                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BOS_rzz150yx_1_legend.txt   Legend    Bosco/Gurin                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_TGBOH_rzz150yx_1_data.txt   Data      Braunau / Oberhof                    Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_TGBOH_rzz150yx_1_legend.txt Legend    Braunau / Oberhof                    Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_BRW_rzz150yx_1_data.txt     Data      Braunwald                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BRW_rzz150yx_1_legend.txt   Legend    Braunwald                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BRZ_rzz150yx_1_data.txt     Data      Brienz                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_BRZ_rzz150yx_1_legend.txt   Legend    Brienz                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_BRI_rzz150yx_1_data.txt     Data      Brig                                 Precipitation; maximum ten minute total of the year         2013-2015
+order_94917_BRI_rzz150yx_1_legend.txt   Legend    Brig                                 Precipitation; maximum ten minute total of the year         2013-2015
+order_94917_BRI_rzz150yx_2_data.txt     Data      Brig                                 Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_BRI_rzz150yx_2_legend.txt   Legend    Brig                                 Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_BRT_rzz150yx_1_data.txt     Data      Bristen                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_BRT_rzz150yx_1_legend.txt   Legend    Bristen                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_IYBRI_rzz150yx_1_data.txt   Data      Brixen / Vahrn                       Precipitation; maximum ten minute total of the year         2011-2019
+order_94917_IYBRI_rzz150yx_1_legend.txt Legend    Brixen / Vahrn                       Precipitation; maximum ten minute total of the year         2011-2019
+order_94917_IYBRU_rzz150yx_1_data.txt   Data      Bruneck                              Precipitation; maximum ten minute total of the year         2001-2012
+order_94917_IYBRU_rzz150yx_1_legend.txt Legend    Bruneck                              Precipitation; maximum ten minute total of the year         2001-2012
+order_94917_IYBRU_rzz150yx_2_data.txt   Data      Bruneck                              Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_IYBRU_rzz150yx_2_legend.txt Legend    Bruneck                              Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_BRP_rzz150yx_1_data.txt     Data      Brusio                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_BRP_rzz150yx_1_legend.txt   Legend    Brusio                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FRE_rzz150yx_1_data.txt     Data      Bullet / La Frétaz                   Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_FRE_rzz150yx_1_legend.txt   Legend    Bullet / La Frétaz                   Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_TICAB_rzz150yx_1_data.txt   Data      Cabbio                               Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_TICAB_rzz150yx_1_legend.txt Legend    Cabbio                               Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_TICMD_rzz150yx_1_data.txt   Data      Camedo                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_TICMD_rzz150yx_1_legend.txt Legend    Camedo                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_TICVM_rzz150yx_1_data.txt   Data      Campo Vallemaggia                    Precipitation; maximum ten minute total of the year         2005-2016
+order_94917_TICVM_rzz150yx_1_legend.txt Legend    Campo Vallemaggia                    Precipitation; maximum ten minute total of the year         2005-2016
+order_94917_TICVM_rzz150yx_2_data.txt   Data      Campo Vallemaggia                    Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_TICVM_rzz150yx_2_legend.txt Legend    Campo Vallemaggia                    Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_TICAR_rzz150yx_1_data.txt   Data      Carena                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_TICAR_rzz150yx_1_legend.txt Legend    Carena                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_VSCHY_rzz150yx_1_data.txt   Data      Champéry                             Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_VSCHY_rzz150yx_1_legend.txt Legend    Champéry                             Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_MMCPY_rzz150yx_1_data.txt   Data      Champéry                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMCPY_rzz150yx_1_legend.txt Legend    Champéry                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_CHM_rzz150yx_1_data.txt     Data      Chaumont                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_CHM_rzz150yx_1_legend.txt   Legend    Chaumont                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_NABCHA_rzz150yx_1_data.txt  Data      Chaumont / Bosset                    Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_NABCHA_rzz150yx_1_legend.txt Legend    Chaumont / Bosset                    Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_TICHI_rzz150yx_1_data.txt   Data      Chironico                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_TICHI_rzz150yx_1_legend.txt Legend    Chironico                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_WSLCIB_rzz150yx_1_data.txt  Data      Chironico Bestand                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLCIB_rzz150yx_1_legend.txt Legend    Chironico Bestand                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLCIF_rzz150yx_1_data.txt  Data      Chironico Freiland                   Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLCIF_rzz150yx_1_legend.txt Legend    Chironico Freiland                   Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_VSCHO_rzz150yx_1_data.txt   Data      Choëx                                Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VSCHO_rzz150yx_1_legend.txt Legend    Choëx                                Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_CHU_rzz150yx_1_data.txt     Data      Chur                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_CHU_rzz150yx_1_legend.txt   Legend    Chur                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_VDCHX_rzz150yx_1_data.txt   Data      Château d'Oex                        Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDCHX_rzz150yx_1_legend.txt Legend    Château d'Oex                        Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_CHD_rzz150yx_1_data.txt     Data      Château-d'Oex                        Precipitation; maximum ten minute total of the year         2012-2015
+order_94917_CHD_rzz150yx_1_legend.txt   Legend    Château-d'Oex                        Precipitation; maximum ten minute total of the year         2012-2015
+order_94917_CHD_rzz150yx_2_data.txt     Data      Château-d'Oex                        Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_CHD_rzz150yx_2_legend.txt   Legend    Château-d'Oex                        Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_CDM_rzz150yx_1_data.txt     Data      Col des Mosses                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_CDM_rzz150yx_1_legend.txt   Legend    Col des Mosses                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TICOL_rzz150yx_1_data.txt   Data      Colla                                Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_TICOL_rzz150yx_1_legend.txt Legend    Colla                                Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_VDCOR_rzz150yx_1_data.txt   Data      Corcelles-sur-Chavronay              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDCOR_rzz150yx_1_legend.txt Legend    Corcelles-sur-Chavronay              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_COS_rzz150yx_1_data.txt     Data      Cossonay                             Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_COS_rzz150yx_1_legend.txt   Legend    Cossonay                             Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_COY_rzz150yx_1_data.txt     Data      Courtelary                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_COY_rzz150yx_1_legend.txt   Legend    Courtelary                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_COU_rzz150yx_1_data.txt     Data      Couvet                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_COU_rzz150yx_1_legend.txt   Legend    Couvet                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLDEG_rzz150yx_1_data.txt   Data      Deggenhausertal                      Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLDEG_rzz150yx_1_legend.txt Legend    Deggenhausertal                      Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VSDER_rzz150yx_1_data.txt   Data      Derborence                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VSDER_rzz150yx_1_legend.txt Legend    Derborence                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_IYDEU_rzz150yx_1_data.txt   Data      Deutschnofen                         Precipitation; maximum ten minute total of the year         2003-2019
+order_94917_IYDEU_rzz150yx_1_legend.txt Legend    Deutschnofen                         Precipitation; maximum ten minute total of the year         2003-2019
+order_94917_GLDBA_rzz150yx_1_data.txt   Data      Diesbach                             Precipitation; maximum ten minute total of the year         2014-2015
+order_94917_GLDBA_rzz150yx_1_legend.txt Legend    Diesbach                             Precipitation; maximum ten minute total of the year         2014-2015
+order_94917_GLDBA_rzz150yx_2_data.txt   Data      Diesbach                             Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_GLDBA_rzz150yx_2_legend.txt Legend    Diesbach                             Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_DIS_rzz150yx_1_data.txt     Data      Disentis                             Precipitation; maximum ten minute total of the year         1980-2016
+order_94917_DIS_rzz150yx_1_legend.txt   Legend    Disentis                             Precipitation; maximum ten minute total of the year         1980-2016
+order_94917_DIS_rzz150yx_2_data.txt     Data      Disentis                             Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_DIS_rzz150yx_2_legend.txt   Legend    Disentis                             Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VSDUR_rzz150yx_1_data.txt   Data      Durnand                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VSDUR_rzz150yx_1_legend.txt Legend    Durnand                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_TGDUS_rzz150yx_1_data.txt   Data      Dussnang                             Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_TGDUS_rzz150yx_1_legend.txt Legend    Dussnang                             Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_TGDUS_rzz150yx_2_data.txt   Data      Dussnang                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TGDUS_rzz150yx_2_legend.txt Legend    Dussnang                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MMDAS_rzz150yx_1_data.txt   Data      Därstetten                           Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMDAS_rzz150yx_1_legend.txt Legend    Därstetten                           Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMDAS_rzz150yx_2_data.txt   Data      Därstetten                           Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_MMDAS_rzz150yx_2_legend.txt Legend    Därstetten                           Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_MMDAS_rzz150yx_3_data.txt   Data      Därstetten                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_MMDAS_rzz150yx_3_legend.txt Legend    Därstetten                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_DLEBE_rzz150yx_1_data.txt   Data      Ebersberg                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLEBE_rzz150yx_1_legend.txt Legend    Ebersberg                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLEBE_rzz150yx_2_data.txt   Data      Ebersberg                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_DLEBE_rzz150yx_2_legend.txt Legend    Ebersberg                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_EBK_rzz150yx_1_data.txt     Data      Ebnat-Kappel                         Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_EBK_rzz150yx_1_legend.txt   Legend    Ebnat-Kappel                         Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_EBK_rzz150yx_2_data.txt     Data      Ebnat-Kappel                         Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_EBK_rzz150yx_2_legend.txt   Legend    Ebnat-Kappel                         Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_EGR_rzz150yx_1_data.txt     Data      Eggersriet                           Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_EGR_rzz150yx_1_legend.txt   Legend    Eggersriet                           Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_SGEGR_rzz150yx_1_data.txt   Data      Eggersriet                           Precipitation; maximum ten minute total of the year         1993-2020
+order_94917_SGEGR_rzz150yx_1_legend.txt Legend    Eggersriet                           Precipitation; maximum ten minute total of the year         1993-2020
+order_94917_EIN_rzz150yx_1_data.txt     Data      Einsiedeln                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_EIN_rzz150yx_1_legend.txt   Legend    Einsiedeln                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_GLELM_rzz150yx_1_data.txt   Data      Elm                                  Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_GLELM_rzz150yx_1_legend.txt Legend    Elm                                  Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_ENG_rzz150yx_1_data.txt     Data      Engelberg                            Precipitation; maximum ten minute total of the year         1982-2010
+order_94917_ENG_rzz150yx_1_legend.txt   Legend    Engelberg                            Precipitation; maximum ten minute total of the year         1982-2010
+order_94917_ENG_rzz150yx_2_data.txt     Data      Engelberg                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_ENG_rzz150yx_2_legend.txt   Legend    Engelberg                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_ENT_rzz150yx_1_data.txt     Data      Entlebuch                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_ENT_rzz150yx_1_legend.txt   Legend    Entlebuch                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_VSERG_rzz150yx_1_data.txt   Data      Ergisch                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VSERG_rzz150yx_1_legend.txt Legend    Ergisch                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMERZ_rzz150yx_1_data.txt   Data      Eriz                                 Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMERZ_rzz150yx_1_legend.txt Legend    Eriz                                 Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMERZ_rzz150yx_2_data.txt   Data      Eriz                                 Precipitation; maximum ten minute total of the year         2016-2018
+order_94917_MMERZ_rzz150yx_2_legend.txt Legend    Eriz                                 Precipitation; maximum ten minute total of the year         2016-2018
+order_94917_MMERZ_rzz150yx_3_data.txt   Data      Eriz                                 Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_MMERZ_rzz150yx_3_legend.txt Legend    Eriz                                 Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_SOERS_rzz150yx_1_data.txt   Data      Erschwil                             Precipitation; maximum ten minute total of the year         2006-2011
+order_94917_SOERS_rzz150yx_1_legend.txt Legend    Erschwil                             Precipitation; maximum ten minute total of the year         2006-2011
+order_94917_SOERS_rzz150yx_2_data.txt   Data      Erschwil                             Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_SOERS_rzz150yx_2_legend.txt Legend    Erschwil                             Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_FAH_rzz150yx_1_data.txt     Data      Fahy                                 Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_FAH_rzz150yx_1_legend.txt   Legend    Fahy                                 Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_FAI_rzz150yx_1_data.txt     Data      Faido                                Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FAI_rzz150yx_1_legend.txt   Legend    Faido                                Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_DLFEB_rzz150yx_1_data.txt   Data      Feldberg, Schwarzwald                Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_DLFEB_rzz150yx_1_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_FEY_rzz150yx_1_data.txt     Data      Fey                                  Precipitation; maximum ten minute total of the year         1989-2004
+order_94917_FEY_rzz150yx_1_legend.txt   Legend    Fey                                  Precipitation; maximum ten minute total of the year         1989-2004
+order_94917_FIT_rzz150yx_1_data.txt     Data      Fieschertal                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_FIT_rzz150yx_1_legend.txt   Legend    Fieschertal                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_GLFIL_rzz150yx_1_data.txt   Data      Filzbach                             Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_GLFIL_rzz150yx_1_legend.txt Legend    Filzbach                             Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_FIO_rzz150yx_1_data.txt     Data      Fionnay                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_FIO_rzz150yx_1_legend.txt   Legend    Fionnay                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_FLW_rzz150yx_1_data.txt     Data      Flawil                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FLW_rzz150yx_1_legend.txt   Legend    Flawil                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FLU_rzz150yx_1_data.txt     Data      Flühli, LU                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FLU_rzz150yx_1_legend.txt   Legend    Flühli, LU                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VDFOL_rzz150yx_1_data.txt   Data      Forel                                Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDFOL_rzz150yx_1_legend.txt Legend    Forel                                Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_IYFRA_rzz150yx_1_data.txt   Data      Franzensfeste / Grasstein            Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYFRA_rzz150yx_1_legend.txt Legend    Franzensfeste / Grasstein            Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_MMFRS_rzz150yx_1_data.txt   Data      Frasco                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMFRS_rzz150yx_1_legend.txt Legend    Frasco                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLFRS_rzz150yx_1_data.txt   Data      Freudenstadt                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLFRS_rzz150yx_1_legend.txt Legend    Freudenstadt                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_GRA_rzz150yx_1_data.txt     Data      Fribourg / Grangeneuve               Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_GRA_rzz150yx_1_legend.txt   Legend    Fribourg / Grangeneuve               Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_FRU_rzz150yx_1_data.txt     Data      Frutigen                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_FRU_rzz150yx_1_legend.txt   Legend    Frutigen                             Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TIFUS_rzz150yx_1_data.txt   Data      Fusio                                Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_TIFUS_rzz150yx_1_legend.txt Legend    Fusio                                Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_BEGAD_rzz150yx_1_data.txt   Data      Gadmen                               Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEGAD_rzz150yx_1_legend.txt Legend    Gadmen                               Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEGAD_rzz150yx_2_data.txt   Data      Gadmen                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEGAD_rzz150yx_2_legend.txt Legend    Gadmen                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TIGAN_rzz150yx_1_data.txt   Data      Gambarogno / Alpe di Neggia          Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_TIGAN_rzz150yx_1_legend.txt Legend    Gambarogno / Alpe di Neggia          Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_DLGAR_rzz150yx_1_data.txt   Data      Garmisch-Partenkirchen               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLGAR_rzz150yx_1_legend.txt Legend    Garmisch-Partenkirchen               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLGEI_rzz150yx_1_data.txt   Data      Geisingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLGEI_rzz150yx_1_legend.txt Legend    Geisingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VDGEN_rzz150yx_1_data.txt   Data      Genoiler                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDGEN_rzz150yx_1_legend.txt Legend    Genoiler                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDGOU_rzz150yx_1_data.txt   Data      Goumoëns                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDGOU_rzz150yx_1_legend.txt Legend    Goumoëns                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_GSG_rzz150yx_1_data.txt     Data      Gsteig, Gstaad                       Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_GSG_rzz150yx_1_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_GSG_rzz150yx_2_data.txt     Data      Gsteig, Gstaad                       Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_GSG_rzz150yx_2_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_BERIF_rzz150yx_1_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum ten minute total of the year         2002-2020
+order_94917_BERIF_rzz150yx_1_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum ten minute total of the year         2002-2020
+order_94917_GTT_rzz150yx_1_data.txt     Data      Guttannen                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_GTT_rzz150yx_1_legend.txt   Legend    Guttannen                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MMGTT_rzz150yx_1_data.txt   Data      Guttannen                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_MMGTT_rzz150yx_1_legend.txt Legend    Guttannen                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_MMGTT_rzz150yx_2_data.txt   Data      Guttannen                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_MMGTT_rzz150yx_2_legend.txt Legend    Guttannen                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_GOS_rzz150yx_1_data.txt     Data      Göschenen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_GOS_rzz150yx_1_legend.txt   Legend    Göschenen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_BEHAK_rzz150yx_1_data.txt   Data      Habkern                              Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEHAK_rzz150yx_1_legend.txt Legend    Habkern                              Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEHAK_rzz150yx_2_data.txt   Data      Habkern                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEHAK_rzz150yx_2_legend.txt Legend    Habkern                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEHAB_rzz150yx_1_data.txt   Data      Hasliberg                            Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEHAB_rzz150yx_1_legend.txt Legend    Hasliberg                            Precipitation; maximum ten minute total of the year         2008-2012
+order_94917_BEHAB_rzz150yx_2_data.txt   Data      Hasliberg                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEHAB_rzz150yx_2_legend.txt Legend    Hasliberg                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SOHIM_rzz150yx_1_data.txt   Data      Himmelried                           Precipitation; maximum ten minute total of the year         2006-2011
+order_94917_SOHIM_rzz150yx_1_legend.txt Legend    Himmelried                           Precipitation; maximum ten minute total of the year         2006-2011
+order_94917_SOHIM_rzz150yx_2_data.txt   Data      Himmelried                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SOHIM_rzz150yx_2_legend.txt Legend    Himmelried                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_GLSAN_rzz150yx_1_data.txt   Data      Hinter Sand                          Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_GLSAN_rzz150yx_1_legend.txt Legend    Hinter Sand                          Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_MMHIW_rzz150yx_1_data.txt   Data      Hinwil                               Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_MMHIW_rzz150yx_1_legend.txt Legend    Hinwil                               Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_MMHIW_rzz150yx_2_data.txt   Data      Hinwil                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MMHIW_rzz150yx_2_legend.txt Legend    Hinwil                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_ZHHOF_rzz150yx_1_data.txt   Data      Hofstetten / Schümberg               Precipitation; maximum ten minute total of the year         2006-2019
+order_94917_ZHHOF_rzz150yx_1_legend.txt Legend    Hofstetten / Schümberg               Precipitation; maximum ten minute total of the year         2006-2019
+order_94917_DLHOH_rzz150yx_1_data.txt   Data      Hohenpeissenberg                     Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLHOH_rzz150yx_1_legend.txt Legend    Hohenpeissenberg                     Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLHOL_rzz150yx_1_data.txt   Data      Holzkirchen                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLHOL_rzz150yx_1_legend.txt Legend    Holzkirchen                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_HUT_rzz150yx_1_data.txt     Data      Huttwil                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_HUT_rzz150yx_1_legend.txt   Legend    Huttwil                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_HOE_rzz150yx_1_data.txt     Data      Hörnli                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_HOE_rzz150yx_1_legend.txt   Legend    Hörnli                               Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_ILZ_rzz150yx_1_data.txt     Data      Ilanz                                Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_ILZ_rzz150yx_1_legend.txt   Legend    Ilanz                                Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_TGILL_rzz150yx_1_data.txt   Data      Illighausen                          Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TGILL_rzz150yx_1_legend.txt Legend    Illighausen                          Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TGILL_rzz150yx_2_data.txt   Data      Illighausen                          Precipitation; maximum ten minute total of the year         2015-2016
+order_94917_TGILL_rzz150yx_2_legend.txt Legend    Illighausen                          Precipitation; maximum ten minute total of the year         2015-2016
+order_94917_TGILL_rzz150yx_3_data.txt   Data      Illighausen                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_TGILL_rzz150yx_3_legend.txt Legend    Illighausen                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_INN_rzz150yx_1_data.txt     Data      Innerthal                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_INN_rzz150yx_1_legend.txt   Legend    Innerthal                            Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_INT_rzz150yx_1_data.txt     Data      Interlaken                           Precipitation; maximum ten minute total of the year         1980-2012
+order_94917_INT_rzz150yx_1_legend.txt   Legend    Interlaken                           Precipitation; maximum ten minute total of the year         1980-2012
+order_94917_INT_rzz150yx_2_data.txt     Data      Interlaken                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_INT_rzz150yx_2_legend.txt   Legend    Interlaken                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TIISO_rzz150yx_1_data.txt   Data      Isone                                Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_TIISO_rzz150yx_1_legend.txt Legend    Isone                                Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_WSLISB_rzz150yx_1_data.txt  Data      Isone Bestand                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_WSLISB_rzz150yx_1_legend.txt Legend    Isone Bestand                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_WSLISF_rzz150yx_1_data.txt  Data      Isone Freiland                       Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_WSLISF_rzz150yx_1_legend.txt Legend    Isone Freiland                       Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VSISE_rzz150yx_1_data.txt   Data      Isérables                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VSISE_rzz150yx_1_legend.txt Legend    Isérables                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_IYJEN_rzz150yx_1_data.txt   Data      Jenesien                             Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_IYJEN_rzz150yx_1_legend.txt Legend    Jenesien                             Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_KAS_rzz150yx_1_data.txt     Data      Kandersteg                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_KAS_rzz150yx_1_legend.txt   Legend    Kandersteg                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_DLKEM_rzz150yx_1_data.txt   Data      Kempten                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLKEM_rzz150yx_1_legend.txt Legend    Kempten                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_KIE_rzz150yx_1_data.txt     Data      Kiental                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_KIE_rzz150yx_1_legend.txt   Legend    Kiental                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MMKSB_rzz150yx_1_data.txt   Data      Kirchberg / Schallenberg             Precipitation; maximum ten minute total of the year         2013-2016
+order_94917_MMKSB_rzz150yx_1_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; maximum ten minute total of the year         2013-2016
+order_94917_MMKSB_rzz150yx_2_data.txt   Data      Kirchberg / Schallenberg             Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_MMKSB_rzz150yx_2_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_DLKLI_rzz150yx_1_data.txt   Data      Klippeneck                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLKLI_rzz150yx_1_legend.txt Legend    Klippeneck                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_KLA_rzz150yx_1_data.txt     Data      Klosters                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_KLA_rzz150yx_1_legend.txt   Legend    Klosters                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_GLKLT_rzz150yx_1_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_GLKLT_rzz150yx_1_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_GLKLT_rzz150yx_2_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_GLKLT_rzz150yx_2_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_BEKRA_rzz150yx_1_data.txt   Data      Krauchthal / Dieterswald             Precipitation; maximum ten minute total of the year         1999-2009
+order_94917_BEKRA_rzz150yx_1_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; maximum ten minute total of the year         1999-2009
+order_94917_BEKRA_rzz150yx_2_data.txt   Data      Krauchthal / Dieterswald             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEKRA_rzz150yx_2_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEKRL_rzz150yx_1_data.txt   Data      Krauchthal / Lindenfeld              Precipitation; maximum ten minute total of the year         1999-2009
+order_94917_BEKRL_rzz150yx_1_legend.txt Legend    Krauchthal / Lindenfeld              Precipitation; maximum ten minute total of the year         1999-2009
+order_94917_BEKRL_rzz150yx_2_data.txt   Data      Krauchthal / Lindenfeld              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEKRL_rzz150yx_2_legend.txt Legend    Krauchthal / Lindenfeld              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_AUB_rzz150yx_1_data.txt     Data      L' Auberson                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_AUB_rzz150yx_1_legend.txt   Legend    L' Auberson                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BRL_rzz150yx_1_data.txt     Data      La Brévine                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BRL_rzz150yx_1_legend.txt   Legend    La Brévine                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_CDF_rzz150yx_1_data.txt     Data      La Chaux-de-Fonds                    Precipitation; maximum ten minute total of the year         1980-2009
+order_94917_CDF_rzz150yx_1_legend.txt   Legend    La Chaux-de-Fonds                    Precipitation; maximum ten minute total of the year         1980-2009
+order_94917_CDF_rzz150yx_2_data.txt     Data      La Chaux-de-Fonds                    Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_CDF_rzz150yx_2_legend.txt   Legend    La Chaux-de-Fonds                    Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_VDPEU_rzz150yx_1_data.txt   Data      La Peufaire                          Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDPEU_rzz150yx_1_legend.txt Legend    La Peufaire                          Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VST_rzz150yx_1_data.txt     Data      La Valsainte                         Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VST_rzz150yx_1_legend.txt   Legend    La Valsainte                         Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_IYLAA_rzz150yx_1_data.txt   Data      Laas / Eyrs                          Precipitation; maximum ten minute total of the year         2009-2018
+order_94917_IYLAA_rzz150yx_1_legend.txt Legend    Laas / Eyrs                          Precipitation; maximum ten minute total of the year         2009-2018
+order_94917_LAB_rzz150yx_1_data.txt     Data      Langenbruck                          Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_LAB_rzz150yx_1_legend.txt   Legend    Langenbruck                          Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_LAG_rzz150yx_1_data.txt     Data      Langnau i.E.                         Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_LAG_rzz150yx_1_legend.txt   Legend    Langnau i.E.                         Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_TGLAN_rzz150yx_1_data.txt   Data      Lanzenneunforn                       Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_TGLAN_rzz150yx_1_legend.txt Legend    Lanzenneunforn                       Precipitation; maximum ten minute total of the year         2010-2014
+order_94917_TGLAN_rzz150yx_2_data.txt   Data      Lanzenneunforn                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TGLAN_rzz150yx_2_legend.txt Legend    Lanzenneunforn                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_LSN_rzz150yx_1_data.txt     Data      Lausanne                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_LSN_rzz150yx_1_legend.txt   Legend    Lausanne                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_WSLLAB_rzz150yx_1_data.txt  Data      Lausanne Bestand                     Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_WSLLAB_rzz150yx_1_legend.txt Legend    Lausanne Bestand                     Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_WSLLAF_rzz150yx_1_data.txt  Data      Lausanne Freiland                    Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_WSLLAF_rzz150yx_1_legend.txt Legend    Lausanne Freiland                    Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_LTB_rzz150yx_1_data.txt     Data      Lauterbrunnen                        Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_LTB_rzz150yx_1_legend.txt   Legend    Lauterbrunnen                        Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_KALTB_rzz150yx_1_data.txt   Data      Lauterbrunnen                        Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_KALTB_rzz150yx_1_legend.txt Legend    Lauterbrunnen                        Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_TILAV_rzz150yx_1_data.txt   Data      Lavertezzo                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_TILAV_rzz150yx_1_legend.txt Legend    Lavertezzo                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_GECOI_rzz150yx_1_data.txt   Data      Le Coin, France                      Precipitation; maximum ten minute total of the year         2012-2017
+order_94917_GECOI_rzz150yx_1_legend.txt Legend    Le Coin, France                      Precipitation; maximum ten minute total of the year         2012-2017
+order_94917_VDLMT_rzz150yx_1_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDLMT_rzz150yx_1_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMNOI_rzz150yx_1_data.txt   Data      Le Noirmont                          Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMNOI_rzz150yx_1_legend.txt Legend    Le Noirmont                          Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDLSP_rzz150yx_1_data.txt   Data      Le Sentier                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDLSP_rzz150yx_1_legend.txt Legend    Le Sentier                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDSEP_rzz150yx_1_data.txt   Data      Le Sépey                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDSEP_rzz150yx_1_legend.txt Legend    Le Sépey                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMLEN_rzz150yx_1_data.txt   Data      Lenk                                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMLEN_rzz150yx_1_legend.txt Legend    Lenk                                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_WSLLEB_rzz150yx_1_data.txt  Data      Lens Bestand                         Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_WSLLEB_rzz150yx_1_legend.txt Legend    Lens Bestand                         Precipitation; maximum ten minute total of the year         2017-2019
+order_94917_AVA_rzz150yx_1_data.txt     Data      Les Avants                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_AVA_rzz150yx_1_legend.txt   Legend    Les Avants                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_CHB_rzz150yx_1_data.txt     Data      Les Charbonnières                    Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_CHB_rzz150yx_1_legend.txt   Legend    Les Charbonnières                    Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MAR_rzz150yx_1_data.txt     Data      Les Marécottes                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MAR_rzz150yx_1_legend.txt   Legend    Les Marécottes                       Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_LEU_rzz150yx_1_data.txt     Data      Leukerbad                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_LEU_rzz150yx_1_legend.txt   Legend    Leukerbad                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_DLLEU_rzz150yx_1_data.txt   Data      Leutkirch                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLLEU_rzz150yx_1_legend.txt Legend    Leutkirch                            Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLLEU_rzz150yx_2_data.txt   Data      Leutkirch                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_DLLEU_rzz150yx_2_legend.txt Legend    Leutkirch                            Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_GLLIN_rzz150yx_1_data.txt   Data      Linthal                              Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_GLLIN_rzz150yx_1_legend.txt Legend    Linthal                              Precipitation; maximum ten minute total of the year         2014-2017
+order_94917_MMLIN_rzz150yx_1_data.txt   Data      Linthal                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMLIN_rzz150yx_1_legend.txt Legend    Linthal                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_LOH_rzz150yx_1_data.txt     Data      Lohn, SH                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_LOH_rzz150yx_1_legend.txt   Legend    Lohn, SH                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_LON_rzz150yx_1_data.txt     Data      Longirod                             Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_LON_rzz150yx_1_legend.txt   Legend    Longirod                             Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MMLOP_rzz150yx_1_data.txt   Data      Lopagno                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMLOP_rzz150yx_1_legend.txt Legend    Lopagno                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_NABLAE_rzz150yx_1_data.txt  Data      Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         1993-1999
+order_94917_NABLAE_rzz150yx_1_legend.txt Legend    Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         1993-1999
+order_94917_NABLAE_rzz150yx_2_data.txt  Data      Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_NABLAE_rzz150yx_2_legend.txt Legend    Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_NABLAE_rzz150yx_3_data.txt  Data      Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         2008-2017
+order_94917_NABLAE_rzz150yx_3_legend.txt Legend    Lägeren / Zindelen                   Precipitation; maximum ten minute total of the year         2008-2017
+order_94917_WSLLAE_rzz150yx_1_data.txt  Data      Lägern Turm                          Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLLAE_rzz150yx_1_legend.txt Legend    Lägern Turm                          Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_BELUA_rzz150yx_1_data.txt   Data      Lüderenalp                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BELUA_rzz150yx_1_legend.txt Legend    Lüderenalp                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MGL_rzz150yx_1_data.txt     Data      Magglingen                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MGL_rzz150yx_1_legend.txt   Legend    Magglingen                           Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_FLMAI_rzz150yx_1_data.txt   Data      Maienfeld / Guscha                   Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_FLMAI_rzz150yx_1_legend.txt Legend    Maienfeld / Guscha                   Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEMBE_rzz150yx_1_data.txt   Data      Marbachegg                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEMBE_rzz150yx_1_legend.txt Legend    Marbachegg                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_IYMMR_rzz150yx_1_data.txt   Data      Marienberg                           Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYMMR_rzz150yx_1_legend.txt Legend    Marienberg                           Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_MAS_rzz150yx_1_data.txt     Data      Marsens                              Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MAS_rzz150yx_1_legend.txt   Legend    Marsens                              Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MAT_rzz150yx_1_data.txt     Data      Martina                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MAT_rzz150yx_1_legend.txt   Legend    Martina                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_GLMAT_rzz150yx_1_data.txt   Data      Matt                                 Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_GLMAT_rzz150yx_1_legend.txt Legend    Matt                                 Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_VSMAT_rzz150yx_1_data.txt   Data      Mattsand                             Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_VSMAT_rzz150yx_1_legend.txt Legend    Mattsand                             Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_MER_rzz150yx_1_data.txt     Data      Meiringen                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_MER_rzz150yx_1_legend.txt   Legend    Meiringen                            Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_DLMEM_rzz150yx_1_data.txt   Data      Memmingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMEM_rzz150yx_1_legend.txt Legend    Memmingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMER_rzz150yx_1_data.txt   Data      Merklingen                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMER_rzz150yx_1_legend.txt Legend    Merklingen                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMMES_rzz150yx_1_data.txt   Data      Mesocco                              Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMMES_rzz150yx_1_legend.txt Legend    Mesocco                              Precipitation; maximum ten minute total of the year         2012-2013
+order_94917_MMMES_rzz150yx_2_data.txt   Data      Mesocco                              Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_MMMES_rzz150yx_2_legend.txt Legend    Mesocco                              Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_DLMES_rzz150yx_1_data.txt   Data      Messstetten                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMES_rzz150yx_1_legend.txt Legend    Messstetten                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMIT_rzz150yx_1_data.txt   Data      Mittenwald                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLMIT_rzz150yx_1_legend.txt Legend    Mittenwald                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLMIT_rzz150yx_2_data.txt   Data      Mittenwald                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_DLMIT_rzz150yx_2_legend.txt Legend    Mittenwald                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_VDMOL_rzz150yx_1_data.txt   Data      Mollens                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_VDMOL_rzz150yx_1_legend.txt Legend    Mollens                              Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MOB_rzz150yx_1_data.txt     Data      Montagnier, Bagnes                   Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_MOB_rzz150yx_1_legend.txt   Legend    Montagnier, Bagnes                   Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_MVE_rzz150yx_1_data.txt     Data      Montana                              Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_MVE_rzz150yx_1_legend.txt   Legend    Montana                              Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_BEMOE_rzz150yx_1_data.txt   Data      Moosegg                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEMOE_rzz150yx_1_legend.txt Legend    Moosegg                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MSG_rzz150yx_1_data.txt     Data      Mosogno                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MSG_rzz150yx_1_legend.txt   Legend    Mosogno                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_GLMUL_rzz150yx_1_data.txt   Data      Mullern                              Precipitation; maximum ten minute total of the year         2015-2018
+order_94917_GLMUL_rzz150yx_1_legend.txt Legend    Mullern                              Precipitation; maximum ten minute total of the year         2015-2018
+order_94917_MUR_rzz150yx_1_data.txt     Data      Muri, AG                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MUR_rzz150yx_1_legend.txt   Legend    Muri, AG                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_IYMUW_rzz150yx_1_data.txt   Data      Mühlwald                             Precipitation; maximum ten minute total of the year         2003-2004
+order_94917_IYMUW_rzz150yx_1_legend.txt Legend    Mühlwald                             Precipitation; maximum ten minute total of the year         2003-2004
+order_94917_IYMUW_rzz150yx_2_data.txt   Data      Mühlwald                             Precipitation; maximum ten minute total of the year         2005-2007
+order_94917_IYMUW_rzz150yx_2_legend.txt Legend    Mühlwald                             Precipitation; maximum ten minute total of the year         2005-2007
+order_94917_IYMUW_rzz150yx_3_data.txt   Data      Mühlwald                             Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYMUW_rzz150yx_3_legend.txt Legend    Mühlwald                             Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_MMMUM_rzz150yx_1_data.txt   Data      Mümliswil                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMMUM_rzz150yx_1_legend.txt Legend    Mümliswil                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMUS_rzz150yx_1_data.txt   Data      Münsingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLMUS_rzz150yx_1_legend.txt Legend    Münsingen                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_NAP_rzz150yx_1_data.txt     Data      Napf                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_NAP_rzz150yx_1_legend.txt   Legend    Napf                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_NEB_rzz150yx_1_data.txt     Data      Nesselboden                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_NEB_rzz150yx_1_legend.txt   Legend    Nesselboden                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_ZHNEU_rzz150yx_1_data.txt   Data      Neubrunn                             Precipitation; maximum ten minute total of the year         2009-2014
+order_94917_ZHNEU_rzz150yx_1_legend.txt Legend    Neubrunn                             Precipitation; maximum ten minute total of the year         2009-2014
+order_94917_DLNBL_rzz150yx_1_data.txt   Data      Neubulach                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLNBL_rzz150yx_1_legend.txt Legend    Neubulach                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLNEU_rzz150yx_1_data.txt   Data      Neuhausen ob Eck / Unterschwandorf   Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLNEU_rzz150yx_1_legend.txt Legend    Neuhausen ob Eck / Unterschwandorf   Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_WSLNEB_rzz150yx_1_data.txt  Data      Neunkirch Bestand                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLNEB_rzz150yx_1_legend.txt Legend    Neunkirch Bestand                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_GLNIT_rzz150yx_1_data.txt   Data      Niederurnen / Morgenholz             Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_GLNIT_rzz150yx_1_legend.txt Legend    Niederurnen / Morgenholz             Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_TGNOL_rzz150yx_1_data.txt   Data      Nollen                               Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_TGNOL_rzz150yx_1_legend.txt Legend    Nollen                               Precipitation; maximum ten minute total of the year         2011-2012
+order_94917_TGNOL_rzz150yx_2_data.txt   Data      Nollen                               Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TGNOL_rzz150yx_2_legend.txt Legend    Nollen                               Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TGNOL_rzz150yx_3_data.txt   Data      Nollen                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TGNOL_rzz150yx_3_legend.txt Legend    Nollen                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TINOV_rzz150yx_1_data.txt   Data      Novaggio                             Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_TINOV_rzz150yx_1_legend.txt Legend    Novaggio                             Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_WSLNOB_rzz150yx_1_data.txt  Data      Novaggio Bestand                     Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLNOB_rzz150yx_1_legend.txt Legend    Novaggio Bestand                     Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLNOF_rzz150yx_1_data.txt  Data      Novaggio Freiland                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLNOF_rzz150yx_1_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_DLOBH_rzz150yx_1_data.txt   Data      Oberhaching                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLOBH_rzz150yx_1_legend.txt Legend    Oberhaching                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_OBI_rzz150yx_1_data.txt     Data      Oberiberg                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_OBI_rzz150yx_1_legend.txt   Legend    Oberiberg                            Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLOBD_rzz150yx_1_data.txt   Data      Oberstdorf                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLOBD_rzz150yx_1_legend.txt Legend    Oberstdorf                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMOBE_rzz150yx_1_data.txt   Data      Oberthal                             Precipitation; maximum ten minute total of the year         2012-2015
+order_94917_MMOBE_rzz150yx_1_legend.txt Legend    Oberthal                             Precipitation; maximum ten minute total of the year         2012-2015
+order_94917_MMOBE_rzz150yx_2_data.txt   Data      Oberthal                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMOBE_rzz150yx_2_legend.txt Legend    Oberthal                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_IYOBV_rzz150yx_1_data.txt   Data      Obervintl                            Precipitation; maximum ten minute total of the year         2004-2012
+order_94917_IYOBV_rzz150yx_1_legend.txt Legend    Obervintl                            Precipitation; maximum ten minute total of the year         2004-2012
+order_94917_IYOBV_rzz150yx_2_data.txt   Data      Obervintl                            Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_IYOBV_rzz150yx_2_legend.txt Legend    Obervintl                            Precipitation; maximum ten minute total of the year         2013-2019
+order_94917_TIOLV_rzz150yx_1_data.txt   Data      Olivone                              Precipitation; maximum ten minute total of the year         2005-2016
+order_94917_TIOLV_rzz150yx_1_legend.txt Legend    Olivone                              Precipitation; maximum ten minute total of the year         2005-2016
+order_94917_TIOLV_rzz150yx_2_data.txt   Data      Olivone                              Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_TIOLV_rzz150yx_2_legend.txt Legend    Olivone                              Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_ORO_rzz150yx_1_data.txt     Data      Oron                                 Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_ORO_rzz150yx_1_legend.txt   Legend    Oron                                 Precipitation; maximum ten minute total of the year         2012-2014
+order_94917_ORO_rzz150yx_2_data.txt     Data      Oron                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_ORO_rzz150yx_2_legend.txt   Legend    Oron                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_ORS_rzz150yx_1_data.txt     Data      Orsières                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_ORS_rzz150yx_1_legend.txt   Legend    Orsières                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_DLOYM_rzz150yx_1_data.txt   Data      Oy-Mittelberg / Petersthal           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLOYM_rzz150yx_1_legend.txt Legend    Oy-Mittelberg / Petersthal           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_IYPEN_rzz150yx_1_data.txt   Data      Pens                                 Precipitation; maximum ten minute total of the year         2003-2008
+order_94917_IYPEN_rzz150yx_1_legend.txt Legend    Pens                                 Precipitation; maximum ten minute total of the year         2003-2008
+order_94917_IYPEN_rzz150yx_2_data.txt   Data      Pens                                 Precipitation; maximum ten minute total of the year         2009-2018
+order_94917_IYPEN_rzz150yx_2_legend.txt Legend    Pens                                 Precipitation; maximum ten minute total of the year         2009-2018
+order_94917_IYPFI_rzz150yx_1_data.txt   Data      Pfitsch / St. Jakob                  Precipitation; maximum ten minute total of the year         2010-2018
+order_94917_IYPFI_rzz150yx_1_legend.txt Legend    Pfitsch / St. Jakob                  Precipitation; maximum ten minute total of the year         2010-2018
+order_94917_DLPFU_rzz150yx_1_data.txt   Data      Pfullendorf                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLPFU_rzz150yx_1_legend.txt Legend    Pfullendorf                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_PIO_rzz150yx_1_data.txt     Data      Piotta                               Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_PIO_rzz150yx_1_legend.txt   Legend    Piotta                               Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_PLF_rzz150yx_1_data.txt     Data      Plaffeien                            Precipitation; maximum ten minute total of the year         1989-2020
+order_94917_PLF_rzz150yx_1_legend.txt   Legend    Plaffeien                            Precipitation; maximum ten minute total of the year         1989-2020
+order_94917_VDPON_rzz150yx_1_data.txt   Data      Pont                                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDPON_rzz150yx_1_legend.txt Legend    Pont                                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_ROB_rzz150yx_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; maximum ten minute total of the year         1980-2010
+order_94917_ROB_rzz150yx_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; maximum ten minute total of the year         1980-2010
+order_94917_ROB_rzz150yx_2_data.txt     Data      Poschiavo / Robbia                   Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_ROB_rzz150yx_2_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_IYPRU_rzz150yx_1_data.txt   Data      Prettau                              Precipitation; maximum ten minute total of the year         2004-2018
+order_94917_IYPRU_rzz150yx_1_legend.txt Legend    Prettau                              Precipitation; maximum ten minute total of the year         2004-2018
+order_94917_DLREI_rzz150yx_1_data.txt   Data      Reit im Winkl                        Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_DLREI_rzz150yx_1_legend.txt Legend    Reit im Winkl                        Precipitation; maximum ten minute total of the year         2016-2019
+order_94917_REM_rzz150yx_1_data.txt     Data      Rempen                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_REM_rzz150yx_1_legend.txt   Legend    Rempen                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VDREV_rzz150yx_1_data.txt   Data      Reverolle                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDREV_rzz150yx_1_legend.txt Legend    Reverolle                            Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMRIC_rzz150yx_1_data.txt   Data      Ricken                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMRIC_rzz150yx_1_legend.txt Legend    Ricken                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_IYRID_rzz150yx_1_data.txt   Data      Ridnaun                              Precipitation; maximum ten minute total of the year         2004-2019
+order_94917_IYRID_rzz150yx_1_legend.txt Legend    Ridnaun                              Precipitation; maximum ten minute total of the year         2004-2019
+order_94917_MMRIG_rzz150yx_1_data.txt   Data      Riggisberg                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMRIG_rzz150yx_1_legend.txt Legend    Riggisberg                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_NABRIG_rzz150yx_1_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum ten minute total of the year         1993-2005
+order_94917_NABRIG_rzz150yx_1_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum ten minute total of the year         1993-2005
+order_94917_NABRIG_rzz150yx_2_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_NABRIG_rzz150yx_2_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum ten minute total of the year         2006-2020
+order_94917_VDROM_rzz150yx_1_data.txt   Data      Romairon                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDROM_rzz150yx_1_legend.txt Legend    Romairon                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_ROM_rzz150yx_1_data.txt     Data      Romont                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_ROM_rzz150yx_1_legend.txt   Legend    Romont                               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMROM_rzz150yx_1_data.txt   Data      Romont                               Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_MMROM_rzz150yx_1_legend.txt Legend    Romont                               Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_ROG_rzz150yx_1_data.txt     Data      Rossberg                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_ROG_rzz150yx_1_legend.txt   Legend    Rossberg                             Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_ROT_rzz150yx_1_data.txt     Data      Rothenbrunnen                        Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_ROT_rzz150yx_1_legend.txt   Legend    Rothenbrunnen                        Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLROT_rzz150yx_1_data.txt   Data      Rottweil                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLROT_rzz150yx_1_legend.txt Legend    Rottweil                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_RUE_rzz150yx_1_data.txt     Data      Rünenberg                            Precipitation; maximum ten minute total of the year         1982-2020
+order_94917_RUE_rzz150yx_1_legend.txt   Legend    Rünenberg                            Precipitation; maximum ten minute total of the year         1982-2020
+order_94917_MMSAA_rzz150yx_1_data.txt   Data      Saanen                               Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_MMSAA_rzz150yx_1_legend.txt Legend    Saanen                               Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_VSSAB_rzz150yx_1_data.txt   Data      Saas Balen                           Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_VSSAB_rzz150yx_1_legend.txt Legend    Saas Balen                           Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_MMSAS_rzz150yx_1_data.txt   Data      Saas, Prättigau                      Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMSAS_rzz150yx_1_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SAP_rzz150yx_1_data.txt     Data      Safien Platz                         Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_SAP_rzz150yx_1_legend.txt   Legend    Safien Platz                         Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_SAI_rzz150yx_1_data.txt     Data      Saignelégier                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SAI_rzz150yx_1_legend.txt   Legend    Saignelégier                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_HAI_rzz150yx_1_data.txt     Data      Salen-Reutenen                       Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_HAI_rzz150yx_1_legend.txt   Legend    Salen-Reutenen                       Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_IYSAN_rzz150yx_1_data.txt   Data      Sand in Taufers / Mühlen             Precipitation; maximum ten minute total of the year         2002-2018
+order_94917_IYSAN_rzz150yx_1_legend.txt Legend    Sand in Taufers / Mühlen             Precipitation; maximum ten minute total of the year         2002-2018
+order_94917_IYSAR_rzz150yx_1_data.txt   Data      Sarnthein                            Precipitation; maximum ten minute total of the year         2005-2008
+order_94917_IYSAR_rzz150yx_1_legend.txt Legend    Sarnthein                            Precipitation; maximum ten minute total of the year         2005-2008
+order_94917_IYSAR_rzz150yx_2_data.txt   Data      Sarnthein                            Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYSAR_rzz150yx_2_legend.txt Legend    Sarnthein                            Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_SAG_rzz150yx_1_data.txt     Data      Sattel, SZ                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SAG_rzz150yx_1_legend.txt   Legend    Sattel, SZ                           Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SVG_rzz150yx_1_data.txt     Data      Savognin                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SVG_rzz150yx_1_legend.txt   Legend    Savognin                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMSVG_rzz150yx_1_data.txt   Data      Savognin                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMSVG_rzz150yx_1_legend.txt Legend    Savognin                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_BESCB_rzz150yx_1_data.txt   Data      Schallenberg                         Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BESCB_rzz150yx_1_legend.txt Legend    Schallenberg                         Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SRS_rzz150yx_1_data.txt     Data      Schiers                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SRS_rzz150yx_1_legend.txt   Legend    Schiers                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_IYSCH_rzz150yx_1_data.txt   Data      Schlanders                           Precipitation; maximum ten minute total of the year         2003-2007
+order_94917_IYSCH_rzz150yx_1_legend.txt Legend    Schlanders                           Precipitation; maximum ten minute total of the year         2003-2007
+order_94917_IYSCH_rzz150yx_2_data.txt   Data      Schlanders                           Precipitation; maximum ten minute total of the year         2008-2018
+order_94917_IYSCH_rzz150yx_2_legend.txt Legend    Schlanders                           Precipitation; maximum ten minute total of the year         2008-2018
+order_94917_GLSWA_rzz150yx_1_data.txt   Data      Schwanden                            Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_GLSWA_rzz150yx_1_legend.txt Legend    Schwanden                            Precipitation; maximum ten minute total of the year         2014-2019
+order_94917_WSLSCF_rzz150yx_1_data.txt  Data      Schänis Freiland                     Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_WSLSCF_rzz150yx_1_legend.txt Legend    Schänis Freiland                     Precipitation; maximum ten minute total of the year         2018-2019
+order_94917_SPF_rzz150yx_1_data.txt     Data      Schüpfheim                           Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_SPF_rzz150yx_1_legend.txt   Legend    Schüpfheim                           Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_LUSCH_rzz150yx_1_data.txt   Data      Schüpfheim                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_LUSCH_rzz150yx_1_legend.txt Legend    Schüpfheim                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SCU_rzz150yx_1_data.txt     Data      Scuol                                Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_SCU_rzz150yx_1_legend.txt   Legend    Scuol                                Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_DLSIG_rzz150yx_1_data.txt   Data      Sigmaringen                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLSIG_rzz150yx_1_legend.txt Legend    Sigmaringen                          Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SIM_rzz150yx_1_data.txt     Data      Simplon-Dorf                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SIM_rzz150yx_1_legend.txt   Legend    Simplon-Dorf                         Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SOG_rzz150yx_1_data.txt     Data      Soglio                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_SOG_rzz150yx_1_legend.txt   Legend    Soglio                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_TISOM_rzz150yx_1_data.txt   Data      Somazzo                              Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TISOM_rzz150yx_1_legend.txt Legend    Somazzo                              Precipitation; maximum ten minute total of the year         2013-2014
+order_94917_TISON_rzz150yx_1_data.txt   Data      Sonogno                              Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_TISON_rzz150yx_1_legend.txt Legend    Sonogno                              Precipitation; maximum ten minute total of the year         2010-2020
+order_94917_SAN_rzz150yx_1_data.txt     Data      St. Antönien                         Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_SAN_rzz150yx_1_legend.txt   Legend    St. Antönien                         Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_STG_rzz150yx_1_data.txt     Data      St. Gallen                           Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_STG_rzz150yx_1_legend.txt   Legend    St. Gallen                           Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_IYSMG_rzz150yx_1_data.txt   Data      St. Magdalena in Gsies               Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYSMG_rzz150yx_1_legend.txt Legend    St. Magdalena in Gsies               Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYSMG_rzz150yx_2_data.txt   Data      St. Magdalena in Gsies               Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYSMG_rzz150yx_2_legend.txt Legend    St. Magdalena in Gsies               Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYSMP_rzz150yx_1_data.txt   Data      St. Martin in Passeier               Precipitation; maximum ten minute total of the year         2012-2019
+order_94917_IYSMP_rzz150yx_1_legend.txt Legend    St. Martin in Passeier               Precipitation; maximum ten minute total of the year         2012-2019
+order_94917_IYSMT_rzz150yx_1_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYSMT_rzz150yx_1_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYSMT_rzz150yx_2_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum ten minute total of the year         2011-2019
+order_94917_IYSMT_rzz150yx_2_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum ten minute total of the year         2011-2019
+order_94917_IYVAL_rzz150yx_1_data.txt   Data      St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2002-2004
+order_94917_IYVAL_rzz150yx_1_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2002-2004
+order_94917_IYVAL_rzz150yx_2_data.txt   Data      St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2005-2014
+order_94917_IYVAL_rzz150yx_2_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2005-2014
+order_94917_IYVAL_rzz150yx_3_data.txt   Data      St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_IYVAL_rzz150yx_3_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_IYSVP_rzz150yx_1_data.txt   Data      St. Veit in Prags                    Precipitation; maximum ten minute total of the year         2004-2007
+order_94917_IYSVP_rzz150yx_1_legend.txt Legend    St. Veit in Prags                    Precipitation; maximum ten minute total of the year         2004-2007
+order_94917_IYSVP_rzz150yx_2_data.txt   Data      St. Veit in Prags                    Precipitation; maximum ten minute total of the year         2008-2019
+order_94917_IYSVP_rzz150yx_2_legend.txt Legend    St. Veit in Prags                    Precipitation; maximum ten minute total of the year         2008-2019
+order_94917_IYSWA_rzz150yx_1_data.txt   Data      St. Walburg                          Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_IYSWA_rzz150yx_1_legend.txt Legend    St. Walburg                          Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_SMM_rzz150yx_1_data.txt     Data      Sta. Maria, Val Müstair              Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_SMM_rzz150yx_1_legend.txt   Legend    Sta. Maria, Val Müstair              Precipitation; maximum ten minute total of the year         2011-2020
+order_94917_STB_rzz150yx_1_data.txt     Data      Starkenbach                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_STB_rzz150yx_1_legend.txt   Legend    Starkenbach                          Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_IYSTZ_rzz150yx_1_data.txt   Data      Sterzing                             Precipitation; maximum ten minute total of the year         2004-2019
+order_94917_IYSTZ_rzz150yx_1_legend.txt Legend    Sterzing                             Precipitation; maximum ten minute total of the year         2004-2019
+order_94917_STP_rzz150yx_1_data.txt     Data      Stöckalp                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_STP_rzz150yx_1_legend.txt   Legend    Stöckalp                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_DLSTO_rzz150yx_1_data.txt   Data      Stötten                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLSTO_rzz150yx_1_legend.txt Legend    Stötten                              Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_SUS_rzz150yx_1_data.txt     Data      Susch                                Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_SUS_rzz150yx_1_legend.txt   Legend    Susch                                Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_IYTAU_rzz150yx_1_data.txt   Data      Taufers i.M.                         Precipitation; maximum ten minute total of the year         2004-2007
+order_94917_IYTAU_rzz150yx_1_legend.txt Legend    Taufers i.M.                         Precipitation; maximum ten minute total of the year         2004-2007
+order_94917_IYTAU_rzz150yx_2_data.txt   Data      Taufers i.M.                         Precipitation; maximum ten minute total of the year         2008-2019
+order_94917_IYTAU_rzz150yx_2_legend.txt Legend    Taufers i.M.                         Precipitation; maximum ten minute total of the year         2008-2019
+order_94917_IYTER_rzz150yx_1_data.txt   Data      Terenten                             Precipitation; maximum ten minute total of the year         2003-2007
+order_94917_IYTER_rzz150yx_1_legend.txt Legend    Terenten                             Precipitation; maximum ten minute total of the year         2003-2007
+order_94917_IYTER_rzz150yx_2_data.txt   Data      Terenten                             Precipitation; maximum ten minute total of the year         2008-2009
+order_94917_IYTER_rzz150yx_2_legend.txt Legend    Terenten                             Precipitation; maximum ten minute total of the year         2008-2009
+order_94917_IYTER_rzz150yx_3_data.txt   Data      Terenten                             Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_IYTER_rzz150yx_3_legend.txt Legend    Terenten                             Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_THU_rzz150yx_1_data.txt     Data      Thun                                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_THU_rzz150yx_1_legend.txt   Legend    Thun                                 Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_THS_rzz150yx_1_data.txt     Data      Thusis                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_THS_rzz150yx_1_legend.txt   Legend    Thusis                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMPRV_rzz150yx_1_data.txt   Data      Thusis                               Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_MMPRV_rzz150yx_1_legend.txt Legend    Thusis                               Precipitation; maximum ten minute total of the year         2019-2020
+order_94917_GLTFD_rzz150yx_1_data.txt   Data      Tierfehd                             Precipitation; maximum ten minute total of the year         2014-2018
+order_94917_GLTFD_rzz150yx_1_legend.txt Legend    Tierfehd                             Precipitation; maximum ten minute total of the year         2014-2018
+order_94917_MMTIT_rzz150yx_1_data.txt   Data      Titterten                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMTIT_rzz150yx_1_legend.txt Legend    Titterten                            Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_IYTOB_rzz150yx_1_data.txt   Data      Toblach                              Precipitation; maximum ten minute total of the year         2005-2019
+order_94917_IYTOB_rzz150yx_1_legend.txt Legend    Toblach                              Precipitation; maximum ten minute total of the year         2005-2019
+order_94917_CTO_rzz150yx_1_data.txt     Data      Torricella / Crana                   Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_CTO_rzz150yx_1_legend.txt   Legend    Torricella / Crana                   Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VSTRI_rzz150yx_1_data.txt   Data      Trient                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VSTRI_rzz150yx_1_legend.txt Legend    Trient                               Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_FLTRB_rzz150yx_1_data.txt   Data      Triesenberg                          Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_FLTRB_rzz150yx_1_legend.txt Legend    Triesenberg                          Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TRU_rzz150yx_1_data.txt     Data      Trun                                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TRU_rzz150yx_1_legend.txt   Legend    Trun                                 Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TST_rzz150yx_1_data.txt     Data      Tschiertschen                        Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_TST_rzz150yx_1_legend.txt   Legend    Tschiertschen                        Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_ZHTUR_rzz150yx_1_data.txt   Data      Turbenthal                           Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_ZHTUR_rzz150yx_1_legend.txt Legend    Turbenthal                           Precipitation; maximum ten minute total of the year         2005-2020
+order_94917_ULR_rzz150yx_1_data.txt     Data      Ulrichen                             Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_ULR_rzz150yx_1_legend.txt   Legend    Ulrichen                             Precipitation; maximum ten minute total of the year         1981-2020
+order_94917_BEGTH_rzz150yx_1_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; maximum ten minute total of the year         1997-2012
+order_94917_BEGTH_rzz150yx_1_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; maximum ten minute total of the year         1997-2012
+order_94917_BEGTH_rzz150yx_2_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEGTH_rzz150yx_2_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_MMUNS_rzz150yx_1_data.txt   Data      Unterschächen                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_MMUNS_rzz150yx_1_legend.txt Legend    Unterschächen                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_URN_rzz150yx_1_data.txt     Data      Urnäsch                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_URN_rzz150yx_1_legend.txt   Legend    Urnäsch                              Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VLS_rzz150yx_1_data.txt     Data      Vals                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VLS_rzz150yx_1_legend.txt   Legend    Vals                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_IYVAA_rzz150yx_1_data.txt   Data      Vals                                 Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_IYVAA_rzz150yx_1_legend.txt Legend    Vals                                 Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_IYVAA_rzz150yx_2_data.txt   Data      Vals                                 Precipitation; maximum ten minute total of the year         2008-2014
+order_94917_IYVAA_rzz150yx_2_legend.txt Legend    Vals                                 Precipitation; maximum ten minute total of the year         2008-2014
+order_94917_IYVAA_rzz150yx_3_data.txt   Data      Vals                                 Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_IYVAA_rzz150yx_3_legend.txt Legend    Vals                                 Precipitation; maximum ten minute total of the year         2015-2019
+order_94917_VDVAU_rzz150yx_1_data.txt   Data      Vaulion                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VDVAU_rzz150yx_1_legend.txt Legend    Vaulion                              Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VIO_rzz150yx_1_data.txt     Data      Vicosoprano                          Precipitation; maximum ten minute total of the year         2013-2016
+order_94917_VIO_rzz150yx_1_legend.txt   Legend    Vicosoprano                          Precipitation; maximum ten minute total of the year         2013-2016
+order_94917_VIO_rzz150yx_2_data.txt     Data      Vicosoprano                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VIO_rzz150yx_2_legend.txt   Legend    Vicosoprano                          Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VIT_rzz150yx_1_data.txt     Data      Villars-Tiercelin                    Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_VIT_rzz150yx_1_legend.txt   Legend    Villars-Tiercelin                    Precipitation; maximum ten minute total of the year         2014-2020
+order_94917_BEVIL_rzz150yx_1_data.txt   Data      Villeret                             Precipitation; maximum ten minute total of the year         1997-2009
+order_94917_BEVIL_rzz150yx_1_legend.txt Legend    Villeret                             Precipitation; maximum ten minute total of the year         1997-2009
+order_94917_BEVIL_rzz150yx_2_data.txt   Data      Villeret                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_BEVIL_rzz150yx_2_legend.txt Legend    Villeret                             Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_DLVIS_rzz150yx_1_data.txt   Data      Villingen-Schwenningen               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_DLVIS_rzz150yx_1_legend.txt Legend    Villingen-Schwenningen               Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_VIS_rzz150yx_1_data.txt     Data      Visp                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_VIS_rzz150yx_1_legend.txt   Legend    Visp                                 Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_WSLVSB_rzz150yx_1_data.txt  Data      Visp Bestand                         Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLVSB_rzz150yx_1_legend.txt Legend    Visp Bestand                         Precipitation; maximum ten minute total of the year         2017-2018
+order_94917_WSLVSF_rzz150yx_1_data.txt  Data      Visp Freiland                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_WSLVSF_rzz150yx_1_legend.txt Legend    Visp Freiland                        Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_VSVIS_rzz150yx_1_data.txt   Data      Visperterminen                       Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VSVIS_rzz150yx_1_legend.txt Legend    Visperterminen                       Precipitation; maximum ten minute total of the year         2013-2020
+order_94917_VRI_rzz150yx_1_data.txt     Data      Vrin                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VRI_rzz150yx_1_legend.txt   Legend    Vrin                                 Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VAE_rzz150yx_1_data.txt     Data      Vättis                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_VAE_rzz150yx_1_legend.txt   Legend    Vättis                               Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_IYVOL_rzz150yx_1_data.txt   Data      Völs am Schlern                      Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYVOL_rzz150yx_1_legend.txt Legend    Völs am Schlern                      Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYVOL_rzz150yx_2_data.txt   Data      Völs am Schlern                      Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_IYVOL_rzz150yx_2_legend.txt Legend    Völs am Schlern                      Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_MMWAA_rzz150yx_1_data.txt   Data      Wasserauen                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMWAA_rzz150yx_1_legend.txt Legend    Wasserauen                           Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMWET_rzz150yx_1_data.txt   Data      Weisstannen                          Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MMWET_rzz150yx_1_legend.txt Legend    Weisstannen                          Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_IYWEL_rzz150yx_1_data.txt   Data      Welsberg                             Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYWEL_rzz150yx_1_legend.txt Legend    Welsberg                             Precipitation; maximum ten minute total of the year         2004-2008
+order_94917_IYWEL_rzz150yx_2_data.txt   Data      Welsberg                             Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYWEL_rzz150yx_2_legend.txt Legend    Welsberg                             Precipitation; maximum ten minute total of the year         2009-2019
+order_94917_IYWEN_rzz150yx_1_data.txt   Data      Welschnofen                          Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_IYWEN_rzz150yx_1_legend.txt Legend    Welschnofen                          Precipitation; maximum ten minute total of the year         2002-2007
+order_94917_IYWEN_rzz150yx_2_data.txt   Data      Welschnofen                          Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_IYWEN_rzz150yx_2_legend.txt Legend    Welschnofen                          Precipitation; maximum ten minute total of the year         2010-2019
+order_94917_KAWEG_rzz150yx_1_data.txt   Data      Wengen                               Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_KAWEG_rzz150yx_1_legend.txt Legend    Wengen                               Precipitation; maximum ten minute total of the year         2017-2020
+order_94917_DLWIE_rzz150yx_1_data.txt   Data      Wielenbach                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLWIE_rzz150yx_1_legend.txt Legend    Wielenbach                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_DLWIE_rzz150yx_2_data.txt   Data      Wielenbach                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_DLWIE_rzz150yx_2_legend.txt Legend    Wielenbach                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_LUWOL_rzz150yx_1_data.txt   Data      Wolhusen                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_LUWOL_rzz150yx_1_legend.txt Legend    Wolhusen                             Precipitation; maximum ten minute total of the year         2016-2020
+order_94917_MMZNZ_rzz150yx_1_data.txt   Data      Zernez                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_MMZNZ_rzz150yx_1_legend.txt Legend    Zernez                               Precipitation; maximum ten minute total of the year         2012-2020
+order_94917_ZWE_rzz150yx_1_data.txt     Data      Zweisimmen                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_ZWE_rzz150yx_1_legend.txt   Legend    Zweisimmen                           Precipitation; maximum ten minute total of the year         2015-2020
+order_94917_MMZWE_rzz150yx_1_data.txt   Data      Zweisimmen                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_MMZWE_rzz150yx_1_legend.txt Legend    Zweisimmen                           Precipitation; maximum ten minute total of the year         2016-2017
+order_94917_MMZWE_rzz150yx_2_data.txt   Data      Zweisimmen                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_MMZWE_rzz150yx_2_legend.txt Legend    Zweisimmen                           Precipitation; maximum ten minute total of the year         2018-2020
+order_94917_SMA_rzz150yx_1_data.txt     Data      Zürich / Fluntern                    Precipitation; maximum ten minute total of the year         1980-2020
+order_94917_SMA_rzz150yx_1_legend.txt   Legend    Zürich / Fluntern                    Precipitation; maximum ten minute total of the year         1980-2020
