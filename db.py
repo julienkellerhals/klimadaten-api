@@ -67,7 +67,7 @@ class Database:
     def createEngine(self):
         self.engine = create_engine(
             self.databaseUrl,
-            echo=True
+            echo=False
         )
 
     def getDatabaseStatus(self):
@@ -509,14 +509,19 @@ class Database:
                     dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
                     dataFileDf["source"] = "IdaWeb"
                     dataFileDf["granularity"] = config.attrib['granularity']
-                    if config.attrib['granularity'] == "M":
+                    if config.attrib['granularity'] == "D":
+                        dataFileDf["meas_date"] = pd.to_datetime(
+                            dataFileDf["meas_date"],
+                            format="%Y%m%d"
+                        )
+                    elif config.attrib['granularity'] == "M":
                         dataFileDf["meas_date"] = pd.to_datetime(
                             dataFileDf["meas_date"].map(str) + "01",
                             format="%Y%m%d"
                         )
-                    elif config.attrib['granularity'] == "D":
+                    elif config.attrib['granularity'] == "Y":
                         dataFileDf["meas_date"] = pd.to_datetime(
-                            dataFileDf["meas_date"],
+                            dataFileDf["meas_date"].map(str) + "0101",
                             format="%Y%m%d"
                         )
                     else:

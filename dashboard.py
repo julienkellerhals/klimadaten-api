@@ -999,7 +999,7 @@ def mydashboard(flaskApp, instance):
         Output('linkDatastoryOutput', 'children'),
         [Input('linkDatastory', 'n_clicks')])
     def redirectToStory(n_clicks):
-        if n_clicks is 0:
+        if n_clicks == 0:
             raise PreventUpdate
         else:
             return dcc.Location(pathname="/", id="hello")
