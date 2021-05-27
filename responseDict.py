@@ -20,6 +20,12 @@ class ResponseDictionary:
             self.statusStream.format_sse(msgText)
         )
 
+    def createProgressBar(self):
+        raise NotImplementedError
+
+    def removeProgressBar(self):
+        raise NotImplementedError
+
     def disableAllButtons(self):
 
         schema = list(self.respDict.keys())[0]
