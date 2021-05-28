@@ -240,9 +240,23 @@ def mydashboard(flaskApp, instance):
     dfStations['years'] = 2020 - dfStations['min']
     dfStations['ratio'] = dfStations['count'] / dfStations['years']
     dfStations = dfStations[dfStations.ratio >= 0.90]
-    dfStations = dfStations.groupby(
-        ['station_short_name', 'station_name']).meas_name.count().reset_index()
+
+    dfStationsSnow = dfStations[dfStations.meas_name == 'hns000y0']
+
+    dfStations = dfStations.groupby([
+            'station_short_name',
+            'station_name'
+        ]).agg(
+            meas_name=('meas_name', 'count'),
+            # min = ('min', 'min'),
+            # ratio = ('ratio', 'min')
+        ).reset_index()
     dfStations = dfStations[dfStations.meas_name == 7]
+
+    dfStationsSnow = dfStationsSnow[
+        dfStationsSnow.station_name.isin(list(dfStations.station_name))
+    ]
+    medianValueTotalSnow = dfStationsSnow['min'].median()
 
     df_map = pd.merge(
         how='inner',
@@ -319,6 +333,7 @@ def mydashboard(flaskApp, instance):
 
     # change measurement unit to meters
     dfScatterSnow1['snow'] = round(dfScatterSnow1.snow / 100, 2)
+    dfScatterSnow1.dropna()
 
     # df for showing scatterplot for all stations under 1000 m.ü.M.
     dfScatterSnow2 = pd.read_sql(
@@ -361,13 +376,13 @@ def mydashboard(flaskApp, instance):
         'meas_year'
     ], inplace=True)
 
-    # removing first year of each station
-    dfScatterSnow2 = dfScatterSnow2.groupby(
-        'station_short_name'
-    ).apply(lambda group: group.iloc[1:, 1:])
+    # # removing first year of each station
+    # dfScatterSnow2 = dfScatterSnow2.groupby(
+    #     'station_short_name'
+    # ).apply(lambda group: group.iloc[1:, 1:])
 
-    # removing fancy pandas index because not needed
-    dfScatterSnow2 = dfScatterSnow2.reset_index(level=0)
+    # # removing fancy pandas index because not needed
+    # dfScatterSnow2 = dfScatterSnow2.reset_index(level=0)
 
     # changing measurement unit to meters
     dfScatterSnow2['meas_value'] = round(dfScatterSnow2.meas_value / 100, 2)
@@ -379,23 +394,23 @@ def mydashboard(flaskApp, instance):
         snow=('meas_value', 'mean')
     )
 
-    # select the Stations over 1500 m
-    dfSnowO1500 = dfScatterSnow2[
-        (dfScatterSnow2.elevation >= 1500) &
-        (dfScatterSnow2.meas_year >= 1900)
-    ].groupby(
-        'meas_year'
-    ).agg(
-        snow=('meas_value', 'mean')
-    )
+    # # select the Stations over 1500 m
+    # dfSnowO1500 = dfScatterSnow2[
+    #     (dfScatterSnow2.elevation >= 1500) &
+    #     (dfScatterSnow2.meas_year >= 1900)
+    # ].groupby(
+    #     'meas_year'
+    # ).agg(
+    #     snow=('meas_value', 'mean')
+    # )
+
+    dfSnowAll = dfSnowAll.reset_index()
+    dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= medianValueTotalSnow]
 
     # simple regression line
     reg = LinearRegression(
-        ).fit(np.vstack(dfSnowO1500.index), dfSnowO1500['snow'])
-    dfSnowO1500['bestfit'] = reg.predict(np.vstack(dfSnowO1500.index))
-
-    # reset the index of the data frame
-    dfSnowO1500 = dfSnowO1500.reset_index()
+        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['snow'])
+    dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
 
     # avg of highest 10 minute total of rain of
     # a month per year of all stations available
@@ -626,8 +641,8 @@ def mydashboard(flaskApp, instance):
 
         plotSnow.add_trace(go.Scatter(
             name='Schneefall',
-            x=dfSnowO1500['meas_year'],
-            y=dfSnowO1500['snow'],
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['snow'],
             mode='lines',
             line_shape='spline',
             marker={
@@ -642,8 +657,8 @@ def mydashboard(flaskApp, instance):
 
         plotSnow.add_trace(go.Scatter(
             name='Regression',
-            x=dfSnowO1500['meas_year'],
-            y=dfSnowO1500['bestfit'],
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['bestfit'],
             mode='lines',
             marker={
                 'size': 5,
@@ -656,7 +671,7 @@ def mydashboard(flaskApp, instance):
         ))
 
         plotSnow.update_layout(
-            title='Durchschnitt aller Stationen oberhalb 1500 m.ü.M.',
+            title='Durchschnittlicher Schneefall aller Stationen',
             margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
             height=360,
             yaxis={
@@ -970,7 +985,7 @@ def mydashboard(flaskApp, instance):
                 # 3rd plot 2nd row
                 html.Div([
                     html.Div([
-                        html.H4('Bodentemperatur')
+                        html.H4('Durchschnittliche Temperatur')
                     ], style={
                         'height': 30,
                         'padding-left': 20
