@@ -138,7 +138,7 @@ def mydashboard(flaskApp, instance):
     )
 
     # data wrangling map data
-    df_map_1 = pd.read_sql(
+    dfMap1 = pd.read_sql(
         f"""
         SELECT
         avg(m.meas_value) avg_now,
@@ -163,7 +163,7 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
-    df_map_2 = pd.read_sql(
+    dfMap2 = pd.read_sql(
         f"""
         SELECT
         avg(m.meas_value) avg_then,
@@ -258,39 +258,39 @@ def mydashboard(flaskApp, instance):
     ]
     medianValueTotalSnow = dfStationsSnow['min'].median()
 
-    df_map = pd.merge(
+    dfMap = pd.merge(
         how='inner',
-        left=df_map_1,
-        right=df_map_2,
+        left=dfMap1,
+        right=dfMap2,
         left_on='station_name',
         right_on='station_name'
     )
 
-    df_map = pd.merge(
+    dfMap = pd.merge(
         how='inner',
-        left=df_map,
+        left=dfMap,
         right=dfStations,
         left_on='station_name',
         right_on='station_name'
     )
 
     # data wrangling for longitude and latitude
-    df_map['lon'] = df_map['longitude'].str.extract(r'(\d+).$')
-    df_map['lon'] = pd.to_numeric(df_map['lon'])
-    df_map['lon'] = round(df_map['lon']/60, 3)
-    df_map['lon'] = df_map['lon'].apply(str)
-    df_map['longitude'] = df_map['longitude'].str.extract(r'(^\d+)') + '.' + \
-        df_map['lon'].str.extract(r'(\d+)$')
-    df_map = df_map.drop('lon', axis=1)
-    df_map['lat'] = df_map['latitude'].str.extract(r'(\d+).$')
-    df_map['lat'] = pd.to_numeric(df_map['lat'])
-    df_map['lat'] = round(df_map['lat']/60, 3)
-    df_map['lat'] = df_map['lat'].apply(str)
-    df_map['latitude'] = df_map['latitude'].str.extract(r'(^\d+)') + '.' + \
-        df_map['lat'].str.extract(r'(\d+)$')
-    df_map = df_map.drop('lat', axis=1)
-    df_map = df_map.astype({'longitude': 'float', 'latitude': 'float'})
-    df_map = df_map.groupby(['station_name']).agg(
+    dfMap['lon'] = dfMap['longitude'].str.extract(r'(\d+).$')
+    dfMap['lon'] = pd.to_numeric(dfMap['lon'])
+    dfMap['lon'] = round(dfMap['lon']/60, 3)
+    dfMap['lon'] = dfMap['lon'].apply(str)
+    dfMap['longitude'] = dfMap['longitude'].str.extract(r'(^\d+)') + '.' + \
+        dfMap['lon'].str.extract(r'(\d+)$')
+    dfMap = dfMap.drop('lon', axis=1)
+    dfMap['lat'] = dfMap['latitude'].str.extract(r'(\d+).$')
+    dfMap['lat'] = pd.to_numeric(dfMap['lat'])
+    dfMap['lat'] = round(dfMap['lat']/60, 3)
+    dfMap['lat'] = dfMap['lat'].apply(str)
+    dfMap['latitude'] = dfMap['latitude'].str.extract(r'(^\d+)') + '.' + \
+        dfMap['lat'].str.extract(r'(\d+)$')
+    dfMap = dfMap.drop('lat', axis=1)
+    dfMap = dfMap.astype({'longitude': 'float', 'latitude': 'float'})
+    dfMap = dfMap.groupby(['station_name']).agg(
         avg_now=('avg_now', 'mean'),
         longitude=('longitude', 'mean'),
         latitude=('latitude', 'mean'),
@@ -299,16 +299,16 @@ def mydashboard(flaskApp, instance):
     ).reset_index()
 
     # add text column for map pop-up
-    df_map['text'] = '<b>' + df_map['station_name'] + '</b>' +\
-        ' (' + (df_map['elevation']).astype(str) + ' m.ü.M.)' + \
+    dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
+        ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
         '<br>Ø Schneefall pro Tag 1970-1980: ' + \
-        (round(df_map['avg_then'], 2)).astype(str) + 'cm' + \
+        (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
         '<br>Ø Schneefall pro Tag 2010-2020: ' + \
-        (round(df_map['avg_now'], 2)).astype(str) + 'cm' + \
+        (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
         '<br>Veränderung: ' + \
         (round(
             (
-                (df_map['avg_now'] - df_map['avg_then']) / df_map['avg_then']
+                (dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
             ) * 100, 0)) \
         .astype(str) + '%' + '<extra></extra>'
 
@@ -333,7 +333,7 @@ def mydashboard(flaskApp, instance):
 
     # change measurement unit to meters
     dfScatterSnow1['snow'] = round(dfScatterSnow1.snow / 100, 2)
-    dfScatterSnow1.dropna()
+    dfScatterSnow1 = dfScatterSnow1.dropna()
 
     # df for showing scatterplot for all stations under 1000 m.ü.M.
     dfScatterSnow2 = pd.read_sql(
@@ -423,6 +423,7 @@ def mydashboard(flaskApp, instance):
     )
 
     mean_rain = dfScatterRain1['avg_rain'].mean()
+
     dfScatterRain1['dev_rain'] = dfScatterRain1['avg_rain'] - mean_rain
     dfScatterRain1['color'] = np.where(
         dfScatterRain1['dev_rain'] >= 0, True, False)
@@ -449,12 +450,12 @@ def mydashboard(flaskApp, instance):
         plotMap = go.Figure()
 
         # plotMap.add_trace(go.Scattermapbox(
-        #     lat=df_map['latitude'],
-        #     lon=df_map['longitude'],
-        #     text=df_map['text'],
+        #     lat=dfMap['latitude'],
+        #     lon=dfMap['longitude'],
+        #     text=dfMap['text'],
         #     mode='markers',
         #     marker={
-        #         'size': df_map['avg_now'] * 45 + 8,
+        #         'size': dfMap['avg_now'] * 45 + 8,
         #         'color': colors['d3'],
         #         # 'line': {'width': 1, 'color': colors['d3']},
         #         'sizemode': 'area'
@@ -463,18 +464,18 @@ def mydashboard(flaskApp, instance):
         # ))
 
         plotMap.add_trace(go.Scattermapbox(
-            lat=df_map['latitude'],
-            lon=df_map['longitude'],
-            hovertemplate=df_map['text'],
+            lat=dfMap['latitude'],
+            lon=dfMap['longitude'],
+            hovertemplate=dfMap['text'],
             mode='markers',
             marker={
                 'size': 10,
                 'color': colors['d3'],
-                # 'size': df_map['avg_now'] * 45,
+                # 'size': dfMap['avg_now'] * 45,
                 # 'sizemin': 3,
                 # 'color': (
-                #     df_map['avg_now'] - df_map['avg_then']
-                #     ) / df_map['avg_then'],
+                #     dfMap['avg_now'] - dfMap['avg_then']
+                #     ) / dfMap['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
                 # 'colorscale': [
                 #     [0, colors['rbr']],
@@ -1018,14 +1019,9 @@ def mydashboard(flaskApp, instance):
         [Input('map1', 'clickData')])
     def callback_graph(clickData):
         v_index = clickData['points'][0]['pointIndex']
-        station = df_map.iloc[v_index]['station_name']
-
-        # hns000d0
-        # rre150m0
+        station = dfMap.iloc[v_index]['station_name']
 
         dfTemp = dfScatterSnow1[dfScatterSnow1['station_name'] == station]
-        # remove first entry because it is often wrong
-        dfTemp = dfTemp.iloc[1:]
         dfTemp = dfTemp.reset_index()
 
         # simple regression line
