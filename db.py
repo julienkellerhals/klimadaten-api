@@ -16,7 +16,7 @@ from responseDict import ResponseDictionary
 
 
 class Database:
-    """ Database functions
+    """ Database class
     """
 
     configFileName = "idawebConfig.xml"
@@ -35,7 +35,12 @@ class Database:
     coreTableRespDict = None
 
     def __init__(self, announcer):
-        """ Init engine
+        """ Init database class
+        Create announcer for all streams
+        Create base response dictionary for FE
+
+        Args:
+            announcer (announcer): Server announcer
         """
 
         self.databaseStatusStream = MessageAnnouncer()
@@ -48,6 +53,7 @@ class Database:
         self.stageTableRespDict = ResponseDictionary({
                 "stage": {
                     "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+                    # "progressBar": False,
                 }
             },
             self.stageTablesStatusStream
@@ -55,6 +61,7 @@ class Database:
         self.coreTableRespDict = ResponseDictionary({
                 "core": {
                     "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+                    # "progressBar": False,
                 }
             },
             self.coreTablesStatusStream
@@ -79,10 +86,20 @@ class Database:
         return configList
 
     def getEngine(self):
+        """ Get server engine
+
+        Returns:
+            engine: Server engine
+        """
+
         self.checkEngine()
         return self.engine
 
     def checkEngine(self):
+        """ Checks engine status
+        Creates engine if not started
+        """
+
         if self.engine is None:
             print("Engine not started")
             print("Starting programatically")
@@ -90,6 +107,9 @@ class Database:
             self.createEngine()
 
     def createEngine(self):
+        """ Creates engine
+        """
+
         self.engine = create_engine(
             self.databaseUrl,
             echo=False,
@@ -99,17 +119,29 @@ class Database:
         )
 
     def refreshMV(self, mvName):
+        """ Refreshes materialized view
+
+        Args:
+            mvName (str): Materialized view name
+        """
+
         self.conn.execute(
             "REFRESH MATERIALIZED VIEW {}".format(mvName)
         )
 
     def getDbServiceStatus(self):
+        """ Runs _getDbServiceStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getDbServiceStatus
         )
         x.start()
 
     def _getDbServiceStatus(self):
+        """ Gets status of API process
+        """
+
         respDict = {
             "runningService": {
                 "eventSourceUrl": "/admin/stream/getDbServiceStatus",
@@ -232,12 +264,18 @@ class Database:
                 )
 
     def getDatabaseStatus(self):
+        """ Runs _getDatabaseStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getDatabaseStatus
         )
         x.start()
 
     def _getDatabaseStatus(self):
+        """ Gets status of database process
+        """
+
         respDict = {
             "status": 0,
             "eventSourceUrl": "/admin/stream/getDatabaseStatus",
@@ -315,12 +353,18 @@ class Database:
             )
 
     def getEngineStatus(self):
+        """ Runs _getEngineStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getEngineStatus
         )
         x.start()
 
     def _getEngineStatus(self):
+        """ Gets engine status
+        """
+
         respDict = {
             "status": 0,
             "eventSourceUrl": "/admin/stream/getEngineStatus",
@@ -367,12 +411,19 @@ class Database:
         )
 
     def getStageTablesStatus(self):
+        """ Runs _getStageTablesStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getStageTablesStatus
         )
         x.start()
 
     def _getStageTablesStatus(self):
+        """ Gets stage database tables
+        Adds table functions and row count
+        """
+
         respDict = self.stageTableRespDict.respDict
 
         inspector = inspect(self.engine)
@@ -449,12 +500,19 @@ class Database:
         self.stageTableRespDict.send()
 
     def getCoreTablesStatus(self):
+        """ Runs _getCoreTablesStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getCoreTablesStatus
         )
         x.start()
 
     def _getCoreTablesStatus(self):
+        """ Gets core database tables
+        Adds table functions and row count
+        """
+
         respDict = self.coreTableRespDict.respDict
 
         inspector = inspect(self.engine)
@@ -503,6 +561,12 @@ class Database:
         self.coreTableRespDict.send()
 
     def getParameterRefreshDate(self):
+        """ Gets last load date of measurements data in core table
+
+        Returns:
+            dataframe: Table containing last load date of core data
+        """
+
         paramRefreshDateDf = pd.read_sql(
             "SELECT "
             "meas_name, "
@@ -535,7 +599,7 @@ class Database:
 
     # Check if they exist before, then drop them
     def createTable(self):
-        """ Creates tables
+        """ Creates tables and materialized views
         """
 
         if not self.engine.dialect.has_table(
@@ -769,10 +833,16 @@ class Database:
         )
 
     def runStageETL(self):
+        """ Runs stage etl process
+        """
+
         self.stationParamStageETL()
         self.idaWebStageETL()
 
     def stationParamStageETL(self):
+        """ Runs station and Param stage etl process
+        """
+
         self.stageTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
@@ -879,6 +949,13 @@ class Database:
         self.stageTableRespDict.enableAllButtons()
 
     def idaWebStageETL(self, orderList=["*"]):
+        """ Runs idaweb stage etl process
+
+        Args:
+            orderList (list, optional): List of orders to load.
+                                        Defaults to ["*"].
+        """
+
         self.stageTableRespDict.disableAllButtons()
 
         if self.conn is None:
@@ -968,11 +1045,17 @@ class Database:
         self.stageTableRespDict.enableAllButtons()
 
     def runCoreETL(self):
+        """ Runs core etl process
+        """
+
         self.runMeasurementsETL()
         self.stationCoreETL()
         self.parameterCoreETL()
 
     def runMeasurementsETL(self):
+        """ Runs measurements etl process
+        """
+
         self.meteoschweizCoreETL()
         self.idawebCoreETL()
         self.refreshMV(
@@ -983,6 +1066,9 @@ class Database:
         )
 
     def meteoschweizCoreETL(self):
+        """ Runs meteoschweiz etl process
+        """
+
         self.coreTableRespDict.disableAllButtons()
         meteoschweizDf = pd.read_sql_table(
             "meteoschweiz_t",
@@ -1063,6 +1149,9 @@ class Database:
         self.coreTableRespDict.enableAllButtons()
 
     def stationCoreETL(self):
+        """ Runs station etl process
+        """
+
         self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
@@ -1080,6 +1169,9 @@ class Database:
         self.coreTableRespDict.enableAllButtons()
 
     def parameterCoreETL(self):
+        """ Runs parameter etl process
+        """
+
         self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
@@ -1097,6 +1189,9 @@ class Database:
         self.coreTableRespDict.enableAllButtons()
 
     def idawebCoreETL(self):
+        """ Runs idaweb etl process
+        """
+
         self.coreTableRespDict.disableAllButtons()
         if self.conn is None:
             self.conn = self.engine.connect()
