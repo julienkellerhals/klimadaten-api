@@ -279,6 +279,13 @@ def _scrape_meteoschweiz(driver, engine, announcer):
         index=False
     )
 
+    engine.execute(
+        "REFRESH MATERIALIZED VIEW stage.meteoschweiz_count_mv"
+    )
+    engine.execute(
+        "REFRESH MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv"
+    )
+
     # allStationsDf.isnull().sum().head()
     # pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
     # allStationsDf.dtypes

@@ -98,6 +98,11 @@ class Database:
             max_overflow=200
         )
 
+    def refreshMV(self, mvName):
+        self.conn.execute(
+            "REFRESH MATERIALIZED VIEW {}".format(mvName)
+        )
+
     def getDbServiceStatus(self):
         x = threading.Thread(
             target=self._getDbServiceStatus
@@ -859,6 +864,18 @@ class Database:
                 if_exists='append',
                 index=False
             )
+        self.refreshMV(
+            "stage.station_count_mv"
+        )
+        self.refreshMV(
+            "stage.station_max_valid_from_mv"
+        )
+        self.refreshMV(
+            "stage.parameter_count_mv"
+        )
+        self.refreshMV(
+            "stage.parameter_max_valid_from_mv"
+        )
         self.stageTableRespDict.enableAllButtons()
 
     def idaWebStageETL(self, orderList=["*"]):
@@ -942,17 +959,31 @@ class Database:
                 if_exists='append',
                 index=False
             )
-
+        self.refreshMV(
+            "stage.idaweb_count_mv"
+        )
+        self.refreshMV(
+            "stage.idaweb_max_valid_from_mv"
+        )
         self.stageTableRespDict.enableAllButtons()
 
     def runCoreETL(self):
         self.runMeasurementsETL()
+        self.stationCoreETL()
+        self.parameterCoreETL()
 
     def runMeasurementsETL(self):
         self.meteoschweizCoreETL()
         self.idawebCoreETL()
+        self.refreshMV(
+            "core.measurements_count_mv"
+        )
+        self.refreshMV(
+            "core.measurements_max_valid_from_mv"
+        )
 
     def meteoschweizCoreETL(self):
+        self.coreTableRespDict.disableAllButtons()
         meteoschweizDf = pd.read_sql_table(
             "meteoschweiz_t",
             self.engine,
@@ -1029,6 +1060,7 @@ class Database:
         self.conn.execute(
             "DROP TABLE IF EXISTS core.temp_measurements_t;"
         )
+        self.coreTableRespDict.enableAllButtons()
 
     def stationCoreETL(self):
         self.coreTableRespDict.disableAllButtons()
@@ -1038,6 +1070,12 @@ class Database:
             "INSERT INTO core.station_t " +
             "SELECT * FROM stage.station_t " +
             "ON CONFLICT DO NOTHING;"
+        )
+        self.refreshMV(
+            "core.station_count_mv"
+        )
+        self.refreshMV(
+            "core.station_max_valid_from_mv"
         )
         self.coreTableRespDict.enableAllButtons()
 
@@ -1049,6 +1087,12 @@ class Database:
             "INSERT INTO core.parameter_t " +
             "SELECT * FROM stage.parameter_t " +
             "ON CONFLICT DO NOTHING;"
+        )
+        self.refreshMV(
+            "core.parameter_count_mv"
+        )
+        self.refreshMV(
+            "core.parameter_max_valid_from_mv"
         )
         self.coreTableRespDict.enableAllButtons()
 
