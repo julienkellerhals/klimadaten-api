@@ -127,7 +127,8 @@ def mydashboard(flaskApp, instance):
             'shadow': '#C5D1D8'
         }
 
-    snow_param = 'hns000y0'
+    snowParam = 'hns000y0'
+    rainParam = 'rre150y0'
     shadow = f'7px 7px 7px {colors["shadow"]}'
 
     dashApp = Dash(
@@ -151,8 +152,8 @@ def mydashboard(flaskApp, instance):
         ON (m.station = k.station_short_name)
         WHERE m.meas_date >= '2010-01-01'
         AND m.meas_date < '2020-01-01'
-        AND m.meas_name = {"'"+ snow_param +"'"}
-        AND k.parameter = {"'"+ snow_param +"'"}
+        AND m.meas_name = {"'"+ snowParam +"'"}
+        AND k.parameter = {"'"+ snowParam +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name,
@@ -173,8 +174,8 @@ def mydashboard(flaskApp, instance):
         ON (m.station = k.station_short_name)
         WHERE m.meas_date >= '1970-01-01'
         AND m.meas_date < '1980-01-01'
-        AND m.meas_name = {"'"+ snow_param +"'"}
-        AND k.parameter = {"'"+ snow_param +"'"}
+        AND m.meas_name = {"'"+ snowParam +"'"}
+        AND k.parameter = {"'"+ snowParam +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name
@@ -306,85 +307,54 @@ def mydashboard(flaskApp, instance):
         '<br>Ø Schneefall pro Tag 2010-2020: ' + \
         (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
         '<br>Veränderung: ' + \
-        (round(
-            (
-                (dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
-            ) * 100, 0)) \
-        .astype(str) + '%' + '<extra></extra>'
+        (round(((
+            dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
+        ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
 
-    # data wrangling scatterplot
-    dfScatterSnow1 = pd.read_sql(
+    # data wrangling scatterplot snow
+    dfScatterSnow = pd.read_sql(
         f"""
-        SELECT extract(year from m.meas_date) as meas_year,
-        sum(m.meas_value) snow,
-        k.station_name
+        SELECT
+            extract(year from m.meas_date) as meas_year,
+            k.station_name,
+            sum(m.meas_value) meas_value,
+            m.station,
+            k.elevation
         FROM core.measurements_t m
         JOIN core.station_t k
         ON (m.station = k.station_short_name)
-        WHERE m.meas_name = {"'"+ snow_param +"'"}
-        AND k.parameter = {"'"+ snow_param +"'"}
+        WHERE m.meas_name = {"'"+ snowParam +"'"}
+        AND k.parameter = {"'"+ snowParam +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
-        GROUP BY meas_year, k.station_name
+        GROUP BY meas_year, k.station_name, m.station, k.elevation
         ORDER BY meas_year ASC
         """,
         engine
     )
 
     # change measurement unit to meters
-    dfScatterSnow1['snow'] = round(dfScatterSnow1.snow / 100, 2)
-    dfScatterSnow1 = dfScatterSnow1.dropna()
+    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
+    dfScatterSnow = dfScatterSnow.dropna()
 
-    # df for showing scatterplot for all stations under 1000 m.ü.M.
-    dfScatterSnow2 = pd.read_sql(
-        f"""
-        SELECT
-        extract(year from m.meas_date) as meas_year,
-        m.station,
-        k.elevation,
-        sum(m.meas_value) meas_value
-        FROM core.measurements_t m
-        JOIN core.station_t k
-        ON (m.station = k.station_short_name)
-        WHERE m.meas_name = {"'"+ snow_param +"'"}
-        AND k.parameter = {"'"+ snow_param +"'"}
-        AND m.valid_to = '2262-04-11'
-        AND k.valid_to = '2262-04-11'
-        GROUP BY meas_year, m.station, k.elevation
-        """,
-        engine
-    )
-
-    dfScatterSnow2 = pd.merge(
+    dfScatterAll = pd.merge(
         how='inner',
         left=dfStations,
-        right=dfScatterSnow2,
+        right=dfScatterSnow,
         left_on='station_short_name',
         right_on='station'
     )
 
-    # removing useless columns
-    dfScatterSnow2 = dfScatterSnow2[[
-        'station_short_name',
-        'meas_year',
-        'meas_value',
-        'elevation'
-    ]]
-
-    dfScatterSnow2.sort_values([
+    dfScatterAll.sort_values([
         'station_short_name',
         'meas_year'
     ], inplace=True)
 
-    # changing measurement unit to meters
-    dfScatterSnow2['meas_value'] = round(dfScatterSnow2.meas_value / 100, 2)
-    dfScatterSnow2.dropna()
-
     # select all Stations
-    dfSnowAll = dfScatterSnow2.groupby(
+    dfSnowAll = dfScatterAll.groupby(
         'meas_year'
     ).agg(
-        snow=('meas_value', 'mean')
+        meas_value=('meas_value', 'mean')
     )
 
     dfSnowAll = dfSnowAll.reset_index()
@@ -392,7 +362,7 @@ def mydashboard(flaskApp, instance):
 
     # simple regression line
     reg = LinearRegression(
-        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['snow'])
+        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['meas_value'])
     dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
 
     # avg of highest 10 minute total of rain of
@@ -626,7 +596,7 @@ def mydashboard(flaskApp, instance):
         plotSnow.add_trace(go.Scatter(
             name='Schneefall',
             x=dfSnowAll['meas_year'],
-            y=dfSnowAll['snow'],
+            y=dfSnowAll['meas_value'],
             mode='lines',
             line_shape='spline',
             marker={
@@ -1021,20 +991,20 @@ def mydashboard(flaskApp, instance):
         v_index = clickData['points'][0]['pointIndex']
         station = dfMap.iloc[v_index]['station_name']
 
-        dfTemp = dfScatterSnow1[dfScatterSnow1['station_name'] == station]
+        dfTemp = dfScatterSnow[dfScatterSnow['station_name'] == station]
         dfTemp = dfTemp.reset_index()
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
-        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
+            ).fit(np.vstack(dfTemp.meas_year), dfTemp['meas_value'])
+        dfTemp['meas_value_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
 
         fig = {
             'data': [
                 go.Scatter(
                     name='Schneefall',
                     x=dfTemp['meas_year'],
-                    y=dfTemp['snow'],
+                    y=dfTemp['meas_value'],
                     mode='lines',
                     line_shape='spline',
                     marker={
@@ -1046,7 +1016,7 @@ def mydashboard(flaskApp, instance):
                 go.Scatter(
                     name='Regression',
                     x=dfTemp['meas_year'],
-                    y=dfTemp['snow_bestfit'],
+                    y=dfTemp['meas_value_bestfit'],
                     mode='lines',
                     marker={
                         'size': 5,
