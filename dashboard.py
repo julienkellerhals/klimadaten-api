@@ -124,9 +124,11 @@ def mydashboard(flaskApp, instance):
             'plotGrid': '#B6C3CC',
             'plotAxisTitle': '#748B99',
             'BgDashboard': '#D8E0E5',
+            'shadow': '#C5D1D8'
         }
 
     snow_param = 'hns000y0'
+    shadow = f'7px 7px 7px {colors["shadow"]}'
 
     dashApp = Dash(
         __name__,
@@ -734,7 +736,7 @@ def mydashboard(flaskApp, instance):
                 ),
             ], style={
                 'backgroundColor': colors['d3'],
-                'box-shadow': '4px 4px 4px lightgrey',
+                'box-shadow': shadow,
                 'position': 'relative',
                 'padding': '5px',
             }
@@ -767,7 +769,7 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'backgroundColor': colors['l0'],
                         'height': 430,
-                        'box-shadow': '4px 4px 4px lightgrey',
+                        'box-shadow': shadow,
                         'position': 'relative',
                         'border-radius': 5,
                         'margin': '10px',
@@ -830,7 +832,7 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'backgroundColor': colors['BgPlot2'],
                         'height': 430,
-                        'box-shadow': '4px 4px 4px lightgrey',
+                        'box-shadow': shadow,
                         'position': 'relative',
                         'border-radius': 5,
                         'margin': '10px',
@@ -852,7 +854,49 @@ def mydashboard(flaskApp, instance):
             ),
             # second row of plots
             html.Div([
-                # scatterplot bottom left
+                # 1st plot 2nd row
+                html.Div([
+                    html.Div([
+                        html.H4('Extreme Regenfälle')
+                    ], style={
+                        'height': 30,
+                        'padding-left': 20
+                    }
+                    ),
+                    html.Div([
+                        html.Div([
+                            dcc.Graph(
+                                id='scatterRain',
+                                figure=plotRain,
+                                config={
+                                    'displayModeBar': False,
+                                    'staticPlot': False
+                                }
+                            )
+                        ], style={
+                            'backgroundColor': colors['BgPlot5'],
+                            'height': 360
+                        }
+                        )
+                    ], style={
+                        'backgroundColor': colors['BgPlot5'],
+                        'height': 370,
+                        'box-shadow': shadow,
+                        'position': 'relative',
+                        'border-radius': 5,
+                        'margin': '10px',
+                        'vertical-align': 'top',
+                        'padding': 5
+                    }
+                    ),
+                ], style={
+                    'width': '25%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top',
+                    'horizontal-align': 'right'
+                }
+                ),
+                # 2nd plot 2nd row
                 html.Div([
                     html.Div([
                         html.Div([
@@ -908,7 +952,7 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'backgroundColor': colors['BgPlot3'],
                         'height': 370,
-                        'box-shadow': '4px 4px 4px lightgrey',
+                        'box-shadow': shadow,
                         'position': 'relative',
                         'border-radius': 5,
                         'margin': '10px',
@@ -923,7 +967,7 @@ def mydashboard(flaskApp, instance):
                     'horizontal-align': 'left'
                 }
                 ),
-                # 2nd plot 2nd row
+                # 3rd plot 2nd row
                 html.Div([
                     html.Div([
                         html.H4('Bodentemperatur')
@@ -935,7 +979,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([], style={
                         'backgroundColor': colors['l0'],
                         'height': 370,
-                        'box-shadow': '4px 4px 4px lightgrey',
+                        'box-shadow': shadow,
                         'position': 'relative',
                         'border-radius': 5,
                         'margin': '10px',
@@ -947,48 +991,6 @@ def mydashboard(flaskApp, instance):
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'center'
-                }
-                ),
-                # 3nd plot 2nd row
-                html.Div([
-                    html.Div([
-                        html.H4('Extreme Regenfälle')
-                    ], style={
-                        'height': 30,
-                        'padding-left': 20
-                    }
-                    ),
-                    html.Div([
-                        html.Div([
-                            dcc.Graph(
-                                id='scatterRain',
-                                figure=plotRain,
-                                config={
-                                    'displayModeBar': False,
-                                    'staticPlot': False
-                                }
-                            )
-                        ], style={
-                            'backgroundColor': colors['BgPlot5'],
-                            'height': 360
-                        }
-                        )
-                    ], style={
-                        'backgroundColor': colors['BgPlot5'],
-                        'height': 370,
-                        'box-shadow': '4px 4px 4px lightgrey',
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        'vertical-align': 'top',
-                        'padding': 5
-                    }
-                    ),
-                ], style={
-                    'width': '25%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'right'
                 }
                 ),
             ], style={
