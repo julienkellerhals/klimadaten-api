@@ -178,54 +178,7 @@ def mydashboard(flaskApp, instance):
         engine
     )
 
-    df_map_3 = pd.read_sql(
-        """
-        SELECT station_name, station_short_name, COUNT(*) FROM(
-            SELECT extract(year from m.meas_date) as meas_year,
-            k.station_name,
-            k.station_short_name
-            FROM core.measurements_t m
-            JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_name = 'hns000d0'
-            AND k.parameter = 'hns000d0'
-            AND m.valid_to = '2262-04-11'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY meas_year, k.station_name, k.station_short_name
-            HAVING extract(year from m.meas_date) >= 1970
-        ) AS filtered
-        GROUP BY station_name, station_short_name
-        HAVING COUNT(*) >= 43
-        """,
-        engine
-    )
-
-    df_map_4 = pd.read_sql(
-        """
-        SELECT station_name, station_short_name, min(meas_year), COUNT(*) FROM(
-            SELECT extract(year from m.meas_date) as meas_year,
-            k.station_name,
-            k.station_short_name
-            FROM core.measurements_t m
-            JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_name = 'hns000d0'
-            AND k.parameter = 'hns000d0'
-            AND m.valid_to = '2262-04-11'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY meas_year, k.station_name, k.station_short_name
-        ) AS filtered
-        GROUP BY station_name, station_short_name
-        HAVING COUNT(*) >= 43
-        ORDER BY COUNT(*) DESC
-        """,
-        engine
-    )
-
-    df_map_4['years'] = 2020 - df_map_4['min']
-    df_map_4['ratio'] = df_map_4['count'] / df_map_4['years']
-    df_map_4 = df_map_4[df_map_4.ratio >= 0.95]
-
+    # Select the stations with the highest quality data
     dfStations = pd.read_sql(
         """
         SELECT
@@ -284,16 +237,8 @@ def mydashboard(flaskApp, instance):
     dfStations['ratio'] = dfStations['count'] / dfStations['years']
     dfStations = dfStations[dfStations.ratio >= 0.90]
     dfStations = dfStations.groupby(
-        ['station_short_name']).meas_name.count().reset_index()
-    dfStations[dfStations.meas_name == 7]
-
-    df_map_3 = pd.merge(
-        how='inner',
-        left=df_map_3,
-        right=df_map_4,
-        left_on='station_short_name',
-        right_on='station_short_name'
-    )
+        ['station_short_name', 'station_name']).meas_name.count().reset_index()
+    dfStations = dfStations[dfStations.meas_name == 7]
 
     df_map = pd.merge(
         how='inner',
@@ -306,9 +251,9 @@ def mydashboard(flaskApp, instance):
     df_map = pd.merge(
         how='inner',
         left=df_map,
-        right=df_map_3,
+        right=dfStations,
         left_on='station_name',
-        right_on='station_name_x'
+        right_on='station_name'
     )
 
     # data wrangling for longitude and latitude
@@ -333,9 +278,6 @@ def mydashboard(flaskApp, instance):
         latitude=('latitude', 'mean'),
         elevation=('elevation', 'mean'),
         avg_then=('avg_then', 'mean'),
-        count=('count_x', 'mean'),
-        years=('years', 'min'),
-        ratio=('ratio', 'min'),
     ).reset_index()
 
     # add text column for map pop-up
@@ -396,7 +338,7 @@ def mydashboard(flaskApp, instance):
 
     dfScatterSnow2 = pd.merge(
         how='inner',
-        left=df_map_3,
+        left=dfStations,
         right=dfScatterSnow2,
         left_on='station_short_name',
         right_on='station'
