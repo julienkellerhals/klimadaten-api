@@ -528,7 +528,6 @@ class Database:
         ):  # Check if schema etl exists else create
             self.engine.execute(sqlalchemy.schema.CreateSchema('stage'))
 
-    # TODO Fix this function, cannot be run twice due to create mv functions
     # Check if they exist before, then drop them
     def createTable(self):
         """ Creates tables
@@ -662,226 +661,106 @@ class Database:
 
         # stage.meteoschweiz_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.meteoschweiz_count_mv;" +
             "CREATE MATERIALIZED VIEW stage.meteoschweiz_count_mv " +
             "AS SELECT count(*) FROM stage.meteoschweiz_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.meteoschweiz_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv " +
             "AS SELECT max(load_date) FROM stage.meteoschweiz_t"
         )
 
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION stage.refresh_meteoschweiz_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.meteoschweiz_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.meteoschweiz_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_meteoschweiz_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON stage.meteoschweiz_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE stage.refresh_meteoschweiz_t_fn();"
-        )
-
         # stage.idaweb_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.idaweb_count_mv;" +
             "CREATE MATERIALIZED VIEW stage.idaweb_count_mv " +
             "AS SELECT count(*) FROM stage.idaweb_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.idaweb_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW stage.idaweb_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM stage.idaweb_t"
         )
 
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION stage.refresh_idaweb_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.idaweb_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.idaweb_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_idaweb_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON stage.idaweb_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE stage.refresh_idaweb_t_fn();"
-        )
-
         # stage.station_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.station_count_mv;" +
             "CREATE MATERIALIZED VIEW stage.station_count_mv " +
             "AS SELECT count(*) FROM stage.station_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.station_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW stage.station_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM stage.station_t"
         )
-
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION stage.refresh_station_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.station_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.station_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_station_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON stage.station_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE stage.refresh_station_t_fn();"
-        )
-
         # stage.parameter_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.parameter_count_mv;" +
             "CREATE MATERIALIZED VIEW stage.parameter_count_mv " +
             "AS SELECT count(*) FROM stage.parameter_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.parameter_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW stage.parameter_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM stage.parameter_t"
         )
 
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION stage.refresh_parameter_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.parameter_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "stage.parameter_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_parameter_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON stage.parameter_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE stage.refresh_parameter_t_fn();"
-        )
-
         # core.measurements_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.measurements_count_mv;" +
             "CREATE MATERIALIZED VIEW core.measurements_count_mv " +
             "AS SELECT count(*) FROM core.measurements_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.measurements_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW core.measurements_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM core.measurements_t"
         )
 
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION core.refresh_meas_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.measurements_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.measurements_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_meas_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON core.measurements_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE core.refresh_meas_t_fn();"
-        )
-
         # core.station_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.station_count_mv;" +
             "CREATE MATERIALIZED VIEW core.station_count_mv " +
             "AS SELECT count(*) FROM core.station_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.station_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW core.station_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM core.station_t"
         )
 
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION core.refresh_station_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.station_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.station_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_station_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON core.station_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE core.refresh_station_t_fn();"
-        )
-
         # core.parameter_t
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.parameter_count_mv;" +
             "CREATE MATERIALIZED VIEW core.parameter_count_mv " +
             "AS SELECT count(*) FROM core.parameter_t"
         )
 
         self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.parameter_max_valid_from_mv;" +
             "CREATE MATERIALIZED VIEW core.parameter_max_valid_from_mv " +
             "AS SELECT max(valid_from) FROM core.parameter_t"
-        )
-
-        self.conn.execute(
-            "CREATE OR REPLACE FUNCTION core.refresh_parameter_t_fn() " +
-            "RETURNS TRIGGER LANGUAGE plpgsql " +
-            "AS $$ " +
-            "BEGIN " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.parameter_count_mv; " +
-            "REFRESH MATERIALIZED VIEW " +
-            "core.parameter_max_valid_from_mv; " +
-            "RETURN NULL; " +
-            "END $$;"
-        )
-
-        self.conn.execute(
-            "CREATE TRIGGER refresh_parameter_t " +
-            "AFTER INSERT OR UPDATE OR DELETE OR TRUNCATE " +
-            "ON core.parameter_t " +
-            "FOR EACH STATEMENT " +
-            "EXECUTE PROCEDURE core.refresh_parameter_t_fn();"
         )
 
     def runStageETL(self):
