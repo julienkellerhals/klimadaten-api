@@ -127,11 +127,18 @@ class ResponseDictionary:
         engine = self.instance.getEngine()
         for table in self.respDict[self.schema].items():
             if type(table[1]) is dict:
-                nrowQuery = "SELECT * FROM {}.{}_max_valid_from_mv".format(
-                    self.schema,
-                    table[0].strip("_t")
-                )
-                table[1]["headerBadge"]["content"] = \
-                    "{:,}".format(engine.execute(
-                        nrowQuery
-                    ).first()[0])
+                lastRefreshQuery = \
+                    "SELECT * FROM {}.{}_max_valid_from_mv".format(
+                        self.schema,
+                        table[0].strip("_t")
+                    )
+
+                table[1]["bodyBadge"] = {}
+                lastRefresh = engine.execute(
+                    lastRefreshQuery
+                ).first()[0]
+                if lastRefresh is not None:
+                    table[1]["bodyBadge"]["caption"] = \
+                        "last refresh"
+                    table[1]["bodyBadge"]["content"] = \
+                        lastRefresh
