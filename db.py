@@ -92,7 +92,7 @@ class Database:
     def createEngine(self):
         self.engine = create_engine(
             self.databaseUrl,
-            echo=True,
+            echo=False,
             poolclass=QueuePool,
             pool_size=100,
             max_overflow=200
