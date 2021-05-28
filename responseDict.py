@@ -54,12 +54,14 @@ class ResponseDictionary:
         for table in self.respDict[self.schema].items():
             if type(table[1]) is dict:
                 engine.execute(
-                    "REFRESH MATERIALIZED VIEW {}_count_mv".format(
+                    "REFRESH MATERIALIZED VIEW {}.{}_count_mv".format(
+                        self.schema,
                         table[0].strip("_t")
                     )
                 )
                 engine.execute(
-                    "REFRESH MATERIALIZED VIEW {}_max_valid_from_mv".format(
+                    "REFRESH MATERIALIZED VIEW {}.{}_max_valid_from_mv".format(
+                        self.schema,
                         table[0].strip("_t")
                     )
                 )
