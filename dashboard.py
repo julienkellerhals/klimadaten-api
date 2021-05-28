@@ -126,6 +126,8 @@ def mydashboard(flaskApp, instance):
             'BgDashboard': '#D8E0E5',
         }
 
+    snow_param = 'hns000y0'
+
     dashApp = Dash(
         __name__,
         server=flaskApp,
@@ -135,7 +137,7 @@ def mydashboard(flaskApp, instance):
 
     # data wrangling map data
     df_map_1 = pd.read_sql(
-        """
+        f"""
         SELECT
         avg(m.meas_value) avg_now,
         k.station_name,
@@ -147,8 +149,8 @@ def mydashboard(flaskApp, instance):
         ON (m.station = k.station_short_name)
         WHERE m.meas_date >= '2010-01-01'
         AND m.meas_date < '2020-01-01'
-        AND m.meas_name = 'hns000d0'
-        AND k.parameter = 'hns000d0'
+        AND m.meas_name = {"'"+ snow_param +"'"}
+        AND k.parameter = {"'"+ snow_param +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name,
@@ -160,7 +162,7 @@ def mydashboard(flaskApp, instance):
     )
 
     df_map_2 = pd.read_sql(
-        """
+        f"""
         SELECT
         avg(m.meas_value) avg_then,
         k.station_name
@@ -169,8 +171,8 @@ def mydashboard(flaskApp, instance):
         ON (m.station = k.station_short_name)
         WHERE m.meas_date >= '1970-01-01'
         AND m.meas_date < '1980-01-01'
-        AND m.meas_name = 'hns000d0'
-        AND k.parameter = 'hns000d0'
+        AND m.meas_name = {"'"+ snow_param +"'"}
+        AND k.parameter = {"'"+ snow_param +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY k.station_name
@@ -296,15 +298,15 @@ def mydashboard(flaskApp, instance):
 
     # data wrangling scatterplot
     dfScatterSnow1 = pd.read_sql(
-        """
+        f"""
         SELECT extract(year from m.meas_date) as meas_year,
         sum(m.meas_value) snow,
         k.station_name
         FROM core.measurements_t m
         JOIN core.station_t k
         ON (m.station = k.station_short_name)
-        WHERE m.meas_name = 'hns000d0'
-        AND k.parameter = 'hns000d0'
+        WHERE m.meas_name = {"'"+ snow_param +"'"}
+        AND k.parameter = {"'"+ snow_param +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY meas_year, k.station_name
@@ -318,7 +320,7 @@ def mydashboard(flaskApp, instance):
 
     # df for showing scatterplot for all stations under 1000 m.ü.M.
     dfScatterSnow2 = pd.read_sql(
-        """
+        f"""
         SELECT
         extract(year from m.meas_date) as meas_year,
         m.station,
@@ -327,8 +329,8 @@ def mydashboard(flaskApp, instance):
         FROM core.measurements_t m
         JOIN core.station_t k
         ON (m.station = k.station_short_name)
-        WHERE m.meas_name = 'hns000d0'
-        AND k.parameter = 'hns000d0'
+        WHERE m.meas_name = {"'"+ snow_param +"'"}
+        AND k.parameter = {"'"+ snow_param +"'"}
         AND m.valid_to = '2262-04-11'
         AND k.valid_to = '2262-04-11'
         GROUP BY meas_year, m.station, k.elevation
@@ -466,18 +468,20 @@ def mydashboard(flaskApp, instance):
             hovertemplate=df_map['text'],
             mode='markers',
             marker={
-                'size': df_map['avg_now'] * 45,
-                'sizemin': 3,
-                'color': (
-                    df_map['avg_now'] - df_map['avg_then']
-                    ) / df_map['avg_then'],
+                'size': 10,
+                'color': colors['d3'],
+                # 'size': df_map['avg_now'] * 45,
+                # 'sizemin': 3,
+                # 'color': (
+                #     df_map['avg_now'] - df_map['avg_then']
+                #     ) / df_map['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
-                'colorscale': [
-                    [0, colors['rbr']],
-                    [0.50, colors['l6']],
-                    [1, colors['rbb']]
-                ],
-                'sizemode': 'area',
+                # 'colorscale': [
+                #     [0, colors['rbr']],
+                #     [0.50, colors['l6']],
+                #     [1, colors['rbb']]
+                # ],
+                # 'sizemode': 'area',
                 'opacity': 0.7
             }
         ))
@@ -675,11 +679,11 @@ def mydashboard(flaskApp, instance):
             }
         )
 
-        features = [
-            'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
-            'hns000d0', 'fklnd3m0', 'fu3010m1', 'hns000mx', 'rsd700m0',
-            'rs1000m0', 'rzz150mx', 'rhh150mx', 'rre150m0', 'rhs150m0'
-        ]
+        # features = [
+        #     'breclod0', 'brefard0', 'tre200dx', 'tre200d0', 'tre200dn',
+        #     'hns000d0', 'fklnd3m0', 'fu3010m1', 'hns000mx', 'rsd700m0',
+        #     'rs1000m0', 'rzz150mx', 'rhh150mx', 'rre150m0', 'rhs150m0'
+        # ]
 
         dashApp.layout = html.Div([
             # header
