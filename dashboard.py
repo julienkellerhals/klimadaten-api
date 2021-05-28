@@ -656,10 +656,10 @@ def mydashboard(flaskApp, instance):
         plotSnow.update_layout(
             title='Durchschnittlicher Schneefall aller Stationen in Meter',
             title_x=0.1,
-            margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
+            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=360,
             yaxis={
-                'title': 'Schneefall (Meter)',
+                # 'title': 'Schneefall (Meter)',
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
@@ -746,7 +746,7 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.H4(
-                            'Veränderung des Schneefalls',
+                            'Landkarte zum Auswählen der Stationen',
                             style={'color': colors['plotTitle']}
                         )
                     ], style={
@@ -899,7 +899,7 @@ def mydashboard(flaskApp, instance):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.H4('Schneefall bei den Stationen')
+                            html.H4('Veränderung des Schneefalls')
                         ], style={
                             'padding-left': 20,
                             'width': '70%',
