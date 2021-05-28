@@ -214,12 +214,13 @@ function createCollapsibleElements(baseStructure) {
     keys.forEach((id) => {
         const ul = document.getElementById(id)
         var previousContent = undefined
+        var previousProgressBar = false
 
         if (baseStructure[id].eventSourceUrl != undefined) {
             var colEventSourceUrl = baseStructure[id].eventSourceUrl
             var colEventSource = new EventSource(colEventSourceUrl)
 
-            var rows = Object.keys(baseStructure[id]).filter((r) => r != "eventSourceUrl").sort()
+            var rows = Object.keys(baseStructure[id]).filter((r) => r.endsWith("_t")).sort()
             rows.forEach((rowName) => {
                 var row = baseStructure[id][rowName]
                 createRowStructure(row, id, ul)
@@ -230,7 +231,21 @@ function createCollapsibleElements(baseStructure) {
 
             colEventSource.onmessage = function (e) {
                 var content = JSON.parse(e.data);
-                var rows = Object.keys(content[id]).filter((r) => r != "eventSourceUrl").sort()
+                if (content[id].progressBar == true && previousProgressBar == false) {
+                    var progress = document.createElement("div")
+                    progress.classList.add("progress")
+                    var progressBar = document.createElement("div")
+                    progressBar.classList.add("indeterminate")
+                    progress.appendChild(progressBar)
+
+                    ul.parentNode.insertBefore(progress, ul.parentNode.children[1])
+                    previousProgressBar = true
+                } else if (content[id].progressBar == false && previousProgressBar == true) {
+                    ul.parentNode.children[1].remove()
+                    previousProgressBar = false
+                }
+
+                var rows = Object.keys(content[id]).filter((r) => r.endsWith("_t")).sort()
                 rows.forEach((rowName) => {
                     var row = content[id][rowName]
                     updateRowStructure(row, previousContent, id, ul)

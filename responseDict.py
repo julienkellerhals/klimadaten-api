@@ -4,11 +4,13 @@ import json
 class ResponseDictionary:
     respDict = None
     statusStream = None
+    schema = None
 
     def __init__(self, baseDict, statusStream):
 
         self.respDict = baseDict
         self.statusStream = statusStream
+        self.schema = list(self.respDict.keys())[0]
 
     def send(self):
 
@@ -20,20 +22,33 @@ class ResponseDictionary:
             self.statusStream.format_sse(msgText)
         )
 
+    def startLoadProcess(self):
+
+        self.disableAllButtons()
+        self.createProgressBar()
+        self.send()
+
+    def endLoadProcess(self):
+
+        self.enableAllButtons()
+        self.removeProgressBar()
+        self.send()
+
     def createProgressBar(self):
-        raise NotImplementedError
+
+        self.respDict[self.schema]["progressBar"] = True
 
     def removeProgressBar(self):
-        raise NotImplementedError
+
+        self.respDict[self.schema]["progressBar"] = False
 
     def disableAllButtons(self):
 
-        schema = list(self.respDict.keys())[0]
-        for table in self.respDict[schema].items():
+        for table in self.respDict[self.schema].items():
             if type(table[1]) is dict:
                 for index, _ in enumerate(table[1]["action"]):
                     self.respDict[
-                        schema
+                        self.schema
                     ][
                         table[0]
                     ][
@@ -43,16 +58,14 @@ class ResponseDictionary:
                     ][
                         "enabled"
                     ] = False
-        self.send()
 
     def enableAllButtons(self):
 
-        schema = list(self.respDict.keys())[0]
-        for table in self.respDict[schema].items():
+        for table in self.respDict[self.schema].items():
             if type(table[1]) is dict:
                 for index, _ in enumerate(table[1]["action"]):
                     self.respDict[
-                        schema
+                        self.schema
                     ][
                         table[0]
                     ][
@@ -62,4 +75,7 @@ class ResponseDictionary:
                     ][
                         "enabled"
                     ] = True
-        self.send()
+
+    def updateRowCount(self):
+        raise NotImplementedError
+        # Do not forget to exec send after launching this function

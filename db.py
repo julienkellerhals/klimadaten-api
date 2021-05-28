@@ -53,7 +53,7 @@ class Database:
         self.stageTableRespDict = ResponseDictionary({
                 "stage": {
                     "eventSourceUrl": "/admin/stream/getStageTablesStatus",
-                    # "progressBar": False,
+                    "progressBar": False,
                 }
             },
             self.stageTablesStatusStream
@@ -61,7 +61,7 @@ class Database:
         self.coreTableRespDict = ResponseDictionary({
                 "core": {
                     "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
-                    # "progressBar": False,
+                    "progressBar": False,
                 }
             },
             self.coreTablesStatusStream
@@ -843,7 +843,7 @@ class Database:
         """ Runs station and Param stage etl process
         """
 
-        self.stageTableRespDict.disableAllButtons()
+        self.stageTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -946,7 +946,7 @@ class Database:
         self.refreshMV(
             "stage.parameter_max_valid_from_mv"
         )
-        self.stageTableRespDict.enableAllButtons()
+        self.stageTableRespDict.endLoadProcess()
 
     def idaWebStageETL(self, orderList=["*"]):
         """ Runs idaweb stage etl process
@@ -956,7 +956,7 @@ class Database:
                                         Defaults to ["*"].
         """
 
-        self.stageTableRespDict.disableAllButtons()
+        self.stageTableRespDict.startLoadProcess()
 
         if self.conn is None:
             self.conn = self.engine.connect()
@@ -1042,7 +1042,7 @@ class Database:
         self.refreshMV(
             "stage.idaweb_max_valid_from_mv"
         )
-        self.stageTableRespDict.enableAllButtons()
+        self.stageTableRespDict.endLoadProcess()
 
     def runCoreETL(self):
         """ Runs core etl process
@@ -1069,7 +1069,7 @@ class Database:
         """ Runs meteoschweiz etl process
         """
 
-        self.coreTableRespDict.disableAllButtons()
+        self.coreTableRespDict.startLoadProcess()
         meteoschweizDf = pd.read_sql_table(
             "meteoschweiz_t",
             self.engine,
@@ -1146,13 +1146,13 @@ class Database:
         self.conn.execute(
             "DROP TABLE IF EXISTS core.temp_measurements_t;"
         )
-        self.coreTableRespDict.enableAllButtons()
+        self.coreTableRespDict.endLoadProcess()
 
     def stationCoreETL(self):
         """ Runs station etl process
         """
 
-        self.coreTableRespDict.disableAllButtons()
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1166,13 +1166,13 @@ class Database:
         self.refreshMV(
             "core.station_max_valid_from_mv"
         )
-        self.coreTableRespDict.enableAllButtons()
+        self.coreTableRespDict.endLoadProcess()
 
     def parameterCoreETL(self):
         """ Runs parameter etl process
         """
 
-        self.coreTableRespDict.disableAllButtons()
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1186,13 +1186,13 @@ class Database:
         self.refreshMV(
             "core.parameter_max_valid_from_mv"
         )
-        self.coreTableRespDict.enableAllButtons()
+        self.coreTableRespDict.endLoadProcess()
 
     def idawebCoreETL(self):
         """ Runs idaweb etl process
         """
 
-        self.coreTableRespDict.disableAllButtons()
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -1200,4 +1200,4 @@ class Database:
             "SELECT * FROM stage.idaweb_t " +
             "ON CONFLICT DO NOTHING;"
         )
-        self.coreTableRespDict.enableAllButtons()
+        self.coreTableRespDict.endLoadProcess()
