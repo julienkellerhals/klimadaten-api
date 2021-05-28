@@ -418,21 +418,6 @@ def mydashboard(flaskApp, instance):
     def createDashboard():
         # creating the map
         plotMap = go.Figure()
-
-        # plotMap.add_trace(go.Scattermapbox(
-        #     lat=dfMap['latitude'],
-        #     lon=dfMap['longitude'],
-        #     text=dfMap['text'],
-        #     mode='markers',
-        #     marker={
-        #         'size': dfMap['avg_now'] * 45 + 8,
-        #         'color': colors['d3'],
-        #         # 'line': {'width': 1, 'color': colors['d3']},
-        #         'sizemode': 'area'
-        #     },
-        #     hoverinfo='none'
-        # ))
-
         plotMap.add_trace(go.Scattermapbox(
             lat=dfMap['latitude'],
             lon=dfMap['longitude'],
@@ -478,61 +463,6 @@ def mydashboard(flaskApp, instance):
             )
         )
 
-        # creating the rain scatterplot
-        # plotRain = go.Figure()
-
-        # plotRain.add_trace(go.Scatter(
-        #     name='Regenfall',
-        #     x=dfScatterRain1["meas_year"],
-        #     y=dfScatterRain1["avg_rain"],
-        #     mode='lines',
-        #     line_shape='spline',
-        #     marker={
-        #         'size': 5,
-        #         'color': colors['rbb'],
-        #         'line': {'width': 1, 'color': 'black'}
-        #     }
-        # ))
-
-        # plotRain.add_trace(go.Scatter(
-        #     name='Regression',
-        #     x=dfScatterRain1["meas_year"],
-        #     y=dfScatterRain1["rain_bestfit"],
-        #     mode='lines',
-        #     marker={
-        #         'size': 5,
-        #         'color': colors['rbr'],
-        #         'line': {'width': 1, 'color': 'black'}
-        #     }
-        # ))
-
-        # plotRain.update_layout(
-        #     # title='Veränderungen extreme Niederschläge',
-        #     yaxis={
-        #         'title': 'maximaler Niederschlag in cm',
-        #         'color': colors['plotAxisTitle'],
-        #         'showgrid': True,
-        #         'gridwidth': 1,
-        #         'gridcolor': colors['plotGrid'],
-        #         # 'rangemode': "tozero"
-        #     },
-        #     xaxis={
-        #         'showgrid': False,
-        #         'color': colors['plotAxisTitle']
-        #     },
-        #     hovermode='closest',
-        #     margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
-        #     height=360,
-        #     paper_bgcolor=colors['BgPlot5'],
-        #     plot_bgcolor='rgba(0,0,0,0)',
-        #     legend={
-        #         'yanchor': 'top',
-        #         'y': 0.99,
-        #         'xanchor': 'left',
-        #         'x': 0.01
-        #     }
-        # )
-
         # creating the rain barplot
         plotRain = go.Figure()
 
@@ -560,14 +490,14 @@ def mydashboard(flaskApp, instance):
         ))
 
         plotRain.update_layout(
-            # title='Veränderungen extreme Niederschläge',
+            title='∅ Maximaler Niederschlag aller Stationen in cm',
+            title_x=0.05,
             yaxis={
-                'title': 'maximaler Niederschlag in cm',
+                # 'title': 'maximaler Niederschlag in cm',
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
-                # 'rangemode': "tozero"
                 'range': [
                     dfScatterRain1.avg_rain.min() * 0.95,
                     dfScatterRain1.avg_rain.max() * 1.05
@@ -575,10 +505,12 @@ def mydashboard(flaskApp, instance):
             },
             xaxis={
                 'showgrid': False,
-                'color': colors['plotAxisTitle']
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
             },
             hovermode='closest',
-            margin={'l': 35, 'b': 20, 't': 10, 'r': 10},
+            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
@@ -635,16 +567,18 @@ def mydashboard(flaskApp, instance):
                 'showgrid': True,
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
-                'rangemode': "tozero"
+                'rangemode': "tozero",
             },
             xaxis={
                 'showgrid': False,
-                'color': colors['plotAxisTitle']
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
             },
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
             legend={
-                'yanchor': 'bottom',
+                'yanchor': 'top',
                 'y': 0.99,
                 'xanchor': 'right',
                 'x': 0.99
@@ -1027,7 +961,7 @@ def mydashboard(flaskApp, instance):
             ],
             'layout': go.Layout(
                 title=f'Schneefall bei {station} in Meter',
-                title_x=0.1,
+                title_x=0.05,
                 margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
                 height=360,
                 yaxis={
@@ -1036,17 +970,19 @@ def mydashboard(flaskApp, instance):
                     'showgrid': True,
                     'gridwidth': 1,
                     'gridcolor': colors['plotGrid'],
-                    'rangemode': "tozero"
+                    'rangemode': "tozero",
                 },
                 xaxis={
                     'showgrid': False,
-                    'color': colors['plotAxisTitle']
+                    'color': colors['plotAxisTitle'],
+                    'showline': True,
+                    'linecolor': colors['plotGrid']
                 },
                 paper_bgcolor=colors['BgPlot3'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 legend={
                     'yanchor': 'top',
-                    'y': 1.20,
+                    'y': 0.99,
                     'xanchor': 'right',
                     'x': 0.99
                 }
