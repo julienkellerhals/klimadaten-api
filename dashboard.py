@@ -226,6 +226,67 @@ def mydashboard(flaskApp, instance):
     df_map_4['ratio'] = df_map_4['count'] / df_map_4['years']
     df_map_4 = df_map_4[df_map_4.ratio >= 0.95]
 
+    dfStations = pd.read_sql(
+        """
+        SELECT
+            station_name,
+            station_short_name,
+            meas_name,
+            min(meas_year),
+            COUNT(*)
+        FROM(
+            SELECT
+                extract(year from m.meas_date) as meas_year,
+                k.station_short_name,
+                k.station_name,
+                m.meas_name
+            FROM core.measurements_t m
+            JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_name IN (
+                'hns000y0',
+                'hto000y0',
+                'rre150y0',
+                'rzz150yx',
+                'rhh150yx',
+                'tnd00xy0',
+                'tre200y0'
+            )
+            AND k.parameter IN (
+                'hns000y0',
+                'hto000y0',
+                'rre150y0',
+                'rzz150yx',
+                'rhh150yx',
+                'tnd00xy0',
+                'tre200y0'
+            )
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY
+            meas_year,
+            k.station_name,
+            k.station_short_name,
+            m.meas_name
+        ) AS filtered
+        GROUP BY
+            station_name,
+            station_short_name,
+            station_name,
+            meas_name
+        HAVING COUNT(*) >= 30
+        ORDER BY COUNT(*) DESC
+        """,
+        engine
+    )
+
+    dfStations['years'] = 2020 - dfStations['min']
+    dfStations['ratio'] = dfStations['count'] / dfStations['years']
+    dfStations = dfStations[dfStations.ratio >= 0.90]
+    dfStations = dfStations.groupby(
+        ['station_short_name']).meas_name.count().reset_index()
+    dfStations[dfStations.meas_name == 7]
+
     df_map_3 = pd.merge(
         how='inner',
         left=df_map_3,
