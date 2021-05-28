@@ -40,6 +40,7 @@ precipitation
 "rre150y0" Precipitation; annual total
 "rti150yx" Precipitation; date of the maximum daily total of the year
 "rzz150yx" Precipitation; maximum ten minute total of the year
+"rhh150yx" Precipitation; maximum total per hour of the year
 
 snow
 "hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day (cm)

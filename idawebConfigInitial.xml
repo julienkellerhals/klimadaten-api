@@ -1,4 +1,5 @@
 <root>
+    <config granularity="Y" group="precipitation">rhh150yx</config>
     <config granularity="D" group="lightning">breclod0</config>
     <config granularity="D" group="lightning">brefard0</config>
     <config granularity="D" group="temperature">tre200dx</config>
