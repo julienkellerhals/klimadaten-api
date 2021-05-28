@@ -376,16 +376,9 @@ def mydashboard(flaskApp, instance):
         'meas_year'
     ], inplace=True)
 
-    # # removing first year of each station
-    # dfScatterSnow2 = dfScatterSnow2.groupby(
-    #     'station_short_name'
-    # ).apply(lambda group: group.iloc[1:, 1:])
-
-    # # removing fancy pandas index because not needed
-    # dfScatterSnow2 = dfScatterSnow2.reset_index(level=0)
-
     # changing measurement unit to meters
     dfScatterSnow2['meas_value'] = round(dfScatterSnow2.meas_value / 100, 2)
+    dfScatterSnow2.dropna()
 
     # select all Stations
     dfSnowAll = dfScatterSnow2.groupby(
@@ -393,16 +386,6 @@ def mydashboard(flaskApp, instance):
     ).agg(
         snow=('meas_value', 'mean')
     )
-
-    # # select the Stations over 1500 m
-    # dfSnowO1500 = dfScatterSnow2[
-    #     (dfScatterSnow2.elevation >= 1500) &
-    #     (dfScatterSnow2.meas_year >= 1900)
-    # ].groupby(
-    #     'meas_year'
-    # ).agg(
-    #     snow=('meas_value', 'mean')
-    # )
 
     dfSnowAll = dfSnowAll.reset_index()
     dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= medianValueTotalSnow]
