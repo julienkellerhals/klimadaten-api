@@ -5,12 +5,14 @@ class ResponseDictionary:
     respDict = None
     statusStream = None
     schema = None
+    instance = None
 
-    def __init__(self, baseDict, statusStream):
+    def __init__(self, baseDict, statusStream, instance):
 
         self.respDict = baseDict
         self.statusStream = statusStream
         self.schema = list(self.respDict.keys())[0]
+        self.instance = instance
 
     def send(self):
 
@@ -26,13 +28,41 @@ class ResponseDictionary:
 
         self.disableAllButtons()
         self.createProgressBar()
+        self.refreshMV()
+        self.updateDictRowCount()
+        self.updateDictLastRefresh()
+        self.send()
+
+    def updateLoadProcess(self):
+        self.refreshMV()
+        self.updateDictRowCount()
+        self.updateDictLastRefresh()
         self.send()
 
     def endLoadProcess(self):
 
         self.enableAllButtons()
         self.removeProgressBar()
+        self.refreshMV()
+        self.updateDictRowCount()
+        self.updateDictLastRefresh()
         self.send()
+
+    def refreshMV(self):
+
+        engine = self.instance.getEngine()
+        for table in self.respDict[self.schema].items():
+            if type(table[1]) is dict:
+                engine.execute(
+                    "REFRESH MATERIALIZED VIEW {}_count_mv".format(
+                        table[0].strip("_t")
+                    )
+                )
+                engine.execute(
+                    "REFRESH MATERIALIZED VIEW {}_max_valid_from_mv".format(
+                        table[0].strip("_t")
+                    )
+                )
 
     def createProgressBar(self):
 
@@ -76,6 +106,30 @@ class ResponseDictionary:
                         "enabled"
                     ] = True
 
-    def updateRowCount(self):
-        raise NotImplementedError
-        # Do not forget to exec send after launching this function
+    def updateDictRowCount(self):
+
+        engine = self.instance.getEngine()
+        for table in self.respDict[self.schema].items():
+            if type(table[1]) is dict:
+                nrowQuery = "SELECT * FROM {}.{}_count_mv".format(
+                    self.schema,
+                    table[0].strip("_t")
+                )
+                table[1]["headerBadge"]["content"] = \
+                    "{:,}".format(engine.execute(
+                        nrowQuery
+                    ).first()[0])
+
+    def updateDictLastRefresh(self):
+
+        engine = self.instance.getEngine()
+        for table in self.respDict[self.schema].items():
+            if type(table[1]) is dict:
+                nrowQuery = "SELECT * FROM {}.{}_max_valid_from_mv".format(
+                    self.schema,
+                    table[0].strip("_t")
+                )
+                table[1]["headerBadge"]["content"] = \
+                    "{:,}".format(engine.execute(
+                        nrowQuery
+                    ).first()[0])

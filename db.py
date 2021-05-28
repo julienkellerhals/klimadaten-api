@@ -56,7 +56,8 @@ class Database:
                     "progressBar": False,
                 }
             },
-            self.stageTablesStatusStream
+            self.stageTablesStatusStream,
+            self
         )
         self.coreTableRespDict = ResponseDictionary({
                 "core": {
@@ -64,7 +65,8 @@ class Database:
                     "progressBar": False,
                 }
             },
-            self.coreTablesStatusStream
+            self.coreTablesStatusStream,
+            self
         )
 
     def readConfig(self, configFileName):
@@ -116,17 +118,6 @@ class Database:
             poolclass=QueuePool,
             pool_size=100,
             max_overflow=200
-        )
-
-    def refreshMV(self, mvName):
-        """ Refreshes materialized view
-
-        Args:
-            mvName (str): Materialized view name
-        """
-
-        self.conn.execute(
-            "REFRESH MATERIALIZED VIEW {}".format(mvName)
         )
 
     def getDbServiceStatus(self):
@@ -934,18 +925,7 @@ class Database:
                 if_exists='append',
                 index=False
             )
-        self.refreshMV(
-            "stage.station_count_mv"
-        )
-        self.refreshMV(
-            "stage.station_max_valid_from_mv"
-        )
-        self.refreshMV(
-            "stage.parameter_count_mv"
-        )
-        self.refreshMV(
-            "stage.parameter_max_valid_from_mv"
-        )
+            self.stageTableRespDict.updateLoadProcess()
         self.stageTableRespDict.endLoadProcess()
 
     def idaWebStageETL(self, orderList=["*"]):
@@ -1036,12 +1016,7 @@ class Database:
                 if_exists='append',
                 index=False
             )
-        self.refreshMV(
-            "stage.idaweb_count_mv"
-        )
-        self.refreshMV(
-            "stage.idaweb_max_valid_from_mv"
-        )
+            self.stageTableRespDict.updateLoadProcess()
         self.stageTableRespDict.endLoadProcess()
 
     def runCoreETL(self):
@@ -1058,12 +1033,6 @@ class Database:
 
         self.meteoschweizCoreETL()
         self.idawebCoreETL()
-        self.refreshMV(
-            "core.measurements_count_mv"
-        )
-        self.refreshMV(
-            "core.measurements_max_valid_from_mv"
-        )
 
     def meteoschweizCoreETL(self):
         """ Runs meteoschweiz etl process
@@ -1160,12 +1129,6 @@ class Database:
             "SELECT * FROM stage.station_t " +
             "ON CONFLICT DO NOTHING;"
         )
-        self.refreshMV(
-            "core.station_count_mv"
-        )
-        self.refreshMV(
-            "core.station_max_valid_from_mv"
-        )
         self.coreTableRespDict.endLoadProcess()
 
     def parameterCoreETL(self):
@@ -1179,12 +1142,6 @@ class Database:
             "INSERT INTO core.parameter_t " +
             "SELECT * FROM stage.parameter_t " +
             "ON CONFLICT DO NOTHING;"
-        )
-        self.refreshMV(
-            "core.parameter_count_mv"
-        )
-        self.refreshMV(
-            "core.parameter_max_valid_from_mv"
         )
         self.coreTableRespDict.endLoadProcess()
 
