@@ -654,7 +654,8 @@ def mydashboard(flaskApp, instance):
         ))
 
         plotSnow.update_layout(
-            title='Durchschnittlicher Schneefall aller Stationen',
+            title='Durchschnittlicher Schneefall aller Stationen in Meter',
+            title_x=0.1,
             margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
             height=360,
             yaxis={
@@ -1012,6 +1013,82 @@ def mydashboard(flaskApp, instance):
         else:
             return dcc.Location(pathname="/", id="hello")
 
+    @dashApp.callback(
+        Output('scatterplot2', 'figure'),
+        [Input('map1', 'clickData')])
+    def callback_graph(clickData):
+        v_index = clickData['points'][0]['pointIndex']
+        station = df_map.iloc[v_index]['station_name']
+
+        # hns000d0
+        # rre150m0
+
+        dfTemp = dfScatterSnow1[dfScatterSnow1['station_name'] == station]
+        # remove first entry because it is often wrong
+        dfTemp = dfTemp.iloc[1:]
+        dfTemp = dfTemp.reset_index()
+
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
+        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
+
+        fig = {
+            'data': [
+                go.Scatter(
+                    name='Schneefall',
+                    x=dfTemp['meas_year'],
+                    y=dfTemp['snow'],
+                    mode='lines',
+                    line_shape='spline',
+                    marker={
+                        'size': 5,
+                        'color': colors['rbb'],
+                        'line': {'width': 1, 'color': 'black'}
+                    }
+                ),
+                go.Scatter(
+                    name='Regression',
+                    x=dfTemp['meas_year'],
+                    y=dfTemp['snow_bestfit'],
+                    mode='lines',
+                    marker={
+                        'size': 5,
+                        'color': colors['rbr'],
+                        'line': {'width': 1, 'color': 'black'}
+                    }
+                )
+            ],
+            'layout': go.Layout(
+                title=f'Schneefall bei {station} in Meter',
+                title_x=0.1,
+                margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+                height=360,
+                yaxis={
+                    # 'title': 'Schneefall (Meter)',
+                    'color': colors['plotAxisTitle'],
+                    'showgrid': True,
+                    'gridwidth': 1,
+                    'gridcolor': colors['plotGrid'],
+                    'rangemode': "tozero"
+                },
+                xaxis={
+                    'showgrid': False,
+                    'color': colors['plotAxisTitle']
+                },
+                paper_bgcolor=colors['BgPlot3'],
+                plot_bgcolor='rgba(0,0,0,0)',
+                legend={
+                    'yanchor': 'top',
+                    'y': 1.20,
+                    'xanchor': 'right',
+                    'x': 0.99
+                }
+            )
+        }
+
+        return fig
+
     # @dashApp.callback(
     #     Output('scatterplot1', 'figure'),
     #     [Input('yaxis', 'value')])
@@ -1074,81 +1151,6 @@ def mydashboard(flaskApp, instance):
     #     }
 
     #     return fig
-
-    @dashApp.callback(
-        Output('scatterplot2', 'figure'),
-        [Input('map1', 'clickData')])
-    def callback_graph(clickData):
-        v_index = clickData['points'][0]['pointIndex']
-        station = df_map.iloc[v_index]['station_name']
-
-        # hns000d0
-        # rre150m0
-
-        dfTemp = dfScatterSnow1[dfScatterSnow1['station_name'] == station]
-        # remove first entry because it is often wrong
-        dfTemp = dfTemp.iloc[1:]
-        dfTemp = dfTemp.reset_index()
-
-        # simple regression line
-        reg = LinearRegression(
-            ).fit(np.vstack(dfTemp.meas_year), dfTemp['snow'])
-        dfTemp['snow_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
-
-        fig = {
-            'data': [
-                go.Scatter(
-                    name='Schneefall',
-                    x=dfTemp['meas_year'],
-                    y=dfTemp['snow'],
-                    mode='lines',
-                    line_shape='spline',
-                    marker={
-                        'size': 5,
-                        'color': colors['rbb'],
-                        'line': {'width': 1, 'color': 'black'}
-                    }
-                ),
-                go.Scatter(
-                    name='Regression',
-                    x=dfTemp['meas_year'],
-                    y=dfTemp['snow_bestfit'],
-                    mode='lines',
-                    marker={
-                        'size': 5,
-                        'color': colors['rbr'],
-                        'line': {'width': 1, 'color': 'black'}
-                    }
-                )
-            ],
-            'layout': go.Layout(
-                title=station,
-                margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
-                height=360,
-                yaxis={
-                    'title': 'Schneefall (Meter)',
-                    'color': colors['plotAxisTitle'],
-                    'showgrid': True,
-                    'gridwidth': 1,
-                    'gridcolor': colors['plotGrid'],
-                    'rangemode': "tozero"
-                },
-                xaxis={
-                    'showgrid': False,
-                    'color': colors['plotAxisTitle']
-                },
-                paper_bgcolor=colors['BgPlot3'],
-                plot_bgcolor='rgba(0,0,0,0)',
-                legend={
-                    'yanchor': 'top',
-                    'y': 1.20,
-                    'xanchor': 'right',
-                    'x': 0.99
-                }
-            )
-        }
-
-        return fig
 
     # @dashApp.callback(
     #     Output('scatterplot2', 'figure'),
