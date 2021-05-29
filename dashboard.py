@@ -428,185 +428,186 @@ def mydashboard(flaskApp, instance):
     )
     dfScatterRain, meanRain = dfScatterRainWrangling()
 
+    def plotMapCreation(dfMap, colors):
+        # creating the map
+        plotMap = go.Figure()
+        plotMap.add_trace(go.Scattermapbox(
+            lat=dfMap['latitude'],
+            lon=dfMap['longitude'],
+            hovertemplate=dfMap['text'],
+            mode='markers',
+            marker={
+                'size': 10,
+                'color': colors['d3'],
+                # 'size': dfMap['avg_now'] * 45,
+                # 'sizemin': 3,
+                # 'color': (
+                #     dfMap['avg_now'] - dfMap['avg_then']
+                #     ) / dfMap['avg_then'],
+                # 'colorscale': px.colors.diverging.BrBG,
+                # 'colorscale': [
+                #     [0, colors['rbr']],
+                #     [0.50, colors['l6']],
+                #     [1, colors['rbb']]
+                # ],
+                # 'sizemode': 'area',
+                'opacity': 0.7
+            }
+        ))
+
+        plotMap.update_layout(
+            title_text='Schneefall',
+            hovermode='closest',
+            showlegend=False,
+            margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
+            height=430,
+            paper_bgcolor=colors['l0'],
+            mapbox_style="open-street-map",
+            mapbox=dict(
+                accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb' +
+                '24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
+                # bearing=0,
+                center=dict(
+                    lat=46.9,
+                    lon=8.2
+                ),
+                zoom=6.5,
+                style='mapbox://styles/joelgrosjean/' +
+                'ckon48gdw1yob17ozstokzg9c'
+            )
+        )
+
+        return plotMap
+
+    def plotRainCreation(dfScatterRain, meanRain, colors):
+        # creating the rain barplot
+        plotRain = go.Figure()
+
+        plotRain.add_trace(go.Bar(
+            name='Regenfall',
+            x=dfScatterRain["meas_year"],
+            y=dfScatterRain["dev_rain"],
+            base=meanRain,
+            marker={
+                'color': colors['rbb'],
+                # 'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plotRain.add_trace(go.Scatter(
+            name='Regression',
+            x=dfScatterRain["meas_year"],
+            y=dfScatterRain["rain_bestfit"],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
+                'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plotRain.update_layout(
+            title='∅ Maximaler Niederschlag aller Stationen in cm',
+            title_x=0.05,
+            yaxis={
+                # 'title': 'maximaler Niederschlag in cm',
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid'],
+                'range': [
+                    dfScatterRain.avg_rain.min() * 0.95,
+                    dfScatterRain.avg_rain.max() * 1.05
+                ]
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
+            },
+            hovermode='closest',
+            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+            height=360,
+            paper_bgcolor=colors['BgPlot5'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            legend={
+                'yanchor': 'top',
+                'y': 0.99,
+                'xanchor': 'left',
+                'x': 0.01
+            }
+        )
+
+        return plotRain
+
+    def plotSnowCreation(dfSnowAll, colors):
+        # creating the snow scatterplot with all stations
+        plotSnow = go.Figure()
+
+        plotSnow.add_trace(go.Scatter(
+            name='Schneefall',
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['meas_value'],
+            mode='lines',
+            line_shape='spline',
+            marker={
+                'size': 5,
+                'color': colors['rbb'],
+                'line': {
+                    'width': 1,
+                    'color': 'black'
+                }
+            }
+        ))
+
+        plotSnow.add_trace(go.Scatter(
+            name='Regression',
+            x=dfSnowAll['meas_year'],
+            y=dfSnowAll['bestfit'],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
+                'line': {
+                    'width': 1,
+                    'color': 'black'
+                }
+            }
+        ))
+
+        plotSnow.update_layout(
+            title='Durchschnittlicher Schneefall aller Stationen in Meter',
+            title_x=0.1,
+            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+            height=360,
+            yaxis={
+                # 'title': 'Schneefall (Meter)',
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid'],
+                'rangemode': "tozero",
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
+            },
+            paper_bgcolor=colors['BgPlot3'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            legend={
+                'yanchor': 'top',
+                'y': 0.99,
+                'xanchor': 'right',
+                'x': 0.99
+            }
+        )
+
+        return plotSnow
+
     def createDashboard():
-        def plotMapCreation(dfMap, colors):
-            # creating the map
-            plotMap = go.Figure()
-            plotMap.add_trace(go.Scattermapbox(
-                lat=dfMap['latitude'],
-                lon=dfMap['longitude'],
-                hovertemplate=dfMap['text'],
-                mode='markers',
-                marker={
-                    'size': 10,
-                    'color': colors['d3'],
-                    # 'size': dfMap['avg_now'] * 45,
-                    # 'sizemin': 3,
-                    # 'color': (
-                    #     dfMap['avg_now'] - dfMap['avg_then']
-                    #     ) / dfMap['avg_then'],
-                    # 'colorscale': px.colors.diverging.BrBG,
-                    # 'colorscale': [
-                    #     [0, colors['rbr']],
-                    #     [0.50, colors['l6']],
-                    #     [1, colors['rbb']]
-                    # ],
-                    # 'sizemode': 'area',
-                    'opacity': 0.7
-                }
-            ))
-
-            plotMap.update_layout(
-                title_text='Schneefall',
-                hovermode='closest',
-                showlegend=False,
-                margin={'l': 0, 'b': 0, 't': 0, 'r': 0},
-                height=430,
-                paper_bgcolor=colors['l0'],
-                mapbox_style="open-street-map",
-                mapbox=dict(
-                    accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb' +
-                    '24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
-                    # bearing=0,
-                    center=dict(
-                        lat=46.9,
-                        lon=8.2
-                    ),
-                    zoom=6.5,
-                    style='mapbox://styles/joelgrosjean/' +
-                    'ckon48gdw1yob17ozstokzg9c'
-                )
-            )
-
-            return plotMap
-
-        def plotRainCreation(dfScatterRain, meanRain, colors):
-            # creating the rain barplot
-            plotRain = go.Figure()
-
-            plotRain.add_trace(go.Bar(
-                name='Regenfall',
-                x=dfScatterRain["meas_year"],
-                y=dfScatterRain["dev_rain"],
-                base=meanRain,
-                marker={
-                    'color': colors['rbb'],
-                    # 'line': {'width': 1, 'color': 'black'}
-                }
-            ))
-
-            plotRain.add_trace(go.Scatter(
-                name='Regression',
-                x=dfScatterRain["meas_year"],
-                y=dfScatterRain["rain_bestfit"],
-                mode='lines',
-                marker={
-                    'size': 5,
-                    'color': colors['rbr'],
-                    'line': {'width': 1, 'color': 'black'}
-                }
-            ))
-
-            plotRain.update_layout(
-                title='∅ Maximaler Niederschlag aller Stationen in cm',
-                title_x=0.05,
-                yaxis={
-                    # 'title': 'maximaler Niederschlag in cm',
-                    'color': colors['plotAxisTitle'],
-                    'showgrid': True,
-                    'gridwidth': 1,
-                    'gridcolor': colors['plotGrid'],
-                    'range': [
-                        dfScatterRain.avg_rain.min() * 0.95,
-                        dfScatterRain.avg_rain.max() * 1.05
-                    ]
-                },
-                xaxis={
-                    'showgrid': False,
-                    'color': colors['plotAxisTitle'],
-                    'showline': True,
-                    'linecolor': colors['plotGrid']
-                },
-                hovermode='closest',
-                margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
-                height=360,
-                paper_bgcolor=colors['BgPlot5'],
-                plot_bgcolor='rgba(0,0,0,0)',
-                legend={
-                    'yanchor': 'top',
-                    'y': 0.99,
-                    'xanchor': 'left',
-                    'x': 0.01
-                }
-            )
-
-            return plotRain
-
-        def plotSnowCreation(dfSnowAll, colors):
-            # creating the snow scatterplot with all stations
-            plotSnow = go.Figure()
-
-            plotSnow.add_trace(go.Scatter(
-                name='Schneefall',
-                x=dfSnowAll['meas_year'],
-                y=dfSnowAll['meas_value'],
-                mode='lines',
-                line_shape='spline',
-                marker={
-                    'size': 5,
-                    'color': colors['rbb'],
-                    'line': {
-                        'width': 1,
-                        'color': 'black'
-                    }
-                }
-            ))
-
-            plotSnow.add_trace(go.Scatter(
-                name='Regression',
-                x=dfSnowAll['meas_year'],
-                y=dfSnowAll['bestfit'],
-                mode='lines',
-                marker={
-                    'size': 5,
-                    'color': colors['rbr'],
-                    'line': {
-                        'width': 1,
-                        'color': 'black'
-                    }
-                }
-            ))
-
-            plotSnow.update_layout(
-                title='Durchschnittlicher Schneefall aller Stationen in Meter',
-                title_x=0.1,
-                margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
-                height=360,
-                yaxis={
-                    # 'title': 'Schneefall (Meter)',
-                    'color': colors['plotAxisTitle'],
-                    'showgrid': True,
-                    'gridwidth': 1,
-                    'gridcolor': colors['plotGrid'],
-                    'rangemode': "tozero",
-                },
-                xaxis={
-                    'showgrid': False,
-                    'color': colors['plotAxisTitle'],
-                    'showline': True,
-                    'linecolor': colors['plotGrid']
-                },
-                paper_bgcolor=colors['BgPlot3'],
-                plot_bgcolor='rgba(0,0,0,0)',
-                legend={
-                    'yanchor': 'top',
-                    'y': 0.99,
-                    'xanchor': 'right',
-                    'x': 0.99
-                }
-            )
-
-            return plotSnow
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
@@ -943,75 +944,25 @@ def mydashboard(flaskApp, instance):
     @dashApp.callback(
         Output('scatterplot2', 'figure'),
         [Input('map1', 'clickData')])
-    def callback_graph(clickData):
+    def callbackSnow(clickData):
         v_index = clickData['points'][0]['pointIndex']
         station = dfMap.iloc[v_index]['station_name']
 
-        dfTemp = dfScatterSnow[dfScatterSnow['station_name'] == station]
-        dfTemp = dfTemp.reset_index()
+        dfSnowAll = dfScatterSnow[dfScatterSnow['station_name'] == station]
+        dfSnowAll = dfSnowAll.reset_index()
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfTemp.meas_year), dfTemp['meas_value'])
-        dfTemp['meas_value_bestfit'] = reg.predict(np.vstack(dfTemp.meas_year))
+            ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
+        dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.meas_year))
 
-        fig = {
-            'data': [
-                go.Scatter(
-                    name='Schneefall',
-                    x=dfTemp['meas_year'],
-                    y=dfTemp['meas_value'],
-                    mode='lines',
-                    line_shape='spline',
-                    marker={
-                        'size': 5,
-                        'color': colors['rbb'],
-                        'line': {'width': 1, 'color': 'black'}
-                    }
-                ),
-                go.Scatter(
-                    name='Regression',
-                    x=dfTemp['meas_year'],
-                    y=dfTemp['meas_value_bestfit'],
-                    mode='lines',
-                    marker={
-                        'size': 5,
-                        'color': colors['rbr'],
-                        'line': {'width': 1, 'color': 'black'}
-                    }
-                )
-            ],
-            'layout': go.Layout(
-                title=f'Schneefall bei {station} in Meter',
-                title_x=0.05,
-                margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
-                height=360,
-                yaxis={
-                    # 'title': 'Schneefall (Meter)',
-                    'color': colors['plotAxisTitle'],
-                    'showgrid': True,
-                    'gridwidth': 1,
-                    'gridcolor': colors['plotGrid'],
-                    'rangemode': "tozero",
-                },
-                xaxis={
-                    'showgrid': False,
-                    'color': colors['plotAxisTitle'],
-                    'showline': True,
-                    'linecolor': colors['plotGrid']
-                },
-                paper_bgcolor=colors['BgPlot3'],
-                plot_bgcolor='rgba(0,0,0,0)',
-                legend={
-                    'yanchor': 'top',
-                    'y': 0.99,
-                    'xanchor': 'right',
-                    'x': 0.99
-                }
-            )
-        }
+        plotSnow = plotSnowCreation(dfSnowAll, colors)
 
-        return fig
+        plotSnow.update_layout(
+            title=f'Durchschnittlicher Schneefall bei {station} in Meter'
+        )
+
+        return plotSnow
 
     # @dashApp.callback(
     #     Output('scatterplot1', 'figure'),
