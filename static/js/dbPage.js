@@ -23,12 +23,12 @@ function createTableLists() {
     xhr.open("POST", "/admin/getTablesList", true);
     xhr.send()
 
-    setInterval( function() {
-        postReq("/admin/getStageTablesStatus")
-    }, refreshInterval)
-    setInterval( function() {
-        postReq("/admin/getCoreTablesStatus")
-    }, refreshInterval)
+    // setInterval( function() {
+    //     postReq("/admin/getStageTablesStatus")
+    // }, refreshInterval)
+    // setInterval( function() {
+    //     postReq("/admin/getCoreTablesStatus")
+    // }, refreshInterval)
 }
 
 function updateBreadcrumbNav(serviceList) {
