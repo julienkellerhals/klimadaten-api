@@ -704,13 +704,42 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '60%',
+                    'width': '40%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'left'
                 }
                 ),
-                # second plot first row
+                # 2nd plot 1st row
+                html.Div([
+                    html.Div([
+                        html.H4('Beschreibung')
+                    ], style={
+                        'padding-left': 20,
+                        'padding-top': 5,
+                        'height': 30,
+                    }
+                    ),
+                    html.Div([
+                    ], style={
+                        'backgroundColor': colors['BgPlot2'],
+                        'height': 430,
+                        'box-shadow': shadow,
+                        'position': 'relative',
+                        'border-radius': 5,
+                        'margin': '10px',
+                        'vertical-align': 'top',
+                        'padding': '5px'
+                    }
+                    ),
+                ], style={
+                    'width': '20%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top',
+                    'horizontal-align': 'center'
+                }
+                ),
+                # 3rd plot first row
                 html.Div([
                     html.Div([
                         html.H4("Veränderung des Regenfalls")
@@ -963,135 +992,6 @@ def mydashboard(flaskApp, instance):
         )
 
         return plotSnow
-
-    # @dashApp.callback(
-    #     Output('scatterplot1', 'figure'),
-    #     [Input('yaxis', 'value')])
-    # def update_graph(yaxis_name):
-    #     df = pd.read_sql(
-    #         f"""SELECT
-    #         AVG(meas_value),
-    #         meas_date
-    #         FROM core.measurements_t
-    #         WHERE meas_name = {"'"+ yaxis_name +"'"}
-    #         GROUP BY meas_date""",
-    #         engine
-    #     )
-
-    #     df = df.reset_index()
-
-    #     # simple regression line
-    #     reg = LinearRegression().fit(np.vstack(df.index), df['avg'])
-    #     df['bestfit'] = reg.predict(np.vstack(df.index))
-
-    #     fig = {
-    #         'data': [go.Scatter(
-    #             name=yaxis_name,
-    #             x=df["meas_date"],
-    #             y=df["avg"],
-    #             mode='lines',
-    #             marker={
-    #                 'size': 5,
-    #                 'color': colors['rbb'],
-    #                 'line': {'width': 1, 'color': 'black'}
-    #             }
-    #         ), go.Scatter(
-    #             name='regression line',
-    #             x=df["meas_date"],
-    #             y=df["bestfit"],
-    #             mode='lines',
-    #             marker={
-    #                 'size': 5,
-    #                 'color': colors['rbr'],
-    #                 'line': {'width': 1, 'color': 'black'}
-    #             }
-    #         )
-    #         ],
-    #         'layout': go.Layout(
-    #             title='Veränderungen der Variabeln über Zeit',
-    #             xaxis={'title': 'time in years'},
-    #             yaxis={'title': yaxis_name},
-    #             hovermode='closest',
-    #             margin={'l': 60, 'b': 60, 't': 50, 'r': 10},
-    #             height=420,
-    #             paper_bgcolor=colors['BgPlot2'],
-    #             plot_bgcolor='rgba(0,0,0,0)',
-    #             legend={
-    #                 'yanchor': 'top',
-    #                 'y': 0.99,
-    #                 'xanchor': 'right',
-    #                 'x': 0.99
-    #             }
-    #         )
-    #     }
-
-    #     return fig
-
-    # @dashApp.callback(
-    #     Output('scatterplot2', 'figure'),
-    #     [Input('stationsOver1500', 'n_clicks')])
-    # def callback_button(n_clicks):
-    #     # creating the snow scatterplot with all stations
-    #     plotSnow = go.Figure()
-
-    #     plotSnow.add_trace(go.Scatter(
-    #         name='Schneefall',
-    #         x=dfSnowO1500['meas_year'],
-    #         y=dfSnowO1500['snow'],
-    #         mode='lines',
-    #         line_shape='spline',
-    #         marker={
-    #             'size': 5,
-    #             'color': colors['rbb'],
-    #             'line': {
-    #                 'width': 1,
-    #                 'color': 'black'
-    #             }
-    #         }
-    #     ))
-
-    #     plotSnow.add_trace(go.Scatter(
-    #         name='Regression',
-    #         x=dfSnowO1500['meas_year'],
-    #         y=dfSnowO1500['bestfit'],
-    #         mode='lines',
-    #         marker={
-    #             'size': 5,
-    #             'color': colors['rbr'],
-    #             'line': {
-    #                 'width': 1,
-    #                 'color': 'black'
-    #             }
-    #         }
-    #     ))
-
-    #     plotSnow.update_layout(
-    #         title='Durchschnitt aller Stationen oberhalb 1500 m.ü.M.',
-    #         margin={'l': 50, 'b': 20, 't': 40, 'r': 10},
-    #         height=360,
-    #         yaxis={
-    #             'title': 'Schneefall (Meter)',
-    #             'color': colors['plotAxisTitle'],
-    #             'showgrid': True,
-    #             'gridwidth': 1,
-    #             'gridcolor': colors['plotGrid'],
-    #             'rangemode': "tozero"
-    #         },
-    #         xaxis={
-    #             'showgrid': False,
-    #             'color': colors['plotAxisTitle']
-    #         },
-    #         paper_bgcolor=colors['BgPlot3'],
-    #         plot_bgcolor='rgba(0,0,0,0)',
-    #         legend={
-    #             'yanchor': 'bottom',
-    #             'y': 0.99,
-    #             'xanchor': 'right',
-    #             'x': 0.99
-    #         }
-    #     )
-
-    #     return plotSnow
 
     createDashboard()
     return dashApp
