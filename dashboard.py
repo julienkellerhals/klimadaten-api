@@ -399,13 +399,8 @@ def mydashboard(flaskApp, instance):
         )
 
         dfScatterRainExtreme = dfScatterRainExtreme.dropna()
-        meanRain = dfScatterRainExtreme['meas_value'].mean()
-        dfScatterRainExtreme['deviation'] = dfScatterRainExtreme[
-            'meas_value'] - meanRain
-        dfScatterRainExtreme['color'] = np.where(
-            dfScatterRainExtreme['deviation'] >= 0, True, False)
 
-        return (dfScatterRainExtreme, meanRain)
+        return dfScatterRainExtreme
 
     def dfRainExtremeAllWrangling(dfStations, dfScatterRainExtreme, medianValueTotalRainExtreme):
         dfAll = pd.merge(
@@ -425,9 +420,14 @@ def mydashboard(flaskApp, instance):
         dfRainExtremeAll = dfAll.groupby(
             'meas_year'
         ).agg(
-            meas_value=('meas_value', 'mean'),
-            deviation=('deviation', 'mean')
+            meas_value=('meas_value', 'mean')
         )
+
+        meanRain = dfRainExtremeAll['meas_value'].mean()
+        dfRainExtremeAll['deviation'] = dfRainExtremeAll[
+            'meas_value'] - meanRain
+        dfRainExtremeAll['color'] = np.where(
+            dfRainExtremeAll['deviation'] >= 0, True, False)
 
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
         # dfRainExtremeAll = dfRainExtremeAll[
@@ -440,7 +440,7 @@ def mydashboard(flaskApp, instance):
         dfRainExtremeAll['bestfit'] = reg.predict(
             np.vstack(dfRainExtremeAll.index))
 
-        return dfRainExtremeAll
+        return (dfRainExtremeAll, meanRain)
 
     # call start functions
     dfSelection = dfSelectionWrangling()
@@ -454,7 +454,9 @@ def mydashboard(flaskApp, instance):
     ]
     medianValueTotalSnow = dfSelectionSnow['min'].median()
 
-    dfSelectionRainExtreme = dfSelection[dfSelection.meas_name == rainExtremeParam]
+    dfSelectionRainExtreme = dfSelection[
+        dfSelection.meas_name == rainExtremeParam
+    ]
     dfSelectionRainExtreme = dfSelectionRainExtreme[
         dfSelectionRainExtreme.station_name.isin(list(dfStations.station_name))
     ]
@@ -465,8 +467,8 @@ def mydashboard(flaskApp, instance):
     dfSnowAll = dfSnowAllWrangling(
         dfStations, dfScatterSnow, medianValueTotalSnow
     )
-    dfScatterRainExtreme, meanRain = dfScatterRainExtremeWrangling()
-    dfRainExtremeAll = dfRainExtremeAllWrangling(
+    dfScatterRainExtreme = dfScatterRainExtremeWrangling()
+    dfRainExtremeAll, meanRain = dfRainExtremeAllWrangling(
         dfStations, dfScatterRainExtreme, medianValueTotalRainExtreme
     )
 
@@ -522,7 +524,7 @@ def mydashboard(flaskApp, instance):
 
         return plotMap
 
-    def plotRainCreation(dfScatterRainExtreme, meanRain, colors):
+    def PlotRainExtremeCreation(dfRainExtremeAll, meanRain, colors):
         # creating the rain barplot
         plotRain = go.Figure()
 
@@ -655,7 +657,7 @@ def mydashboard(flaskApp, instance):
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
-        plotRain = plotRainCreation(dfRainExtremeAll, meanRain, colors)
+        plotRain = PlotRainExtremeCreation(dfRainExtremeAll, meanRain, colors)
         plotSnow = plotSnowCreation(dfSnowAll, colors)
 
         dashApp.layout = html.Div([
@@ -720,7 +722,8 @@ def mydashboard(flaskApp, instance):
                         html.H4(
                             'Landkarte zum Auswählen der Stationen',
                             style={'color': colors['plotTitle']}
-                        )
+                        ),
+                        html.Div(id='intermediateValue', style={'display': 'none'})
                     ], style={
                         'padding-left': 20,
                         'padding-top': 5,
@@ -994,12 +997,17 @@ def mydashboard(flaskApp, instance):
             return dcc.Location(pathname="/", id="hello")
 
     @dashApp.callback(
-        Output('plotSnow', 'figure'),
+        Output('intermediateValue', 'children'),
         [Input('plotMap', 'clickData')])
-    def callbackSnow(clickData):
+    def callbackMap(clickData):
         v_index = clickData['points'][0]['pointIndex']
         station = dfMap.iloc[v_index]['station_name']
+        return station
 
+    @dashApp.callback(
+        Output('plotSnow', 'figure'),
+        [Input('intermediateValue', 'children')])
+    def callbackSnow(station):
         dfSnowAll = dfScatterSnow[dfScatterSnow['station_name'] == station]
         dfSnowAll = dfSnowAll.reset_index()
 
@@ -1016,28 +1024,39 @@ def mydashboard(flaskApp, instance):
 
         return plotSnow
 
-    # @dashApp.callback(
-    #     Output('plotRainExtreme', 'figure'),
-    #     [Input('plotMap', 'clickData')])
-    # def callbackRainExtreme(clickData):
-    #     v_index = clickData['points'][0]['pointIndex']
-    #     station = dfMap.iloc[v_index]['station_name']
+    @dashApp.callback(
+        Output('plotRainExtreme', 'figure'),
+        [Input('intermediateValue', 'children')])
+    def callbackRainExtreme(station):
+        dfRainExtremeAll = dfScatterRainExtreme[
+            dfScatterRainExtreme['station_name'] == station]
+        dfRainExtremeAll = dfRainExtremeAll.reset_index()
 
-    #     dfSnowAll = dfScatterSnow[dfScatterSnow['station_name'] == station]
-    #     dfSnowAll = dfSnowAll.reset_index()
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(
+                dfRainExtremeAll.meas_year),
+                dfRainExtremeAll['meas_value']
+            )
+        dfRainExtremeAll['bestfit'] = reg.predict(
+            np.vstack(dfRainExtremeAll.meas_year)
+        )
 
-    #     # simple regression line
-    #     reg = LinearRegression(
-    #         ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
-    #     dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.meas_year))
+        meanRain = dfRainExtremeAll['meas_value'].mean()
+        dfRainExtremeAll['deviation'] = dfRainExtremeAll[
+            'meas_value'] - meanRain
+        dfRainExtremeAll['color'] = np.where(
+            dfRainExtremeAll['deviation'] >= 0, True, False)
 
-    #     plotSnow = plotSnowCreation(dfSnowAll, colors)
+        plotRainExtreme = PlotRainExtremeCreation(
+            dfRainExtremeAll, meanRain, colors
+        )
 
-    #     plotSnow.update_layout(
-    #         title=f'Durchschnittlicher Schneefall bei {station} in Meter'
-    #     )
+        plotRainExtreme.update_layout(
+            title=f'∅ Maximaler Niederschlag bei {station} in cm'
+        )
 
-    #     return plotSnow
+        return plotRainExtreme
 
     createDashboard()
     return dashApp
