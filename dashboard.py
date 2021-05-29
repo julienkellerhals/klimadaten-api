@@ -343,7 +343,7 @@ def mydashboard(flaskApp, instance):
 
         return dfScatterSnow
 
-    def dfSnowAllWrangling(dfStations, dfScatterSnow, medianValueTotalSnow):
+    def dfSnowAllWrangling(dfStations, dfScatterSnow, snowYear):
         dfAll = pd.merge(
             how='inner',
             left=dfStations,
@@ -365,7 +365,7 @@ def mydashboard(flaskApp, instance):
         )
 
         dfSnowAll = dfSnowAll.reset_index()
-        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= medianValueTotalSnow]
+        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= snowYear]
 
         # simple regression line
         reg = LinearRegression(
@@ -402,7 +402,11 @@ def mydashboard(flaskApp, instance):
 
         return dfScatterRainExtreme
 
-    def dfRainExtremeAllWrangling(dfStations, dfScatterRainExtreme, medianValueTotalRainExtreme):
+    def dfRainExtremeAllWrangling(
+        dfStations,
+        dfScatterRainExtreme,
+        rainExtremeYear
+    ):
         dfAll = pd.merge(
             how='inner',
             left=dfStations,
@@ -430,8 +434,9 @@ def mydashboard(flaskApp, instance):
             dfRainExtremeAll['deviation'] >= 0, True, False)
 
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
+        # TODO fix param and desc
         # dfRainExtremeAll = dfRainExtremeAll[
-        #     dfRainExtremeAll.meas_year >= medianValueTotalRainExtreme]
+        #     dfRainExtremeAll.meas_year >= rainExtremeYear]
 
         # simple regression line
         reg = LinearRegression(
@@ -452,7 +457,7 @@ def mydashboard(flaskApp, instance):
     dfSelectionSnow = dfSelectionSnow[
         dfSelectionSnow.station_name.isin(list(dfStations.station_name))
     ]
-    medianValueTotalSnow = dfSelectionSnow['min'].median()
+    snowYear = dfSelectionSnow['min'].median()
 
     dfSelectionRainExtreme = dfSelection[
         dfSelection.meas_name == rainExtremeParam
@@ -460,16 +465,16 @@ def mydashboard(flaskApp, instance):
     dfSelectionRainExtreme = dfSelectionRainExtreme[
         dfSelectionRainExtreme.station_name.isin(list(dfStations.station_name))
     ]
-    medianValueTotalRainExtreme = dfSelectionRainExtreme['min'].median()
+    rainExtremeYear = dfSelectionRainExtreme['min'].median()
 
     # call plot functions
     dfScatterSnow = dfScatterSnowWrangling()
     dfSnowAll = dfSnowAllWrangling(
-        dfStations, dfScatterSnow, medianValueTotalSnow
+        dfStations, dfScatterSnow, snowYear
     )
     dfScatterRainExtreme = dfScatterRainExtremeWrangling()
     dfRainExtremeAll, meanRain = dfRainExtremeAllWrangling(
-        dfStations, dfScatterRainExtreme, medianValueTotalRainExtreme
+        dfStations, dfScatterRainExtreme, rainExtremeYear
     )
 
     # functions for plot creation
@@ -723,7 +728,10 @@ def mydashboard(flaskApp, instance):
                             'Landkarte zum Auswählen der Stationen',
                             style={'color': colors['plotTitle']}
                         ),
-                        html.Div(id='intermediateValue', style={'display': 'none'})
+                        html.Div(
+                            id='intermediateValue',
+                            style={'display': 'none'}
+                        )
                     ], style={
                         'padding-left': 20,
                         'padding-top': 5,
