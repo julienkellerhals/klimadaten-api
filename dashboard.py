@@ -686,7 +686,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         dcc.Graph(
                             className='map-plot',
-                            id='map1',
+                            id='plotMap',
                             figure=plotMap,
                             config={
                                 'displayModeBar': False,
@@ -750,41 +750,20 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                     html.Div([
-                        # html.Div([
-                        #     dcc.Graph(
-                        #         id='scatterplot1',
-                        #         config={
-                        #             'displayModeBar': False,
-                        #             'staticPlot': False
-                        #         }
-                        #     )
-                        # ], style={
-                        #     'backgroundColor': colors['BgPlot2'],
-                        #     'width': '70%',
-                        #     'display': 'inline-block',
-                        #     'position': 'relative',
-                        #     'horizontal-align': 'left'
-                        # }
-                        # ),
-                        # html.Div([
-                        #     dcc.Dropdown(
-                        #         id='yaxis',
-                        #         options=[
-                        #             {'label': i, 'value': i}
-                        #             for i in features
-                        #         ],
-                        #         value='breclod0'
-                        #     ),
-                        #     html.H4('Some random text i guess')
-                        # ], style={
-                        #     'backgroundColor': colors['BgPlot2'],
-                        #     'width': '28%',
-                        #     'display': 'inline-block',
-                        #     'vertical-align': 'top',
-                        #     'horizontal-align': 'right',
-                        #     'padding': 5
-                        # }
-                        # )
+                        html.Div([
+                            # dcc.Graph(
+                            #     id='plotRain',
+                            #     figure=plotSnow,
+                            #     config={
+                            #         'displayModeBar': False,
+                            #         'staticPlot': False
+                            #     }
+                            # )
+                        ], style={
+                            'backgroundColor': colors['BgPlot3'],
+                            'height': 420
+                        }
+                        )
                     ], style={
                         'backgroundColor': colors['BgPlot2'],
                         'height': 430,
@@ -822,7 +801,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.Div([
                             dcc.Graph(
-                                id='scatterRain',
+                                id='plotRainExtreme',
                                 figure=plotRain,
                                 config={
                                     'displayModeBar': False,
@@ -893,7 +872,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.Div([
                             dcc.Graph(
-                                id='scatterplot2',
+                                id='plotSnow',
                                 figure=plotSnow,
                                 config={
                                     'displayModeBar': False,
@@ -971,8 +950,8 @@ def mydashboard(flaskApp, instance):
             return dcc.Location(pathname="/", id="hello")
 
     @dashApp.callback(
-        Output('scatterplot2', 'figure'),
-        [Input('map1', 'clickData')])
+        Output('plotSnow', 'figure'),
+        [Input('plotMap', 'clickData')])
     def callbackSnow(clickData):
         v_index = clickData['points'][0]['pointIndex']
         station = dfMap.iloc[v_index]['station_name']
