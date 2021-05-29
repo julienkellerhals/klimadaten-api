@@ -138,113 +138,70 @@ def mydashboard(flaskApp, instance):
         external_stylesheets=external_stylesheets
     )
 
-    # data wrangling map data
-    dfMap1 = pd.read_sql(
-        f"""
-        SELECT
-        avg(m.meas_value) avg_now,
-        k.station_name,
-        k.longitude,
-        k.latitude,
-        k.elevation
-        FROM core.measurements_t m
-        LEFT JOIN core.station_t k
-        ON (m.station = k.station_short_name)
-        WHERE m.meas_date >= '2010-01-01'
-        AND m.meas_date < '2020-01-01'
-        AND m.meas_name = {"'"+ snowParam +"'"}
-        AND k.parameter = {"'"+ snowParam +"'"}
-        AND m.valid_to = '2262-04-11'
-        AND k.valid_to = '2262-04-11'
-        GROUP BY k.station_name,
-        k.longitude,
-        k.latitude,
-        k.elevation;
-        """,
-        engine
-    )
-
-    dfMap2 = pd.read_sql(
-        f"""
-        SELECT
-        avg(m.meas_value) avg_then,
-        k.station_name
-        FROM core.measurements_t m
-        LEFT JOIN core.station_t k
-        ON (m.station = k.station_short_name)
-        WHERE m.meas_date >= '1970-01-01'
-        AND m.meas_date < '1980-01-01'
-        AND m.meas_name = {"'"+ snowParam +"'"}
-        AND k.parameter = {"'"+ snowParam +"'"}
-        AND m.valid_to = '2262-04-11'
-        AND k.valid_to = '2262-04-11'
-        GROUP BY k.station_name
-        """,
-        engine
-    )
-
-    # Select the stations with the highest quality data
-    dfStations = pd.read_sql(
-        """
-        SELECT
-            station_name,
-            station_short_name,
-            meas_name,
-            min(meas_year),
-            COUNT(*)
-        FROM(
+    def dfSelectionWrangling():
+        # Select the stations with the highest quality data
+        dfSelection = pd.read_sql(
+            """
             SELECT
-                extract(year from m.meas_date) as meas_year,
-                k.station_short_name,
+                station_name,
+                station_short_name,
+                meas_name,
+                min(meas_year),
+                COUNT(*)
+            FROM(
+                SELECT
+                    extract(year from m.meas_date) as meas_year,
+                    k.station_short_name,
+                    k.station_name,
+                    m.meas_name
+                FROM core.measurements_t m
+                JOIN core.station_t k
+                ON (m.station = k.station_short_name)
+                WHERE m.meas_name IN (
+                    'hns000y0',
+                    'hto000y0',
+                    'rre150y0',
+                    'rzz150yx',
+                    'rhh150yx',
+                    'tnd00xy0',
+                    'tre200y0'
+                )
+                AND k.parameter IN (
+                    'hns000y0',
+                    'hto000y0',
+                    'rre150y0',
+                    'rzz150yx',
+                    'rhh150yx',
+                    'tnd00xy0',
+                    'tre200y0'
+                )
+                AND m.valid_to = '2262-04-11'
+                AND k.valid_to = '2262-04-11'
+                GROUP BY
+                meas_year,
                 k.station_name,
+                k.station_short_name,
                 m.meas_name
-            FROM core.measurements_t m
-            JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_name IN (
-                'hns000y0',
-                'hto000y0',
-                'rre150y0',
-                'rzz150yx',
-                'rhh150yx',
-                'tnd00xy0',
-                'tre200y0'
-            )
-            AND k.parameter IN (
-                'hns000y0',
-                'hto000y0',
-                'rre150y0',
-                'rzz150yx',
-                'rhh150yx',
-                'tnd00xy0',
-                'tre200y0'
-            )
-            AND m.valid_to = '2262-04-11'
-            AND k.valid_to = '2262-04-11'
+            ) AS filtered
             GROUP BY
-            meas_year,
-            k.station_name,
-            k.station_short_name,
-            m.meas_name
-        ) AS filtered
-        GROUP BY
-            station_name,
-            station_short_name,
-            station_name,
-            meas_name
-        HAVING COUNT(*) >= 30
-        ORDER BY COUNT(*) DESC
-        """,
-        engine
-    )
+                station_name,
+                station_short_name,
+                station_name,
+                meas_name
+            HAVING COUNT(*) >= 30
+            ORDER BY COUNT(*) DESC
+            """,
+            engine
+        )
 
-    dfStations['years'] = 2020 - dfStations['min']
-    dfStations['ratio'] = dfStations['count'] / dfStations['years']
-    dfStations = dfStations[dfStations.ratio >= 0.90]
+        dfSelection['years'] = 2020 - dfSelection['min']
+        dfSelection['ratio'] = dfSelection['count'] / dfSelection['years']
+        dfSelection = dfSelection[dfSelection.ratio >= 0.90]
 
-    dfStationsSnow = dfStations[dfStations.meas_name == 'hns000y0']
+        return dfSelection
 
-    dfStations = dfStations.groupby([
+    def dfStationsWrangling(dfSelection):
+        dfStations = dfSelection.groupby([
             'station_short_name',
             'station_name'
         ]).agg(
@@ -252,168 +209,224 @@ def mydashboard(flaskApp, instance):
             # min = ('min', 'min'),
             # ratio = ('ratio', 'min')
         ).reset_index()
-    dfStations = dfStations[dfStations.meas_name == 7]
+        dfStations = dfStations[dfStations.meas_name == 7]
 
-    dfStationsSnow = dfStationsSnow[
-        dfStationsSnow.station_name.isin(list(dfStations.station_name))
-    ]
-    medianValueTotalSnow = dfStationsSnow['min'].median()
+        return dfStations
 
-    dfMap = pd.merge(
-        how='inner',
-        left=dfMap1,
-        right=dfMap2,
-        left_on='station_name',
-        right_on='station_name'
-    )
-
-    dfMap = pd.merge(
-        how='inner',
-        left=dfMap,
-        right=dfStations,
-        left_on='station_name',
-        right_on='station_name'
-    )
-
-    # data wrangling for longitude and latitude
-    dfMap['lon'] = dfMap['longitude'].str.extract(r'(\d+).$')
-    dfMap['lon'] = pd.to_numeric(dfMap['lon'])
-    dfMap['lon'] = round(dfMap['lon']/60, 3)
-    dfMap['lon'] = dfMap['lon'].apply(str)
-    dfMap['longitude'] = dfMap['longitude'].str.extract(r'(^\d+)') + '.' + \
-        dfMap['lon'].str.extract(r'(\d+)$')
-    dfMap = dfMap.drop('lon', axis=1)
-    dfMap['lat'] = dfMap['latitude'].str.extract(r'(\d+).$')
-    dfMap['lat'] = pd.to_numeric(dfMap['lat'])
-    dfMap['lat'] = round(dfMap['lat']/60, 3)
-    dfMap['lat'] = dfMap['lat'].apply(str)
-    dfMap['latitude'] = dfMap['latitude'].str.extract(r'(^\d+)') + '.' + \
-        dfMap['lat'].str.extract(r'(\d+)$')
-    dfMap = dfMap.drop('lat', axis=1)
-    dfMap = dfMap.astype({'longitude': 'float', 'latitude': 'float'})
-    dfMap = dfMap.groupby(['station_name']).agg(
-        avg_now=('avg_now', 'mean'),
-        longitude=('longitude', 'mean'),
-        latitude=('latitude', 'mean'),
-        elevation=('elevation', 'mean'),
-        avg_then=('avg_then', 'mean'),
-    ).reset_index()
-
-    # add text column for map pop-up
-    dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
-        ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
-        '<br>Ø Schneefall pro Tag 1970-1980: ' + \
-        (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
-        '<br>Ø Schneefall pro Tag 2010-2020: ' + \
-        (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
-        '<br>Veränderung: ' + \
-        (round(((
-            dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
-        ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
-
-    # data wrangling scatterplot snow
-    dfScatterSnow = pd.read_sql(
-        f"""
-        SELECT
-            extract(year from m.meas_date) as meas_year,
+    def dfMapWrangling(dfStations, snowParam):
+        # data wrangling map data
+        dfMap1 = pd.read_sql(
+            f"""
+            SELECT
+            avg(m.meas_value) avg_now,
             k.station_name,
-            sum(m.meas_value) meas_value,
-            m.station,
+            k.longitude,
+            k.latitude,
             k.elevation
-        FROM core.measurements_t m
-        JOIN core.station_t k
-        ON (m.station = k.station_short_name)
-        WHERE m.meas_name = {"'"+ snowParam +"'"}
-        AND k.parameter = {"'"+ snowParam +"'"}
-        AND m.valid_to = '2262-04-11'
-        AND k.valid_to = '2262-04-11'
-        GROUP BY meas_year, k.station_name, m.station, k.elevation
-        ORDER BY meas_year ASC
-        """,
-        engine
+            FROM core.measurements_t m
+            LEFT JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_date >= '2010-01-01'
+            AND m.meas_date < '2020-01-01'
+            AND m.meas_name = {"'"+ snowParam +"'"}
+            AND k.parameter = {"'"+ snowParam +"'"}
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY k.station_name,
+            k.longitude,
+            k.latitude,
+            k.elevation;
+            """,
+            engine
+        )
+
+        dfMap2 = pd.read_sql(
+            f"""
+            SELECT
+            avg(m.meas_value) avg_then,
+            k.station_name
+            FROM core.measurements_t m
+            LEFT JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_date >= '1970-01-01'
+            AND m.meas_date < '1980-01-01'
+            AND m.meas_name = {"'"+ snowParam +"'"}
+            AND k.parameter = {"'"+ snowParam +"'"}
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY k.station_name
+            """,
+            engine
+        )
+
+        dfMap = pd.merge(
+            how='inner',
+            left=dfMap1,
+            right=dfMap2,
+            left_on='station_name',
+            right_on='station_name'
+        )
+
+        dfMap = pd.merge(
+            how='inner',
+            left=dfMap,
+            right=dfStations,
+            left_on='station_name',
+            right_on='station_name'
+        )
+
+        # data wrangling for longitude and latitude
+        dfMap['lon'] = dfMap['longitude'].str.extract(r'(\d+).$')
+        dfMap['lon'] = pd.to_numeric(dfMap['lon'])
+        dfMap['lon'] = round(dfMap['lon']/60, 3)
+        dfMap['lon'] = dfMap['lon'].apply(str)
+        dfMap['longitude'] = dfMap['longitude'].str.extract(r'(^\d+)') + \
+            '.' + dfMap['lon'].str.extract(r'(\d+)$')
+        dfMap = dfMap.drop('lon', axis=1)
+        dfMap['lat'] = dfMap['latitude'].str.extract(r'(\d+).$')
+        dfMap['lat'] = pd.to_numeric(dfMap['lat'])
+        dfMap['lat'] = round(dfMap['lat']/60, 3)
+        dfMap['lat'] = dfMap['lat'].apply(str)
+        dfMap['latitude'] = dfMap['latitude'].str.extract(r'(^\d+)') + '.' + \
+            dfMap['lat'].str.extract(r'(\d+)$')
+        dfMap = dfMap.drop('lat', axis=1)
+        dfMap = dfMap.astype({'longitude': 'float', 'latitude': 'float'})
+        dfMap = dfMap.groupby(['station_name']).agg(
+            avg_now=('avg_now', 'mean'),
+            longitude=('longitude', 'mean'),
+            latitude=('latitude', 'mean'),
+            elevation=('elevation', 'mean'),
+            avg_then=('avg_then', 'mean'),
+        ).reset_index()
+
+        # add text column for map pop-up
+        dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
+            ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
+            '<br>Ø Schneefall pro Tag 1970-1980: ' + \
+            (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
+            '<br>Ø Schneefall pro Tag 2010-2020: ' + \
+            (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
+            '<br>Veränderung: ' + \
+            (round(((
+                dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
+            ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
+
+        return dfMap
+
+    def dfScatterSnowWrangling():
+        # data wrangling scatterplot snow
+        dfScatterSnow = pd.read_sql(
+            f"""
+            SELECT
+                extract(year from m.meas_date) as meas_year,
+                k.station_name,
+                sum(m.meas_value) meas_value,
+                m.station,
+                k.elevation
+            FROM core.measurements_t m
+            JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_name = {"'"+ snowParam +"'"}
+            AND k.parameter = {"'"+ snowParam +"'"}
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY meas_year, k.station_name, m.station, k.elevation
+            ORDER BY meas_year ASC
+            """,
+            engine
+        )
+
+        # change measurement unit to meters
+        dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
+        dfScatterSnow = dfScatterSnow.dropna()
+
+        return dfScatterSnow
+
+    def dfSnowAllWrangling(dfStations, dfScatterSnow, medianValueTotalSnow):
+        dfAll = pd.merge(
+            how='inner',
+            left=dfStations,
+            right=dfScatterSnow,
+            left_on='station_short_name',
+            right_on='station'
+        )
+
+        dfAll.sort_values([
+            'station_short_name',
+            'meas_year'
+        ], inplace=True)
+
+        # select all Stations
+        dfSnowAll = dfAll.groupby(
+            'meas_year'
+        ).agg(
+            meas_value=('meas_value', 'mean')
+        )
+
+        dfSnowAll = dfSnowAll.reset_index()
+        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= medianValueTotalSnow]
+
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(dfSnowAll.index), dfSnowAll['meas_value'])
+        dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
+
+        return dfSnowAll
+
+    def dfScatterRainWrangling():
+        # avg of highest 10 minute total of rain of
+        # a month per year of all stations available
+        dfScatterRain = pd.read_sql(
+            """
+            SELECT
+            extract(year from m.meas_date) as meas_year,
+            avg(meas_value) avg_rain
+            FROM core.measurements_t m
+            WHERE m.meas_name = 'rzz150mx'
+            AND extract(year from m.meas_date) >= 1981
+            AND extract(year from m.meas_date) <= 2020
+            AND m.valid_to = '2262-04-11'
+            GROUP BY meas_year
+            """,
+            engine
+        )
+
+        # simple regression line
+        dfScatterRain = dfScatterRain.reset_index()
+        reg = LinearRegression().fit(np.vstack(
+            dfScatterRain.index),
+            dfScatterRain['avg_rain']
+        )
+        dfScatterRain['rain_bestfit'] = reg.predict(np.vstack(
+            dfScatterRain.index)
+        )
+
+        meanRain = dfScatterRain['avg_rain'].mean()
+
+        dfScatterRain['dev_rain'] = dfScatterRain['avg_rain'] - meanRain
+        dfScatterRain['color'] = np.where(
+            dfScatterRain['dev_rain'] >= 0, True, False)
+
+        return (dfScatterRain, meanRain)
+
+    # call start functions
+    dfSelection = dfSelectionWrangling()
+    dfStations = dfStationsWrangling(dfSelection)
+    dfMap = dfMapWrangling(dfStations, snowParam)
+
+    # station selection for all stations
+    dfSelectionSnow = dfSelection[dfSelection.meas_name == 'hns000y0']
+    dfSelectionSnow = dfSelectionSnow[
+        dfSelectionSnow.station_name.isin(list(dfStations.station_name))
+    ]
+    medianValueTotalSnow = dfSelectionSnow['min'].median()
+
+    # call plot functions
+    dfScatterSnow = dfScatterSnowWrangling()
+    dfSnowAll = dfSnowAllWrangling(
+        dfStations, dfScatterSnow, medianValueTotalSnow
     )
-
-    # change measurement unit to meters
-    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
-    dfScatterSnow = dfScatterSnow.dropna()
-
-    dfScatterAll = pd.merge(
-        how='inner',
-        left=dfStations,
-        right=dfScatterSnow,
-        left_on='station_short_name',
-        right_on='station'
-    )
-
-    dfScatterAll.sort_values([
-        'station_short_name',
-        'meas_year'
-    ], inplace=True)
-
-    # select all Stations
-    dfSnowAll = dfScatterAll.groupby(
-        'meas_year'
-    ).agg(
-        meas_value=('meas_value', 'mean')
-    )
-
-    dfSnowAll = dfSnowAll.reset_index()
-    dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= medianValueTotalSnow]
-
-    # simple regression line
-    reg = LinearRegression(
-        ).fit(np.vstack(dfSnowAll.index), dfSnowAll['meas_value'])
-    dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
-
-    # avg of highest 10 minute total of rain of
-    # a month per year of all stations available
-    dfScatterRain1 = pd.read_sql(
-        """
-        SELECT
-        extract(year from m.meas_date) as meas_year,
-        avg(meas_value) avg_rain
-        FROM core.measurements_t m
-        WHERE m.meas_name = 'rzz150mx'
-        AND extract(year from m.meas_date) >= 1981
-        AND extract(year from m.meas_date) <= 2020
-        AND m.valid_to = '2262-04-11'
-        GROUP BY meas_year
-        """,
-        engine
-    )
-
-    # simple regression line
-    dfScatterRain1 = dfScatterRain1.reset_index()
-    reg = LinearRegression().fit(np.vstack(
-        dfScatterRain1.index),
-        dfScatterRain1['avg_rain']
-    )
-    dfScatterRain1['rain_bestfit'] = reg.predict(np.vstack(
-        dfScatterRain1.index)
-    )
-
-    mean_rain = dfScatterRain1['avg_rain'].mean()
-
-    dfScatterRain1['dev_rain'] = dfScatterRain1['avg_rain'] - mean_rain
-    dfScatterRain1['color'] = np.where(
-        dfScatterRain1['dev_rain'] >= 0, True, False)
-
-    # avg of highest 1 hour total of rain of
-    # a month every year of all stations available
-    dfScatterRain2 = pd.read_sql(
-        """
-        SELECT
-        extract(year from m.meas_date) as meas_year,
-        avg(meas_value) avg_rain
-        FROM core.measurements_t m
-        WHERE m.meas_name = 'rhh150mx'
-        AND extract(year from m.meas_date) >= 1981
-        AND extract(year from m.meas_date) <= 2020
-        AND m.valid_to = '2262-04-11'
-        GROUP BY meas_year
-        """,
-        engine
-    )
+    dfScatterRain, meanRain = dfScatterRainWrangling()
 
     def createDashboard():
         # creating the map
@@ -468,9 +481,9 @@ def mydashboard(flaskApp, instance):
 
         plotRain.add_trace(go.Bar(
             name='Regenfall',
-            x=dfScatterRain1["meas_year"],
-            y=dfScatterRain1["dev_rain"],
-            base=mean_rain,
+            x=dfScatterRain["meas_year"],
+            y=dfScatterRain["dev_rain"],
+            base=meanRain,
             marker={
                 'color': colors['rbb'],
                 # 'line': {'width': 1, 'color': 'black'}
@@ -479,8 +492,8 @@ def mydashboard(flaskApp, instance):
 
         plotRain.add_trace(go.Scatter(
             name='Regression',
-            x=dfScatterRain1["meas_year"],
-            y=dfScatterRain1["rain_bestfit"],
+            x=dfScatterRain["meas_year"],
+            y=dfScatterRain["rain_bestfit"],
             mode='lines',
             marker={
                 'size': 5,
@@ -499,8 +512,8 @@ def mydashboard(flaskApp, instance):
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
                 'range': [
-                    dfScatterRain1.avg_rain.min() * 0.95,
-                    dfScatterRain1.avg_rain.max() * 1.05
+                    dfScatterRain.avg_rain.min() * 0.95,
+                    dfScatterRain.avg_rain.max() * 1.05
                 ]
             },
             xaxis={
@@ -681,7 +694,7 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '50%',
+                    'width': '60%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'left'
@@ -745,7 +758,7 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '50%',
+                    'width': '40%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'right'
@@ -794,7 +807,7 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '25%',
+                    'width': '30%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'right'
@@ -865,7 +878,7 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '50%',
+                    'width': '40%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'left'
@@ -891,7 +904,7 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '25%',
+                    'width': '30%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'center'
