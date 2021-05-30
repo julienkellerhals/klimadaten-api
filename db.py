@@ -417,6 +417,12 @@ class Database:
 
         respDict = self.stageTableRespDict.respDict
 
+        # Check if process is already running
+        if respDict["stage"]["progressBar"]:
+            actionEnabled = False
+        else:
+            actionEnabled = True
+
         inspector = inspect(self.engine)
         stageTables = inspector.get_table_names("stage")
         for stageTable in stageTables:
@@ -439,36 +445,36 @@ class Database:
                 actionDict = {}
                 actionDict["name"] = "Initial load"
                 actionDict["actionUrl"] = "/admin/db/etl/stage/idaweb"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
                 actionDict = {}
                 actionDict["name"] = "Increment load"
                 actionDict["actionUrl"] = \
                     "/admin/db/etl/stage/increment/idaweb"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
                 actionDict = {}
                 actionDict["name"] = "Run scrapping"
                 actionDict["actionUrl"] = "/admin/scrape/idaweb"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
             elif stageTable == "meteoschweiz_t":
                 actionDict = {}
                 actionDict["name"] = "Run scrapping"
                 actionDict["actionUrl"] = "/admin/scrape/meteoschweiz"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
             elif stageTable == "station_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
                 actionDict["actionUrl"] = "/admin/db/etl/stage/station"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
             elif stageTable == "parameter_t":
                 actionDict = {}
                 actionDict["name"] = "Initial load"
                 actionDict["actionUrl"] = "/admin/db/etl/stage/parameter"
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
 
             respDict["stage"][stageTable]["action"] = actionList
@@ -506,6 +512,11 @@ class Database:
 
         respDict = self.coreTableRespDict.respDict
 
+        if respDict["core"]["progressBar"]:
+            actionEnabled = False
+        else:
+            actionEnabled = True
+
         inspector = inspect(self.engine)
         coreTables = inspector.get_table_names("core")
         for coreTable in coreTables:
@@ -529,7 +540,7 @@ class Database:
                 actionDict["name"] = "Load"
                 actionDict["actionUrl"] = \
                     "/admin/db/etl/core/" + coreTable.strip("_t")
-                actionDict["enabled"] = True
+                actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
 
                 respDict["core"][coreTable]["action"] = actionList
