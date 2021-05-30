@@ -164,6 +164,9 @@ function updateRowStructure(content, previousContent, colName, ul) {
         var row = document.getElementById(camelize(colName + " " + content.title))
     }
     var contentDiff = diff(previousContent, content)
+    console.log(content)
+    console.log(previousContent)
+    console.log(contentDiff)
     // FIXME None check may not work
     if (contentDiff != null) {
         if (contentDiff.title != undefined) {
@@ -248,8 +251,13 @@ function createCollapsibleElements(baseStructure) {
                 var rows = Object.keys(content[id]).filter((r) => r.endsWith("_t")).sort()
                 rows.forEach((rowName) => {
                     var row = content[id][rowName]
-                    updateRowStructure(row, previousContent, id, ul)
+                    try {
+                        updateRowStructure(row, previousContent[id][rowName], id, ul)
+                    } catch (error) {
+                        updateRowStructure(row, {}, id, ul)
+                    }
                 })
+                previousContent = content
             }
         } else {
             var rows = Object.keys(baseStructure[id]).sort()
@@ -261,7 +269,11 @@ function createCollapsibleElements(baseStructure) {
                     previousContent = row
                     rowEventSource.onmessage = function (e) {
                         var content = JSON.parse(e.data)
-                        updateRowStructure(content, previousContent, id, ul)
+                        try {
+                            updateRowStructure(row, previousContent[id][rowName], id, ul)
+                        } catch (error) {
+                            updateRowStructure(row, {}, id, ul)
+                        }
                     }
                 }
             })
