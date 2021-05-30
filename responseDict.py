@@ -28,6 +28,7 @@ class ResponseDictionary:
 
         self.disableAllButtons()
         self.createProgressBar()
+        self.send()
         self.refreshMV()
         self.updateDictRowCount()
         self.updateDictLastRefresh()
@@ -43,6 +44,7 @@ class ResponseDictionary:
 
         self.enableAllButtons()
         self.removeProgressBar()
+        self.send()
         self.refreshMV()
         self.updateDictRowCount()
         self.updateDictLastRefresh()
