@@ -565,7 +565,6 @@ def mydashboard(flaskApp, instance):
 
         return plot
 
-    # TODO paramName
     def plotScatterCreation(df, colors):
         # creating the snow scatterplot with all stations
         plot = go.Figure()
@@ -602,7 +601,6 @@ def mydashboard(flaskApp, instance):
         ))
 
         plot.update_layout(
-            title='Durchschnittlicher Schneefall aller Stationen in Meter',
             title_x=0.1,
             margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=360,
@@ -612,7 +610,7 @@ def mydashboard(flaskApp, instance):
                 'showgrid': True,
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
-                'rangemode': "tozero",
+                # 'rangemode': "tozero",
             },
             xaxis={
                 'showgrid': False,
@@ -639,7 +637,16 @@ def mydashboard(flaskApp, instance):
         plotMap = plotMapCreation(dfMap, colors)
         plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
         plotSnow = plotScatterCreation(dfSnowAll, colors)
+        plotSnow.update_layout(
+            title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
+            yaxis={
+                'rangemode': "tozero",
+            },
+        )
         plotRain = plotScatterCreation(dfRainAll, colors)
+        plotRain.update_layout(
+            title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+        )
 
         dashApp.layout = html.Div([
             # header
@@ -1003,7 +1010,10 @@ def mydashboard(flaskApp, instance):
         plotSnow = plotScatterCreation(dfSnowAll, colors)
 
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall bei {station} in Meter'
+            title=f'Durchschnittlicher Schneefall bei {station} in Meter',
+            yaxis={
+                'rangemode': "tozero",
+            },
         )
 
         return plotSnow
@@ -1023,7 +1033,7 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors)
 
         plotRain.update_layout(
-            title=f'Durchschnittlicher Schneefall bei {station} in Meter'
+            title=f'Durchschnittlicher Regenfall bei {station} in mm'
         )
 
         return plotRain
