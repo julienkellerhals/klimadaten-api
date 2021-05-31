@@ -343,7 +343,7 @@ def mydashboard(flaskApp, instance):
 
         return dfScatterSnow
 
-    def dfSnowAllWrangling(dfStations, dfScatterSnow, snowYear):
+    def dfSnowAllWrangling(dfStations, dfScatterSnow, yearSnow):
         dfAll = pd.merge(
             how='inner',
             left=dfStations,
@@ -365,7 +365,7 @@ def mydashboard(flaskApp, instance):
         )
 
         dfSnowAll = dfSnowAll.reset_index()
-        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= snowYear]
+        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= yearSnow]
 
         # simple regression line
         reg = LinearRegression(
@@ -405,7 +405,7 @@ def mydashboard(flaskApp, instance):
     def dfRainExtremeAllWrangling(
         dfStations,
         dfScatterRainExtreme,
-        rainExtremeYear
+        yearRainExtreme
     ):
         dfAll = pd.merge(
             how='inner',
@@ -436,7 +436,7 @@ def mydashboard(flaskApp, instance):
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
         # TODO fix param and desc
         # dfRainExtremeAll = dfRainExtremeAll[
-        #     dfRainExtremeAll.meas_year >= rainExtremeYear]
+        #     dfRainExtremeAll.meas_year >= yearRainExtreme]
 
         # simple regression line
         reg = LinearRegression(
@@ -447,34 +447,32 @@ def mydashboard(flaskApp, instance):
 
         return (dfRainExtremeAll, meanRain)
 
+    def getParamYear(dfSelection, short_name):
+        dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
+        dfSelectionParam = dfSelectionParam[
+            dfSelectionParam.station_name.isin(list(dfStations.station_name))
+        ]
+        yearParam = dfSelectionParam['min'].median()
+
+        return yearParam
+
     # call start functions
     dfSelection = dfSelectionWrangling()
     dfStations = dfStationsWrangling(dfSelection)
     dfMap = dfMapWrangling(dfStations, snowParam)
 
-    # station selection for all stations
-    dfSelectionSnow = dfSelection[dfSelection.meas_name == 'hns000y0']
-    dfSelectionSnow = dfSelectionSnow[
-        dfSelectionSnow.station_name.isin(list(dfStations.station_name))
-    ]
-    snowYear = dfSelectionSnow['min'].median()
-
-    dfSelectionRainExtreme = dfSelection[
-        dfSelection.meas_name == rainExtremeParam
-    ]
-    dfSelectionRainExtreme = dfSelectionRainExtreme[
-        dfSelectionRainExtreme.station_name.isin(list(dfStations.station_name))
-    ]
-    rainExtremeYear = dfSelectionRainExtreme['min'].median()
+    # get starting year for each parameter
+    yearSnow = getParamYear(dfSelection, snowParam)
+    yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
 
     # call plot functions
     dfScatterSnow = dfScatterSnowWrangling()
     dfSnowAll = dfSnowAllWrangling(
-        dfStations, dfScatterSnow, snowYear
+        dfStations, dfScatterSnow, yearSnow
     )
     dfScatterRainExtreme = dfScatterRainExtremeWrangling()
     dfRainExtremeAll, meanRain = dfRainExtremeAllWrangling(
-        dfStations, dfScatterRainExtreme, rainExtremeYear
+        dfStations, dfScatterRainExtreme, yearRainExtreme
     )
 
     # functions for plot creation
