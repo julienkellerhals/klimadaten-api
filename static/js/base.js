@@ -266,14 +266,23 @@ function createCollapsibleElements(baseStructure) {
                 createRowStructure(row, id, ul)
                 if (row.eventSourceUrl != undefined) {
                     var rowEventSource = new EventSource(row.eventSourceUrl);
-                    previousContent = row
                     rowEventSource.onmessage = function (e) {
                         var content = JSON.parse(e.data)
                         try {
-                            updateRowStructure(row, previousContent[id][rowName], id, ul)
+                            updateRowStructure(content, previousContent[id][rowName], id, ul)
                         } catch (error) {
-                            updateRowStructure(row, {}, id, ul)
+                            updateRowStructure(content, {}, id, ul)
                         }
+                        if (previousContent == undefined) {
+                            previousContent = {}
+                        }
+                        if (previousContent[id] == undefined) {
+                            previousContent[id] = {}
+                        }
+                        if (previousContent[id][rowName] == undefined) {
+                            previousContent[id][rowName] = {}
+                        }
+                        previousContent[id][rowName] = content
                     }
                 }
             })
