@@ -340,11 +340,11 @@ def mydashboard(flaskApp, instance):
 
         return dfScatter
 
-    def dfSnowAllWrangling(dfStations, dfScatterSnow, yearSnow):
+    def dfScatterAllWrangling(dfStations, dfScatter, yearParam):
         dfAll = pd.merge(
             how='inner',
             left=dfStations,
-            right=dfScatterSnow,
+            right=dfScatter,
             left_on='station_short_name',
             right_on='station'
         )
@@ -355,21 +355,21 @@ def mydashboard(flaskApp, instance):
         ], inplace=True)
 
         # select all Stations
-        dfSnowAll = dfAll.groupby(
+        dfParamAll = dfAll.groupby(
             'meas_year'
         ).agg(
             meas_value=('meas_value', 'mean')
         )
 
-        dfSnowAll = dfSnowAll.reset_index()
-        dfSnowAll = dfSnowAll[dfSnowAll.meas_year >= yearSnow]
+        dfParamAll = dfParamAll.reset_index()
+        dfParamAll = dfParamAll[dfParamAll.meas_year >= yearParam]
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfSnowAll.index), dfSnowAll['meas_value'])
-        dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
+            ).fit(np.vstack(dfParamAll.index), dfParamAll['meas_value'])
+        dfParamAll['bestfit'] = reg.predict(np.vstack(dfParamAll.index))
 
-        return dfSnowAll
+        return dfParamAll
 
     def dfRainExtremeAllWrangling(
         dfStations,
@@ -404,8 +404,8 @@ def mydashboard(flaskApp, instance):
 
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
         # TODO fix param and desc
-        # dfRainExtremeAll = dfRainExtremeAll[
-        #     dfRainExtremeAll.meas_year >= yearRainExtreme]
+        dfRainExtremeAll = dfRainExtremeAll[
+            dfRainExtremeAll.meas_year >= yearRainExtreme]
 
         # simple regression line
         reg = LinearRegression(
@@ -438,7 +438,7 @@ def mydashboard(flaskApp, instance):
     dfScatterSnow = dfScatterWrangling(snowParam)
     # change measurement unit to meters
     dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
-    dfSnowAll = dfSnowAllWrangling(
+    dfSnowAll = dfScatterAllWrangling(
         dfStations, dfScatterSnow, yearSnow
     )
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
