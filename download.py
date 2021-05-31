@@ -1,6 +1,18 @@
 import requests
 
+
 def getRequest(url, cookies=None, params=None):
+    """ Get request wrapper
+
+    Args:
+        url (str): URL
+        cookies (cookieJar, optional): Cookies. Defaults to None.
+        params (str, optional): Params. Defaults to None.
+
+    Returns:
+        response: Return get response
+    """
+
     r = None
     reqError = True
     errorCode = None
@@ -27,7 +39,19 @@ def getRequest(url, cookies=None, params=None):
         print(e)
     return r, reqError, errorCode
 
+
 def postRequest(url, cookies, data):
+    """ Post request wrapper
+
+    Args:
+        url (str): URL
+        cookies (cookieJar): Cookies.
+        data (str): Data to send.
+
+    Returns:
+        response: Return post response
+    """
+
     r = None
     reqError = True
     errorCode = None

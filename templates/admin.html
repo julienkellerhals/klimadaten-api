@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Admin{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .success {
+        background-color: green;
+    }
+
+    .error {
+        background-color: red;
+    }
+</style>
+{% endblock %}
+
+{% set active_page = "admin" %}
+
+{% block container %}
+<div id="container">
+    <div class="row">
+        <div class="col s6">
+            <div id="panel">
+                <h1>Running services</h1>
+                <ul id="runningService" class="collapsible popout"></ul>
+            </div>
+        </div>
+        <div class="col s6">
+            <div id="serverLog">
+                <h1>Server Log</h1>
+                <div id="eventLog"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/adminPage.js"></script>
+{% endblock %}

@@ -1,197 +1,83 @@
 import os
-import io
-import re
-import zipfile
-import sqlalchemy
-import abstractDriver
-import db
-from pathlib import Path
-from sqlalchemy import create_engine
-from sqlalchemy_utils import database_exists, create_database
 from flask import Flask
-from flask import request
-import download
-import webscraping
+from flask import send_from_directory
+import db
+import dashboard
+import abstractDriver
+import messageAnnouncer
+from api import dbAPI
+from api import adminAPI
+from api import streamAPI
+from api import scrapeAPI
+
+announcer = messageAnnouncer.MessageAnnouncer()
+abstractDriver = abstractDriver.AbstractDriver(announcer)
+instance = db.Database(announcer)
 
 app = Flask(__name__)
+app.register_blueprint(adminAPI.constructBlueprint(
+    announcer,
+    instance,
+    abstractDriver
+    ),
+    url_prefix="/admin"
+)
+app.register_blueprint(streamAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/stream"
+)
+app.register_blueprint(dbAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/db"
+)
+app.register_blueprint(scrapeAPI.constructBlueprint(
+        announcer,
+        instance,
+        abstractDriver
+    ),
+    url_prefix="/admin/scrape"
+)
 
-
-def getDriverPath(driverFolder, browser=None):
-    driverInstalledBool = False
-    driverPath = ""
-    for driverPath in list(driverFolder.glob('**/*.exe')):
-        if browser is not None:
-            if browser.lower() in driverPath.name:
-                driverInstalledBool = True
-                driverPath = driverPath
-        else:
-            driverPath = driverPath
-    return driverInstalledBool, driverPath
-
-
-def testGlobal():
-    """
-    Tests if the global variable are set.
-    initiates them if they aren't.
-    """
-    try:
-        global driver
-        driver
-    except NameError:
-        print("Driver not started")
-        print("Starting programatically")
-        print("Assuming you installed only required drivers")
-        cwd = Path.cwd()
-        driverFolder = cwd / "driver"
-        _, driverPath = getDriverPath(driverFolder, None)
-        if driverPath.name == "msedgedriver.exe":
-            browser = "Edg"
-        elif driverPath.name == "chromedriver.exe":
-            browser = "Chrome"
-        else:
-            print("Browser not supported yet")
-        # make browser headless or not
-        driver = abstractDriver.createDriver(browser, driverPath, False)
-
-    try:
-        global engine
-        engine
-    except NameError:
-        print("Engine not started")
-        print("Starting programatically")
-        print("Assuming you installed the database")
-        engine = create_engine(
-            "postgresql://postgres:postgres@localhost:5432/klimadb",
-            echo=True
-        )
+dashApp = dashboard.mydashboard(app, instance)
 
 
 @app.route("/")
 def mainPage():
-    return "Load web fe"
+    """ Main page
+
+    Returns:
+        str: Temp main return
+    """
+
+    return "Hello World, story will be here"
 
 
 @app.route("/api")
 def api():
+    """ API
+
+    Returns:
+        str: Temp
+    """
+
     return "API"
 
 
-@app.route("/admin/driver/<browser>", methods=['GET'])
-def createDriver(browser):
-    """
-    Run this function on first install to create a driver.
-    """
-    output = ""
-    cwd = Path.cwd()
-    driverFolder = cwd / "driver"
-    if not driverFolder.exists():
-        os.mkdir("driver")
-    headlessStr = request.args['headless']
-
-    # user agent
-    userAgent = request.headers.get('User-Agent')
-    output += "User agent: " + userAgent + "</br>"
-    for browserVersion in userAgent.split(" "):
-        if browserVersion.split("/")[0] == browser:
-            version = browserVersion.split("/")[1]
-    if len(version) == 0:
-        # output += "Browser not found, options are -
-        # Mozilla,
-        # AppleWebKit,
-        # Chrome,
-        # Safari,
-        # Edg
-        output += "Browser not found, options are - Chrome, Edg" + "</br>"
-
-    # get driver path
-    driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-
-    # download driver
-    if not driverInstalledBool:
-        output += "Installing driver" + "</br>"
-        if browser == "Chrome":
-            browserDriverDownloadPage, _, _ = download.getRequest(
-                "https://chromedriver.chromium.org/downloads"
-            )
-            pattern = r"ChromeDriver (" \
-                + version.split(".")[0] \
-                + r"\.\d*\.\d*\.\d*)"
-            existingDriverVersion = re.findall(
-                pattern,
-                browserDriverDownloadPage.content.decode("utf-8")
-            )[0]
-            browserDriverDownloadUrl = \
-                "https://chromedriver.storage.googleapis.com/" \
-                + existingDriverVersion \
-                + "/chromedriver_win32.zip"
-        elif browser == "Edg":
-            browserDriverDownloadUrl = "https://msedgedriver.azureedge.net/" \
-                + version \
-                + "/edgedriver_win64.zip"
-        else:
-            print("Browser not supported yet")
-        output += "Driver URL: " + browserDriverDownloadUrl + "</br>"
-        driverRequest = download.getRequest(browserDriverDownloadUrl)[0]
-        driverZip = zipfile.ZipFile(io.BytesIO(driverRequest.content))
-        driverZip.extractall(driverFolder)
-        output += "Downloaded and extracted driver" + "</br>"
-        # get driver path
-        driverInstalledBool, driverPath = getDriverPath(driverFolder, browser)
-    else:
-        output += "Driver already satisfied" + "</br>"
-
-    # Convert to string
-    if headlessStr.lower() == "true":
-        headlessBool = True
-    else:
-        headlessBool = False
-
-    # Create driver
-    global driver
-    driver = abstractDriver.createDriver(browser, driverPath, headlessBool)
-    output += "Started Driver" + "</br>"
-
-    return output
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, 'static'),
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
 
 
-@app.route("/admin/refresh")
-def refreshData():
-    return "Run webscraping"
-
-
-@app.route("/admin/test")
-def getTest():
-    return "hello world"
-
-
-@app.route("/admin/scrape/meteoschweiz")
-def scrapeMeteoschweiz():
-    testGlobal()  # to test if the global variable are set
-    resp = webscraping.scrape_meteoschweiz(driver, engine)
-    return resp
-
-
-@app.route("/admin/scrape/idaweb")
-def scrapeIdaweb():
-    testGlobal()  # to test if the global variable are set
-    resp = webscraping.scrape_idaweb(driver, engine)
-    return resp
-
-
-@app.route("/admin/db/connect")
-def createConnection():
-    global instance
-    instance = db.Database()
-    return "Connected"
-
-
-@app.route("/admin/db/create")
-def createDatabase():
-    instance.createDatabase()
-    return "Database created"
-
-
-@app.route("/admin/db/table")
-def createTable():
-    instance.createTable()
-    return "Table created"
+@app.route('/dashboard')
+def render_dashboard():
+    return Flask.redirect('/dash')

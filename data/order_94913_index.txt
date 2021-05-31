@@ -1,0 +1,598 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94913
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94913_ABO_rti150yx_1_data.txt     Data      Adelboden                            Precipitation; date of the maximum daily total of the year  1900-1937
+order_94913_ABO_rti150yx_1_legend.txt   Legend    Adelboden                            Precipitation; date of the maximum daily total of the year  1900-1937
+order_94913_ABO_rti150yx_2_data.txt     Data      Adelboden                            Precipitation; date of the maximum daily total of the year  1938-2020
+order_94913_ABO_rti150yx_2_legend.txt   Legend    Adelboden                            Precipitation; date of the maximum daily total of the year  1938-2020
+order_94913_AIR_rti150yx_1_data.txt     Data      Airolo                               Precipitation; date of the maximum daily total of the year  1883-2020
+order_94913_AIR_rti150yx_1_legend.txt   Legend    Airolo                               Precipitation; date of the maximum daily total of the year  1883-2020
+order_94913_TIAIR_rti150yx_1_data.txt   Data      Airolo                               Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_TIAIR_rti150yx_1_legend.txt Legend    Airolo                               Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_ALV_rti150yx_1_data.txt     Data      Alvaneu Dorf                         Precipitation; date of the maximum daily total of the year  1972-2018
+order_94913_ALV_rti150yx_1_legend.txt   Legend    Alvaneu Dorf                         Precipitation; date of the maximum daily total of the year  1972-2018
+order_94913_ALV_rti150yx_2_data.txt     Data      Alvaneu Dorf                         Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_ALV_rti150yx_2_legend.txt   Legend    Alvaneu Dorf                         Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_ANT_rti150yx_1_data.txt     Data      Andermatt                            Precipitation; date of the maximum daily total of the year  1882-1911
+order_94913_ANT_rti150yx_1_legend.txt   Legend    Andermatt                            Precipitation; date of the maximum daily total of the year  1882-1911
+order_94913_ANT_rti150yx_2_data.txt     Data      Andermatt                            Precipitation; date of the maximum daily total of the year  1912-2020
+order_94913_ANT_rti150yx_2_legend.txt   Legend    Andermatt                            Precipitation; date of the maximum daily total of the year  1912-2020
+order_94913_URANT_rti150yx_1_data.txt   Data      Andermatt / ARA                      Precipitation; date of the maximum daily total of the year  2017-2019
+order_94913_URANT_rti150yx_1_legend.txt Legend    Andermatt / ARA                      Precipitation; date of the maximum daily total of the year  2017-2019
+order_94913_IYANT_rti150yx_1_data.txt   Data      Antholz Obertal                      Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_IYANT_rti150yx_1_legend.txt Legend    Antholz Obertal                      Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_BAC_rti150yx_1_data.txt     Data      Bachtel                              Precipitation; date of the maximum daily total of the year  1960-2002
+order_94913_BAC_rti150yx_1_legend.txt   Legend    Bachtel                              Precipitation; date of the maximum daily total of the year  1960-2002
+order_94913_BSW_rti150yx_1_data.txt     Data      Bad Schwendi                         Precipitation; date of the maximum daily total of the year  1973-2004
+order_94913_BSW_rti150yx_1_legend.txt   Legend    Bad Schwendi                         Precipitation; date of the maximum daily total of the year  1973-2004
+order_94913_BAL_rti150yx_1_data.txt     Data      Balmberg                             Precipitation; date of the maximum daily total of the year  1973-1995
+order_94913_BAL_rti150yx_1_legend.txt   Legend    Balmberg                             Precipitation; date of the maximum daily total of the year  1973-1995
+order_94913_VSBAS_rti150yx_1_data.txt   Data      Baltschiedertal                      Precipitation; date of the maximum daily total of the year  2011-2012
+order_94913_VSBAS_rti150yx_1_legend.txt Legend    Baltschiedertal                      Precipitation; date of the maximum daily total of the year  2011-2012
+order_94913_VSBAS_rti150yx_2_data.txt   Data      Baltschiedertal                      Precipitation; date of the maximum daily total of the year  2013-2018
+order_94913_VSBAS_rti150yx_2_legend.txt Legend    Baltschiedertal                      Precipitation; date of the maximum daily total of the year  2013-2018
+order_94913_BEA_rti150yx_1_data.txt     Data      Beatenberg                           Precipitation; date of the maximum daily total of the year  1960-1980
+order_94913_BEA_rti150yx_1_legend.txt   Legend    Beatenberg                           Precipitation; date of the maximum daily total of the year  1960-1980
+order_94913_TIBED_rti150yx_1_data.txt   Data      Bedretto                             Precipitation; date of the maximum daily total of the year  1982-1996
+order_94913_TIBED_rti150yx_1_legend.txt Legend    Bedretto                             Precipitation; date of the maximum daily total of the year  1982-1996
+order_94913_TIBED_rti150yx_2_data.txt   Data      Bedretto                             Precipitation; date of the maximum daily total of the year  1999-2020
+order_94913_TIBED_rti150yx_2_legend.txt Legend    Bedretto                             Precipitation; date of the maximum daily total of the year  1999-2020
+order_94913_LAT_rti150yx_1_data.txt     Data      Bergün / Latsch                      Precipitation; date of the maximum daily total of the year  1972-2004
+order_94913_LAT_rti150yx_1_legend.txt   Legend    Bergün / Latsch                      Precipitation; date of the maximum daily total of the year  1972-2004
+order_94913_LAT_rti150yx_2_data.txt     Data      Bergün / Latsch                      Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_LAT_rti150yx_2_legend.txt   Legend    Bergün / Latsch                      Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_WSLBTB_rti150yx_1_data.txt  Data      Bettlachstock Bestand                Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLBTB_rti150yx_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLBTF_rti150yx_1_data.txt  Data      Bettlachstock Freiland               Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLBTF_rti150yx_1_legend.txt Legend    Bettlachstock Freiland               Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_TIBIA_rti150yx_1_data.txt   Data      Biasca / Pontirone                   Precipitation; date of the maximum daily total of the year  2007-2020
+order_94913_TIBIA_rti150yx_1_legend.txt Legend    Biasca / Pontirone                   Precipitation; date of the maximum daily total of the year  2007-2020
+order_94913_BIN_rti150yx_1_data.txt     Data      Binn                                 Precipitation; date of the maximum daily total of the year  1899-1910
+order_94913_BIN_rti150yx_1_legend.txt   Legend    Binn                                 Precipitation; date of the maximum daily total of the year  1899-1910
+order_94913_BIN_rti150yx_2_data.txt     Data      Binn                                 Precipitation; date of the maximum daily total of the year  1911-2008
+order_94913_BIN_rti150yx_2_legend.txt   Legend    Binn                                 Precipitation; date of the maximum daily total of the year  1911-2008
+order_94913_BIN_rti150yx_3_data.txt     Data      Binn                                 Precipitation; date of the maximum daily total of the year  2009-2020
+order_94913_BIN_rti150yx_3_legend.txt   Legend    Binn                                 Precipitation; date of the maximum daily total of the year  2009-2020
+order_94913_BLA_rti150yx_1_data.txt     Data      Blatten, Lötschental                 Precipitation; date of the maximum daily total of the year  2001-2020
+order_94913_BLA_rti150yx_1_legend.txt   Legend    Blatten, Lötschental                 Precipitation; date of the maximum daily total of the year  2001-2020
+order_94913_VSBLI_rti150yx_1_data.txt   Data      Blinnen                              Precipitation; date of the maximum daily total of the year  2014-2017
+order_94913_VSBLI_rti150yx_1_legend.txt Legend    Blinnen                              Precipitation; date of the maximum daily total of the year  2014-2017
+order_94913_VSBLI_rti150yx_2_data.txt   Data      Blinnen                              Precipitation; date of the maximum daily total of the year  2018-2020
+order_94913_VSBLI_rti150yx_2_legend.txt Legend    Blinnen                              Precipitation; date of the maximum daily total of the year  2018-2020
+order_94913_BOS_rti150yx_1_data.txt     Data      Bosco/Gurin                          Precipitation; date of the maximum daily total of the year  1958-2020
+order_94913_BOS_rti150yx_1_legend.txt   Legend    Bosco/Gurin                          Precipitation; date of the maximum daily total of the year  1958-2020
+order_94913_BRA_rti150yx_1_data.txt     Data      Braggio                              Precipitation; date of the maximum daily total of the year  1900-1960
+order_94913_BRA_rti150yx_1_legend.txt   Legend    Braggio                              Precipitation; date of the maximum daily total of the year  1900-1960
+order_94913_BRA_rti150yx_2_data.txt     Data      Braggio                              Precipitation; date of the maximum daily total of the year  1963-1967
+order_94913_BRA_rti150yx_2_legend.txt   Legend    Braggio                              Precipitation; date of the maximum daily total of the year  1963-1967
+order_94913_BRA_rti150yx_3_data.txt     Data      Braggio                              Precipitation; date of the maximum daily total of the year  1969-2010
+order_94913_BRA_rti150yx_3_legend.txt   Legend    Braggio                              Precipitation; date of the maximum daily total of the year  1969-2010
+order_94913_BRA_rti150yx_4_data.txt     Data      Braggio                              Precipitation; date of the maximum daily total of the year  2011-2012
+order_94913_BRA_rti150yx_4_legend.txt   Legend    Braggio                              Precipitation; date of the maximum daily total of the year  2011-2012
+order_94913_BRA_rti150yx_5_data.txt     Data      Braggio                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BRA_rti150yx_5_legend.txt   Legend    Braggio                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BRW_rti150yx_1_data.txt     Data      Braunwald                            Precipitation; date of the maximum daily total of the year  1918-2020
+order_94913_BRW_rti150yx_1_legend.txt   Legend    Braunwald                            Precipitation; date of the maximum daily total of the year  1918-2020
+order_94913_FRE_rti150yx_1_data.txt     Data      Bullet / La Frétaz                   Precipitation; date of the maximum daily total of the year  1977-2020
+order_94913_FRE_rti150yx_1_legend.txt   Legend    Bullet / La Frétaz                   Precipitation; date of the maximum daily total of the year  1977-2020
+order_94913_TICVM_rti150yx_1_data.txt   Data      Campo Vallemaggia                    Precipitation; date of the maximum daily total of the year  2001-2016
+order_94913_TICVM_rti150yx_1_legend.txt Legend    Campo Vallemaggia                    Precipitation; date of the maximum daily total of the year  2001-2016
+order_94913_TICVM_rti150yx_2_data.txt   Data      Campo Vallemaggia                    Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_TICVM_rti150yx_2_legend.txt Legend    Campo Vallemaggia                    Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_VSCHY_rti150yx_1_data.txt   Data      Champéry                             Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_VSCHY_rti150yx_1_legend.txt Legend    Champéry                             Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_MMCPY_rti150yx_1_data.txt   Data      Champéry                             Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_MMCPY_rti150yx_1_legend.txt Legend    Champéry                             Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_CHM_rti150yx_1_data.txt     Data      Chaumont                             Precipitation; date of the maximum daily total of the year  1863-1886
+order_94913_CHM_rti150yx_1_legend.txt   Legend    Chaumont                             Precipitation; date of the maximum daily total of the year  1863-1886
+order_94913_CHM_rti150yx_2_data.txt     Data      Chaumont                             Precipitation; date of the maximum daily total of the year  1887-2020
+order_94913_CHM_rti150yx_2_legend.txt   Legend    Chaumont                             Precipitation; date of the maximum daily total of the year  1887-2020
+order_94913_NABCHA_rti150yx_1_data.txt  Data      Chaumont / Bosset                    Precipitation; date of the maximum daily total of the year  2009-2014
+order_94913_NABCHA_rti150yx_1_legend.txt Legend    Chaumont / Bosset                    Precipitation; date of the maximum daily total of the year  2009-2014
+order_94913_TICHI_rti150yx_1_data.txt   Data      Chironico                            Precipitation; date of the maximum daily total of the year  2011-2020
+order_94913_TICHI_rti150yx_1_legend.txt Legend    Chironico                            Precipitation; date of the maximum daily total of the year  2011-2020
+order_94913_WSLCIB_rti150yx_1_data.txt  Data      Chironico Bestand                    Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLCIB_rti150yx_1_legend.txt Legend    Chironico Bestand                    Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLCIF_rti150yx_1_data.txt  Data      Chironico Freiland                   Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLCIF_rti150yx_1_legend.txt Legend    Chironico Freiland                   Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_CTB_rti150yx_1_data.txt     Data      Chuttelbad                           Precipitation; date of the maximum daily total of the year  1971-1977
+order_94913_CTB_rti150yx_1_legend.txt   Legend    Chuttelbad                           Precipitation; date of the maximum daily total of the year  1971-1977
+order_94913_CDM_rti150yx_1_data.txt     Data      Col des Mosses                       Precipitation; date of the maximum daily total of the year  1971-2020
+order_94913_CDM_rti150yx_1_legend.txt   Legend    Col des Mosses                       Precipitation; date of the maximum daily total of the year  1971-2020
+order_94913_TICOL_rti150yx_1_data.txt   Data      Colla                                Precipitation; date of the maximum daily total of the year  2006-2020
+order_94913_TICOL_rti150yx_1_legend.txt Legend    Colla                                Precipitation; date of the maximum daily total of the year  2006-2020
+order_94913_VSDER_rti150yx_1_data.txt   Data      Derborence                           Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_VSDER_rti150yx_1_legend.txt Legend    Derborence                           Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_IYDEU_rti150yx_1_data.txt   Data      Deutschnofen                         Precipitation; date of the maximum daily total of the year  1926-1938
+order_94913_IYDEU_rti150yx_1_legend.txt Legend    Deutschnofen                         Precipitation; date of the maximum daily total of the year  1926-1938
+order_94913_IYDEU_rti150yx_2_data.txt   Data      Deutschnofen                         Precipitation; date of the maximum daily total of the year  1939-1943
+order_94913_IYDEU_rti150yx_2_legend.txt Legend    Deutschnofen                         Precipitation; date of the maximum daily total of the year  1939-1943
+order_94913_IYDEU_rti150yx_3_data.txt   Data      Deutschnofen                         Precipitation; date of the maximum daily total of the year  1981-1982
+order_94913_IYDEU_rti150yx_3_legend.txt Legend    Deutschnofen                         Precipitation; date of the maximum daily total of the year  1981-1982
+order_94913_IYDEU_rti150yx_4_data.txt   Data      Deutschnofen                         Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_IYDEU_rti150yx_4_legend.txt Legend    Deutschnofen                         Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_DIS_rti150yx_1_data.txt     Data      Disentis                             Precipitation; date of the maximum daily total of the year  1958-2016
+order_94913_DIS_rti150yx_1_legend.txt   Legend    Disentis                             Precipitation; date of the maximum daily total of the year  1958-2016
+order_94913_DIS_rti150yx_2_data.txt     Data      Disentis                             Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_DIS_rti150yx_2_legend.txt   Legend    Disentis                             Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_VSDUR_rti150yx_1_data.txt   Data      Durnand                              Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_VSDUR_rti150yx_1_legend.txt Legend    Durnand                              Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_EIT_rti150yx_1_data.txt     Data      Eigenthal                            Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_EIT_rti150yx_1_legend.txt   Legend    Eigenthal                            Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_EIT_rti150yx_2_data.txt     Data      Eigenthal                            Precipitation; date of the maximum daily total of the year  1914-1929
+order_94913_EIT_rti150yx_2_legend.txt   Legend    Eigenthal                            Precipitation; date of the maximum daily total of the year  1914-1929
+order_94913_EIT_rti150yx_3_data.txt     Data      Eigenthal                            Precipitation; date of the maximum daily total of the year  1930-2020
+order_94913_EIT_rti150yx_3_legend.txt   Legend    Eigenthal                            Precipitation; date of the maximum daily total of the year  1930-2020
+order_94913_VSERG_rti150yx_1_data.txt   Data      Ergisch                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_VSERG_rti150yx_1_legend.txt Legend    Ergisch                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_EVL_rti150yx_1_data.txt     Data      Evolène                              Precipitation; date of the maximum daily total of the year  1979-2004
+order_94913_EVL_rti150yx_1_legend.txt   Legend    Evolène                              Precipitation; date of the maximum daily total of the year  1979-2004
+order_94913_DLFEB_rti150yx_1_data.txt   Data      Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  1940-1944
+order_94913_DLFEB_rti150yx_1_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  1940-1944
+order_94913_DLFEB_rti150yx_2_data.txt   Data      Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  1945-2018
+order_94913_DLFEB_rti150yx_2_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  1945-2018
+order_94913_DLFEB_rti150yx_3_data.txt   Data      Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_DLFEB_rti150yx_3_legend.txt Legend    Feldberg, Schwarzwald                Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_FIE_rti150yx_1_data.txt     Data      Fiesch                               Precipitation; date of the maximum daily total of the year  1900-1990
+order_94913_FIE_rti150yx_1_legend.txt   Legend    Fiesch                               Precipitation; date of the maximum daily total of the year  1900-1990
+order_94913_FIT_rti150yx_1_data.txt     Data      Fieschertal                          Precipitation; date of the maximum daily total of the year  1999-2020
+order_94913_FIT_rti150yx_1_legend.txt   Legend    Fieschertal                          Precipitation; date of the maximum daily total of the year  1999-2020
+order_94913_CTA_rti150yx_1_data.txt     Data      Finhaut                              Precipitation; date of the maximum daily total of the year  1968-2012
+order_94913_CTA_rti150yx_1_legend.txt   Legend    Finhaut                              Precipitation; date of the maximum daily total of the year  1968-2012
+order_94913_CTA_rti150yx_2_data.txt     Data      Finhaut                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_CTA_rti150yx_2_legend.txt   Legend    Finhaut                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_FIO_rti150yx_1_data.txt     Data      Fionnay                              Precipitation; date of the maximum daily total of the year  1996-2020
+order_94913_FIO_rti150yx_1_legend.txt   Legend    Fionnay                              Precipitation; date of the maximum daily total of the year  1996-2020
+order_94913_FLI_rti150yx_1_data.txt     Data      Flims                                Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_FLI_rti150yx_1_legend.txt   Legend    Flims                                Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_FUS_rti150yx_1_data.txt     Data      Fusio                                Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_FUS_rti150yx_1_legend.txt   Legend    Fusio                                Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_TIFUS_rti150yx_1_data.txt   Data      Fusio                                Precipitation; date of the maximum daily total of the year  2004-2006
+order_94913_TIFUS_rti150yx_1_legend.txt Legend    Fusio                                Precipitation; date of the maximum daily total of the year  2004-2006
+order_94913_TIFUS_rti150yx_2_data.txt   Data      Fusio                                Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_TIFUS_rti150yx_2_legend.txt Legend    Fusio                                Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_GAD_rti150yx_1_data.txt     Data      Gadmen                               Precipitation; date of the maximum daily total of the year  1911-1920
+order_94913_GAD_rti150yx_1_legend.txt   Legend    Gadmen                               Precipitation; date of the maximum daily total of the year  1911-1920
+order_94913_GAD_rti150yx_2_data.txt     Data      Gadmen                               Precipitation; date of the maximum daily total of the year  1923-2020
+order_94913_GAD_rti150yx_2_legend.txt   Legend    Gadmen                               Precipitation; date of the maximum daily total of the year  1923-2020
+order_94913_BEGAD_rti150yx_1_data.txt   Data      Gadmen                               Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEGAD_rti150yx_1_legend.txt Legend    Gadmen                               Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEGAD_rti150yx_2_data.txt   Data      Gadmen                               Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEGAD_rti150yx_2_legend.txt Legend    Gadmen                               Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_TIGAN_rti150yx_1_data.txt   Data      Gambarogno / Alpe di Neggia          Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_TIGAN_rti150yx_1_legend.txt Legend    Gambarogno / Alpe di Neggia          Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_GSM_rti150yx_1_data.txt     Data      Grand Som Martel                     Precipitation; date of the maximum daily total of the year  1970-1974
+order_94913_GSM_rti150yx_1_legend.txt   Legend    Grand Som Martel                     Precipitation; date of the maximum daily total of the year  1970-1974
+order_94913_GRI_rti150yx_1_data.txt     Data      Grimentz                             Precipitation; date of the maximum daily total of the year  1906-1927
+order_94913_GRI_rti150yx_1_legend.txt   Legend    Grimentz                             Precipitation; date of the maximum daily total of the year  1906-1927
+order_94913_GRI_rti150yx_2_data.txt     Data      Grimentz                             Precipitation; date of the maximum daily total of the year  1928-1951
+order_94913_GRI_rti150yx_2_legend.txt   Legend    Grimentz                             Precipitation; date of the maximum daily total of the year  1928-1951
+order_94913_GRI_rti150yx_3_data.txt     Data      Grimentz                             Precipitation; date of the maximum daily total of the year  1953-1954
+order_94913_GRI_rti150yx_3_legend.txt   Legend    Grimentz                             Precipitation; date of the maximum daily total of the year  1953-1954
+order_94913_GRI_rti150yx_4_data.txt     Data      Grimentz                             Precipitation; date of the maximum daily total of the year  1955-2016
+order_94913_GRI_rti150yx_4_legend.txt   Legend    Grimentz                             Precipitation; date of the maximum daily total of the year  1955-2016
+order_94913_GRI_rti150yx_5_data.txt     Data      Grimentz                             Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_GRI_rti150yx_5_legend.txt   Legend    Grimentz                             Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_GWA_rti150yx_1_data.txt     Data      Grindelwald                          Precipitation; date of the maximum daily total of the year  1960-2004
+order_94913_GWA_rti150yx_1_legend.txt   Legend    Grindelwald                          Precipitation; date of the maximum daily total of the year  1960-2004
+order_94913_GWA_rti150yx_2_data.txt     Data      Grindelwald                          Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_GWA_rti150yx_2_legend.txt   Legend    Grindelwald                          Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_GRY_rti150yx_1_data.txt     Data      Gryon                                Precipitation; date of the maximum daily total of the year  1902-1919
+order_94913_GRY_rti150yx_1_legend.txt   Legend    Gryon                                Precipitation; date of the maximum daily total of the year  1902-1919
+order_94913_GRY_rti150yx_2_data.txt     Data      Gryon                                Precipitation; date of the maximum daily total of the year  1920-2009
+order_94913_GRY_rti150yx_2_legend.txt   Legend    Gryon                                Precipitation; date of the maximum daily total of the year  1920-2009
+order_94913_GRY_rti150yx_3_data.txt     Data      Gryon                                Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_GRY_rti150yx_3_legend.txt   Legend    Gryon                                Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_GST_rti150yx_1_data.txt     Data      Gstaad                               Precipitation; date of the maximum daily total of the year  1981-2010
+order_94913_GST_rti150yx_1_legend.txt   Legend    Gstaad                               Precipitation; date of the maximum daily total of the year  1981-2010
+order_94913_GSG_rti150yx_1_data.txt     Data      Gsteig, Gstaad                       Precipitation; date of the maximum daily total of the year  1900-1941
+order_94913_GSG_rti150yx_1_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; date of the maximum daily total of the year  1900-1941
+order_94913_GSG_rti150yx_2_data.txt     Data      Gsteig, Gstaad                       Precipitation; date of the maximum daily total of the year  1942-2020
+order_94913_GSG_rti150yx_2_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; date of the maximum daily total of the year  1942-2020
+order_94913_BERIF_rti150yx_1_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; date of the maximum daily total of the year  2002-2020
+order_94913_BERIF_rti150yx_1_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; date of the maximum daily total of the year  2002-2020
+order_94913_GNB_rti150yx_1_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; date of the maximum daily total of the year  1971-1975
+order_94913_GNB_rti150yx_1_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; date of the maximum daily total of the year  1971-1975
+order_94913_GNB_rti150yx_2_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; date of the maximum daily total of the year  1981-1994
+order_94913_GNB_rti150yx_2_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; date of the maximum daily total of the year  1981-1994
+order_94913_GTT_rti150yx_1_data.txt     Data      Guttannen                            Precipitation; date of the maximum daily total of the year  1876-2020
+order_94913_GTT_rti150yx_1_legend.txt   Legend    Guttannen                            Precipitation; date of the maximum daily total of the year  1876-2020
+order_94913_MMGTT_rti150yx_1_data.txt   Data      Guttannen                            Precipitation; date of the maximum daily total of the year  2016-2017
+order_94913_MMGTT_rti150yx_1_legend.txt Legend    Guttannen                            Precipitation; date of the maximum daily total of the year  2016-2017
+order_94913_MMGTT_rti150yx_2_data.txt   Data      Guttannen                            Precipitation; date of the maximum daily total of the year  2018-2020
+order_94913_MMGTT_rti150yx_2_legend.txt Legend    Guttannen                            Precipitation; date of the maximum daily total of the year  2018-2020
+order_94913_BEHAK_rti150yx_1_data.txt   Data      Habkern                              Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEHAK_rti150yx_1_legend.txt Legend    Habkern                              Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEHAK_rti150yx_2_data.txt   Data      Habkern                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEHAK_rti150yx_2_legend.txt Legend    Habkern                              Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEHAB_rti150yx_1_data.txt   Data      Hasliberg                            Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEHAB_rti150yx_1_legend.txt Legend    Hasliberg                            Precipitation; date of the maximum daily total of the year  2008-2012
+order_94913_BEHAB_rti150yx_2_data.txt   Data      Hasliberg                            Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEHAB_rti150yx_2_legend.txt Legend    Hasliberg                            Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_HDI_rti150yx_1_data.txt     Data      Heiligenschwendi                     Precipitation; date of the maximum daily total of the year  1960-1970
+order_94913_HDI_rti150yx_1_legend.txt   Legend    Heiligenschwendi                     Precipitation; date of the maximum daily total of the year  1960-1970
+order_94913_GLSAN_rti150yx_1_data.txt   Data      Hinter Sand                          Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_GLSAN_rti150yx_1_legend.txt Legend    Hinter Sand                          Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_HOY_rti150yx_1_data.txt     Data      Hoch-Ybrig                           Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_HOY_rti150yx_1_legend.txt   Legend    Hoch-Ybrig                           Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_HER_rti150yx_1_data.txt     Data      Hérémence                            Precipitation; date of the maximum daily total of the year  1906-1959
+order_94913_HER_rti150yx_1_legend.txt   Legend    Hérémence                            Precipitation; date of the maximum daily total of the year  1906-1959
+order_94913_HER_rti150yx_2_data.txt     Data      Hérémence                            Precipitation; date of the maximum daily total of the year  1960-2005
+order_94913_HER_rti150yx_2_legend.txt   Legend    Hérémence                            Precipitation; date of the maximum daily total of the year  1960-2005
+order_94913_HER_rti150yx_3_data.txt     Data      Hérémence                            Precipitation; date of the maximum daily total of the year  2007-2020
+order_94913_HER_rti150yx_3_legend.txt   Legend    Hérémence                            Precipitation; date of the maximum daily total of the year  2007-2020
+order_94913_HOE_rti150yx_1_data.txt     Data      Hörnli                               Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_HOE_rti150yx_1_legend.txt   Legend    Hörnli                               Precipitation; date of the maximum daily total of the year  2005-2020
+order_94913_INF_rti150yx_1_data.txt     Data      Innerferrera                         Precipitation; date of the maximum daily total of the year  1960-1992
+order_94913_INF_rti150yx_1_legend.txt   Legend    Innerferrera                         Precipitation; date of the maximum daily total of the year  1960-1992
+order_94913_INF_rti150yx_2_data.txt     Data      Innerferrera                         Precipitation; date of the maximum daily total of the year  1993-2020
+order_94913_INF_rti150yx_2_legend.txt   Legend    Innerferrera                         Precipitation; date of the maximum daily total of the year  1993-2020
+order_94913_WSLISB_rti150yx_1_data.txt  Data      Isone Bestand                        Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_WSLISB_rti150yx_1_legend.txt Legend    Isone Bestand                        Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_WSLISF_rti150yx_1_data.txt  Data      Isone Freiland                       Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_WSLISF_rti150yx_1_legend.txt Legend    Isone Freiland                       Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_VSISE_rti150yx_1_data.txt   Data      Isérables                            Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_VSISE_rti150yx_1_legend.txt Legend    Isérables                            Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_KAS_rti150yx_1_data.txt     Data      Kandersteg                           Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_KAS_rti150yx_1_legend.txt   Legend    Kandersteg                           Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_KIL_rti150yx_1_data.txt     Data      Kiley-Alp                            Precipitation; date of the maximum daily total of the year  1968-1972
+order_94913_KIL_rti150yx_1_legend.txt   Legend    Kiley-Alp                            Precipitation; date of the maximum daily total of the year  1968-1972
+order_94913_KIP_rti150yx_1_data.txt     Data      Kippel                               Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_KIP_rti150yx_1_legend.txt   Legend    Kippel                               Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_KLA_rti150yx_1_data.txt     Data      Klosters                             Precipitation; date of the maximum daily total of the year  1863-1876
+order_94913_KLA_rti150yx_1_legend.txt   Legend    Klosters                             Precipitation; date of the maximum daily total of the year  1863-1876
+order_94913_KLA_rti150yx_2_data.txt     Data      Klosters                             Precipitation; date of the maximum daily total of the year  1885-1888
+order_94913_KLA_rti150yx_2_legend.txt   Legend    Klosters                             Precipitation; date of the maximum daily total of the year  1885-1888
+order_94913_KLA_rti150yx_3_data.txt     Data      Klosters                             Precipitation; date of the maximum daily total of the year  1898-1910
+order_94913_KLA_rti150yx_3_legend.txt   Legend    Klosters                             Precipitation; date of the maximum daily total of the year  1898-1910
+order_94913_KLA_rti150yx_4_data.txt     Data      Klosters                             Precipitation; date of the maximum daily total of the year  1911-2020
+order_94913_KLA_rti150yx_4_legend.txt   Legend    Klosters                             Precipitation; date of the maximum daily total of the year  1911-2020
+order_94913_AUB_rti150yx_1_data.txt     Data      L' Auberson                          Precipitation; date of the maximum daily total of the year  1914-2020
+order_94913_AUB_rti150yx_1_legend.txt   Legend    L' Auberson                          Precipitation; date of the maximum daily total of the year  1914-2020
+order_94913_BRL_rti150yx_1_data.txt     Data      La Brévine                           Precipitation; date of the maximum daily total of the year  1900-1930
+order_94913_BRL_rti150yx_1_legend.txt   Legend    La Brévine                           Precipitation; date of the maximum daily total of the year  1900-1930
+order_94913_BRL_rti150yx_2_data.txt     Data      La Brévine                           Precipitation; date of the maximum daily total of the year  1932-1949
+order_94913_BRL_rti150yx_2_legend.txt   Legend    La Brévine                           Precipitation; date of the maximum daily total of the year  1932-1949
+order_94913_BRL_rti150yx_3_data.txt     Data      La Brévine                           Precipitation; date of the maximum daily total of the year  1950-2020
+order_94913_BRL_rti150yx_3_legend.txt   Legend    La Brévine                           Precipitation; date of the maximum daily total of the year  1950-2020
+order_94913_CUE_rti150yx_1_data.txt     Data      La Cure                              Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_CUE_rti150yx_1_legend.txt   Legend    La Cure                              Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_LSE_rti150yx_1_data.txt     Data      La Sagne Eglise                      Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LSE_rti150yx_1_legend.txt   Legend    La Sagne Eglise                      Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LTO_rti150yx_1_data.txt     Data      La Tourne                            Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LTO_rti150yx_1_legend.txt   Legend    La Tourne                            Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LBG_rti150yx_1_data.txt     Data      Lauenen bei Gstaad                   Precipitation; date of the maximum daily total of the year  1960-1999
+order_94913_LBG_rti150yx_1_legend.txt   Legend    Lauenen bei Gstaad                   Precipitation; date of the maximum daily total of the year  1960-1999
+order_94913_BOI_rti150yx_1_data.txt     Data      Le Boinod                            Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_BOI_rti150yx_1_legend.txt   Legend    Le Boinod                            Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LBA_rti150yx_1_data.txt     Data      Le Brassus                           Precipitation; date of the maximum daily total of the year  1968-1991
+order_94913_LBA_rti150yx_1_legend.txt   Legend    Le Brassus                           Precipitation; date of the maximum daily total of the year  1968-1991
+order_94913_SEP_rti150yx_1_data.txt     Data      Le Sepey                             Precipitation; date of the maximum daily total of the year  1976-1996
+order_94913_SEP_rti150yx_1_legend.txt   Legend    Le Sepey                             Precipitation; date of the maximum daily total of the year  1976-1996
+order_94913_LEN_rti150yx_1_data.txt     Data      Lenk                                 Precipitation; date of the maximum daily total of the year  2000-2020
+order_94913_LEN_rti150yx_1_legend.txt   Legend    Lenk                                 Precipitation; date of the maximum daily total of the year  2000-2020
+order_94913_MMLEN_rti150yx_1_data.txt   Data      Lenk                                 Precipitation; date of the maximum daily total of the year  2012-2014
+order_94913_MMLEN_rti150yx_1_legend.txt Legend    Lenk                                 Precipitation; date of the maximum daily total of the year  2012-2014
+order_94913_MMLEN_rti150yx_2_data.txt   Data      Lenk                                 Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_MMLEN_rti150yx_2_legend.txt Legend    Lenk                                 Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_WSLLEB_rti150yx_1_data.txt  Data      Lens Bestand                         Precipitation; date of the maximum daily total of the year  2017-2019
+order_94913_WSLLEB_rti150yx_1_legend.txt Legend    Lens Bestand                         Precipitation; date of the maximum daily total of the year  2017-2019
+order_94913_LEH_rti150yx_1_data.txt     Data      Lenzerheide                          Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_LEH_rti150yx_1_legend.txt   Legend    Lenzerheide                          Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_DIB_rti150yx_1_data.txt     Data      Les Diablerets                       Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_DIB_rti150yx_1_legend.txt   Legend    Les Diablerets                       Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_PSB_rti150yx_1_data.txt     Data      Les Plans-sur-Bex                    Precipitation; date of the maximum daily total of the year  1960-2002
+order_94913_PSB_rti150yx_1_legend.txt   Legend    Les Plans-sur-Bex                    Precipitation; date of the maximum daily total of the year  1960-2002
+order_94913_PDM_rti150yx_1_data.txt     Data      Les Ponts-de-Martel                  Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_PDM_rti150yx_1_legend.txt   Legend    Les Ponts-de-Martel                  Precipitation; date of the maximum daily total of the year  1899-2020
+order_94913_LRO_rti150yx_1_data.txt     Data      Les Rots                             Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LRO_rti150yx_1_legend.txt   Legend    Les Rots                             Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_LEU_rti150yx_1_data.txt     Data      Leukerbad                            Precipitation; date of the maximum daily total of the year  1884-2020
+order_94913_LEU_rti150yx_1_legend.txt   Legend    Leukerbad                            Precipitation; date of the maximum daily total of the year  1884-2020
+order_94913_LYN_rti150yx_1_data.txt     Data      Leysin                               Precipitation; date of the maximum daily total of the year  1930-1976
+order_94913_LYN_rti150yx_1_legend.txt   Legend    Leysin                               Precipitation; date of the maximum daily total of the year  1930-1976
+order_94913_BELUA_rti150yx_1_data.txt   Data      Lüderenalp                           Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BELUA_rti150yx_1_legend.txt Legend    Lüderenalp                           Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_FLMAI_rti150yx_1_data.txt   Data      Maienfeld / Guscha                   Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_FLMAI_rti150yx_1_legend.txt Legend    Maienfeld / Guscha                   Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEMBE_rti150yx_1_data.txt   Data      Marbachegg                           Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEMBE_rti150yx_1_legend.txt Legend    Marbachegg                           Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_IYMMR_rti150yx_1_data.txt   Data      Marienberg                           Precipitation; date of the maximum daily total of the year  1923-2019
+order_94913_IYMMR_rti150yx_1_legend.txt Legend    Marienberg                           Precipitation; date of the maximum daily total of the year  1923-2019
+order_94913_VSMAT_rti150yx_1_data.txt   Data      Mattsand                             Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_VSMAT_rti150yx_1_legend.txt Legend    Mattsand                             Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_MSO_rti150yx_1_data.txt     Data      Mont-Soleil                          Precipitation; date of the maximum daily total of the year  1907-1993
+order_94913_MSO_rti150yx_1_legend.txt   Legend    Mont-Soleil                          Precipitation; date of the maximum daily total of the year  1907-1993
+order_94913_MOD_rti150yx_1_data.txt     Data      Montagne du Droit                    Precipitation; date of the maximum daily total of the year  1994-2020
+order_94913_MOD_rti150yx_1_legend.txt   Legend    Montagne du Droit                    Precipitation; date of the maximum daily total of the year  1994-2020
+order_94913_MVE_rti150yx_1_data.txt     Data      Montana                              Precipitation; date of the maximum daily total of the year  1930-2020
+order_94913_MVE_rti150yx_1_legend.txt   Legend    Montana                              Precipitation; date of the maximum daily total of the year  1930-2020
+order_94913_MGI_rti150yx_1_data.txt     Data      Morgins                              Precipitation; date of the maximum daily total of the year  1974-2020
+order_94913_MGI_rti150yx_1_legend.txt   Legend    Morgins                              Precipitation; date of the maximum daily total of the year  1974-2020
+order_94913_GLMUL_rti150yx_1_data.txt   Data      Mullern                              Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_GLMUL_rti150yx_1_legend.txt Legend    Mullern                              Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_IYMUW_rti150yx_1_data.txt   Data      Mühlwald                             Precipitation; date of the maximum daily total of the year  1970-1984
+order_94913_IYMUW_rti150yx_1_legend.txt Legend    Mühlwald                             Precipitation; date of the maximum daily total of the year  1970-1984
+order_94913_IYMUW_rti150yx_2_data.txt   Data      Mühlwald                             Precipitation; date of the maximum daily total of the year  1985-1986
+order_94913_IYMUW_rti150yx_2_legend.txt Legend    Mühlwald                             Precipitation; date of the maximum daily total of the year  1985-1986
+order_94913_IYMUW_rti150yx_3_data.txt   Data      Mühlwald                             Precipitation; date of the maximum daily total of the year  1987-2019
+order_94913_IYMUW_rti150yx_3_legend.txt Legend    Mühlwald                             Precipitation; date of the maximum daily total of the year  1987-2019
+order_94913_MUS_rti150yx_1_data.txt     Data      Müstair                              Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_MUS_rti150yx_1_legend.txt   Legend    Müstair                              Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_NAP_rti150yx_1_data.txt     Data      Napf                                 Precipitation; date of the maximum daily total of the year  1977-2020
+order_94913_NAP_rti150yx_1_legend.txt   Legend    Napf                                 Precipitation; date of the maximum daily total of the year  1977-2020
+order_94913_NEB_rti150yx_1_data.txt     Data      Nesselboden                          Precipitation; date of the maximum daily total of the year  1972-2008
+order_94913_NEB_rti150yx_1_legend.txt   Legend    Nesselboden                          Precipitation; date of the maximum daily total of the year  1972-2008
+order_94913_NEB_rti150yx_2_data.txt     Data      Nesselboden                          Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_NEB_rti150yx_2_legend.txt   Legend    Nesselboden                          Precipitation; date of the maximum daily total of the year  2014-2020
+order_94913_WSLNOF_rti150yx_1_data.txt  Data      Novaggio Freiland                    Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_WSLNOF_rti150yx_1_legend.txt Legend    Novaggio Freiland                    Precipitation; date of the maximum daily total of the year  2017-2018
+order_94913_OBI_rti150yx_1_data.txt     Data      Oberiberg                            Precipitation; date of the maximum daily total of the year  1883-2020
+order_94913_OBI_rti150yx_1_legend.txt   Legend    Oberiberg                            Precipitation; date of the maximum daily total of the year  1883-2020
+order_94913_OBW_rti150yx_1_data.txt     Data      Oberwald                             Precipitation; date of the maximum daily total of the year  1960-2001
+order_94913_OBW_rti150yx_1_legend.txt   Legend    Oberwald                             Precipitation; date of the maximum daily total of the year  1960-2001
+order_94913_IYPEN_rti150yx_1_data.txt   Data      Pens                                 Precipitation; date of the maximum daily total of the year  1984-1985
+order_94913_IYPEN_rti150yx_1_legend.txt Legend    Pens                                 Precipitation; date of the maximum daily total of the year  1984-1985
+order_94913_IYPEN_rti150yx_2_data.txt   Data      Pens                                 Precipitation; date of the maximum daily total of the year  1991-2002
+order_94913_IYPEN_rti150yx_2_legend.txt Legend    Pens                                 Precipitation; date of the maximum daily total of the year  1991-2002
+order_94913_IYPEN_rti150yx_3_data.txt   Data      Pens                                 Precipitation; date of the maximum daily total of the year  2003-2008
+order_94913_IYPEN_rti150yx_3_legend.txt Legend    Pens                                 Precipitation; date of the maximum daily total of the year  2003-2008
+order_94913_IYPEN_rti150yx_4_data.txt   Data      Pens                                 Precipitation; date of the maximum daily total of the year  2009-2018
+order_94913_IYPEN_rti150yx_4_legend.txt Legend    Pens                                 Precipitation; date of the maximum daily total of the year  2009-2018
+order_94913_PSL_rti150yx_1_data.txt     Data      Petit Som Martel                     Precipitation; date of the maximum daily total of the year  1969-1973
+order_94913_PSL_rti150yx_1_legend.txt   Legend    Petit Som Martel                     Precipitation; date of the maximum daily total of the year  1969-1973
+order_94913_PJO_rti150yx_1_data.txt     Data      Petite Joux                          Precipitation; date of the maximum daily total of the year  1973-1974
+order_94913_PJO_rti150yx_1_legend.txt   Legend    Petite Joux                          Precipitation; date of the maximum daily total of the year  1973-1974
+order_94913_IYPFI_rti150yx_1_data.txt   Data      Pfitsch / St. Jakob                  Precipitation; date of the maximum daily total of the year  2010-2019
+order_94913_IYPFI_rti150yx_1_legend.txt Legend    Pfitsch / St. Jakob                  Precipitation; date of the maximum daily total of the year  2010-2019
+order_94913_PIG_rti150yx_1_data.txt     Data      Pigniu                               Precipitation; date of the maximum daily total of the year  1900-1926
+order_94913_PIG_rti150yx_1_legend.txt   Legend    Pigniu                               Precipitation; date of the maximum daily total of the year  1900-1926
+order_94913_PIG_rti150yx_2_data.txt     Data      Pigniu                               Precipitation; date of the maximum daily total of the year  1927-1949
+order_94913_PIG_rti150yx_2_legend.txt   Legend    Pigniu                               Precipitation; date of the maximum daily total of the year  1927-1949
+order_94913_PIG_rti150yx_3_data.txt     Data      Pigniu                               Precipitation; date of the maximum daily total of the year  1950-1952
+order_94913_PIG_rti150yx_3_legend.txt   Legend    Pigniu                               Precipitation; date of the maximum daily total of the year  1950-1952
+order_94913_PIG_rti150yx_4_data.txt     Data      Pigniu                               Precipitation; date of the maximum daily total of the year  1953-2003
+order_94913_PIG_rti150yx_4_legend.txt   Legend    Pigniu                               Precipitation; date of the maximum daily total of the year  1953-2003
+order_94913_PIG_rti150yx_5_data.txt     Data      Pigniu                               Precipitation; date of the maximum daily total of the year  2004-2020
+order_94913_PIG_rti150yx_5_legend.txt   Legend    Pigniu                               Precipitation; date of the maximum daily total of the year  2004-2020
+order_94913_PLA_rti150yx_1_data.txt     Data      Platta (Medel)                       Precipitation; date of the maximum daily total of the year  1960-1974
+order_94913_PLA_rti150yx_1_legend.txt   Legend    Platta (Medel)                       Precipitation; date of the maximum daily total of the year  1960-1974
+order_94913_ROB_rti150yx_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; date of the maximum daily total of the year  1958-2020
+order_94913_ROB_rti150yx_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; date of the maximum daily total of the year  1958-2020
+order_94913_IYPRU_rti150yx_1_data.txt   Data      Prettau                              Precipitation; date of the maximum daily total of the year  1979-1983
+order_94913_IYPRU_rti150yx_1_legend.txt Legend    Prettau                              Precipitation; date of the maximum daily total of the year  1979-1983
+order_94913_IYPRU_rti150yx_2_data.txt   Data      Prettau                              Precipitation; date of the maximum daily total of the year  1984-1986
+order_94913_IYPRU_rti150yx_2_legend.txt Legend    Prettau                              Precipitation; date of the maximum daily total of the year  1984-1986
+order_94913_IYPRU_rti150yx_3_data.txt   Data      Prettau                              Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_IYPRU_rti150yx_3_legend.txt Legend    Prettau                              Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_REC_rti150yx_1_data.txt     Data      Reckingen                            Precipitation; date of the maximum daily total of the year  1899-1981
+order_94913_REC_rti150yx_1_legend.txt   Legend    Reckingen                            Precipitation; date of the maximum daily total of the year  1899-1981
+order_94913_IYRID_rti150yx_1_data.txt   Data      Ridnaun                              Precipitation; date of the maximum daily total of the year  1924-1933
+order_94913_IYRID_rti150yx_1_legend.txt Legend    Ridnaun                              Precipitation; date of the maximum daily total of the year  1924-1933
+order_94913_IYRID_rti150yx_2_data.txt   Data      Ridnaun                              Precipitation; date of the maximum daily total of the year  1934-1940
+order_94913_IYRID_rti150yx_2_legend.txt Legend    Ridnaun                              Precipitation; date of the maximum daily total of the year  1934-1940
+order_94913_IYRID_rti150yx_3_data.txt   Data      Ridnaun                              Precipitation; date of the maximum daily total of the year  1941-1959
+order_94913_IYRID_rti150yx_3_legend.txt Legend    Ridnaun                              Precipitation; date of the maximum daily total of the year  1941-1959
+order_94913_IYRID_rti150yx_4_data.txt   Data      Ridnaun                              Precipitation; date of the maximum daily total of the year  1960-2019
+order_94913_IYRID_rti150yx_4_legend.txt Legend    Ridnaun                              Precipitation; date of the maximum daily total of the year  1960-2019
+order_94913_RIE_rti150yx_1_data.txt     Data      Ried, Lötschen                       Precipitation; date of the maximum daily total of the year  1973-1998
+order_94913_RIE_rti150yx_1_legend.txt   Legend    Ried, Lötschen                       Precipitation; date of the maximum daily total of the year  1973-1998
+order_94913_RIE_rti150yx_2_data.txt     Data      Ried, Lötschen                       Precipitation; date of the maximum daily total of the year  1999-2006
+order_94913_RIE_rti150yx_2_legend.txt   Legend    Ried, Lötschen                       Precipitation; date of the maximum daily total of the year  1999-2006
+order_94913_RIK_rti150yx_1_data.txt     Data      Rigi-Kaltbad                         Precipitation; date of the maximum daily total of the year  1960-1979
+order_94913_RIK_rti150yx_1_legend.txt   Legend    Rigi-Kaltbad                         Precipitation; date of the maximum daily total of the year  1960-1979
+order_94913_ROG_rti150yx_1_data.txt     Data      Rossberg                             Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_ROG_rti150yx_1_legend.txt   Legend    Rossberg                             Precipitation; date of the maximum daily total of the year  2012-2020
+order_94913_RUM_rti150yx_1_data.txt     Data      Rumein / Igels                       Precipitation; date of the maximum daily total of the year  1968-1996
+order_94913_RUM_rti150yx_1_legend.txt   Legend    Rumein / Igels                       Precipitation; date of the maximum daily total of the year  1968-1996
+order_94913_SNE_rti150yx_1_data.txt     Data      Saanen                               Precipitation; date of the maximum daily total of the year  1960-1980
+order_94913_SNE_rti150yx_1_legend.txt   Legend    Saanen                               Precipitation; date of the maximum daily total of the year  1960-1980
+order_94913_SBA_rti150yx_1_data.txt     Data      Saas Balen                           Precipitation; date of the maximum daily total of the year  1994-2020
+order_94913_SBA_rti150yx_1_legend.txt   Legend    Saas Balen                           Precipitation; date of the maximum daily total of the year  1994-2020
+order_94913_VSSAB_rti150yx_1_data.txt   Data      Saas Balen                           Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_VSSAB_rti150yx_1_legend.txt Legend    Saas Balen                           Precipitation; date of the maximum daily total of the year  2010-2020
+order_94913_SAP_rti150yx_1_data.txt     Data      Safien Platz                         Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_SAP_rti150yx_1_legend.txt   Legend    Safien Platz                         Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_KASMR_rti150yx_1_data.txt   Data      Sattel / Mostelrieter                Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_KASMR_rti150yx_1_legend.txt Legend    Sattel / Mostelrieter                Precipitation; date of the maximum daily total of the year  2019-2020
+order_94913_SVG_rti150yx_1_data.txt     Data      Savognin                             Precipitation; date of the maximum daily total of the year  1892-2020
+order_94913_SVG_rti150yx_1_legend.txt   Legend    Savognin                             Precipitation; date of the maximum daily total of the year  1892-2020
+order_94913_MMSVG_rti150yx_1_data.txt   Data      Savognin                             Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_MMSVG_rti150yx_1_legend.txt Legend    Savognin                             Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_BESCB_rti150yx_1_data.txt   Data      Schallenberg                         Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BESCB_rti150yx_1_legend.txt Legend    Schallenberg                         Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_SZS_rti150yx_1_data.txt     Data      Schwarzsee Bad                       Precipitation; date of the maximum daily total of the year  1971-1974
+order_94913_SZS_rti150yx_1_legend.txt   Legend    Schwarzsee Bad                       Precipitation; date of the maximum daily total of the year  1971-1974
+order_94913_SWB_rti150yx_1_data.txt     Data      Schwäbrig                            Precipitation; date of the maximum daily total of the year  1973-1975
+order_94913_SWB_rti150yx_1_legend.txt   Legend    Schwäbrig                            Precipitation; date of the maximum daily total of the year  1973-1975
+order_94913_SWI_rti150yx_1_data.txt     Data      Schwäbrig                            Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_SWI_rti150yx_1_legend.txt   Legend    Schwäbrig                            Precipitation; date of the maximum daily total of the year  1960-1973
+order_94913_SWA_rti150yx_1_data.txt     Data      Schwägalp                            Precipitation; date of the maximum daily total of the year  1971-2020
+order_94913_SWA_rti150yx_1_legend.txt   Legend    Schwägalp                            Precipitation; date of the maximum daily total of the year  1971-2020
+order_94913_SOB_rti150yx_1_data.txt     Data      Schönenboden                         Precipitation; date of the maximum daily total of the year  1972-1979
+order_94913_SOB_rti150yx_1_legend.txt   Legend    Schönenboden                         Precipitation; date of the maximum daily total of the year  1972-1979
+order_94913_SCU_rti150yx_1_data.txt     Data      Scuol                                Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_SCU_rti150yx_1_legend.txt   Legend    Scuol                                Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_SED_rti150yx_1_data.txt     Data      Sedrun                               Precipitation; date of the maximum daily total of the year  1899-2013
+order_94913_SED_rti150yx_1_legend.txt   Legend    Sedrun                               Precipitation; date of the maximum daily total of the year  1899-2013
+order_94913_SED_rti150yx_2_data.txt     Data      Sedrun                               Precipitation; date of the maximum daily total of the year  2015-2020
+order_94913_SED_rti150yx_2_legend.txt   Legend    Sedrun                               Precipitation; date of the maximum daily total of the year  2015-2020
+order_94913_SIM_rti150yx_1_data.txt     Data      Simplon-Dorf                         Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_SIM_rti150yx_1_legend.txt   Legend    Simplon-Dorf                         Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_SOG_rti150yx_1_data.txt     Data      Soglio                               Precipitation; date of the maximum daily total of the year  1884-2020
+order_94913_SOG_rti150yx_1_legend.txt   Legend    Soglio                               Precipitation; date of the maximum daily total of the year  1884-2020
+order_94913_SDO_rti150yx_1_data.txt     Data      Splügen                              Precipitation; date of the maximum daily total of the year  1900-1967
+order_94913_SDO_rti150yx_1_legend.txt   Legend    Splügen                              Precipitation; date of the maximum daily total of the year  1900-1967
+order_94913_SDO_rti150yx_2_data.txt     Data      Splügen                              Precipitation; date of the maximum daily total of the year  1969-2020
+order_94913_SDO_rti150yx_2_legend.txt   Legend    Splügen                              Precipitation; date of the maximum daily total of the year  1969-2020
+order_94913_SPL_rti150yx_1_data.txt     Data      Splügen                              Precipitation; date of the maximum daily total of the year  1963-1967
+order_94913_SPL_rti150yx_1_legend.txt   Legend    Splügen                              Precipitation; date of the maximum daily total of the year  1963-1967
+order_94913_SAN_rti150yx_1_data.txt     Data      St. Antönien                         Precipitation; date of the maximum daily total of the year  1960-1971
+order_94913_SAN_rti150yx_1_legend.txt   Legend    St. Antönien                         Precipitation; date of the maximum daily total of the year  1960-1971
+order_94913_SAN_rti150yx_2_data.txt     Data      St. Antönien                         Precipitation; date of the maximum daily total of the year  1993-2020
+order_94913_SAN_rti150yx_2_legend.txt   Legend    St. Antönien                         Precipitation; date of the maximum daily total of the year  1993-2020
+order_94913_IYSMG_rti150yx_1_data.txt   Data      St. Magdalena in Gsies               Precipitation; date of the maximum daily total of the year  1979-2019
+order_94913_IYSMG_rti150yx_1_legend.txt Legend    St. Magdalena in Gsies               Precipitation; date of the maximum daily total of the year  1979-2019
+order_94913_IYSMT_rti150yx_1_data.txt   Data      St. Martin in Thurn                  Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_IYSMT_rti150yx_1_legend.txt Legend    St. Martin in Thurn                  Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_IYVAL_rti150yx_1_data.txt   Data      St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1920-1930
+order_94913_IYVAL_rti150yx_1_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1920-1930
+order_94913_IYVAL_rti150yx_2_data.txt   Data      St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1931-1932
+order_94913_IYVAL_rti150yx_2_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1931-1932
+order_94913_IYVAL_rti150yx_3_data.txt   Data      St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1933-1948
+order_94913_IYVAL_rti150yx_3_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1933-1948
+order_94913_IYVAL_rti150yx_4_data.txt   Data      St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1951-2019
+order_94913_IYVAL_rti150yx_4_legend.txt Legend    St. Valentin a.d. Haide              Precipitation; date of the maximum daily total of the year  1951-2019
+order_94913_IYSVP_rti150yx_1_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1925-1926
+order_94913_IYSVP_rti150yx_1_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1925-1926
+order_94913_IYSVP_rti150yx_2_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1928-1940
+order_94913_IYSVP_rti150yx_2_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1928-1940
+order_94913_IYSVP_rti150yx_3_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1941-1944
+order_94913_IYSVP_rti150yx_3_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1941-1944
+order_94913_IYSVP_rti150yx_4_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1945-1948
+order_94913_IYSVP_rti150yx_4_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1945-1948
+order_94913_IYSVP_rti150yx_5_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1951-1958
+order_94913_IYSVP_rti150yx_5_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1951-1958
+order_94913_IYSVP_rti150yx_6_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1959-1962
+order_94913_IYSVP_rti150yx_6_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1959-1962
+order_94913_IYSVP_rti150yx_7_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1963-1968
+order_94913_IYSVP_rti150yx_7_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1963-1968
+order_94913_IYSVP_rti150yx_8_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1969-1977
+order_94913_IYSVP_rti150yx_8_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1969-1977
+order_94913_IYSVP_rti150yx_9_data.txt   Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1978-1995
+order_94913_IYSVP_rti150yx_9_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1978-1995
+order_94913_IYSVP_rti150yx_10_data.txt  Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1996-2000
+order_94913_IYSVP_rti150yx_10_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  1996-2000
+order_94913_IYSVP_rti150yx_11_data.txt  Data      St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  2001-2019
+order_94913_IYSVP_rti150yx_11_legend.txt Legend    St. Veit in Prags                    Precipitation; date of the maximum daily total of the year  2001-2019
+order_94913_IYSWA_rti150yx_1_data.txt   Data      St. Walburg                          Precipitation; date of the maximum daily total of the year  1979-2019
+order_94913_IYSWA_rti150yx_1_legend.txt Legend    St. Walburg                          Precipitation; date of the maximum daily total of the year  1979-2019
+order_94913_SMM_rti150yx_1_data.txt     Data      Sta. Maria, Val Müstair              Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_SMM_rti150yx_1_legend.txt   Legend    Sta. Maria, Val Müstair              Precipitation; date of the maximum daily total of the year  1900-2020
+order_94913_SEG_rti150yx_1_data.txt     Data      Steg FL                              Precipitation; date of the maximum daily total of the year  1968-1970
+order_94913_SEG_rti150yx_1_legend.txt   Legend    Steg FL                              Precipitation; date of the maximum daily total of the year  1968-1970
+order_94913_SGD_rti150yx_1_data.txt     Data      Stiegelschwand                       Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_SGD_rti150yx_1_legend.txt   Legend    Stiegelschwand                       Precipitation; date of the maximum daily total of the year  1972-2020
+order_94913_STP_rti150yx_1_data.txt     Data      Stöckalp                             Precipitation; date of the maximum daily total of the year  1984-2012
+order_94913_STP_rti150yx_1_legend.txt   Legend    Stöckalp                             Precipitation; date of the maximum daily total of the year  1984-2012
+order_94913_STP_rti150yx_2_data.txt     Data      Stöckalp                             Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_STP_rti150yx_2_legend.txt   Legend    Stöckalp                             Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_SUS_rti150yx_1_data.txt     Data      Susch                                Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_SUS_rti150yx_1_legend.txt   Legend    Susch                                Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_SUS_rti150yx_2_data.txt     Data      Susch                                Precipitation; date of the maximum daily total of the year  1914-2020
+order_94913_SUS_rti150yx_2_legend.txt   Legend    Susch                                Precipitation; date of the maximum daily total of the year  1914-2020
+order_94913_IYTAU_rti150yx_1_data.txt   Data      Taufers i.M.                         Precipitation; date of the maximum daily total of the year  1921-2019
+order_94913_IYTAU_rti150yx_1_legend.txt Legend    Taufers i.M.                         Precipitation; date of the maximum daily total of the year  1921-2019
+order_94913_IYTER_rti150yx_1_data.txt   Data      Terenten                             Precipitation; date of the maximum daily total of the year  1981-1989
+order_94913_IYTER_rti150yx_1_legend.txt Legend    Terenten                             Precipitation; date of the maximum daily total of the year  1981-1989
+order_94913_IYTER_rti150yx_2_data.txt   Data      Terenten                             Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_IYTER_rti150yx_2_legend.txt Legend    Terenten                             Precipitation; date of the maximum daily total of the year  1990-2019
+order_94913_IYTOB_rti150yx_1_data.txt   Data      Toblach                              Precipitation; date of the maximum daily total of the year  1921-1948
+order_94913_IYTOB_rti150yx_1_legend.txt Legend    Toblach                              Precipitation; date of the maximum daily total of the year  1921-1948
+order_94913_IYTOB_rti150yx_2_data.txt   Data      Toblach                              Precipitation; date of the maximum daily total of the year  1949-1959
+order_94913_IYTOB_rti150yx_2_legend.txt Legend    Toblach                              Precipitation; date of the maximum daily total of the year  1949-1959
+order_94913_IYTOB_rti150yx_3_data.txt   Data      Toblach                              Precipitation; date of the maximum daily total of the year  1960-1963
+order_94913_IYTOB_rti150yx_3_legend.txt Legend    Toblach                              Precipitation; date of the maximum daily total of the year  1960-1963
+order_94913_IYTOB_rti150yx_4_data.txt   Data      Toblach                              Precipitation; date of the maximum daily total of the year  1964-2019
+order_94913_IYTOB_rti150yx_4_legend.txt Legend    Toblach                              Precipitation; date of the maximum daily total of the year  1964-2019
+order_94913_VSTRI_rti150yx_1_data.txt   Data      Trient                               Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_VSTRI_rti150yx_1_legend.txt Legend    Trient                               Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_FLTRB_rti150yx_1_data.txt   Data      Triesenberg                          Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_FLTRB_rti150yx_1_legend.txt Legend    Triesenberg                          Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_TST_rti150yx_1_data.txt     Data      Tschiertschen                        Precipitation; date of the maximum daily total of the year  1897-2020
+order_94913_TST_rti150yx_1_legend.txt   Legend    Tschiertschen                        Precipitation; date of the maximum daily total of the year  1897-2020
+order_94913_TDR_rti150yx_1_data.txt     Data      Tête-de-Ran                          Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_TDR_rti150yx_1_legend.txt   Legend    Tête-de-Ran                          Precipitation; date of the maximum daily total of the year  1969-1974
+order_94913_ULR_rti150yx_1_data.txt     Data      Ulrichen                             Precipitation; date of the maximum daily total of the year  1980-2020
+order_94913_ULR_rti150yx_1_legend.txt   Legend    Ulrichen                             Precipitation; date of the maximum daily total of the year  1980-2020
+order_94913_BEGTH_rti150yx_1_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; date of the maximum daily total of the year  1997-2012
+order_94913_BEGTH_rti150yx_1_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; date of the maximum daily total of the year  1997-2012
+order_94913_BEGTH_rti150yx_2_data.txt   Data      Untere Gantrischhütte, Rüschegg      Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_BEGTH_rti150yx_2_legend.txt Legend    Untere Gantrischhütte, Rüschegg      Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_UNS_rti150yx_1_data.txt     Data      Unterschächen                        Precipitation; date of the maximum daily total of the year  1981-2020
+order_94913_UNS_rti150yx_1_legend.txt   Legend    Unterschächen                        Precipitation; date of the maximum daily total of the year  1981-2020
+order_94913_URB_rti150yx_1_data.txt     Data      Urnerboden                           Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_URB_rti150yx_1_legend.txt   Legend    Urnerboden                           Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_VAL_rti150yx_1_data.txt     Data      Val                                  Precipitation; date of the maximum daily total of the year  1960-1979
+order_94913_VAL_rti150yx_1_legend.txt   Legend    Val                                  Precipitation; date of the maximum daily total of the year  1960-1979
+order_94913_VLS_rti150yx_1_data.txt     Data      Vals                                 Precipitation; date of the maximum daily total of the year  1892-2020
+order_94913_VLS_rti150yx_1_legend.txt   Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1892-2020
+order_94913_IYVAA_rti150yx_1_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1923-1940
+order_94913_IYVAA_rti150yx_1_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1923-1940
+order_94913_IYVAA_rti150yx_2_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1941-1944
+order_94913_IYVAA_rti150yx_2_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1941-1944
+order_94913_IYVAA_rti150yx_3_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1945-1946
+order_94913_IYVAA_rti150yx_3_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1945-1946
+order_94913_IYVAA_rti150yx_4_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1950-1951
+order_94913_IYVAA_rti150yx_4_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1950-1951
+order_94913_IYVAA_rti150yx_5_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1952-1976
+order_94913_IYVAA_rti150yx_5_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1952-1976
+order_94913_IYVAA_rti150yx_6_data.txt   Data      Vals                                 Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_IYVAA_rti150yx_6_legend.txt Legend    Vals                                 Precipitation; date of the maximum daily total of the year  1988-2019
+order_94913_VEL_rti150yx_1_data.txt     Data      Vella                                Precipitation; date of the maximum daily total of the year  1997-2020
+order_94913_VEL_rti150yx_1_legend.txt   Legend    Vella                                Precipitation; date of the maximum daily total of the year  1997-2020
+order_94913_VIO_rti150yx_1_data.txt     Data      Vicosoprano                          Precipitation; date of the maximum daily total of the year  1929-1975
+order_94913_VIO_rti150yx_1_legend.txt   Legend    Vicosoprano                          Precipitation; date of the maximum daily total of the year  1929-1975
+order_94913_VIO_rti150yx_2_data.txt     Data      Vicosoprano                          Precipitation; date of the maximum daily total of the year  2005-2016
+order_94913_VIO_rti150yx_2_legend.txt   Legend    Vicosoprano                          Precipitation; date of the maximum daily total of the year  2005-2016
+order_94913_VIO_rti150yx_3_data.txt     Data      Vicosoprano                          Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_VIO_rti150yx_3_legend.txt   Legend    Vicosoprano                          Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_LOE_rti150yx_1_data.txt     Data      Vicosoprano / Löbbia                 Precipitation; date of the maximum daily total of the year  1976-2003
+order_94913_LOE_rti150yx_1_legend.txt   Legend    Vicosoprano / Löbbia                 Precipitation; date of the maximum daily total of the year  1976-2003
+order_94913_VSVIS_rti150yx_1_data.txt   Data      Visperterminen                       Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_VSVIS_rti150yx_1_legend.txt Legend    Visperterminen                       Precipitation; date of the maximum daily total of the year  2013-2020
+order_94913_VRI_rti150yx_1_data.txt     Data      Vrin                                 Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_VRI_rti150yx_1_legend.txt   Legend    Vrin                                 Precipitation; date of the maximum daily total of the year  1900-1913
+order_94913_VRI_rti150yx_2_data.txt     Data      Vrin                                 Precipitation; date of the maximum daily total of the year  1915-1917
+order_94913_VRI_rti150yx_2_legend.txt   Legend    Vrin                                 Precipitation; date of the maximum daily total of the year  1915-1917
+order_94913_VRI_rti150yx_3_data.txt     Data      Vrin                                 Precipitation; date of the maximum daily total of the year  1918-1926
+order_94913_VRI_rti150yx_3_legend.txt   Legend    Vrin                                 Precipitation; date of the maximum daily total of the year  1918-1926
+order_94913_VRI_rti150yx_4_data.txt     Data      Vrin                                 Precipitation; date of the maximum daily total of the year  1927-1928
+order_94913_VRI_rti150yx_4_legend.txt   Legend    Vrin                                 Precipitation; date of the maximum daily total of the year  1927-1928
+order_94913_VRI_rti150yx_5_data.txt     Data      Vrin                                 Precipitation; date of the maximum daily total of the year  1932-2020
+order_94913_VRI_rti150yx_5_legend.txt   Legend    Vrin                                 Precipitation; date of the maximum daily total of the year  1932-2020
+order_94913_TAW_rti150yx_1_data.txt     Data      Wald / Tanne                         Precipitation; date of the maximum daily total of the year  1975-2020
+order_94913_TAW_rti150yx_1_legend.txt   Legend    Wald / Tanne                         Precipitation; date of the maximum daily total of the year  1975-2020
+order_94913_WSS_rti150yx_1_data.txt     Data      Weissenstein                         Precipitation; date of the maximum daily total of the year  1903-1944
+order_94913_WSS_rti150yx_1_legend.txt   Legend    Weissenstein                         Precipitation; date of the maximum daily total of the year  1903-1944
+order_94913_WSS_rti150yx_2_data.txt     Data      Weissenstein                         Precipitation; date of the maximum daily total of the year  1960-1972
+order_94913_WSS_rti150yx_2_legend.txt   Legend    Weissenstein                         Precipitation; date of the maximum daily total of the year  1960-1972
+order_94913_IYWEL_rti150yx_1_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1922-1954
+order_94913_IYWEL_rti150yx_1_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1922-1954
+order_94913_IYWEL_rti150yx_2_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1955-1958
+order_94913_IYWEL_rti150yx_2_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1955-1958
+order_94913_IYWEL_rti150yx_3_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1959-1967
+order_94913_IYWEL_rti150yx_3_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1959-1967
+order_94913_IYWEL_rti150yx_4_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1968-1979
+order_94913_IYWEL_rti150yx_4_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1968-1979
+order_94913_IYWEL_rti150yx_5_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1981-1985
+order_94913_IYWEL_rti150yx_5_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1981-1985
+order_94913_IYWEL_rti150yx_6_data.txt   Data      Welsberg                             Precipitation; date of the maximum daily total of the year  1986-2019
+order_94913_IYWEL_rti150yx_6_legend.txt Legend    Welsberg                             Precipitation; date of the maximum daily total of the year  1986-2019
+order_94913_IYWEN_rti150yx_1_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1920-1925
+order_94913_IYWEN_rti150yx_1_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1920-1925
+order_94913_IYWEN_rti150yx_2_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1927-1940
+order_94913_IYWEN_rti150yx_2_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1927-1940
+order_94913_IYWEN_rti150yx_3_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1942-1944
+order_94913_IYWEN_rti150yx_3_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1942-1944
+order_94913_IYWEN_rti150yx_4_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1945-1950
+order_94913_IYWEN_rti150yx_4_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1945-1950
+order_94913_IYWEN_rti150yx_5_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1951-1969
+order_94913_IYWEN_rti150yx_5_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1951-1969
+order_94913_IYWEN_rti150yx_6_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1971-1978
+order_94913_IYWEN_rti150yx_6_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1971-1978
+order_94913_IYWEN_rti150yx_7_data.txt   Data      Welschnofen                          Precipitation; date of the maximum daily total of the year  1985-2019
+order_94913_IYWEN_rti150yx_7_legend.txt Legend    Welschnofen                          Precipitation; date of the maximum daily total of the year  1985-2019
+order_94913_KAWEG_rti150yx_1_data.txt   Data      Wengen                               Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_KAWEG_rti150yx_1_legend.txt Legend    Wengen                               Precipitation; date of the maximum daily total of the year  2017-2020
+order_94913_ZNZ_rti150yx_1_data.txt     Data      Zernez                               Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_ZNZ_rti150yx_1_legend.txt   Legend    Zernez                               Precipitation; date of the maximum daily total of the year  1960-2020
+order_94913_MMZNZ_rti150yx_1_data.txt   Data      Zernez                               Precipitation; date of the maximum daily total of the year  2012-2014
+order_94913_MMZNZ_rti150yx_1_legend.txt Legend    Zernez                               Precipitation; date of the maximum daily total of the year  2012-2014
+order_94913_MMZNZ_rti150yx_2_data.txt   Data      Zernez                               Precipitation; date of the maximum daily total of the year  2016-2020
+order_94913_MMZNZ_rti150yx_2_legend.txt Legend    Zernez                               Precipitation; date of the maximum daily total of the year  2016-2020

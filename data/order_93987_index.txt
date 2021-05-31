@@ -1,0 +1,758 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 93987
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_93987_AGAAR_fu3010m1_1_data.txt   Data      Aarau                                Gust peak (one second); monthly maximum                     201804-201807
+order_93987_AGAAR_fu3010m1_1_legend.txt Legend    Aarau                                Gust peak (one second); monthly maximum                     201804-201807
+order_93987_AGAAR_fu3010m1_2_data.txt   Data      Aarau                                Gust peak (one second); monthly maximum                     201808-201809
+order_93987_AGAAR_fu3010m1_2_legend.txt Legend    Aarau                                Gust peak (one second); monthly maximum                     201808-201809
+order_93987_AGAAR_fu3010m1_3_data.txt   Data      Aarau                                Gust peak (one second); monthly maximum                     201810-201910
+order_93987_AGAAR_fu3010m1_3_legend.txt Legend    Aarau                                Gust peak (one second); monthly maximum                     201810-201910
+order_93987_AGAAR_fu3010m1_4_data.txt   Data      Aarau                                Gust peak (one second); monthly maximum                     202001-202103
+order_93987_AGAAR_fu3010m1_4_legend.txt Legend    Aarau                                Gust peak (one second); monthly maximum                     202001-202103
+order_93987_AIG_fu3010m1_1_data.txt     Data      Aigle                                Gust peak (one second); monthly maximum                     198104-198401
+order_93987_AIG_fu3010m1_1_legend.txt   Legend    Aigle                                Gust peak (one second); monthly maximum                     198104-198401
+order_93987_AIG_fu3010m1_2_data.txt     Data      Aigle                                Gust peak (one second); monthly maximum                     198404-200503
+order_93987_AIG_fu3010m1_2_legend.txt   Legend    Aigle                                Gust peak (one second); monthly maximum                     198404-200503
+order_93987_AIG_fu3010m1_3_data.txt     Data      Aigle                                Gust peak (one second); monthly maximum                     200504-201612
+order_93987_AIG_fu3010m1_3_legend.txt   Legend    Aigle                                Gust peak (one second); monthly maximum                     200504-201612
+order_93987_AIG_fu3010m1_4_data.txt     Data      Aigle                                Gust peak (one second); monthly maximum                     201701-202103
+order_93987_AIG_fu3010m1_4_legend.txt   Legend    Aigle                                Gust peak (one second); monthly maximum                     201701-202103
+order_93987_ARH_fu3010m1_1_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199301-199303
+order_93987_ARH_fu3010m1_1_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199301-199303
+order_93987_ARH_fu3010m1_2_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199304-199306
+order_93987_ARH_fu3010m1_2_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199304-199306
+order_93987_ARH_fu3010m1_3_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199307-199410
+order_93987_ARH_fu3010m1_3_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199307-199410
+order_93987_ARH_fu3010m1_4_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199411-199503
+order_93987_ARH_fu3010m1_4_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199411-199503
+order_93987_ARH_fu3010m1_5_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199505-199803
+order_93987_ARH_fu3010m1_5_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199505-199803
+order_93987_ARH_fu3010m1_6_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199804-199805
+order_93987_ARH_fu3010m1_6_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199804-199805
+order_93987_ARH_fu3010m1_7_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199806-199908
+order_93987_ARH_fu3010m1_7_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199806-199908
+order_93987_ARH_fu3010m1_8_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     199909-200004
+order_93987_ARH_fu3010m1_8_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     199909-200004
+order_93987_ARH_fu3010m1_9_data.txt     Data      Altenrhein                           Gust peak (one second); monthly maximum                     200005-200010
+order_93987_ARH_fu3010m1_9_legend.txt   Legend    Altenrhein                           Gust peak (one second); monthly maximum                     200005-200010
+order_93987_ARH_fu3010m1_10_data.txt    Data      Altenrhein                           Gust peak (one second); monthly maximum                     200011-200111
+order_93987_ARH_fu3010m1_10_legend.txt  Legend    Altenrhein                           Gust peak (one second); monthly maximum                     200011-200111
+order_93987_ARH_fu3010m1_11_data.txt    Data      Altenrhein                           Gust peak (one second); monthly maximum                     200112-200306
+order_93987_ARH_fu3010m1_11_legend.txt  Legend    Altenrhein                           Gust peak (one second); monthly maximum                     200112-200306
+order_93987_ARH_fu3010m1_12_data.txt    Data      Altenrhein                           Gust peak (one second); monthly maximum                     200307-201312
+order_93987_ARH_fu3010m1_12_legend.txt  Legend    Altenrhein                           Gust peak (one second); monthly maximum                     200307-201312
+order_93987_ARH_fu3010m1_13_data.txt    Data      Altenrhein                           Gust peak (one second); monthly maximum                     202006-202103
+order_93987_ARH_fu3010m1_13_legend.txt  Legend    Altenrhein                           Gust peak (one second); monthly maximum                     202006-202103
+order_93987_DLKIS_fu3010m1_1_data.txt   Data      Bad Kissingen                        Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLKIS_fu3010m1_1_legend.txt Legend    Bad Kissingen                        Gust peak (one second); monthly maximum                     202008-202103
+order_93987_AGBAD_fu3010m1_1_data.txt   Data      Baden                                Gust peak (one second); monthly maximum                     201803-201911
+order_93987_AGBAD_fu3010m1_1_legend.txt Legend    Baden                                Gust peak (one second); monthly maximum                     201803-201911
+order_93987_AGBAD_fu3010m1_2_data.txt   Data      Baden                                Gust peak (one second); monthly maximum                     202001-202011
+order_93987_AGBAD_fu3010m1_2_legend.txt Legend    Baden                                Gust peak (one second); monthly maximum                     202001-202011
+order_93987_AGBAD_fu3010m1_3_data.txt   Data      Baden                                Gust peak (one second); monthly maximum                     202101-202103
+order_93987_AGBAD_fu3010m1_3_legend.txt Legend    Baden                                Gust peak (one second); monthly maximum                     202101-202103
+order_93987_DLBAM_fu3010m1_1_data.txt   Data      Bamberg                              Gust peak (one second); monthly maximum                     202008-202009
+order_93987_DLBAM_fu3010m1_1_legend.txt Legend    Bamberg                              Gust peak (one second); monthly maximum                     202008-202009
+order_93987_DLBAM_fu3010m1_2_data.txt   Data      Bamberg                              Gust peak (one second); monthly maximum                     202011-202103
+order_93987_DLBAM_fu3010m1_2_legend.txt Legend    Bamberg                              Gust peak (one second); monthly maximum                     202011-202103
+order_93987_BAS_fu3010m1_1_data.txt     Data      Basel / Binningen                    Gust peak (one second); monthly maximum                     198012-202103
+order_93987_BAS_fu3010m1_1_legend.txt   Legend    Basel / Binningen                    Gust peak (one second); monthly maximum                     198012-202103
+order_93987_KADER_fu3010m1_1_data.txt   Data      Basel / Dreispitz                    Gust peak (one second); monthly maximum                     201810-202012
+order_93987_KADER_fu3010m1_1_legend.txt Legend    Basel / Dreispitz                    Gust peak (one second); monthly maximum                     201810-202012
+order_93987_DLBER_fu3010m1_1_data.txt   Data      Berus                                Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLBER_fu3010m1_1_legend.txt Legend    Berus                                Gust peak (one second); monthly maximum                     202008-202103
+order_93987_BEZ_fu3010m1_1_data.txt     Data      Beznau                               Gust peak (one second); monthly maximum                     200806-200906
+order_93987_BEZ_fu3010m1_1_legend.txt   Legend    Beznau                               Gust peak (one second); monthly maximum                     200806-200906
+order_93987_BEZ_fu3010m1_2_data.txt     Data      Beznau                               Gust peak (one second); monthly maximum                     200907-202103
+order_93987_BEZ_fu3010m1_2_legend.txt   Legend    Beznau                               Gust peak (one second); monthly maximum                     200907-202103
+order_93987_BIA_fu3010m1_1_data.txt     Data      Biasca                               Gust peak (one second); monthly maximum                     201904-202103
+order_93987_BIA_fu3010m1_1_legend.txt   Legend    Biasca                               Gust peak (one second); monthly maximum                     201904-202103
+order_93987_TIBIO_fu3010m1_1_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     200910-201012
+order_93987_TIBIO_fu3010m1_1_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     200910-201012
+order_93987_TIBIO_fu3010m1_2_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201101-201204
+order_93987_TIBIO_fu3010m1_2_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201101-201204
+order_93987_TIBIO_fu3010m1_3_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201205-201303
+order_93987_TIBIO_fu3010m1_3_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201205-201303
+order_93987_TIBIO_fu3010m1_4_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201304-201604
+order_93987_TIBIO_fu3010m1_4_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201304-201604
+order_93987_TIBIO_fu3010m1_5_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201605-201803
+order_93987_TIBIO_fu3010m1_5_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201605-201803
+order_93987_TIBIO_fu3010m1_6_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201804-201903
+order_93987_TIBIO_fu3010m1_6_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201804-201903
+order_93987_TIBIO_fu3010m1_7_data.txt   Data      Bioggio                              Gust peak (one second); monthly maximum                     201904-202103
+order_93987_TIBIO_fu3010m1_7_legend.txt Legend    Bioggio                              Gust peak (one second); monthly maximum                     201904-202103
+order_93987_BOU_fu3010m1_1_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199309-199312
+order_93987_BOU_fu3010m1_1_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199309-199312
+order_93987_BOU_fu3010m1_2_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199401-199408
+order_93987_BOU_fu3010m1_2_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199401-199408
+order_93987_BOU_fu3010m1_3_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199409-199411
+order_93987_BOU_fu3010m1_3_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199409-199411
+order_93987_BOU_fu3010m1_4_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199412-199510
+order_93987_BOU_fu3010m1_4_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199412-199510
+order_93987_BOU_fu3010m1_5_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199511-199803
+order_93987_BOU_fu3010m1_5_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199511-199803
+order_93987_BOU_fu3010m1_6_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199804-199805
+order_93987_BOU_fu3010m1_6_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199804-199805
+order_93987_BOU_fu3010m1_7_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     199808-200002
+order_93987_BOU_fu3010m1_7_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     199808-200002
+order_93987_BOU_fu3010m1_8_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     200005-200010
+order_93987_BOU_fu3010m1_8_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     200005-200010
+order_93987_BOU_fu3010m1_9_data.txt     Data      Bouveret                             Gust peak (one second); monthly maximum                     200011-200503
+order_93987_BOU_fu3010m1_9_legend.txt   Legend    Bouveret                             Gust peak (one second); monthly maximum                     200011-200503
+order_93987_BOU_fu3010m1_10_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     200504-200712
+order_93987_BOU_fu3010m1_10_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     200504-200712
+order_93987_BOU_fu3010m1_11_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     200802-200803
+order_93987_BOU_fu3010m1_11_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     200802-200803
+order_93987_BOU_fu3010m1_12_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     200804-200807
+order_93987_BOU_fu3010m1_12_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     200804-200807
+order_93987_BOU_fu3010m1_13_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     200808-200904
+order_93987_BOU_fu3010m1_13_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     200808-200904
+order_93987_BOU_fu3010m1_14_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     200905-201204
+order_93987_BOU_fu3010m1_14_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     200905-201204
+order_93987_BOU_fu3010m1_15_data.txt    Data      Bouveret                             Gust peak (one second); monthly maximum                     202006-202103
+order_93987_BOU_fu3010m1_15_legend.txt  Legend    Bouveret                             Gust peak (one second); monthly maximum                     202006-202103
+order_93987_WNSBOU_fu3010m1_1_data.txt  Data      Bouveret                             Gust peak (one second); monthly maximum                     201506-201510
+order_93987_WNSBOU_fu3010m1_1_legend.txt Legend    Bouveret                             Gust peak (one second); monthly maximum                     201506-201510
+order_93987_WNSBOU_fu3010m1_2_data.txt  Data      Bouveret                             Gust peak (one second); monthly maximum                     201606-201608
+order_93987_WNSBOU_fu3010m1_2_legend.txt Legend    Bouveret                             Gust peak (one second); monthly maximum                     201606-201608
+order_93987_WNSBOU_fu3010m1_3_data.txt  Data      Bouveret                             Gust peak (one second); monthly maximum                     201807-201810
+order_93987_WNSBOU_fu3010m1_3_legend.txt Legend    Bouveret                             Gust peak (one second); monthly maximum                     201807-201810
+order_93987_IYBOZ_fu3010m1_1_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     200606-201611
+order_93987_IYBOZ_fu3010m1_1_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     200606-201611
+order_93987_IYBOZ_fu3010m1_2_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     201701-201902
+order_93987_IYBOZ_fu3010m1_2_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     201701-201902
+order_93987_IYBOZ_fu3010m1_3_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYBOZ_fu3010m1_3_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYBOZ_fu3010m1_4_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYBOZ_fu3010m1_4_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYBOZ_fu3010m1_5_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYBOZ_fu3010m1_5_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYBOZ_fu3010m1_6_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYBOZ_fu3010m1_6_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYBOZ_fu3010m1_7_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYBOZ_fu3010m1_7_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYBOZ_fu3010m1_8_data.txt   Data      Bozen                                Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYBOZ_fu3010m1_8_legend.txt Legend    Bozen                                Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYBRZ_fu3010m1_1_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     200805-200807
+order_93987_IYBRZ_fu3010m1_1_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     200805-200807
+order_93987_IYBRZ_fu3010m1_2_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     200808-201611
+order_93987_IYBRZ_fu3010m1_2_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     200808-201611
+order_93987_IYBRZ_fu3010m1_3_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     201701-201807
+order_93987_IYBRZ_fu3010m1_3_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     201701-201807
+order_93987_IYBRZ_fu3010m1_4_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     201808-201902
+order_93987_IYBRZ_fu3010m1_4_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     201808-201902
+order_93987_IYBRZ_fu3010m1_5_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYBRZ_fu3010m1_5_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYBRZ_fu3010m1_6_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYBRZ_fu3010m1_6_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYBRZ_fu3010m1_7_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYBRZ_fu3010m1_7_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYBRZ_fu3010m1_8_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYBRZ_fu3010m1_8_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYBRZ_fu3010m1_9_data.txt   Data      Branzoll                             Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYBRZ_fu3010m1_9_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYBRZ_fu3010m1_10_data.txt  Data      Branzoll                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYBRZ_fu3010m1_10_legend.txt Legend    Branzoll                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_BUS_fu3010m1_1_data.txt     Data      Buchs / Aarau                        Gust peak (one second); monthly maximum                     198406-200706
+order_93987_BUS_fu3010m1_1_legend.txt   Legend    Buchs / Aarau                        Gust peak (one second); monthly maximum                     198406-200706
+order_93987_BUS_fu3010m1_2_data.txt     Data      Buchs / Aarau                        Gust peak (one second); monthly maximum                     200707-202103
+order_93987_BUS_fu3010m1_2_legend.txt   Legend    Buchs / Aarau                        Gust peak (one second); monthly maximum                     200707-202103
+order_93987_KABAT_fu3010m1_1_data.txt   Data      Bättwil                              Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KABAT_fu3010m1_1_legend.txt Legend    Bättwil                              Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KABAT_fu3010m1_2_data.txt   Data      Bättwil                              Gust peak (one second); monthly maximum                     201812-201904
+order_93987_KABAT_fu3010m1_2_legend.txt Legend    Bättwil                              Gust peak (one second); monthly maximum                     201812-201904
+order_93987_KABAT_fu3010m1_3_data.txt   Data      Bättwil                              Gust peak (one second); monthly maximum                     201911-202012
+order_93987_KABAT_fu3010m1_3_legend.txt Legend    Bättwil                              Gust peak (one second); monthly maximum                     201911-202012
+order_93987_WNSTDP_fu3010m1_1_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201506-201508
+order_93987_WNSTDP_fu3010m1_1_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201506-201508
+order_93987_WNSTDP_fu3010m1_2_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201509-201510
+order_93987_WNSTDP_fu3010m1_2_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201509-201510
+order_93987_WNSTDP_fu3010m1_3_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201604-201605
+order_93987_WNSTDP_fu3010m1_3_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201604-201605
+order_93987_WNSTDP_fu3010m1_4_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201708-201709
+order_93987_WNSTDP_fu3010m1_4_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201708-201709
+order_93987_WNSTDP_fu3010m1_5_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201807-201808
+order_93987_WNSTDP_fu3010m1_5_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201807-201808
+order_93987_WNSTDP_fu3010m1_6_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201809-201810
+order_93987_WNSTDP_fu3010m1_6_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     201809-201810
+order_93987_WNSTDP_fu3010m1_7_data.txt  Data      Corseaux / La Pichette               Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSTDP_fu3010m1_7_legend.txt Legend    Corseaux / La Pichette               Gust peak (one second); monthly maximum                     202007-202008
+order_93987_DLDRE_fu3010m1_1_data.txt   Data      Dresden / Klotzsche                  Gust peak (one second); monthly maximum                     195912-201512
+order_93987_DLDRE_fu3010m1_1_legend.txt Legend    Dresden / Klotzsche                  Gust peak (one second); monthly maximum                     195912-201512
+order_93987_DLDRE_fu3010m1_2_data.txt   Data      Dresden / Klotzsche                  Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLDRE_fu3010m1_2_legend.txt Legend    Dresden / Klotzsche                  Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLERF_fu3010m1_1_data.txt   Data      Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     196612-196911
+order_93987_DLERF_fu3010m1_1_legend.txt Legend    Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     196612-196911
+order_93987_DLERF_fu3010m1_2_data.txt   Data      Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     196912-201512
+order_93987_DLERF_fu3010m1_2_legend.txt Legend    Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     196912-201512
+order_93987_DLERF_fu3010m1_3_data.txt   Data      Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLERF_fu3010m1_3_legend.txt Legend    Erfurt / Bindersleben                Gust peak (one second); monthly maximum                     201604-202103
+order_93987_KAETT_fu3010m1_1_data.txt   Data      Ettingen                             Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KAETT_fu3010m1_1_legend.txt Legend    Ettingen                             Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KAETT_fu3010m1_2_data.txt   Data      Ettingen                             Gust peak (one second); monthly maximum                     201812-202012
+order_93987_KAETT_fu3010m1_2_legend.txt Legend    Ettingen                             Gust peak (one second); monthly maximum                     201812-202012
+order_93987_WNSEVI_fu3010m1_1_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201501-201505
+order_93987_WNSEVI_fu3010m1_1_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201501-201505
+order_93987_WNSEVI_fu3010m1_2_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201506-201509
+order_93987_WNSEVI_fu3010m1_2_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201506-201509
+order_93987_WNSEVI_fu3010m1_3_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201510-201603
+order_93987_WNSEVI_fu3010m1_3_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201510-201603
+order_93987_WNSEVI_fu3010m1_4_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201604-201606
+order_93987_WNSEVI_fu3010m1_4_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201604-201606
+order_93987_WNSEVI_fu3010m1_5_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201708-201710
+order_93987_WNSEVI_fu3010m1_5_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201708-201710
+order_93987_WNSEVI_fu3010m1_6_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201711-201712
+order_93987_WNSEVI_fu3010m1_6_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201711-201712
+order_93987_WNSEVI_fu3010m1_7_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201808-201810
+order_93987_WNSEVI_fu3010m1_7_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201808-201810
+order_93987_WNSEVI_fu3010m1_8_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     201811-201812
+order_93987_WNSEVI_fu3010m1_8_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     201811-201812
+order_93987_WNSEVI_fu3010m1_9_data.txt  Data      Evian                                Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSEVI_fu3010m1_9_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSEVI_fu3010m1_10_data.txt Data      Evian                                Gust peak (one second); monthly maximum                     202009-202101
+order_93987_WNSEVI_fu3010m1_10_legend.txt Legend    Evian                                Gust peak (one second); monthly maximum                     202009-202101
+order_93987_WNSEXC_fu3010m1_1_data.txt  Data      Excenevex                            Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSEXC_fu3010m1_1_legend.txt Legend    Excenevex                            Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSEXC_fu3010m1_2_data.txt  Data      Excenevex                            Gust peak (one second); monthly maximum                     201510-201511
+order_93987_WNSEXC_fu3010m1_2_legend.txt Legend    Excenevex                            Gust peak (one second); monthly maximum                     201510-201511
+order_93987_WNSEXC_fu3010m1_3_data.txt  Data      Excenevex                            Gust peak (one second); monthly maximum                     201512-201601
+order_93987_WNSEXC_fu3010m1_3_legend.txt Legend    Excenevex                            Gust peak (one second); monthly maximum                     201512-201601
+order_93987_WNSEXC_fu3010m1_4_data.txt  Data      Excenevex                            Gust peak (one second); monthly maximum                     201711-201712
+order_93987_WNSEXC_fu3010m1_4_legend.txt Legend    Excenevex                            Gust peak (one second); monthly maximum                     201711-201712
+order_93987_TGFRA_fu3010m1_1_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201008-201009
+order_93987_TGFRA_fu3010m1_1_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201008-201009
+order_93987_TGFRA_fu3010m1_2_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201010-201107
+order_93987_TGFRA_fu3010m1_2_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201010-201107
+order_93987_TGFRA_fu3010m1_3_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201108-201212
+order_93987_TGFRA_fu3010m1_3_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201108-201212
+order_93987_TGFRA_fu3010m1_4_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201302-201303
+order_93987_TGFRA_fu3010m1_4_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201302-201303
+order_93987_TGFRA_fu3010m1_5_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201304-201305
+order_93987_TGFRA_fu3010m1_5_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201304-201305
+order_93987_TGFRA_fu3010m1_6_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201307-201308
+order_93987_TGFRA_fu3010m1_6_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201307-201308
+order_93987_TGFRA_fu3010m1_7_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201311-201312
+order_93987_TGFRA_fu3010m1_7_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201311-201312
+order_93987_TGFRA_fu3010m1_8_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201401-201404
+order_93987_TGFRA_fu3010m1_8_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201401-201404
+order_93987_TGFRA_fu3010m1_9_data.txt   Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201405-201407
+order_93987_TGFRA_fu3010m1_9_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201405-201407
+order_93987_TGFRA_fu3010m1_10_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201408-201504
+order_93987_TGFRA_fu3010m1_10_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201408-201504
+order_93987_TGFRA_fu3010m1_11_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201508-201511
+order_93987_TGFRA_fu3010m1_11_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201508-201511
+order_93987_TGFRA_fu3010m1_12_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201602-201612
+order_93987_TGFRA_fu3010m1_12_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201602-201612
+order_93987_TGFRA_fu3010m1_13_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201701-201809
+order_93987_TGFRA_fu3010m1_13_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201701-201809
+order_93987_TGFRA_fu3010m1_14_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201810-201811
+order_93987_TGFRA_fu3010m1_14_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201810-201811
+order_93987_TGFRA_fu3010m1_15_data.txt  Data      Frauenfeld                           Gust peak (one second); monthly maximum                     201812-202103
+order_93987_TGFRA_fu3010m1_15_legend.txt Legend    Frauenfeld                           Gust peak (one second); monthly maximum                     201812-202103
+order_93987_DLFRB_fu3010m1_1_data.txt   Data      Freiburg                             Gust peak (one second); monthly maximum                     195412-201512
+order_93987_DLFRB_fu3010m1_1_legend.txt Legend    Freiburg                             Gust peak (one second); monthly maximum                     195412-201512
+order_93987_DLFRB_fu3010m1_2_data.txt   Data      Freiburg                             Gust peak (one second); monthly maximum                     201603-202103
+order_93987_DLFRB_fu3010m1_2_legend.txt Legend    Freiburg                             Gust peak (one second); monthly maximum                     201603-202103
+order_93987_DLFRI_fu3010m1_1_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     196412-197707
+order_93987_DLFRI_fu3010m1_1_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     196412-197707
+order_93987_DLFRI_fu3010m1_2_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201402-201511
+order_93987_DLFRI_fu3010m1_2_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201402-201511
+order_93987_DLFRI_fu3010m1_3_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201604-201605
+order_93987_DLFRI_fu3010m1_3_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201604-201605
+order_93987_DLFRI_fu3010m1_4_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201606-201711
+order_93987_DLFRI_fu3010m1_4_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201606-201711
+order_93987_DLFRI_fu3010m1_5_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201712-201805
+order_93987_DLFRI_fu3010m1_5_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201712-201805
+order_93987_DLFRI_fu3010m1_6_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201807-201809
+order_93987_DLFRI_fu3010m1_6_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201807-201809
+order_93987_DLFRI_fu3010m1_7_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     201810-202007
+order_93987_DLFRI_fu3010m1_7_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     201810-202007
+order_93987_DLFRI_fu3010m1_8_data.txt   Data      Friedrichshafen                      Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLFRI_fu3010m1_8_legend.txt Legend    Friedrichshafen                      Gust peak (one second); monthly maximum                     202008-202103
+order_93987_IYGAR_fu3010m1_1_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     201712-201902
+order_93987_IYGAR_fu3010m1_1_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     201712-201902
+order_93987_IYGAR_fu3010m1_2_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYGAR_fu3010m1_2_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYGAR_fu3010m1_3_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     201910-201912
+order_93987_IYGAR_fu3010m1_3_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     201910-201912
+order_93987_IYGAR_fu3010m1_4_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYGAR_fu3010m1_4_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYGAR_fu3010m1_5_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYGAR_fu3010m1_5_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYGAR_fu3010m1_6_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     202010-202012
+order_93987_IYGAR_fu3010m1_6_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     202010-202012
+order_93987_IYGAR_fu3010m1_7_data.txt   Data      Gargazon                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYGAR_fu3010m1_7_legend.txt Legend    Gargazon                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_WNSCHA_fu3010m1_1_data.txt  Data      Genève / Chambésy                    Gust peak (one second); monthly maximum                     201503-201505
+order_93987_WNSCHA_fu3010m1_1_legend.txt Legend    Genève / Chambésy                    Gust peak (one second); monthly maximum                     201503-201505
+order_93987_WNSCHA_fu3010m1_2_data.txt  Data      Genève / Chambésy                    Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSCHA_fu3010m1_2_legend.txt Legend    Genève / Chambésy                    Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSCHA_fu3010m1_3_data.txt  Data      Genève / Chambésy                    Gust peak (one second); monthly maximum                     201509-201511
+order_93987_WNSCHA_fu3010m1_3_legend.txt Legend    Genève / Chambésy                    Gust peak (one second); monthly maximum                     201509-201511
+order_93987_WNSCHA_fu3010m1_4_data.txt  Data      Genève / Chambésy                    Gust peak (one second); monthly maximum                     201606-201608
+order_93987_WNSCHA_fu3010m1_4_legend.txt Legend    Genève / Chambésy                    Gust peak (one second); monthly maximum                     201606-201608
+order_93987_WNSSON_fu3010m1_1_data.txt  Data      Genève / Cologny                     Gust peak (one second); monthly maximum                     201502-201504
+order_93987_WNSSON_fu3010m1_1_legend.txt Legend    Genève / Cologny                     Gust peak (one second); monthly maximum                     201502-201504
+order_93987_WNSSON_fu3010m1_2_data.txt  Data      Genève / Cologny                     Gust peak (one second); monthly maximum                     201508-201510
+order_93987_WNSSON_fu3010m1_2_legend.txt Legend    Genève / Cologny                     Gust peak (one second); monthly maximum                     201508-201510
+order_93987_WNSSON_fu3010m1_3_data.txt  Data      Genève / Cologny                     Gust peak (one second); monthly maximum                     201606-201607
+order_93987_WNSSON_fu3010m1_3_legend.txt Legend    Genève / Cologny                     Gust peak (one second); monthly maximum                     201606-201607
+order_93987_WNSVER_fu3010m1_1_data.txt  Data      Genève / Versoix                     Gust peak (one second); monthly maximum                     201501-201505
+order_93987_WNSVER_fu3010m1_1_legend.txt Legend    Genève / Versoix                     Gust peak (one second); monthly maximum                     201501-201505
+order_93987_WNSVER_fu3010m1_2_data.txt  Data      Genève / Versoix                     Gust peak (one second); monthly maximum                     201506-201607
+order_93987_WNSVER_fu3010m1_2_legend.txt Legend    Genève / Versoix                     Gust peak (one second); monthly maximum                     201506-201607
+order_93987_WNSVER_fu3010m1_3_data.txt  Data      Genève / Versoix                     Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSVER_fu3010m1_3_legend.txt Legend    Genève / Versoix                     Gust peak (one second); monthly maximum                     202007-202008
+order_93987_DLGOT_fu3010m1_1_data.txt   Data      Gottfrieding                         Gust peak (one second); monthly maximum                     202009-202103
+order_93987_DLGOT_fu3010m1_1_legend.txt Legend    Gottfrieding                         Gust peak (one second); monthly maximum                     202009-202103
+order_93987_GRO_fu3010m1_1_data.txt     Data      Grono                                Gust peak (one second); monthly maximum                     201210-202103
+order_93987_GRO_fu3010m1_1_legend.txt   Legend    Grono                                Gust peak (one second); monthly maximum                     201210-202103
+order_93987_GRGRO_fu3010m1_1_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     201809-201812
+order_93987_GRGRO_fu3010m1_1_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     201809-201812
+order_93987_GRGRO_fu3010m1_2_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     201902-201903
+order_93987_GRGRO_fu3010m1_2_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     201902-201903
+order_93987_GRGRO_fu3010m1_3_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     201904-201911
+order_93987_GRGRO_fu3010m1_3_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     201904-201911
+order_93987_GRGRO_fu3010m1_4_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     201912-202002
+order_93987_GRGRO_fu3010m1_4_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     201912-202002
+order_93987_GRGRO_fu3010m1_5_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     202004-202009
+order_93987_GRGRO_fu3010m1_5_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     202004-202009
+order_93987_GRGRO_fu3010m1_6_data.txt   Data      Grono                                Gust peak (one second); monthly maximum                     202011-202103
+order_93987_GRGRO_fu3010m1_6_legend.txt Legend    Grono                                Gust peak (one second); monthly maximum                     202011-202103
+order_93987_GOE_fu3010m1_1_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     198604-198605
+order_93987_GOE_fu3010m1_1_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     198604-198605
+order_93987_GOE_fu3010m1_2_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     198612-198810
+order_93987_GOE_fu3010m1_2_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     198612-198810
+order_93987_GOE_fu3010m1_3_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     198811-198812
+order_93987_GOE_fu3010m1_3_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     198811-198812
+order_93987_GOE_fu3010m1_4_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     198901-198906
+order_93987_GOE_fu3010m1_4_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     198901-198906
+order_93987_GOE_fu3010m1_5_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     198907-199007
+order_93987_GOE_fu3010m1_5_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     198907-199007
+order_93987_GOE_fu3010m1_6_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     199008-200705
+order_93987_GOE_fu3010m1_6_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     199008-200705
+order_93987_GOE_fu3010m1_7_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     200706-200708
+order_93987_GOE_fu3010m1_7_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     200706-200708
+order_93987_GOE_fu3010m1_8_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     200709-200804
+order_93987_GOE_fu3010m1_8_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     200709-200804
+order_93987_GOE_fu3010m1_9_data.txt     Data      Gösgen                               Gust peak (one second); monthly maximum                     202006-202103
+order_93987_GOE_fu3010m1_9_legend.txt   Legend    Gösgen                               Gust peak (one second); monthly maximum                     202006-202103
+order_93987_MMIBG_fu3010m1_1_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201211-201306
+order_93987_MMIBG_fu3010m1_1_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201211-201306
+order_93987_MMIBG_fu3010m1_2_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201308-201311
+order_93987_MMIBG_fu3010m1_2_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201308-201311
+order_93987_MMIBG_fu3010m1_3_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201401-201404
+order_93987_MMIBG_fu3010m1_3_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201401-201404
+order_93987_MMIBG_fu3010m1_4_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201405-201409
+order_93987_MMIBG_fu3010m1_4_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201405-201409
+order_93987_MMIBG_fu3010m1_5_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201410-201505
+order_93987_MMIBG_fu3010m1_5_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201410-201505
+order_93987_MMIBG_fu3010m1_6_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201508-201603
+order_93987_MMIBG_fu3010m1_6_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201508-201603
+order_93987_MMIBG_fu3010m1_7_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201604-201605
+order_93987_MMIBG_fu3010m1_7_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201604-201605
+order_93987_MMIBG_fu3010m1_8_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201606-201612
+order_93987_MMIBG_fu3010m1_8_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201606-201612
+order_93987_MMIBG_fu3010m1_9_data.txt   Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201703-201712
+order_93987_MMIBG_fu3010m1_9_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201703-201712
+order_93987_MMIBG_fu3010m1_10_data.txt  Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201801-201804
+order_93987_MMIBG_fu3010m1_10_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201801-201804
+order_93987_MMIBG_fu3010m1_11_data.txt  Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201805-201809
+order_93987_MMIBG_fu3010m1_11_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201805-201809
+order_93987_MMIBG_fu3010m1_12_data.txt  Data      Isole di Brissago                    Gust peak (one second); monthly maximum                     201812-202103
+order_93987_MMIBG_fu3010m1_12_legend.txt Legend    Isole di Brissago                    Gust peak (one second); monthly maximum                     201812-202103
+order_93987_TGKRE_fu3010m1_1_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201008-201009
+order_93987_TGKRE_fu3010m1_1_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201008-201009
+order_93987_TGKRE_fu3010m1_2_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201010-201103
+order_93987_TGKRE_fu3010m1_2_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201010-201103
+order_93987_TGKRE_fu3010m1_3_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201104-201107
+order_93987_TGKRE_fu3010m1_3_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201104-201107
+order_93987_TGKRE_fu3010m1_4_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201108-201303
+order_93987_TGKRE_fu3010m1_4_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201108-201303
+order_93987_TGKRE_fu3010m1_5_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201304-201306
+order_93987_TGKRE_fu3010m1_5_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201304-201306
+order_93987_TGKRE_fu3010m1_6_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201307-201308
+order_93987_TGKRE_fu3010m1_6_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201307-201308
+order_93987_TGKRE_fu3010m1_7_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201310-201404
+order_93987_TGKRE_fu3010m1_7_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201310-201404
+order_93987_TGKRE_fu3010m1_8_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201406-201407
+order_93987_TGKRE_fu3010m1_8_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201406-201407
+order_93987_TGKRE_fu3010m1_9_data.txt   Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201408-201504
+order_93987_TGKRE_fu3010m1_9_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201408-201504
+order_93987_TGKRE_fu3010m1_10_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201509-201511
+order_93987_TGKRE_fu3010m1_10_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201509-201511
+order_93987_TGKRE_fu3010m1_11_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201602-201606
+order_93987_TGKRE_fu3010m1_11_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201602-201606
+order_93987_TGKRE_fu3010m1_12_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201607-201609
+order_93987_TGKRE_fu3010m1_12_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201607-201609
+order_93987_TGKRE_fu3010m1_13_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201610-201704
+order_93987_TGKRE_fu3010m1_13_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201610-201704
+order_93987_TGKRE_fu3010m1_14_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201706-201803
+order_93987_TGKRE_fu3010m1_14_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201706-201803
+order_93987_TGKRE_fu3010m1_15_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201805-201808
+order_93987_TGKRE_fu3010m1_15_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201805-201808
+order_93987_TGKRE_fu3010m1_16_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201810-201811
+order_93987_TGKRE_fu3010m1_16_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201810-201811
+order_93987_TGKRE_fu3010m1_17_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201812-201906
+order_93987_TGKRE_fu3010m1_17_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201812-201906
+order_93987_TGKRE_fu3010m1_18_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201907-201910
+order_93987_TGKRE_fu3010m1_18_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201907-201910
+order_93987_TGKRE_fu3010m1_19_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     201911-202006
+order_93987_TGKRE_fu3010m1_19_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     201911-202006
+order_93987_TGKRE_fu3010m1_20_data.txt  Data      Kreuzlingen                          Gust peak (one second); monthly maximum                     202007-202103
+order_93987_TGKRE_fu3010m1_20_legend.txt Legend    Kreuzlingen                          Gust peak (one second); monthly maximum                     202007-202103
+order_93987_IYLAI_fu3010m1_1_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     200910-201807
+order_93987_IYLAI_fu3010m1_1_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     200910-201807
+order_93987_IYLAI_fu3010m1_2_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     201808-201902
+order_93987_IYLAI_fu3010m1_2_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     201808-201902
+order_93987_IYLAI_fu3010m1_3_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYLAI_fu3010m1_3_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYLAI_fu3010m1_4_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYLAI_fu3010m1_4_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYLAI_fu3010m1_5_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYLAI_fu3010m1_5_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYLAI_fu3010m1_6_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYLAI_fu3010m1_6_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYLAI_fu3010m1_7_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYLAI_fu3010m1_7_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYLAI_fu3010m1_8_data.txt   Data      Laimburg                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYLAI_fu3010m1_8_legend.txt Legend    Laimburg                             Gust peak (one second); monthly maximum                     202102-202103
+order_93987_WNSDOR_fu3010m1_1_data.txt  Data      Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201412-201503
+order_93987_WNSDOR_fu3010m1_1_legend.txt Legend    Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201412-201503
+order_93987_WNSDOR_fu3010m1_2_data.txt  Data      Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201506-201601
+order_93987_WNSDOR_fu3010m1_2_legend.txt Legend    Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201506-201601
+order_93987_WNSDOR_fu3010m1_3_data.txt  Data      Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201603-201604
+order_93987_WNSDOR_fu3010m1_3_legend.txt Legend    Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201603-201604
+order_93987_WNSDOR_fu3010m1_4_data.txt  Data      Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201708-201712
+order_93987_WNSDOR_fu3010m1_4_legend.txt Legend    Lausanne / Dorygny UNIL              Gust peak (one second); monthly maximum                     201708-201712
+order_93987_WNSLAU_fu3010m1_1_data.txt  Data      Lausanne / Vidy                      Gust peak (one second); monthly maximum                     202010-202103
+order_93987_WNSLAU_fu3010m1_1_legend.txt Legend    Lausanne / Vidy                      Gust peak (one second); monthly maximum                     202010-202103
+order_93987_DLLAU_fu3010m1_1_data.txt   Data      Lautertal, Oberlauter                Gust peak (one second); monthly maximum                     202009-202103
+order_93987_DLLAU_fu3010m1_1_legend.txt Legend    Lautertal, Oberlauter                Gust peak (one second); monthly maximum                     202009-202103
+order_93987_LEI_fu3010m1_1_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198402-198403
+order_93987_LEI_fu3010m1_1_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198402-198403
+order_93987_LEI_fu3010m1_2_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198511-198512
+order_93987_LEI_fu3010m1_2_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198511-198512
+order_93987_LEI_fu3010m1_3_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198608-198609
+order_93987_LEI_fu3010m1_3_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198608-198609
+order_93987_LEI_fu3010m1_4_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198612-198711
+order_93987_LEI_fu3010m1_4_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198612-198711
+order_93987_LEI_fu3010m1_5_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198712-198810
+order_93987_LEI_fu3010m1_5_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198712-198810
+order_93987_LEI_fu3010m1_6_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     198811-199005
+order_93987_LEI_fu3010m1_6_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     198811-199005
+order_93987_LEI_fu3010m1_7_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     199006-199408
+order_93987_LEI_fu3010m1_7_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     199006-199408
+order_93987_LEI_fu3010m1_8_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     199409-200307
+order_93987_LEI_fu3010m1_8_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     199409-200307
+order_93987_LEI_fu3010m1_9_data.txt     Data      Leibstadt                            Gust peak (one second); monthly maximum                     200308-201609
+order_93987_LEI_fu3010m1_9_legend.txt   Legend    Leibstadt                            Gust peak (one second); monthly maximum                     200308-201609
+order_93987_LEI_fu3010m1_10_data.txt    Data      Leibstadt                            Gust peak (one second); monthly maximum                     201610-202103
+order_93987_LEI_fu3010m1_10_legend.txt  Legend    Leibstadt                            Gust peak (one second); monthly maximum                     201610-202103
+order_93987_DLLIN_fu3010m1_1_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201606-201608
+order_93987_DLLIN_fu3010m1_1_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201606-201608
+order_93987_DLLIN_fu3010m1_2_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201609-201701
+order_93987_DLLIN_fu3010m1_2_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201609-201701
+order_93987_DLLIN_fu3010m1_3_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201704-201708
+order_93987_DLLIN_fu3010m1_3_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201704-201708
+order_93987_DLLIN_fu3010m1_4_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201710-201801
+order_93987_DLLIN_fu3010m1_4_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201710-201801
+order_93987_DLLIN_fu3010m1_5_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201803-201811
+order_93987_DLLIN_fu3010m1_5_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201803-201811
+order_93987_DLLIN_fu3010m1_6_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     201812-202004
+order_93987_DLLIN_fu3010m1_6_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     201812-202004
+order_93987_DLLIN_fu3010m1_7_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     202006-202007
+order_93987_DLLIN_fu3010m1_7_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     202006-202007
+order_93987_DLLIN_fu3010m1_8_data.txt   Data      Lindau                               Gust peak (one second); monthly maximum                     202009-202103
+order_93987_DLLIN_fu3010m1_8_legend.txt Legend    Lindau                               Gust peak (one second); monthly maximum                     202009-202103
+order_93987_OTL_fu3010m1_1_data.txt     Data      Locarno / Monti                      Gust peak (one second); monthly maximum                     198012-200706
+order_93987_OTL_fu3010m1_1_legend.txt   Legend    Locarno / Monti                      Gust peak (one second); monthly maximum                     198012-200706
+order_93987_OTL_fu3010m1_2_data.txt     Data      Locarno / Monti                      Gust peak (one second); monthly maximum                     200707-200708
+order_93987_OTL_fu3010m1_2_legend.txt   Legend    Locarno / Monti                      Gust peak (one second); monthly maximum                     200707-200708
+order_93987_OTL_fu3010m1_3_data.txt     Data      Locarno / Monti                      Gust peak (one second); monthly maximum                     200709-202103
+order_93987_OTL_fu3010m1_3_legend.txt   Legend    Locarno / Monti                      Gust peak (one second); monthly maximum                     200709-202103
+order_93987_LOR_fu3010m1_1_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199302-199408
+order_93987_LOR_fu3010m1_1_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199302-199408
+order_93987_LOR_fu3010m1_2_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199409-199504
+order_93987_LOR_fu3010m1_2_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199409-199504
+order_93987_LOR_fu3010m1_3_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199505-199506
+order_93987_LOR_fu3010m1_3_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199505-199506
+order_93987_LOR_fu3010m1_4_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199508-199509
+order_93987_LOR_fu3010m1_4_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199508-199509
+order_93987_LOR_fu3010m1_5_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199511-199512
+order_93987_LOR_fu3010m1_5_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199511-199512
+order_93987_LOR_fu3010m1_6_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199601-199603
+order_93987_LOR_fu3010m1_6_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199601-199603
+order_93987_LOR_fu3010m1_7_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199604-199609
+order_93987_LOR_fu3010m1_7_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199604-199609
+order_93987_LOR_fu3010m1_8_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199610-199704
+order_93987_LOR_fu3010m1_8_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199610-199704
+order_93987_LOR_fu3010m1_9_data.txt     Data      Lodrino                              Gust peak (one second); monthly maximum                     199705-199709
+order_93987_LOR_fu3010m1_9_legend.txt   Legend    Lodrino                              Gust peak (one second); monthly maximum                     199705-199709
+order_93987_LOR_fu3010m1_10_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     199710-199803
+order_93987_LOR_fu3010m1_10_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     199710-199803
+order_93987_LOR_fu3010m1_11_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     199804-199805
+order_93987_LOR_fu3010m1_11_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     199804-199805
+order_93987_LOR_fu3010m1_12_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     199806-199907
+order_93987_LOR_fu3010m1_12_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     199806-199907
+order_93987_LOR_fu3010m1_13_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     199909-200002
+order_93987_LOR_fu3010m1_13_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     199909-200002
+order_93987_LOR_fu3010m1_14_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     200005-200010
+order_93987_LOR_fu3010m1_14_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     200005-200010
+order_93987_LOR_fu3010m1_15_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     200011-200306
+order_93987_LOR_fu3010m1_15_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     200011-200306
+order_93987_LOR_fu3010m1_16_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     200307-200906
+order_93987_LOR_fu3010m1_16_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     200307-200906
+order_93987_LOR_fu3010m1_17_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     200907-201006
+order_93987_LOR_fu3010m1_17_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     200907-201006
+order_93987_LOR_fu3010m1_18_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     201007-201011
+order_93987_LOR_fu3010m1_18_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     201007-201011
+order_93987_LOR_fu3010m1_19_data.txt    Data      Lodrino                              Gust peak (one second); monthly maximum                     201012-201403
+order_93987_LOR_fu3010m1_19_legend.txt  Legend    Lodrino                              Gust peak (one second); monthly maximum                     201012-201403
+order_93987_LUG_fu3010m1_1_data.txt     Data      Lugano                               Gust peak (one second); monthly maximum                     198012-202103
+order_93987_LUG_fu3010m1_1_legend.txt   Legend    Lugano                               Gust peak (one second); monthly maximum                     198012-202103
+order_93987_MMBIR_fu3010m1_1_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201211-201312
+order_93987_MMBIR_fu3010m1_1_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201211-201312
+order_93987_MMBIR_fu3010m1_2_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201401-201404
+order_93987_MMBIR_fu3010m1_2_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201401-201404
+order_93987_MMBIR_fu3010m1_3_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201405-201508
+order_93987_MMBIR_fu3010m1_3_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201405-201508
+order_93987_MMBIR_fu3010m1_4_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201509-201512
+order_93987_MMBIR_fu3010m1_4_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201509-201512
+order_93987_MMBIR_fu3010m1_5_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201601-201810
+order_93987_MMBIR_fu3010m1_5_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201601-201810
+order_93987_MMBIR_fu3010m1_6_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201812-201903
+order_93987_MMBIR_fu3010m1_6_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201812-201903
+order_93987_MMBIR_fu3010m1_7_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201904-201911
+order_93987_MMBIR_fu3010m1_7_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201904-201911
+order_93987_MMBIR_fu3010m1_8_data.txt   Data      Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201912-202103
+order_93987_MMBIR_fu3010m1_8_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Gust peak (one second); monthly maximum                     201912-202103
+order_93987_MAG_fu3010m1_1_data.txt     Data      Magadino / Cadenazzo                 Gust peak (one second); monthly maximum                     198012-200509
+order_93987_MAG_fu3010m1_1_legend.txt   Legend    Magadino / Cadenazzo                 Gust peak (one second); monthly maximum                     198012-200509
+order_93987_MAG_fu3010m1_2_data.txt     Data      Magadino / Cadenazzo                 Gust peak (one second); monthly maximum                     200602-202103
+order_93987_MAG_fu3010m1_2_legend.txt   Legend    Magadino / Cadenazzo                 Gust peak (one second); monthly maximum                     200602-202103
+order_93987_IYMER_fu3010m1_1_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201609-201611
+order_93987_IYMER_fu3010m1_1_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201609-201611
+order_93987_IYMER_fu3010m1_2_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201710-201711
+order_93987_IYMER_fu3010m1_2_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201710-201711
+order_93987_IYMER_fu3010m1_3_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201712-201806
+order_93987_IYMER_fu3010m1_3_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201712-201806
+order_93987_IYMER_fu3010m1_4_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201807-201902
+order_93987_IYMER_fu3010m1_4_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201807-201902
+order_93987_IYMER_fu3010m1_5_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYMER_fu3010m1_5_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYMER_fu3010m1_6_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYMER_fu3010m1_6_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYMER_fu3010m1_7_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYMER_fu3010m1_7_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYMER_fu3010m1_8_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYMER_fu3010m1_8_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYMER_fu3010m1_9_data.txt   Data      Meran                                Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYMER_fu3010m1_9_legend.txt Legend    Meran                                Gust peak (one second); monthly maximum                     202102-202103
+order_93987_TIMOL_fu3010m1_1_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     200910-201012
+order_93987_TIMOL_fu3010m1_1_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     200910-201012
+order_93987_TIMOL_fu3010m1_2_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201101-201107
+order_93987_TIMOL_fu3010m1_2_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201101-201107
+order_93987_TIMOL_fu3010m1_3_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201108-201112
+order_93987_TIMOL_fu3010m1_3_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201108-201112
+order_93987_TIMOL_fu3010m1_4_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201201-201204
+order_93987_TIMOL_fu3010m1_4_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201201-201204
+order_93987_TIMOL_fu3010m1_5_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201205-201210
+order_93987_TIMOL_fu3010m1_5_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201205-201210
+order_93987_TIMOL_fu3010m1_6_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201211-201307
+order_93987_TIMOL_fu3010m1_6_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201211-201307
+order_93987_TIMOL_fu3010m1_7_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201308-201604
+order_93987_TIMOL_fu3010m1_7_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201308-201604
+order_93987_TIMOL_fu3010m1_8_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201605-201609
+order_93987_TIMOL_fu3010m1_8_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201605-201609
+order_93987_TIMOL_fu3010m1_9_data.txt   Data      Moleno                               Gust peak (one second); monthly maximum                     201610-201708
+order_93987_TIMOL_fu3010m1_9_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201610-201708
+order_93987_TIMOL_fu3010m1_10_data.txt  Data      Moleno                               Gust peak (one second); monthly maximum                     201709-201803
+order_93987_TIMOL_fu3010m1_10_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201709-201803
+order_93987_TIMOL_fu3010m1_11_data.txt  Data      Moleno                               Gust peak (one second); monthly maximum                     201804-201903
+order_93987_TIMOL_fu3010m1_11_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201804-201903
+order_93987_TIMOL_fu3010m1_12_data.txt  Data      Moleno                               Gust peak (one second); monthly maximum                     201904-201906
+order_93987_TIMOL_fu3010m1_12_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201904-201906
+order_93987_TIMOL_fu3010m1_13_data.txt  Data      Moleno                               Gust peak (one second); monthly maximum                     201908-201911
+order_93987_TIMOL_fu3010m1_13_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201908-201911
+order_93987_TIMOL_fu3010m1_14_data.txt  Data      Moleno                               Gust peak (one second); monthly maximum                     201912-202103
+order_93987_TIMOL_fu3010m1_14_legend.txt Legend    Moleno                               Gust peak (one second); monthly maximum                     201912-202103
+order_93987_WNSMOR_fu3010m1_1_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSMOR_fu3010m1_1_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSMOR_fu3010m1_2_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSMOR_fu3010m1_2_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSMOR_fu3010m1_3_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201510-201605
+order_93987_WNSMOR_fu3010m1_3_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201510-201605
+order_93987_WNSMOR_fu3010m1_4_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201708-201712
+order_93987_WNSMOR_fu3010m1_4_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201708-201712
+order_93987_WNSMOR_fu3010m1_5_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201807-201810
+order_93987_WNSMOR_fu3010m1_5_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201807-201810
+order_93987_WNSMOR_fu3010m1_6_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     201811-201812
+order_93987_WNSMOR_fu3010m1_6_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     201811-201812
+order_93987_WNSMOR_fu3010m1_7_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSMOR_fu3010m1_7_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     202007-202008
+order_93987_WNSMOR_fu3010m1_8_data.txt  Data      Morges                               Gust peak (one second); monthly maximum                     202009-202103
+order_93987_WNSMOR_fu3010m1_8_legend.txt Legend    Morges                               Gust peak (one second); monthly maximum                     202009-202103
+order_93987_MOE_fu3010m1_1_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     199304-199306
+order_93987_MOE_fu3010m1_1_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     199304-199306
+order_93987_MOE_fu3010m1_2_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     199307-199606
+order_93987_MOE_fu3010m1_2_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     199307-199606
+order_93987_MOE_fu3010m1_3_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     199607-199805
+order_93987_MOE_fu3010m1_3_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     199607-199805
+order_93987_MOE_fu3010m1_4_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     199806-199908
+order_93987_MOE_fu3010m1_4_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     199806-199908
+order_93987_MOE_fu3010m1_5_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     199909-200002
+order_93987_MOE_fu3010m1_5_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     199909-200002
+order_93987_MOE_fu3010m1_6_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     200005-200010
+order_93987_MOE_fu3010m1_6_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     200005-200010
+order_93987_MOE_fu3010m1_7_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     200011-200512
+order_93987_MOE_fu3010m1_7_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     200011-200512
+order_93987_MOE_fu3010m1_8_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     200601-200807
+order_93987_MOE_fu3010m1_8_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     200601-200807
+order_93987_MOE_fu3010m1_9_data.txt     Data      Möhlin                               Gust peak (one second); monthly maximum                     200808-201007
+order_93987_MOE_fu3010m1_9_legend.txt   Legend    Möhlin                               Gust peak (one second); monthly maximum                     200808-201007
+order_93987_MOE_fu3010m1_10_data.txt    Data      Möhlin                               Gust peak (one second); monthly maximum                     202006-202103
+order_93987_MOE_fu3010m1_10_legend.txt  Legend    Möhlin                               Gust peak (one second); monthly maximum                     202006-202103
+order_93987_DLMUH_fu3010m1_1_data.txt   Data      Mühlacker                            Gust peak (one second); monthly maximum                     202008-202010
+order_93987_DLMUH_fu3010m1_1_legend.txt Legend    Mühlacker                            Gust peak (one second); monthly maximum                     202008-202010
+order_93987_DLMUH_fu3010m1_2_data.txt   Data      Mühlacker                            Gust peak (one second); monthly maximum                     202011-202103
+order_93987_DLMUH_fu3010m1_2_legend.txt Legend    Mühlacker                            Gust peak (one second); monthly maximum                     202011-202103
+order_93987_KAMUN_fu3010m1_1_data.txt   Data      Münchenstein                         Gust peak (one second); monthly maximum                     201810-202012
+order_93987_KAMUN_fu3010m1_1_legend.txt Legend    Münchenstein                         Gust peak (one second); monthly maximum                     201810-202012
+order_93987_DLNEH_fu3010m1_1_data.txt   Data      Neuhütten                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLNEH_fu3010m1_1_legend.txt Legend    Neuhütten                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_WNSNYO_fu3010m1_1_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSNYO_fu3010m1_1_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSNYO_fu3010m1_2_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSNYO_fu3010m1_2_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201506-201507
+order_93987_WNSNYO_fu3010m1_3_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201508-201602
+order_93987_WNSNYO_fu3010m1_3_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201508-201602
+order_93987_WNSNYO_fu3010m1_4_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201708-201709
+order_93987_WNSNYO_fu3010m1_4_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201708-201709
+order_93987_WNSNYO_fu3010m1_5_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201805-201806
+order_93987_WNSNYO_fu3010m1_5_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201805-201806
+order_93987_WNSNYO_fu3010m1_6_data.txt  Data      Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201807-201808
+order_93987_WNSNYO_fu3010m1_6_legend.txt Legend    Nyon / Crans-près-Céligny            Gust peak (one second); monthly maximum                     201807-201808
+order_93987_DLNUE_fu3010m1_1_data.txt   Data      Nürnberg                             Gust peak (one second); monthly maximum                     195503-195512
+order_93987_DLNUE_fu3010m1_1_legend.txt Legend    Nürnberg                             Gust peak (one second); monthly maximum                     195503-195512
+order_93987_DLNUE_fu3010m1_2_data.txt   Data      Nürnberg                             Gust peak (one second); monthly maximum                     195905-196201
+order_93987_DLNUE_fu3010m1_2_legend.txt Legend    Nürnberg                             Gust peak (one second); monthly maximum                     195905-196201
+order_93987_DLNUE_fu3010m1_3_data.txt   Data      Nürnberg                             Gust peak (one second); monthly maximum                     197012-201512
+order_93987_DLNUE_fu3010m1_3_legend.txt Legend    Nürnberg                             Gust peak (one second); monthly maximum                     197012-201512
+order_93987_DLNUE_fu3010m1_4_data.txt   Data      Nürnberg                             Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLNUE_fu3010m1_4_legend.txt Legend    Nürnberg                             Gust peak (one second); monthly maximum                     201604-202103
+order_93987_KAOWL_fu3010m1_1_data.txt   Data      Oberwil                              Gust peak (one second); monthly maximum                     201810-202012
+order_93987_KAOWL_fu3010m1_1_legend.txt Legend    Oberwil                              Gust peak (one second); monthly maximum                     201810-202012
+order_93987_DLREG_fu3010m1_1_data.txt   Data      Regensburg                           Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLREG_fu3010m1_1_legend.txt Legend    Regensburg                           Gust peak (one second); monthly maximum                     202008-202103
+order_93987_KAREH_fu3010m1_1_data.txt   Data      Reinach                              Gust peak (one second); monthly maximum                     201810-202012
+order_93987_KAREH_fu3010m1_1_legend.txt Legend    Reinach                              Gust peak (one second); monthly maximum                     201810-202012
+order_93987_RHF_fu3010m1_1_data.txt     Data      Rheinfelden                          Gust peak (one second); monthly maximum                     199711-200511
+order_93987_RHF_fu3010m1_1_legend.txt   Legend    Rheinfelden                          Gust peak (one second); monthly maximum                     199711-200511
+order_93987_DLRFE_fu3010m1_1_data.txt   Data      Rheinfelden                          Gust peak (one second); monthly maximum                     197109-197203
+order_93987_DLRFE_fu3010m1_1_legend.txt Legend    Rheinfelden                          Gust peak (one second); monthly maximum                     197109-197203
+order_93987_DLRFE_fu3010m1_2_data.txt   Data      Rheinfelden                          Gust peak (one second); monthly maximum                     197204-197205
+order_93987_DLRFE_fu3010m1_2_legend.txt Legend    Rheinfelden                          Gust peak (one second); monthly maximum                     197204-197205
+order_93987_KAROD_fu3010m1_1_data.txt   Data      Rodersdorf                           Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KAROD_fu3010m1_1_legend.txt Legend    Rodersdorf                           Gust peak (one second); monthly maximum                     201810-201811
+order_93987_KAROD_fu3010m1_2_data.txt   Data      Rodersdorf                           Gust peak (one second); monthly maximum                     201901-202012
+order_93987_KAROD_fu3010m1_2_legend.txt Legend    Rodersdorf                           Gust peak (one second); monthly maximum                     201901-202012
+order_93987_WNSROL_fu3010m1_1_data.txt  Data      Rolle                                Gust peak (one second); monthly maximum                     201501-201503
+order_93987_WNSROL_fu3010m1_1_legend.txt Legend    Rolle                                Gust peak (one second); monthly maximum                     201501-201503
+order_93987_WNSROL_fu3010m1_2_data.txt  Data      Rolle                                Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSROL_fu3010m1_2_legend.txt Legend    Rolle                                Gust peak (one second); monthly maximum                     201504-201505
+order_93987_WNSROL_fu3010m1_3_data.txt  Data      Rolle                                Gust peak (one second); monthly maximum                     201509-201510
+order_93987_WNSROL_fu3010m1_3_legend.txt Legend    Rolle                                Gust peak (one second); monthly maximum                     201509-201510
+order_93987_WNSROL_fu3010m1_4_data.txt  Data      Rolle                                Gust peak (one second); monthly maximum                     201604-201606
+order_93987_WNSROL_fu3010m1_4_legend.txt Legend    Rolle                                Gust peak (one second); monthly maximum                     201604-201606
+order_93987_DLROH_fu3010m1_1_data.txt   Data      Roth                                 Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLROH_fu3010m1_1_legend.txt Legend    Roth                                 Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLSAA_fu3010m1_1_data.txt   Data      Saarbrücken / Ensheim                Gust peak (one second); monthly maximum                     195512-201512
+order_93987_DLSAA_fu3010m1_1_legend.txt Legend    Saarbrücken / Ensheim                Gust peak (one second); monthly maximum                     195512-201512
+order_93987_DLSAA_fu3010m1_2_data.txt   Data      Saarbrücken / Ensheim                Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLSAA_fu3010m1_2_legend.txt Legend    Saarbrücken / Ensheim                Gust peak (one second); monthly maximum                     201604-202103
+order_93987_IYSAU_fu3010m1_1_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     200809-201312
+order_93987_IYSAU_fu3010m1_1_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     200809-201312
+order_93987_IYSAU_fu3010m1_2_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201403-201410
+order_93987_IYSAU_fu3010m1_2_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201403-201410
+order_93987_IYSAU_fu3010m1_3_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201411-201610
+order_93987_IYSAU_fu3010m1_3_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201411-201610
+order_93987_IYSAU_fu3010m1_4_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201701-201811
+order_93987_IYSAU_fu3010m1_4_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201701-201811
+order_93987_IYSAU_fu3010m1_5_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201812-201902
+order_93987_IYSAU_fu3010m1_5_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201812-201902
+order_93987_IYSAU_fu3010m1_6_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYSAU_fu3010m1_6_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201905-201907
+order_93987_IYSAU_fu3010m1_7_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYSAU_fu3010m1_7_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     201909-201912
+order_93987_IYSAU_fu3010m1_8_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYSAU_fu3010m1_8_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     202001-202002
+order_93987_IYSAU_fu3010m1_9_data.txt   Data      Salurn                               Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYSAU_fu3010m1_9_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     202005-202006
+order_93987_IYSAU_fu3010m1_10_data.txt  Data      Salurn                               Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYSAU_fu3010m1_10_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     202009-202012
+order_93987_IYSAU_fu3010m1_11_data.txt  Data      Salurn                               Gust peak (one second); monthly maximum                     202102-202103
+order_93987_IYSAU_fu3010m1_11_legend.txt Legend    Salurn                               Gust peak (one second); monthly maximum                     202102-202103
+order_93987_GRVIT_fu3010m1_1_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     201809-201812
+order_93987_GRVIT_fu3010m1_1_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     201809-201812
+order_93987_GRVIT_fu3010m1_2_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     201902-201903
+order_93987_GRVIT_fu3010m1_2_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     201902-201903
+order_93987_GRVIT_fu3010m1_3_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     201904-201911
+order_93987_GRVIT_fu3010m1_3_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     201904-201911
+order_93987_GRVIT_fu3010m1_4_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     201912-202004
+order_93987_GRVIT_fu3010m1_4_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     201912-202004
+order_93987_GRVIT_fu3010m1_5_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     202006-202009
+order_93987_GRVIT_fu3010m1_5_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     202006-202009
+order_93987_GRVIT_fu3010m1_6_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     202011-202012
+order_93987_GRVIT_fu3010m1_6_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     202011-202012
+order_93987_GRVIT_fu3010m1_7_data.txt   Data      San Vittore                          Gust peak (one second); monthly maximum                     202101-202103
+order_93987_GRVIT_fu3010m1_7_legend.txt Legend    San Vittore                          Gust peak (one second); monthly maximum                     202101-202103
+order_93987_SBO_fu3010m1_1_data.txt     Data      Stabio                               Gust peak (one second); monthly maximum                     198202-200707
+order_93987_SBO_fu3010m1_1_legend.txt   Legend    Stabio                               Gust peak (one second); monthly maximum                     198202-200707
+order_93987_SBO_fu3010m1_2_data.txt     Data      Stabio                               Gust peak (one second); monthly maximum                     200708-200812
+order_93987_SBO_fu3010m1_2_legend.txt   Legend    Stabio                               Gust peak (one second); monthly maximum                     200708-200812
+order_93987_SBO_fu3010m1_3_data.txt     Data      Stabio                               Gust peak (one second); monthly maximum                     200901-202103
+order_93987_SBO_fu3010m1_3_legend.txt   Legend    Stabio                               Gust peak (one second); monthly maximum                     200901-202103
+order_93987_STK_fu3010m1_1_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199301-199406
+order_93987_STK_fu3010m1_1_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199301-199406
+order_93987_STK_fu3010m1_2_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199407-199803
+order_93987_STK_fu3010m1_2_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199407-199803
+order_93987_STK_fu3010m1_3_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199804-199805
+order_93987_STK_fu3010m1_3_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199804-199805
+order_93987_STK_fu3010m1_4_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199806-199905
+order_93987_STK_fu3010m1_4_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199806-199905
+order_93987_STK_fu3010m1_5_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199906-199908
+order_93987_STK_fu3010m1_5_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199906-199908
+order_93987_STK_fu3010m1_6_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     199909-200004
+order_93987_STK_fu3010m1_6_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     199909-200004
+order_93987_STK_fu3010m1_7_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     200005-200010
+order_93987_STK_fu3010m1_7_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     200005-200010
+order_93987_STK_fu3010m1_8_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     200011-200306
+order_93987_STK_fu3010m1_8_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     200011-200306
+order_93987_STK_fu3010m1_9_data.txt     Data      Steckborn                            Gust peak (one second); monthly maximum                     200307-201109
+order_93987_STK_fu3010m1_9_legend.txt   Legend    Steckborn                            Gust peak (one second); monthly maximum                     200307-201109
+order_93987_STK_fu3010m1_10_data.txt    Data      Steckborn                            Gust peak (one second); monthly maximum                     202006-202103
+order_93987_STK_fu3010m1_10_legend.txt  Legend    Steckborn                            Gust peak (one second); monthly maximum                     202006-202103
+order_93987_DLSTR_fu3010m1_1_data.txt   Data      Straubing                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLSTR_fu3010m1_1_legend.txt Legend    Straubing                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLSTU_fu3010m1_1_data.txt   Data      Stuttgart / Echterdingen             Gust peak (one second); monthly maximum                     195212-201512
+order_93987_DLSTU_fu3010m1_1_legend.txt Legend    Stuttgart / Echterdingen             Gust peak (one second); monthly maximum                     195212-201512
+order_93987_DLSTU_fu3010m1_2_data.txt   Data      Stuttgart / Echterdingen             Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLSTU_fu3010m1_2_legend.txt Legend    Stuttgart / Echterdingen             Gust peak (one second); monthly maximum                     201604-202103
+order_93987_DLSTS_fu3010m1_1_data.txt   Data      Stuttgart / Schnarrenberg            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLSTS_fu3010m1_1_legend.txt Legend    Stuttgart / Schnarrenberg            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLTHO_fu3010m1_1_data.txt   Data      Tholey                               Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLTHO_fu3010m1_1_legend.txt Legend    Tholey                               Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLTRI_fu3010m1_1_data.txt   Data      Trier                                Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLTRI_fu3010m1_1_legend.txt Legend    Trier                                Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLWAI_fu3010m1_1_data.txt   Data      Waibstadt                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLWAI_fu3010m1_1_legend.txt Legend    Waibstadt                            Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLWUR_fu3010m1_1_data.txt   Data      Würzburg                             Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLWUR_fu3010m1_1_legend.txt Legend    Würzburg                             Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLOHR_fu3010m1_1_data.txt   Data      Öhringen                             Gust peak (one second); monthly maximum                     202008-202103
+order_93987_DLOHR_fu3010m1_1_legend.txt Legend    Öhringen                             Gust peak (one second); monthly maximum                     202008-202103

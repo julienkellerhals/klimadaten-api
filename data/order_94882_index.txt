@@ -1,0 +1,680 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94882
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94882_TAE_tre200y0_1_data.txt     Data      Aadorf / Tänikon                     Air temperature 2 m above ground; annual mean               1970-2020
+order_94882_TAE_tre200y0_1_legend.txt   Legend    Aadorf / Tänikon                     Air temperature 2 m above ground; annual mean               1970-2020
+order_94882_AGAAR_tre200y0_1_data.txt   Data      Aarau                                Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_AGAAR_tre200y0_1_legend.txt Legend    Aarau                                Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_AAR_tre200y0_1_data.txt     Data      Aarau-Unterentfelden                 Air temperature 2 m above ground; annual mean               1930-1984
+order_94882_AAR_tre200y0_1_legend.txt   Legend    Aarau-Unterentfelden                 Air temperature 2 m above ground; annual mean               1930-1984
+order_94882_AIG_tre200y0_1_data.txt     Data      Aigle                                Air temperature 2 m above ground; annual mean               1981-2020
+order_94882_AIG_tre200y0_1_legend.txt   Legend    Aigle                                Air temperature 2 m above ground; annual mean               1981-2020
+order_94882_ALP_tre200y0_1_data.txt     Data      Alpnach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ALP_tre200y0_1_legend.txt   Legend    Alpnach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ALT_tre200y0_1_data.txt     Data      Altdorf                              Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_ALT_tre200y0_1_legend.txt   Legend    Altdorf                              Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_ARH_tre200y0_1_data.txt     Data      Altenrhein                           Air temperature 2 m above ground; annual mean               1993-2014
+order_94882_ARH_tre200y0_1_legend.txt   Legend    Altenrhein                           Air temperature 2 m above ground; annual mean               1993-2014
+order_94882_ARH_tre200y0_2_data.txt     Data      Altenrhein                           Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_ARH_tre200y0_2_legend.txt   Legend    Altenrhein                           Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_DLALH_tre200y0_1_data.txt   Data      Altheim                              Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLALH_tre200y0_1_legend.txt Legend    Altheim                              Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLALM_tre200y0_1_data.txt   Data      Altomünster                          Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_DLALM_tre200y0_1_legend.txt Legend    Altomünster                          Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_ALS_tre200y0_1_data.txt     Data      Altstätten, SG                       Air temperature 2 m above ground; annual mean               1954-1996
+order_94882_ALS_tre200y0_1_legend.txt   Legend    Altstätten, SG                       Air temperature 2 m above ground; annual mean               1954-1996
+order_94882_DLAME_tre200y0_1_data.txt   Data      Amerang / Pfaffing                   Air temperature 2 m above ground; annual mean               1993-2020
+order_94882_DLAME_tre200y0_1_legend.txt Legend    Amerang / Pfaffing                   Air temperature 2 m above ground; annual mean               1993-2020
+order_94882_TGAMR_tre200y0_1_data.txt   Data      Amriswil                             Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGAMR_tre200y0_1_legend.txt Legend    Amriswil                             Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGAMR_tre200y0_2_data.txt   Data      Amriswil                             Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TGAMR_tre200y0_2_legend.txt Legend    Amriswil                             Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TGARE_tre200y0_1_data.txt   Data      Arenenberg                           Air temperature 2 m above ground; annual mean               2011-2012
+order_94882_TGARE_tre200y0_1_legend.txt Legend    Arenenberg                           Air temperature 2 m above ground; annual mean               2011-2012
+order_94882_TGARE_tre200y0_2_data.txt   Data      Arenenberg                           Air temperature 2 m above ground; annual mean               2016-2018
+order_94882_TGARE_tre200y0_2_legend.txt Legend    Arenenberg                           Air temperature 2 m above ground; annual mean               2016-2018
+order_94882_IYAUE_tre200y0_1_data.txt   Data      Auer                                 Air temperature 2 m above ground; annual mean               1982-2020
+order_94882_IYAUE_tre200y0_1_legend.txt Legend    Auer                                 Air temperature 2 m above ground; annual mean               1982-2020
+order_94882_DLAUG_tre200y0_1_data.txt   Data      Augsburg                             Air temperature 2 m above ground; annual mean               1946-2020
+order_94882_DLAUG_tre200y0_1_legend.txt Legend    Augsburg                             Air temperature 2 m above ground; annual mean               1946-2020
+order_94882_RAG_tre200y0_1_data.txt     Data      Bad Ragaz                            Air temperature 2 m above ground; annual mean               1870-1890
+order_94882_RAG_tre200y0_1_legend.txt   Legend    Bad Ragaz                            Air temperature 2 m above ground; annual mean               1870-1890
+order_94882_RAG_tre200y0_2_data.txt     Data      Bad Ragaz                            Air temperature 2 m above ground; annual mean               1938-2020
+order_94882_RAG_tre200y0_2_legend.txt   Legend    Bad Ragaz                            Air temperature 2 m above ground; annual mean               1938-2020
+order_94882_DLBWB_tre200y0_1_data.txt   Data      Bad Wildbad                          Air temperature 2 m above ground; annual mean               1948-2000
+order_94882_DLBWB_tre200y0_1_legend.txt Legend    Bad Wildbad                          Air temperature 2 m above ground; annual mean               1948-2000
+order_94882_DLBAB_tre200y0_1_data.txt   Data      Baden-Baden / Geroldsau              Air temperature 2 m above ground; annual mean               1948-1983
+order_94882_DLBAB_tre200y0_1_legend.txt Legend    Baden-Baden / Geroldsau              Air temperature 2 m above ground; annual mean               1948-1983
+order_94882_DLBAB_tre200y0_2_data.txt   Data      Baden-Baden / Geroldsau              Air temperature 2 m above ground; annual mean               1984-2020
+order_94882_DLBAB_tre200y0_2_legend.txt Legend    Baden-Baden / Geroldsau              Air temperature 2 m above ground; annual mean               1984-2020
+order_94882_IYBAR_tre200y0_1_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; annual mean               2002-2010
+order_94882_IYBAR_tre200y0_1_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; annual mean               2002-2010
+order_94882_IYBAR_tre200y0_2_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; annual mean               2011-2020
+order_94882_IYBAR_tre200y0_2_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; annual mean               2011-2020
+order_94882_BAS_tre200y0_1_data.txt     Data      Basel / Binningen                    Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_BAS_tre200y0_1_legend.txt   Legend    Basel / Binningen                    Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_KADER_tre200y0_1_data.txt   Data      Basel / Dreispitz                    Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KADER_tre200y0_1_legend.txt Legend    Basel / Dreispitz                    Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_BSBAS_tre200y0_1_data.txt   Data      Basel / St. Johann                   Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_BSBAS_tre200y0_1_legend.txt Legend    Basel / St. Johann                   Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_BLZ_tre200y0_1_data.txt     Data      Bellinzona                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_BLZ_tre200y0_1_legend.txt   Legend    Bellinzona                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_NABBER_tre200y0_1_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               1991-1994
+order_94882_NABBER_tre200y0_1_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               1991-1994
+order_94882_NABBER_tre200y0_2_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               1995-1997
+order_94882_NABBER_tre200y0_2_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               1995-1997
+order_94882_NABBER_tre200y0_3_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               2000-2016
+order_94882_NABBER_tre200y0_3_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               2000-2016
+order_94882_NABBER_tre200y0_4_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_NABBER_tre200y0_4_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_BZN_tre200y0_1_data.txt     Data      Beznau                               Air temperature 2 m above ground; annual mean               1958-1979
+order_94882_BZN_tre200y0_1_legend.txt   Legend    Beznau                               Air temperature 2 m above ground; annual mean               1958-1979
+order_94882_BEZ_tre200y0_1_data.txt     Data      Beznau                               Air temperature 2 m above ground; annual mean               1988-2020
+order_94882_BEZ_tre200y0_1_legend.txt   Legend    Beznau                               Air temperature 2 m above ground; annual mean               1988-2020
+order_94882_BIA_tre200y0_1_data.txt     Data      Biasca                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_BIA_tre200y0_1_legend.txt   Legend    Biasca                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TIBIC_tre200y0_1_data.txt   Data      Biasca A2                            Air temperature 2 m above ground; annual mean               2012-2014
+order_94882_TIBIC_tre200y0_1_legend.txt Legend    Biasca A2                            Air temperature 2 m above ground; annual mean               2012-2014
+order_94882_TIBIC_tre200y0_2_data.txt   Data      Biasca A2                            Air temperature 2 m above ground; annual mean               2015-2018
+order_94882_TIBIC_tre200y0_2_legend.txt Legend    Biasca A2                            Air temperature 2 m above ground; annual mean               2015-2018
+order_94882_TIBIC_tre200y0_3_data.txt   Data      Biasca A2                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TIBIC_tre200y0_3_legend.txt Legend    Biasca A2                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_BEBIL_tre200y0_1_data.txt   Data      Biel / Bözingen                      Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_BEBIL_tre200y0_1_legend.txt Legend    Biel / Bözingen                      Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_BIL_tre200y0_1_data.txt     Data      Biel/Bienne                          Air temperature 2 m above ground; annual mean               1958-2011
+order_94882_BIL_tre200y0_1_legend.txt   Legend    Biel/Bienne                          Air temperature 2 m above ground; annual mean               1958-2011
+order_94882_TIBIO_tre200y0_1_data.txt   Data      Bioggio                              Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_TIBIO_tre200y0_1_legend.txt Legend    Bioggio                              Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_BIZ_tre200y0_1_data.txt     Data      Bischofszell                         Air temperature 2 m above ground; annual mean               2010-2015
+order_94882_BIZ_tre200y0_1_legend.txt   Legend    Bischofszell                         Air temperature 2 m above ground; annual mean               2010-2015
+order_94882_BIZ_tre200y0_2_data.txt     Data      Bischofszell                         Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_BIZ_tre200y0_2_legend.txt   Legend    Bischofszell                         Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_BOU_tre200y0_1_data.txt     Data      Bouveret                             Air temperature 2 m above ground; annual mean               2012-2015
+order_94882_BOU_tre200y0_1_legend.txt   Legend    Bouveret                             Air temperature 2 m above ground; annual mean               2012-2015
+order_94882_BOU_tre200y0_2_data.txt     Data      Bouveret                             Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_BOU_tre200y0_2_legend.txt   Legend    Bouveret                             Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_IYBOZ_tre200y0_1_data.txt   Data      Bozen                                Air temperature 2 m above ground; annual mean               1955-1965
+order_94882_IYBOZ_tre200y0_1_legend.txt Legend    Bozen                                Air temperature 2 m above ground; annual mean               1955-1965
+order_94882_IYBOZ_tre200y0_2_data.txt   Data      Bozen                                Air temperature 2 m above ground; annual mean               1966-1978
+order_94882_IYBOZ_tre200y0_2_legend.txt Legend    Bozen                                Air temperature 2 m above ground; annual mean               1966-1978
+order_94882_IYBOZ_tre200y0_3_data.txt   Data      Bozen                                Air temperature 2 m above ground; annual mean               1979-2020
+order_94882_IYBOZ_tre200y0_3_legend.txt Legend    Bozen                                Air temperature 2 m above ground; annual mean               1979-2020
+order_94882_IYBRZ_tre200y0_1_data.txt   Data      Branzoll                             Air temperature 2 m above ground; annual mean               1976-1995
+order_94882_IYBRZ_tre200y0_1_legend.txt Legend    Branzoll                             Air temperature 2 m above ground; annual mean               1976-1995
+order_94882_IYBRZ_tre200y0_2_data.txt   Data      Branzoll                             Air temperature 2 m above ground; annual mean               1996-2004
+order_94882_IYBRZ_tre200y0_2_legend.txt Legend    Branzoll                             Air temperature 2 m above ground; annual mean               1996-2004
+order_94882_IYBRZ_tre200y0_3_data.txt   Data      Branzoll                             Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_IYBRZ_tre200y0_3_legend.txt Legend    Branzoll                             Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_DLBUC_tre200y0_1_data.txt   Data      Buchenbach                           Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_DLBUC_tre200y0_1_legend.txt Legend    Buchenbach                           Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_BUS_tre200y0_1_data.txt     Data      Buchs / Aarau                        Air temperature 2 m above ground; annual mean               1984-2020
+order_94882_BUS_tre200y0_1_legend.txt   Legend    Buchs / Aarau                        Air temperature 2 m above ground; annual mean               1984-2020
+order_94882_BMH_tre200y0_1_data.txt     Data      Bâle-Mulhouse (ehemalige Station)    Air temperature 2 m above ground; annual mean               1950-1980
+order_94882_BMH_tre200y0_1_legend.txt   Legend    Bâle-Mulhouse (ehemalige Station)    Air temperature 2 m above ground; annual mean               1950-1980
+order_94882_KABAT_tre200y0_1_data.txt   Data      Bättwil                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_KABAT_tre200y0_1_legend.txt Legend    Bättwil                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_UBB_tre200y0_1_data.txt     Data      Bözberg                              Air temperature 2 m above ground; annual mean               1976-1994
+order_94882_UBB_tre200y0_1_legend.txt   Legend    Bözberg                              Air temperature 2 m above ground; annual mean               1976-1994
+order_94882_TICAM_tre200y0_1_data.txt   Data      Camignolo                            Air temperature 2 m above ground; annual mean               2009-2018
+order_94882_TICAM_tre200y0_1_legend.txt Legend    Camignolo                            Air temperature 2 m above ground; annual mean               2009-2018
+order_94882_TICAM_tre200y0_2_data.txt   Data      Camignolo                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TICAM_tre200y0_2_legend.txt Legend    Camignolo                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TICAN_tre200y0_1_data.txt   Data      Canobbio                             Air temperature 2 m above ground; annual mean               2012-2014
+order_94882_TICAN_tre200y0_1_legend.txt Legend    Canobbio                             Air temperature 2 m above ground; annual mean               2012-2014
+order_94882_TICAN_tre200y0_2_data.txt   Data      Canobbio                             Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_TICAN_tre200y0_2_legend.txt Legend    Canobbio                             Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_TICAN_tre200y0_3_data.txt   Data      Canobbio                             Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_TICAN_tre200y0_3_legend.txt Legend    Canobbio                             Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_TIBIG_tre200y0_1_data.txt   Data      Cavergno Bignasco                    Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_TIBIG_tre200y0_1_legend.txt Legend    Cavergno Bignasco                    Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_CEV_tre200y0_1_data.txt     Data      Cevio                                Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_CEV_tre200y0_1_legend.txt   Legend    Cevio                                Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_CHZ_tre200y0_1_data.txt     Data      Cham                                 Air temperature 2 m above ground; annual mean               1993-2020
+order_94882_CHZ_tre200y0_1_legend.txt   Legend    Cham                                 Air temperature 2 m above ground; annual mean               1993-2020
+order_94882_TICIA_tre200y0_1_data.txt   Data      Chiasso                              Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_TICIA_tre200y0_1_legend.txt Legend    Chiasso                              Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_CPP_tre200y0_1_data.txt     Data      Chippis                              Air temperature 2 m above ground; annual mean               1958-1970
+order_94882_CPP_tre200y0_1_legend.txt   Legend    Chippis                              Air temperature 2 m above ground; annual mean               1958-1970
+order_94882_TICOM_tre200y0_1_data.txt   Data      Comano                               Air temperature 2 m above ground; annual mean               2009-2014
+order_94882_TICOM_tre200y0_1_legend.txt Legend    Comano                               Air temperature 2 m above ground; annual mean               2009-2014
+order_94882_CRM_tre200y0_1_data.txt     Data      Cressier                             Air temperature 2 m above ground; annual mean               1994-2009
+order_94882_CRM_tre200y0_1_legend.txt   Legend    Cressier                             Air temperature 2 m above ground; annual mean               1994-2009
+order_94882_CRM_tre200y0_2_data.txt     Data      Cressier                             Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_CRM_tre200y0_2_legend.txt   Legend    Cressier                             Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_CRM_tre200y0_3_data.txt     Data      Cressier                             Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_CRM_tre200y0_3_legend.txt   Legend    Cressier                             Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_DEM_tre200y0_1_data.txt     Data      Delémont                             Air temperature 2 m above ground; annual mean               1958-2020
+order_94882_DEM_tre200y0_1_legend.txt   Legend    Delémont                             Air temperature 2 m above ground; annual mean               1958-2020
+order_94882_DLDIG_tre200y0_1_data.txt   Data      Dillingen                            Air temperature 2 m above ground; annual mean               2006-2020
+order_94882_DLDIG_tre200y0_1_legend.txt Legend    Dillingen                            Air temperature 2 m above ground; annual mean               2006-2020
+order_94882_DLDRE_tre200y0_1_data.txt   Data      Dresden / Klotzsche                  Air temperature 2 m above ground; annual mean               1934-1944
+order_94882_DLDRE_tre200y0_1_legend.txt Legend    Dresden / Klotzsche                  Air temperature 2 m above ground; annual mean               1934-1944
+order_94882_DLDRE_tre200y0_2_data.txt   Data      Dresden / Klotzsche                  Air temperature 2 m above ground; annual mean               1960-2020
+order_94882_DLDRE_tre200y0_2_legend.txt Legend    Dresden / Klotzsche                  Air temperature 2 m above ground; annual mean               1960-2020
+order_94882_DUB_tre200y0_1_data.txt     Data      Dübendorf                            Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_DUB_tre200y0_1_legend.txt   Legend    Dübendorf                            Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_NABDUE_tre200y0_1_data.txt  Data      Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1990-1991
+order_94882_NABDUE_tre200y0_1_legend.txt Legend    Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1990-1991
+order_94882_NABDUE_tre200y0_2_data.txt  Data      Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1993-1994
+order_94882_NABDUE_tre200y0_2_legend.txt Legend    Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1993-1994
+order_94882_NABDUE_tre200y0_3_data.txt  Data      Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1995-2013
+order_94882_NABDUE_tre200y0_3_legend.txt Legend    Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               1995-2013
+order_94882_NABDUE_tre200y0_4_data.txt  Data      Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_NABDUE_tre200y0_4_legend.txt Legend    Dübendorf / Giessen                  Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_INNEBI_tre200y0_1_data.txt  Data      Ebikon                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_INNEBI_tre200y0_1_legend.txt Legend    Ebikon                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TGEGN_tre200y0_1_data.txt   Data      Egnach                               Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_TGEGN_tre200y0_1_legend.txt Legend    Egnach                               Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_EGO_tre200y0_1_data.txt     Data      Egolzwil                             Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_EGO_tre200y0_1_legend.txt   Legend    Egolzwil                             Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_EGO_tre200y0_2_data.txt     Data      Egolzwil                             Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_EGO_tre200y0_2_legend.txt   Legend    Egolzwil                             Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_DLELZ_tre200y0_1_data.txt   Data      Elzach / Fisnacht                    Air temperature 2 m above ground; annual mean               1987-1998
+order_94882_DLELZ_tre200y0_1_legend.txt Legend    Elzach / Fisnacht                    Air temperature 2 m above ground; annual mean               1987-1998
+order_94882_DLELZ_tre200y0_2_data.txt   Data      Elzach / Fisnacht                    Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLELZ_tre200y0_2_legend.txt Legend    Elzach / Fisnacht                    Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_EMM_tre200y0_1_data.txt     Data      Emmen                                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_EMM_tre200y0_1_legend.txt   Legend    Emmen                                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_DLEMM_tre200y0_1_data.txt   Data      Emmendingen / Mundingen              Air temperature 2 m above ground; annual mean               1975-2002
+order_94882_DLEMM_tre200y0_1_legend.txt Legend    Emmendingen / Mundingen              Air temperature 2 m above ground; annual mean               1975-2002
+order_94882_DLEMM_tre200y0_2_data.txt   Data      Emmendingen / Mundingen              Air temperature 2 m above ground; annual mean               2003-2020
+order_94882_DLEMM_tre200y0_2_legend.txt Legend    Emmendingen / Mundingen              Air temperature 2 m above ground; annual mean               2003-2020
+order_94882_DLEGN_tre200y0_1_data.txt   Data      Engen                                Air temperature 2 m above ground; annual mean               1986-1991
+order_94882_DLEGN_tre200y0_1_legend.txt Legend    Engen                                Air temperature 2 m above ground; annual mean               1986-1991
+order_94882_DLEGN_tre200y0_2_data.txt   Data      Engen                                Air temperature 2 m above ground; annual mean               1993-1997
+order_94882_DLEGN_tre200y0_2_legend.txt Legend    Engen                                Air temperature 2 m above ground; annual mean               1993-1997
+order_94882_DLEGN_tre200y0_3_data.txt   Data      Engen                                Air temperature 2 m above ground; annual mean               2004-2007
+order_94882_DLEGN_tre200y0_3_legend.txt Legend    Engen                                Air temperature 2 m above ground; annual mean               2004-2007
+order_94882_ENN_tre200y0_1_data.txt     Data      Ennetbaden                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_ENN_tre200y0_1_legend.txt   Legend    Ennetbaden                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_KAEPT_tre200y0_1_data.txt   Data      Eptingen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAEPT_tre200y0_1_legend.txt Legend    Eptingen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_DLERF_tre200y0_1_data.txt   Data      Erfurt / Bindersleben                Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_DLERF_tre200y0_1_legend.txt Legend    Erfurt / Bindersleben                Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_TGERM_tre200y0_1_data.txt   Data      Ermatingen                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGERM_tre200y0_1_legend.txt Legend    Ermatingen                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGERM_tre200y0_2_data.txt   Data      Ermatingen                           Air temperature 2 m above ground; annual mean               2017-2019
+order_94882_TGERM_tre200y0_2_legend.txt Legend    Ermatingen                           Air temperature 2 m above ground; annual mean               2017-2019
+order_94882_INNESF_tre200y0_1_data.txt  Data      Erstfeld                             Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_INNESF_tre200y0_1_legend.txt Legend    Erstfeld                             Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_KAETT_tre200y0_1_data.txt   Data      Ettingen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAETT_tre200y0_1_legend.txt Legend    Ettingen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_EVI_tre200y0_1_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; annual mean               1993-2005
+order_94882_EVI_tre200y0_1_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; annual mean               1993-2005
+order_94882_EVI_tre200y0_2_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; annual mean               2007-2009
+order_94882_EVI_tre200y0_2_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; annual mean               2007-2009
+order_94882_EVI_tre200y0_3_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_EVI_tre200y0_3_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_EVI_tre200y0_4_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_EVI_tre200y0_4_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_DLFEL_tre200y0_1_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Air temperature 2 m above ground; annual mean               1958-1981
+order_94882_DLFEL_tre200y0_1_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Air temperature 2 m above ground; annual mean               1958-1981
+order_94882_FRF_tre200y0_1_data.txt     Data      Frauenfeld                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_FRF_tre200y0_1_legend.txt   Legend    Frauenfeld                           Air temperature 2 m above ground; annual mean               1963-1980
+order_94882_TGFRA_tre200y0_1_data.txt   Data      Frauenfeld                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGFRA_tre200y0_1_legend.txt Legend    Frauenfeld                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGFRA_tre200y0_2_data.txt   Data      Frauenfeld                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_TGFRA_tre200y0_2_legend.txt Legend    Frauenfeld                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_DLFRB_tre200y0_1_data.txt   Data      Freiburg                             Air temperature 2 m above ground; annual mean               1948-2020
+order_94882_DLFRB_tre200y0_1_legend.txt Legend    Freiburg                             Air temperature 2 m above ground; annual mean               1948-2020
+order_94882_DLFRI_tre200y0_1_data.txt   Data      Friedrichshafen                      Air temperature 2 m above ground; annual mean               1946-1979
+order_94882_DLFRI_tre200y0_1_legend.txt Legend    Friedrichshafen                      Air temperature 2 m above ground; annual mean               1946-1979
+order_94882_DLFRH_tre200y0_1_data.txt   Data      Friedrichshafen / Unterraderach      Air temperature 2 m above ground; annual mean               2002-2020
+order_94882_DLFRH_tre200y0_1_legend.txt Legend    Friedrichshafen / Unterraderach      Air temperature 2 m above ground; annual mean               2002-2020
+order_94882_IYGAR_tre200y0_1_data.txt   Data      Gargazon                             Air temperature 2 m above ground; annual mean               2016-2019
+order_94882_IYGAR_tre200y0_1_legend.txt Legend    Gargazon                             Air temperature 2 m above ground; annual mean               2016-2019
+order_94882_GVE_tre200y0_1_data.txt     Data      Genève / Cointrin                    Air temperature 2 m above ground; annual mean               1949-2020
+order_94882_GVE_tre200y0_1_legend.txt   Legend    Genève / Cointrin                    Air temperature 2 m above ground; annual mean               1949-2020
+order_94882_GEO_tre200y0_1_data.txt     Data      Genève-Observatoire                  Air temperature 2 m above ground; annual mean               1863-1961
+order_94882_GEO_tre200y0_1_legend.txt   Legend    Genève-Observatoire                  Air temperature 2 m above ground; annual mean               1863-1961
+order_94882_GEO_tre200y0_2_data.txt     Data      Genève-Observatoire                  Air temperature 2 m above ground; annual mean               1963-1965
+order_94882_GEO_tre200y0_2_legend.txt   Legend    Genève-Observatoire                  Air temperature 2 m above ground; annual mean               1963-1965
+order_94882_GES_tre200y0_1_data.txt     Data      Gersau                               Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_GES_tre200y0_1_legend.txt   Legend    Gersau                               Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_GIH_tre200y0_1_data.txt     Data      Giswil                               Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_GIH_tre200y0_1_legend.txt   Legend    Giswil                               Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_GIH_tre200y0_2_data.txt     Data      Giswil                               Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_GIH_tre200y0_2_legend.txt   Legend    Giswil                               Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_GLA_tre200y0_1_data.txt     Data      Glarus                               Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_GLA_tre200y0_1_legend.txt   Legend    Glarus                               Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_GLFEU_tre200y0_1_data.txt   Data      Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2001-2003
+order_94882_GLFEU_tre200y0_1_legend.txt Legend    Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2001-2003
+order_94882_GLFEU_tre200y0_2_data.txt   Data      Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2004-2012
+order_94882_GLFEU_tre200y0_2_legend.txt Legend    Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2004-2012
+order_94882_GLFEU_tre200y0_3_data.txt   Data      Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2015-2016
+order_94882_GLFEU_tre200y0_3_legend.txt Legend    Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2015-2016
+order_94882_GLFEU_tre200y0_4_data.txt   Data      Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_GLFEU_tre200y0_4_legend.txt Legend    Glarus / Feuerwehrstützpunkt         Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_KAGOD_tre200y0_1_data.txt   Data      Goldau / Tierpark                    Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAGOD_tre200y0_1_legend.txt Legend    Goldau / Tierpark                    Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_TIGRA_tre200y0_1_data.txt   Data      Grancia                              Air temperature 2 m above ground; annual mean               2011-2018
+order_94882_TIGRA_tre200y0_1_legend.txt Legend    Grancia                              Air temperature 2 m above ground; annual mean               2011-2018
+order_94882_TIGRA_tre200y0_2_data.txt   Data      Grancia                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TIGRA_tre200y0_2_legend.txt Legend    Grancia                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_GRE_tre200y0_1_data.txt     Data      Grenchen                             Air temperature 2 m above ground; annual mean               1992-2008
+order_94882_GRE_tre200y0_1_legend.txt   Legend    Grenchen                             Air temperature 2 m above ground; annual mean               1992-2008
+order_94882_GRE_tre200y0_2_data.txt     Data      Grenchen                             Air temperature 2 m above ground; annual mean               2009-2012
+order_94882_GRE_tre200y0_2_legend.txt   Legend    Grenchen                             Air temperature 2 m above ground; annual mean               2009-2012
+order_94882_GRE_tre200y0_3_data.txt     Data      Grenchen                             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_GRE_tre200y0_3_legend.txt   Legend    Grenchen                             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_GRO_tre200y0_1_data.txt     Data      Grono                                Air temperature 2 m above ground; annual mean               1958-2020
+order_94882_GRO_tre200y0_1_legend.txt   Legend    Grono                                Air temperature 2 m above ground; annual mean               1958-2020
+order_94882_GOE_tre200y0_1_data.txt     Data      Gösgen                               Air temperature 2 m above ground; annual mean               1988-2006
+order_94882_GOE_tre200y0_1_legend.txt   Legend    Gösgen                               Air temperature 2 m above ground; annual mean               1988-2006
+order_94882_GOE_tre200y0_2_data.txt     Data      Gösgen                               Air temperature 2 m above ground; annual mean               2007-2020
+order_94882_GOE_tre200y0_2_legend.txt   Legend    Gösgen                               Air temperature 2 m above ground; annual mean               2007-2020
+order_94882_GUT_tre200y0_1_data.txt     Data      Güttingen                            Air temperature 2 m above ground; annual mean               1976-2020
+order_94882_GUT_tre200y0_1_legend.txt   Legend    Güttingen                            Air temperature 2 m above ground; annual mean               1976-2020
+order_94882_HLL_tre200y0_1_data.txt     Data      Hallau                               Air temperature 2 m above ground; annual mean               1886-2020
+order_94882_HLL_tre200y0_1_legend.txt   Legend    Hallau                               Air temperature 2 m above ground; annual mean               1886-2020
+order_94882_DLHEC_tre200y0_1_data.txt   Data      Hechingen                            Air temperature 2 m above ground; annual mean               1946-1967
+order_94882_DLHEC_tre200y0_1_legend.txt Legend    Hechingen                            Air temperature 2 m above ground; annual mean               1946-1967
+order_94882_DLHEC_tre200y0_2_data.txt   Data      Hechingen                            Air temperature 2 m above ground; annual mean               1969-2011
+order_94882_DLHEC_tre200y0_2_legend.txt Legend    Hechingen                            Air temperature 2 m above ground; annual mean               1969-2011
+order_94882_DLHEC_tre200y0_3_data.txt   Data      Hechingen                            Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_DLHEC_tre200y0_3_legend.txt Legend    Hechingen                            Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_DLHEM_tre200y0_1_data.txt   Data      Hermaringen                          Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_DLHEM_tre200y0_1_legend.txt Legend    Hermaringen                          Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_DLHER_tre200y0_1_data.txt   Data      Herrenberg                           Air temperature 2 m above ground; annual mean               1978-1984
+order_94882_DLHER_tre200y0_1_legend.txt Legend    Herrenberg                           Air temperature 2 m above ground; annual mean               1978-1984
+order_94882_NABHAE_tre200y0_1_data.txt  Data      Härkingen                            Air temperature 2 m above ground; annual mean               1992-1994
+order_94882_NABHAE_tre200y0_1_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; annual mean               1992-1994
+order_94882_NABHAE_tre200y0_2_data.txt  Data      Härkingen                            Air temperature 2 m above ground; annual mean               1997-1998
+order_94882_NABHAE_tre200y0_2_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; annual mean               1997-1998
+order_94882_NABHAE_tre200y0_3_data.txt  Data      Härkingen                            Air temperature 2 m above ground; annual mean               1999-2006
+order_94882_NABHAE_tre200y0_3_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; annual mean               1999-2006
+order_94882_NABHAE_tre200y0_4_data.txt  Data      Härkingen                            Air temperature 2 m above ground; annual mean               2007-2014
+order_94882_NABHAE_tre200y0_4_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; annual mean               2007-2014
+order_94882_NABHAE_tre200y0_5_data.txt  Data      Härkingen                            Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_NABHAE_tre200y0_5_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_WSLHOB_tre200y0_1_data.txt  Data      Hölstein Bestand                     Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_WSLHOB_tre200y0_1_legend.txt Legend    Hölstein Bestand                     Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_WSLHOC_tre200y0_1_data.txt  Data      Hölstein Turm                        Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WSLHOC_tre200y0_1_legend.txt Legend    Hölstein Turm                        Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_BEINS_tre200y0_1_data.txt   Data      Ins                                  Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_BEINS_tre200y0_1_legend.txt Legend    Ins                                  Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_MBISL_tre200y0_1_data.txt   Data      Isleten                              Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_MBISL_tre200y0_1_legend.txt Legend    Isleten                              Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_MMIBG_tre200y0_1_data.txt   Data      Isole di Brissago                    Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMIBG_tre200y0_1_legend.txt Legend    Isole di Brissago                    Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_JON_tre200y0_1_data.txt     Data      Jona                                 Air temperature 2 m above ground; annual mean               1993-1995
+order_94882_JON_tre200y0_1_legend.txt   Legend    Jona                                 Air temperature 2 m above ground; annual mean               1993-1995
+order_94882_WSLJUB_tre200y0_1_data.txt  Data      Jussy Bestand                        Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_WSLJUB_tre200y0_1_legend.txt Legend    Jussy Bestand                        Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_WSLJUF_tre200y0_1_data.txt  Data      Jussy Freiland                       Air temperature 2 m above ground; annual mean               2017-2019
+order_94882_WSLJUF_tre200y0_1_legend.txt Legend    Jussy Freiland                       Air temperature 2 m above ground; annual mean               2017-2019
+order_94882_TGKAL_tre200y0_1_data.txt   Data      Kaltenbach                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGKAL_tre200y0_1_legend.txt Legend    Kaltenbach                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGKAL_tre200y0_2_data.txt   Data      Kaltenbach                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_TGKAL_tre200y0_2_legend.txt Legend    Kaltenbach                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_IYKAL_tre200y0_1_data.txt   Data      Kaltern / Oberplanitzing             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_IYKAL_tre200y0_1_legend.txt Legend    Kaltern / Oberplanitzing             Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_BEKAP_tre200y0_1_data.txt   Data      Kappelen                             Air temperature 2 m above ground; annual mean               2011-2013
+order_94882_BEKAP_tre200y0_1_legend.txt Legend    Kappelen                             Air temperature 2 m above ground; annual mean               2011-2013
+order_94882_BEKAP_tre200y0_2_data.txt   Data      Kappelen                             Air temperature 2 m above ground; annual mean               2016-2019
+order_94882_BEKAP_tre200y0_2_legend.txt Legend    Kappelen                             Air temperature 2 m above ground; annual mean               2016-2019
+order_94882_DLKIF_tre200y0_1_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1946-1948
+order_94882_DLKIF_tre200y0_1_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1946-1948
+order_94882_DLKIF_tre200y0_2_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1949-1971
+order_94882_DLKIF_tre200y0_2_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1949-1971
+order_94882_DLKIF_tre200y0_3_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1972-1987
+order_94882_DLKIF_tre200y0_3_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1972-1987
+order_94882_DLKIF_tre200y0_4_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1988-1994
+order_94882_DLKIF_tre200y0_4_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1988-1994
+order_94882_DLKIF_tre200y0_5_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1996-1997
+order_94882_DLKIF_tre200y0_5_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1996-1997
+order_94882_DLKIF_tre200y0_6_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               1998-2001
+order_94882_DLKIF_tre200y0_6_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               1998-2001
+order_94882_DLKIF_tre200y0_7_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; annual mean               2006-2020
+order_94882_DLKIF_tre200y0_7_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; annual mean               2006-2020
+order_94882_DLKON_tre200y0_1_data.txt   Data      Konstanz                             Air temperature 2 m above ground; annual mean               1972-2020
+order_94882_DLKON_tre200y0_1_legend.txt Legend    Konstanz                             Air temperature 2 m above ground; annual mean               1972-2020
+order_94882_KOP_tre200y0_1_data.txt     Data      Koppigen                             Air temperature 2 m above ground; annual mean               1960-2020
+order_94882_KOP_tre200y0_1_legend.txt   Legend    Koppigen                             Air temperature 2 m above ground; annual mean               1960-2020
+order_94882_KRZ_tre200y0_1_data.txt     Data      Kreuzlingen                          Air temperature 2 m above ground; annual mean               1863-1975
+order_94882_KRZ_tre200y0_1_legend.txt   Legend    Kreuzlingen                          Air temperature 2 m above ground; annual mean               1863-1975
+order_94882_TGKRE_tre200y0_1_data.txt   Data      Kreuzlingen                          Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGKRE_tre200y0_1_legend.txt Legend    Kreuzlingen                          Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGKRE_tre200y0_2_data.txt   Data      Kreuzlingen                          Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_TGKRE_tre200y0_2_legend.txt Legend    Kreuzlingen                          Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_LAC_tre200y0_1_data.txt     Data      Lachen / Galgenen                    Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_LAC_tre200y0_1_legend.txt   Legend    Lachen / Galgenen                    Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_IYLAI_tre200y0_1_data.txt   Data      Laimburg                             Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_IYLAI_tre200y0_1_legend.txt Legend    Laimburg                             Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_DLLAN_tre200y0_1_data.txt   Data      Landshut / Reithof                   Air temperature 2 m above ground; annual mean               2008-2020
+order_94882_DLLAN_tre200y0_1_legend.txt Legend    Landshut / Reithof                   Air temperature 2 m above ground; annual mean               2008-2020
+order_94882_BELAT_tre200y0_1_data.txt   Data      Langenthal                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_BELAT_tre200y0_1_legend.txt Legend    Langenthal                           Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_MMLBB_tre200y0_1_data.txt   Data      Langenthal / Bleienbach              Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_MMLBB_tre200y0_1_legend.txt Legend    Langenthal / Bleienbach              Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_MMLBB_tre200y0_2_data.txt   Data      Langenthal / Bleienbach              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_MMLBB_tre200y0_2_legend.txt Legend    Langenthal / Bleienbach              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_MMLAF_tre200y0_1_data.txt   Data      Laufen / Dittingen                   Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_MMLAF_tre200y0_1_legend.txt Legend    Laufen / Dittingen                   Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_NABLAU_tre200y0_1_data.txt  Data      Lausanne                             Air temperature 2 m above ground; annual mean               1992-1995
+order_94882_NABLAU_tre200y0_1_legend.txt Legend    Lausanne                             Air temperature 2 m above ground; annual mean               1992-1995
+order_94882_NABLAU_tre200y0_2_data.txt  Data      Lausanne                             Air temperature 2 m above ground; annual mean               1996-2000
+order_94882_NABLAU_tre200y0_2_legend.txt Legend    Lausanne                             Air temperature 2 m above ground; annual mean               1996-2000
+order_94882_NABLAU_tre200y0_3_data.txt  Data      Lausanne                             Air temperature 2 m above ground; annual mean               2001-2020
+order_94882_NABLAU_tre200y0_3_legend.txt Legend    Lausanne                             Air temperature 2 m above ground; annual mean               2001-2020
+order_94882_LEI_tre200y0_1_data.txt     Data      Leibstadt                            Air temperature 2 m above ground; annual mean               1988-2007
+order_94882_LEI_tre200y0_1_legend.txt   Legend    Leibstadt                            Air temperature 2 m above ground; annual mean               1988-2007
+order_94882_LEI_tre200y0_2_data.txt     Data      Leibstadt                            Air temperature 2 m above ground; annual mean               2008-2020
+order_94882_LEI_tre200y0_2_legend.txt   Legend    Leibstadt                            Air temperature 2 m above ground; annual mean               2008-2020
+order_94882_OTL_tre200y0_1_data.txt     Data      Locarno / Monti                      Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_OTL_tre200y0_1_legend.txt   Legend    Locarno / Monti                      Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_LMU_tre200y0_1_data.txt     Data      Locarno-Muralto                      Air temperature 2 m above ground; annual mean               1882-1930
+order_94882_LMU_tre200y0_1_legend.txt   Legend    Locarno-Muralto                      Air temperature 2 m above ground; annual mean               1882-1930
+order_94882_TGLOM_tre200y0_1_data.txt   Data      Lommis                               Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGLOM_tre200y0_1_legend.txt Legend    Lommis                               Air temperature 2 m above ground; annual mean               2010-2013
+order_94882_TGLOM_tre200y0_2_data.txt   Data      Lommis                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TGLOM_tre200y0_2_legend.txt Legend    Lommis                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_LUG_tre200y0_1_data.txt     Data      Lugano                               Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_LUG_tre200y0_1_legend.txt   Legend    Lugano                               Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_MMBIR_tre200y0_1_data.txt   Data      Lupfig / Flugplatz Birrfeld          Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMBIR_tre200y0_1_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMBIR_tre200y0_2_data.txt   Data      Lupfig / Flugplatz Birrfeld          Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_MMBIR_tre200y0_2_legend.txt Legend    Lupfig / Flugplatz Birrfeld          Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_LUZ_tre200y0_1_data.txt     Data      Luzern                               Air temperature 2 m above ground; annual mean               1880-2020
+order_94882_LUZ_tre200y0_1_legend.txt   Legend    Luzern                               Air temperature 2 m above ground; annual mean               1880-2020
+order_94882_INNLUZ_tre200y0_1_data.txt  Data      Luzern                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_INNLUZ_tre200y0_1_legend.txt Legend    Luzern                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_MAG_tre200y0_1_data.txt     Data      Magadino / Cadenazzo                 Air temperature 2 m above ground; annual mean               1953-2020
+order_94882_MAG_tre200y0_1_legend.txt   Legend    Magadino / Cadenazzo                 Air temperature 2 m above ground; annual mean               1953-2020
+order_94882_DLMAI_tre200y0_1_data.txt   Data      Maisach / Galgen                     Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_DLMAI_tre200y0_1_legend.txt Legend    Maisach / Galgen                     Air temperature 2 m above ground; annual mean               2005-2020
+order_94882_MMMAT_tre200y0_1_data.txt   Data      Marthalen                            Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMMAT_tre200y0_1_legend.txt Legend    Marthalen                            Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMMAT_tre200y0_2_data.txt   Data      Marthalen                            Air temperature 2 m above ground; annual mean               2014-2016
+order_94882_MMMAT_tre200y0_2_legend.txt Legend    Marthalen                            Air temperature 2 m above ground; annual mean               2014-2016
+order_94882_MMMAT_tre200y0_3_data.txt   Data      Marthalen                            Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_MMMAT_tre200y0_3_legend.txt Legend    Marthalen                            Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_MAB_tre200y0_1_data.txt     Data      Martigny                             Air temperature 2 m above ground; annual mean               1959-1969
+order_94882_MAB_tre200y0_1_legend.txt   Legend    Martigny                             Air temperature 2 m above ground; annual mean               1959-1969
+order_94882_VSMAS_tre200y0_1_data.txt   Data      Massongex                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_VSMAS_tre200y0_1_legend.txt Legend    Massongex                            Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_MAH_tre200y0_1_data.txt     Data      Mathod                               Air temperature 2 m above ground; annual mean               1995-1996
+order_94882_MAH_tre200y0_1_legend.txt   Legend    Mathod                               Air temperature 2 m above ground; annual mean               1995-1996
+order_94882_MAH_tre200y0_2_data.txt     Data      Mathod                               Air temperature 2 m above ground; annual mean               1997-2010
+order_94882_MAH_tre200y0_2_legend.txt   Legend    Mathod                               Air temperature 2 m above ground; annual mean               1997-2010
+order_94882_MAH_tre200y0_3_data.txt     Data      Mathod                               Air temperature 2 m above ground; annual mean               2011-2015
+order_94882_MAH_tre200y0_3_legend.txt   Legend    Mathod                               Air temperature 2 m above ground; annual mean               2011-2015
+order_94882_MAH_tre200y0_4_data.txt     Data      Mathod                               Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_MAH_tre200y0_4_legend.txt   Legend    Mathod                               Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_MMMEL_tre200y0_1_data.txt   Data      Mels / Heiligkreuz                   Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMMEL_tre200y0_1_legend.txt Legend    Mels / Heiligkreuz                   Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMMEL_tre200y0_2_data.txt   Data      Mels / Heiligkreuz                   Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_MMMEL_tre200y0_2_legend.txt Legend    Mels / Heiligkreuz                   Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_IYMER_tre200y0_1_data.txt   Data      Meran                                Air temperature 2 m above ground; annual mean               1982-2020
+order_94882_IYMER_tre200y0_1_legend.txt Legend    Meran                                Air temperature 2 m above ground; annual mean               1982-2020
+order_94882_DLMEZ_tre200y0_1_data.txt   Data      Metzingen                            Air temperature 2 m above ground; annual mean               2002-2007
+order_94882_DLMEZ_tre200y0_1_legend.txt Legend    Metzingen                            Air temperature 2 m above ground; annual mean               2002-2007
+order_94882_DLMEZ_tre200y0_2_data.txt   Data      Metzingen                            Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_DLMEZ_tre200y0_2_legend.txt Legend    Metzingen                            Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_TIMOL_tre200y0_1_data.txt   Data      Moleno                               Air temperature 2 m above ground; annual mean               2009-2016
+order_94882_TIMOL_tre200y0_1_legend.txt Legend    Moleno                               Air temperature 2 m above ground; annual mean               2009-2016
+order_94882_TIMOL_tre200y0_2_data.txt   Data      Moleno                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TIMOL_tre200y0_2_legend.txt Legend    Moleno                               Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_MON_tre200y0_1_data.txt     Data      Monthey                              Air temperature 2 m above ground; annual mean               1965-1982
+order_94882_MON_tre200y0_1_legend.txt   Legend    Monthey                              Air temperature 2 m above ground; annual mean               1965-1982
+order_94882_CLA_tre200y0_1_data.txt     Data      Montreux-Clarens                     Air temperature 2 m above ground; annual mean               1930-2004
+order_94882_CLA_tre200y0_1_legend.txt   Legend    Montreux-Clarens                     Air temperature 2 m above ground; annual mean               1930-2004
+order_94882_MOA_tre200y0_1_data.txt     Data      Mosen                                Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_MOA_tre200y0_1_legend.txt   Legend    Mosen                                Air temperature 2 m above ground; annual mean               2013-2020
+order_94882_MMMOU_tre200y0_1_data.txt   Data      Moutier                              Air temperature 2 m above ground; annual mean               2014-2015
+order_94882_MMMOU_tre200y0_1_legend.txt Legend    Moutier                              Air temperature 2 m above ground; annual mean               2014-2015
+order_94882_MMMOU_tre200y0_2_data.txt   Data      Moutier                              Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_MMMOU_tre200y0_2_legend.txt Legend    Moutier                              Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_BLMUZ_tre200y0_1_data.txt   Data      Muttenz / Schweizerhalle             Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_BLMUZ_tre200y0_1_legend.txt Legend    Muttenz / Schweizerhalle             Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_MOE_tre200y0_1_data.txt     Data      Möhlin                               Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_MOE_tre200y0_1_legend.txt   Legend    Möhlin                               Air temperature 2 m above ground; annual mean               2010-2011
+order_94882_MOE_tre200y0_2_data.txt     Data      Möhlin                               Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_MOE_tre200y0_2_legend.txt   Legend    Möhlin                               Air temperature 2 m above ground; annual mean               2012-2020
+order_94882_DLMUD_tre200y0_1_data.txt   Data      Mühldorf                             Air temperature 2 m above ground; annual mean               1952-2020
+order_94882_DLMUD_tre200y0_1_legend.txt Legend    Mühldorf                             Air temperature 2 m above ground; annual mean               1952-2020
+order_94882_MUB_tre200y0_1_data.txt     Data      Mühleberg                            Air temperature 2 m above ground; annual mean               1988-1989
+order_94882_MUB_tre200y0_1_legend.txt   Legend    Mühleberg                            Air temperature 2 m above ground; annual mean               1988-1989
+order_94882_MUB_tre200y0_2_data.txt     Data      Mühleberg                            Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_MUB_tre200y0_2_legend.txt   Legend    Mühleberg                            Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_DLMUE_tre200y0_1_data.txt   Data      Müllheim                             Air temperature 2 m above ground; annual mean               1946-2000
+order_94882_DLMUE_tre200y0_1_legend.txt Legend    Müllheim                             Air temperature 2 m above ground; annual mean               1946-2000
+order_94882_DLMUE_tre200y0_2_data.txt   Data      Müllheim                             Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLMUE_tre200y0_2_legend.txt Legend    Müllheim                             Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLMUC_tre200y0_1_data.txt   Data      München                              Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_DLMUC_tre200y0_1_legend.txt Legend    München                              Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_DLMUN_tre200y0_1_data.txt   Data      München / Flughafen                  Air temperature 2 m above ground; annual mean               1992-2020
+order_94882_DLMUN_tre200y0_1_legend.txt Legend    München / Flughafen                  Air temperature 2 m above ground; annual mean               1992-2020
+order_94882_KAMUN_tre200y0_1_data.txt   Data      Münchenstein                         Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAMUN_tre200y0_1_legend.txt Legend    Münchenstein                         Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_IYNAT_tre200y0_1_data.txt   Data      Naturns                              Air temperature 2 m above ground; annual mean               1972-2007
+order_94882_IYNAT_tre200y0_1_legend.txt Legend    Naturns                              Air temperature 2 m above ground; annual mean               1972-2007
+order_94882_IYNAT_tre200y0_2_data.txt   Data      Naturns                              Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_IYNAT_tre200y0_2_legend.txt Legend    Naturns                              Air temperature 2 m above ground; annual mean               2009-2020
+order_94882_DLNEB_tre200y0_1_data.txt   Data      Neuburg an der Kammel                Air temperature 2 m above ground; annual mean               1991-2020
+order_94882_DLNEB_tre200y0_1_legend.txt Legend    Neuburg an der Kammel                Air temperature 2 m above ground; annual mean               1991-2020
+order_94882_NEU_tre200y0_1_data.txt     Data      Neuchâtel                            Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_NEU_tre200y0_1_legend.txt   Legend    Neuchâtel                            Air temperature 2 m above ground; annual mean               1863-2020
+order_94882_WSLNEF_tre200y0_1_data.txt  Data      Neunkirch Freiland                   Air temperature 2 m above ground; annual mean               2017-2018
+order_94882_WSLNEF_tre200y0_1_legend.txt Legend    Neunkirch Freiland                   Air temperature 2 m above ground; annual mean               2017-2018
+order_94882_DLNOT_tre200y0_1_data.txt   Data      Notzingen                            Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLNOT_tre200y0_1_legend.txt Legend    Notzingen                            Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_TGNUS_tre200y0_1_data.txt   Data      Nussbaumen                           Air temperature 2 m above ground; annual mean               2011-2012
+order_94882_TGNUS_tre200y0_1_legend.txt Legend    Nussbaumen                           Air temperature 2 m above ground; annual mean               2011-2012
+order_94882_TGNUS_tre200y0_2_data.txt   Data      Nussbaumen                           Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_TGNUS_tre200y0_2_legend.txt Legend    Nussbaumen                           Air temperature 2 m above ground; annual mean               2017-2020
+order_94882_CGI_tre200y0_1_data.txt     Data      Nyon / Changins                      Air temperature 2 m above ground; annual mean               1964-2020
+order_94882_CGI_tre200y0_1_legend.txt   Legend    Nyon / Changins                      Air temperature 2 m above ground; annual mean               1964-2020
+order_94882_DLNUE_tre200y0_1_data.txt   Data      Nürnberg                             Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_DLNUE_tre200y0_1_legend.txt Legend    Nürnberg                             Air temperature 2 m above ground; annual mean               1954-2020
+order_94882_OBR_tre200y0_1_data.txt     Data      Oberriet / Kriessern                 Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_OBR_tre200y0_1_legend.txt   Legend    Oberriet / Kriessern                 Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_DLOBS_tre200y0_1_data.txt   Data      Oberschleissheim                     Air temperature 2 m above ground; annual mean               1976-2005
+order_94882_DLOBS_tre200y0_1_legend.txt Legend    Oberschleissheim                     Air temperature 2 m above ground; annual mean               1976-2005
+order_94882_KAOWL_tre200y0_1_data.txt   Data      Oberwil                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAOWL_tre200y0_1_legend.txt Legend    Oberwil                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_OTN_tre200y0_1_data.txt     Data      Olten                                Air temperature 2 m above ground; annual mean               1863-1986
+order_94882_OTN_tre200y0_1_legend.txt   Legend    Olten                                Air temperature 2 m above ground; annual mean               1863-1986
+order_94882_ZHOPB_tre200y0_1_data.txt   Data      Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2001-2002
+order_94882_ZHOPB_tre200y0_1_legend.txt Legend    Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2001-2002
+order_94882_ZHOPB_tre200y0_2_data.txt   Data      Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2003-2004
+order_94882_ZHOPB_tre200y0_2_legend.txt Legend    Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2003-2004
+order_94882_ZHOPB_tre200y0_3_data.txt   Data      Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2007-2017
+order_94882_ZHOPB_tre200y0_3_legend.txt Legend    Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2007-2017
+order_94882_ZHOPB_tre200y0_4_data.txt   Data      Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ZHOPB_tre200y0_4_legend.txt Legend    Opfikon / Balsberg                   Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_BOZ_tre200y0_1_data.txt     Data      Orbe                                 Air temperature 2 m above ground; annual mean               1964-1989
+order_94882_BOZ_tre200y0_1_legend.txt   Legend    Orbe                                 Air temperature 2 m above ground; annual mean               1964-1989
+order_94882_WSLOTF_tre200y0_1_data.txt  Data      Othmarsingen Freiland                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WSLOTF_tre200y0_1_legend.txt Legend    Othmarsingen Freiland                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_PAY_tre200y0_1_data.txt     Data      Payerne                              Air temperature 2 m above ground; annual mean               1964-2020
+order_94882_PAY_tre200y0_1_legend.txt   Legend    Payerne                              Air temperature 2 m above ground; annual mean               1964-2020
+order_94882_PAA_tre200y0_1_data.txt     Data      Payerne                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_PAA_tre200y0_1_legend.txt   Legend    Payerne                              Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_PUY_tre200y0_1_data.txt     Data      Pully                                Air temperature 2 m above ground; annual mean               1977-2020
+order_94882_PUY_tre200y0_1_legend.txt   Legend    Pully                                Air temperature 2 m above ground; annual mean               1977-2020
+order_94882_MMRAF_tre200y0_1_data.txt   Data      Rafz                                 Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_MMRAF_tre200y0_1_legend.txt Legend    Rafz                                 Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_RAP_tre200y0_1_data.txt     Data      Rapperswil SG                        Air temperature 2 m above ground; annual mean               1970-1992
+order_94882_RAP_tre200y0_1_legend.txt   Legend    Rapperswil SG                        Air temperature 2 m above ground; annual mean               1970-1992
+order_94882_INNRED_tre200y0_1_data.txt  Data      Reiden                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_INNRED_tre200y0_1_legend.txt Legend    Reiden                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAREH_tre200y0_1_data.txt   Data      Reinach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAREH_tre200y0_1_legend.txt Legend    Reinach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_DLREN_tre200y0_1_data.txt   Data      Renningen                            Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLREN_tre200y0_1_legend.txt Legend    Renningen                            Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_RHF_tre200y0_1_data.txt     Data      Rheinfelden                          Air temperature 2 m above ground; annual mean               1958-2005
+order_94882_RHF_tre200y0_1_legend.txt   Legend    Rheinfelden                          Air temperature 2 m above ground; annual mean               1958-2005
+order_94882_DLRFE_tre200y0_1_data.txt   Data      Rheinfelden                          Air temperature 2 m above ground; annual mean               1953-2014
+order_94882_DLRFE_tre200y0_1_legend.txt Legend    Rheinfelden                          Air temperature 2 m above ground; annual mean               1953-2014
+order_94882_TGRIC_tre200y0_1_data.txt   Data      Rickenbach                           Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_TGRIC_tre200y0_1_legend.txt Legend    Rickenbach                           Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_TGRIC_tre200y0_2_data.txt   Data      Rickenbach                           Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TGRIC_tre200y0_2_legend.txt Legend    Rickenbach                           Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_KAROD_tre200y0_1_data.txt   Data      Rodersdorf                           Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_KAROD_tre200y0_1_legend.txt Legend    Rodersdorf                           Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ROS_tre200y0_1_data.txt     Data      Rorschach                            Air temperature 2 m above ground; annual mean               1964-1980
+order_94882_ROS_tre200y0_1_legend.txt   Legend    Rorschach                            Air temperature 2 m above ground; annual mean               1964-1980
+order_94882_DLROS_tre200y0_1_data.txt   Data      Rosenheim                            Air temperature 2 m above ground; annual mean               1949-1986
+order_94882_DLROS_tre200y0_1_legend.txt Legend    Rosenheim                            Air temperature 2 m above ground; annual mean               1949-1986
+order_94882_DLROS_tre200y0_2_data.txt   Data      Rosenheim                            Air temperature 2 m above ground; annual mean               1987-2020
+order_94882_DLROS_tre200y0_2_legend.txt Legend    Rosenheim                            Air temperature 2 m above ground; annual mean               1987-2020
+order_94882_DLRON_tre200y0_1_data.txt   Data      Rottenburg am Neckar                 Air temperature 2 m above ground; annual mean               1979-1993
+order_94882_DLRON_tre200y0_1_legend.txt Legend    Rottenburg am Neckar                 Air temperature 2 m above ground; annual mean               1979-1993
+order_94882_DLRON_tre200y0_2_data.txt   Data      Rottenburg am Neckar                 Air temperature 2 m above ground; annual mean               1995-2001
+order_94882_DLRON_tre200y0_2_legend.txt Legend    Rottenburg am Neckar                 Air temperature 2 m above ground; annual mean               1995-2001
+order_94882_DLSAA_tre200y0_1_data.txt   Data      Saarbrücken / Ensheim                Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_DLSAA_tre200y0_1_legend.txt Legend    Saarbrücken / Ensheim                Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_IYSAU_tre200y0_1_data.txt   Data      Salurn                               Air temperature 2 m above ground; annual mean               1976-1980
+order_94882_IYSAU_tre200y0_1_legend.txt Legend    Salurn                               Air temperature 2 m above ground; annual mean               1976-1980
+order_94882_IYSAU_tre200y0_2_data.txt   Data      Salurn                               Air temperature 2 m above ground; annual mean               1987-1988
+order_94882_IYSAU_tre200y0_2_legend.txt Legend    Salurn                               Air temperature 2 m above ground; annual mean               1987-1988
+order_94882_IYSAU_tre200y0_3_data.txt   Data      Salurn                               Air temperature 2 m above ground; annual mean               1991-1999
+order_94882_IYSAU_tre200y0_3_legend.txt Legend    Salurn                               Air temperature 2 m above ground; annual mean               1991-1999
+order_94882_IYSAU_tre200y0_4_data.txt   Data      Salurn                               Air temperature 2 m above ground; annual mean               2000-2020
+order_94882_IYSAU_tre200y0_4_legend.txt Legend    Salurn                               Air temperature 2 m above ground; annual mean               2000-2020
+order_94882_SRN_tre200y0_1_data.txt     Data      Sarnen                               Air temperature 2 m above ground; annual mean               1963-1986
+order_94882_SRN_tre200y0_1_legend.txt   Legend    Sarnen                               Air temperature 2 m above ground; annual mean               1963-1986
+order_94882_MMSAX_tre200y0_1_data.txt   Data      Sax                                  Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSAX_tre200y0_1_legend.txt Legend    Sax                                  Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSAX_tre200y0_2_data.txt   Data      Sax                                  Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_MMSAX_tre200y0_2_legend.txt Legend    Sax                                  Air temperature 2 m above ground; annual mean               2015-2020
+order_94882_VSSAX_tre200y0_1_data.txt   Data      Saxon                                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_VSSAX_tre200y0_1_legend.txt Legend    Saxon                                Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_SHA_tre200y0_1_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; annual mean               1863-1868
+order_94882_SHA_tre200y0_1_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; annual mean               1863-1868
+order_94882_SHA_tre200y0_2_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; annual mean               1869-1871
+order_94882_SHA_tre200y0_2_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; annual mean               1869-1871
+order_94882_SHA_tre200y0_3_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; annual mean               1874-2020
+order_94882_SHA_tre200y0_3_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; annual mean               1874-2020
+order_94882_AGSUA_tre200y0_1_data.txt   Data      Schupfart                            Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_AGSUA_tre200y0_1_legend.txt Legend    Schupfart                            Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_INNSWZ_tre200y0_1_data.txt  Data      Schwyz                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_INNSWZ_tre200y0_1_legend.txt Legend    Schwyz                               Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_MMSSE_tre200y0_1_data.txt   Data      Schwyz / Seewen                      Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSSE_tre200y0_1_legend.txt Legend    Schwyz / Seewen                      Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSSE_tre200y0_2_data.txt   Data      Schwyz / Seewen                      Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_MMSSE_tre200y0_2_legend.txt Legend    Schwyz / Seewen                      Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_SCI_tre200y0_1_data.txt     Data      Schwyz-Ibach                         Air temperature 2 m above ground; annual mean               1970-1995
+order_94882_SCI_tre200y0_1_legend.txt   Legend    Schwyz-Ibach                         Air temperature 2 m above ground; annual mean               1970-1995
+order_94882_DLSIZ_tre200y0_1_data.txt   Data      Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; annual mean               1988-2019
+order_94882_DLSIZ_tre200y0_1_legend.txt Legend    Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; annual mean               1988-2019
+order_94882_DLSIN_tre200y0_1_data.txt   Data      Singen                               Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_DLSIN_tre200y0_1_legend.txt Legend    Singen                               Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_SIO_tre200y0_1_data.txt     Data      Sion                                 Air temperature 2 m above ground; annual mean               1953-2020
+order_94882_SIO_tre200y0_1_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; annual mean               1953-2020
+order_94882_ION_tre200y0_1_data.txt     Data      Sion                                 Air temperature 2 m above ground; annual mean               1864-1977
+order_94882_ION_tre200y0_1_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; annual mean               1864-1977
+order_94882_BLSIS_tre200y0_1_data.txt   Data      Sissach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_BLSIS_tre200y0_1_legend.txt Legend    Sissach                              Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_STH_tre200y0_1_data.txt     Data      Solothurn                            Air temperature 2 m above ground; annual mean               1963-1978
+order_94882_STH_tre200y0_1_legend.txt   Legend    Solothurn                            Air temperature 2 m above ground; annual mean               1963-1978
+order_94882_STC_tre200y0_1_data.txt     Data      St. Chrischona                       Air temperature 2 m above ground; annual mean               1995-2002
+order_94882_STC_tre200y0_1_legend.txt   Legend    St. Chrischona                       Air temperature 2 m above ground; annual mean               1995-2002
+order_94882_STC_tre200y0_2_data.txt     Data      St. Chrischona                       Air temperature 2 m above ground; annual mean               2003-2009
+order_94882_STC_tre200y0_2_legend.txt   Legend    St. Chrischona                       Air temperature 2 m above ground; annual mean               2003-2009
+order_94882_SBO_tre200y0_1_data.txt     Data      Stabio                               Air temperature 2 m above ground; annual mean               1981-2020
+order_94882_SBO_tre200y0_1_legend.txt   Legend    Stabio                               Air temperature 2 m above ground; annual mean               1981-2020
+order_94882_MMSTA_tre200y0_1_data.txt   Data      Stans                                Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSTA_tre200y0_1_legend.txt Legend    Stans                                Air temperature 2 m above ground; annual mean               2012-2013
+order_94882_MMSTA_tre200y0_2_data.txt   Data      Stans                                Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_MMSTA_tre200y0_2_legend.txt Legend    Stans                                Air temperature 2 m above ground; annual mean               2014-2020
+order_94882_DLSTU_tre200y0_1_data.txt   Data      Stuttgart / Echterdingen             Air temperature 2 m above ground; annual mean               1952-2020
+order_94882_DLSTU_tre200y0_1_legend.txt Legend    Stuttgart / Echterdingen             Air temperature 2 m above ground; annual mean               1952-2020
+order_94882_MMTRG_tre200y0_1_data.txt   Data      Triengen                             Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_MMTRG_tre200y0_1_legend.txt Legend    Triengen                             Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_MMTRG_tre200y0_2_data.txt   Data      Triengen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_MMTRG_tre200y0_2_legend.txt Legend    Triengen                             Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_WSLUIB_tre200y0_1_data.txt  Data      Uitikon Bestand                      Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WSLUIB_tre200y0_1_legend.txt Legend    Uitikon Bestand                      Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TGUSH_tre200y0_1_data.txt   Data      Unterstammheim                       Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_TGUSH_tre200y0_1_legend.txt Legend    Unterstammheim                       Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_VAD_tre200y0_1_data.txt     Data      Vaduz                                Air temperature 2 m above ground; annual mean               1970-2020
+order_94882_VAD_tre200y0_1_legend.txt   Legend    Vaduz                                Air temperature 2 m above ground; annual mean               1970-2020
+order_94882_VAZ_tre200y0_1_data.txt     Data      Vernayaz                             Air temperature 2 m above ground; annual mean               1969-1985
+order_94882_VAZ_tre200y0_1_legend.txt   Legend    Vernayaz                             Air temperature 2 m above ground; annual mean               1969-1985
+order_94882_VEV_tre200y0_1_data.txt     Data      Vevey / Corseaux                     Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_VEV_tre200y0_1_legend.txt   Legend    Vevey / Corseaux                     Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_VEV_tre200y0_2_data.txt     Data      Vevey / Corseaux                     Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_VEV_tre200y0_2_legend.txt   Legend    Vevey / Corseaux                     Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_WSLVOF_tre200y0_1_data.txt  Data      Vordemwald Freiland                  Air temperature 2 m above ground; annual mean               2017-2018
+order_94882_WSLVOF_tre200y0_1_legend.txt Legend    Vordemwald Freiland                  Air temperature 2 m above ground; annual mean               2017-2018
+order_94882_WSLVOF_tre200y0_2_data.txt  Data      Vordemwald Freiland                  Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WSLVOF_tre200y0_2_legend.txt Legend    Vordemwald Freiland                  Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WWI_tre200y0_1_data.txt     Data      Walchwil                             Air temperature 2 m above ground; annual mean               1965-1980
+order_94882_WWI_tre200y0_1_legend.txt   Legend    Walchwil                             Air temperature 2 m above ground; annual mean               1965-1980
+order_94882_WGG_tre200y0_1_data.txt     Data      Weggis                               Air temperature 2 m above ground; annual mean               1965-1975
+order_94882_WGG_tre200y0_1_legend.txt   Legend    Weggis                               Air temperature 2 m above ground; annual mean               1965-1975
+order_94882_TGWEI_tre200y0_1_data.txt   Data      Weinfelden                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_TGWEI_tre200y0_1_legend.txt Legend    Weinfelden                           Air temperature 2 m above ground; annual mean               2016-2020
+order_94882_DLWEI_tre200y0_1_data.txt   Data      Weingarten                           Air temperature 2 m above ground; annual mean               1945-1985
+order_94882_DLWEI_tre200y0_1_legend.txt Legend    Weingarten                           Air temperature 2 m above ground; annual mean               1945-1985
+order_94882_DLWEI_tre200y0_2_data.txt   Data      Weingarten                           Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_DLWEI_tre200y0_2_legend.txt Legend    Weingarten                           Air temperature 2 m above ground; annual mean               1990-2020
+order_94882_DLWIE_tre200y0_1_data.txt   Data      Wielenbach                           Air temperature 2 m above ground; annual mean               1999-2017
+order_94882_DLWIE_tre200y0_1_legend.txt Legend    Wielenbach                           Air temperature 2 m above ground; annual mean               1999-2017
+order_94882_DLWIE_tre200y0_2_data.txt   Data      Wielenbach                           Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_DLWIE_tre200y0_2_legend.txt Legend    Wielenbach                           Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_TGWIG_tre200y0_1_data.txt   Data      Wigoltingen                          Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_TGWIG_tre200y0_1_legend.txt Legend    Wigoltingen                          Air temperature 2 m above ground; annual mean               2010-2012
+order_94882_TGWIG_tre200y0_2_data.txt   Data      Wigoltingen                          Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_TGWIG_tre200y0_2_legend.txt Legend    Wigoltingen                          Air temperature 2 m above ground; annual mean               2019-2020
+order_94882_WIN_tre200y0_1_data.txt     Data      Winterthur / Seen                    Air temperature 2 m above ground; annual mean               1963-1983
+order_94882_WIN_tre200y0_1_legend.txt   Legend    Winterthur / Seen                    Air temperature 2 m above ground; annual mean               1963-1983
+order_94882_ZHWIV_tre200y0_1_data.txt   Data      Winterthur / Veltheim                Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_ZHWIV_tre200y0_1_legend.txt Legend    Winterthur / Veltheim                Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_ZHWIV_tre200y0_2_data.txt   Data      Winterthur / Veltheim                Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ZHWIV_tre200y0_2_legend.txt Legend    Winterthur / Veltheim                Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_DLWOL_tre200y0_1_data.txt   Data      Wolfach                              Air temperature 2 m above ground; annual mean               1957-2020
+order_94882_DLWOL_tre200y0_1_legend.txt Legend    Wolfach                              Air temperature 2 m above ground; annual mean               1957-2020
+order_94882_DLWOF_tre200y0_1_data.txt   Data      Wutöschingen-Ofteringen              Air temperature 2 m above ground; annual mean               1960-1995
+order_94882_DLWOF_tre200y0_1_legend.txt Legend    Wutöschingen-Ofteringen              Air temperature 2 m above ground; annual mean               1960-1995
+order_94882_DLWOF_tre200y0_2_data.txt   Data      Wutöschingen-Ofteringen              Air temperature 2 m above ground; annual mean               1996-2020
+order_94882_DLWOF_tre200y0_2_legend.txt Legend    Wutöschingen-Ofteringen              Air temperature 2 m above ground; annual mean               1996-2020
+order_94882_WYN_tre200y0_1_data.txt     Data      Wynau                                Air temperature 2 m above ground; annual mean               1977-2020
+order_94882_WYN_tre200y0_1_legend.txt   Legend    Wynau                                Air temperature 2 m above ground; annual mean               1977-2020
+order_94882_WAE_tre200y0_1_data.txt     Data      Wädenswil                            Air temperature 2 m above ground; annual mean               1980-2020
+order_94882_WAE_tre200y0_1_legend.txt   Legend    Wädenswil                            Air temperature 2 m above ground; annual mean               1980-2020
+order_94882_PSI_tre200y0_1_data.txt     Data      Würenlingen / PSI                    Air temperature 2 m above ground; annual mean               1992-1996
+order_94882_PSI_tre200y0_1_legend.txt   Legend    Würenlingen / PSI                    Air temperature 2 m above ground; annual mean               1992-1996
+order_94882_PSI_tre200y0_2_data.txt     Data      Würenlingen / PSI                    Air temperature 2 m above ground; annual mean               1997-2020
+order_94882_PSI_tre200y0_2_legend.txt   Legend    Würenlingen / PSI                    Air temperature 2 m above ground; annual mean               1997-2020
+order_94882_INNZUG_tre200y0_1_data.txt  Data      Zug                                  Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_INNZUG_tre200y0_1_legend.txt Legend    Zug                                  Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_NABZUE_tre200y0_1_data.txt  Data      Zürich                               Air temperature 2 m above ground; annual mean               1991-1992
+order_94882_NABZUE_tre200y0_1_legend.txt Legend    Zürich                               Air temperature 2 m above ground; annual mean               1991-1992
+order_94882_NABZUE_tre200y0_2_data.txt  Data      Zürich                               Air temperature 2 m above ground; annual mean               1994-1995
+order_94882_NABZUE_tre200y0_2_legend.txt Legend    Zürich                               Air temperature 2 m above ground; annual mean               1994-1995
+order_94882_NABZUE_tre200y0_3_data.txt  Data      Zürich                               Air temperature 2 m above ground; annual mean               1996-2003
+order_94882_NABZUE_tre200y0_3_legend.txt Legend    Zürich                               Air temperature 2 m above ground; annual mean               1996-2003
+order_94882_NABZUE_tre200y0_4_data.txt  Data      Zürich                               Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_NABZUE_tre200y0_4_legend.txt Legend    Zürich                               Air temperature 2 m above ground; annual mean               2004-2020
+order_94882_REH_tre200y0_1_data.txt     Data      Zürich / Affoltern                   Air temperature 2 m above ground; annual mean               1978-2020
+order_94882_REH_tre200y0_1_legend.txt   Legend    Zürich / Affoltern                   Air temperature 2 m above ground; annual mean               1978-2020
+order_94882_KLO_tre200y0_1_data.txt     Data      Zürich / Kloten                      Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_KLO_tre200y0_1_legend.txt   Legend    Zürich / Kloten                      Air temperature 2 m above ground; annual mean               1950-2020
+order_94882_ZHROS_tre200y0_1_data.txt   Data      Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2013-2015
+order_94882_ZHROS_tre200y0_1_legend.txt Legend    Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2013-2015
+order_94882_ZHROS_tre200y0_2_data.txt   Data      Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_ZHROS_tre200y0_2_legend.txt Legend    Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2016-2017
+order_94882_ZHROS_tre200y0_3_data.txt   Data      Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ZHROS_tre200y0_3_legend.txt Legend    Zürich / Rosengartenstrasse          Air temperature 2 m above ground; annual mean               2018-2020
+order_94882_ZHSCH_tre200y0_1_data.txt   Data      Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2010-2014
+order_94882_ZHSCH_tre200y0_1_legend.txt Legend    Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2010-2014
+order_94882_ZHSCH_tre200y0_2_data.txt   Data      Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_ZHSCH_tre200y0_2_legend.txt Legend    Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2015-2017
+order_94882_ZHSCH_tre200y0_3_data.txt   Data      Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_ZHSCH_tre200y0_3_legend.txt Legend    Zürich / Schimmelstrasse             Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_ZHSTA_tre200y0_1_data.txt   Data      Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               1992-2007
+order_94882_ZHSTA_tre200y0_1_legend.txt Legend    Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               1992-2007
+order_94882_ZHSTA_tre200y0_2_data.txt   Data      Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               2009-2017
+order_94882_ZHSTA_tre200y0_2_legend.txt Legend    Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               2009-2017
+order_94882_ZHSTA_tre200y0_3_data.txt   Data      Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_ZHSTA_tre200y0_3_legend.txt Legend    Zürich / Stampfenbachstrasse         Air temperature 2 m above ground; annual mean               2018-2019
+order_94882_ZBO_tre200y0_1_data.txt     Data      Zürich-Bot.Garten                    Air temperature 2 m above ground; annual mean               1958-1975
+order_94882_ZBO_tre200y0_1_legend.txt   Legend    Zürich-Bot.Garten                    Air temperature 2 m above ground; annual mean               1958-1975

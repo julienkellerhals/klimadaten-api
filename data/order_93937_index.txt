@@ -1,0 +1,770 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 93937
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_93937_IYABT_tre200dn_1_data.txt   Data      Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             19981227-19990929
+order_93937_IYABT_tre200dn_1_legend.txt Legend    Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             19981227-19990929
+order_93937_IYABT_tre200dn_2_data.txt   Data      Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20000929-20020308
+order_93937_IYABT_tre200dn_2_legend.txt Legend    Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20000929-20020308
+order_93937_IYABT_tre200dn_3_data.txt   Data      Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20031027-20060801
+order_93937_IYABT_tre200dn_3_legend.txt Legend    Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20031027-20060801
+order_93937_IYABT_tre200dn_4_data.txt   Data      Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20061127-20210414
+order_93937_IYABT_tre200dn_4_legend.txt Legend    Abtei / Piz Pisciadù                 Air temperature 2 m above ground; daily minimum             20061127-20210414
+order_93937_SLFSIM_tre200dn_1_data.txt  Data      Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             19960930-19961111
+order_93937_SLFSIM_tre200dn_1_legend.txt Legend    Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             19960930-19961111
+order_93937_SLFSIM_tre200dn_2_data.txt  Data      Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             19971001-20100609
+order_93937_SLFSIM_tre200dn_2_legend.txt Legend    Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             19971001-20100609
+order_93937_SLFSIM_tre200dn_3_data.txt  Data      Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             20100817-20190526
+order_93937_SLFSIM_tre200dn_3_legend.txt Legend    Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             20100817-20190526
+order_93937_SLFSIM_tre200dn_4_data.txt  Data      Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             20190912-20210414
+order_93937_SLFSIM_tre200dn_4_legend.txt Legend    Acquarossa / Cima del Simano         Air temperature 2 m above ground; daily minimum             20190912-20210414
+order_93937_SLFSI2_tre200dn_1_data.txt  Data      Acquarossa / Piano del Simano        Air temperature 2 m above ground; daily minimum             19960930-20210414
+order_93937_SLFSI2_tre200dn_1_legend.txt Legend    Acquarossa / Piano del Simano        Air temperature 2 m above ground; daily minimum             19960930-20210414
+order_93937_SLFVAL_tre200dn_1_data.txt  Data      Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             19991009-20090920
+order_93937_SLFVAL_tre200dn_1_legend.txt Legend    Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             19991009-20090920
+order_93937_SLFVAL_tre200dn_2_data.txt  Data      Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20100105-20100529
+order_93937_SLFVAL_tre200dn_2_legend.txt Legend    Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20100105-20100529
+order_93937_SLFVAL_tre200dn_3_data.txt  Data      Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20100921-20111104
+order_93937_SLFVAL_tre200dn_3_legend.txt Legend    Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20100921-20111104
+order_93937_SLFVAL_tre200dn_4_data.txt  Data      Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20121025-20210412
+order_93937_SLFVAL_tre200dn_4_legend.txt Legend    Airolo / Poncione di Löita           Air temperature 2 m above ground; daily minimum             20121025-20210412
+order_93937_SLFALB_tre200dn_1_data.txt  Data      Albulapass                           Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFALB_tre200dn_1_legend.txt Legend    Albulapass                           Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFANV_tre200dn_1_data.txt  Data      Anniviers / Corne de Sorebois        Air temperature 2 m above ground; daily minimum             19970924-20210414
+order_93937_SLFANV_tre200dn_1_legend.txt Legend    Anniviers / Corne de Sorebois        Air temperature 2 m above ground; daily minimum             19970924-20210414
+order_93937_SLFAN2_tre200dn_1_data.txt  Data      Anniviers / Orzival                  Air temperature 2 m above ground; daily minimum             19970911-20210414
+order_93937_SLFAN2_tre200dn_1_legend.txt Legend    Anniviers / Orzival                  Air temperature 2 m above ground; daily minimum             19970911-20210414
+order_93937_SLFAN3_tre200dn_1_data.txt  Data      Anniviers / Tracuit                  Air temperature 2 m above ground; daily minimum             19970911-20210414
+order_93937_SLFAN3_tre200dn_1_legend.txt Legend    Anniviers / Tracuit                  Air temperature 2 m above ground; daily minimum             19970911-20210414
+order_93937_SLFVDS_tre200dn_1_data.txt  Data      Arbaz, Val. Sionne / Crêta Besse     Air temperature 2 m above ground; daily minimum             19981027-20000514
+order_93937_SLFVDS_tre200dn_1_legend.txt Legend    Arbaz, Val. Sionne / Crêta Besse     Air temperature 2 m above ground; daily minimum             19981027-20000514
+order_93937_SLFVDS_tre200dn_2_data.txt  Data      Arbaz, Val. Sionne / Crêta Besse     Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFVDS_tre200dn_2_legend.txt Legend    Arbaz, Val. Sionne / Crêta Besse     Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFVD2_tre200dn_1_data.txt  Data      Arbaz, Val. Sionne / Donin du Jour   Air temperature 2 m above ground; daily minimum             19981027-20210414
+order_93937_SLFVD2_tre200dn_1_legend.txt Legend    Arbaz, Val. Sionne / Donin du Jour   Air temperature 2 m above ground; daily minimum             19981027-20210414
+order_93937_SLFAR3_tre200dn_1_data.txt  Data      Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19960930-19970526
+order_93937_SLFAR3_tre200dn_1_legend.txt Legend    Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19960930-19970526
+order_93937_SLFAR3_tre200dn_2_data.txt  Data      Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19971206-19980120
+order_93937_SLFAR3_tre200dn_2_legend.txt Legend    Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19971206-19980120
+order_93937_SLFAR3_tre200dn_3_data.txt  Data      Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFAR3_tre200dn_3_legend.txt Legend    Arolla / Bréona                      Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFARO_tre200dn_1_data.txt  Data      Arolla / La Cassorte                 Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFARO_tre200dn_1_legend.txt Legend    Arolla / La Cassorte                 Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFAR2_tre200dn_1_data.txt  Data      Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19960930-19970526
+order_93937_SLFAR2_tre200dn_1_legend.txt Legend    Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19960930-19970526
+order_93937_SLFAR2_tre200dn_2_data.txt  Data      Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19971206-19980120
+order_93937_SLFAR2_tre200dn_2_legend.txt Legend    Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19971206-19980120
+order_93937_SLFAR2_tre200dn_3_data.txt  Data      Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFAR2_tre200dn_3_legend.txt Legend    Arolla / Les Fontanesses             Air temperature 2 m above ground; daily minimum             19981111-20210414
+order_93937_SLFBD3_tre200dn_1_data.txt  Data      Bedretto / Cassinello                Air temperature 2 m above ground; daily minimum             19971001-20210414
+order_93937_SLFBD3_tre200dn_1_legend.txt Legend    Bedretto / Cassinello                Air temperature 2 m above ground; daily minimum             19971001-20210414
+order_93937_SLFBD2_tre200dn_1_data.txt  Data      Bedretto / Cavanna                   Air temperature 2 m above ground; daily minimum             19961024-20170308
+order_93937_SLFBD2_tre200dn_1_legend.txt Legend    Bedretto / Cavanna                   Air temperature 2 m above ground; daily minimum             19961024-20170308
+order_93937_SLFBD2_tre200dn_2_data.txt  Data      Bedretto / Cavanna                   Air temperature 2 m above ground; daily minimum             20171025-20210414
+order_93937_SLFBD2_tre200dn_2_legend.txt Legend    Bedretto / Cavanna                   Air temperature 2 m above ground; daily minimum             20171025-20210414
+order_93937_SLFBED_tre200dn_1_data.txt  Data      Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             19961024-20060625
+order_93937_SLFBED_tre200dn_1_legend.txt Legend    Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             19961024-20060625
+order_93937_SLFBED_tre200dn_2_data.txt  Data      Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             20060831-20140626
+order_93937_SLFBED_tre200dn_2_legend.txt Legend    Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             20060831-20140626
+order_93937_SLFBED_tre200dn_3_data.txt  Data      Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             20140828-20210414
+order_93937_SLFBED_tre200dn_3_legend.txt Legend    Bedretto / Lucendro                  Air temperature 2 m above ground; daily minimum             20140828-20210414
+order_93937_SLFBEL_tre200dn_1_data.txt  Data      Belalp                               Air temperature 2 m above ground; daily minimum             20081110-20210414
+order_93937_SLFBEL_tre200dn_1_legend.txt Legend    Belalp                               Air temperature 2 m above ground; daily minimum             20081110-20210414
+order_93937_SLFBER_tre200dn_1_data.txt  Data      Bernina / Lagalb                     Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBER_tre200dn_1_legend.txt Legend    Bernina / Lagalb                     Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBER_tre200dn_2_data.txt  Data      Bernina / Lagalb                     Air temperature 2 m above ground; daily minimum             20020918-20210414
+order_93937_SLFBER_tre200dn_2_legend.txt Legend    Bernina / Lagalb                     Air temperature 2 m above ground; daily minimum             20020918-20210414
+order_93937_SLFBE2_tre200dn_1_data.txt  Data      Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBE2_tre200dn_1_legend.txt Legend    Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBE2_tre200dn_2_data.txt  Data      Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20020918-20180819
+order_93937_SLFBE2_tre200dn_2_legend.txt Legend    Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20020918-20180819
+order_93937_SLFBE2_tre200dn_3_data.txt  Data      Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20181023-20210414
+order_93937_SLFBE2_tre200dn_3_legend.txt Legend    Bernina / Motta Bianca               Air temperature 2 m above ground; daily minimum             20181023-20210414
+order_93937_SLFBE3_tre200dn_1_data.txt  Data      Bernina / Puoz Bass                  Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBE3_tre200dn_1_legend.txt Legend    Bernina / Puoz Bass                  Air temperature 2 m above ground; daily minimum             20001025-20020711
+order_93937_SLFBE3_tre200dn_2_data.txt  Data      Bernina / Puoz Bass                  Air temperature 2 m above ground; daily minimum             20020918-20210414
+order_93937_SLFBE3_tre200dn_2_legend.txt Legend    Bernina / Puoz Bass                  Air temperature 2 m above ground; daily minimum             20020918-20210414
+order_93937_SLFBEV_tre200dn_1_data.txt  Data      Bever / Cho d'Valetta                Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFBEV_tre200dn_1_legend.txt Legend    Bever / Cho d'Valetta                Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFBR2_tre200dn_1_data.txt  Data      Bever / Valetta                      Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFBR2_tre200dn_1_legend.txt Legend    Bever / Valetta                      Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFBO2_tre200dn_1_data.txt  Data      Bosco Gurin / Hendar Furggu          Air temperature 2 m above ground; daily minimum             19991103-20130718
+order_93937_SLFBO2_tre200dn_1_legend.txt Legend    Bosco Gurin / Hendar Furggu          Air temperature 2 m above ground; daily minimum             19991103-20130718
+order_93937_SLFBO2_tre200dn_2_data.txt  Data      Bosco Gurin / Hendar Furggu          Air temperature 2 m above ground; daily minimum             20130920-20210414
+order_93937_SLFBO2_tre200dn_2_legend.txt Legend    Bosco Gurin / Hendar Furggu          Air temperature 2 m above ground; daily minimum             20130920-20210414
+order_93937_SLFBOG_tre200dn_1_data.txt  Data      Bosco Gurin / Martschenspitz         Air temperature 2 m above ground; daily minimum             19991028-20210414
+order_93937_SLFBOG_tre200dn_1_legend.txt Legend    Bosco Gurin / Martschenspitz         Air temperature 2 m above ground; daily minimum             19991028-20210414
+order_93937_SLFTUM_tre200dn_1_data.txt  Data      Breil Tumpiv / Piz Tumpiv            Air temperature 2 m above ground; daily minimum             20021027-20210414
+order_93937_SLFTUM_tre200dn_1_legend.txt Legend    Breil Tumpiv / Piz Tumpiv            Air temperature 2 m above ground; daily minimum             20021027-20210414
+order_93937_SLFTM2_tre200dn_1_data.txt  Data      Breil Tumpiv / Val Miez              Air temperature 2 m above ground; daily minimum             20021029-20210414
+order_93937_SLFTM2_tre200dn_1_legend.txt Legend    Breil Tumpiv / Val Miez              Air temperature 2 m above ground; daily minimum             20021029-20210414
+order_93937_SLFROA_tre200dn_1_data.txt  Data      Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             19961103-20010420
+order_93937_SLFROA_tre200dn_1_legend.txt Legend    Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             19961103-20010420
+order_93937_SLFROA_tre200dn_2_data.txt  Data      Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             20010829-20150614
+order_93937_SLFROA_tre200dn_2_legend.txt Legend    Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             20010829-20150614
+order_93937_SLFROA_tre200dn_3_data.txt  Data      Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             20150915-20210414
+order_93937_SLFROA_tre200dn_3_legend.txt Legend    Brienz / Brienzer Rothorn            Air temperature 2 m above ground; daily minimum             20150915-20210414
+order_93937_SLFCA2_tre200dn_1_data.txt  Data      Campolungo / Fontane                 Air temperature 2 m above ground; daily minimum             19991027-20020428
+order_93937_SLFCA2_tre200dn_1_legend.txt Legend    Campolungo / Fontane                 Air temperature 2 m above ground; daily minimum             19991027-20020428
+order_93937_SLFCA2_tre200dn_2_data.txt  Data      Campolungo / Fontane                 Air temperature 2 m above ground; daily minimum             20020830-20210414
+order_93937_SLFCA2_tre200dn_2_legend.txt Legend    Campolungo / Fontane                 Air temperature 2 m above ground; daily minimum             20020830-20210414
+order_93937_SLFCAM_tre200dn_1_data.txt  Data      Campolungo / Tremorgio               Air temperature 2 m above ground; daily minimum             19991027-20210414
+order_93937_SLFCAM_tre200dn_1_legend.txt Legend    Campolungo / Tremorgio               Air temperature 2 m above ground; daily minimum             19991027-20210414
+order_93937_SLFCHA_tre200dn_1_data.txt  Data      Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             19971006-20000531
+order_93937_SLFCHA_tre200dn_1_legend.txt Legend    Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             19971006-20000531
+order_93937_SLFCHA_tre200dn_2_data.txt  Data      Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             20000926-20200615
+order_93937_SLFCHA_tre200dn_2_legend.txt Legend    Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             20000926-20200615
+order_93937_SLFCHA_tre200dn_3_data.txt  Data      Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             20200909-20210414
+order_93937_SLFCHA_tre200dn_3_legend.txt Legend    Chaussy / La Para                    Air temperature 2 m above ground; daily minimum             20200909-20210414
+order_93937_SLFCH2_tre200dn_1_data.txt  Data      Chaussy / Pierres Fendues            Air temperature 2 m above ground; daily minimum             19971014-20000531
+order_93937_SLFCH2_tre200dn_1_legend.txt Legend    Chaussy / Pierres Fendues            Air temperature 2 m above ground; daily minimum             19971014-20000531
+order_93937_SLFCH2_tre200dn_2_data.txt  Data      Chaussy / Pierres Fendues            Air temperature 2 m above ground; daily minimum             20000926-20210414
+order_93937_SLFCH2_tre200dn_2_legend.txt Legend    Chaussy / Pierres Fendues            Air temperature 2 m above ground; daily minimum             20000926-20210414
+order_93937_GSB_tre200dn_1_data.txt     Data      Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             18631231-18790429
+order_93937_GSB_tre200dn_1_legend.txt   Legend    Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             18631231-18790429
+order_93937_GSB_tre200dn_2_data.txt     Data      Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             18790831-19001230
+order_93937_GSB_tre200dn_2_legend.txt   Legend    Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             18790831-19001230
+order_93937_GSB_tre200dn_3_data.txt     Data      Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             19591130-20210414
+order_93937_GSB_tre200dn_3_legend.txt   Legend    Col du Grand St-Bernard              Air temperature 2 m above ground; daily minimum             19591130-20210414
+order_93937_SLFCON_tre200dn_1_data.txt  Data      Conthey / Etang de Trente Pas        Air temperature 2 m above ground; daily minimum             20021105-20021202
+order_93937_SLFCON_tre200dn_1_legend.txt Legend    Conthey / Etang de Trente Pas        Air temperature 2 m above ground; daily minimum             20021105-20021202
+order_93937_SLFCON_tre200dn_2_data.txt  Data      Conthey / Etang de Trente Pas        Air temperature 2 m above ground; daily minimum             20030207-20210414
+order_93937_SLFCON_tre200dn_2_legend.txt Legend    Conthey / Etang de Trente Pas        Air temperature 2 m above ground; daily minimum             20030207-20210414
+order_93937_PERCOR_tre200dn_1_data.txt  Data      Corvatsch / Murtèl                   Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_PERCOR_tre200dn_1_legend.txt Legend    Corvatsch / Murtèl                   Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_CMA_tre200dn_1_data.txt     Data      Crap Masegn                          Air temperature 2 m above ground; daily minimum             19930324-20100926
+order_93937_CMA_tre200dn_1_legend.txt   Legend    Crap Masegn                          Air temperature 2 m above ground; daily minimum             19930324-20100926
+order_93937_CMA_tre200dn_2_data.txt     Data      Crap Masegn                          Air temperature 2 m above ground; daily minimum             20110113-20210414
+order_93937_CMA_tre200dn_2_legend.txt   Legend    Crap Masegn                          Air temperature 2 m above ground; daily minimum             20110113-20210414
+order_93937_SLFCMA_tre200dn_1_data.txt  Data      Crap Masegn                          Air temperature 2 m above ground; daily minimum             20100922-20210414
+order_93937_SLFCMA_tre200dn_1_legend.txt Legend    Crap Masegn                          Air temperature 2 m above ground; daily minimum             20100922-20210414
+order_93937_SLFDA2_tre200dn_1_data.txt  Data      Davos / Bärentälli                   Air temperature 2 m above ground; daily minimum             19981106-20210414
+order_93937_SLFDA2_tre200dn_1_legend.txt Legend    Davos / Bärentälli                   Air temperature 2 m above ground; daily minimum             19981106-20210414
+order_93937_SLFDAV_tre200dn_1_data.txt  Data      Davos / Chrachenhorn                 Air temperature 2 m above ground; daily minimum             19981106-20210414
+order_93937_SLFDAV_tre200dn_1_legend.txt Legend    Davos / Chrachenhorn                 Air temperature 2 m above ground; daily minimum             19981106-20210414
+order_93937_SLFDA3_tre200dn_1_data.txt  Data      Davos / Hanengretji                  Air temperature 2 m above ground; daily minimum             19981106-19990830
+order_93937_SLFDA3_tre200dn_1_legend.txt Legend    Davos / Hanengretji                  Air temperature 2 m above ground; daily minimum             19981106-19990830
+order_93937_SLFDA3_tre200dn_2_data.txt  Data      Davos / Hanengretji                  Air temperature 2 m above ground; daily minimum             19991207-20210414
+order_93937_SLFDA3_tre200dn_2_legend.txt Legend    Davos / Hanengretji                  Air temperature 2 m above ground; daily minimum             19991207-20210414
+order_93937_SLFPAR_tre200dn_1_data.txt  Data      Davos / Parsenn                      Air temperature 2 m above ground; daily minimum             19971118-20010924
+order_93937_SLFPAR_tre200dn_1_legend.txt Legend    Davos / Parsenn                      Air temperature 2 m above ground; daily minimum             19971118-20010924
+order_93937_SLFPAR_tre200dn_2_data.txt  Data      Davos / Parsenn                      Air temperature 2 m above ground; daily minimum             20011130-20210414
+order_93937_SLFPAR_tre200dn_2_legend.txt Legend    Davos / Parsenn                      Air temperature 2 m above ground; daily minimum             20011130-20210414
+order_93937_SLFWFJ_tre200dn_1_data.txt  Data      Davos / Weissfluhjoch                Air temperature 2 m above ground; daily minimum             19990804-20210414
+order_93937_SLFWFJ_tre200dn_1_legend.txt Legend    Davos / Weissfluhjoch                Air temperature 2 m above ground; daily minimum             19990804-20210414
+order_93937_IYDEO_tre200dn_1_data.txt   Data      Deutschnofen / Obereggen             Air temperature 2 m above ground; daily minimum             20110126-20171030
+order_93937_IYDEO_tre200dn_1_legend.txt Legend    Deutschnofen / Obereggen             Air temperature 2 m above ground; daily minimum             20110126-20171030
+order_93937_IYDEO_tre200dn_2_data.txt   Data      Deutschnofen / Obereggen             Air temperature 2 m above ground; daily minimum             20171231-20210414
+order_93937_IYDEO_tre200dn_2_legend.txt Legend    Deutschnofen / Obereggen             Air temperature 2 m above ground; daily minimum             20171231-20210414
+order_93937_SLFLUM_tre200dn_1_data.txt  Data      Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             19970822-20020320
+order_93937_SLFLUM_tre200dn_1_legend.txt Legend    Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             19970822-20020320
+order_93937_SLFLUM_tre200dn_2_data.txt  Data      Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20020820-20110403
+order_93937_SLFLUM_tre200dn_2_legend.txt Legend    Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20020820-20110403
+order_93937_SLFLUM_tre200dn_3_data.txt  Data      Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20110720-20160422
+order_93937_SLFLUM_tre200dn_3_legend.txt Legend    Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20110720-20160422
+order_93937_SLFLUM_tre200dn_4_data.txt  Data      Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20160622-20210414
+order_93937_SLFLUM_tre200dn_4_legend.txt Legend    Disentis / Lumpegna                  Air temperature 2 m above ground; daily minimum             20160622-20210414
+order_93937_SLFDTR_tre200dn_1_data.txt  Data      Dötra / Costa                        Air temperature 2 m above ground; daily minimum             19971001-20210414
+order_93937_SLFDTR_tre200dn_1_legend.txt Legend    Dötra / Costa                        Air temperature 2 m above ground; daily minimum             19971001-20210414
+order_93937_EGH_tre200dn_1_data.txt     Data      Eggishorn                            Air temperature 2 m above ground; daily minimum             19931020-20110909
+order_93937_EGH_tre200dn_1_legend.txt   Legend    Eggishorn                            Air temperature 2 m above ground; daily minimum             19931020-20110909
+order_93937_EGH_tre200dn_2_data.txt     Data      Eggishorn                            Air temperature 2 m above ground; daily minimum             20120326-20210414
+order_93937_EGH_tre200dn_2_legend.txt   Legend    Eggishorn                            Air temperature 2 m above ground; daily minimum             20120326-20210414
+order_93937_SLFEGH_tre200dn_1_data.txt  Data      Eggishorn                            Air temperature 2 m above ground; daily minimum             20110907-20210414
+order_93937_SLFEGH_tre200dn_1_legend.txt Legend    Eggishorn                            Air temperature 2 m above ground; daily minimum             20110907-20210414
+order_93937_SLFELA_tre200dn_1_data.txt  Data      Ela / Piz Salteras                   Air temperature 2 m above ground; daily minimum             20080919-20170824
+order_93937_SLFELA_tre200dn_1_legend.txt Legend    Ela / Piz Salteras                   Air temperature 2 m above ground; daily minimum             20080919-20170824
+order_93937_SLFELA_tre200dn_2_data.txt  Data      Ela / Piz Salteras                   Air temperature 2 m above ground; daily minimum             20171207-20210414
+order_93937_SLFELA_tre200dn_2_legend.txt Legend    Ela / Piz Salteras                   Air temperature 2 m above ground; daily minimum             20171207-20210414
+order_93937_SLFEL2_tre200dn_1_data.txt  Data      Ela / Tschitta                       Air temperature 2 m above ground; daily minimum             20080919-20210414
+order_93937_SLFEL2_tre200dn_1_legend.txt Legend    Ela / Tschitta                       Air temperature 2 m above ground; daily minimum             20080919-20210414
+order_93937_SLFFN2_tre200dn_1_data.txt  Data      Finhaut / L'Ecreuleuse               Air temperature 2 m above ground; daily minimum             19970923-20000510
+order_93937_SLFFN2_tre200dn_1_legend.txt Legend    Finhaut / L'Ecreuleuse               Air temperature 2 m above ground; daily minimum             19970923-20000510
+order_93937_SLFFN2_tre200dn_2_data.txt  Data      Finhaut / L'Ecreuleuse               Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFFN2_tre200dn_2_legend.txt Legend    Finhaut / L'Ecreuleuse               Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFFNH_tre200dn_1_data.txt  Data      Finhaut / Le Luisin                  Air temperature 2 m above ground; daily minimum             19970923-20000510
+order_93937_SLFFNH_tre200dn_1_legend.txt Legend    Finhaut / Le Luisin                  Air temperature 2 m above ground; daily minimum             19970923-20000510
+order_93937_SLFFNH_tre200dn_2_data.txt  Data      Finhaut / Le Luisin                  Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFFNH_tre200dn_2_legend.txt Legend    Finhaut / Le Luisin                  Air temperature 2 m above ground; daily minimum             20000915-20210414
+order_93937_SLFFLU_tre200dn_1_data.txt  Data      Flüela / Hospiz                      Air temperature 2 m above ground; daily minimum             20031223-20210414
+order_93937_SLFFLU_tre200dn_1_legend.txt Legend    Flüela / Hospiz                      Air temperature 2 m above ground; daily minimum             20031223-20210414
+order_93937_SLFFRA_tre200dn_1_data.txt  Data      Frasco / Capanna Efra                Air temperature 2 m above ground; daily minimum             20041106-20210414
+order_93937_SLFFRA_tre200dn_1_legend.txt Legend    Frasco / Capanna Efra                Air temperature 2 m above ground; daily minimum             20041106-20210414
+order_93937_SLFES2_tre200dn_1_data.txt  Data      Frutigen / Elsige                    Air temperature 2 m above ground; daily minimum             19981015-20210414
+order_93937_SLFES2_tre200dn_1_legend.txt Legend    Frutigen / Elsige                    Air temperature 2 m above ground; daily minimum             19981015-20210414
+order_93937_SLFELS_tre200dn_1_data.txt  Data      Frutigen / Elsighorn                 Air temperature 2 m above ground; daily minimum             19971016-19980624
+order_93937_SLFELS_tre200dn_1_legend.txt Legend    Frutigen / Elsighorn                 Air temperature 2 m above ground; daily minimum             19971016-19980624
+order_93937_SLFELS_tre200dn_2_data.txt  Data      Frutigen / Elsighorn                 Air temperature 2 m above ground; daily minimum             19980906-20210414
+order_93937_SLFELS_tre200dn_2_legend.txt Legend    Frutigen / Elsighorn                 Air temperature 2 m above ground; daily minimum             19980906-20210414
+order_93937_SLFFUL_tre200dn_1_data.txt  Data      Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             19991102-19991105
+order_93937_SLFFUL_tre200dn_1_legend.txt Legend    Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             19991102-19991105
+order_93937_SLFFUL_tre200dn_2_data.txt  Data      Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             20000111-20010613
+order_93937_SLFFUL_tre200dn_2_legend.txt Legend    Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             20000111-20010613
+order_93937_SLFFUL_tre200dn_3_data.txt  Data      Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             20010929-20210414
+order_93937_SLFFUL_tre200dn_3_legend.txt Legend    Fully / Grand Chavalard              Air temperature 2 m above ground; daily minimum             20010929-20210414
+order_93937_SLFFU2_tre200dn_1_data.txt  Data      Fully / Grand Cor                    Air temperature 2 m above ground; daily minimum             19991102-20210414
+order_93937_SLFFU2_tre200dn_1_legend.txt Legend    Fully / Grand Cor                    Air temperature 2 m above ground; daily minimum             19991102-20210414
+order_93937_MFOFKP_tre200dn_1_data.txt  Data      Furkapass                            Air temperature 2 m above ground; daily minimum             20181217-20210414
+order_93937_MFOFKP_tre200dn_1_legend.txt Legend    Furkapass                            Air temperature 2 m above ground; daily minimum             20181217-20210414
+order_93937_SLFFUS_tre200dn_1_data.txt  Data      Fusio / Alpe di Röd                  Air temperature 2 m above ground; daily minimum             20011022-20110509
+order_93937_SLFFUS_tre200dn_1_legend.txt Legend    Fusio / Alpe di Röd                  Air temperature 2 m above ground; daily minimum             20011022-20110509
+order_93937_SLFFUS_tre200dn_2_data.txt  Data      Fusio / Alpe di Röd                  Air temperature 2 m above ground; daily minimum             20110804-20210414
+order_93937_SLFFUS_tre200dn_2_legend.txt Legend    Fusio / Alpe di Röd                  Air temperature 2 m above ground; daily minimum             20110804-20210414
+order_93937_SLFFAE_tre200dn_1_data.txt  Data      Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             19971017-19980624
+order_93937_SLFFAE_tre200dn_1_legend.txt Legend    Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             19971017-19980624
+order_93937_SLFFAE_tre200dn_2_data.txt  Data      Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             19980905-20090725
+order_93937_SLFFAE_tre200dn_2_legend.txt Legend    Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             19980905-20090725
+order_93937_SLFFAE_tre200dn_3_data.txt  Data      Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             20091006-20210414
+order_93937_SLFFAE_tre200dn_3_legend.txt Legend    Färmel / Albristhorn                 Air temperature 2 m above ground; daily minimum             20091006-20210414
+order_93937_PERGEM_tre200dn_1_data.txt  Data      Gemsstock                            Air temperature 2 m above ground; daily minimum             20191230-20210328
+order_93937_PERGEM_tre200dn_1_legend.txt Legend    Gemsstock                            Air temperature 2 m above ground; daily minimum             20191230-20210328
+order_93937_SLFGLA_tre200dn_1_data.txt  Data      Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20001110-20100508
+order_93937_SLFGLA_tre200dn_1_legend.txt Legend    Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20001110-20100508
+order_93937_SLFGLA_tre200dn_2_data.txt  Data      Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20100902-20170604
+order_93937_SLFGLA_tre200dn_2_legend.txt Legend    Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20100902-20170604
+order_93937_SLFGLA_tre200dn_3_data.txt  Data      Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20170806-20210414
+order_93937_SLFGLA_tre200dn_3_legend.txt Legend    Glärnisch / Schwander Grat           Air temperature 2 m above ground; daily minimum             20170806-20210414
+order_93937_SLFGO2_tre200dn_1_data.txt  Data      Goms / Bodmerchumma                  Air temperature 2 m above ground; daily minimum             19991029-20210414
+order_93937_SLFGO2_tre200dn_1_legend.txt Legend    Goms / Bodmerchumma                  Air temperature 2 m above ground; daily minimum             19991029-20210414
+order_93937_SLFGOM_tre200dn_1_data.txt  Data      Goms / Chummehorn                    Air temperature 2 m above ground; daily minimum             19991029-20000417
+order_93937_SLFGOM_tre200dn_1_legend.txt Legend    Goms / Chummehorn                    Air temperature 2 m above ground; daily minimum             19991029-20000417
+order_93937_SLFGOM_tre200dn_2_data.txt  Data      Goms / Chummehorn                    Air temperature 2 m above ground; daily minimum             20000824-20210414
+order_93937_SLFGOM_tre200dn_2_legend.txt Legend    Goms / Chummehorn                    Air temperature 2 m above ground; daily minimum             20000824-20210414
+order_93937_SLFGO3_tre200dn_1_data.txt  Data      Goms / Treichbode                    Air temperature 2 m above ground; daily minimum             19991029-19991204
+order_93937_SLFGO3_tre200dn_1_legend.txt Legend    Goms / Treichbode                    Air temperature 2 m above ground; daily minimum             19991029-19991204
+order_93937_SLFGO3_tre200dn_2_data.txt  Data      Goms / Treichbode                    Air temperature 2 m above ground; daily minimum             20000824-20210414
+order_93937_SLFGO3_tre200dn_2_legend.txt Legend    Goms / Treichbode                    Air temperature 2 m above ground; daily minimum             20000824-20210414
+order_93937_GOR_tre200dn_1_data.txt     Data      Gornergrat                           Air temperature 2 m above ground; daily minimum             19930728-20210414
+order_93937_GOR_tre200dn_1_legend.txt   Legend    Gornergrat                           Air temperature 2 m above ground; daily minimum             19930728-20210414
+order_93937_SLFGOR_tre200dn_1_data.txt  Data      Gornergrat                           Air temperature 2 m above ground; daily minimum             20110928-20210414
+order_93937_SLFGOR_tre200dn_1_legend.txt Legend    Gornergrat                           Air temperature 2 m above ground; daily minimum             20110928-20210414
+order_93937_SLFGRA_tre200dn_1_data.txt  Data      Grammont / Jumelles                  Air temperature 2 m above ground; daily minimum             20051109-20210414
+order_93937_SLFGRA_tre200dn_1_legend.txt Legend    Grammont / Jumelles                  Air temperature 2 m above ground; daily minimum             20051109-20210414
+order_93937_GDI_tre200dn_1_data.txt     Data      Grande Dixence le Chargeur           Air temperature 2 m above ground; daily minimum             19641231-19850929
+order_93937_GDI_tre200dn_1_legend.txt   Legend    Grande Dixence le Chargeur           Air temperature 2 m above ground; daily minimum             19641231-19850929
+order_93937_IYGRE_tre200dn_1_data.txt   Data      Graun / Elferspitze                  Air temperature 2 m above ground; daily minimum             20001128-20190218
+order_93937_IYGRE_tre200dn_1_legend.txt Legend    Graun / Elferspitze                  Air temperature 2 m above ground; daily minimum             20001128-20190218
+order_93937_IYGRE_tre200dn_2_data.txt   Data      Graun / Elferspitze                  Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_IYGRE_tre200dn_2_legend.txt Legend    Graun / Elferspitze                  Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFFIR_tre200dn_1_data.txt  Data      Grindelwald / First                  Air temperature 2 m above ground; daily minimum             19981016-20210414
+order_93937_SLFFIR_tre200dn_1_legend.txt Legend    Grindelwald / First                  Air temperature 2 m above ground; daily minimum             19981016-20210414
+order_93937_IYGSP_tre200dn_1_data.txt   Data      Gsies / Pfinnalm                     Air temperature 2 m above ground; daily minimum             20090224-20210414
+order_93937_IYGSP_tre200dn_1_legend.txt Legend    Gsies / Pfinnalm                     Air temperature 2 m above ground; daily minimum             20090224-20210414
+order_93937_IYGSR_tre200dn_1_data.txt   Data      Gsies / Regelspitze                  Air temperature 2 m above ground; daily minimum             20110126-20210412
+order_93937_IYGSR_tre200dn_1_legend.txt Legend    Gsies / Regelspitze                  Air temperature 2 m above ground; daily minimum             20110126-20210412
+order_93937_SLFOBM_tre200dn_1_data.txt  Data      Gstaad / Ober Meiel                  Air temperature 2 m above ground; daily minimum             20001116-20210414
+order_93937_SLFOBM_tre200dn_1_legend.txt Legend    Gstaad / Ober Meiel                  Air temperature 2 m above ground; daily minimum             20001116-20210414
+order_93937_SLFEN1_tre200dn_1_data.txt  Data      Gulderstock                          Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFEN1_tre200dn_1_legend.txt Legend    Gulderstock                          Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFEN2_tre200dn_1_data.txt  Data      Gulderstock / Fitteren               Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFEN2_tre200dn_1_legend.txt Legend    Gulderstock / Fitteren               Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFGUT_tre200dn_1_data.txt  Data      Guttannen / Bänzlauistock            Air temperature 2 m above ground; daily minimum             19981208-20101224
+order_93937_SLFGUT_tre200dn_1_legend.txt Legend    Guttannen / Bänzlauistock            Air temperature 2 m above ground; daily minimum             19981208-20101224
+order_93937_SLFGUT_tre200dn_2_data.txt  Data      Guttannen / Bänzlauistock            Air temperature 2 m above ground; daily minimum             20110920-20210414
+order_93937_SLFGUT_tre200dn_2_legend.txt Legend    Guttannen / Bänzlauistock            Air temperature 2 m above ground; daily minimum             20110920-20210414
+order_93937_SLFGU2_tre200dn_1_data.txt  Data      Guttannen / Homad                    Air temperature 2 m above ground; daily minimum             19991105-20000910
+order_93937_SLFGU2_tre200dn_1_legend.txt Legend    Guttannen / Homad                    Air temperature 2 m above ground; daily minimum             19991105-20000910
+order_93937_SLFGU2_tre200dn_2_data.txt  Data      Guttannen / Homad                    Air temperature 2 m above ground; daily minimum             20001113-20210414
+order_93937_SLFGU2_tre200dn_2_legend.txt Legend    Guttannen / Homad                    Air temperature 2 m above ground; daily minimum             20001113-20210414
+order_93937_GUE_tre200dn_1_data.txt     Data      Gütsch, Andermatt                    Air temperature 2 m above ground; daily minimum             19531231-20210414
+order_93937_GUE_tre200dn_1_legend.txt   Legend    Gütsch, Andermatt                    Air temperature 2 m above ground; daily minimum             19531231-20210414
+order_93937_SLFHT2_tre200dn_1_data.txt  Data      Hinterrhein / Alp Piänetsch          Air temperature 2 m above ground; daily minimum             20011022-20210414
+order_93937_SLFHT2_tre200dn_1_legend.txt Legend    Hinterrhein / Alp Piänetsch          Air temperature 2 m above ground; daily minimum             20011022-20210414
+order_93937_SLFHTR_tre200dn_1_data.txt  Data      Hinterrhein / Chilchalphorn          Air temperature 2 m above ground; daily minimum             20011025-20210414
+order_93937_SLFHTR_tre200dn_1_legend.txt Legend    Hinterrhein / Chilchalphorn          Air temperature 2 m above ground; daily minimum             20011025-20210414
+order_93937_SLFHT3_tre200dn_1_data.txt  Data      Hinterrhein / Unter Surettasee       Air temperature 2 m above ground; daily minimum             20011022-20210414
+order_93937_SLFHT3_tre200dn_1_legend.txt Legend    Hinterrhein / Unter Surettasee       Air temperature 2 m above ground; daily minimum             20011022-20210414
+order_93937_IYJAU_tre200dn_1_data.txt   Data      Jaufenkamm                           Air temperature 2 m above ground; daily minimum             19971119-20000702
+order_93937_IYJAU_tre200dn_1_legend.txt Legend    Jaufenkamm                           Air temperature 2 m above ground; daily minimum             19971119-20000702
+order_93937_IYJAU_tre200dn_2_data.txt   Data      Jaufenkamm                           Air temperature 2 m above ground; daily minimum             20001015-20040520
+order_93937_IYJAU_tre200dn_2_legend.txt Legend    Jaufenkamm                           Air temperature 2 m above ground; daily minimum             20001015-20040520
+order_93937_IYJAU_tre200dn_3_data.txt   Data      Jaufenkamm                           Air temperature 2 m above ground; daily minimum             20040803-20210414
+order_93937_IYJAU_tre200dn_3_legend.txt Legend    Jaufenkamm                           Air temperature 2 m above ground; daily minimum             20040803-20210414
+order_93937_SLFJAU_tre200dn_1_data.txt  Data      Jaun / Chörblispitz                  Air temperature 2 m above ground; daily minimum             20041110-20210414
+order_93937_SLFJAU_tre200dn_1_legend.txt Legend    Jaun / Chörblispitz                  Air temperature 2 m above ground; daily minimum             20041110-20210414
+order_93937_SLFJUL_tre200dn_1_data.txt  Data      Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             19980904-19990613
+order_93937_SLFJUL_tre200dn_1_legend.txt Legend    Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             19980904-19990613
+order_93937_SLFJUL_tre200dn_2_data.txt  Data      Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             19990831-20020711
+order_93937_SLFJUL_tre200dn_2_legend.txt Legend    Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             19990831-20020711
+order_93937_SLFJUL_tre200dn_3_data.txt  Data      Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_SLFJUL_tre200dn_3_legend.txt Legend    Julier / Piz Bardella                Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_SLFJU2_tre200dn_1_data.txt  Data      Julier / Vairana                     Air temperature 2 m above ground; daily minimum             19980904-19990613
+order_93937_SLFJU2_tre200dn_1_legend.txt Legend    Julier / Vairana                     Air temperature 2 m above ground; daily minimum             19980904-19990613
+order_93937_SLFJU2_tre200dn_2_data.txt  Data      Julier / Vairana                     Air temperature 2 m above ground; daily minimum             19990831-20210414
+order_93937_SLFJU2_tre200dn_2_legend.txt Legend    Julier / Vairana                     Air temperature 2 m above ground; daily minimum             19990831-20210414
+order_93937_JUN_tre200dn_1_data.txt     Data      Jungfraujoch                         Air temperature 2 m above ground; daily minimum             19601231-20210414
+order_93937_JUN_tre200dn_1_legend.txt   Legend    Jungfraujoch                         Air temperature 2 m above ground; daily minimum             19601231-20210414
+order_93937_SLFFIS_tre200dn_1_data.txt  Data      Kandersteg / Fisi                    Air temperature 2 m above ground; daily minimum             19971016-19980624
+order_93937_SLFFIS_tre200dn_1_legend.txt Legend    Kandersteg / Fisi                    Air temperature 2 m above ground; daily minimum             19971016-19980624
+order_93937_SLFFIS_tre200dn_2_data.txt  Data      Kandersteg / Fisi                    Air temperature 2 m above ground; daily minimum             19980913-20210414
+order_93937_SLFFIS_tre200dn_2_legend.txt Legend    Kandersteg / Fisi                    Air temperature 2 m above ground; daily minimum             19980913-20210414
+order_93937_SLFKES_tre200dn_1_data.txt  Data      Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             19970903-20100628
+order_93937_SLFKES_tre200dn_1_legend.txt Legend    Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             19970903-20100628
+order_93937_SLFKES_tre200dn_2_data.txt  Data      Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             20101029-20150407
+order_93937_SLFKES_tre200dn_2_legend.txt Legend    Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             20101029-20150407
+order_93937_SLFKES_tre200dn_3_data.txt  Data      Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             20150811-20210414
+order_93937_SLFKES_tre200dn_3_legend.txt Legend    Kesch / Piz Val Müra                 Air temperature 2 m above ground; daily minimum             20150811-20210414
+order_93937_SLFKE2_tre200dn_1_data.txt  Data      Kesch / Porta d'Es-cha               Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFKE2_tre200dn_1_legend.txt Legend    Kesch / Porta d'Es-cha               Air temperature 2 m above ground; daily minimum             19970903-20210414
+order_93937_SLFKL3_tre200dn_1_data.txt  Data      Klosters / Gatschiefer               Air temperature 2 m above ground; daily minimum             19961120-20100520
+order_93937_SLFKL3_tre200dn_1_legend.txt Legend    Klosters / Gatschiefer               Air temperature 2 m above ground; daily minimum             19961120-20100520
+order_93937_SLFKL3_tre200dn_2_data.txt  Data      Klosters / Gatschiefer               Air temperature 2 m above ground; daily minimum             20100811-20210414
+order_93937_SLFKL3_tre200dn_2_legend.txt Legend    Klosters / Gatschiefer               Air temperature 2 m above ground; daily minimum             20100811-20210414
+order_93937_SLFKL2_tre200dn_1_data.txt  Data      Klosters / Madrisa                   Air temperature 2 m above ground; daily minimum             19961102-20210414
+order_93937_SLFKL2_tre200dn_1_legend.txt Legend    Klosters / Madrisa                   Air temperature 2 m above ground; daily minimum             19961102-20210414
+order_93937_SLFKLO_tre200dn_1_data.txt  Data      Klosters / Sant Jaggem               Air temperature 2 m above ground; daily minimum             19961102-20210414
+order_93937_SLFKLO_tre200dn_1_legend.txt Legend    Klosters / Sant Jaggem               Air temperature 2 m above ground; daily minimum             19961102-20210414
+order_93937_SLFFO2_tre200dn_1_data.txt  Data      La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             19991014-20010327
+order_93937_SLFFO2_tre200dn_1_legend.txt Legend    La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             19991014-20010327
+order_93937_SLFFO2_tre200dn_2_data.txt  Data      La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20010602-20010709
+order_93937_SLFFO2_tre200dn_2_legend.txt Legend    La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20010602-20010709
+order_93937_SLFFO2_tre200dn_3_data.txt  Data      La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20011030-20060415
+order_93937_SLFFO2_tre200dn_3_legend.txt Legend    La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20011030-20060415
+order_93937_SLFFO2_tre200dn_4_data.txt  Data      La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20060913-20210414
+order_93937_SLFFO2_tre200dn_4_legend.txt Legend    La Fouly / Glacier de Saleina        Air temperature 2 m above ground; daily minimum             20060913-20210414
+order_93937_SLFFOU_tre200dn_1_data.txt  Data      La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             19991014-20010721
+order_93937_SLFFOU_tre200dn_1_legend.txt Legend    La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             19991014-20010721
+order_93937_SLFFOU_tre200dn_2_data.txt  Data      La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             20010924-20091123
+order_93937_SLFFOU_tre200dn_2_legend.txt Legend    La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             20010924-20091123
+order_93937_SLFFOU_tre200dn_3_data.txt  Data      La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             20100910-20210414
+order_93937_SLFFOU_tre200dn_3_legend.txt Legend    La Fouly / Le Portalet               Air temperature 2 m above ground; daily minimum             20100910-20210414
+order_93937_KALAU_tre200dn_1_data.txt   Data      Lauberhorn                           Air temperature 2 m above ground; daily minimum             20121126-20161228
+order_93937_KALAU_tre200dn_1_legend.txt Legend    Lauberhorn                           Air temperature 2 m above ground; daily minimum             20121126-20161228
+order_93937_KALAU_tre200dn_2_data.txt   Data      Lauberhorn                           Air temperature 2 m above ground; daily minimum             20170321-20210414
+order_93937_KALAU_tre200dn_2_legend.txt Legend    Lauberhorn                           Air temperature 2 m above ground; daily minimum             20170321-20210414
+order_93937_SLFGA2_tre200dn_1_data.txt  Data      Laucherenalp / Gandegg               Air temperature 2 m above ground; daily minimum             19961120-20020612
+order_93937_SLFGA2_tre200dn_1_legend.txt Legend    Laucherenalp / Gandegg               Air temperature 2 m above ground; daily minimum             19961120-20020612
+order_93937_SLFGA2_tre200dn_2_data.txt  Data      Laucherenalp / Gandegg               Air temperature 2 m above ground; daily minimum             20020912-20210414
+order_93937_SLFGA2_tre200dn_2_legend.txt Legend    Laucherenalp / Gandegg               Air temperature 2 m above ground; daily minimum             20020912-20210414
+order_93937_SLFGAN_tre200dn_1_data.txt  Data      Laucherenalp / Sackhorn              Air temperature 2 m above ground; daily minimum             19961120-20180428
+order_93937_SLFGAN_tre200dn_1_legend.txt Legend    Laucherenalp / Sackhorn              Air temperature 2 m above ground; daily minimum             19961120-20180428
+order_93937_SLFGAN_tre200dn_2_data.txt  Data      Laucherenalp / Sackhorn              Air temperature 2 m above ground; daily minimum             20180927-20210414
+order_93937_SLFGAN_tre200dn_2_legend.txt Legend    Laucherenalp / Sackhorn              Air temperature 2 m above ground; daily minimum             20180927-20210414
+order_93937_SLFLAU_tre200dn_1_data.txt  Data      Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             19991208-20080309
+order_93937_SLFLAU_tre200dn_1_legend.txt Legend    Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             19991208-20080309
+order_93937_SLFLAU_tre200dn_2_data.txt  Data      Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             20081020-20120525
+order_93937_SLFLAU_tre200dn_2_legend.txt Legend    Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             20081020-20120525
+order_93937_SLFLAU_tre200dn_3_data.txt  Data      Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             20121003-20210414
+order_93937_SLFLAU_tre200dn_3_legend.txt Legend    Lauenen / Lauenehore                 Air temperature 2 m above ground; daily minimum             20121003-20210414
+order_93937_IYLAU_tre200dn_1_data.txt   Data      Laurein / Clozner Loch               Air temperature 2 m above ground; daily minimum             20111109-20210410
+order_93937_IYLAU_tre200dn_1_legend.txt Legend    Laurein / Clozner Loch               Air temperature 2 m above ground; daily minimum             20111109-20210410
+order_93937_SLFSWM_tre200dn_1_data.txt  Data      Lauterbrunnen / Schwarzmönch         Air temperature 2 m above ground; daily minimum             20091030-20210414
+order_93937_SLFSWM_tre200dn_1_legend.txt Legend    Lauterbrunnen / Schwarzmönch         Air temperature 2 m above ground; daily minimum             20091030-20210414
+order_93937_ATT_tre200dn_1_data.txt     Data      Les Attelas                          Air temperature 2 m above ground; daily minimum             19930810-20120520
+order_93937_ATT_tre200dn_1_legend.txt   Legend    Les Attelas                          Air temperature 2 m above ground; daily minimum             19930810-20120520
+order_93937_ATT_tre200dn_2_data.txt     Data      Les Attelas                          Air temperature 2 m above ground; daily minimum             20121008-20210414
+order_93937_ATT_tre200dn_2_legend.txt   Legend    Les Attelas                          Air temperature 2 m above ground; daily minimum             20121008-20210414
+order_93937_SLFATT_tre200dn_1_data.txt  Data      Les Attelas                          Air temperature 2 m above ground; daily minimum             20110824-20210414
+order_93937_SLFATT_tre200dn_1_legend.txt Legend    Les Attelas                          Air temperature 2 m above ground; daily minimum             20110824-20210414
+order_93937_DIA_tre200dn_1_data.txt     Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             19921012-19990309
+order_93937_DIA_tre200dn_1_legend.txt   Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             19921012-19990309
+order_93937_DIA_tre200dn_2_data.txt     Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             19990602-20000503
+order_93937_DIA_tre200dn_2_legend.txt   Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             19990602-20000503
+order_93937_DIA_tre200dn_3_data.txt     Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             20010217-20010713
+order_93937_DIA_tre200dn_3_legend.txt   Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             20010217-20010713
+order_93937_DIA_tre200dn_4_data.txt     Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             20010925-20130907
+order_93937_DIA_tre200dn_4_legend.txt   Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             20010925-20130907
+order_93937_DIA_tre200dn_5_data.txt     Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             20131120-20210414
+order_93937_DIA_tre200dn_5_legend.txt   Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             20131120-20210414
+order_93937_SLFDIA_tre200dn_1_data.txt  Data      Les Diablerets                       Air temperature 2 m above ground; daily minimum             20120904-20210414
+order_93937_SLFDIA_tre200dn_1_legend.txt Legend    Les Diablerets                       Air temperature 2 m above ground; daily minimum             20120904-20210414
+order_93937_SLFTRU_tre200dn_1_data.txt  Data      Leukerbad / Schwarzhorn              Air temperature 2 m above ground; daily minimum             19961105-20170623
+order_93937_SLFTRU_tre200dn_1_legend.txt Legend    Leukerbad / Schwarzhorn              Air temperature 2 m above ground; daily minimum             19961105-20170623
+order_93937_SLFTRU_tre200dn_2_data.txt  Data      Leukerbad / Schwarzhorn              Air temperature 2 m above ground; daily minimum             20171011-20210414
+order_93937_SLFTRU_tre200dn_2_legend.txt Legend    Leukerbad / Schwarzhorn              Air temperature 2 m above ground; daily minimum             20171011-20210414
+order_93937_SLFTR2_tre200dn_1_data.txt  Data      Leukerbad / Trubelboden              Air temperature 2 m above ground; daily minimum             19961105-20120229
+order_93937_SLFTR2_tre200dn_1_legend.txt Legend    Leukerbad / Trubelboden              Air temperature 2 m above ground; daily minimum             19961105-20120229
+order_93937_SLFTR2_tre200dn_2_data.txt  Data      Leukerbad / Trubelboden              Air temperature 2 m above ground; daily minimum             20120503-20210414
+order_93937_SLFTR2_tre200dn_2_legend.txt Legend    Leukerbad / Trubelboden              Air temperature 2 m above ground; daily minimum             20120503-20210414
+order_93937_SLFBOV_tre200dn_1_data.txt  Data      Liddes / Pointe de Boveire           Air temperature 2 m above ground; daily minimum             20011102-20080701
+order_93937_SLFBOV_tre200dn_1_legend.txt Legend    Liddes / Pointe de Boveire           Air temperature 2 m above ground; daily minimum             20011102-20080701
+order_93937_SLFBOV_tre200dn_2_data.txt  Data      Liddes / Pointe de Boveire           Air temperature 2 m above ground; daily minimum             20080907-20210414
+order_93937_SLFBOV_tre200dn_2_legend.txt Legend    Liddes / Pointe de Boveire           Air temperature 2 m above ground; daily minimum             20080907-20210414
+order_93937_SLFBV2_tre200dn_1_data.txt  Data      Liddes / Pointe de Toules            Air temperature 2 m above ground; daily minimum             20011101-20210414
+order_93937_SLFBV2_tre200dn_1_legend.txt Legend    Liddes / Pointe de Toules            Air temperature 2 m above ground; daily minimum             20011101-20210414
+order_93937_SLFLU2_tre200dn_1_data.txt  Data      Lukmanier / Lai Verd                 Air temperature 2 m above ground; daily minimum             20001018-20210414
+order_93937_SLFLU2_tre200dn_1_legend.txt Legend    Lukmanier / Lai Verd                 Air temperature 2 m above ground; daily minimum             20001018-20210414
+order_93937_SLFLUK_tre200dn_1_data.txt  Data      Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20001018-20090604
+order_93937_SLFLUK_tre200dn_1_legend.txt Legend    Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20001018-20090604
+order_93937_SLFLUK_tre200dn_2_data.txt  Data      Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20090813-20150302
+order_93937_SLFLUK_tre200dn_2_legend.txt Legend    Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20090813-20150302
+order_93937_SLFLUK_tre200dn_3_data.txt  Data      Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20151023-20190625
+order_93937_SLFLUK_tre200dn_3_legend.txt Legend    Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20151023-20190625
+order_93937_SLFLUK_tre200dn_4_data.txt  Data      Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20190912-20210414
+order_93937_SLFLUK_tre200dn_4_legend.txt Legend    Lukmanier / Piz Gannaretsch          Air temperature 2 m above ground; daily minimum             20190912-20210414
+order_93937_SLFMLB_tre200dn_1_data.txt  Data      Malbun / Spitz                       Air temperature 2 m above ground; daily minimum             20081003-20210414
+order_93937_SLFMLB_tre200dn_1_legend.txt Legend    Malbun / Spitz                       Air temperature 2 m above ground; daily minimum             20081003-20210414
+order_93937_MTR_tre200dn_1_data.txt     Data      Matro                                Air temperature 2 m above ground; daily minimum             19921211-19990221
+order_93937_MTR_tre200dn_1_legend.txt   Legend    Matro                                Air temperature 2 m above ground; daily minimum             19921211-19990221
+order_93937_MTR_tre200dn_2_data.txt     Data      Matro                                Air temperature 2 m above ground; daily minimum             19990526-20130817
+order_93937_MTR_tre200dn_2_legend.txt   Legend    Matro                                Air temperature 2 m above ground; daily minimum             19990526-20130817
+order_93937_MTR_tre200dn_3_data.txt     Data      Matro                                Air temperature 2 m above ground; daily minimum             20190915-20210414
+order_93937_MTR_tre200dn_3_legend.txt   Legend    Matro                                Air temperature 2 m above ground; daily minimum             20190915-20210414
+order_93937_SLFMEI_tre200dn_1_data.txt  Data      Meiental / Laucheren                 Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_SLFMEI_tre200dn_1_legend.txt Legend    Meiental / Laucheren                 Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_IYMEL_tre200dn_1_data.txt   Data      Melag / Pratznerberg                 Air temperature 2 m above ground; daily minimum             20151026-20210413
+order_93937_IYMEL_tre200dn_1_legend.txt Legend    Melag / Pratznerberg                 Air temperature 2 m above ground; daily minimum             20151026-20210413
+order_93937_SLFME2_tre200dn_1_data.txt  Data      Mesocco / Pian Grand                 Air temperature 2 m above ground; daily minimum             20021029-20210414
+order_93937_SLFME2_tre200dn_1_legend.txt Legend    Mesocco / Pian Grand                 Air temperature 2 m above ground; daily minimum             20021029-20210414
+order_93937_SLFMES_tre200dn_1_data.txt  Data      Mesocco / Piz Pian Grand             Air temperature 2 m above ground; daily minimum             20021029-20080709
+order_93937_SLFMES_tre200dn_1_legend.txt Legend    Mesocco / Piz Pian Grand             Air temperature 2 m above ground; daily minimum             20021029-20080709
+order_93937_SLFMES_tre200dn_2_data.txt  Data      Mesocco / Piz Pian Grand             Air temperature 2 m above ground; daily minimum             20081128-20210414
+order_93937_SLFMES_tre200dn_2_legend.txt Legend    Mesocco / Piz Pian Grand             Air temperature 2 m above ground; daily minimum             20081128-20210414
+order_93937_PERLAP_tre200dn_1_data.txt  Data      Mont Gelé / La Pire                  Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_PERLAP_tre200dn_1_legend.txt Legend    Mont Gelé / La Pire                  Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_MRP_tre200dn_1_data.txt     Data      Monte Rosa-Plattje                   Air temperature 2 m above ground; daily minimum             20091219-20210414
+order_93937_MRP_tre200dn_1_legend.txt   Legend    Monte Rosa-Plattje                   Air temperature 2 m above ground; daily minimum             20091219-20210414
+order_93937_SLFMU2_tre200dn_1_data.txt  Data      Mund / Chiematte                     Air temperature 2 m above ground; daily minimum             20001031-20210414
+order_93937_SLFMU2_tre200dn_1_legend.txt Legend    Mund / Chiematte                     Air temperature 2 m above ground; daily minimum             20001031-20210414
+order_93937_SLFMUN_tre200dn_1_data.txt  Data      Mund / Gärsthorn                     Air temperature 2 m above ground; daily minimum             20001111-20210414
+order_93937_SLFMUN_tre200dn_1_legend.txt Legend    Mund / Gärsthorn                     Air temperature 2 m above ground; daily minimum             20001111-20210414
+order_93937_SLFMUO_tre200dn_1_data.txt  Data      Muotathal / Wasserbergfirst          Air temperature 2 m above ground; daily minimum             20061109-20210414
+order_93937_SLFMUO_tre200dn_1_legend.txt Legend    Muotathal / Wasserbergfirst          Air temperature 2 m above ground; daily minimum             20061109-20210414
+order_93937_SLFMT2_tre200dn_1_data.txt  Data      Muttsee / Mutten                     Air temperature 2 m above ground; daily minimum             20081006-20210414
+order_93937_SLFMT2_tre200dn_1_legend.txt Legend    Muttsee / Mutten                     Air temperature 2 m above ground; daily minimum             20081006-20210414
+order_93937_SLFMUT_tre200dn_1_data.txt  Data      Muttsee / Ruchi                      Air temperature 2 m above ground; daily minimum             20081006-20121105
+order_93937_SLFMUT_tre200dn_1_legend.txt Legend    Muttsee / Ruchi                      Air temperature 2 m above ground; daily minimum             20081006-20121105
+order_93937_SLFMUT_tre200dn_2_data.txt  Data      Muttsee / Ruchi                      Air temperature 2 m above ground; daily minimum             20130118-20210414
+order_93937_SLFMUT_tre200dn_2_legend.txt Legend    Muttsee / Ruchi                      Air temperature 2 m above ground; daily minimum             20130118-20210414
+order_93937_MAE_tre200dn_1_data.txt     Data      Männlichen                           Air temperature 2 m above ground; daily minimum             19931117-20050813
+order_93937_MAE_tre200dn_1_legend.txt   Legend    Männlichen                           Air temperature 2 m above ground; daily minimum             19931117-20050813
+order_93937_MAE_tre200dn_2_data.txt     Data      Männlichen                           Air temperature 2 m above ground; daily minimum             20080125-20131013
+order_93937_MAE_tre200dn_2_legend.txt   Legend    Männlichen                           Air temperature 2 m above ground; daily minimum             20080125-20131013
+order_93937_SLFMAE_tre200dn_1_data.txt  Data      Männlichen                           Air temperature 2 m above ground; daily minimum             20120704-20210414
+order_93937_SLFMAE_tre200dn_1_legend.txt Legend    Männlichen                           Air temperature 2 m above ground; daily minimum             20120704-20210414
+order_93937_SLFMAN_tre200dn_1_data.txt  Data      Männlichen / Gipfel                  Air temperature 2 m above ground; daily minimum             20141219-20210414
+order_93937_SLFMAN_tre200dn_1_legend.txt Legend    Männlichen / Gipfel                  Air temperature 2 m above ground; daily minimum             20141219-20210414
+order_93937_NAS_tre200dn_1_data.txt     Data      Naluns / Schlivera                   Air temperature 2 m above ground; daily minimum             19921106-20210414
+order_93937_NAS_tre200dn_1_legend.txt   Legend    Naluns / Schlivera                   Air temperature 2 m above ground; daily minimum             19921106-20210414
+order_93937_SLFNAS_tre200dn_1_data.txt  Data      Naluns / Schlivera                   Air temperature 2 m above ground; daily minimum             20100903-20210414
+order_93937_SLFNAS_tre200dn_1_legend.txt Legend    Naluns / Schlivera                   Air temperature 2 m above ground; daily minimum             20100903-20210414
+order_93937_SLFNAR_tre200dn_1_data.txt  Data      Nara / Motto Crostel                 Air temperature 2 m above ground; daily minimum             19991008-20111102
+order_93937_SLFNAR_tre200dn_1_legend.txt Legend    Nara / Motto Crostel                 Air temperature 2 m above ground; daily minimum             19991008-20111102
+order_93937_SLFNAR_tre200dn_2_data.txt  Data      Nara / Motto Crostel                 Air temperature 2 m above ground; daily minimum             20120829-20210414
+order_93937_SLFNAR_tre200dn_2_legend.txt Legend    Nara / Motto Crostel                 Air temperature 2 m above ground; daily minimum             20120829-20210414
+order_93937_SLFNE3_tre200dn_1_data.txt  Data      Nendaz / Combatzeline                Air temperature 2 m above ground; daily minimum             20131018-20210414
+order_93937_SLFNE3_tre200dn_1_legend.txt Legend    Nendaz / Combatzeline                Air temperature 2 m above ground; daily minimum             20131018-20210414
+order_93937_SLFNEN_tre200dn_1_data.txt  Data      Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             19991102-20020625
+order_93937_SLFNEN_tre200dn_1_legend.txt Legend    Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             19991102-20020625
+order_93937_SLFNEN_tre200dn_2_data.txt  Data      Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             20021031-20180131
+order_93937_SLFNEN_tre200dn_2_legend.txt Legend    Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             20021031-20180131
+order_93937_SLFNEN_tre200dn_3_data.txt  Data      Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             20180412-20210414
+order_93937_SLFNEN_tre200dn_3_legend.txt Legend    Nendaz / Creppon Blanc               Air temperature 2 m above ground; daily minimum             20180412-20210414
+order_93937_SLFOB2_tre200dn_1_data.txt  Data      Oberwald / Jostsee                   Air temperature 2 m above ground; daily minimum             19991028-20210414
+order_93937_SLFOB2_tre200dn_1_legend.txt Legend    Oberwald / Jostsee                   Air temperature 2 m above ground; daily minimum             19991028-20210414
+order_93937_SLFOB3_tre200dn_1_data.txt  Data      Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             19991028-20060219
+order_93937_SLFOB3_tre200dn_1_legend.txt Legend    Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             19991028-20060219
+order_93937_SLFOB3_tre200dn_2_data.txt  Data      Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20061006-20080605
+order_93937_SLFOB3_tre200dn_2_legend.txt Legend    Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20061006-20080605
+order_93937_SLFOB3_tre200dn_3_data.txt  Data      Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20080902-20170606
+order_93937_SLFOB3_tre200dn_3_legend.txt Legend    Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20080902-20170606
+order_93937_SLFOB3_tre200dn_4_data.txt  Data      Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20170821-20210414
+order_93937_SLFOB3_tre200dn_4_legend.txt Legend    Oberwald / Mällige                   Air temperature 2 m above ground; daily minimum             20170821-20210414
+order_93937_SLFOBW_tre200dn_1_data.txt  Data      Oberwald / Sidelhorn                 Air temperature 2 m above ground; daily minimum             19991029-20210414
+order_93937_SLFOBW_tre200dn_1_legend.txt Legend    Oberwald / Sidelhorn                 Air temperature 2 m above ground; daily minimum             19991029-20210414
+order_93937_SLFOF2_tre200dn_1_data.txt  Data      Ofenpass / Murtaröl                  Air temperature 2 m above ground; daily minimum             20020924-20210414
+order_93937_SLFOF2_tre200dn_1_legend.txt Legend    Ofenpass / Murtaröl                  Air temperature 2 m above ground; daily minimum             20020924-20210414
+order_93937_SLFOFE_tre200dn_1_data.txt  Data      Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20020924-20060527
+order_93937_SLFOFE_tre200dn_1_legend.txt Legend    Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20020924-20060527
+order_93937_SLFOFE_tre200dn_2_data.txt  Data      Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20060813-20170929
+order_93937_SLFOFE_tre200dn_2_legend.txt Legend    Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20060813-20170929
+order_93937_SLFOFE_tre200dn_3_data.txt  Data      Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20180112-20210414
+order_93937_SLFOFE_tre200dn_3_legend.txt Legend    Ofenpass / Piz Dora                  Air temperature 2 m above ground; daily minimum             20180112-20210414
+order_93937_BEH_tre200dn_1_data.txt     Data      Passo del Bernina                    Air temperature 2 m above ground; daily minimum             19711231-20210414
+order_93937_BEH_tre200dn_1_legend.txt   Legend    Passo del Bernina                    Air temperature 2 m above ground; daily minimum             19711231-20210414
+order_93937_IYPTR_tre200dn_1_data.txt   Data      Pens / Tramintal                     Air temperature 2 m above ground; daily minimum             20090609-20210414
+order_93937_IYPTR_tre200dn_1_legend.txt Legend    Pens / Tramintal                     Air temperature 2 m above ground; daily minimum             20090609-20210414
+order_93937_IYPFR_tre200dn_1_data.txt   Data      Pfelders / Rauhjoch                  Air temperature 2 m above ground; daily minimum             19990415-20210411
+order_93937_IYPFR_tre200dn_1_legend.txt Legend    Pfelders / Rauhjoch                  Air temperature 2 m above ground; daily minimum             19990415-20210411
+order_93937_IYPFD_tre200dn_1_data.txt   Data      Pfunders / Dannelspitz               Air temperature 2 m above ground; daily minimum             20071212-20210414
+order_93937_IYPFD_tre200dn_1_legend.txt Legend    Pfunders / Dannelspitz               Air temperature 2 m above ground; daily minimum             20071212-20210414
+order_93937_IYPRO_tre200dn_1_data.txt   Data      Pian Rosa                            Air temperature 2 m above ground; daily minimum             19521231-19801230
+order_93937_IYPRO_tre200dn_1_legend.txt Legend    Pian Rosa                            Air temperature 2 m above ground; daily minimum             19521231-19801230
+order_93937_PIL_tre200dn_1_data.txt     Data      Pilatus                              Air temperature 2 m above ground; daily minimum             19801231-20210414
+order_93937_PIL_tre200dn_1_legend.txt   Legend    Pilatus                              Air temperature 2 m above ground; daily minimum             19801231-20210414
+order_93937_COV_tre200dn_1_data.txt     Data      Piz Corvatsch                        Air temperature 2 m above ground; daily minimum             19790726-20210414
+order_93937_COV_tre200dn_1_legend.txt   Legend    Piz Corvatsch                        Air temperature 2 m above ground; daily minimum             19790726-20210414
+order_93937_SLFLAG_tre200dn_1_data.txt  Data      Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             19961217-20090705
+order_93937_SLFLAG_tre200dn_1_legend.txt Legend    Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             19961217-20090705
+order_93937_SLFLAG_tre200dn_2_data.txt  Data      Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             20091105-20190408
+order_93937_SLFLAG_tre200dn_2_legend.txt Legend    Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             20091105-20190408
+order_93937_SLFLAG_tre200dn_3_data.txt  Data      Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             20190917-20210414
+order_93937_SLFLAG_tre200dn_3_legend.txt Legend    Piz Lagrev / Lagrev                  Air temperature 2 m above ground; daily minimum             20190917-20210414
+order_93937_SLFLA3_tre200dn_1_data.txt  Data      Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             19961212-20090726
+order_93937_SLFLA3_tre200dn_1_legend.txt Legend    Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             19961212-20090726
+order_93937_SLFLA3_tre200dn_2_data.txt  Data      Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             20091126-20190714
+order_93937_SLFLA3_tre200dn_2_legend.txt Legend    Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             20091126-20190714
+order_93937_SLFLA3_tre200dn_3_data.txt  Data      Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             20191008-20210414
+order_93937_SLFLA3_tre200dn_3_legend.txt Legend    Piz Lagrev / Materdell               Air temperature 2 m above ground; daily minimum             20191008-20210414
+order_93937_SLFLA2_tre200dn_1_data.txt  Data      Piz Lagrev / Tscheppa                Air temperature 2 m above ground; daily minimum             19961212-20090705
+order_93937_SLFLA2_tre200dn_1_legend.txt Legend    Piz Lagrev / Tscheppa                Air temperature 2 m above ground; daily minimum             19961212-20090705
+order_93937_SLFLA2_tre200dn_2_data.txt  Data      Piz Lagrev / Tscheppa                Air temperature 2 m above ground; daily minimum             20091105-20210414
+order_93937_SLFLA2_tre200dn_2_legend.txt Legend    Piz Lagrev / Tscheppa                Air temperature 2 m above ground; daily minimum             20091105-20210414
+order_93937_PMA_tre200dn_1_data.txt     Data      Piz Martegnas                        Air temperature 2 m above ground; daily minimum             19931028-19980622
+order_93937_PMA_tre200dn_1_legend.txt   Legend    Piz Martegnas                        Air temperature 2 m above ground; daily minimum             19931028-19980622
+order_93937_PMA_tre200dn_2_data.txt     Data      Piz Martegnas                        Air temperature 2 m above ground; daily minimum             19980924-20110705
+order_93937_PMA_tre200dn_2_legend.txt   Legend    Piz Martegnas                        Air temperature 2 m above ground; daily minimum             19980924-20110705
+order_93937_PMA_tre200dn_3_data.txt     Data      Piz Martegnas                        Air temperature 2 m above ground; daily minimum             20111122-20210414
+order_93937_PMA_tre200dn_3_legend.txt   Legend    Piz Martegnas                        Air temperature 2 m above ground; daily minimum             20111122-20210414
+order_93937_SLFPMA_tre200dn_1_data.txt  Data      Piz Martegnas                        Air temperature 2 m above ground; daily minimum             20100930-20210414
+order_93937_SLFPMA_tre200dn_1_legend.txt Legend    Piz Martegnas                        Air temperature 2 m above ground; daily minimum             20100930-20210414
+order_93937_IYPLO_tre200dn_1_data.txt   Data      Plose                                Air temperature 2 m above ground; daily minimum             19931230-19941229
+order_93937_IYPLO_tre200dn_1_legend.txt Legend    Plose                                Air temperature 2 m above ground; daily minimum             19931230-19941229
+order_93937_IYPLO_tre200dn_2_data.txt   Data      Plose                                Air temperature 2 m above ground; daily minimum             19981217
+order_93937_IYPLO_tre200dn_2_legend.txt Legend    Plose                                Air temperature 2 m above ground; daily minimum             19981217
+order_93937_IYPLO_tre200dn_3_data.txt   Data      Plose                                Air temperature 2 m above ground; daily minimum             20021231-20030131
+order_93937_IYPLO_tre200dn_3_legend.txt Legend    Plose                                Air temperature 2 m above ground; daily minimum             20021231-20030131
+order_93937_IYPLO_tre200dn_4_data.txt   Data      Plose                                Air temperature 2 m above ground; daily minimum             20030805-20060218
+order_93937_IYPLO_tre200dn_4_legend.txt Legend    Plose                                Air temperature 2 m above ground; daily minimum             20030805-20060218
+order_93937_IYPLO_tre200dn_5_data.txt   Data      Plose                                Air temperature 2 m above ground; daily minimum             20060726-20210414
+order_93937_IYPLO_tre200dn_5_legend.txt Legend    Plose                                Air temperature 2 m above ground; daily minimum             20060726-20210414
+order_93937_IYPRR_tre200dn_1_data.txt   Data      Prags / Rossalm                      Air temperature 2 m above ground; daily minimum             19781231
+order_93937_IYPRR_tre200dn_1_legend.txt Legend    Prags / Rossalm                      Air temperature 2 m above ground; daily minimum             19781231
+order_93937_IYPRR_tre200dn_2_data.txt   Data      Prags / Rossalm                      Air temperature 2 m above ground; daily minimum             20121024-20210414
+order_93937_IYPRR_tre200dn_2_legend.txt Legend    Prags / Rossalm                      Air temperature 2 m above ground; daily minimum             20121024-20210414
+order_93937_IYPRL_tre200dn_1_data.txt   Data      Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             19981217-20010809
+order_93937_IYPRL_tre200dn_1_legend.txt Legend    Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             19981217-20010809
+order_93937_IYPRL_tre200dn_2_data.txt   Data      Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             20011121-20110621
+order_93937_IYPRL_tre200dn_2_legend.txt Legend    Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             20011121-20110621
+order_93937_IYPRL_tre200dn_3_data.txt   Data      Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             20110921-20210414
+order_93937_IYPRL_tre200dn_3_legend.txt Legend    Prettau /  Lengspitze                Air temperature 2 m above ground; daily minimum             20110921-20210414
+order_93937_SLFPU2_tre200dn_1_data.txt  Data      Puzzetta, Medel / Ils Plauns         Air temperature 2 m above ground; daily minimum             19961108-20210414
+order_93937_SLFPU2_tre200dn_1_legend.txt Legend    Puzzetta, Medel / Ils Plauns         Air temperature 2 m above ground; daily minimum             19961108-20210414
+order_93937_SLFPUZ_tre200dn_1_data.txt  Data      Puzzetta, Medel / La Muota           Air temperature 2 m above ground; daily minimum             19961108-20210414
+order_93937_SLFPUZ_tre200dn_1_legend.txt Legend    Puzzetta, Medel / La Muota           Air temperature 2 m above ground; daily minimum             19961108-20210414
+order_93937_IYRIT_tre200dn_1_data.txt   Data      Rittnerhorn                          Air temperature 2 m above ground; daily minimum             19971119-20131006
+order_93937_IYRIT_tre200dn_1_legend.txt Legend    Rittnerhorn                          Air temperature 2 m above ground; daily minimum             19971119-20131006
+order_93937_IYRIT_tre200dn_2_data.txt   Data      Rittnerhorn                          Air temperature 2 m above ground; daily minimum             20140728-20210414
+order_93937_IYRIT_tre200dn_2_legend.txt Legend    Rittnerhorn                          Air temperature 2 m above ground; daily minimum             20140728-20210414
+order_93937_SLFSA4_tre200dn_1_data.txt  Data      Saas / Gibidum                       Air temperature 2 m above ground; daily minimum             20091113-20210414
+order_93937_SLFSA4_tre200dn_1_legend.txt Legend    Saas / Gibidum                       Air temperature 2 m above ground; daily minimum             20091113-20210414
+order_93937_SLFSA5_tre200dn_1_data.txt  Data      Saas / Mälliga                       Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFSA5_tre200dn_1_legend.txt Legend    Saas / Mälliga                       Air temperature 2 m above ground; daily minimum             20191209-20210414
+order_93937_SLFSAA_tre200dn_1_data.txt  Data      Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             19970924-20100429
+order_93937_SLFSAA_tre200dn_1_legend.txt Legend    Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             19970924-20100429
+order_93937_SLFSAA_tre200dn_2_data.txt  Data      Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             20100825-20150502
+order_93937_SLFSAA_tre200dn_2_legend.txt Legend    Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             20100825-20150502
+order_93937_SLFSAA_tre200dn_3_data.txt  Data      Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             20151105-20210414
+order_93937_SLFSAA_tre200dn_3_legend.txt Legend    Saas / Platthorn                     Air temperature 2 m above ground; daily minimum             20151105-20210414
+order_93937_SLFSA3_tre200dn_1_data.txt  Data      Saas / Schwarzmies                   Air temperature 2 m above ground; daily minimum             19970924-20191013
+order_93937_SLFSA3_tre200dn_1_legend.txt Legend    Saas / Schwarzmies                   Air temperature 2 m above ground; daily minimum             19970924-20191013
+order_93937_SLFSA2_tre200dn_1_data.txt  Data      Saas / Seetal                        Air temperature 2 m above ground; daily minimum             19970930-20210414
+order_93937_SLFSA2_tre200dn_1_legend.txt Legend    Saas / Seetal                        Air temperature 2 m above ground; daily minimum             19970930-20210414
+order_93937_SLFSMN_tre200dn_1_data.txt  Data      Samnaun / Ravaischer Salaas          Air temperature 2 m above ground; daily minimum             20001026-20210414
+order_93937_SLFSMN_tre200dn_1_legend.txt Legend    Samnaun / Ravaischer Salaas          Air temperature 2 m above ground; daily minimum             20001026-20210414
+order_93937_PERSCH_tre200dn_1_data.txt  Data      Schilthorn                           Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_PERSCH_tre200dn_1_legend.txt Legend    Schilthorn                           Air temperature 2 m above ground; daily minimum             20191230-20210413
+order_93937_SLFSCH_tre200dn_1_data.txt  Data      Schilthorn / Gipfel                  Air temperature 2 m above ground; daily minimum             19961113-20150719
+order_93937_SLFSCH_tre200dn_1_legend.txt Legend    Schilthorn / Gipfel                  Air temperature 2 m above ground; daily minimum             19961113-20150719
+order_93937_SLFSCH_tre200dn_2_data.txt  Data      Schilthorn / Gipfel                  Air temperature 2 m above ground; daily minimum             20151029-20210414
+order_93937_SLFSCH_tre200dn_2_legend.txt Legend    Schilthorn / Gipfel                  Air temperature 2 m above ground; daily minimum             20151029-20210414
+order_93937_SLFSH2_tre200dn_1_data.txt  Data      Schilthorn / Türliboden              Air temperature 2 m above ground; daily minimum             19961026-20000614
+order_93937_SLFSH2_tre200dn_1_legend.txt Legend    Schilthorn / Türliboden              Air temperature 2 m above ground; daily minimum             19961026-20000614
+order_93937_SLFSH2_tre200dn_2_data.txt  Data      Schilthorn / Türliboden              Air temperature 2 m above ground; daily minimum             20000919-20210414
+order_93937_SLFSH2_tre200dn_2_legend.txt Legend    Schilthorn / Türliboden              Air temperature 2 m above ground; daily minimum             20000919-20210414
+order_93937_IYSGR_tre200dn_1_data.txt   Data      Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20061026
+order_93937_IYSGR_tre200dn_1_legend.txt Legend    Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20061026
+order_93937_IYSGR_tre200dn_2_data.txt   Data      Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20071210-20080830
+order_93937_IYSGR_tre200dn_2_legend.txt Legend    Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20071210-20080830
+order_93937_IYSGR_tre200dn_3_data.txt   Data      Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20081117-20110717
+order_93937_IYSGR_tre200dn_3_legend.txt Legend    Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20081117-20110717
+order_93937_IYSGR_tre200dn_4_data.txt   Data      Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20120223-20120502
+order_93937_IYSGR_tre200dn_4_legend.txt Legend    Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20120223-20120502
+order_93937_IYSGR_tre200dn_5_data.txt   Data      Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20120731-20190904
+order_93937_IYSGR_tre200dn_5_legend.txt Legend    Schnals / Grawand                    Air temperature 2 m above ground; daily minimum             20120731-20190904
+order_93937_IYSTG_tre200dn_1_data.txt   Data      Schnals / Teufelsegg                 Air temperature 2 m above ground; daily minimum             19981202
+order_93937_IYSTG_tre200dn_1_legend.txt Legend    Schnals / Teufelsegg                 Air temperature 2 m above ground; daily minimum             19981202
+order_93937_IYSTG_tre200dn_2_data.txt   Data      Schnals / Teufelsegg                 Air temperature 2 m above ground; daily minimum             20071209-20210414
+order_93937_IYSTG_tre200dn_2_legend.txt Legend    Schnals / Teufelsegg                 Air temperature 2 m above ground; daily minimum             20071209-20210414
+order_93937_SLFSC3_tre200dn_1_data.txt  Data      Schächental / Alpler Tor             Air temperature 2 m above ground; daily minimum             19990803-20210414
+order_93937_SLFSC3_tre200dn_1_legend.txt Legend    Schächental / Alpler Tor             Air temperature 2 m above ground; daily minimum             19990803-20210414
+order_93937_SLFSCA_tre200dn_1_data.txt  Data      Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             19990803-20120619
+order_93937_SLFSCA_tre200dn_1_legend.txt Legend    Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             19990803-20120619
+order_93937_SLFSCA_tre200dn_2_data.txt  Data      Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20120827-20131006
+order_93937_SLFSCA_tre200dn_2_legend.txt Legend    Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20120827-20131006
+order_93937_SLFSCA_tre200dn_3_data.txt  Data      Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20140122-20200521
+order_93937_SLFSCA_tre200dn_3_legend.txt Legend    Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20140122-20200521
+order_93937_SLFSCA_tre200dn_4_data.txt  Data      Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20201013-20210414
+order_93937_SLFSCA_tre200dn_4_legend.txt Legend    Schächental / Gross Windgällen       Air temperature 2 m above ground; daily minimum             20201013-20210414
+order_93937_PERRIT_tre200dn_1_data.txt  Data      Seetalhorn / Ritigraben              Air temperature 2 m above ground; daily minimum             20191231-20210414
+order_93937_PERRIT_tre200dn_1_legend.txt Legend    Seetalhorn / Ritigraben              Air temperature 2 m above ground; daily minimum             20191231-20210414
+order_93937_IYSIG_tre200dn_1_data.txt   Data      Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             19661231
+order_93937_IYSIG_tre200dn_1_legend.txt Legend    Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             19661231
+order_93937_IYSIG_tre200dn_2_data.txt   Data      Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20061026-20090716
+order_93937_IYSIG_tre200dn_2_legend.txt Legend    Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20061026-20090716
+order_93937_IYSIG_tre200dn_3_data.txt   Data      Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20090921-20140203
+order_93937_IYSIG_tre200dn_3_legend.txt Legend    Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20090921-20140203
+order_93937_IYSIG_tre200dn_4_data.txt   Data      Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20140731-20141116
+order_93937_IYSIG_tre200dn_4_legend.txt Legend    Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20140731-20141116
+order_93937_IYSIG_tre200dn_5_data.txt   Data      Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20150127-20210414
+order_93937_IYSIG_tre200dn_5_legend.txt Legend    Signalgipfel / Wilder Freiger        Air temperature 2 m above ground; daily minimum             20150127-20210414
+order_93937_SLFBOR_tre200dn_1_data.txt  Data      Simplon / Bortelsee                  Air temperature 2 m above ground; daily minimum             20010927-20210414
+order_93937_SLFBOR_tre200dn_1_legend.txt Legend    Simplon / Bortelsee                  Air temperature 2 m above ground; daily minimum             20010927-20210414
+order_93937_SLFSPN_tre200dn_1_data.txt  Data      Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             19961103-20040418
+order_93937_SLFSPN_tre200dn_1_legend.txt Legend    Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             19961103-20040418
+order_93937_SLFSPN_tre200dn_2_data.txt  Data      Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             20040827-20070512
+order_93937_SLFSPN_tre200dn_2_legend.txt Legend    Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             20040827-20070512
+order_93937_SLFSPN_tre200dn_3_data.txt  Data      Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             20070813-20210414
+order_93937_SLFSPN_tre200dn_3_legend.txt Legend    Simplon / Chesselhorn                Air temperature 2 m above ground; daily minimum             20070813-20210414
+order_93937_SLFSP3_tre200dn_1_data.txt  Data      Simplon / Wenghorn                   Air temperature 2 m above ground; daily minimum             19961103-19980408
+order_93937_SLFSP3_tre200dn_1_legend.txt Legend    Simplon / Wenghorn                   Air temperature 2 m above ground; daily minimum             19961103-19980408
+order_93937_SLFSP3_tre200dn_2_data.txt  Data      Simplon / Wenghorn                   Air temperature 2 m above ground; daily minimum             19990910-20210414
+order_93937_SLFSP3_tre200dn_2_legend.txt Legend    Simplon / Wenghorn                   Air temperature 2 m above ground; daily minimum             19990910-20210414
+order_93937_SLFSP2_tre200dn_1_data.txt  Data      Simplon / Ze Seewe                   Air temperature 2 m above ground; daily minimum             19961103-20150329
+order_93937_SLFSP2_tre200dn_1_legend.txt Legend    Simplon / Ze Seewe                   Air temperature 2 m above ground; daily minimum             19961103-20150329
+order_93937_SLFSP2_tre200dn_2_data.txt  Data      Simplon / Ze Seewe                   Air temperature 2 m above ground; daily minimum             20151119-20210414
+order_93937_SLFSP2_tre200dn_2_legend.txt Legend    Simplon / Ze Seewe                   Air temperature 2 m above ground; daily minimum             20151119-20210414
+order_93937_SLFSTN_tre200dn_1_data.txt  Data      St. Niklaus / Oberer Stelligletscher Air temperature 2 m above ground; daily minimum             19981014-19990219
+order_93937_SLFSTN_tre200dn_1_legend.txt Legend    St. Niklaus / Oberer Stelligletscher Air temperature 2 m above ground; daily minimum             19981014-19990219
+order_93937_SLFSTN_tre200dn_2_data.txt  Data      St. Niklaus / Oberer Stelligletscher Air temperature 2 m above ground; daily minimum             19990916-20210414
+order_93937_SLFSTN_tre200dn_2_legend.txt Legend    St. Niklaus / Oberer Stelligletscher Air temperature 2 m above ground; daily minimum             19990916-20210414
+order_93937_PERSTO_tre200dn_1_data.txt  Data      Stockhorn                            Air temperature 2 m above ground; daily minimum             20191230-20200521
+order_93937_PERSTO_tre200dn_1_legend.txt Legend    Stockhorn                            Air temperature 2 m above ground; daily minimum             20191230-20200521
+order_93937_PERSTO_tre200dn_2_data.txt  Data      Stockhorn                            Air temperature 2 m above ground; daily minimum             20200815-20210407
+order_93937_PERSTO_tre200dn_2_legend.txt Legend    Stockhorn                            Air temperature 2 m above ground; daily minimum             20200815-20210407
+order_93937_SLFSTH_tre200dn_1_data.txt  Data      Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20001128-20100805
+order_93937_SLFSTH_tre200dn_1_legend.txt Legend    Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20001128-20100805
+order_93937_SLFSTH_tre200dn_2_data.txt  Data      Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20101008-20190713
+order_93937_SLFSTH_tre200dn_2_legend.txt Legend    Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20101008-20190713
+order_93937_SLFSTH_tre200dn_3_data.txt  Data      Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20191016-20210414
+order_93937_SLFSTH_tre200dn_3_legend.txt Legend    Stockhorn / Gipfel                   Air temperature 2 m above ground; daily minimum             20191016-20210414
+order_93937_IYSUM_tre200dn_1_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19960319-19970106
+order_93937_IYSUM_tre200dn_1_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19960319-19970106
+order_93937_IYSUM_tre200dn_2_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19971127-19980508
+order_93937_IYSUM_tre200dn_2_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19971127-19980508
+order_93937_IYSUM_tre200dn_3_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19980820-19990601
+order_93937_IYSUM_tre200dn_3_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19980820-19990601
+order_93937_IYSUM_tre200dn_4_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19991118-20010610
+order_93937_IYSUM_tre200dn_4_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             19991118-20010610
+order_93937_IYSUM_tre200dn_5_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20010831-20020720
+order_93937_IYSUM_tre200dn_5_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20010831-20020720
+order_93937_IYSUM_tre200dn_6_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20021012-20030522
+order_93937_IYSUM_tre200dn_6_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20021012-20030522
+order_93937_IYSUM_tre200dn_7_data.txt   Data      Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20031103-20210414
+order_93937_IYSUM_tre200dn_7_legend.txt Legend    Sulden / Madritsch                   Air temperature 2 m above ground; daily minimum             20031103-20210414
+order_93937_IYSUS_tre200dn_1_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19661231
+order_93937_IYSUS_tre200dn_1_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19661231
+order_93937_IYSUS_tre200dn_2_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19960319-19970106
+order_93937_IYSUS_tre200dn_2_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19960319-19970106
+order_93937_IYSUS_tre200dn_3_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19971123-19971127
+order_93937_IYSUS_tre200dn_3_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19971123-19971127
+order_93937_IYSUS_tre200dn_4_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19980211-19990511
+order_93937_IYSUS_tre200dn_4_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19980211-19990511
+order_93937_IYSUS_tre200dn_5_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19990720-19991113
+order_93937_IYSUS_tre200dn_5_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             19990720-19991113
+order_93937_IYSUS_tre200dn_6_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20000113-20000816
+order_93937_IYSUS_tre200dn_6_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20000113-20000816
+order_93937_IYSUS_tre200dn_7_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20001206-20010610
+order_93937_IYSUS_tre200dn_7_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20001206-20010610
+order_93937_IYSUS_tre200dn_8_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20010831-20030522
+order_93937_IYSUS_tre200dn_8_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20010831-20030522
+order_93937_IYSUS_tre200dn_9_data.txt   Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20031103-20160802
+order_93937_IYSUS_tre200dn_9_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20031103-20160802
+order_93937_IYSUS_tre200dn_10_data.txt  Data      Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20161027-20210414
+order_93937_IYSUS_tre200dn_10_legend.txt Legend    Sulden / Schöntaufspitze             Air temperature 2 m above ground; daily minimum             20161027-20210414
+order_93937_SAE_tre200dn_1_data.txt     Data      Säntis                               Air temperature 2 m above ground; daily minimum             18820831-18871229
+order_93937_SAE_tre200dn_1_legend.txt   Legend    Säntis                               Air temperature 2 m above ground; daily minimum             18820831-18871229
+order_93937_SAE_tre200dn_2_data.txt     Data      Säntis                               Air temperature 2 m above ground; daily minimum             18911231-20210414
+order_93937_SAE_tre200dn_2_legend.txt   Legend    Säntis                               Air temperature 2 m above ground; daily minimum             18911231-20210414
+order_93937_SLFTA3_tre200dn_1_data.txt  Data      Taminatal / Schaftäli                Air temperature 2 m above ground; daily minimum             20000925-20210407
+order_93937_SLFTA3_tre200dn_1_legend.txt Legend    Taminatal / Schaftäli                Air temperature 2 m above ground; daily minimum             20000925-20210407
+order_93937_SLFTA2_tre200dn_1_data.txt  Data      Taminatal / Wildsee                  Air temperature 2 m above ground; daily minimum             20000925-20210410
+order_93937_SLFTA2_tre200dn_1_legend.txt Legend    Taminatal / Wildsee                  Air temperature 2 m above ground; daily minimum             20000925-20210410
+order_93937_SLFTAM_tre200dn_1_data.txt  Data      Taminatal / Wildseehorn              Air temperature 2 m above ground; daily minimum             20000925-20210407
+order_93937_SLFTAM_tre200dn_1_legend.txt Legend    Taminatal / Wildseehorn              Air temperature 2 m above ground; daily minimum             20000925-20210407
+order_93937_IYTIM_tre200dn_1_data.txt   Data      Timmelsalm                           Air temperature 2 m above ground; daily minimum             19551231
+order_93937_IYTIM_tre200dn_1_legend.txt Legend    Timmelsalm                           Air temperature 2 m above ground; daily minimum             19551231
+order_93937_IYTIM_tre200dn_2_data.txt   Data      Timmelsalm                           Air temperature 2 m above ground; daily minimum             20151027-20160530
+order_93937_IYTIM_tre200dn_2_legend.txt Legend    Timmelsalm                           Air temperature 2 m above ground; daily minimum             20151027-20160530
+order_93937_IYTIM_tre200dn_3_data.txt   Data      Timmelsalm                           Air temperature 2 m above ground; daily minimum             20171231-20210414
+order_93937_IYTIM_tre200dn_3_legend.txt Legend    Timmelsalm                           Air temperature 2 m above ground; daily minimum             20171231-20210414
+order_93937_TIT_tre200dn_1_data.txt     Data      Titlis                               Air temperature 2 m above ground; daily minimum             19930519-20120616
+order_93937_TIT_tre200dn_1_legend.txt   Legend    Titlis                               Air temperature 2 m above ground; daily minimum             19930519-20120616
+order_93937_TIT_tre200dn_2_data.txt     Data      Titlis                               Air temperature 2 m above ground; daily minimum             20121218-20210414
+order_93937_TIT_tre200dn_2_legend.txt   Legend    Titlis                               Air temperature 2 m above ground; daily minimum             20121218-20210414
+order_93937_SLFTIT_tre200dn_1_data.txt  Data      Titlis                               Air temperature 2 m above ground; daily minimum             20110915-20210414
+order_93937_SLFTIT_tre200dn_1_legend.txt Legend    Titlis                               Air temperature 2 m above ground; daily minimum             20110915-20210414
+order_93937_IYTOH_tre200dn_1_data.txt   Data      Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             19971127
+order_93937_IYTOH_tre200dn_1_legend.txt Legend    Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             19971127
+order_93937_IYTOH_tre200dn_2_data.txt   Data      Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20041111-20200308
+order_93937_IYTOH_tre200dn_2_legend.txt Legend    Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20041111-20200308
+order_93937_IYTOH_tre200dn_3_data.txt   Data      Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20200515
+order_93937_IYTOH_tre200dn_3_legend.txt Legend    Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20200515
+order_93937_IYTOH_tre200dn_4_data.txt   Data      Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20200816-20210414
+order_93937_IYTOH_tre200dn_4_legend.txt Legend    Toblach / Hochebenkofel              Air temperature 2 m above ground; daily minimum             20200816-20210414
+order_93937_IYTRZ_tre200dn_1_data.txt   Data      Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             19821231
+order_93937_IYTRZ_tre200dn_1_legend.txt Legend    Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             19821231
+order_93937_IYTRZ_tre200dn_2_data.txt   Data      Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             19971127-20030522
+order_93937_IYTRZ_tre200dn_2_legend.txt Legend    Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             19971127-20030522
+order_93937_IYTRZ_tre200dn_3_data.txt   Data      Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             20031204-20210414
+order_93937_IYTRZ_tre200dn_3_legend.txt Legend    Trafoi / Zaufenkofel                 Air temperature 2 m above ground; daily minimum             20031204-20210414
+order_93937_SLFTUJ_tre200dn_1_data.txt  Data      Tujetsch / Crispalt                  Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_SLFTUJ_tre200dn_1_legend.txt Legend    Tujetsch / Crispalt                  Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_SLFTU2_tre200dn_1_data.txt  Data      Tujetsch / Culmatsch                 Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_SLFTU2_tre200dn_1_legend.txt Legend    Tujetsch / Culmatsch                 Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_SLFTU3_tre200dn_1_data.txt  Data      Tujetsch / Nual                      Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_SLFTU3_tre200dn_1_legend.txt Legend    Tujetsch / Nual                      Air temperature 2 m above ground; daily minimum             19970916-20210414
+order_93937_IYRBW_tre200dn_1_data.txt   Data      Ulten / Rossbänke                    Air temperature 2 m above ground; daily minimum             19551231
+order_93937_IYRBW_tre200dn_1_legend.txt Legend    Ulten / Rossbänke                    Air temperature 2 m above ground; daily minimum             19551231
+order_93937_IYRBW_tre200dn_2_data.txt   Data      Ulten / Rossbänke                    Air temperature 2 m above ground; daily minimum             20011125-20210413
+order_93937_IYRBW_tre200dn_2_legend.txt Legend    Ulten / Rossbänke                    Air temperature 2 m above ground; daily minimum             20011125-20210413
+order_93937_IYULW_tre200dn_1_data.txt   Data      Ulten / Weissbrunnspitz              Air temperature 2 m above ground; daily minimum             19761231
+order_93937_IYULW_tre200dn_1_legend.txt Legend    Ulten / Weissbrunnspitz              Air temperature 2 m above ground; daily minimum             19761231
+order_93937_IYULW_tre200dn_2_data.txt   Data      Ulten / Weissbrunnspitz              Air temperature 2 m above ground; daily minimum             20121017-20210411
+order_93937_IYULW_tre200dn_2_legend.txt Legend    Ulten / Weissbrunnspitz              Air temperature 2 m above ground; daily minimum             20121017-20210411
+order_93937_SLFUR2_tre200dn_1_data.txt  Data      Urseren / Giltnasen                  Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_SLFUR2_tre200dn_1_legend.txt Legend    Urseren / Giltnasen                  Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_SLFURS_tre200dn_1_data.txt  Data      Urseren / Gross Schijen              Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_SLFURS_tre200dn_1_legend.txt Legend    Urseren / Gross Schijen              Air temperature 2 m above ground; daily minimum             19970819-20210414
+order_93937_SLFILI_tre200dn_1_data.txt  Data      Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20000926-20120701
+order_93937_SLFILI_tre200dn_1_legend.txt Legend    Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20000926-20120701
+order_93937_SLFILI_tre200dn_2_data.txt  Data      Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20120920-20150722
+order_93937_SLFILI_tre200dn_2_legend.txt Legend    Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20120920-20150722
+order_93937_SLFILI_tre200dn_3_data.txt  Data      Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20151008-20210414
+order_93937_SLFILI_tre200dn_3_legend.txt Legend    Val d'Illiez / Pointe des Mossettes  Air temperature 2 m above ground; daily minimum             20151008-20210414
+order_93937_SNPVTR_tre200dn_1_data.txt  Data      Val Trupchun                         Air temperature 2 m above ground; daily minimum             20161028-20180225
+order_93937_SNPVTR_tre200dn_1_legend.txt Legend    Val Trupchun                         Air temperature 2 m above ground; daily minimum             20161028-20180225
+order_93937_SNPVTR_tre200dn_2_data.txt  Data      Val Trupchun                         Air temperature 2 m above ground; daily minimum             20180925-20210414
+order_93937_SNPVTR_tre200dn_2_legend.txt Legend    Val Trupchun                         Air temperature 2 m above ground; daily minimum             20180925-20210414
+order_93937_SLFVLS_tre200dn_1_data.txt  Data      Vals / Piz Aul                       Air temperature 2 m above ground; daily minimum             20010822-20210414
+order_93937_SLFVLS_tre200dn_1_legend.txt Legend    Vals / Piz Aul                       Air temperature 2 m above ground; daily minimum             20010822-20210414
+order_93937_SLFVI2_tre200dn_1_data.txt  Data      Vinadi / Alpetta                     Air temperature 2 m above ground; daily minimum             19980904-20210414
+order_93937_SLFVI2_tre200dn_1_legend.txt Legend    Vinadi / Alpetta                     Air temperature 2 m above ground; daily minimum             19980904-20210414
+order_93937_SLFVIN_tre200dn_1_data.txt  Data      Vinadi / Piz Alpetta                 Air temperature 2 m above ground; daily minimum             19980904-20210414
+order_93937_SLFVIN_tre200dn_1_legend.txt Legend    Vinadi / Piz Alpetta                 Air temperature 2 m above ground; daily minimum             19980904-20210414
+order_93937_SLFRNZ_tre200dn_1_data.txt  Data      Wassen / Rienzenstock                Air temperature 2 m above ground; daily minimum             20081204-20090727
+order_93937_SLFRNZ_tre200dn_1_legend.txt Legend    Wassen / Rienzenstock                Air temperature 2 m above ground; daily minimum             20081204-20090727
+order_93937_SLFRNZ_tre200dn_2_data.txt  Data      Wassen / Rienzenstock                Air temperature 2 m above ground; daily minimum             20091116-20210414
+order_93937_SLFRNZ_tre200dn_2_legend.txt Legend    Wassen / Rienzenstock                Air temperature 2 m above ground; daily minimum             20091116-20210414
+order_93937_IYWEI_tre200dn_1_data.txt   Data      Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             19761231
+order_93937_IYWEI_tre200dn_1_legend.txt Legend    Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             19761231
+order_93937_IYWEI_tre200dn_2_data.txt   Data      Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20121023-20170121
+order_93937_IYWEI_tre200dn_2_legend.txt Legend    Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20121023-20170121
+order_93937_IYWEI_tre200dn_3_data.txt   Data      Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20171231-20200308
+order_93937_IYWEI_tre200dn_3_legend.txt Legend    Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20171231-20200308
+order_93937_IYWEI_tre200dn_4_data.txt   Data      Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20200531-20200730
+order_93937_IYWEI_tre200dn_4_legend.txt Legend    Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20200531-20200730
+order_93937_IYWEI_tre200dn_5_data.txt   Data      Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20201028-20210414
+order_93937_IYWEI_tre200dn_5_legend.txt Legend    Weissenbach / Fadner Alm             Air temperature 2 m above ground; daily minimum             20201028-20210414
+order_93937_WFJ_tre200dn_1_data.txt     Data      Weissfluhjoch                        Air temperature 2 m above ground; daily minimum             19701231-20210414
+order_93937_WFJ_tre200dn_1_legend.txt   Legend    Weissfluhjoch                        Air temperature 2 m above ground; daily minimum             19701231-20210414
+order_93937_SLFHIN_tre200dn_1_data.txt  Data      Wildhaus / Hinterrugg                Air temperature 2 m above ground; daily minimum             20000928-20210414
+order_93937_SLFHIN_tre200dn_1_legend.txt Legend    Wildhaus / Hinterrugg                Air temperature 2 m above ground; daily minimum             20000928-20210414
+order_93937_SLFZE4_tre200dn_1_data.txt  Data      Zermatt / Alp Hermetje               Air temperature 2 m above ground; daily minimum             20041117-20210414
+order_93937_SLFZE4_tre200dn_1_legend.txt Legend    Zermatt / Alp Hermetje               Air temperature 2 m above ground; daily minimum             20041117-20210414
+order_93937_SLFZER_tre200dn_1_data.txt  Data      Zermatt / Platthorn                  Air temperature 2 m above ground; daily minimum             19981009-20210414
+order_93937_SLFZER_tre200dn_1_legend.txt Legend    Zermatt / Platthorn                  Air temperature 2 m above ground; daily minimum             19981009-20210414
+order_93937_SLFZE2_tre200dn_1_data.txt  Data      Zermatt / Triftchumme                Air temperature 2 m above ground; daily minimum             19980903-20210414
+order_93937_SLFZE2_tre200dn_1_legend.txt Legend    Zermatt / Triftchumme                Air temperature 2 m above ground; daily minimum             19980903-20210414
+order_93937_SLFZN2_tre200dn_1_data.txt  Data      Zernez / Pülschezza                  Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_SLFZN2_tre200dn_1_legend.txt Legend    Zernez / Pülschezza                  Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_SLFZNZ_tre200dn_1_data.txt  Data      Zernez / Sarsura Pitschen            Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_SLFZNZ_tre200dn_1_legend.txt Legend    Zernez / Sarsura Pitschen            Air temperature 2 m above ground; daily minimum             20020917-20210414
+order_93937_DLZUG_tre200dn_1_data.txt   Data      Zugspitze                            Air temperature 2 m above ground; daily minimum             19000731-19450429
+order_93937_DLZUG_tre200dn_1_legend.txt Legend    Zugspitze                            Air temperature 2 m above ground; daily minimum             19000731-19450429
+order_93937_DLZUG_tre200dn_2_data.txt   Data      Zugspitze                            Air temperature 2 m above ground; daily minimum             19450814-20210414
+order_93937_DLZUG_tre200dn_2_legend.txt Legend    Zugspitze                            Air temperature 2 m above ground; daily minimum             19450814-20210414

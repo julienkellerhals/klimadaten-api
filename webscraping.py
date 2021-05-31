@@ -1,27 +1,99 @@
 import re
+import io
+import os
 import math
 import time
-import yaml
+import zipfile
+import threading
 import numpy as np
+from numpy.core.numeric import NaN
 import pandas as pd
+from lxml import etree
 from datetime import date
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import NoSuchElementException
+# from selenium.common.exceptions import TimeoutException
+# from selenium.common.exceptions import NoSuchElementException
 import download
 
 
+username = "julien.kellerhals@students.fhnw.ch"
+password = "CF767F6B27"
+
+
+def createJs(value):
+    """ Creates js for idaweb form
+
+    Args:
+        value (str): idaweb checkbox value
+
+    Returns:
+        str: Javascript to be executed on page
+    """
+
+    js = (
+        "var form = document.getElementsByTagName('form')[0];"  # get form
+        "var checkbox = document.createElement('input');"  # create input
+        "checkbox.checked = true;"  # set input to checked
+        "checkbox.name = 'selection';"  # set input name
+        f"checkbox.value = '{value}';"  # set input value
+        "updateCount(checkbox.checked);"  # update count
+        "form.appendChild(checkbox);"  # add checkbox
+    )
+    return js
+
+
+def createOrderName(config, orderNumber, now):
+    """ Creates order name
+
+    Args:
+        config (xml): Config from idawebConfig.xml
+        orderNumber (str): Order number
+        now (str): Date time from order
+
+    Returns:
+        str: Order name for idaweb data
+    """
+
+    orderName = f"{config.attrib['group'][0]}" \
+                f"{config.attrib['granularity'].lower()}" \
+                f"{orderNumber}_{now}"
+    return orderName
+
+
 def readConfig(configFileName):
-    with open(configFileName) as f:
-        config = yaml.load(f, Loader=yaml.FullLoader)
-    return config
+    """ Read config file
+
+    Args:
+        configFileName (str): config file name
+
+    Returns:
+        list: Configuration in config file
+    """
+
+    configList = []
+
+    tree = etree.parse(configFileName)
+    root = tree.getroot()
+    for config in root:
+        configList.append(config)
+    return configList
 
 
 def indexMarks(nrows, chunk_size):
+    """ Return idx range for df spliting
+
+    Args:
+        nrows (int): Number of rows in dataframe
+        chunk_size (int): Target chunk size
+
+    Returns:
+        range: Index range for split
+    """
+
     indexMarksRange = range(
         chunk_size,
         math.ceil(nrows / chunk_size) * chunk_size,
@@ -31,11 +103,31 @@ def indexMarks(nrows, chunk_size):
 
 
 def splitDf(dfm, chunk_size):
+    """ Splits df into specified chunks
+
+    Args:
+        dfm (df): Input dataframe
+        chunk_size (int): Target chunk size for df
+
+    Returns:
+        np: Splited df
+    """
+
     indices = indexMarks(dfm.shape[0], chunk_size)
     return np.split(dfm, indices)
 
 
 def getLastPageBool(driver, lastPageBool):
+    """ Checks if the driver is at the last table page
+
+    Args:
+        driver (driver): Web driver
+        lastPageBool (bool): If last page
+
+    Returns:
+        bool: If last page
+    """
+
     arrowPath = WebDriverWait(driver, 3).until(
         EC.presence_of_element_located(
             (By.XPATH, '//*[@id="body_block"]/form/div[5]')
@@ -53,6 +145,16 @@ def getLastPageBool(driver, lastPageBool):
 
 
 def getUntil(since, timeDeltaList):
+    """ Creates until time for data request (max. today)
+
+    Args:
+        since (datetime): Since datetime
+        timeDeltaList (array): Delta to add on since date
+
+    Returns:
+        datetime: Incremented since date
+    """
+
     if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
             years=timeDeltaList[0])).date() < date.today():
         until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
@@ -62,7 +164,36 @@ def getUntil(since, timeDeltaList):
     return until
 
 
-def scrape_meteoschweiz(driver, engine):
+# main function
+def scrape_meteoschweiz(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_meteoschweiz,
+        args=(driver, engine, announcer)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
+    """ Scrape data from meteo suisse
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+        announcer (announcer): Message announcer
+
+    Returns:
+        str: Scrapped data
+    """
+
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
+
     url_list = []
     allStationsDf = pd.DataFrame(columns=[
         'year',
@@ -81,10 +212,16 @@ def scrape_meteoschweiz(driver, engine):
         "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
     )
 
-    for url in urls:
-        url_list.append(url.get_attribute('href'))
+    for urlEl in urls:
+        url = urlEl.get_attribute('href')
 
-        dataPage, _, _ = download.getRequest(url.get_attribute('href'))
+        msgTxt = "Scrapping: " + url
+        msg = announcer.format_sse(data=msgTxt)
+        announcer.announce(msg=msg)
+
+        url_list.append(url)
+
+        dataPage, _, _ = download.getRequest(url)
         data = dataPage.text.splitlines()
 
         nestedData = []
@@ -132,6 +269,8 @@ def scrape_meteoschweiz(driver, engine):
         errors='coerce'
     )
 
+    allStationsDf["load_date"] = pd.to_datetime('today').normalize()
+
     allStationsDf.to_sql(
         'meteoschweiz_t',
         engine,
@@ -140,132 +279,312 @@ def scrape_meteoschweiz(driver, engine):
         index=False
     )
 
+    engine.execute(
+        "REFRESH MATERIALIZED VIEW stage.meteoschweiz_count_mv"
+    )
+    engine.execute(
+        "REFRESH MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv"
+    )
+
     # allStationsDf.isnull().sum().head()
     # pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
     # allStationsDf.dtypes
+
+    # TODO See what to return
     return str(allStationsDf)
 
 
-def scrape_idaweb(driver, engine):
+# main function
+def scrape_idaweb(abstractDriver, instance, announcer):
+    driver = abstractDriver.getDriver()
+    engine = instance.getEngine()
+    x = threading.Thread(
+        target=_scrape_idaweb,
+        args=(driver, engine)
+    )
+    x.start()
+
+    return announcer
+
+
+def _scrape_idaweb(driver, engine, lastRefresh="01.01.1800"):
+    if not os.path.isdir("data"):
+        os.mkdir("data")
+    savedDocuments = run_scrape_idaweb(driver, engine, lastRefresh)
+    savedDocumentsDf = pd.DataFrame(
+        savedDocuments,
+        columns=["reference"]
+    )
+    orderDf = scrapeIdawebOrders(driver)
+    orderDf = orderDf.merge(
+        savedDocumentsDf,
+        on="reference",
+        how="inner"
+    )
+    inProductionBool = True
+    while inProductionBool:
+        if len(orderDf["status"].unique()) > 1:
+            time.sleep(300)
+            orderDf = scrapeIdawebOrders(driver)
+            orderDf = orderDf.merge(
+                savedDocumentsDf,
+                on="reference",
+                how="inner"
+            )
+        else:
+            inProductionBool = False
+            loginReq = download.getRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do"
+            )[0]
+            cred = {
+                "method": "validate",
+                "user": username,
+                "password": password
+            }
+            loginReq = download.postRequest(
+                "https://gate.meteoswiss.ch/idaweb/login.do",
+                loginReq.cookies,
+                cred
+            )[0]
+    for downloadUrl in orderDf["downloadLink"]:
+        downloadReq = download.getRequest(
+            downloadUrl,
+            loginReq.cookies
+        )[0]
+        print(downloadUrl)
+        dataZip = zipfile.ZipFile(io.BytesIO(downloadReq.content))
+        dataZip.extractall("data")
+
+    return orderDf
+
+
+def run_scrape_idaweb(driver, engine, lastRefresh):
+    """ Scrape idaweb
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+
+    Returns:
+        str: Downloaded documents list
+    """
+
     saved_documents = []
-    configFileName = "idawebConfig.yaml"
+    configFileName = "idawebConfig.xml"
+
+    # read config file
+    configList = readConfig(configFileName)
 
     # login
     scrape_idaweb_login(driver)
 
-    # read config file
-    config = readConfig(configFileName)
+    # for every variable in idawebConfig.xml
+    for config in configList:
+        time.sleep(30)
 
-    for searchGranularity in config:
-        for searchGroupDict in config[searchGranularity]:
-            searchGroup = list(searchGroupDict.keys())[0]
-            for searchName in searchGroupDict[searchGroup]:
-                orderNumber = 1
-                # create order name
-                now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
+        orderNumber = 1
+        # get date and time for order name
+        now = datetime.strftime(datetime.now(), '%Y-%m-%d_%H:%M:%S')
 
+        # select params according to confic in param preselecton
+        idaWebParameterPortal(driver)
+        idaWebParameterPreselection(
+            driver,
+            config.attrib['group'],
+            config.attrib['granularity'],
+            config.text
+        )
+
+        # add the height selection
+        heightDeltaList = [
+            3500,
+            2000,
+            1000,
+            500,
+            350,
+            200,
+            100,
+            50,
+            35,
+            20,
+            10,
+            5,
+            3,
+            2,
+            1
+        ]
+        heightMin = 200
+        idaWebStationPreselection(
+            driver,
+            f"{heightMin}..{heightMin + heightDeltaList[0]}"
+        )
+
+        # Start time preselection
+        if type(lastRefresh) is pd.DataFrame:
+            since = lastRefresh["valid_from"].loc[
+                lastRefresh["meas_name"] == config.text
+            ].reset_index(drop=True)
+            if since[0] is NaN:
+                since = "01.01.1800"
+            else:
+                since = since[0].strftime('%d.%m.%Y')
+        else:
+            since = lastRefresh
+        until = date.today().strftime('%d.%m.%Y')
+        idaWebTimePreselection(driver, since, until)
+
+        tooManyEntriesBool = True
+        noEntriesBool = False
+        notFinished = True
+
+        # selection and ordering of data
+        while notFinished:
+            # find out if there are too many or too little entries
+            tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
+                driver,
+                tooManyEntriesBool,
+                noEntriesBool
+            )
+            # try selecting with select all as long
+            # as there are elements in timeDeltaList
+            if not len(heightDeltaList) == 0:
+
+                # if hight delta too big, make it smaller
+                if tooManyEntriesBool:
+                    heightDeltaList.remove(heightDeltaList[0])
+                    idaWebStationPreselection(
+                        driver,
+                        f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                    )
+                    idaWebTimePreselection(driver, since, until)
+                else:
+                    # if the selection has entries, but no too many
+                    # order the data, move the hight period, redo order process
+                    if not noEntriesBool:
+                        idaWebDataInventory(driver)
+                        orderName = createOrderName(
+                            config,
+                            orderNumber,
+                            now
+                        )
+                        if not idaWebCheckOrder(driver):
+                            idaWebOrder(driver, orderName)
+                            orderNumber += 1
+
+                            idaWebSummary(driver)
+                            idaWebAgbs(driver)
+
+                            # Add order to list
+                            saved_documents.append(orderName)
+
+                            # go to next param if we have selected all data
+                            if heightMin + heightDeltaList[0] >= 3700:
+                                notFinished = False
+                                break
+
+                            # Go back to start and continue
+                            heightMin = heightMin + heightDeltaList[0]
+                            heightDeltaList = [
+                                3500,
+                                2000,
+                                1000,
+                                500,
+                                350,
+                                200,
+                                100,
+                                50,
+                                35,
+                                20,
+                                10,
+                                5,
+                                3,
+                                2,
+                                1
+                            ]
+
+                            # redo the whole order process
+                            idaWebParameterPortal(driver)
+                            idaWebParameterPreselection(
+                                driver,
+                                config.attrib['group'],
+                                config.attrib['granularity'],
+                                config.text
+                            )
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
+                            idaWebTimePreselection(driver, since, until)
+
+                        # if selection has more than 2'000'000 values
+                        else:
+                            # make heightframe smaller
+                            heightDeltaList.remove(heightDeltaList[0])
+                            idaWebStationPreselection(
+                                driver,
+                                f"{heightMin}.." +
+                                f"{heightMin + heightDeltaList[0]}"
+                            )
+                            idaWebTimePreselection(driver, since, until)
+
+                    # if selection has no entries, change time period
+                    else:
+                        notFinished = False
+
+            # select junks manually if select all doesn't work
+            # TODO make it work
+            else:
+                idaWebDataInventoryManual(driver)
+                inventoryDf = scrapeIdawebInventory(driver)
+                chunks = splitDf(inventoryDf, 400)
+                for chunk in chunks:
+                    for value in chunk["value"]:
+                        js = createJs(value)
+                        driver.execute_script(js)
+
+                orderName = createOrderName(config, orderNumber, now)
+                idaWebOrder(driver, orderName)
+                orderNumber += 1
+
+                idaWebSummary(driver)
+                idaWebAgbs(driver)
+
+                # Add order to list
+                saved_documents.append(orderName)
+
+                # redo the whole order process
                 idaWebParameterPortal(driver)
                 idaWebParameterPreselection(
                     driver,
-                    searchGroup,
-                    searchGranularity,
-                    searchName
+                    config.attrib['group'],
+                    config.attrib['granularity'],
+                    config.text
                 )
-                idaWebStationPreselection(driver)
-
-                # Start time preselection
-                since = "01.01.1800"
-                until = date.today().strftime('%d.%m.%Y')
+                idaWebStationPreselection(
+                    driver,
+                    f"{heightMin}..{heightMin + heightDeltaList[0]}"
+                )
                 idaWebTimePreselection(driver, since, until)
-
-                tooManyEntriesBool = True
-                noEntriesBool = False
-                timeDeltaList = [1000, 100, 10, 1]
-                while True:
-                    tooManyEntriesBool, noEntriesBool = idaWebDataInventoryCount(
-                        driver,
-                        tooManyEntriesBool,
-                        noEntriesBool
-                    )
-                    if not len(timeDeltaList) == 0:
-                        if tooManyEntriesBool:
-                            timeDeltaList.remove(timeDeltaList[0])
-                            until = getUntil(since, timeDeltaList)
-                            idaWebTimePreselection(driver, since, until)
-                        else:
-                            if not noEntriesBool:
-                                idaWebDataInventory(driver)
-
-                                orderName = f'{searchGroup[0]}' \
-                                            f'{searchGranularity.lower()}' \
-                                            f'{orderNumber}_{now}'
-                                idaWebOrder(driver, orderName)
-                                orderNumber += 1
-
-                                idaWebSummary(driver)
-                                idaWebAgbs(driver)
-
-                                # Go back to start and continue
-                                since = until
-                                until = getUntil(since, timeDeltaList)
-
-                                # redo the whole order process
-                                idaWebParameterPortal(driver)
-                                idaWebParameterPreselection(
-                                    driver,
-                                    searchGroup,
-                                    searchGranularity,
-                                    searchName
-                                )
-                                idaWebStationPreselection(driver)
-                                idaWebTimePreselection(driver, since, until)
-
-                            else:
-                                since = until
-                                until = getUntil(since, timeDeltaList)
-                                idaWebTimePreselection(driver, since, until)
-
-                    else:
-                        idaWebDataInventoryManual(driver)
-                        inventoryDf = scrapeIdawebInventory(driver)
-                        chunks = splitDf(inventoryDf, 400)
-                        for chunk in chunks:
-                            for value in chunk["value"]:
-                                js = (
-                                    "var form = document.getElementsByTagName('form')[0];"  # get form
-                                    "var checkbox = document.createElement('input');"  # create input
-                                    "checkbox.checked = true;"  # set input to checked
-                                    "checkbox.name = 'selection';"  # set input name
-                                    f"checkbox.value = '{value}';"  # set input value
-                                    "updateCount(checkbox.checked);"  # update count
-                                    "form.appendChild(checkbox);"  # add checkbox
-                                )
-                                driver.execute_script(js)
-
-                        # create order name
-                        orderName = f'{searchGroup[0]}' \
-                                    f'{searchGranularity.lower()}' \
-                                    f'{orderNumber}_{now}'
-                        idaWebOrder(driver, orderName)
-                        orderNumber += 1
-
-                        idaWebSummary(driver)
-                        idaWebAgbs(driver)
-
-                        # Add roder to list
-                        saved_documents.append(orderName)
 
     print(saved_documents)
 
-    return str(saved_documents)
+    return saved_documents
 
 
 def scrape_idaweb_login(driver):
+    """ Login into idaweb
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     driver.get("https://gate.meteoswiss.ch/idaweb/login.do")
 
+    # login data user: joel.grosjean@students.fhnw.ch password: AGEJ649GJAL02
     # log into page
-    driver.find_element_by_name('user').send_keys('simon.schmid1@fhnw.ch')
-    driver.find_element_by_name('password').send_keys('AF3410985C')
+    driver.find_element_by_name('user').send_keys(username)
+    driver.find_element_by_name('password').send_keys(password)
     driver.find_element_by_xpath(
         '//*[@id="content_block"]/form/fieldset/'
         + 'table/tbody/tr[3]/td/table/tbody/tr/td[1]/input'
@@ -273,6 +592,12 @@ def scrape_idaweb_login(driver):
 
 
 def idaWebParameterPortal(driver):
+    """ Go to parameter portal
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to parameter portal
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[5]/a').click()
@@ -283,6 +608,15 @@ def idaWebParameterPreselection(
         searchGroup,
         searchGranularity,
         searchName):
+    """ Go to parameter preselection, filter and select all
+
+    Args:
+        driver (driver): Selenium driver
+        searchGroup (str): Search group (lightning, wind, ...)
+        searchGranularity (str): Search granularity (D, M, ...)
+        searchName (str): Parameter name
+    """
+
     # select search parameter
     driver.find_element_by_xpath(
         f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]'
@@ -305,10 +639,34 @@ def idaWebParameterPreselection(
     ).click()
 
 
-def idaWebStationPreselection(driver):
+def idaWebStationPreselection(driver, height):
+    """ Go to station preselection and select all
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to station preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Station preselection")]'
+    ).click()
+
+    # click deselect
+    driver.find_element_by_xpath(
+        '//*[@id="list_actions"]/input[2]'
+    ).click()
+
+    # clear height input
+    driver.find_element_by_name('height').clear()
+
+    # select height
+    driver.find_element_by_name(
+        'height'
+    ).send_keys(str(height))
+
+    # click search
+    driver.find_element_by_xpath(
+        '//*[@id="filter_actions"]/input[1]'
     ).click()
 
     # click select all
@@ -318,6 +676,14 @@ def idaWebStationPreselection(driver):
 
 
 def idaWebTimePreselection(driver, since, until):
+    """ Go to web time preselection and filer
+
+    Args:
+        driver (driver): Selenium driver
+        since (str): Since date
+        until (str): Until date
+    """
+
     # go to time preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Time preselection")]'
@@ -333,6 +699,17 @@ def idaWebTimePreselection(driver, since, until):
 
 
 def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
+    """ Count entries in inventory
+
+    Args:
+        driver (driver): Selenium driver
+        tooManyEntriesBool (bool): To many entries
+        noEntriesBool (bool): No entries
+
+    Returns:
+        bools: Bools with inventory result
+    """
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -356,6 +733,12 @@ def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
 
 
 def idaWebDataInventory(driver):
+    """ Go to data inventory and select all
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -368,6 +751,14 @@ def idaWebDataInventory(driver):
 
 
 def idaWebDataInventoryManual(driver):
+    """ Go to inventory and .... to be implemented
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
+    # TODO implement run js here?
+
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -376,7 +767,30 @@ def idaWebDataInventoryManual(driver):
     print("Here")
 
 
+def idaWebCheckOrder(driver):
+    tooManyValuesBool = False
+    driver.find_element_by_xpath(
+        '//*[@id="wizard"]//*[contains(., "Order")]'
+    ).click()
+
+    try:
+        alert = driver.switch_to.alert
+        alert.accept()
+        tooManyValuesBool = True
+    except EC.NoAlertPresentException:
+        tooManyValuesBool = False
+
+    return tooManyValuesBool
+
+
 def idaWebOrder(driver, orderName):
+    """ Go to order and order data
+
+    Args:
+        driver (driver): Selenium driver
+        orderName (str): Order name
+    """
+
     # go to order
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -395,6 +809,12 @@ def idaWebOrder(driver, orderName):
 
 
 def idaWebSummary(driver):
+    """ Go to summary
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to summary
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Summary")]'
@@ -402,6 +822,12 @@ def idaWebSummary(driver):
 
 
 def idaWebAgbs(driver):
+    """ Go to agbs and accepts
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     # go to general terms and conditions
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "General Terms and Conditions")]'
@@ -423,6 +849,15 @@ def idaWebAgbs(driver):
 
 
 def scrapeIdawebInventory(driver):
+    """ Scrape data inventory for manual select
+
+    Args:
+        driver (driver): Selenium driver
+
+    Returns:
+        df: Dataframe with all tables concated
+    """
+
     rowHeaders = [
         "station",
         "alt",
@@ -455,7 +890,26 @@ def scrapeIdawebInventory(driver):
     return inventoryDf
 
 
+def idaWebOrderPortal(driver):
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[7]/a').click()
+
+
 def scrapeIdawebOrders(driver):
+    """ Scrape made orders
+
+    Args:
+        driver (driver): Selenium driver
+
+    Returns:
+        df: Dataframe containing all orders
+    """
+
+    orderUrl = "https://gate.meteoswiss.ch/idaweb/system/ordersList.do"
+    if driver.current_url != orderUrl:
+        scrape_idaweb_login(driver)
+        idaWebOrderPortal(driver)
+
     rowHeaders = [
         "no",
         "reference",
@@ -487,5 +941,8 @@ def scrapeIdawebOrders(driver):
         lastPageBool = getLastPageBool(driver, lastPageBool)
 
     orderDf = pd.DataFrame(data=orderDataList)
+    driver.find_element_by_xpath(
+        '//*[@id="body_block"]/form/div[5]/a[@title="First page"]'
+    ).click()
 
     return orderDf

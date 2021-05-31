@@ -1,0 +1,580 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 93920
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_93920_TAE_tre200dx_1_data.txt     Data      Aadorf / Tänikon                     Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_TAE_tre200dx_1_legend.txt   Legend    Aadorf / Tänikon                     Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_AAR_tre200dx_1_data.txt     Data      Aarau-Unterentfelden                 Air temperature 2 m above ground; daily maximum             19301231-19850227
+order_93920_AAR_tre200dx_1_legend.txt   Legend    Aarau-Unterentfelden                 Air temperature 2 m above ground; daily maximum             19301231-19850227
+order_93920_COM_tre200dx_1_data.txt     Data      Acquarossa / Comprovasco             Air temperature 2 m above ground; daily maximum             19880120-20210414
+order_93920_COM_tre200dx_1_legend.txt   Legend    Acquarossa / Comprovasco             Air temperature 2 m above ground; daily maximum             19880120-20210414
+order_93920_ALP_tre200dx_1_data.txt     Data      Alpnach                              Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_ALP_tre200dx_1_legend.txt   Legend    Alpnach                              Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_ALT_tre200dx_1_data.txt     Data      Altdorf                              Air temperature 2 m above ground; daily maximum             19081231-20210414
+order_93920_ALT_tre200dx_1_legend.txt   Legend    Altdorf                              Air temperature 2 m above ground; daily maximum             19081231-20210414
+order_93920_DLALH_tre200dx_1_data.txt   Data      Altheim                              Air temperature 2 m above ground; daily maximum             20040731-20210414
+order_93920_DLALH_tre200dx_1_legend.txt Legend    Altheim                              Air temperature 2 m above ground; daily maximum             20040731-20210414
+order_93920_DLALM_tre200dx_1_data.txt   Data      Altomünster                          Air temperature 2 m above ground; daily maximum             19541231-20210414
+order_93920_DLALM_tre200dx_1_legend.txt Legend    Altomünster                          Air temperature 2 m above ground; daily maximum             19541231-20210414
+order_93920_ALS_tre200dx_1_data.txt     Data      Altstätten, SG                       Air temperature 2 m above ground; daily maximum             19711031-19961230
+order_93920_ALS_tre200dx_1_legend.txt   Legend    Altstätten, SG                       Air temperature 2 m above ground; daily maximum             19711031-19961230
+order_93920_DLAME_tre200dx_1_data.txt   Data      Amerang / Pfaffing                   Air temperature 2 m above ground; daily maximum             19931231-20210414
+order_93920_DLAME_tre200dx_1_legend.txt Legend    Amerang / Pfaffing                   Air temperature 2 m above ground; daily maximum             19931231-20210414
+order_93920_TGAMR_tre200dx_1_data.txt   Data      Amriswil                             Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGAMR_tre200dx_1_legend.txt Legend    Amriswil                             Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGAMR_tre200dx_2_data.txt   Data      Amriswil                             Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGAMR_tre200dx_2_legend.txt Legend    Amriswil                             Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGAMR_tre200dx_3_data.txt   Data      Amriswil                             Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGAMR_tre200dx_3_legend.txt Legend    Amriswil                             Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGARE_tre200dx_1_data.txt   Data      Arenenberg                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGARE_tre200dx_1_legend.txt Legend    Arenenberg                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGARE_tre200dx_2_data.txt   Data      Arenenberg                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGARE_tre200dx_2_legend.txt Legend    Arenenberg                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGARE_tre200dx_3_data.txt   Data      Arenenberg                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGARE_tre200dx_3_legend.txt Legend    Arenenberg                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_DLAUG_tre200dx_1_data.txt   Data      Augsburg                             Air temperature 2 m above ground; daily maximum             19461231-20210414
+order_93920_DLAUG_tre200dx_1_legend.txt Legend    Augsburg                             Air temperature 2 m above ground; daily maximum             19461231-20210414
+order_93920_RAG_tre200dx_1_data.txt     Data      Bad Ragaz                            Air temperature 2 m above ground; daily maximum             19380831-20210414
+order_93920_RAG_tre200dx_1_legend.txt   Legend    Bad Ragaz                            Air temperature 2 m above ground; daily maximum             19380831-20210414
+order_93920_IYBAR_tre200dx_1_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19761231-19771230
+order_93920_IYBAR_tre200dx_1_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19761231-19771230
+order_93920_IYBAR_tre200dx_2_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19831231-19881230
+order_93920_IYBAR_tre200dx_2_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19831231-19881230
+order_93920_IYBAR_tre200dx_3_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19891231-19951230
+order_93920_IYBAR_tre200dx_3_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19891231-19951230
+order_93920_IYBAR_tre200dx_4_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19971231-20110227
+order_93920_IYBAR_tre200dx_4_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             19971231-20110227
+order_93920_IYBAR_tre200dx_5_data.txt   Data      Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             20110831-20210414
+order_93920_IYBAR_tre200dx_5_legend.txt Legend    Barbian / Kollmann                   Air temperature 2 m above ground; daily maximum             20110831-20210414
+order_93920_MMBDK_tre200dx_1_data.txt   Data      Bergdietikon                         Air temperature 2 m above ground; daily maximum             20131231-20140923
+order_93920_MMBDK_tre200dx_1_legend.txt Legend    Bergdietikon                         Air temperature 2 m above ground; daily maximum             20131231-20140923
+order_93920_BER_tre200dx_1_data.txt     Data      Bern / Zollikofen                    Air temperature 2 m above ground; daily maximum             18631231-20210414
+order_93920_BER_tre200dx_1_legend.txt   Legend    Bern / Zollikofen                    Air temperature 2 m above ground; daily maximum             18631231-20210414
+order_93920_NABBER_tre200dx_1_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; daily maximum             19910226-19991205
+order_93920_NABBER_tre200dx_1_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; daily maximum             19910226-19991205
+order_93920_NABBER_tre200dx_2_data.txt  Data      Bern-Bollwerk                        Air temperature 2 m above ground; daily maximum             20001215-20210414
+order_93920_NABBER_tre200dx_2_legend.txt Legend    Bern-Bollwerk                        Air temperature 2 m above ground; daily maximum             20001215-20210414
+order_93920_NEBEV_tre200dx_1_data.txt   Data      Bevaix                               Air temperature 2 m above ground; daily maximum             20180906-20210414
+order_93920_NEBEV_tre200dx_1_legend.txt Legend    Bevaix                               Air temperature 2 m above ground; daily maximum             20180906-20210414
+order_93920_BEBIL_tre200dx_1_data.txt   Data      Biel / Bözingen                      Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BEBIL_tre200dx_1_legend.txt Legend    Biel / Bözingen                      Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BEBIL_tre200dx_2_data.txt   Data      Biel / Bözingen                      Air temperature 2 m above ground; daily maximum             20140902-20140907
+order_93920_BEBIL_tre200dx_2_legend.txt Legend    Biel / Bözingen                      Air temperature 2 m above ground; daily maximum             20140902-20140907
+order_93920_BIL_tre200dx_1_data.txt     Data      Biel/Bienne                          Air temperature 2 m above ground; daily maximum             19581231-20111230
+order_93920_BIL_tre200dx_1_legend.txt   Legend    Biel/Bienne                          Air temperature 2 m above ground; daily maximum             19581231-20111230
+order_93920_BIZ_tre200dx_1_data.txt     Data      Bischofszell                         Air temperature 2 m above ground; daily maximum             20100310-20210414
+order_93920_BIZ_tre200dx_1_legend.txt   Legend    Bischofszell                         Air temperature 2 m above ground; daily maximum             20100310-20210414
+order_93920_MMBOY_tre200dx_1_data.txt   Data      Boudry                               Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMBOY_tre200dx_1_legend.txt Legend    Boudry                               Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_IYBRI_tre200dx_1_data.txt   Data      Brixen / Vahrn                       Air temperature 2 m above ground; daily maximum             19551231-19681230
+order_93920_IYBRI_tre200dx_1_legend.txt Legend    Brixen / Vahrn                       Air temperature 2 m above ground; daily maximum             19551231-19681230
+order_93920_IYBRI_tre200dx_2_data.txt   Data      Brixen / Vahrn                       Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_IYBRI_tre200dx_2_legend.txt Legend    Brixen / Vahrn                       Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_DLBUC_tre200dx_1_data.txt   Data      Buchenbach                           Air temperature 2 m above ground; daily maximum             19900930-20210414
+order_93920_DLBUC_tre200dx_1_legend.txt Legend    Buchenbach                           Air temperature 2 m above ground; daily maximum             19900930-20210414
+order_93920_UBB_tre200dx_1_data.txt     Data      Bözberg                              Air temperature 2 m above ground; daily maximum             19760630-19941230
+order_93920_UBB_tre200dx_1_legend.txt   Legend    Bözberg                              Air temperature 2 m above ground; daily maximum             19760630-19941230
+order_93920_TICMD_tre200dx_1_data.txt   Data      Camedo                               Air temperature 2 m above ground; daily maximum             20141201-20210414
+order_93920_TICMD_tre200dx_1_legend.txt Legend    Camedo                               Air temperature 2 m above ground; daily maximum             20141201-20210414
+order_93920_TICAM_tre200dx_1_data.txt   Data      Camignolo                            Air temperature 2 m above ground; daily maximum             20091012-20210414
+order_93920_TICAM_tre200dx_1_legend.txt Legend    Camignolo                            Air temperature 2 m above ground; daily maximum             20091012-20210414
+order_93920_TIBIG_tre200dx_1_data.txt   Data      Cavergno Bignasco                    Air temperature 2 m above ground; daily maximum             20110224-20210414
+order_93920_TIBIG_tre200dx_1_legend.txt Legend    Cavergno Bignasco                    Air temperature 2 m above ground; daily maximum             20110224-20210414
+order_93920_CEV_tre200dx_1_data.txt     Data      Cevio                                Air temperature 2 m above ground; daily maximum             20131001-20210414
+order_93920_CEV_tre200dx_1_legend.txt   Legend    Cevio                                Air temperature 2 m above ground; daily maximum             20131001-20210414
+order_93920_CHZ_tre200dx_1_data.txt     Data      Cham                                 Air temperature 2 m above ground; daily maximum             19930610-20140330
+order_93920_CHZ_tre200dx_1_legend.txt   Legend    Cham                                 Air temperature 2 m above ground; daily maximum             19930610-20140330
+order_93920_CHZ_tre200dx_2_data.txt     Data      Cham                                 Air temperature 2 m above ground; daily maximum             20140630-20210414
+order_93920_CHZ_tre200dx_2_legend.txt   Legend    Cham                                 Air temperature 2 m above ground; daily maximum             20140630-20210414
+order_93920_DLCHI_tre200dx_1_data.txt   Data      Chieming                             Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLCHI_tre200dx_1_legend.txt Legend    Chieming                             Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_CPP_tre200dx_1_data.txt     Data      Chippis                              Air temperature 2 m above ground; daily maximum             19581231-19701230
+order_93920_CPP_tre200dx_1_legend.txt   Legend    Chippis                              Air temperature 2 m above ground; daily maximum             19581231-19701230
+order_93920_CHU_tre200dx_1_data.txt     Data      Chur                                 Air temperature 2 m above ground; daily maximum             19571231-20210414
+order_93920_CHU_tre200dx_1_legend.txt   Legend    Chur                                 Air temperature 2 m above ground; daily maximum             19571231-20210414
+order_93920_CBS_tre200dx_1_data.txt     Data      Châbles                              Air temperature 2 m above ground; daily maximum             19641231-19801230
+order_93920_CBS_tre200dx_1_legend.txt   Legend    Châbles                              Air temperature 2 m above ground; daily maximum             19641231-19801230
+order_93920_TICOM_tre200dx_1_data.txt   Data      Comano                               Air temperature 2 m above ground; daily maximum             20091012-20151202
+order_93920_TICOM_tre200dx_1_legend.txt Legend    Comano                               Air temperature 2 m above ground; daily maximum             20091012-20151202
+order_93920_TICOM_tre200dx_2_data.txt   Data      Comano                               Air temperature 2 m above ground; daily maximum             20160203-20160702
+order_93920_TICOM_tre200dx_2_legend.txt Legend    Comano                               Air temperature 2 m above ground; daily maximum             20160203-20160702
+order_93920_CRM_tre200dx_1_data.txt     Data      Cressier                             Air temperature 2 m above ground; daily maximum             19911023-20210414
+order_93920_CRM_tre200dx_1_legend.txt   Legend    Cressier                             Air temperature 2 m above ground; daily maximum             19911023-20210414
+order_93920_DEM_tre200dx_1_data.txt     Data      Delémont                             Air temperature 2 m above ground; daily maximum             19581231-20210414
+order_93920_DEM_tre200dx_1_legend.txt   Legend    Delémont                             Air temperature 2 m above ground; daily maximum             19581231-20210414
+order_93920_DLDEU_tre200dx_1_data.txt   Data      Deuselbach                           Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLDEU_tre200dx_1_legend.txt Legend    Deuselbach                           Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_TGDIE_tre200dx_1_data.txt   Data      Diessenhofen                         Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGDIE_tre200dx_1_legend.txt Legend    Diessenhofen                         Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGDIE_tre200dx_2_data.txt   Data      Diessenhofen                         Air temperature 2 m above ground; daily maximum             20150909-20151123
+order_93920_TGDIE_tre200dx_2_legend.txt Legend    Diessenhofen                         Air temperature 2 m above ground; daily maximum             20150909-20151123
+order_93920_TGDIE_tre200dx_3_data.txt   Data      Diessenhofen                         Air temperature 2 m above ground; daily maximum             20160211-20210414
+order_93920_TGDIE_tre200dx_3_legend.txt Legend    Diessenhofen                         Air temperature 2 m above ground; daily maximum             20160211-20210414
+order_93920_DLDIG_tre200dx_1_data.txt   Data      Dillingen                            Air temperature 2 m above ground; daily maximum             20061130-20210414
+order_93920_DLDIG_tre200dx_1_legend.txt Legend    Dillingen                            Air temperature 2 m above ground; daily maximum             20061130-20210414
+order_93920_TGDUS_tre200dx_1_data.txt   Data      Dussnang                             Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGDUS_tre200dx_1_legend.txt Legend    Dussnang                             Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGDUS_tre200dx_2_data.txt   Data      Dussnang                             Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGDUS_tre200dx_2_legend.txt Legend    Dussnang                             Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGDUS_tre200dx_3_data.txt   Data      Dussnang                             Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGDUS_tre200dx_3_legend.txt Legend    Dussnang                             Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_DUB_tre200dx_1_data.txt     Data      Dübendorf                            Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_DUB_tre200dx_1_legend.txt   Legend    Dübendorf                            Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_NABDUE_tre200dx_1_data.txt  Data      Dübendorf / Giessen                  Air temperature 2 m above ground; daily maximum             19901231-20210414
+order_93920_NABDUE_tre200dx_1_legend.txt Legend    Dübendorf / Giessen                  Air temperature 2 m above ground; daily maximum             19901231-20210414
+order_93920_DLEBE_tre200dx_1_data.txt   Data      Ebersberg                            Air temperature 2 m above ground; daily maximum             19771231-19890929
+order_93920_DLEBE_tre200dx_1_legend.txt Legend    Ebersberg                            Air temperature 2 m above ground; daily maximum             19771231-19890929
+order_93920_DLEBE_tre200dx_2_data.txt   Data      Ebersberg                            Air temperature 2 m above ground; daily maximum             19891231-20060629
+order_93920_DLEBE_tre200dx_2_legend.txt Legend    Ebersberg                            Air temperature 2 m above ground; daily maximum             19891231-20060629
+order_93920_DLEBE_tre200dx_3_data.txt   Data      Ebersberg                            Air temperature 2 m above ground; daily maximum             20060930-20210414
+order_93920_DLEBE_tre200dx_3_legend.txt Legend    Ebersberg                            Air temperature 2 m above ground; daily maximum             20060930-20210414
+order_93920_INNEBI_tre200dx_1_data.txt  Data      Ebikon                               Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_INNEBI_tre200dx_1_legend.txt Legend    Ebikon                               Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_TGEGN_tre200dx_1_data.txt   Data      Egnach                               Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGEGN_tre200dx_1_legend.txt Legend    Egnach                               Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGEGN_tre200dx_2_data.txt   Data      Egnach                               Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGEGN_tre200dx_2_legend.txt Legend    Egnach                               Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGEGN_tre200dx_3_data.txt   Data      Egnach                               Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGEGN_tre200dx_3_legend.txt Legend    Egnach                               Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_EGO_tre200dx_1_data.txt     Data      Egolzwil                             Air temperature 2 m above ground; daily maximum             20100922-20210414
+order_93920_EGO_tre200dx_1_legend.txt   Legend    Egolzwil                             Air temperature 2 m above ground; daily maximum             20100922-20210414
+order_93920_DLELZ_tre200dx_1_data.txt   Data      Elzach / Fisnacht                    Air temperature 2 m above ground; daily maximum             19871031-19990929
+order_93920_DLELZ_tre200dx_1_legend.txt Legend    Elzach / Fisnacht                    Air temperature 2 m above ground; daily maximum             19871031-19990929
+order_93920_DLELZ_tre200dx_2_data.txt   Data      Elzach / Fisnacht                    Air temperature 2 m above ground; daily maximum             20040731-20210414
+order_93920_DLELZ_tre200dx_2_legend.txt Legend    Elzach / Fisnacht                    Air temperature 2 m above ground; daily maximum             20040731-20210414
+order_93920_EMM_tre200dx_1_data.txt     Data      Emmen                                Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_EMM_tre200dx_1_legend.txt   Legend    Emmen                                Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_DLEGN_tre200dx_1_data.txt   Data      Engen                                Air temperature 2 m above ground; daily maximum             19860731-19920330
+order_93920_DLEGN_tre200dx_1_legend.txt Legend    Engen                                Air temperature 2 m above ground; daily maximum             19860731-19920330
+order_93920_DLEGN_tre200dx_2_data.txt   Data      Engen                                Air temperature 2 m above ground; daily maximum             19920831-19980730
+order_93920_DLEGN_tre200dx_2_legend.txt Legend    Engen                                Air temperature 2 m above ground; daily maximum             19920831-19980730
+order_93920_DLEGN_tre200dx_3_data.txt   Data      Engen                                Air temperature 2 m above ground; daily maximum             20040630-20080921
+order_93920_DLEGN_tre200dx_3_legend.txt Legend    Engen                                Air temperature 2 m above ground; daily maximum             20040630-20080921
+order_93920_ENN_tre200dx_1_data.txt     Data      Ennetbaden                           Air temperature 2 m above ground; daily maximum             19631231-19801230
+order_93920_ENN_tre200dx_1_legend.txt   Legend    Ennetbaden                           Air temperature 2 m above ground; daily maximum             19631231-19801230
+order_93920_KAEPT_tre200dx_1_data.txt   Data      Eptingen                             Air temperature 2 m above ground; daily maximum             20181126-20210414
+order_93920_KAEPT_tre200dx_1_legend.txt Legend    Eptingen                             Air temperature 2 m above ground; daily maximum             20181126-20210414
+order_93920_TGERM_tre200dx_1_data.txt   Data      Ermatingen                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGERM_tre200dx_1_legend.txt Legend    Ermatingen                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGERM_tre200dx_2_data.txt   Data      Ermatingen                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGERM_tre200dx_2_legend.txt Legend    Ermatingen                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGERM_tre200dx_3_data.txt   Data      Ermatingen                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGERM_tre200dx_3_legend.txt Legend    Ermatingen                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_INNESF_tre200dx_1_data.txt  Data      Erstfeld                             Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_INNESF_tre200dx_1_legend.txt Legend    Erstfeld                             Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_EVI_tre200dx_1_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; daily maximum             19930830-20060830
+order_93920_EVI_tre200dx_1_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; daily maximum             19930830-20060830
+order_93920_EVI_tre200dx_2_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; daily maximum             20070413-20130828
+order_93920_EVI_tre200dx_2_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; daily maximum             20070413-20130828
+order_93920_EVI_tre200dx_3_data.txt     Data      Evionnaz                             Air temperature 2 m above ground; daily maximum             20131206-20210414
+order_93920_EVI_tre200dx_3_legend.txt   Legend    Evionnaz                             Air temperature 2 m above ground; daily maximum             20131206-20210414
+order_93920_FAH_tre200dx_1_data.txt     Data      Fahy                                 Air temperature 2 m above ground; daily maximum             19801231-20210414
+order_93920_FAH_tre200dx_1_legend.txt   Legend    Fahy                                 Air temperature 2 m above ground; daily maximum             19801231-20210414
+order_93920_DLFEL_tre200dx_1_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Air temperature 2 m above ground; daily maximum             19581231-19811230
+order_93920_DLFEL_tre200dx_1_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Air temperature 2 m above ground; daily maximum             19581231-19811230
+order_93920_DLFEU_tre200dx_1_data.txt   Data      Feuchtwangen / Heilbronn             Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLFEU_tre200dx_1_legend.txt Legend    Feuchtwangen / Heilbronn             Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLHAH_tre200dx_1_data.txt   Data      Frankfurt / Hahn Flughafen           Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLHAH_tre200dx_1_legend.txt Legend    Frankfurt / Hahn Flughafen           Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLFRH_tre200dx_1_data.txt   Data      Friedrichshafen / Unterraderach      Air temperature 2 m above ground; daily maximum             20021231-20210414
+order_93920_DLFRH_tre200dx_1_legend.txt Legend    Friedrichshafen / Unterraderach      Air temperature 2 m above ground; daily maximum             20021231-20210414
+order_93920_DLFUR_tre200dx_1_data.txt   Data      Fürstenzell                          Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLFUR_tre200dx_1_legend.txt Legend    Fürstenzell                          Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLGEL_tre200dx_1_data.txt   Data      Gelbelsee                            Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLGEL_tre200dx_1_legend.txt Legend    Gelbelsee                            Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_GVE_tre200dx_1_data.txt     Data      Genève / Cointrin                    Air temperature 2 m above ground; daily maximum             19531231-20210414
+order_93920_GVE_tre200dx_1_legend.txt   Legend    Genève / Cointrin                    Air temperature 2 m above ground; daily maximum             19531231-20210414
+order_93920_GEO_tre200dx_1_data.txt     Data      Genève-Observatoire                  Air temperature 2 m above ground; daily maximum             18631231-19661129
+order_93920_GEO_tre200dx_1_legend.txt   Legend    Genève-Observatoire                  Air temperature 2 m above ground; daily maximum             18631231-19661129
+order_93920_GES_tre200dx_1_data.txt     Data      Gersau                               Air temperature 2 m above ground; daily maximum             20150310-20210414
+order_93920_GES_tre200dx_1_legend.txt   Legend    Gersau                               Air temperature 2 m above ground; daily maximum             20150310-20210414
+order_93920_GIH_tre200dx_1_data.txt     Data      Giswil                               Air temperature 2 m above ground; daily maximum             20100922-20210414
+order_93920_GIH_tre200dx_1_legend.txt   Legend    Giswil                               Air temperature 2 m above ground; daily maximum             20100922-20210414
+order_93920_GLA_tre200dx_1_data.txt     Data      Glarus                               Air temperature 2 m above ground; daily maximum             19591231-20210414
+order_93920_GLA_tre200dx_1_legend.txt   Legend    Glarus                               Air temperature 2 m above ground; daily maximum             19591231-20210414
+order_93920_KAGOD_tre200dx_1_data.txt   Data      Goldau / Tierpark                    Air temperature 2 m above ground; daily maximum             20181126-20210414
+order_93920_KAGOD_tre200dx_1_legend.txt Legend    Goldau / Tierpark                    Air temperature 2 m above ground; daily maximum             20181126-20210414
+order_93920_GRE_tre200dx_1_data.txt     Data      Grenchen                             Air temperature 2 m above ground; daily maximum             19920514-20210414
+order_93920_GRE_tre200dx_1_legend.txt   Legend    Grenchen                             Air temperature 2 m above ground; daily maximum             19920514-20210414
+order_93920_GUT_tre200dx_1_data.txt     Data      Güttingen                            Air temperature 2 m above ground; daily maximum             19760531-20210414
+order_93920_GUT_tre200dx_1_legend.txt   Legend    Güttingen                            Air temperature 2 m above ground; daily maximum             19760531-20210414
+order_93920_HLL_tre200dx_1_data.txt     Data      Hallau                               Air temperature 2 m above ground; daily maximum             19750630-20210414
+order_93920_HLL_tre200dx_1_legend.txt   Legend    Hallau                               Air temperature 2 m above ground; daily maximum             19750630-20210414
+order_93920_DLHAR_tre200dx_1_data.txt   Data      Harburg                              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLHAR_tre200dx_1_legend.txt Legend    Harburg                              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLHEC_tre200dx_1_data.txt   Data      Hechingen                            Air temperature 2 m above ground; daily maximum             19461231-19680730
+order_93920_DLHEC_tre200dx_1_legend.txt Legend    Hechingen                            Air temperature 2 m above ground; daily maximum             19461231-19680730
+order_93920_DLHEC_tre200dx_2_data.txt   Data      Hechingen                            Air temperature 2 m above ground; daily maximum             19690331-20210414
+order_93920_DLHEC_tre200dx_2_legend.txt Legend    Hechingen                            Air temperature 2 m above ground; daily maximum             19690331-20210414
+order_93920_DLHEM_tre200dx_1_data.txt   Data      Hermaringen                          Air temperature 2 m above ground; daily maximum             20050831-20210414
+order_93920_DLHEM_tre200dx_1_legend.txt Legend    Hermaringen                          Air temperature 2 m above ground; daily maximum             20050831-20210414
+order_93920_DLHER_tre200dx_1_data.txt   Data      Herrenberg                           Air temperature 2 m above ground; daily maximum             19780331-19850330
+order_93920_DLHER_tre200dx_1_legend.txt Legend    Herrenberg                           Air temperature 2 m above ground; daily maximum             19780331-19850330
+order_93920_MMHIW_tre200dx_1_data.txt   Data      Hinwil                               Air temperature 2 m above ground; daily maximum             20121127-20210414
+order_93920_MMHIW_tre200dx_1_legend.txt Legend    Hinwil                               Air temperature 2 m above ground; daily maximum             20121127-20210414
+order_93920_NABHAE_tre200dx_1_data.txt  Data      Härkingen                            Air temperature 2 m above ground; daily maximum             19910614-20210414
+order_93920_NABHAE_tre200dx_1_legend.txt Legend    Härkingen                            Air temperature 2 m above ground; daily maximum             19910614-20210414
+order_93920_WSLHOB_tre200dx_1_data.txt  Data      Hölstein Bestand                     Air temperature 2 m above ground; daily maximum             20181213-20210414
+order_93920_WSLHOB_tre200dx_1_legend.txt Legend    Hölstein Bestand                     Air temperature 2 m above ground; daily maximum             20181213-20210414
+order_93920_WSLHOC_tre200dx_1_data.txt  Data      Hölstein Turm                        Air temperature 2 m above ground; daily maximum             20190223-20210414
+order_93920_WSLHOC_tre200dx_1_legend.txt Legend    Hölstein Turm                        Air temperature 2 m above ground; daily maximum             20190223-20210414
+order_93920_TGILL_tre200dx_1_data.txt   Data      Illighausen                          Air temperature 2 m above ground; daily maximum             20131231-20150517
+order_93920_TGILL_tre200dx_1_legend.txt Legend    Illighausen                          Air temperature 2 m above ground; daily maximum             20131231-20150517
+order_93920_TGILL_tre200dx_2_data.txt   Data      Illighausen                          Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGILL_tre200dx_2_legend.txt Legend    Illighausen                          Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGILL_tre200dx_3_data.txt   Data      Illighausen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGILL_tre200dx_3_legend.txt Legend    Illighausen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_BEINS_tre200dx_1_data.txt   Data      Ins                                  Air temperature 2 m above ground; daily maximum             20110710-20120220
+order_93920_BEINS_tre200dx_1_legend.txt Legend    Ins                                  Air temperature 2 m above ground; daily maximum             20110710-20120220
+order_93920_BEINS_tre200dx_2_data.txt   Data      Ins                                  Air temperature 2 m above ground; daily maximum             20140127-20140224
+order_93920_BEINS_tre200dx_2_legend.txt Legend    Ins                                  Air temperature 2 m above ground; daily maximum             20140127-20140224
+order_93920_BEINS_tre200dx_3_data.txt   Data      Ins                                  Air temperature 2 m above ground; daily maximum             20140902-20151202
+order_93920_BEINS_tre200dx_3_legend.txt Legend    Ins                                  Air temperature 2 m above ground; daily maximum             20140902-20151202
+order_93920_BEINS_tre200dx_4_data.txt   Data      Ins                                  Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_BEINS_tre200dx_4_legend.txt Legend    Ins                                  Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_INT_tre200dx_1_data.txt     Data      Interlaken                           Air temperature 2 m above ground; daily maximum             19571231-19701230
+order_93920_INT_tre200dx_1_legend.txt   Legend    Interlaken                           Air temperature 2 m above ground; daily maximum             19571231-19701230
+order_93920_INT_tre200dx_2_data.txt     Data      Interlaken                           Air temperature 2 m above ground; daily maximum             19711231-20210414
+order_93920_INT_tre200dx_2_legend.txt   Legend    Interlaken                           Air temperature 2 m above ground; daily maximum             19711231-20210414
+order_93920_MBISL_tre200dx_1_data.txt   Data      Isleten                              Air temperature 2 m above ground; daily maximum             20150331-20170416
+order_93920_MBISL_tre200dx_1_legend.txt Legend    Isleten                              Air temperature 2 m above ground; daily maximum             20150331-20170416
+order_93920_MBISL_tre200dx_2_data.txt   Data      Isleten                              Air temperature 2 m above ground; daily maximum             20170803-20210207
+order_93920_MBISL_tre200dx_2_legend.txt Legend    Isleten                              Air temperature 2 m above ground; daily maximum             20170803-20210207
+order_93920_JON_tre200dx_1_data.txt     Data      Jona                                 Air temperature 2 m above ground; daily maximum             19930630-19951230
+order_93920_JON_tre200dx_1_legend.txt   Legend    Jona                                 Air temperature 2 m above ground; daily maximum             19930630-19951230
+order_93920_WSLJUB_tre200dx_1_data.txt  Data      Jussy Bestand                        Air temperature 2 m above ground; daily maximum             20171231-20210413
+order_93920_WSLJUB_tre200dx_1_legend.txt Legend    Jussy Bestand                        Air temperature 2 m above ground; daily maximum             20171231-20210413
+order_93920_WSLJUF_tre200dx_1_data.txt  Data      Jussy Freiland                       Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WSLJUF_tre200dx_1_legend.txt Legend    Jussy Freiland                       Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_DLKAI_tre200dx_1_data.txt   Data      Kaisersbach / Cronhütte              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLKAI_tre200dx_1_legend.txt Legend    Kaisersbach / Cronhütte              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_TGKAL_tre200dx_1_data.txt   Data      Kaltenbach                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGKAL_tre200dx_1_legend.txt Legend    Kaltenbach                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGKAL_tre200dx_2_data.txt   Data      Kaltenbach                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGKAL_tre200dx_2_legend.txt Legend    Kaltenbach                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGKAL_tre200dx_3_data.txt   Data      Kaltenbach                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGKAL_tre200dx_3_legend.txt Legend    Kaltenbach                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_IYKAL_tre200dx_1_data.txt   Data      Kaltern / Oberplanitzing             Air temperature 2 m above ground; daily maximum             20131217-20210414
+order_93920_IYKAL_tre200dx_1_legend.txt Legend    Kaltern / Oberplanitzing             Air temperature 2 m above ground; daily maximum             20131217-20210414
+order_93920_BEKAP_tre200dx_1_data.txt   Data      Kappelen                             Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BEKAP_tre200dx_1_legend.txt Legend    Kappelen                             Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BEKAP_tre200dx_2_data.txt   Data      Kappelen                             Air temperature 2 m above ground; daily maximum             20140902-20151202
+order_93920_BEKAP_tre200dx_2_legend.txt Legend    Kappelen                             Air temperature 2 m above ground; daily maximum             20140902-20151202
+order_93920_BEKAP_tre200dx_3_data.txt   Data      Kappelen                             Air temperature 2 m above ground; daily maximum             20160203-20200517
+order_93920_BEKAP_tre200dx_3_legend.txt Legend    Kappelen                             Air temperature 2 m above ground; daily maximum             20160203-20200517
+order_93920_DLKIF_tre200dx_1_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19461231-19481230
+order_93920_DLKIF_tre200dx_1_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19461231-19481230
+order_93920_DLKIF_tre200dx_2_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19491231-19711230
+order_93920_DLKIF_tre200dx_2_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19491231-19711230
+order_93920_DLKIF_tre200dx_3_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19720430-19951129
+order_93920_DLKIF_tre200dx_3_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19720430-19951129
+order_93920_DLKIF_tre200dx_4_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19960229-19980629
+order_93920_DLKIF_tre200dx_4_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19960229-19980629
+order_93920_DLKIF_tre200dx_5_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19980831-20020330
+order_93920_DLKIF_tre200dx_5_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             19980831-20020330
+order_93920_DLKIF_tre200dx_6_data.txt   Data      Kiefersfelden                        Air temperature 2 m above ground; daily maximum             20061031-20210414
+order_93920_DLKIF_tre200dx_6_legend.txt Legend    Kiefersfelden                        Air temperature 2 m above ground; daily maximum             20061031-20210414
+order_93920_DLKON_tre200dx_1_data.txt   Data      Konstanz                             Air temperature 2 m above ground; daily maximum             19721031-20210414
+order_93920_DLKON_tre200dx_1_legend.txt Legend    Konstanz                             Air temperature 2 m above ground; daily maximum             19721031-20210414
+order_93920_KOP_tre200dx_1_data.txt     Data      Koppigen                             Air temperature 2 m above ground; daily maximum             19601130-20210414
+order_93920_KOP_tre200dx_1_legend.txt   Legend    Koppigen                             Air temperature 2 m above ground; daily maximum             19601130-20210414
+order_93920_KRZ_tre200dx_1_data.txt     Data      Kreuzlingen                          Air temperature 2 m above ground; daily maximum             19590630-19760530
+order_93920_KRZ_tre200dx_1_legend.txt   Legend    Kreuzlingen                          Air temperature 2 m above ground; daily maximum             19590630-19760530
+order_93920_TGKRE_tre200dx_1_data.txt   Data      Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGKRE_tre200dx_1_legend.txt Legend    Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGKRE_tre200dx_2_data.txt   Data      Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20150804-20151202
+order_93920_TGKRE_tre200dx_2_legend.txt Legend    Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20150804-20151202
+order_93920_TGKRE_tre200dx_3_data.txt   Data      Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGKRE_tre200dx_3_legend.txt Legend    Kreuzlingen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_LAC_tre200dx_1_data.txt     Data      Lachen / Galgenen                    Air temperature 2 m above ground; daily maximum             20151027-20210414
+order_93920_LAC_tre200dx_1_legend.txt   Legend    Lachen / Galgenen                    Air temperature 2 m above ground; daily maximum             20151027-20210414
+order_93920_DLLAN_tre200dx_1_data.txt   Data      Landshut / Reithof                   Air temperature 2 m above ground; daily maximum             20080331-20210414
+order_93920_DLLAN_tre200dx_1_legend.txt Legend    Landshut / Reithof                   Air temperature 2 m above ground; daily maximum             20080331-20210414
+order_93920_BELAT_tre200dx_1_data.txt   Data      Langenthal                           Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BELAT_tre200dx_1_legend.txt Legend    Langenthal                           Air temperature 2 m above ground; daily maximum             20101121-20140224
+order_93920_BELAT_tre200dx_2_data.txt   Data      Langenthal                           Air temperature 2 m above ground; daily maximum             20140902-20141102
+order_93920_BELAT_tre200dx_2_legend.txt Legend    Langenthal                           Air temperature 2 m above ground; daily maximum             20140902-20141102
+order_93920_MMLBB_tre200dx_1_data.txt   Data      Langenthal / Bleienbach              Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_MMLBB_tre200dx_1_legend.txt Legend    Langenthal / Bleienbach              Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_TGLAN_tre200dx_1_data.txt   Data      Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGLAN_tre200dx_1_legend.txt Legend    Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGLAN_tre200dx_2_data.txt   Data      Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGLAN_tre200dx_2_legend.txt Legend    Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGLAN_tre200dx_3_data.txt   Data      Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGLAN_tre200dx_3_legend.txt Legend    Lanzenneunforn                       Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_MMLAF_tre200dx_1_data.txt   Data      Laufen / Dittingen                   Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMLAF_tre200dx_1_legend.txt Legend    Laufen / Dittingen                   Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_NABLAU_tre200dx_1_data.txt  Data      Lausanne                             Air temperature 2 m above ground; daily maximum             19910201-20210414
+order_93920_NABLAU_tre200dx_1_legend.txt Legend    Lausanne                             Air temperature 2 m above ground; daily maximum             19910201-20210414
+order_93920_LOH_tre200dx_1_data.txt     Data      Lohn, SH                             Air temperature 2 m above ground; daily maximum             19631231-19831230
+order_93920_LOH_tre200dx_1_legend.txt   Legend    Lohn, SH                             Air temperature 2 m above ground; daily maximum             19631231-19831230
+order_93920_TGLOM_tre200dx_1_data.txt   Data      Lommis                               Air temperature 2 m above ground; daily maximum             20100827-20150605
+order_93920_TGLOM_tre200dx_1_legend.txt Legend    Lommis                               Air temperature 2 m above ground; daily maximum             20100827-20150605
+order_93920_TGLOM_tre200dx_2_data.txt   Data      Lommis                               Air temperature 2 m above ground; daily maximum             20150901-20151202
+order_93920_TGLOM_tre200dx_2_legend.txt Legend    Lommis                               Air temperature 2 m above ground; daily maximum             20150901-20151202
+order_93920_TGLOM_tre200dx_3_data.txt   Data      Lommis                               Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGLOM_tre200dx_3_legend.txt Legend    Lommis                               Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_LUZ_tre200dx_1_data.txt     Data      Luzern                               Air temperature 2 m above ground; daily maximum             18851231-20210414
+order_93920_LUZ_tre200dx_1_legend.txt   Legend    Luzern                               Air temperature 2 m above ground; daily maximum             18851231-20210414
+order_93920_INNLUZ_tre200dx_1_data.txt  Data      Luzern                               Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_INNLUZ_tre200dx_1_legend.txt Legend    Luzern                               Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_DLMAI_tre200dx_1_data.txt   Data      Maisach / Galgen                     Air temperature 2 m above ground; daily maximum             20050131-20210414
+order_93920_DLMAI_tre200dx_1_legend.txt Legend    Maisach / Galgen                     Air temperature 2 m above ground; daily maximum             20050131-20210414
+order_93920_MMMAT_tre200dx_1_data.txt   Data      Marthalen                            Air temperature 2 m above ground; daily maximum             20120910-20210414
+order_93920_MMMAT_tre200dx_1_legend.txt Legend    Marthalen                            Air temperature 2 m above ground; daily maximum             20120910-20210414
+order_93920_MAB_tre200dx_1_data.txt     Data      Martigny                             Air temperature 2 m above ground; daily maximum             19590630-19700227
+order_93920_MAB_tre200dx_1_legend.txt   Legend    Martigny                             Air temperature 2 m above ground; daily maximum             19590630-19700227
+order_93920_MAH_tre200dx_1_data.txt     Data      Mathod                               Air temperature 2 m above ground; daily maximum             19920821-20210414
+order_93920_MAH_tre200dx_1_legend.txt   Legend    Mathod                               Air temperature 2 m above ground; daily maximum             19920821-20210414
+order_93920_MER_tre200dx_1_data.txt     Data      Meiringen                            Air temperature 2 m above ground; daily maximum             19581231-20210414
+order_93920_MER_tre200dx_1_legend.txt   Legend    Meiringen                            Air temperature 2 m above ground; daily maximum             19581231-20210414
+order_93920_MEE_tre200dx_1_data.txt     Data      Meiringen                            Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_MEE_tre200dx_1_legend.txt   Legend    Meiringen                            Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_MMMEL_tre200dx_1_data.txt   Data      Mels / Heiligkreuz                   Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMMEL_tre200dx_1_legend.txt Legend    Mels / Heiligkreuz                   Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_DLMIC_tre200dx_1_data.txt   Data      Michelstadt / Vielbrunn              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLMIC_tre200dx_1_legend.txt Legend    Michelstadt / Vielbrunn              Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_CLA_tre200dx_1_data.txt     Data      Montreux-Clarens                     Air temperature 2 m above ground; daily maximum             19301231-20051128
+order_93920_CLA_tre200dx_1_legend.txt   Legend    Montreux-Clarens                     Air temperature 2 m above ground; daily maximum             19301231-20051128
+order_93920_MOA_tre200dx_1_data.txt     Data      Mosen                                Air temperature 2 m above ground; daily maximum             20121008-20210414
+order_93920_MOA_tre200dx_1_legend.txt   Legend    Mosen                                Air temperature 2 m above ground; daily maximum             20121008-20210414
+order_93920_MMMOU_tre200dx_1_data.txt   Data      Moutier                              Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMMOU_tre200dx_1_legend.txt Legend    Moutier                              Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MUR_tre200dx_1_data.txt     Data      Muri, AG                             Air temperature 2 m above ground; daily maximum             19651130-19801230
+order_93920_MUR_tre200dx_1_legend.txt   Legend    Muri, AG                             Air temperature 2 m above ground; daily maximum             19651130-19801230
+order_93920_DLMUD_tre200dx_1_data.txt   Data      Mühldorf                             Air temperature 2 m above ground; daily maximum             19521231-20210414
+order_93920_DLMUD_tre200dx_1_legend.txt Legend    Mühldorf                             Air temperature 2 m above ground; daily maximum             19521231-20210414
+order_93920_MUB_tre200dx_1_data.txt     Data      Mühleberg                            Air temperature 2 m above ground; daily maximum             19870131-20210414
+order_93920_MUB_tre200dx_1_legend.txt   Legend    Mühleberg                            Air temperature 2 m above ground; daily maximum             19870131-20210414
+order_93920_MMMUM_tre200dx_1_data.txt   Data      Mümliswil                            Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_MMMUM_tre200dx_1_legend.txt Legend    Mümliswil                            Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_DLMUC_tre200dx_1_data.txt   Data      München                              Air temperature 2 m above ground; daily maximum             19540531-20210414
+order_93920_DLMUC_tre200dx_1_legend.txt Legend    München                              Air temperature 2 m above ground; daily maximum             19540531-20210414
+order_93920_DLMUN_tre200dx_1_data.txt   Data      München / Flughafen                  Air temperature 2 m above ground; daily maximum             19920516-20210414
+order_93920_DLMUN_tre200dx_1_legend.txt Legend    München / Flughafen                  Air temperature 2 m above ground; daily maximum             19920516-20210414
+order_93920_IYNAT_tre200dx_1_data.txt   Data      Naturns                              Air temperature 2 m above ground; daily maximum             19721231-20080726
+order_93920_IYNAT_tre200dx_1_legend.txt Legend    Naturns                              Air temperature 2 m above ground; daily maximum             19721231-20080726
+order_93920_IYNAT_tre200dx_2_data.txt   Data      Naturns                              Air temperature 2 m above ground; daily maximum             20091026-20210414
+order_93920_IYNAT_tre200dx_2_legend.txt Legend    Naturns                              Air temperature 2 m above ground; daily maximum             20091026-20210414
+order_93920_DLNBL_tre200dx_1_data.txt   Data      Neubulach                            Air temperature 2 m above ground; daily maximum             19950331-20001230
+order_93920_DLNBL_tre200dx_1_legend.txt Legend    Neubulach                            Air temperature 2 m above ground; daily maximum             19950331-20001230
+order_93920_DLNBL_tre200dx_2_data.txt   Data      Neubulach                            Air temperature 2 m above ground; daily maximum             20040531-20210414
+order_93920_DLNBL_tre200dx_2_legend.txt Legend    Neubulach                            Air temperature 2 m above ground; daily maximum             20040531-20210414
+order_93920_DLNEB_tre200dx_1_data.txt   Data      Neuburg an der Kammel                Air temperature 2 m above ground; daily maximum             19910531-20210414
+order_93920_DLNEB_tre200dx_1_legend.txt Legend    Neuburg an der Kammel                Air temperature 2 m above ground; daily maximum             19910531-20210414
+order_93920_NEU_tre200dx_1_data.txt     Data      Neuchâtel                            Air temperature 2 m above ground; daily maximum             18641130-18740330
+order_93920_NEU_tre200dx_1_legend.txt   Legend    Neuchâtel                            Air temperature 2 m above ground; daily maximum             18641130-18740330
+order_93920_NEU_tre200dx_2_data.txt     Data      Neuchâtel                            Air temperature 2 m above ground; daily maximum             18740531-18740629
+order_93920_NEU_tre200dx_2_legend.txt   Legend    Neuchâtel                            Air temperature 2 m above ground; daily maximum             18740531-18740629
+order_93920_NEU_tre200dx_3_data.txt     Data      Neuchâtel                            Air temperature 2 m above ground; daily maximum             18741031-20210414
+order_93920_NEU_tre200dx_3_legend.txt   Legend    Neuchâtel                            Air temperature 2 m above ground; daily maximum             18741031-20210414
+order_93920_WSLNEB_tre200dx_1_data.txt  Data      Neunkirch Bestand                    Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WSLNEB_tre200dx_1_legend.txt Legend    Neunkirch Bestand                    Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WSLNEF_tre200dx_1_data.txt  Data      Neunkirch Freiland                   Air temperature 2 m above ground; daily maximum             20180103-20210414
+order_93920_WSLNEF_tre200dx_1_legend.txt Legend    Neunkirch Freiland                   Air temperature 2 m above ground; daily maximum             20180103-20210414
+order_93920_DLWEB_tre200dx_1_data.txt   Data      Neustadt / Weinbiet                  Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWEB_tre200dx_1_legend.txt Legend    Neustadt / Weinbiet                  Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_TGNUS_tre200dx_1_data.txt   Data      Nussbaumen                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGNUS_tre200dx_1_legend.txt Legend    Nussbaumen                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGNUS_tre200dx_2_data.txt   Data      Nussbaumen                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGNUS_tre200dx_2_legend.txt Legend    Nussbaumen                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGNUS_tre200dx_3_data.txt   Data      Nussbaumen                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGNUS_tre200dx_3_legend.txt Legend    Nussbaumen                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_CGI_tre200dx_1_data.txt     Data      Nyon / Changins                      Air temperature 2 m above ground; daily maximum             19641231-20210414
+order_93920_CGI_tre200dx_1_legend.txt   Legend    Nyon / Changins                      Air temperature 2 m above ground; daily maximum             19641231-20210414
+order_93920_MMNAF_tre200dx_1_data.txt   Data      Näfels                               Air temperature 2 m above ground; daily maximum             20181028-20210414
+order_93920_MMNAF_tre200dx_1_legend.txt Legend    Näfels                               Air temperature 2 m above ground; daily maximum             20181028-20210414
+order_93920_DLNUR_tre200dx_1_data.txt   Data      Nürburg / Barweiler                  Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_DLNUR_tre200dx_1_legend.txt Legend    Nürburg / Barweiler                  Air temperature 2 m above ground; daily maximum             20200828-20210414
+order_93920_OBR_tre200dx_1_data.txt     Data      Oberriet / Kriessern                 Air temperature 2 m above ground; daily maximum             20150505-20210414
+order_93920_OBR_tre200dx_1_legend.txt   Legend    Oberriet / Kriessern                 Air temperature 2 m above ground; daily maximum             20150505-20210414
+order_93920_DLOBS_tre200dx_1_data.txt   Data      Oberschleissheim                     Air temperature 2 m above ground; daily maximum             19760331-20060530
+order_93920_DLOBS_tre200dx_1_legend.txt Legend    Oberschleissheim                     Air temperature 2 m above ground; daily maximum             19760331-20060530
+order_93920_OTN_tre200dx_1_data.txt     Data      Olten                                Air temperature 2 m above ground; daily maximum             19581231-19861230
+order_93920_OTN_tre200dx_1_legend.txt   Legend    Olten                                Air temperature 2 m above ground; daily maximum             19581231-19861230
+order_93920_BOZ_tre200dx_1_data.txt     Data      Orbe                                 Air temperature 2 m above ground; daily maximum             19640930-19891230
+order_93920_BOZ_tre200dx_1_legend.txt   Legend    Orbe                                 Air temperature 2 m above ground; daily maximum             19640930-19891230
+order_93920_WSLOTB_tre200dx_1_data.txt  Data      Othmarsingen Bestand                 Air temperature 2 m above ground; daily maximum             20171231-20180403
+order_93920_WSLOTB_tre200dx_1_legend.txt Legend    Othmarsingen Bestand                 Air temperature 2 m above ground; daily maximum             20171231-20180403
+order_93920_WSLOTB_tre200dx_2_data.txt  Data      Othmarsingen Bestand                 Air temperature 2 m above ground; daily maximum             20180713-20210413
+order_93920_WSLOTB_tre200dx_2_legend.txt Legend    Othmarsingen Bestand                 Air temperature 2 m above ground; daily maximum             20180713-20210413
+order_93920_WSLOTF_tre200dx_1_data.txt  Data      Othmarsingen Freiland                Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WSLOTF_tre200dx_1_legend.txt Legend    Othmarsingen Freiland                Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_PAY_tre200dx_1_data.txt     Data      Payerne                              Air temperature 2 m above ground; daily maximum             19640731-20210414
+order_93920_PAY_tre200dx_1_legend.txt   Legend    Payerne                              Air temperature 2 m above ground; daily maximum             19640731-20210414
+order_93920_PAA_tre200dx_1_data.txt     Data      Payerne                              Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_PAA_tre200dx_1_legend.txt   Legend    Payerne                              Air temperature 2 m above ground; daily maximum             20161117-20210414
+order_93920_PUY_tre200dx_1_data.txt     Data      Pully                                Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_PUY_tre200dx_1_legend.txt   Legend    Pully                                Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_MMRAF_tre200dx_1_data.txt   Data      Rafz                                 Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMRAF_tre200dx_1_legend.txt Legend    Rafz                                 Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_RAP_tre200dx_1_data.txt     Data      Rapperswil SG                        Air temperature 2 m above ground; daily maximum             19701231-19921230
+order_93920_RAP_tre200dx_1_legend.txt   Legend    Rapperswil SG                        Air temperature 2 m above ground; daily maximum             19701231-19921230
+order_93920_INNRED_tre200dx_1_data.txt  Data      Reiden                               Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_INNRED_tre200dx_1_legend.txt Legend    Reiden                               Air temperature 2 m above ground; daily maximum             20170829-20210414
+order_93920_DLREN_tre200dx_1_data.txt   Data      Renningen                            Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_DLREN_tre200dx_1_legend.txt Legend    Renningen                            Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_TGRIC_tre200dx_1_data.txt   Data      Rickenbach                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGRIC_tre200dx_1_legend.txt Legend    Rickenbach                           Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGRIC_tre200dx_2_data.txt   Data      Rickenbach                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGRIC_tre200dx_2_legend.txt Legend    Rickenbach                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGRIC_tre200dx_3_data.txt   Data      Rickenbach                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGRIC_tre200dx_3_legend.txt Legend    Rickenbach                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_ROS_tre200dx_1_data.txt     Data      Rorschach                            Air temperature 2 m above ground; daily maximum             19640731-19801230
+order_93920_ROS_tre200dx_1_legend.txt   Legend    Rorschach                            Air temperature 2 m above ground; daily maximum             19640731-19801230
+order_93920_DLROS_tre200dx_1_data.txt   Data      Rosenheim                            Air temperature 2 m above ground; daily maximum             19491231-20210414
+order_93920_DLROS_tre200dx_1_legend.txt Legend    Rosenheim                            Air temperature 2 m above ground; daily maximum             19491231-20210414
+order_93920_DLROT_tre200dx_1_data.txt   Data      Rottweil                             Air temperature 2 m above ground; daily maximum             19570131-19781129
+order_93920_DLROT_tre200dx_1_legend.txt Legend    Rottweil                             Air temperature 2 m above ground; daily maximum             19570131-19781129
+order_93920_DLROT_tre200dx_2_data.txt   Data      Rottweil                             Air temperature 2 m above ground; daily maximum             19840831-20030227
+order_93920_DLROT_tre200dx_2_legend.txt Legend    Rottweil                             Air temperature 2 m above ground; daily maximum             19840831-20030227
+order_93920_DLROT_tre200dx_3_data.txt   Data      Rottweil                             Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_DLROT_tre200dx_3_legend.txt Legend    Rottweil                             Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_SRN_tre200dx_1_data.txt     Data      Sarnen                               Air temperature 2 m above ground; daily maximum             19631231-19861230
+order_93920_SRN_tre200dx_1_legend.txt   Legend    Sarnen                               Air temperature 2 m above ground; daily maximum             19631231-19861230
+order_93920_MMSAX_tre200dx_1_data.txt   Data      Sax                                  Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMSAX_tre200dx_1_legend.txt Legend    Sax                                  Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_SHA_tre200dx_1_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; daily maximum             18801222-18840130
+order_93920_SHA_tre200dx_1_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; daily maximum             18801222-18840130
+order_93920_SHA_tre200dx_2_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; daily maximum             18840530
+order_93920_SHA_tre200dx_2_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; daily maximum             18840530
+order_93920_SHA_tre200dx_3_data.txt     Data      Schaffhausen                         Air temperature 2 m above ground; daily maximum             19591231-20210414
+order_93920_SHA_tre200dx_3_legend.txt   Legend    Schaffhausen                         Air temperature 2 m above ground; daily maximum             19591231-20210414
+order_93920_AGSUA_tre200dx_1_data.txt   Data      Schupfart                            Air temperature 2 m above ground; daily maximum             20180422-20200502
+order_93920_AGSUA_tre200dx_1_legend.txt Legend    Schupfart                            Air temperature 2 m above ground; daily maximum             20180422-20200502
+order_93920_AGSUA_tre200dx_2_data.txt   Data      Schupfart                            Air temperature 2 m above ground; daily maximum             20201104-20210106
+order_93920_AGSUA_tre200dx_2_legend.txt Legend    Schupfart                            Air temperature 2 m above ground; daily maximum             20201104-20210106
+order_93920_INNSWZ_tre200dx_1_data.txt  Data      Schwyz                               Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_INNSWZ_tre200dx_1_legend.txt Legend    Schwyz                               Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_MMSSE_tre200dx_1_data.txt   Data      Schwyz / Seewen                      Air temperature 2 m above ground; daily maximum             20120824
+order_93920_MMSSE_tre200dx_1_legend.txt Legend    Schwyz / Seewen                      Air temperature 2 m above ground; daily maximum             20120824
+order_93920_MMSSE_tre200dx_2_data.txt   Data      Schwyz / Seewen                      Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_MMSSE_tre200dx_2_legend.txt Legend    Schwyz / Seewen                      Air temperature 2 m above ground; daily maximum             20121125-20210414
+order_93920_SCI_tre200dx_1_data.txt     Data      Schwyz-Ibach                         Air temperature 2 m above ground; daily maximum             19701231-19951230
+order_93920_SCI_tre200dx_1_legend.txt   Legend    Schwyz-Ibach                         Air temperature 2 m above ground; daily maximum             19701231-19951230
+order_93920_DLSIG_tre200dx_1_data.txt   Data      Sigmaringen                          Air temperature 2 m above ground; daily maximum             19501231-19760730
+order_93920_DLSIG_tre200dx_1_legend.txt Legend    Sigmaringen                          Air temperature 2 m above ground; daily maximum             19501231-19760730
+order_93920_DLSIG_tre200dx_2_data.txt   Data      Sigmaringen                          Air temperature 2 m above ground; daily maximum             19760930-19761030
+order_93920_DLSIG_tre200dx_2_legend.txt Legend    Sigmaringen                          Air temperature 2 m above ground; daily maximum             19760930-19761030
+order_93920_DLSIG_tre200dx_3_data.txt   Data      Sigmaringen                          Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_DLSIG_tre200dx_3_legend.txt Legend    Sigmaringen                          Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_DLSIZ_tre200dx_1_data.txt   Data      Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; daily maximum             19880430-20200318
+order_93920_DLSIZ_tre200dx_1_legend.txt Legend    Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; daily maximum             19880430-20200318
+order_93920_DLSIZ_tre200dx_2_data.txt   Data      Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; daily maximum             20200706-20210414
+order_93920_DLSIZ_tre200dx_2_legend.txt Legend    Sigmarszell-Zeisertsweiler           Air temperature 2 m above ground; daily maximum             20200706-20210414
+order_93920_DLSIN_tre200dx_1_data.txt   Data      Singen                               Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_DLSIN_tre200dx_1_legend.txt Legend    Singen                               Air temperature 2 m above ground; daily maximum             20040630-20210414
+order_93920_SIO_tre200dx_1_data.txt     Data      Sion                                 Air temperature 2 m above ground; daily maximum             19571231-20210414
+order_93920_SIO_tre200dx_1_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; daily maximum             19571231-20210414
+order_93920_ION_tre200dx_1_data.txt     Data      Sion                                 Air temperature 2 m above ground; daily maximum             18691031-18700730
+order_93920_ION_tre200dx_1_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; daily maximum             18691031-18700730
+order_93920_ION_tre200dx_2_data.txt     Data      Sion                                 Air temperature 2 m above ground; daily maximum             18701130-18701230
+order_93920_ION_tre200dx_2_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; daily maximum             18701130-18701230
+order_93920_ION_tre200dx_3_data.txt     Data      Sion                                 Air temperature 2 m above ground; daily maximum             19640630-19781230
+order_93920_ION_tre200dx_3_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; daily maximum             19640630-19781230
+order_93920_SIR_tre200dx_1_data.txt     Data      Sion                                 Air temperature 2 m above ground; daily maximum             20161117-20171204
+order_93920_SIR_tre200dx_1_legend.txt   Legend    Sion                                 Air temperature 2 m above ground; daily maximum             20161117-20171204
+order_93920_STH_tre200dx_1_data.txt     Data      Solothurn                            Air temperature 2 m above ground; daily maximum             19631231-19781230
+order_93920_STH_tre200dx_1_legend.txt   Legend    Solothurn                            Air temperature 2 m above ground; daily maximum             19631231-19781230
+order_93920_STC_tre200dx_1_data.txt     Data      St. Chrischona                       Air temperature 2 m above ground; daily maximum             19920116-20101204
+order_93920_STC_tre200dx_1_legend.txt   Legend    St. Chrischona                       Air temperature 2 m above ground; daily maximum             19920116-20101204
+order_93920_IYSMP_tre200dx_1_data.txt   Data      St. Martin in Passeier               Air temperature 2 m above ground; daily maximum             19790101-19891230
+order_93920_IYSMP_tre200dx_1_legend.txt Legend    St. Martin in Passeier               Air temperature 2 m above ground; daily maximum             19790101-19891230
+order_93920_IYSMP_tre200dx_2_data.txt   Data      St. Martin in Passeier               Air temperature 2 m above ground; daily maximum             19901231-20210414
+order_93920_IYSMP_tre200dx_2_legend.txt Legend    St. Martin in Passeier               Air temperature 2 m above ground; daily maximum             19901231-20210414
+order_93920_MMSTA_tre200dx_1_data.txt   Data      Stans                                Air temperature 2 m above ground; daily maximum             20120824-20120902
+order_93920_MMSTA_tre200dx_1_legend.txt Legend    Stans                                Air temperature 2 m above ground; daily maximum             20120824-20120902
+order_93920_MMSTA_tre200dx_2_data.txt   Data      Stans                                Air temperature 2 m above ground; daily maximum             20121119-20210414
+order_93920_MMSTA_tre200dx_2_legend.txt Legend    Stans                                Air temperature 2 m above ground; daily maximum             20121119-20210414
+order_93920_THU_tre200dx_1_data.txt     Data      Thun                                 Air temperature 2 m above ground; daily maximum             20121219-20210414
+order_93920_THU_tre200dx_1_legend.txt   Legend    Thun                                 Air temperature 2 m above ground; daily maximum             20121219-20210414
+order_93920_MMTRG_tre200dx_1_data.txt   Data      Triengen                             Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_MMTRG_tre200dx_1_legend.txt Legend    Triengen                             Air temperature 2 m above ground; daily maximum             20141223-20210414
+order_93920_WSLUIB_tre200dx_1_data.txt  Data      Uitikon Bestand                      Air temperature 2 m above ground; daily maximum             20180627-20210414
+order_93920_WSLUIB_tre200dx_1_legend.txt Legend    Uitikon Bestand                      Air temperature 2 m above ground; daily maximum             20180627-20210414
+order_93920_WSLUIF_tre200dx_1_data.txt  Data      Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20181219-20191102
+order_93920_WSLUIF_tre200dx_1_legend.txt Legend    Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20181219-20191102
+order_93920_WSLUIF_tre200dx_2_data.txt  Data      Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20200510-20210205
+order_93920_WSLUIF_tre200dx_2_legend.txt Legend    Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20200510-20210205
+order_93920_WSLUIF_tre200dx_3_data.txt  Data      Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20210411
+order_93920_WSLUIF_tre200dx_3_legend.txt Legend    Uitikon Freiland                     Air temperature 2 m above ground; daily maximum             20210411
+order_93920_DLULM_tre200dx_1_data.txt   Data      Ulm                                  Air temperature 2 m above ground; daily maximum             19431231-19450227
+order_93920_DLULM_tre200dx_1_legend.txt Legend    Ulm                                  Air temperature 2 m above ground; daily maximum             19431231-19450227
+order_93920_DLULM_tre200dx_2_data.txt   Data      Ulm                                  Air temperature 2 m above ground; daily maximum             19470114-20140830
+order_93920_DLULM_tre200dx_2_legend.txt Legend    Ulm                                  Air temperature 2 m above ground; daily maximum             19470114-20140830
+order_93920_DLUMM_tre200dx_1_data.txt   Data      Ulm /Mähringen                       Air temperature 2 m above ground; daily maximum             20200827-20210414
+order_93920_DLUMM_tre200dx_1_legend.txt Legend    Ulm /Mähringen                       Air temperature 2 m above ground; daily maximum             20200827-20210414
+order_93920_TGUSH_tre200dx_1_data.txt   Data      Unterstammheim                       Air temperature 2 m above ground; daily maximum             20131231-20150517
+order_93920_TGUSH_tre200dx_1_legend.txt Legend    Unterstammheim                       Air temperature 2 m above ground; daily maximum             20131231-20150517
+order_93920_TGUSH_tre200dx_2_data.txt   Data      Unterstammheim                       Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGUSH_tre200dx_2_legend.txt Legend    Unterstammheim                       Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGUSH_tre200dx_3_data.txt   Data      Unterstammheim                       Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGUSH_tre200dx_3_legend.txt Legend    Unterstammheim                       Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_VAD_tre200dx_1_data.txt     Data      Vaduz                                Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_VAD_tre200dx_1_legend.txt   Legend    Vaduz                                Air temperature 2 m above ground; daily maximum             19701231-20210414
+order_93920_VAZ_tre200dx_1_data.txt     Data      Vernayaz                             Air temperature 2 m above ground; daily maximum             19690831-19860629
+order_93920_VAZ_tre200dx_1_legend.txt   Legend    Vernayaz                             Air temperature 2 m above ground; daily maximum             19690831-19860629
+order_93920_VEV_tre200dx_1_data.txt     Data      Vevey / Corseaux                     Air temperature 2 m above ground; daily maximum             20150908-20210414
+order_93920_VEV_tre200dx_1_legend.txt   Legend    Vevey / Corseaux                     Air temperature 2 m above ground; daily maximum             20150908-20210414
+order_93920_WSLVOB_tre200dx_1_data.txt  Data      Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20181126-20181202
+order_93920_WSLVOB_tre200dx_1_legend.txt Legend    Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20181126-20181202
+order_93920_WSLVOB_tre200dx_2_data.txt  Data      Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20190422-20191005
+order_93920_WSLVOB_tre200dx_2_legend.txt Legend    Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20190422-20191005
+order_93920_WSLVOB_tre200dx_3_data.txt  Data      Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20200120-20201212
+order_93920_WSLVOB_tre200dx_3_legend.txt Legend    Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20200120-20201212
+order_93920_WSLVOB_tre200dx_4_data.txt  Data      Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20210213-20210413
+order_93920_WSLVOB_tre200dx_4_legend.txt Legend    Vordemwald Bestand                   Air temperature 2 m above ground; daily maximum             20210213-20210413
+order_93920_WSLVOF_tre200dx_1_data.txt  Data      Vordemwald Freiland                  Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WSLVOF_tre200dx_1_legend.txt Legend    Vordemwald Freiland                  Air temperature 2 m above ground; daily maximum             20171231-20210414
+order_93920_WWI_tre200dx_1_data.txt     Data      Walchwil                             Air temperature 2 m above ground; daily maximum             19651231-19801230
+order_93920_WWI_tre200dx_1_legend.txt   Legend    Walchwil                             Air temperature 2 m above ground; daily maximum             19651231-19801230
+order_93920_DLWAL_tre200dx_1_data.txt   Data      Waldmünchen                          Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWAL_tre200dx_1_legend.txt Legend    Waldmünchen                          Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWED_tre200dx_1_data.txt   Data      Weiden                               Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWED_tre200dx_1_legend.txt Legend    Weiden                               Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWES_tre200dx_1_data.txt   Data      Weihenstephan / Dürnast              Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWES_tre200dx_1_legend.txt Legend    Weihenstephan / Dürnast              Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_TGWEI_tre200dx_1_data.txt   Data      Weinfelden                           Air temperature 2 m above ground; daily maximum             20131231-20150605
+order_93920_TGWEI_tre200dx_1_legend.txt Legend    Weinfelden                           Air temperature 2 m above ground; daily maximum             20131231-20150605
+order_93920_TGWEI_tre200dx_2_data.txt   Data      Weinfelden                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGWEI_tre200dx_2_legend.txt Legend    Weinfelden                           Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGWEI_tre200dx_3_data.txt   Data      Weinfelden                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGWEI_tre200dx_3_legend.txt Legend    Weinfelden                           Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_DLWEI_tre200dx_1_data.txt   Data      Weingarten                           Air temperature 2 m above ground; daily maximum             19451231-19860929
+order_93920_DLWEI_tre200dx_1_legend.txt Legend    Weingarten                           Air temperature 2 m above ground; daily maximum             19451231-19860929
+order_93920_DLWEI_tre200dx_2_data.txt   Data      Weingarten                           Air temperature 2 m above ground; daily maximum             19900731-20210414
+order_93920_DLWEI_tre200dx_2_legend.txt Legend    Weingarten                           Air temperature 2 m above ground; daily maximum             19900731-20210414
+order_93920_DLWEG_tre200dx_1_data.txt   Data      Weissenburg                          Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWEG_tre200dx_1_legend.txt Legend    Weissenburg                          Air temperature 2 m above ground; daily maximum             20200829-20210414
+order_93920_DLWIE_tre200dx_1_data.txt   Data      Wielenbach                           Air temperature 2 m above ground; daily maximum             19990131-20210414
+order_93920_DLWIE_tre200dx_1_legend.txt Legend    Wielenbach                           Air temperature 2 m above ground; daily maximum             19990131-20210414
+order_93920_TGWIG_tre200dx_1_data.txt   Data      Wigoltingen                          Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGWIG_tre200dx_1_legend.txt Legend    Wigoltingen                          Air temperature 2 m above ground; daily maximum             20100827-20150517
+order_93920_TGWIG_tre200dx_2_data.txt   Data      Wigoltingen                          Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGWIG_tre200dx_2_legend.txt Legend    Wigoltingen                          Air temperature 2 m above ground; daily maximum             20150831-20151202
+order_93920_TGWIG_tre200dx_3_data.txt   Data      Wigoltingen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_TGWIG_tre200dx_3_legend.txt Legend    Wigoltingen                          Air temperature 2 m above ground; daily maximum             20160203-20210414
+order_93920_WIN_tre200dx_1_data.txt     Data      Winterthur / Seen                    Air temperature 2 m above ground; daily maximum             19690630-19831230
+order_93920_WIN_tre200dx_1_legend.txt   Legend    Winterthur / Seen                    Air temperature 2 m above ground; daily maximum             19690630-19831230
+order_93920_WYN_tre200dx_1_data.txt     Data      Wynau                                Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_WYN_tre200dx_1_legend.txt   Legend    Wynau                                Air temperature 2 m above ground; daily maximum             19771231-20210414
+order_93920_WAE_tre200dx_1_data.txt     Data      Wädenswil                            Air temperature 2 m above ground; daily maximum             19801231-20210414
+order_93920_WAE_tre200dx_1_legend.txt   Legend    Wädenswil                            Air temperature 2 m above ground; daily maximum             19801231-20210414
+order_93920_INNZUG_tre200dx_1_data.txt  Data      Zug                                  Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_INNZUG_tre200dx_1_legend.txt Legend    Zug                                  Air temperature 2 m above ground; daily maximum             20180422-20210414
+order_93920_NABZUE_tre200dx_1_data.txt  Data      Zürich                               Air temperature 2 m above ground; daily maximum             19910424-20210414
+order_93920_NABZUE_tre200dx_1_legend.txt Legend    Zürich                               Air temperature 2 m above ground; daily maximum             19910424-20210414
+order_93920_REH_tre200dx_1_data.txt     Data      Zürich / Affoltern                   Air temperature 2 m above ground; daily maximum             19780731-20210414
+order_93920_REH_tre200dx_1_legend.txt   Legend    Zürich / Affoltern                   Air temperature 2 m above ground; daily maximum             19780731-20210414
+order_93920_SMA_tre200dx_1_data.txt     Data      Zürich / Fluntern                    Air temperature 2 m above ground; daily maximum             18810830-18900121
+order_93920_SMA_tre200dx_1_legend.txt   Legend    Zürich / Fluntern                    Air temperature 2 m above ground; daily maximum             18810830-18900121
+order_93920_SMA_tre200dx_2_data.txt     Data      Zürich / Fluntern                    Air temperature 2 m above ground; daily maximum             18900926-20210414
+order_93920_SMA_tre200dx_2_legend.txt   Legend    Zürich / Fluntern                    Air temperature 2 m above ground; daily maximum             18900926-20210414
+order_93920_KLO_tre200dx_1_data.txt     Data      Zürich / Kloten                      Air temperature 2 m above ground; daily maximum             19500228-20210414
+order_93920_KLO_tre200dx_1_legend.txt   Legend    Zürich / Kloten                      Air temperature 2 m above ground; daily maximum             19500228-20210414
+order_93920_ZBO_tre200dx_1_data.txt     Data      Zürich-Bot.Garten                    Air temperature 2 m above ground; daily maximum             19581231-19751230
+order_93920_ZBO_tre200dx_1_legend.txt   Legend    Zürich-Bot.Garten                    Air temperature 2 m above ground; daily maximum             19581231-19751230

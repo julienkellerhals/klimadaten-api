@@ -1,0 +1,780 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 94094
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_94094_AIE_rre150m0_1_data.txt     Data      Affoltern i. E.                      Precipitation; monthly total                                186405-202103
+order_94094_AIE_rre150m0_1_legend.txt   Legend    Affoltern i. E.                      Precipitation; monthly total                                186405-202103
+order_94094_DLALB_rre150m0_1_data.txt   Data      Albstadt                             Precipitation; monthly total                                198610-199409
+order_94094_DLALB_rre150m0_1_legend.txt Legend    Albstadt                             Precipitation; monthly total                                198610-199409
+order_94094_DLALB_rre150m0_2_data.txt   Data      Albstadt                             Precipitation; monthly total                                199410-200910
+order_94094_DLALB_rre150m0_2_legend.txt Legend    Albstadt                             Precipitation; monthly total                                199410-200910
+order_94094_DLALB_rre150m0_3_data.txt   Data      Albstadt                             Precipitation; monthly total                                200911-201912
+order_94094_DLALB_rre150m0_3_legend.txt Legend    Albstadt                             Precipitation; monthly total                                200911-201912
+order_94094_APP_rre150m0_1_data.txt     Data      Appenzell                            Precipitation; monthly total                                189012-202103
+order_94094_APP_rre150m0_1_legend.txt   Legend    Appenzell                            Precipitation; monthly total                                189012-202103
+order_94094_DLBKO_rre150m0_1_data.txt   Data      Bad Kohlgrub                         Precipitation; monthly total                                199107-200704
+order_94094_DLBKO_rre150m0_1_legend.txt Legend    Bad Kohlgrub                         Precipitation; monthly total                                199107-200704
+order_94094_DLBKO_rre150m0_2_data.txt   Data      Bad Kohlgrub                         Precipitation; monthly total                                200705-201605
+order_94094_DLBKO_rre150m0_2_legend.txt Legend    Bad Kohlgrub                         Precipitation; monthly total                                200705-201605
+order_94094_DLBKO_rre150m0_3_data.txt   Data      Bad Kohlgrub                         Precipitation; monthly total                                201606-202003
+order_94094_DLBKO_rre150m0_3_legend.txt Legend    Bad Kohlgrub                         Precipitation; monthly total                                201606-202003
+order_94094_DLBKO_rre150m0_4_data.txt   Data      Bad Kohlgrub                         Precipitation; monthly total                                202004-202103
+order_94094_DLBKO_rre150m0_4_legend.txt Legend    Bad Kohlgrub                         Precipitation; monthly total                                202004-202103
+order_94094_BAW_rre150m0_1_data.txt     Data      Barmelweid                           Precipitation; monthly total                                194412-202103
+order_94094_BAW_rre150m0_1_legend.txt   Legend    Barmelweid                           Precipitation; monthly total                                194412-202103
+order_94094_NABBRM_rre150m0_1_data.txt  Data      Beromünster                          Precipitation; monthly total                                201703-201704
+order_94094_NABBRM_rre150m0_1_legend.txt Legend    Beromünster                          Precipitation; monthly total                                201703-201704
+order_94094_NABBRM_rre150m0_2_data.txt  Data      Beromünster                          Precipitation; monthly total                                201705-201706
+order_94094_NABBRM_rre150m0_2_legend.txt Legend    Beromünster                          Precipitation; monthly total                                201705-201706
+order_94094_NABBRM_rre150m0_3_data.txt  Data      Beromünster                          Precipitation; monthly total                                201707-201904
+order_94094_NABBRM_rre150m0_3_legend.txt Legend    Beromünster                          Precipitation; monthly total                                201707-201904
+order_94094_NABBRM_rre150m0_4_data.txt  Data      Beromünster                          Precipitation; monthly total                                201905-201912
+order_94094_NABBRM_rre150m0_4_legend.txt Legend    Beromünster                          Precipitation; monthly total                                201905-201912
+order_94094_NABBRM_rre150m0_5_data.txt  Data      Beromünster                          Precipitation; monthly total                                202002-202103
+order_94094_NABBRM_rre150m0_5_legend.txt Legend    Beromünster                          Precipitation; monthly total                                202002-202103
+order_94094_DLBIR_rre150m0_1_data.txt   Data      Birkendorf                           Precipitation; monthly total                                202102-202103
+order_94094_DLBIR_rre150m0_1_legend.txt Legend    Birkendorf                           Precipitation; monthly total                                202102-202103
+order_94094_MMBIS_rre150m0_1_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201211-201404
+order_94094_MMBIS_rre150m0_1_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201211-201404
+order_94094_MMBIS_rre150m0_2_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201406-201511
+order_94094_MMBIS_rre150m0_2_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201406-201511
+order_94094_MMBIS_rre150m0_3_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201602-201604
+order_94094_MMBIS_rre150m0_3_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201602-201604
+order_94094_MMBIS_rre150m0_4_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201605-201606
+order_94094_MMBIS_rre150m0_4_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201605-201606
+order_94094_MMBIS_rre150m0_5_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201607-201910
+order_94094_MMBIS_rre150m0_5_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201607-201910
+order_94094_MMBIS_rre150m0_6_data.txt   Data      Bisisthal                            Precipitation; monthly total                                201911-202011
+order_94094_MMBIS_rre150m0_6_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                201911-202011
+order_94094_MMBIS_rre150m0_7_data.txt   Data      Bisisthal                            Precipitation; monthly total                                202101-202103
+order_94094_MMBIS_rre150m0_7_legend.txt Legend    Bisisthal                            Precipitation; monthly total                                202101-202103
+order_94094_BOV_rre150m0_1_data.txt     Data      Boudevilliers                        Precipitation; monthly total                                196712-202103
+order_94094_BOV_rre150m0_1_legend.txt   Legend    Boudevilliers                        Precipitation; monthly total                                196712-202103
+order_94094_BRT_rre150m0_1_data.txt     Data      Bristen                              Precipitation; monthly total                                198112-202103
+order_94094_BRT_rre150m0_1_legend.txt   Legend    Bristen                              Precipitation; monthly total                                198112-202103
+order_94094_CNI_rre150m0_1_data.txt     Data      Cernier                              Precipitation; monthly total                                190009-191712
+order_94094_CNI_rre150m0_1_legend.txt   Legend    Cernier                              Precipitation; monthly total                                190009-191712
+order_94094_CNI_rre150m0_2_data.txt     Data      Cernier                              Precipitation; monthly total                                192912-196212
+order_94094_CNI_rre150m0_2_legend.txt   Legend    Cernier                              Precipitation; monthly total                                192912-196212
+order_94094_CHF_rre150m0_1_data.txt     Data      Champ-Fahy                           Precipitation; monthly total                                190012-192112
+order_94094_CHF_rre150m0_1_legend.txt   Legend    Champ-Fahy                           Precipitation; monthly total                                190012-192112
+order_94094_CNZ_rre150m0_1_data.txt     Data      Chanéaz                              Precipitation; monthly total                                197112-202103
+order_94094_CNZ_rre150m0_1_legend.txt   Legend    Chanéaz                              Precipitation; monthly total                                197112-202103
+order_94094_COU_rre150m0_1_data.txt     Data      Couvet                               Precipitation; monthly total                                189612-202103
+order_94094_COU_rre150m0_1_legend.txt   Legend    Couvet                               Precipitation; monthly total                                189612-202103
+order_94094_DBN_rre150m0_1_data.txt     Data      Dombresson                           Precipitation; monthly total                                190009-193112
+order_94094_DBN_rre150m0_1_legend.txt   Legend    Dombresson                           Precipitation; monthly total                                190009-193112
+order_94094_MMDAS_rre150m0_1_data.txt   Data      Därstetten                           Precipitation; monthly total                                201211-201304
+order_94094_MMDAS_rre150m0_1_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201211-201304
+order_94094_MMDAS_rre150m0_2_data.txt   Data      Därstetten                           Precipitation; monthly total                                201305-201307
+order_94094_MMDAS_rre150m0_2_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201305-201307
+order_94094_MMDAS_rre150m0_3_data.txt   Data      Därstetten                           Precipitation; monthly total                                201308-201404
+order_94094_MMDAS_rre150m0_3_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201308-201404
+order_94094_MMDAS_rre150m0_4_data.txt   Data      Därstetten                           Precipitation; monthly total                                201405-201406
+order_94094_MMDAS_rre150m0_4_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201405-201406
+order_94094_MMDAS_rre150m0_5_data.txt   Data      Därstetten                           Precipitation; monthly total                                201407-201411
+order_94094_MMDAS_rre150m0_5_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201407-201411
+order_94094_MMDAS_rre150m0_6_data.txt   Data      Därstetten                           Precipitation; monthly total                                201412-201506
+order_94094_MMDAS_rre150m0_6_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201412-201506
+order_94094_MMDAS_rre150m0_7_data.txt   Data      Därstetten                           Precipitation; monthly total                                201507-201511
+order_94094_MMDAS_rre150m0_7_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201507-201511
+order_94094_MMDAS_rre150m0_8_data.txt   Data      Därstetten                           Precipitation; monthly total                                201602-201605
+order_94094_MMDAS_rre150m0_8_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201602-201605
+order_94094_MMDAS_rre150m0_9_data.txt   Data      Därstetten                           Precipitation; monthly total                                201607-201804
+order_94094_MMDAS_rre150m0_9_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201607-201804
+order_94094_MMDAS_rre150m0_10_data.txt  Data      Därstetten                           Precipitation; monthly total                                201805-201811
+order_94094_MMDAS_rre150m0_10_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201805-201811
+order_94094_MMDAS_rre150m0_11_data.txt  Data      Därstetten                           Precipitation; monthly total                                201812-202103
+order_94094_MMDAS_rre150m0_11_legend.txt Legend    Därstetten                           Precipitation; monthly total                                201812-202103
+order_94094_EGR_rre150m0_1_data.txt     Data      Eggersriet                           Precipitation; monthly total                                197405-202103
+order_94094_EGR_rre150m0_1_legend.txt   Legend    Eggersriet                           Precipitation; monthly total                                197405-202103
+order_94094_SGEGR_rre150m0_1_data.txt   Data      Eggersriet                           Precipitation; monthly total                                199312-201404
+order_94094_SGEGR_rre150m0_1_legend.txt Legend    Eggersriet                           Precipitation; monthly total                                199312-201404
+order_94094_SGEGR_rre150m0_2_data.txt   Data      Eggersriet                           Precipitation; monthly total                                201405-202012
+order_94094_SGEGR_rre150m0_2_legend.txt Legend    Eggersriet                           Precipitation; monthly total                                201405-202012
+order_94094_DLESN_rre150m0_1_data.txt   Data      Engen-Stetten                        Precipitation; monthly total                                197812-200312
+order_94094_DLESN_rre150m0_1_legend.txt Legend    Engen-Stetten                        Precipitation; monthly total                                197812-200312
+order_94094_ENT_rre150m0_1_data.txt     Data      Entlebuch                            Precipitation; monthly total                                188207-202103
+order_94094_ENT_rre150m0_1_legend.txt   Legend    Entlebuch                            Precipitation; monthly total                                188207-202103
+order_94094_ERI_rre150m0_1_data.txt     Data      Eriswil                              Precipitation; monthly total                                197112-202103
+order_94094_ERI_rre150m0_1_legend.txt   Legend    Eriswil                              Precipitation; monthly total                                197112-202103
+order_94094_ERB_rre150m0_1_data.txt     Data      Erlenbach im Simmental               Precipitation; monthly total                                196812-202103
+order_94094_ERB_rre150m0_1_legend.txt   Legend    Erlenbach im Simmental               Precipitation; monthly total                                196812-202103
+order_94094_EVD_rre150m0_1_data.txt     Data      Evilard / Leubringen                 Precipitation; monthly total                                190412-196412
+order_94094_EVD_rre150m0_1_legend.txt   Legend    Evilard / Leubringen                 Precipitation; monthly total                                190412-196412
+order_94094_FAI_rre150m0_1_data.txt     Data      Faido                                Precipitation; monthly total                                198112-202103
+order_94094_FAI_rre150m0_1_legend.txt   Legend    Faido                                Precipitation; monthly total                                198112-202103
+order_94094_FEY_rre150m0_1_data.txt     Data      Fey                                  Precipitation; monthly total                                195906-198012
+order_94094_FEY_rre150m0_1_legend.txt   Legend    Fey                                  Precipitation; monthly total                                195906-198012
+order_94094_FEY_rre150m0_2_data.txt     Data      Fey                                  Precipitation; monthly total                                198407-200510
+order_94094_FEY_rre150m0_2_legend.txt   Legend    Fey                                  Precipitation; monthly total                                198407-200510
+order_94094_GLFIL_rre150m0_1_data.txt   Data      Filzbach                             Precipitation; monthly total                                201309-201404
+order_94094_GLFIL_rre150m0_1_legend.txt Legend    Filzbach                             Precipitation; monthly total                                201309-201404
+order_94094_GLFIL_rre150m0_2_data.txt   Data      Filzbach                             Precipitation; monthly total                                201405-201406
+order_94094_GLFIL_rre150m0_2_legend.txt Legend    Filzbach                             Precipitation; monthly total                                201405-201406
+order_94094_GLFIL_rre150m0_3_data.txt   Data      Filzbach                             Precipitation; monthly total                                201407-201803
+order_94094_GLFIL_rre150m0_3_legend.txt Legend    Filzbach                             Precipitation; monthly total                                201407-201803
+order_94094_GLFIL_rre150m0_4_data.txt   Data      Filzbach                             Precipitation; monthly total                                201804-202003
+order_94094_GLFIL_rre150m0_4_legend.txt Legend    Filzbach                             Precipitation; monthly total                                201804-202003
+order_94094_GLFIL_rre150m0_5_data.txt   Data      Filzbach                             Precipitation; monthly total                                202004-202006
+order_94094_GLFIL_rre150m0_5_legend.txt Legend    Filzbach                             Precipitation; monthly total                                202004-202006
+order_94094_GLFIL_rre150m0_6_data.txt   Data      Filzbach                             Precipitation; monthly total                                202007-202102
+order_94094_GLFIL_rre150m0_6_legend.txt Legend    Filzbach                             Precipitation; monthly total                                202007-202102
+order_94094_DLFRS_rre150m0_1_data.txt   Data      Freudenstadt                         Precipitation; monthly total                                194812-194904
+order_94094_DLFRS_rre150m0_1_legend.txt Legend    Freudenstadt                         Precipitation; monthly total                                194812-194904
+order_94094_DLFRS_rre150m0_2_data.txt   Data      Freudenstadt                         Precipitation; monthly total                                195010-202103
+order_94094_DLFRS_rre150m0_2_legend.txt Legend    Freudenstadt                         Precipitation; monthly total                                195010-202103
+order_94094_FRC_rre150m0_1_data.txt     Data      Fruence                              Precipitation; monthly total                                197612-202103
+order_94094_FRC_rre150m0_1_legend.txt   Legend    Fruence                              Precipitation; monthly total                                197612-202103
+order_94094_FRU_rre150m0_1_data.txt     Data      Frutigen                             Precipitation; monthly total                                190012-202103
+order_94094_FRU_rre150m0_1_legend.txt   Legend    Frutigen                             Precipitation; monthly total                                190012-202103
+order_94094_DLGAR_rre150m0_1_data.txt   Data      Garmisch-Partenkirchen               Precipitation; monthly total                                188612-188912
+order_94094_DLGAR_rre150m0_1_legend.txt Legend    Garmisch-Partenkirchen               Precipitation; monthly total                                188612-188912
+order_94094_DLGAR_rre150m0_2_data.txt   Data      Garmisch-Partenkirchen               Precipitation; monthly total                                189012-200407
+order_94094_DLGAR_rre150m0_2_legend.txt Legend    Garmisch-Partenkirchen               Precipitation; monthly total                                189012-200407
+order_94094_DLGAR_rre150m0_3_data.txt   Data      Garmisch-Partenkirchen               Precipitation; monthly total                                200408-202103
+order_94094_DLGAR_rre150m0_3_legend.txt Legend    Garmisch-Partenkirchen               Precipitation; monthly total                                200408-202103
+order_94094_STF_rre150m0_1_data.txt     Data      Grossdietwil / Stampfi               Precipitation; monthly total                                198108-202103
+order_94094_STF_rre150m0_1_legend.txt   Legend    Grossdietwil / Stampfi               Precipitation; monthly total                                198108-202103
+order_94094_GHS_rre150m0_1_data.txt     Data      Grosshöchstetten                     Precipitation; monthly total                                190012-202103
+order_94094_GHS_rre150m0_1_legend.txt   Legend    Grosshöchstetten                     Precipitation; monthly total                                190012-202103
+order_94094_GUR_rre150m0_1_data.txt     Data      Gurtnellen                           Precipitation; monthly total                                188304-197312
+order_94094_GUR_rre150m0_1_legend.txt   Legend    Gurtnellen                           Precipitation; monthly total                                188304-197312
+order_94094_HEI_rre150m0_1_data.txt     Data      Heiden                               Precipitation; monthly total                                195812-199512
+order_94094_HEI_rre150m0_1_legend.txt   Legend    Heiden                               Precipitation; monthly total                                195812-199512
+order_94094_ZHHOF_rre150m0_1_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                198506-198510
+order_94094_ZHHOF_rre150m0_1_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                198506-198510
+order_94094_ZHHOF_rre150m0_2_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                198604-198610
+order_94094_ZHHOF_rre150m0_2_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                198604-198610
+order_94094_ZHHOF_rre150m0_3_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                198703-198711
+order_94094_ZHHOF_rre150m0_3_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                198703-198711
+order_94094_ZHHOF_rre150m0_4_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                198804-198811
+order_94094_ZHHOF_rre150m0_4_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                198804-198811
+order_94094_ZHHOF_rre150m0_5_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                198903-198910
+order_94094_ZHHOF_rre150m0_5_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                198903-198910
+order_94094_ZHHOF_rre150m0_6_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                199003-199010
+order_94094_ZHHOF_rre150m0_6_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199003-199010
+order_94094_ZHHOF_rre150m0_7_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                199103-199110
+order_94094_ZHHOF_rre150m0_7_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199103-199110
+order_94094_ZHHOF_rre150m0_8_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                199203-199211
+order_94094_ZHHOF_rre150m0_8_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199203-199211
+order_94094_ZHHOF_rre150m0_9_data.txt   Data      Hofstetten / Schümberg               Precipitation; monthly total                                199303-199312
+order_94094_ZHHOF_rre150m0_9_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199303-199312
+order_94094_ZHHOF_rre150m0_10_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199403-199411
+order_94094_ZHHOF_rre150m0_10_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199403-199411
+order_94094_ZHHOF_rre150m0_11_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199503-199510
+order_94094_ZHHOF_rre150m0_11_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199503-199510
+order_94094_ZHHOF_rre150m0_12_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199604-199610
+order_94094_ZHHOF_rre150m0_12_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199604-199610
+order_94094_ZHHOF_rre150m0_13_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199703-199710
+order_94094_ZHHOF_rre150m0_13_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199703-199710
+order_94094_ZHHOF_rre150m0_14_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199803-199806
+order_94094_ZHHOF_rre150m0_14_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199803-199806
+order_94094_ZHHOF_rre150m0_15_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199808-199811
+order_94094_ZHHOF_rre150m0_15_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199808-199811
+order_94094_ZHHOF_rre150m0_16_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                199903-199910
+order_94094_ZHHOF_rre150m0_16_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                199903-199910
+order_94094_ZHHOF_rre150m0_17_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200003-200010
+order_94094_ZHHOF_rre150m0_17_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200003-200010
+order_94094_ZHHOF_rre150m0_18_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200103-200111
+order_94094_ZHHOF_rre150m0_18_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200103-200111
+order_94094_ZHHOF_rre150m0_19_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200204-200211
+order_94094_ZHHOF_rre150m0_19_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200204-200211
+order_94094_ZHHOF_rre150m0_20_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200303-200309
+order_94094_ZHHOF_rre150m0_20_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200303-200309
+order_94094_ZHHOF_rre150m0_21_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200403-200410
+order_94094_ZHHOF_rre150m0_21_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200403-200410
+order_94094_ZHHOF_rre150m0_22_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200503-200510
+order_94094_ZHHOF_rre150m0_22_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200503-200510
+order_94094_ZHHOF_rre150m0_23_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                200603-202003
+order_94094_ZHHOF_rre150m0_23_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                200603-202003
+order_94094_ZHHOF_rre150m0_24_data.txt  Data      Hofstetten / Schümberg               Precipitation; monthly total                                202006-202103
+order_94094_ZHHOF_rre150m0_24_legend.txt Legend    Hofstetten / Schümberg               Precipitation; monthly total                                202006-202103
+order_94094_HON_rre150m0_1_data.txt     Data      Hondrich                             Precipitation; monthly total                                195212-202103
+order_94094_HON_rre150m0_1_legend.txt   Legend    Hondrich                             Precipitation; monthly total                                195212-202103
+order_94094_IST_rre150m0_1_data.txt     Data      Isenthal                             Precipitation; monthly total                                190012-202103
+order_94094_IST_rre150m0_1_legend.txt   Legend    Isenthal                             Precipitation; monthly total                                190012-202103
+order_94094_TIISO_rre150m0_1_data.txt   Data      Isone                                Precipitation; monthly total                                197812-200609
+order_94094_TIISO_rre150m0_1_legend.txt Legend    Isone                                Precipitation; monthly total                                197812-200609
+order_94094_TIISO_rre150m0_2_data.txt   Data      Isone                                Precipitation; monthly total                                200610-201612
+order_94094_TIISO_rre150m0_2_legend.txt Legend    Isone                                Precipitation; monthly total                                200610-201612
+order_94094_TIISO_rre150m0_3_data.txt   Data      Isone                                Precipitation; monthly total                                201701-202103
+order_94094_TIISO_rre150m0_3_legend.txt Legend    Isone                                Precipitation; monthly total                                201701-202103
+order_94094_MMKSB_rre150m0_1_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201312-201403
+order_94094_MMKSB_rre150m0_1_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201312-201403
+order_94094_MMKSB_rre150m0_2_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201405-201412
+order_94094_MMKSB_rre150m0_2_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201405-201412
+order_94094_MMKSB_rre150m0_3_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201501-201506
+order_94094_MMKSB_rre150m0_3_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201501-201506
+order_94094_MMKSB_rre150m0_4_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201507-201511
+order_94094_MMKSB_rre150m0_4_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201507-201511
+order_94094_MMKSB_rre150m0_5_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201602-201603
+order_94094_MMKSB_rre150m0_5_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201602-201603
+order_94094_MMKSB_rre150m0_6_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201604-201612
+order_94094_MMKSB_rre150m0_6_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201604-201612
+order_94094_MMKSB_rre150m0_7_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201704-201707
+order_94094_MMKSB_rre150m0_7_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201704-201707
+order_94094_MMKSB_rre150m0_8_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201708-201808
+order_94094_MMKSB_rre150m0_8_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201708-201808
+order_94094_MMKSB_rre150m0_9_data.txt   Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201809-201811
+order_94094_MMKSB_rre150m0_9_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201809-201811
+order_94094_MMKSB_rre150m0_10_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201901-201903
+order_94094_MMKSB_rre150m0_10_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201901-201903
+order_94094_MMKSB_rre150m0_11_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201904-201905
+order_94094_MMKSB_rre150m0_11_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201904-201905
+order_94094_MMKSB_rre150m0_12_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201907-201908
+order_94094_MMKSB_rre150m0_12_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201907-201908
+order_94094_MMKSB_rre150m0_13_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                201910-202003
+order_94094_MMKSB_rre150m0_13_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                201910-202003
+order_94094_MMKSB_rre150m0_14_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                202004-202006
+order_94094_MMKSB_rre150m0_14_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                202004-202006
+order_94094_MMKSB_rre150m0_15_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                202007-202012
+order_94094_MMKSB_rre150m0_15_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                202007-202012
+order_94094_MMKSB_rre150m0_16_data.txt  Data      Kirchberg / Schallenberg             Precipitation; monthly total                                202101-202103
+order_94094_MMKSB_rre150m0_16_legend.txt Legend    Kirchberg / Schallenberg             Precipitation; monthly total                                202101-202103
+order_94094_KIB_rre150m0_1_data.txt     Data      Kirchberg, SG                        Precipitation; monthly total                                197404-202103
+order_94094_KIB_rre150m0_1_legend.txt   Legend    Kirchberg, SG                        Precipitation; monthly total                                197404-202103
+order_94094_BEKRA_rre150m0_1_data.txt   Data      Krauchthal / Dieterswald             Precipitation; monthly total                                199812-199906
+order_94094_BEKRA_rre150m0_1_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; monthly total                                199812-199906
+order_94094_BEKRA_rre150m0_2_data.txt   Data      Krauchthal / Dieterswald             Precipitation; monthly total                                199912-201010
+order_94094_BEKRA_rre150m0_2_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; monthly total                                199912-201010
+order_94094_BEKRA_rre150m0_3_data.txt   Data      Krauchthal / Dieterswald             Precipitation; monthly total                                201304-201611
+order_94094_BEKRA_rre150m0_3_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; monthly total                                201304-201611
+order_94094_BEKRA_rre150m0_4_data.txt   Data      Krauchthal / Dieterswald             Precipitation; monthly total                                201612-202103
+order_94094_BEKRA_rre150m0_4_legend.txt Legend    Krauchthal / Dieterswald             Precipitation; monthly total                                201612-202103
+order_94094_VDPEU_rre150m0_1_data.txt   Data      La Peufaire                          Precipitation; monthly total                                199902-199903
+order_94094_VDPEU_rre150m0_1_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                199902-199903
+order_94094_VDPEU_rre150m0_2_data.txt   Data      La Peufaire                          Precipitation; monthly total                                199905-200003
+order_94094_VDPEU_rre150m0_2_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                199905-200003
+order_94094_VDPEU_rre150m0_3_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200006-200009
+order_94094_VDPEU_rre150m0_3_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200006-200009
+order_94094_VDPEU_rre150m0_4_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200010-200012
+order_94094_VDPEU_rre150m0_4_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200010-200012
+order_94094_VDPEU_rre150m0_5_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200101-200103
+order_94094_VDPEU_rre150m0_5_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200101-200103
+order_94094_VDPEU_rre150m0_6_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200104-200112
+order_94094_VDPEU_rre150m0_6_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200104-200112
+order_94094_VDPEU_rre150m0_7_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200201-200203
+order_94094_VDPEU_rre150m0_7_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200201-200203
+order_94094_VDPEU_rre150m0_8_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200205-200212
+order_94094_VDPEU_rre150m0_8_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200205-200212
+order_94094_VDPEU_rre150m0_9_data.txt   Data      La Peufaire                          Precipitation; monthly total                                200301-200303
+order_94094_VDPEU_rre150m0_9_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200301-200303
+order_94094_VDPEU_rre150m0_10_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200304-200305
+order_94094_VDPEU_rre150m0_10_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200304-200305
+order_94094_VDPEU_rre150m0_11_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200306-200307
+order_94094_VDPEU_rre150m0_11_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200306-200307
+order_94094_VDPEU_rre150m0_12_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200308-200404
+order_94094_VDPEU_rre150m0_12_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200308-200404
+order_94094_VDPEU_rre150m0_13_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200406-200407
+order_94094_VDPEU_rre150m0_13_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200406-200407
+order_94094_VDPEU_rre150m0_14_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200408-200409
+order_94094_VDPEU_rre150m0_14_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200408-200409
+order_94094_VDPEU_rre150m0_15_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200506-200510
+order_94094_VDPEU_rre150m0_15_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200506-200510
+order_94094_VDPEU_rre150m0_16_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200603-200605
+order_94094_VDPEU_rre150m0_16_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200603-200605
+order_94094_VDPEU_rre150m0_17_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200606-200608
+order_94094_VDPEU_rre150m0_17_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200606-200608
+order_94094_VDPEU_rre150m0_18_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200703-200710
+order_94094_VDPEU_rre150m0_18_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200703-200710
+order_94094_VDPEU_rre150m0_19_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200803-200808
+order_94094_VDPEU_rre150m0_19_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200803-200808
+order_94094_VDPEU_rre150m0_20_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200903-200904
+order_94094_VDPEU_rre150m0_20_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200903-200904
+order_94094_VDPEU_rre150m0_21_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200905-200911
+order_94094_VDPEU_rre150m0_21_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200905-200911
+order_94094_VDPEU_rre150m0_22_data.txt  Data      La Peufaire                          Precipitation; monthly total                                200912-201010
+order_94094_VDPEU_rre150m0_22_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                200912-201010
+order_94094_VDPEU_rre150m0_23_data.txt  Data      La Peufaire                          Precipitation; monthly total                                201102-201111
+order_94094_VDPEU_rre150m0_23_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                201102-201111
+order_94094_VDPEU_rre150m0_24_data.txt  Data      La Peufaire                          Precipitation; monthly total                                201203-201211
+order_94094_VDPEU_rre150m0_24_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                201203-201211
+order_94094_VDPEU_rre150m0_25_data.txt  Data      La Peufaire                          Precipitation; monthly total                                201212-202103
+order_94094_VDPEU_rre150m0_25_legend.txt Legend    La Peufaire                          Precipitation; monthly total                                201212-202103
+order_94094_LAB_rre150m0_1_data.txt     Data      Langenbruck                          Precipitation; monthly total                                188204-188212
+order_94094_LAB_rre150m0_1_legend.txt   Legend    Langenbruck                          Precipitation; monthly total                                188204-188212
+order_94094_LAB_rre150m0_2_data.txt     Data      Langenbruck                          Precipitation; monthly total                                188411-202103
+order_94094_LAB_rre150m0_2_legend.txt   Legend    Langenbruck                          Precipitation; monthly total                                188411-202103
+order_94094_LAG_rre150m0_1_data.txt     Data      Langnau i.E.                         Precipitation; monthly total                                190009-202103
+order_94094_LAG_rre150m0_1_legend.txt   Legend    Langnau i.E.                         Precipitation; monthly total                                190009-202103
+order_94094_WSLLAB_rre150m0_1_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201712-201802
+order_94094_WSLLAB_rre150m0_1_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201712-201802
+order_94094_WSLLAB_rre150m0_2_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201804-201805
+order_94094_WSLLAB_rre150m0_2_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201804-201805
+order_94094_WSLLAB_rre150m0_3_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201806-201807
+order_94094_WSLLAB_rre150m0_3_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201806-201807
+order_94094_WSLLAB_rre150m0_4_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201808-201812
+order_94094_WSLLAB_rre150m0_4_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201808-201812
+order_94094_WSLLAB_rre150m0_5_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201901-201903
+order_94094_WSLLAB_rre150m0_5_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201901-201903
+order_94094_WSLLAB_rre150m0_6_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201905-201906
+order_94094_WSLLAB_rre150m0_6_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201905-201906
+order_94094_WSLLAB_rre150m0_7_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                201909-201912
+order_94094_WSLLAB_rre150m0_7_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                201909-201912
+order_94094_WSLLAB_rre150m0_8_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                202002-202005
+order_94094_WSLLAB_rre150m0_8_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                202002-202005
+order_94094_WSLLAB_rre150m0_9_data.txt  Data      Lausanne Bestand                     Precipitation; monthly total                                202006-202007
+order_94094_WSLLAB_rre150m0_9_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                202006-202007
+order_94094_WSLLAB_rre150m0_10_data.txt Data      Lausanne Bestand                     Precipitation; monthly total                                202010-202103
+order_94094_WSLLAB_rre150m0_10_legend.txt Legend    Lausanne Bestand                     Precipitation; monthly total                                202010-202103
+order_94094_WSLLAF_rre150m0_1_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201712-201803
+order_94094_WSLLAF_rre150m0_1_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201712-201803
+order_94094_WSLLAF_rre150m0_2_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201804-201805
+order_94094_WSLLAF_rre150m0_2_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201804-201805
+order_94094_WSLLAF_rre150m0_3_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201808-201809
+order_94094_WSLLAF_rre150m0_3_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201808-201809
+order_94094_WSLLAF_rre150m0_4_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201810-201812
+order_94094_WSLLAF_rre150m0_4_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201810-201812
+order_94094_WSLLAF_rre150m0_5_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201901-201903
+order_94094_WSLLAF_rre150m0_5_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201901-201903
+order_94094_WSLLAF_rre150m0_6_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201905-201906
+order_94094_WSLLAF_rre150m0_6_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201905-201906
+order_94094_WSLLAF_rre150m0_7_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                201909-201912
+order_94094_WSLLAF_rre150m0_7_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                201909-201912
+order_94094_WSLLAF_rre150m0_8_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                202002-202009
+order_94094_WSLLAF_rre150m0_8_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                202002-202009
+order_94094_WSLLAF_rre150m0_9_data.txt  Data      Lausanne Freiland                    Precipitation; monthly total                                202010-202103
+order_94094_WSLLAF_rre150m0_9_legend.txt Legend    Lausanne Freiland                    Precipitation; monthly total                                202010-202103
+order_94094_KALTB_rre150m0_1_data.txt   Data      Lauterbrunnen                        Precipitation; monthly total                                201810-202103
+order_94094_KALTB_rre150m0_1_legend.txt Legend    Lauterbrunnen                        Precipitation; monthly total                                201810-202103
+order_94094_VDLMT_rre150m0_1_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                199908-199910
+order_94094_VDLMT_rre150m0_1_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                199908-199910
+order_94094_VDLMT_rre150m0_2_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200003-200104
+order_94094_VDLMT_rre150m0_2_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200003-200104
+order_94094_VDLMT_rre150m0_3_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200105-200111
+order_94094_VDLMT_rre150m0_3_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200105-200111
+order_94094_VDLMT_rre150m0_4_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200201-200211
+order_94094_VDLMT_rre150m0_4_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200201-200211
+order_94094_VDLMT_rre150m0_5_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200303-200304
+order_94094_VDLMT_rre150m0_5_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200303-200304
+order_94094_VDLMT_rre150m0_6_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200305-200306
+order_94094_VDLMT_rre150m0_6_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200305-200306
+order_94094_VDLMT_rre150m0_7_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200308-200310
+order_94094_VDLMT_rre150m0_7_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200308-200310
+order_94094_VDLMT_rre150m0_8_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200401-200408
+order_94094_VDLMT_rre150m0_8_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200401-200408
+order_94094_VDLMT_rre150m0_9_data.txt   Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200410-200411
+order_94094_VDLMT_rre150m0_9_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200410-200411
+order_94094_VDLMT_rre150m0_10_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200504-200508
+order_94094_VDLMT_rre150m0_10_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200504-200508
+order_94094_VDLMT_rre150m0_11_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200509-200510
+order_94094_VDLMT_rre150m0_11_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200509-200510
+order_94094_VDLMT_rre150m0_12_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200601-200604
+order_94094_VDLMT_rre150m0_12_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200601-200604
+order_94094_VDLMT_rre150m0_13_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200605-200607
+order_94094_VDLMT_rre150m0_13_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200605-200607
+order_94094_VDLMT_rre150m0_14_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200609-200610
+order_94094_VDLMT_rre150m0_14_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200609-200610
+order_94094_VDLMT_rre150m0_15_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200707-200708
+order_94094_VDLMT_rre150m0_15_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200707-200708
+order_94094_VDLMT_rre150m0_16_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200709-200710
+order_94094_VDLMT_rre150m0_16_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200709-200710
+order_94094_VDLMT_rre150m0_17_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200712-200802
+order_94094_VDLMT_rre150m0_17_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200712-200802
+order_94094_VDLMT_rre150m0_18_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200807-200809
+order_94094_VDLMT_rre150m0_18_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200807-200809
+order_94094_VDLMT_rre150m0_19_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200902-200905
+order_94094_VDLMT_rre150m0_19_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200902-200905
+order_94094_VDLMT_rre150m0_20_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200906-200907
+order_94094_VDLMT_rre150m0_20_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200906-200907
+order_94094_VDLMT_rre150m0_21_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                200908-200911
+order_94094_VDLMT_rre150m0_21_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                200908-200911
+order_94094_VDLMT_rre150m0_22_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                201002-201010
+order_94094_VDLMT_rre150m0_22_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                201002-201010
+order_94094_VDLMT_rre150m0_23_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                201012-201105
+order_94094_VDLMT_rre150m0_23_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                201012-201105
+order_94094_VDLMT_rre150m0_24_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                201106-201111
+order_94094_VDLMT_rre150m0_24_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                201106-201111
+order_94094_VDLMT_rre150m0_25_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                201202-201211
+order_94094_VDLMT_rre150m0_25_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                201202-201211
+order_94094_VDLMT_rre150m0_26_data.txt  Data      Le Mont-sur-Lausanne                 Precipitation; monthly total                                201212-202103
+order_94094_VDLMT_rre150m0_26_legend.txt Legend    Le Mont-sur-Lausanne                 Precipitation; monthly total                                201212-202103
+order_94094_TFD_rre150m0_1_data.txt     Data      Linthal / Tierfehd                   Precipitation; monthly total                                196812-202103
+order_94094_TFD_rre150m0_1_legend.txt   Legend    Linthal / Tierfehd                   Precipitation; monthly total                                196812-202103
+order_94094_LUN_rre150m0_1_data.txt     Data      Lungern                              Precipitation; monthly total                                190404-202103
+order_94094_LUN_rre150m0_1_legend.txt   Legend    Lungern                              Precipitation; monthly total                                190404-202103
+order_94094_LUT_rre150m0_1_data.txt     Data      Luthern                              Precipitation; monthly total                                190912-202103
+order_94094_LUT_rre150m0_1_legend.txt   Legend    Luthern                              Precipitation; monthly total                                190912-202103
+order_94094_LSO_rre150m0_1_data.txt     Data      Luzern Sonnenberg                    Precipitation; monthly total                                187009-188012
+order_94094_LSO_rre150m0_1_legend.txt   Legend    Luzern Sonnenberg                    Precipitation; monthly total                                187009-188012
+order_94094_MAS_rre150m0_1_data.txt     Data      Marsens                              Precipitation; monthly total                                190012-202103
+order_94094_MAS_rre150m0_1_legend.txt   Legend    Marsens                              Precipitation; monthly total                                190012-202103
+order_94094_MGB_rre150m0_1_data.txt     Data      Mogelsberg                           Precipitation; monthly total                                197212-202103
+order_94094_MGB_rre150m0_1_legend.txt   Legend    Mogelsberg                           Precipitation; monthly total                                197212-202103
+order_94094_VDMOL_rre150m0_1_data.txt   Data      Mollens                              Precipitation; monthly total                                200006-200007
+order_94094_VDMOL_rre150m0_1_legend.txt Legend    Mollens                              Precipitation; monthly total                                200006-200007
+order_94094_VDMOL_rre150m0_2_data.txt   Data      Mollens                              Precipitation; monthly total                                200008-200010
+order_94094_VDMOL_rre150m0_2_legend.txt Legend    Mollens                              Precipitation; monthly total                                200008-200010
+order_94094_VDMOL_rre150m0_3_data.txt   Data      Mollens                              Precipitation; monthly total                                200011-200012
+order_94094_VDMOL_rre150m0_3_legend.txt Legend    Mollens                              Precipitation; monthly total                                200011-200012
+order_94094_VDMOL_rre150m0_4_data.txt   Data      Mollens                              Precipitation; monthly total                                200103-200105
+order_94094_VDMOL_rre150m0_4_legend.txt Legend    Mollens                              Precipitation; monthly total                                200103-200105
+order_94094_VDMOL_rre150m0_5_data.txt   Data      Mollens                              Precipitation; monthly total                                200106-200110
+order_94094_VDMOL_rre150m0_5_legend.txt Legend    Mollens                              Precipitation; monthly total                                200106-200110
+order_94094_VDMOL_rre150m0_6_data.txt   Data      Mollens                              Precipitation; monthly total                                200203-200204
+order_94094_VDMOL_rre150m0_6_legend.txt Legend    Mollens                              Precipitation; monthly total                                200203-200204
+order_94094_VDMOL_rre150m0_7_data.txt   Data      Mollens                              Precipitation; monthly total                                200206-200210
+order_94094_VDMOL_rre150m0_7_legend.txt Legend    Mollens                              Precipitation; monthly total                                200206-200210
+order_94094_VDMOL_rre150m0_8_data.txt   Data      Mollens                              Precipitation; monthly total                                200302-200311
+order_94094_VDMOL_rre150m0_8_legend.txt Legend    Mollens                              Precipitation; monthly total                                200302-200311
+order_94094_VDMOL_rre150m0_9_data.txt   Data      Mollens                              Precipitation; monthly total                                200401-200407
+order_94094_VDMOL_rre150m0_9_legend.txt Legend    Mollens                              Precipitation; monthly total                                200401-200407
+order_94094_VDMOL_rre150m0_10_data.txt  Data      Mollens                              Precipitation; monthly total                                200408-200409
+order_94094_VDMOL_rre150m0_10_legend.txt Legend    Mollens                              Precipitation; monthly total                                200408-200409
+order_94094_VDMOL_rre150m0_11_data.txt  Data      Mollens                              Precipitation; monthly total                                200410-200411
+order_94094_VDMOL_rre150m0_11_legend.txt Legend    Mollens                              Precipitation; monthly total                                200410-200411
+order_94094_VDMOL_rre150m0_12_data.txt  Data      Mollens                              Precipitation; monthly total                                200504-200505
+order_94094_VDMOL_rre150m0_12_legend.txt Legend    Mollens                              Precipitation; monthly total                                200504-200505
+order_94094_VDMOL_rre150m0_13_data.txt  Data      Mollens                              Precipitation; monthly total                                200506-200511
+order_94094_VDMOL_rre150m0_13_legend.txt Legend    Mollens                              Precipitation; monthly total                                200506-200511
+order_94094_VDMOL_rre150m0_14_data.txt  Data      Mollens                              Precipitation; monthly total                                200603-200606
+order_94094_VDMOL_rre150m0_14_legend.txt Legend    Mollens                              Precipitation; monthly total                                200603-200606
+order_94094_VDMOL_rre150m0_15_data.txt  Data      Mollens                              Precipitation; monthly total                                200609-200612
+order_94094_VDMOL_rre150m0_15_legend.txt Legend    Mollens                              Precipitation; monthly total                                200609-200612
+order_94094_VDMOL_rre150m0_16_data.txt  Data      Mollens                              Precipitation; monthly total                                200702-200704
+order_94094_VDMOL_rre150m0_16_legend.txt Legend    Mollens                              Precipitation; monthly total                                200702-200704
+order_94094_VDMOL_rre150m0_17_data.txt  Data      Mollens                              Precipitation; monthly total                                200706-200707
+order_94094_VDMOL_rre150m0_17_legend.txt Legend    Mollens                              Precipitation; monthly total                                200706-200707
+order_94094_VDMOL_rre150m0_18_data.txt  Data      Mollens                              Precipitation; monthly total                                200708-200711
+order_94094_VDMOL_rre150m0_18_legend.txt Legend    Mollens                              Precipitation; monthly total                                200708-200711
+order_94094_VDMOL_rre150m0_19_data.txt  Data      Mollens                              Precipitation; monthly total                                200804-200805
+order_94094_VDMOL_rre150m0_19_legend.txt Legend    Mollens                              Precipitation; monthly total                                200804-200805
+order_94094_VDMOL_rre150m0_20_data.txt  Data      Mollens                              Precipitation; monthly total                                200808-200810
+order_94094_VDMOL_rre150m0_20_legend.txt Legend    Mollens                              Precipitation; monthly total                                200808-200810
+order_94094_VDMOL_rre150m0_21_data.txt  Data      Mollens                              Precipitation; monthly total                                200901-200910
+order_94094_VDMOL_rre150m0_21_legend.txt Legend    Mollens                              Precipitation; monthly total                                200901-200910
+order_94094_VDMOL_rre150m0_22_data.txt  Data      Mollens                              Precipitation; monthly total                                201002-201010
+order_94094_VDMOL_rre150m0_22_legend.txt Legend    Mollens                              Precipitation; monthly total                                201002-201010
+order_94094_VDMOL_rre150m0_23_data.txt  Data      Mollens                              Precipitation; monthly total                                201012-201111
+order_94094_VDMOL_rre150m0_23_legend.txt Legend    Mollens                              Precipitation; monthly total                                201012-201111
+order_94094_VDMOL_rre150m0_24_data.txt  Data      Mollens                              Precipitation; monthly total                                201202-201211
+order_94094_VDMOL_rre150m0_24_legend.txt Legend    Mollens                              Precipitation; monthly total                                201202-201211
+order_94094_VDMOL_rre150m0_25_data.txt  Data      Mollens                              Precipitation; monthly total                                201212-202103
+order_94094_VDMOL_rre150m0_25_legend.txt Legend    Mollens                              Precipitation; monthly total                                201212-202103
+order_94094_MGT_rre150m0_1_data.txt     Data      Morgarten                            Precipitation; monthly total                                196012-197412
+order_94094_MGT_rre150m0_1_legend.txt   Legend    Morgarten                            Precipitation; monthly total                                196012-197412
+order_94094_MNG_rre150m0_1_data.txt     Data      Mosnang                              Precipitation; monthly total                                197212-197603
+order_94094_MNG_rre150m0_1_legend.txt   Legend    Mosnang                              Precipitation; monthly total                                197212-197603
+order_94094_MSG_rre150m0_1_data.txt     Data      Mosogno                              Precipitation; monthly total                                190012-202103
+order_94094_MSG_rre150m0_1_legend.txt   Legend    Mosogno                              Precipitation; monthly total                                190012-202103
+order_94094_DLMUS_rre150m0_1_data.txt   Data      Münsingen                            Precipitation; monthly total                                189012-194412
+order_94094_DLMUS_rre150m0_1_legend.txt Legend    Münsingen                            Precipitation; monthly total                                189012-194412
+order_94094_DLMUS_rre150m0_2_data.txt   Data      Münsingen                            Precipitation; monthly total                                194512-202103
+order_94094_DLMUS_rre150m0_2_legend.txt Legend    Münsingen                            Precipitation; monthly total                                194512-202103
+order_94094_TGNOL_rre150m0_1_data.txt   Data      Nollen                               Precipitation; monthly total                                201010-201011
+order_94094_TGNOL_rre150m0_1_legend.txt Legend    Nollen                               Precipitation; monthly total                                201010-201011
+order_94094_TGNOL_rre150m0_2_data.txt   Data      Nollen                               Precipitation; monthly total                                201103-201109
+order_94094_TGNOL_rre150m0_2_legend.txt Legend    Nollen                               Precipitation; monthly total                                201103-201109
+order_94094_TGNOL_rre150m0_3_data.txt   Data      Nollen                               Precipitation; monthly total                                201110-201111
+order_94094_TGNOL_rre150m0_3_legend.txt Legend    Nollen                               Precipitation; monthly total                                201110-201111
+order_94094_TGNOL_rre150m0_4_data.txt   Data      Nollen                               Precipitation; monthly total                                201112-201203
+order_94094_TGNOL_rre150m0_4_legend.txt Legend    Nollen                               Precipitation; monthly total                                201112-201203
+order_94094_TGNOL_rre150m0_5_data.txt   Data      Nollen                               Precipitation; monthly total                                201204-201208
+order_94094_TGNOL_rre150m0_5_legend.txt Legend    Nollen                               Precipitation; monthly total                                201204-201208
+order_94094_TGNOL_rre150m0_6_data.txt   Data      Nollen                               Precipitation; monthly total                                201211-201212
+order_94094_TGNOL_rre150m0_6_legend.txt Legend    Nollen                               Precipitation; monthly total                                201211-201212
+order_94094_TGNOL_rre150m0_7_data.txt   Data      Nollen                               Precipitation; monthly total                                201301-201302
+order_94094_TGNOL_rre150m0_7_legend.txt Legend    Nollen                               Precipitation; monthly total                                201301-201302
+order_94094_TGNOL_rre150m0_8_data.txt   Data      Nollen                               Precipitation; monthly total                                201304-201306
+order_94094_TGNOL_rre150m0_8_legend.txt Legend    Nollen                               Precipitation; monthly total                                201304-201306
+order_94094_TGNOL_rre150m0_9_data.txt   Data      Nollen                               Precipitation; monthly total                                201307-201308
+order_94094_TGNOL_rre150m0_9_legend.txt Legend    Nollen                               Precipitation; monthly total                                201307-201308
+order_94094_TGNOL_rre150m0_10_data.txt  Data      Nollen                               Precipitation; monthly total                                201309-201310
+order_94094_TGNOL_rre150m0_10_legend.txt Legend    Nollen                               Precipitation; monthly total                                201309-201310
+order_94094_TGNOL_rre150m0_11_data.txt  Data      Nollen                               Precipitation; monthly total                                201311-201404
+order_94094_TGNOL_rre150m0_11_legend.txt Legend    Nollen                               Precipitation; monthly total                                201311-201404
+order_94094_TGNOL_rre150m0_12_data.txt  Data      Nollen                               Precipitation; monthly total                                201405-201410
+order_94094_TGNOL_rre150m0_12_legend.txt Legend    Nollen                               Precipitation; monthly total                                201405-201410
+order_94094_TGNOL_rre150m0_13_data.txt  Data      Nollen                               Precipitation; monthly total                                201411-201412
+order_94094_TGNOL_rre150m0_13_legend.txt Legend    Nollen                               Precipitation; monthly total                                201411-201412
+order_94094_TGNOL_rre150m0_14_data.txt  Data      Nollen                               Precipitation; monthly total                                201502-201504
+order_94094_TGNOL_rre150m0_14_legend.txt Legend    Nollen                               Precipitation; monthly total                                201502-201504
+order_94094_TGNOL_rre150m0_15_data.txt  Data      Nollen                               Precipitation; monthly total                                201508-201606
+order_94094_TGNOL_rre150m0_15_legend.txt Legend    Nollen                               Precipitation; monthly total                                201508-201606
+order_94094_TGNOL_rre150m0_16_data.txt  Data      Nollen                               Precipitation; monthly total                                201607-202012
+order_94094_TGNOL_rre150m0_16_legend.txt Legend    Nollen                               Precipitation; monthly total                                201607-202012
+order_94094_TGNOL_rre150m0_17_data.txt  Data      Nollen                               Precipitation; monthly total                                202101-202103
+order_94094_TGNOL_rre150m0_17_legend.txt Legend    Nollen                               Precipitation; monthly total                                202101-202103
+order_94094_OBA_rre150m0_1_data.txt     Data      Oberbalm                             Precipitation; monthly total                                197112-197912
+order_94094_OBA_rre150m0_1_legend.txt   Legend    Oberbalm                             Precipitation; monthly total                                197112-197912
+order_94094_DLOBD_rre150m0_1_data.txt   Data      Oberstdorf                           Precipitation; monthly total                                188512-194504
+order_94094_DLOBD_rre150m0_1_legend.txt Legend    Oberstdorf                           Precipitation; monthly total                                188512-194504
+order_94094_DLOBD_rre150m0_2_data.txt   Data      Oberstdorf                           Precipitation; monthly total                                194507-202103
+order_94094_DLOBD_rre150m0_2_legend.txt Legend    Oberstdorf                           Precipitation; monthly total                                194507-202103
+order_94094_IYOBV_rre150m0_1_data.txt   Data      Obervintl                            Precipitation; monthly total                                198812-199312
+order_94094_IYOBV_rre150m0_1_legend.txt Legend    Obervintl                            Precipitation; monthly total                                198812-199312
+order_94094_IYOBV_rre150m0_2_data.txt   Data      Obervintl                            Precipitation; monthly total                                199412-200009
+order_94094_IYOBV_rre150m0_2_legend.txt Legend    Obervintl                            Precipitation; monthly total                                199412-200009
+order_94094_IYOBV_rre150m0_3_data.txt   Data      Obervintl                            Precipitation; monthly total                                200011-201306
+order_94094_IYOBV_rre150m0_3_legend.txt Legend    Obervintl                            Precipitation; monthly total                                200011-201306
+order_94094_IYOBV_rre150m0_4_data.txt   Data      Obervintl                            Precipitation; monthly total                                201309-201903
+order_94094_IYOBV_rre150m0_4_legend.txt Legend    Obervintl                            Precipitation; monthly total                                201309-201903
+order_94094_IYOBV_rre150m0_5_data.txt   Data      Obervintl                            Precipitation; monthly total                                201905-201908
+order_94094_IYOBV_rre150m0_5_legend.txt Legend    Obervintl                            Precipitation; monthly total                                201905-201908
+order_94094_IYOBV_rre150m0_6_data.txt   Data      Obervintl                            Precipitation; monthly total                                201909-202004
+order_94094_IYOBV_rre150m0_6_legend.txt Legend    Obervintl                            Precipitation; monthly total                                201909-202004
+order_94094_IYOBV_rre150m0_7_data.txt   Data      Obervintl                            Precipitation; monthly total                                202005-202006
+order_94094_IYOBV_rre150m0_7_legend.txt Legend    Obervintl                            Precipitation; monthly total                                202005-202006
+order_94094_IYOBV_rre150m0_8_data.txt   Data      Obervintl                            Precipitation; monthly total                                202007-202009
+order_94094_IYOBV_rre150m0_8_legend.txt Legend    Obervintl                            Precipitation; monthly total                                202007-202009
+order_94094_IYOBV_rre150m0_9_data.txt   Data      Obervintl                            Precipitation; monthly total                                202011-202103
+order_94094_IYOBV_rre150m0_9_legend.txt Legend    Obervintl                            Precipitation; monthly total                                202011-202103
+order_94094_PEF_rre150m0_1_data.txt     Data      Peuffeyre / La Bex                   Precipitation; monthly total                                196812-197312
+order_94094_PEF_rre150m0_1_legend.txt   Legend    Peuffeyre / La Bex                   Precipitation; monthly total                                196812-197312
+order_94094_PFS_rre150m0_1_data.txt     Data      Pfannenstiel                         Precipitation; monthly total                                192212-197110
+order_94094_PFS_rre150m0_1_legend.txt   Legend    Pfannenstiel                         Precipitation; monthly total                                192212-197110
+order_94094_LOB_rre150m0_1_data.txt     Data      Pleigne                              Precipitation; monthly total                                195212-202103
+order_94094_LOB_rre150m0_1_legend.txt   Legend    Pleigne                              Precipitation; monthly total                                195212-202103
+order_94094_VDPON_rre150m0_1_data.txt   Data      Pont                                 Precipitation; monthly total                                199905-199906
+order_94094_VDPON_rre150m0_1_legend.txt Legend    Pont                                 Precipitation; monthly total                                199905-199906
+order_94094_VDPON_rre150m0_2_data.txt   Data      Pont                                 Precipitation; monthly total                                199907-199910
+order_94094_VDPON_rre150m0_2_legend.txt Legend    Pont                                 Precipitation; monthly total                                199907-199910
+order_94094_VDPON_rre150m0_3_data.txt   Data      Pont                                 Precipitation; monthly total                                200003-200004
+order_94094_VDPON_rre150m0_3_legend.txt Legend    Pont                                 Precipitation; monthly total                                200003-200004
+order_94094_VDPON_rre150m0_4_data.txt   Data      Pont                                 Precipitation; monthly total                                200005-200011
+order_94094_VDPON_rre150m0_4_legend.txt Legend    Pont                                 Precipitation; monthly total                                200005-200011
+order_94094_VDPON_rre150m0_5_data.txt   Data      Pont                                 Precipitation; monthly total                                200104-200105
+order_94094_VDPON_rre150m0_5_legend.txt Legend    Pont                                 Precipitation; monthly total                                200104-200105
+order_94094_VDPON_rre150m0_6_data.txt   Data      Pont                                 Precipitation; monthly total                                200106-200107
+order_94094_VDPON_rre150m0_6_legend.txt Legend    Pont                                 Precipitation; monthly total                                200106-200107
+order_94094_VDPON_rre150m0_7_data.txt   Data      Pont                                 Precipitation; monthly total                                200108-200110
+order_94094_VDPON_rre150m0_7_legend.txt Legend    Pont                                 Precipitation; monthly total                                200108-200110
+order_94094_VDPON_rre150m0_8_data.txt   Data      Pont                                 Precipitation; monthly total                                200203-200204
+order_94094_VDPON_rre150m0_8_legend.txt Legend    Pont                                 Precipitation; monthly total                                200203-200204
+order_94094_VDPON_rre150m0_9_data.txt   Data      Pont                                 Precipitation; monthly total                                200207-200208
+order_94094_VDPON_rre150m0_9_legend.txt Legend    Pont                                 Precipitation; monthly total                                200207-200208
+order_94094_VDPON_rre150m0_10_data.txt  Data      Pont                                 Precipitation; monthly total                                200209-200210
+order_94094_VDPON_rre150m0_10_legend.txt Legend    Pont                                 Precipitation; monthly total                                200209-200210
+order_94094_VDPON_rre150m0_11_data.txt  Data      Pont                                 Precipitation; monthly total                                200303-200304
+order_94094_VDPON_rre150m0_11_legend.txt Legend    Pont                                 Precipitation; monthly total                                200303-200304
+order_94094_VDPON_rre150m0_12_data.txt  Data      Pont                                 Precipitation; monthly total                                200306-200309
+order_94094_VDPON_rre150m0_12_legend.txt Legend    Pont                                 Precipitation; monthly total                                200306-200309
+order_94094_VDPON_rre150m0_13_data.txt  Data      Pont                                 Precipitation; monthly total                                200310-200311
+order_94094_VDPON_rre150m0_13_legend.txt Legend    Pont                                 Precipitation; monthly total                                200310-200311
+order_94094_VDPON_rre150m0_14_data.txt  Data      Pont                                 Precipitation; monthly total                                200404-200405
+order_94094_VDPON_rre150m0_14_legend.txt Legend    Pont                                 Precipitation; monthly total                                200404-200405
+order_94094_VDPON_rre150m0_15_data.txt  Data      Pont                                 Precipitation; monthly total                                200408-200409
+order_94094_VDPON_rre150m0_15_legend.txt Legend    Pont                                 Precipitation; monthly total                                200408-200409
+order_94094_VDPON_rre150m0_16_data.txt  Data      Pont                                 Precipitation; monthly total                                200504-200507
+order_94094_VDPON_rre150m0_16_legend.txt Legend    Pont                                 Precipitation; monthly total                                200504-200507
+order_94094_VDPON_rre150m0_17_data.txt  Data      Pont                                 Precipitation; monthly total                                200508-200509
+order_94094_VDPON_rre150m0_17_legend.txt Legend    Pont                                 Precipitation; monthly total                                200508-200509
+order_94094_VDPON_rre150m0_18_data.txt  Data      Pont                                 Precipitation; monthly total                                200603-200611
+order_94094_VDPON_rre150m0_18_legend.txt Legend    Pont                                 Precipitation; monthly total                                200603-200611
+order_94094_VDPON_rre150m0_19_data.txt  Data      Pont                                 Precipitation; monthly total                                200701-200702
+order_94094_VDPON_rre150m0_19_legend.txt Legend    Pont                                 Precipitation; monthly total                                200701-200702
+order_94094_VDPON_rre150m0_20_data.txt  Data      Pont                                 Precipitation; monthly total                                200704-200710
+order_94094_VDPON_rre150m0_20_legend.txt Legend    Pont                                 Precipitation; monthly total                                200704-200710
+order_94094_VDPON_rre150m0_21_data.txt  Data      Pont                                 Precipitation; monthly total                                200712-200801
+order_94094_VDPON_rre150m0_21_legend.txt Legend    Pont                                 Precipitation; monthly total                                200712-200801
+order_94094_VDPON_rre150m0_22_data.txt  Data      Pont                                 Precipitation; monthly total                                200803-200804
+order_94094_VDPON_rre150m0_22_legend.txt Legend    Pont                                 Precipitation; monthly total                                200803-200804
+order_94094_VDPON_rre150m0_23_data.txt  Data      Pont                                 Precipitation; monthly total                                200805-200806
+order_94094_VDPON_rre150m0_23_legend.txt Legend    Pont                                 Precipitation; monthly total                                200805-200806
+order_94094_VDPON_rre150m0_24_data.txt  Data      Pont                                 Precipitation; monthly total                                200808-200809
+order_94094_VDPON_rre150m0_24_legend.txt Legend    Pont                                 Precipitation; monthly total                                200808-200809
+order_94094_VDPON_rre150m0_25_data.txt  Data      Pont                                 Precipitation; monthly total                                200902-200911
+order_94094_VDPON_rre150m0_25_legend.txt Legend    Pont                                 Precipitation; monthly total                                200902-200911
+order_94094_VDPON_rre150m0_26_data.txt  Data      Pont                                 Precipitation; monthly total                                201002-201010
+order_94094_VDPON_rre150m0_26_legend.txt Legend    Pont                                 Precipitation; monthly total                                201002-201010
+order_94094_VDPON_rre150m0_27_data.txt  Data      Pont                                 Precipitation; monthly total                                201101-201111
+order_94094_VDPON_rre150m0_27_legend.txt Legend    Pont                                 Precipitation; monthly total                                201101-201111
+order_94094_VDPON_rre150m0_28_data.txt  Data      Pont                                 Precipitation; monthly total                                201112-201211
+order_94094_VDPON_rre150m0_28_legend.txt Legend    Pont                                 Precipitation; monthly total                                201112-201211
+order_94094_VDPON_rre150m0_29_data.txt  Data      Pont                                 Precipitation; monthly total                                201212-202103
+order_94094_VDPON_rre150m0_29_legend.txt Legend    Pont                                 Precipitation; monthly total                                201212-202103
+order_94094_MMRIC_rre150m0_1_data.txt   Data      Ricken                               Precipitation; monthly total                                201211-201304
+order_94094_MMRIC_rre150m0_1_legend.txt Legend    Ricken                               Precipitation; monthly total                                201211-201304
+order_94094_MMRIC_rre150m0_2_data.txt   Data      Ricken                               Precipitation; monthly total                                201305-201404
+order_94094_MMRIC_rre150m0_2_legend.txt Legend    Ricken                               Precipitation; monthly total                                201305-201404
+order_94094_MMRIC_rre150m0_3_data.txt   Data      Ricken                               Precipitation; monthly total                                201405-201406
+order_94094_MMRIC_rre150m0_3_legend.txt Legend    Ricken                               Precipitation; monthly total                                201405-201406
+order_94094_MMRIC_rre150m0_4_data.txt   Data      Ricken                               Precipitation; monthly total                                201407-201507
+order_94094_MMRIC_rre150m0_4_legend.txt Legend    Ricken                               Precipitation; monthly total                                201407-201507
+order_94094_MMRIC_rre150m0_5_data.txt   Data      Ricken                               Precipitation; monthly total                                201508-201510
+order_94094_MMRIC_rre150m0_5_legend.txt Legend    Ricken                               Precipitation; monthly total                                201508-201510
+order_94094_MMRIC_rre150m0_6_data.txt   Data      Ricken                               Precipitation; monthly total                                201602-201605
+order_94094_MMRIC_rre150m0_6_legend.txt Legend    Ricken                               Precipitation; monthly total                                201602-201605
+order_94094_MMRIC_rre150m0_7_data.txt   Data      Ricken                               Precipitation; monthly total                                201606-201807
+order_94094_MMRIC_rre150m0_7_legend.txt Legend    Ricken                               Precipitation; monthly total                                201606-201807
+order_94094_MMRIC_rre150m0_8_data.txt   Data      Ricken                               Precipitation; monthly total                                201808-201903
+order_94094_MMRIC_rre150m0_8_legend.txt Legend    Ricken                               Precipitation; monthly total                                201808-201903
+order_94094_MMRIC_rre150m0_9_data.txt   Data      Ricken                               Precipitation; monthly total                                201904-201906
+order_94094_MMRIC_rre150m0_9_legend.txt Legend    Ricken                               Precipitation; monthly total                                201904-201906
+order_94094_MMRIC_rre150m0_10_data.txt  Data      Ricken                               Precipitation; monthly total                                201907-202012
+order_94094_MMRIC_rre150m0_10_legend.txt Legend    Ricken                               Precipitation; monthly total                                201907-202012
+order_94094_MMRIC_rre150m0_11_data.txt  Data      Ricken                               Precipitation; monthly total                                202101-202103
+order_94094_MMRIC_rre150m0_11_legend.txt Legend    Ricken                               Precipitation; monthly total                                202101-202103
+order_94094_RID_rre150m0_1_data.txt     Data      Rieden                               Precipitation; monthly total                                197312-197912
+order_94094_RID_rre150m0_1_legend.txt   Legend    Rieden                               Precipitation; monthly total                                197312-197912
+order_94094_RHO_rre150m0_1_data.txt     Data      Rietholz                             Precipitation; monthly total                                197602-197804
+order_94094_RHO_rre150m0_1_legend.txt   Legend    Rietholz                             Precipitation; monthly total                                197602-197804
+order_94094_RIG_rre150m0_1_data.txt     Data      Riggisberg                           Precipitation; monthly total                                197112-200303
+order_94094_RIG_rre150m0_1_legend.txt   Legend    Riggisberg                           Precipitation; monthly total                                197112-200303
+order_94094_MMRIG_rre150m0_1_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201312-201403
+order_94094_MMRIG_rre150m0_1_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201312-201403
+order_94094_MMRIG_rre150m0_2_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201405-201410
+order_94094_MMRIG_rre150m0_2_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201405-201410
+order_94094_MMRIG_rre150m0_3_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201411-201510
+order_94094_MMRIG_rre150m0_3_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201411-201510
+order_94094_MMRIG_rre150m0_4_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201602-201610
+order_94094_MMRIG_rre150m0_4_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201602-201610
+order_94094_MMRIG_rre150m0_5_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201611-201703
+order_94094_MMRIG_rre150m0_5_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201611-201703
+order_94094_MMRIG_rre150m0_6_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201704-201710
+order_94094_MMRIG_rre150m0_6_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201704-201710
+order_94094_MMRIG_rre150m0_7_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201712-201808
+order_94094_MMRIG_rre150m0_7_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201712-201808
+order_94094_MMRIG_rre150m0_8_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201809-201810
+order_94094_MMRIG_rre150m0_8_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201809-201810
+order_94094_MMRIG_rre150m0_9_data.txt   Data      Riggisberg                           Precipitation; monthly total                                201812-201908
+order_94094_MMRIG_rre150m0_9_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201812-201908
+order_94094_MMRIG_rre150m0_10_data.txt  Data      Riggisberg                           Precipitation; monthly total                                201909-201910
+order_94094_MMRIG_rre150m0_10_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201909-201910
+order_94094_MMRIG_rre150m0_11_data.txt  Data      Riggisberg                           Precipitation; monthly total                                201911-202010
+order_94094_MMRIG_rre150m0_11_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                201911-202010
+order_94094_MMRIG_rre150m0_12_data.txt  Data      Riggisberg                           Precipitation; monthly total                                202011-202103
+order_94094_MMRIG_rre150m0_12_legend.txt Legend    Riggisberg                           Precipitation; monthly total                                202011-202103
+order_94094_VDROM_rre150m0_1_data.txt   Data      Romairon                             Precipitation; monthly total                                199905-199906
+order_94094_VDROM_rre150m0_1_legend.txt Legend    Romairon                             Precipitation; monthly total                                199905-199906
+order_94094_VDROM_rre150m0_2_data.txt   Data      Romairon                             Precipitation; monthly total                                199908-199910
+order_94094_VDROM_rre150m0_2_legend.txt Legend    Romairon                             Precipitation; monthly total                                199908-199910
+order_94094_VDROM_rre150m0_3_data.txt   Data      Romairon                             Precipitation; monthly total                                200008-200009
+order_94094_VDROM_rre150m0_3_legend.txt Legend    Romairon                             Precipitation; monthly total                                200008-200009
+order_94094_VDROM_rre150m0_4_data.txt   Data      Romairon                             Precipitation; monthly total                                200105-200106
+order_94094_VDROM_rre150m0_4_legend.txt Legend    Romairon                             Precipitation; monthly total                                200105-200106
+order_94094_VDROM_rre150m0_5_data.txt   Data      Romairon                             Precipitation; monthly total                                200107-200110
+order_94094_VDROM_rre150m0_5_legend.txt Legend    Romairon                             Precipitation; monthly total                                200107-200110
+order_94094_VDROM_rre150m0_6_data.txt   Data      Romairon                             Precipitation; monthly total                                200203-200206
+order_94094_VDROM_rre150m0_6_legend.txt Legend    Romairon                             Precipitation; monthly total                                200203-200206
+order_94094_VDROM_rre150m0_7_data.txt   Data      Romairon                             Precipitation; monthly total                                200207-200208
+order_94094_VDROM_rre150m0_7_legend.txt Legend    Romairon                             Precipitation; monthly total                                200207-200208
+order_94094_VDROM_rre150m0_8_data.txt   Data      Romairon                             Precipitation; monthly total                                200302-200311
+order_94094_VDROM_rre150m0_8_legend.txt Legend    Romairon                             Precipitation; monthly total                                200302-200311
+order_94094_VDROM_rre150m0_9_data.txt   Data      Romairon                             Precipitation; monthly total                                200401-200407
+order_94094_VDROM_rre150m0_9_legend.txt Legend    Romairon                             Precipitation; monthly total                                200401-200407
+order_94094_VDROM_rre150m0_10_data.txt  Data      Romairon                             Precipitation; monthly total                                200408-200411
+order_94094_VDROM_rre150m0_10_legend.txt Legend    Romairon                             Precipitation; monthly total                                200408-200411
+order_94094_VDROM_rre150m0_11_data.txt  Data      Romairon                             Precipitation; monthly total                                200504-200510
+order_94094_VDROM_rre150m0_11_legend.txt Legend    Romairon                             Precipitation; monthly total                                200504-200510
+order_94094_VDROM_rre150m0_12_data.txt  Data      Romairon                             Precipitation; monthly total                                200603-200606
+order_94094_VDROM_rre150m0_12_legend.txt Legend    Romairon                             Precipitation; monthly total                                200603-200606
+order_94094_VDROM_rre150m0_13_data.txt  Data      Romairon                             Precipitation; monthly total                                200608-200611
+order_94094_VDROM_rre150m0_13_legend.txt Legend    Romairon                             Precipitation; monthly total                                200608-200611
+order_94094_VDROM_rre150m0_14_data.txt  Data      Romairon                             Precipitation; monthly total                                200703-200710
+order_94094_VDROM_rre150m0_14_legend.txt Legend    Romairon                             Precipitation; monthly total                                200703-200710
+order_94094_VDROM_rre150m0_15_data.txt  Data      Romairon                             Precipitation; monthly total                                200712-200811
+order_94094_VDROM_rre150m0_15_legend.txt Legend    Romairon                             Precipitation; monthly total                                200712-200811
+order_94094_VDROM_rre150m0_16_data.txt  Data      Romairon                             Precipitation; monthly total                                200903-200910
+order_94094_VDROM_rre150m0_16_legend.txt Legend    Romairon                             Precipitation; monthly total                                200903-200910
+order_94094_VDROM_rre150m0_17_data.txt  Data      Romairon                             Precipitation; monthly total                                201003-201011
+order_94094_VDROM_rre150m0_17_legend.txt Legend    Romairon                             Precipitation; monthly total                                201003-201011
+order_94094_VDROM_rre150m0_18_data.txt  Data      Romairon                             Precipitation; monthly total                                201012-201111
+order_94094_VDROM_rre150m0_18_legend.txt Legend    Romairon                             Precipitation; monthly total                                201012-201111
+order_94094_VDROM_rre150m0_19_data.txt  Data      Romairon                             Precipitation; monthly total                                201202-201211
+order_94094_VDROM_rre150m0_19_legend.txt Legend    Romairon                             Precipitation; monthly total                                201202-201211
+order_94094_VDROM_rre150m0_20_data.txt  Data      Romairon                             Precipitation; monthly total                                201212-202103
+order_94094_VDROM_rre150m0_20_legend.txt Legend    Romairon                             Precipitation; monthly total                                201212-202103
+order_94094_MMROM_rre150m0_1_data.txt   Data      Romont                               Precipitation; monthly total                                201607-201610
+order_94094_MMROM_rre150m0_1_legend.txt Legend    Romont                               Precipitation; monthly total                                201607-201610
+order_94094_MMROM_rre150m0_2_data.txt   Data      Romont                               Precipitation; monthly total                                201611-201703
+order_94094_MMROM_rre150m0_2_legend.txt Legend    Romont                               Precipitation; monthly total                                201611-201703
+order_94094_MMROM_rre150m0_3_data.txt   Data      Romont                               Precipitation; monthly total                                201706-201707
+order_94094_MMROM_rre150m0_3_legend.txt Legend    Romont                               Precipitation; monthly total                                201706-201707
+order_94094_MMROM_rre150m0_4_data.txt   Data      Romont                               Precipitation; monthly total                                201708-201803
+order_94094_MMROM_rre150m0_4_legend.txt Legend    Romont                               Precipitation; monthly total                                201708-201803
+order_94094_MMROM_rre150m0_5_data.txt   Data      Romont                               Precipitation; monthly total                                201804-201805
+order_94094_MMROM_rre150m0_5_legend.txt Legend    Romont                               Precipitation; monthly total                                201804-201805
+order_94094_MMROM_rre150m0_6_data.txt   Data      Romont                               Precipitation; monthly total                                201807-201808
+order_94094_MMROM_rre150m0_6_legend.txt Legend    Romont                               Precipitation; monthly total                                201807-201808
+order_94094_MMROM_rre150m0_7_data.txt   Data      Romont                               Precipitation; monthly total                                201809-201811
+order_94094_MMROM_rre150m0_7_legend.txt Legend    Romont                               Precipitation; monthly total                                201809-201811
+order_94094_MMROM_rre150m0_8_data.txt   Data      Romont                               Precipitation; monthly total                                201812-201905
+order_94094_MMROM_rre150m0_8_legend.txt Legend    Romont                               Precipitation; monthly total                                201812-201905
+order_94094_MMROM_rre150m0_9_data.txt   Data      Romont                               Precipitation; monthly total                                201906-201908
+order_94094_MMROM_rre150m0_9_legend.txt Legend    Romont                               Precipitation; monthly total                                201906-201908
+order_94094_MMROM_rre150m0_10_data.txt  Data      Romont                               Precipitation; monthly total                                201909-202103
+order_94094_MMROM_rre150m0_10_legend.txt Legend    Romont                               Precipitation; monthly total                                201909-202103
+order_94094_HAI_rre150m0_1_data.txt     Data      Salen-Reutenen                       Precipitation; monthly total                                190012-202103
+order_94094_HAI_rre150m0_1_legend.txt   Legend    Salen-Reutenen                       Precipitation; monthly total                                190012-202103
+order_94094_DLSBL_rre150m0_1_data.txt   Data      Sankt Blasien                        Precipitation; monthly total                                195812-199605
+order_94094_DLSBL_rre150m0_1_legend.txt Legend    Sankt Blasien                        Precipitation; monthly total                                195812-199605
+order_94094_DLSBL_rre150m0_2_data.txt   Data      Sankt Blasien                        Precipitation; monthly total                                199606-200612
+order_94094_DLSBL_rre150m0_2_legend.txt Legend    Sankt Blasien                        Precipitation; monthly total                                199606-200612
+order_94094_SAG_rre150m0_1_data.txt     Data      Sattel, SZ                           Precipitation; monthly total                                190012-202103
+order_94094_SAG_rre150m0_1_legend.txt   Legend    Sattel, SZ                           Precipitation; monthly total                                190012-202103
+order_94094_SZB_rre150m0_1_data.txt     Data      Schwarzenburg                        Precipitation; monthly total                                190012-202103
+order_94094_SZB_rre150m0_1_legend.txt   Legend    Schwarzenburg                        Precipitation; monthly total                                190012-202103
+order_94094_SPF_rre150m0_1_data.txt     Data      Schüpfheim                           Precipitation; monthly total                                201009-201706
+order_94094_SPF_rre150m0_1_legend.txt   Legend    Schüpfheim                           Precipitation; monthly total                                201009-201706
+order_94094_SPF_rre150m0_2_data.txt     Data      Schüpfheim                           Precipitation; monthly total                                201707-202103
+order_94094_SPF_rre150m0_2_legend.txt   Legend    Schüpfheim                           Precipitation; monthly total                                201707-202103
+order_94094_LUSCH_rre150m0_1_data.txt   Data      Schüpfheim                           Precipitation; monthly total                                199912-201803
+order_94094_LUSCH_rre150m0_1_legend.txt Legend    Schüpfheim                           Precipitation; monthly total                                199912-201803
+order_94094_LUSCH_rre150m0_2_data.txt   Data      Schüpfheim                           Precipitation; monthly total                                201804-202102
+order_94094_LUSCH_rre150m0_2_legend.txt Legend    Schüpfheim                           Precipitation; monthly total                                201804-202102
+order_94094_SSU_rre150m0_1_data.txt     Data      St-Sulpice                           Precipitation; monthly total                                196012-199501
+order_94094_SSU_rre150m0_1_legend.txt   Legend    St-Sulpice                           Precipitation; monthly total                                196012-199501
+order_94094_STG_rre150m0_1_data.txt     Data      St. Gallen                           Precipitation; monthly total                                186511-202103
+order_94094_STG_rre150m0_1_legend.txt   Legend    St. Gallen                           Precipitation; monthly total                                186511-202103
+order_94094_SKO_rre150m0_1_data.txt     Data      Stallikon                            Precipitation; monthly total                                199908-202103
+order_94094_SKO_rre150m0_1_legend.txt   Legend    Stallikon                            Precipitation; monthly total                                199908-202103
+order_94094_STI_rre150m0_1_data.txt     Data      Stein, AR                            Precipitation; monthly total                                195812-199601
+order_94094_STI_rre150m0_1_legend.txt   Legend    Stein, AR                            Precipitation; monthly total                                195812-199601
+order_94094_DLSTO_rre150m0_1_data.txt   Data      Stötten                              Precipitation; monthly total                                194612-201803
+order_94094_DLSTO_rre150m0_1_legend.txt Legend    Stötten                              Precipitation; monthly total                                194612-201803
+order_94094_DLSTO_rre150m0_2_data.txt   Data      Stötten                              Precipitation; monthly total                                201804-202103
+order_94094_DLSTO_rre150m0_2_legend.txt Legend    Stötten                              Precipitation; monthly total                                201804-202103
+order_94094_TAV_rre150m0_1_data.txt     Data      Tavanasa                             Precipitation; monthly total                                196812-202103
+order_94094_TAV_rre150m0_1_legend.txt   Legend    Tavanasa                             Precipitation; monthly total                                196812-202103
+order_94094_THI_rre150m0_1_data.txt     Data      Thierrens                            Precipitation; monthly total                                195612-200601
+order_94094_THI_rre150m0_1_legend.txt   Legend    Thierrens                            Precipitation; monthly total                                195612-200601
+order_94094_GLTFD_rre150m0_1_data.txt   Data      Tierfehd                             Precipitation; monthly total                                201309-201405
+order_94094_GLTFD_rre150m0_1_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                201309-201405
+order_94094_GLTFD_rre150m0_2_data.txt   Data      Tierfehd                             Precipitation; monthly total                                201407-201710
+order_94094_GLTFD_rre150m0_2_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                201407-201710
+order_94094_GLTFD_rre150m0_3_data.txt   Data      Tierfehd                             Precipitation; monthly total                                201711-201809
+order_94094_GLTFD_rre150m0_3_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                201711-201809
+order_94094_GLTFD_rre150m0_4_data.txt   Data      Tierfehd                             Precipitation; monthly total                                201810-201911
+order_94094_GLTFD_rre150m0_4_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                201810-201911
+order_94094_GLTFD_rre150m0_5_data.txt   Data      Tierfehd                             Precipitation; monthly total                                202001-202006
+order_94094_GLTFD_rre150m0_5_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                202001-202006
+order_94094_GLTFD_rre150m0_6_data.txt   Data      Tierfehd                             Precipitation; monthly total                                202007-202102
+order_94094_GLTFD_rre150m0_6_legend.txt Legend    Tierfehd                             Precipitation; monthly total                                202007-202102
+order_94094_DLTOM_rre150m0_1_data.txt   Data      Todtmoos                             Precipitation; monthly total                                202102-202103
+order_94094_DLTOM_rre150m0_1_legend.txt Legend    Todtmoos                             Precipitation; monthly total                                202102-202103
+order_94094_TOM_rre150m0_1_data.txt     Data      Tomils                               Precipitation; monthly total                                196012-197212
+order_94094_TOM_rre150m0_1_legend.txt   Legend    Tomils                               Precipitation; monthly total                                196012-197212
+order_94094_UAG_rre150m0_1_data.txt     Data      Unterägeri                           Precipitation; monthly total                                190009-199803
+order_94094_UAG_rre150m0_1_legend.txt   Legend    Unterägeri                           Precipitation; monthly total                                190009-199803
+order_94094_VVI_rre150m0_1_data.txt     Data      Vallorbe                             Precipitation; monthly total                                196012-202103
+order_94094_VVI_rre150m0_1_legend.txt   Legend    Vallorbe                             Precipitation; monthly total                                196012-202103
+order_94094_VAN_rre150m0_1_data.txt     Data      Varen                                Precipitation; monthly total                                196012-198608
+order_94094_VAN_rre150m0_1_legend.txt   Legend    Varen                                Precipitation; monthly total                                196012-198608
+order_94094_BEVIL_rre150m0_1_data.txt   Data      Villeret                             Precipitation; monthly total                                199712-201010
+order_94094_BEVIL_rre150m0_1_legend.txt Legend    Villeret                             Precipitation; monthly total                                199712-201010
+order_94094_BEVIL_rre150m0_2_data.txt   Data      Villeret                             Precipitation; monthly total                                201304-201512
+order_94094_BEVIL_rre150m0_2_legend.txt Legend    Villeret                             Precipitation; monthly total                                201304-201512
+order_94094_BEVIL_rre150m0_3_data.txt   Data      Villeret                             Precipitation; monthly total                                201601-201611
+order_94094_BEVIL_rre150m0_3_legend.txt Legend    Villeret                             Precipitation; monthly total                                201601-201611
+order_94094_BEVIL_rre150m0_4_data.txt   Data      Villeret                             Precipitation; monthly total                                201612-201703
+order_94094_BEVIL_rre150m0_4_legend.txt Legend    Villeret                             Precipitation; monthly total                                201612-201703
+order_94094_BEVIL_rre150m0_5_data.txt   Data      Villeret                             Precipitation; monthly total                                201704-201903
+order_94094_BEVIL_rre150m0_5_legend.txt Legend    Villeret                             Precipitation; monthly total                                201704-201903
+order_94094_BEVIL_rre150m0_6_data.txt   Data      Villeret                             Precipitation; monthly total                                201904-202103
+order_94094_BEVIL_rre150m0_6_legend.txt Legend    Villeret                             Precipitation; monthly total                                201904-202103
+order_94094_DLVIS_rre150m0_1_data.txt   Data      Villingen-Schwenningen               Precipitation; monthly total                                188912-202103
+order_94094_DLVIS_rre150m0_1_legend.txt Legend    Villingen-Schwenningen               Precipitation; monthly total                                188912-202103
+order_94094_VOT_rre150m0_1_data.txt     Data      Vorderthal                           Precipitation; monthly total                                196012-198112
+order_94094_VOT_rre150m0_1_legend.txt   Legend    Vorderthal                           Precipitation; monthly total                                196012-198112
+order_94094_WDO_rre150m0_1_data.txt     Data      Wahlendorf                           Precipitation; monthly total                                193812-202103
+order_94094_WDO_rre150m0_1_legend.txt   Legend    Wahlendorf                           Precipitation; monthly total                                193812-202103
+order_94094_WIE_rre150m0_1_data.txt     Data      Wasen im Emmental                    Precipitation; monthly total                                190012-202103
+order_94094_WIE_rre150m0_1_legend.txt   Legend    Wasen im Emmental                    Precipitation; monthly total                                190012-202103
+order_94094_DLWWB_rre150m0_1_data.txt   Data      Weilheim / Waldshut-Bannholz         Precipitation; monthly total                                197812-200212
+order_94094_DLWWB_rre150m0_1_legend.txt Legend    Weilheim / Waldshut-Bannholz         Precipitation; monthly total                                197812-200212
