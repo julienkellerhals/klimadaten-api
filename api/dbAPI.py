@@ -119,4 +119,24 @@ def constructBlueprint(announcer, instance, abstractDriver):
         instance.parameterCoreETL()
         return "Run Parameter ETL"
 
+    @dbApi.route(
+        "/update/<string:station_name>/<int:elevation>",
+        methods=["PATCH"]
+    )
+    def updateStationHeight(station_name, elevation):
+
+        instance.checkEngine()
+        instance.updateStageStation(station_name, elevation)
+        return "Update station elevation in stage"
+
+    @dbApi.route(
+        "/delete/<string:station_name>",
+        methods=["DELETE"]
+    )
+    def deleteStation(station_name):
+
+        instance.checkEngine()
+        instance.deleteStageStation(station_name)
+        return "Delete station in stage"
+
     return dbApi

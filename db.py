@@ -1169,3 +1169,34 @@ class Database:
             "ON CONFLICT DO NOTHING;"
         )
         self.coreTableRespDict.endLoadProcess()
+
+    def updateStageStation(self, station_name, elevation):
+        """ Updates station elevation in Stage
+        """
+
+        self.stageTableRespDict.startLoadProcess()
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            f"""
+            UPDATE stage.station_t
+            SET elevation = {elevation}
+            WHERE station_name = {"'" + station_name + "'"}
+            """
+        )
+        self.stageTableRespDict.endLoadProcess()
+
+    def deleteStageStation(self, station_name):
+        """ Deletes station in Stage
+        """
+
+        self.stageTableRespDict.startLoadProcess()
+        if self.conn is None:
+            self.conn = self.engine.connect()
+        self.conn.execute(
+            f"""
+            DELETE FROM stage.station_t
+            WHERE station_name = {"'" + station_name + "'"}
+            """
+        )
+        self.stageTableRespDict.endLoadProcess()
