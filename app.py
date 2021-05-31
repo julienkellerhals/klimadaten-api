@@ -2,19 +2,27 @@ import os
 from flask import Flask
 from flask import send_from_directory
 import db
+<<<<<<< HEAD
+=======
+import dashboard
+>>>>>>> feature/dashboard
 import abstractDriver
 import messageAnnouncer
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
+<<<<<<< HEAD
 
 app = Flask(__name__)
+=======
+>>>>>>> feature/dashboard
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
 instance = db.Database(announcer)
 
+app = Flask(__name__)
 app.register_blueprint(adminAPI.constructBlueprint(
     announcer,
     instance,
@@ -43,6 +51,8 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
     ),
     url_prefix="/admin/scrape"
 )
+
+dashApp = dashboard.mydashboard(app, instance)
 
 
 @app.route("/")
@@ -74,3 +84,8 @@ def favicon():
         'favicon.ico',
         mimetype='image/vnd.microsoft.icon'
     )
+
+
+@app.route('/dashboard')
+def render_dashboard():
+    return Flask.redirect('/dash')

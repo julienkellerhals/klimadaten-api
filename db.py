@@ -131,6 +131,7 @@ class Database:
 
         self.engine = create_engine(
             self.databaseUrl,
+<<<<<<< HEAD
             echo=False,
             poolclass=QueuePool,
             pool_size=100,
@@ -187,6 +188,9 @@ class Database:
             )
         self.dbServiceStatusStream.announce(
             self.dbServiceStatusStream.format_sse(msgText)
+=======
+            echo=False
+>>>>>>> feature/dashboard
         )
 
         try:
