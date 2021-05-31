@@ -83,13 +83,12 @@ def constructBlueprint(announcer, instance, abstractDriver):
         )
         del paramRefreshDateDf["valid_from_y"]
         if not paramRefreshDateDf.empty:
-            # savedDocumentsDf = webscraping._scrape_idaweb(
-            #     driver,
-            #     engine,
-            #     paramRefreshDateDf
-            # )
-            # instance.idaWebStageETL(savedDocumentsDf)
-            instance.idaWebStageETL()
+            savedDocumentsDf = webscraping._scrape_idaweb(
+                driver,
+                engine,
+                paramRefreshDateDf
+            )
+            instance.idaWebStageETL(savedDocumentsDf)
         return "Run Idaweb increment ETL"
 
     @dbApi.route("/etl/core", methods=["GET", "POST"])
