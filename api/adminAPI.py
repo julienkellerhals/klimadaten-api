@@ -142,9 +142,6 @@ def constructBlueprint(announcer, instance, abstractDriver):
             "core": {
                 "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
             },
-            "datamart": {
-                "eventSourceUrl": "/admin/stream/getDatamartTablesStatus",
-            },
         }
         return json.dumps(tablesList, default=str)
 
