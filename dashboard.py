@@ -529,14 +529,14 @@ def mydashboard(flaskApp, instance):
 
         return plotMap
 
-    def PlotRainExtremeCreation(dfRainExtremeAll, meanRain, colors):
+    def plotBarCreation(df, meanRain, colors):
         # creating the rain barplot
         plotRain = go.Figure()
 
         plotRain.add_trace(go.Bar(
             name='Regenfall',
-            x=dfRainExtremeAll["meas_year"],
-            y=dfRainExtremeAll["deviation"],
+            x=df["meas_year"],
+            y=df["deviation"],
             base=meanRain,
             marker={
                 'color': colors['rbb'],
@@ -546,8 +546,8 @@ def mydashboard(flaskApp, instance):
 
         plotRain.add_trace(go.Scatter(
             name='Regression',
-            x=dfRainExtremeAll["meas_year"],
-            y=dfRainExtremeAll["bestfit"],
+            x=df["meas_year"],
+            y=df["bestfit"],
             mode='lines',
             marker={
                 'size': 5,
@@ -566,8 +566,8 @@ def mydashboard(flaskApp, instance):
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
                 'range': [
-                    dfRainExtremeAll.meas_value.min() * 0.95,
-                    dfRainExtremeAll.meas_value.max() * 1.05
+                    df.meas_value.min() * 0.95,
+                    df.meas_value.max() * 1.05
                 ]
             },
             xaxis={
@@ -591,14 +591,14 @@ def mydashboard(flaskApp, instance):
 
         return plotRain
 
-    def plotSnowCreation(dfSnowAll, colors):
+    def plotScatterCreation(df, colors):
         # creating the snow scatterplot with all stations
         plotSnow = go.Figure()
 
         plotSnow.add_trace(go.Scatter(
             name='Schneefall',
-            x=dfSnowAll['meas_year'],
-            y=dfSnowAll['meas_value'],
+            x=df['meas_year'],
+            y=df['meas_value'],
             mode='lines',
             line_shape='spline',
             marker={
@@ -613,8 +613,8 @@ def mydashboard(flaskApp, instance):
 
         plotSnow.add_trace(go.Scatter(
             name='Regression',
-            x=dfSnowAll['meas_year'],
-            y=dfSnowAll['bestfit'],
+            x=df['meas_year'],
+            y=df['bestfit'],
             mode='lines',
             marker={
                 'size': 5,
@@ -662,8 +662,8 @@ def mydashboard(flaskApp, instance):
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
-        plotRain = PlotRainExtremeCreation(dfRainExtremeAll, meanRain, colors)
-        plotSnow = plotSnowCreation(dfSnowAll, colors)
+        plotRain = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotSnow = plotScatterCreation(dfSnowAll, colors)
 
         dashApp.layout = html.Div([
             # header
@@ -1024,7 +1024,7 @@ def mydashboard(flaskApp, instance):
             ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
         dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.meas_year))
 
-        plotSnow = plotSnowCreation(dfSnowAll, colors)
+        plotSnow = plotScatterCreation(dfSnowAll, colors)
 
         plotSnow.update_layout(
             title=f'Durchschnittlicher Schneefall bei {station} in Meter'
@@ -1056,7 +1056,7 @@ def mydashboard(flaskApp, instance):
         dfRainExtremeAll['color'] = np.where(
             dfRainExtremeAll['deviation'] >= 0, True, False)
 
-        plotRainExtreme = PlotRainExtremeCreation(
+        plotRainExtreme = plotBarCreation(
             dfRainExtremeAll, meanRain, colors
         )
 
