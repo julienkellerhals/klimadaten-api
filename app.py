@@ -2,21 +2,13 @@ import os
 from flask import Flask
 from flask import send_from_directory
 import db
-<<<<<<< HEAD
-=======
 import dashboard
->>>>>>> feature/dashboard
 import abstractDriver
 import messageAnnouncer
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
-<<<<<<< HEAD
-
-app = Flask(__name__)
-=======
->>>>>>> feature/dashboard
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
