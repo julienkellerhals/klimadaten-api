@@ -314,9 +314,9 @@ def mydashboard(flaskApp, instance):
 
         return dfMap
 
-    def dfScatterSnowWrangling():
+    def dfScatterWrangling(param):
         # data wrangling scatterplot snow
-        dfScatterSnow = pd.read_sql(
+        dfScatter = pd.read_sql(
             f"""
             SELECT
                 extract(year from m.meas_date) as meas_year,
@@ -327,8 +327,8 @@ def mydashboard(flaskApp, instance):
             FROM core.measurements_t m
             JOIN core.station_t k
             ON (m.station = k.station_short_name)
-            WHERE m.meas_name = {"'"+ snowParam +"'"}
-            AND k.parameter = {"'"+ snowParam +"'"}
+            WHERE m.meas_name = {"'"+ param +"'"}
+            AND k.parameter = {"'"+ param +"'"}
             AND m.valid_to = '2262-04-11'
             AND k.valid_to = '2262-04-11'
             GROUP BY meas_year, k.station_name, m.station, k.elevation
@@ -336,12 +336,9 @@ def mydashboard(flaskApp, instance):
             """,
             engine
         )
+        dfScatter = dfScatter.dropna()
 
-        # change measurement unit to meters
-        dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
-        dfScatterSnow = dfScatterSnow.dropna()
-
-        return dfScatterSnow
+        return dfScatter
 
     def dfSnowAllWrangling(dfStations, dfScatterSnow, yearSnow):
         dfAll = pd.merge(
@@ -373,34 +370,6 @@ def mydashboard(flaskApp, instance):
         dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.index))
 
         return dfSnowAll
-
-    def dfScatterRainExtremeWrangling():
-        # avg of highest 10 minute total of rain of
-        # a month per year of all stations available
-        dfScatterRainExtreme = pd.read_sql(
-            f"""
-            SELECT
-                extract(year from m.meas_date) as meas_year,
-                k.station_name,
-                sum(m.meas_value) meas_value,
-                m.station,
-                k.elevation
-            FROM core.measurements_t m
-            JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_name = {"'"+ rainExtremeParam +"'"}
-            AND k.parameter = {"'"+ rainExtremeParam +"'"}
-            AND m.valid_to = '2262-04-11'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY meas_year, k.station_name, m.station, k.elevation
-            ORDER BY meas_year ASC
-            """,
-            engine
-        )
-
-        dfScatterRainExtreme = dfScatterRainExtreme.dropna()
-
-        return dfScatterRainExtreme
 
     def dfRainExtremeAllWrangling(
         dfStations,
@@ -466,11 +435,13 @@ def mydashboard(flaskApp, instance):
     yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
 
     # call plot functions
-    dfScatterSnow = dfScatterSnowWrangling()
+    dfScatterSnow = dfScatterWrangling(snowParam)
+    # change measurement unit to meters
+    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
     dfSnowAll = dfSnowAllWrangling(
         dfStations, dfScatterSnow, yearSnow
     )
-    dfScatterRainExtreme = dfScatterRainExtremeWrangling()
+    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
     dfRainExtremeAll, meanRain = dfRainExtremeAllWrangling(
         dfStations, dfScatterRainExtreme, yearRainExtreme
     )
