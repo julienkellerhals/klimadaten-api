@@ -29,7 +29,6 @@ class Database:
     engineStatusStream = None
     stageTablesStatusStream = None
     coreTablesStatusStream = None
-    datamartTablesStatusStream = None
     dbServiceStatusStream = None
     stageTableRespDict = None
     coreTableRespDict = None
@@ -47,13 +46,24 @@ class Database:
         self.engineStatusStream = MessageAnnouncer()
         self.stageTablesStatusStream = MessageAnnouncer()
         self.coreTablesStatusStream = MessageAnnouncer()
-        self.datamartTablesStatusStream = MessageAnnouncer()
         self.dbServiceStatusStream = MessageAnnouncer()
         self.announcer = announcer
         self.stageTableRespDict = ResponseDictionary({
                 "stage": {
                     "eventSourceUrl": "/admin/stream/getStageTablesStatus",
                     "progressBar": False,
+                    "action": [
+                        {
+                            "name": "Run scrapping",
+                            "actionUrl": "/admin/scrape/",
+                            "enabled": True
+                        },
+                        {
+                            "name": "Stage ETL",
+                            "actionUrl": "/admin/db/etl/stage",
+                            "enabled": True
+                        },
+                    ],
                 }
             },
             self.stageTablesStatusStream,
@@ -63,6 +73,13 @@ class Database:
                 "core": {
                     "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
                     "progressBar": False,
+                    "action": [
+                        {
+                            "name": "Core ETL",
+                            "actionUrl": "/admin/db/etl/core",
+                            "enabled": True
+                        },
+                    ],
                 }
             },
             self.coreTablesStatusStream,

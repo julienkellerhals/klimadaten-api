@@ -92,6 +92,9 @@ class ResponseDictionary:
                     ][
                         "enabled"
                     ] = False
+            if type(table[1]) is list:
+                for action in table[1]:
+                    action["enabled"] = False
 
     def enableAllButtons(self):
 
@@ -109,6 +112,9 @@ class ResponseDictionary:
                     ][
                         "enabled"
                     ] = True
+            if type(table[1]) is list:
+                for action in table[1]:
+                    action["enabled"] = True
 
     def updateDictRowCount(self):
 

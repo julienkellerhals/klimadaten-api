@@ -229,7 +229,17 @@ function createCollapsibleElements(baseStructure) {
                 createRowStructure(row, id, ul)
             })
 
-            delete baseStructure[id].eventSourceUrl
+            baseStructure[id]["action"].forEach((action) => {
+                actionButton = createActionButton(action.name, action.enabled)
+                actionButton.addEventListener(
+                    "mouseup",
+                    () => {
+                        postReq(action.actionUrl)
+                    }
+                )
+                ul.parentNode.append(actionButton)
+            })
+
             previousContent = baseStructure[id]
 
             colEventSource.onmessage = function (e) {
@@ -247,6 +257,29 @@ function createCollapsibleElements(baseStructure) {
                     ul.parentNode.children[1].remove()
                     previousProgressBar = false
                 }
+
+                content[id]["action"].forEach((action) => {
+                    path = '//*[@id="container"]/div/div[*]/a[text()="' + action.name + '"]'
+                    if (action.enabled == false) {
+                        var result = document.evaluate(
+                            path,
+                            document,
+                            null,
+                            XPathResult.ANY_TYPE,
+                            null
+                        )
+                        result.iterateNext().classList.add("disabled")
+                    } else {
+                        var result = document.evaluate(
+                            path,
+                            document,
+                            null,
+                            XPathResult.ANY_TYPE,
+                            null
+                        )
+                        result.iterateNext().classList.remove("disabled")
+                    }
+                })
 
                 var rows = Object.keys(content[id]).filter((r) => r.endsWith("_t")).sort()
                 rows.forEach((rowName) => {
