@@ -1,5 +1,5 @@
+import json
 from flask import request
-from flask import Response
 from flask import Blueprint
 from flask import render_template
 
@@ -18,6 +18,135 @@ def constructBlueprint(announcer, instance, abstractDriver):
         return render_template(
             "admin.html",
         )
+
+    @adminApi.route("/getServiceList", methods=["POST"])
+    def getServiceList():
+        serviceList = {
+            "runningService": {
+                "1": {
+                    "eventSourceUrl": "/admin/stream/getDriverPathStatus",
+                    "title": "Driver name",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Download driver",
+                            "actionUrl": "",
+                            "enabled": False
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "2": {
+                    "eventSourceUrl": "/admin/stream/getDriverStatus",
+                    "title": "Driver status",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Start driver",
+                            "actionUrl": "",
+                            "enabled": False
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "3": {
+                    "eventSourceUrl": "/admin/stream/getDatabaseStatus",
+                    "title": "Database connection",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Connect to db",
+                            "actionUrl": "",
+                            "enabled": False
+                        },
+                        {
+                            "name": "Create db",
+                            "actionUrl": "",
+                            "enabled": False
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+                "4": {
+                    "eventSourceUrl": "/admin/stream/getEngineStatus",
+                    "title": "Engine status",
+                    "url": "",
+                    "headerBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                    "action": [
+                        {
+                            "name": "Start engine",
+                            "actionUrl": "",
+                            "enabled": False
+                        }
+                    ],
+                    "bodyBadge": {
+                        "caption": "",
+                        "content": "",
+                    },
+                },
+            }
+        }
+        return json.dumps(serviceList, default=str)
+
+    @adminApi.route("/getDbServiceList", methods=["POST"])
+    def getDbServiceList():
+        dbServiceList = {
+            "runningService": {
+                "eventSourceUrl": "/admin/stream/getDbServiceStatus",
+                "dbConnection": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "dbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "tbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+            }
+        }
+        return json.dumps(dbServiceList, default=str)
+
+    @adminApi.route("/getTablesList", methods=["POST"])
+    def getTablesList():
+        tablesList = {
+            "stage": {
+                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+            },
+            "core": {
+                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+            },
+            "datamart": {
+                "eventSourceUrl": "/admin/stream/getDatamartTablesStatus",
+            },
+        }
+        return json.dumps(tablesList, default=str)
 
     @adminApi.route("/getEngineStatus", methods=["POST"])
     def getEngineStatus():
@@ -51,54 +180,34 @@ def constructBlueprint(announcer, instance, abstractDriver):
         abstractDriver.getDriverStatus()
         return ""
 
-    @adminApi.route("/getTablesStatus", methods=["POST"])
-    def getTablesStatus():
-        """ Runs function get database status
-        """
+    @adminApi.route("/getStageTablesStatus", methods=["POST"])
+    def getStageTablesStatus():
 
-        instance.getTablesStatus()
+        instance.getStageTablesStatus()
         return ""
 
-    @adminApi.route("/testFunc")
-    def testFunc():
-        # instance = db.Database()
-        # instance.test(announcer)
-        return Response(announcer.stream(), mimetype='text/event-stream')
+    @adminApi.route("/getCoreTablesStatus", methods=["POST"])
+    def getCoreTablesStatus():
 
-    @adminApi.route("/tables")
-    def tablesPage():
-        """ Tables page
+        instance.getCoreTablesStatus()
+        return ""
+
+    @adminApi.route("/getDbServiceStatus", methods=["POST"])
+    def getDbServiceStatus():
+
+        instance.getDbServiceStatus()
+        return ""
+
+    @adminApi.route("/database")
+    def databasePage():
+        """ database page
 
         Returns:
-            html: Returns tables page
+            html: Returns database page
         """
 
         return render_template(
-            "tables.html",
-        )
-
-    @adminApi.route("/source")
-    def sourcePage():
-        """ Source page
-
-        Returns:
-            html: Returns source page
-        """
-
-        return render_template(
-            "source.html",
-        )
-
-    @adminApi.route("/status")
-    def statusPage():
-        """ Status page
-
-        Returns:
-            html: Returns status page
-        """
-
-        return render_template(
-            "status.html",
+            "database.html",
         )
 
     @adminApi.route("/tests")
@@ -137,7 +246,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
             "error.html",
         )
 
-    @adminApi.route("/driver/<browser>")
+    @adminApi.route("/driver/<browser>", methods=["GET"])
     def driver(browser):
         """ Returns driver page
 
@@ -158,15 +267,20 @@ def constructBlueprint(announcer, instance, abstractDriver):
             streamUrl=streamUrl
         )
 
-    @adminApi.route("/refresh")
-    def refreshData():
-        """ Temp route
+    @adminApi.route("/driver/<browser>", methods=["POST"])
+    def driverInstallPost(browser):
 
-        Returns:
-            str: Temp
-        """
+        headlessStr = request.args['headless']
+        userAgent = request.headers.get('User-Agent')
 
-        return "Run webscraping"
+        abstractDriver.downloadDriver(browser, headlessStr, userAgent)
+        return ""
+
+    @adminApi.route("/startDriver", methods=["POST"])
+    def startDriver():
+
+        abstractDriver.checkDriver()
+        return ""
 
     @adminApi.route("/test")
     def runTests():

@@ -1,0 +1,310 @@
+M.AutoInit();
+
+var xhr = new XMLHttpRequest();
+xhr.onload = () => {
+    var serviceList = JSON.parse(xhr.response)
+    updateBreadcrumbNav(serviceList)
+}
+xhr.open("POST", "/admin/getDbServiceList", true);
+xhr.send()
+
+setInterval( function() {
+    postReq("/admin/getDbServiceStatus")
+}, refreshInterval)
+
+function createTableLists() {
+    // Horrible hack but it works
+    createTableLists = function(){}
+    var xhr = new XMLHttpRequest();
+    xhr.onload = () => {
+        var tableStruct = JSON.parse(xhr.response)
+        createCollapsibleElements(tableStruct)
+    }
+    xhr.open("POST", "/admin/getTablesList", true);
+    xhr.send()
+
+    // setInterval( function() {
+    //     postReq("/admin/getStageTablesStatus")
+    // }, refreshInterval)
+    // setInterval( function() {
+    //     postReq("/admin/getCoreTablesStatus")
+    // }, refreshInterval)
+}
+
+function updateBreadcrumbNav(serviceList) {
+    var navEventSource = new EventSource(serviceList.runningService.eventSourceUrl)
+    var previousContent = serviceList
+    document.getElementById("dbAction").classList.add("disabled")
+    navEventSource.onmessage = function (e) {
+        var content = JSON.parse(e.data)
+        if (content.runningService.tbCreate.dbReady == true) {
+            createTableLists()
+        }
+        var contentDiff = diff(previousContent, content)
+        if (Object.keys(contentDiff.runningService).length > 0) {
+            if (Object.keys(contentDiff.runningService.dbConnection).length > 0) {
+                if (contentDiff.runningService.dbConnection.currentAction != undefined) {
+                    var dbConnection = document.getElementById("dbConnection")
+                    if (contentDiff.runningService.dbConnection.currentAction == true) {
+                        dbConnection.classList.remove("text-darken-1")
+                        dbConnection.classList.add("text-lighten-5")
+                    } else {
+                        dbConnection.classList.remove("text-lighten-5")
+                        dbConnection.classList.add("text-darken-1")
+                    }
+                }
+
+                if (contentDiff.runningService.dbConnection.actionUrl != undefined) {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                    document.getElementById("dbAction").addEventListener(
+                        "mouseup",
+                        () => {
+                            document.getElementById("dbAction").classList.add("disabled")
+                            var actionReq = postReq(contentDiff.runningService.dbConnection.actionUrl)
+                            actionReq.onload = () => {
+                                postReq("/admin/getDbServiceStatus")
+                            }
+                        },
+                        {
+                            once: true
+                        }
+                    )
+                }
+                previousContent.runningService.dbConnection = content.runningService.dbConnection
+            }
+            if (Object.keys(contentDiff.runningService.dbCreate).length > 0) {
+                if (contentDiff.runningService.dbCreate.currentAction != undefined) {
+                    var dbCreate = document.getElementById("dbCreate")
+                    if (contentDiff.runningService.dbCreate.currentAction == true) {
+                        dbCreate.classList.remove("text-darken-1")
+                        dbCreate.classList.add("text-lighten-5")
+                    } else {
+                        dbCreate.classList.remove("text-lighten-5")
+                        dbCreate.classList.add("text-darken-1")
+                    }
+                }
+
+                if (contentDiff.runningService.dbCreate.actionUrl != undefined) {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                    document.getElementById("dbAction").addEventListener(
+                        "mouseup",
+                        () => {
+                            document.getElementById("dbAction").classList.add("disabled")
+                            var actionReq = postReq(contentDiff.runningService.dbCreate.actionUrl)
+                            actionReq.onload = () => {
+                                postReq("/admin/getDbServiceStatus")
+                            }
+                        },
+                        {
+                            once: true
+                        }
+                    )
+                }
+                previousContent.runningService.dbCreate = content.runningService.dbCreate
+            }
+            if (Object.keys(contentDiff.runningService.tbCreate).length > 0) {
+                if (contentDiff.runningService.tbCreate.currentAction != undefined) {
+                    var tbCreate = document.getElementById("tbCreate")
+                    if (contentDiff.runningService.tbCreate.currentAction == true) {
+                        tbCreate.classList.remove("text-darken-1")
+                        tbCreate.classList.add("text-lighten-5")
+                    } else {
+                        tbCreate.classList.remove("text-lighten-5")
+                        tbCreate.classList.add("text-darken-1")
+                    }
+                }
+
+                if (contentDiff.runningService.tbCreate.actionUrl != undefined) {
+                    document.getElementById("dbAction").classList.remove("disabled")
+                    document.getElementById("dbAction").addEventListener(
+                        "mouseup",
+                        () => {
+                            document.getElementById("dbAction").classList.add("disabled")
+                            var actionReq = postReq(contentDiff.runningService.tbCreate.actionUrl)
+                            actionReq.onload = () => {
+                                postReq("/admin/getDbServiceStatus")
+                            }
+                        },
+                        {
+                            once: true
+                        }
+                    )
+                }
+                previousContent.runningService.tbCreate = content.runningService.tbCreate
+            }
+        }
+    }
+}
+
+class RunETL {
+    constructor(divId) {
+        this.div = document.getElementById(divId)
+    }
+    req(url) {
+        // progress bar
+        var progress = document.createElement("div")
+        progress.classList.add("progress")
+        var progressBar = document.createElement("div")
+        progressBar.classList.add("indeterminate")
+        progress.appendChild(progressBar)
+        this.div.insertBefore(progress, this.div.children[1])
+
+        // disable buttons
+        var anchorlist = this.div.getElementsByTagName("a")
+        Array.from(anchorlist).forEach(anchor => {
+            anchor.classList.add("disabled")
+        })
+
+        // send requests
+        var xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            div.children[1].remove()
+            Array.from(anchorlist).forEach(anchor => {
+                anchor.classList.remove("disabled")
+            })
+        }
+        xhr.open("POST", url, true);
+        xhr.send()
+    }
+}
+
+var stageETL = new RunETL("stage")
+var coreETL = new RunETL("core")
+var datamartETL = new RunETL("datamart")
+
+function streamTablesStatus() {
+    var tablesEventSource = new EventSource("/admin/stream/getTablesStatus");
+    var previousStatusCode = null
+    var previousMessage = null
+    tablesEventSource.onmessage = function (e) {
+        var content = e.data;
+        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
+        var message = content.split(";")[1]
+        var tbCreate = document.getElementById("tbCreate")
+        if (previousStatusCode != statusCode || previousMessage != message || currentStatus == "dbCreate") {
+            previousStatusCode = statusCode
+            previousMessage = message
+            if (statusCode == 0) {
+                var tablesJson = JSON.parse(message)
+
+                document.getElementById("stageTableGroup").innerHTML = ""
+                document.getElementById("coreTableGroup").innerHTML = ""
+
+                tablesJson.stage.forEach(element => {
+                    var li = document.createElement("li")
+
+                    var headerDiv = document.createElement("div")
+                    headerDiv.classList.add("collapsible-header")
+                    var headerTitle = document.createTextNode(element.name)
+                    headerDiv.appendChild(headerTitle)
+                    headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
+
+                    var bodyDiv = document.createElement("div")
+                    bodyDiv.classList.add("collapsible-body")
+                    element.action.forEach(action => {
+                        if (action == "Run scrapping") {
+                            bodyDiv.insertAdjacentHTML(
+                                "beforeend",
+                                "<div class='row'><a href='javascript:runScrapping(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a></div>"
+                            )
+                        } else if (action == "Initial load") {
+                            bodyDiv.insertAdjacentHTML(
+                                "beforeend",
+                                "<div class='row'><a href='javascript:runInitialLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a></div>"
+                            )
+                        } else if (action == "Increment load") {
+                            bodyDiv.insertAdjacentHTML(
+                                "beforeend",
+                                "<div class='row'><a href='javascript:runIncrementLoad(\"" + element.name + "\")' class='waves-effect waves-light btn-small " + action.replaceAll(" ", "") + "'>" + action + "</a></div>"
+                            )
+                        }
+                    })
+                    if (element.lastRefresh != null) {
+                        bodyDiv.insertAdjacentHTML("beforeend", "<div class='row'><span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span></div>")
+                    }
+
+                    li.appendChild(headerDiv)
+                    li.appendChild(bodyDiv)
+                    document.getElementById("stageTableGroup").appendChild(li)
+                });
+
+                tablesJson.core.forEach(element => {
+                    var li = document.createElement("li")
+
+                    var headerDiv = document.createElement("div")
+                    headerDiv.classList.add("collapsible-header")
+                    var headerTitle = document.createTextNode(element.name)
+                    headerDiv.appendChild(headerTitle)
+                    headerDiv.insertAdjacentHTML("beforeend", "<span class='badge' data-badge-caption='rows'>" + element.nrow.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "</span>")
+
+                    var bodyDiv = document.createElement("div")
+                    bodyDiv.classList.add("collapsible-body")
+                    element.action.forEach(action => {
+                        if (action == "Load") {
+                            bodyDiv.insertAdjacentHTML(
+                                "beforeend",
+                                "<div class='row'><a href='javascript:load(\"" + element.name + "\")' class='waves-effect waves-light btn-small'>" + action + "</a></div>"
+                            )
+                        }
+                    })
+                    if (element.lastRefresh != null) {
+                        bodyDiv.insertAdjacentHTML("beforeend", "<div class='row'><span class='badge' data-badge-caption='last refresh'>" + element.lastRefresh + "</span></div>")
+                    }
+
+                    li.appendChild(headerDiv)
+                    li.appendChild(bodyDiv)
+                    document.getElementById("coreTableGroup").appendChild(li)
+                });
+
+                tbCreate.classList.remove("text-lighten-5")
+                tbCreate.classList.add("text-darken-1")
+                if (currentStatus == null) {
+                    currentStatus = null
+                } else if (currentStatus == "dbCreate") {
+                    currentStatus = "tbCreate"
+                }
+            } else if (statusCode == 1) {
+                document.getElementById("dbAction").classList.remove("disabled")
+                tbCreate.classList.remove("text-darken-1")
+                tbCreate.classList.add("text-lighten-5")
+                if (currentStatus == null) {
+                    currentStatus = null
+                } else if (currentStatus == "dbConnection") {
+                    currentStatus = "dbConnection"
+                } else if (currentStatus == "tbCreate") {
+                    currentStatus = null
+                }
+            }
+        }
+        checkStatus()
+    }
+}
+
+// streamEngineStatus()
+// streamDatabaseStatus()
+// streamTablesStatus()
+
+document.getElementById("execScrapping").addEventListener(
+    "mouseup",
+    () => {
+        stageETL.req("/admin/scrape/")
+    }
+)
+document.getElementById("execStageETL").addEventListener(
+    "mouseup",
+    () => {
+        stageETL.req("/admin/db/etl/stage")
+    }
+)
+document.getElementById("execCoreETL").addEventListener(
+    "mouseup",
+    () => {
+        coreETL.req("/admin/db/etl/core")
+    }
+)
+document.getElementById("execDatamartETL").addEventListener(
+    "mouseup",
+    () => {
+        datamartETL.req("/admin/db/etl/datamart")
+    }
+)

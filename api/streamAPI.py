@@ -22,6 +22,14 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
+    @streamApi.route("/getDbServiceStatus")
+    def streamDbServiceStatus():
+        instance.getDbServiceStatus()
+        return Response(
+            instance.dbServiceStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
     @streamApi.route("/getEngineStatus")
     def streamEngineStatus():
         """ Stream engine status
@@ -50,11 +58,30 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
-    @streamApi.route("/getTablesStatus")
-    def streamTablesStatus():
-        instance.getTablesStatus()
+    # TODO Make this more dynamic
+    @streamApi.route("/getStageTablesStatus")
+    def streamStageTablesStatus():
+        instance.getStageTablesStatus()
         return Response(
-            instance.tablesStatusStream.stream(),
+            instance.stageTablesStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
+    # TODO Make this more dynamic
+    @streamApi.route("/getCoreTablesStatus")
+    def streamCoreTablesStatus():
+        instance.getCoreTablesStatus()
+        return Response(
+            instance.coreTablesStatusStream.stream(),
+            mimetype='text/event-stream'
+        )
+
+    # TODO Make this more dynamic
+    @streamApi.route("/getDatamartTablesStatus")
+    def streamDatamartTablesStatus():
+        instance.getDatamartTablesStatus()
+        return Response(
+            instance.datamartTablesStatusStream.stream(),
             mimetype='text/event-stream'
         )
 

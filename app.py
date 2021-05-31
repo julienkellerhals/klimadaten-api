@@ -1,11 +1,13 @@
+import os
 from flask import Flask
+from flask import send_from_directory
 import db
+import abstractDriver
+import messageAnnouncer
 from api import dbAPI
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
-import abstractDriver
-import messageAnnouncer
 
 app = Flask(__name__)
 
@@ -63,3 +65,12 @@ def api():
     """
 
     return "API"
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, 'static'),
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )

@@ -4,33 +4,6 @@
 {% block head %}
 {{ super() }}
 <style>
-    #adminContainer {
-        height: 100%;
-        display: flex;
-        align-items: stretch;
-    }
-
-    #serverLog {
-        flex-grow: 2;
-    }
-
-    #panel {
-        flex-grow: 1;
-    }
-
-    #panelContainer {
-        padding: 0em 2em;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .service {
-        height: 2em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     .dot {
         height: 25px;
         width: 25px;
@@ -52,180 +25,21 @@
 {% set active_page = "admin" %}
 
 {% block container %}
-<div id="adminContainer">
-    <div id="serverLog">
-        <h1>Server Log</h1>
-        <div id="eventLog"></div>
-        <script>
-            var eventContainer = document.getElementById("eventLog");
-            var eventSource = new EventSource("/admin/stream/eventLog")
-            eventSource.onmessage = function (e) {
-                var entry = document.createElement("div");
-                entry.className = "eventItem"
-                entry.innerHTML = e.data;
-                eventContainer.appendChild(entry);
-            };
-        </script>
-    </div>
-    <div id="panel">
-        <h1>Panel</h1>
-        <h3>Running services</h3>
-        <div id="panelContainer">
-            <div class="service" id="driverLoc">
-                <span>Driver</span>
-                <span class="dot"></span>
+<div id="container">
+    <div class="row">
+        <div class="col s6">
+            <div id="panel">
+                <h1>Running services</h1>
+                <ul id="runningService" class="collapsible popout"></ul>
             </div>
-            <div class="service" id="driverStatus">
-                <span>Webdriver status</span>
-                <span class="dot"></span>
+        </div>
+        <div class="col s6">
+            <div id="serverLog">
+                <h1>Server Log</h1>
+                <div id="eventLog"></div>
             </div>
-            <div class="service" id="databaseStatus">
-                <span>Database status</span>
-                <span class="dot"></span>
-            </div>
-            <div class="service" id="engineStatus">
-                <span>Database engine status</span>
-                <span class="dot"></span>
-            </div>
-            <div class="service">
-                <span>More to be added</span>
-                <span class="dot"></span>
-            </div>
-            <script>
-                function streamDatabaseStatus() {
-                    var databaseEventSource = new EventSource("/admin/stream/getDatabaseStatus");
-                    var previousStatusCode = null
-                    databaseEventSource.onmessage = function (e) {
-                        var content = e.data;
-                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                        var msg = content.split(";")[1]
-                        var errorMsg = content.split(";")[2]
-                        var databaseStatusSpan = document.getElementById("databaseStatus").firstElementChild
-                        var databaseStatusDot = document.getElementById("databaseStatus").lastElementChild
-                        if (previousStatusCode != statusCode) {
-                            previousStatusCode = statusCode
-                            if (statusCode > 0) {
-                                databaseStatusSpan.innerText = msg.trim()
-                                databaseStatusDot.classList.remove("success")
-                                databaseStatusDot.classList.add("error")
-                                databaseStatusDot.title = errorMsg.trim()
-                            } else if (statusCode == 0) {
-                                databaseStatusSpan.innerText = msg.trim()
-                                databaseStatusDot.classList.remove("error")
-                                databaseStatusDot.classList.add("success")
-                                databaseStatusDot.title = ""
-                            }
-                        }
-                    };
-                }
-                function getDatabaseStatus() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/getDatabaseStatus", true);
-                    xhr.send()
-                }
-                streamDatabaseStatus();
-                setInterval(getDatabaseStatus, 10000);
-
-                function streamEngineStatus() {
-                    var engineEventSource = new EventSource("/admin/stream/getEngineStatus");
-                    var previousStatusCode = null
-                    engineEventSource.onmessage = function (e) {
-                        var content = e.data
-                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                        var msg = content.split(";")[1]
-                        var errorMsg = content.split(";")[2]
-                        var engineStatusSpan = document.getElementById("engineStatus").firstElementChild
-                        var engineStatusDot = document.getElementById("engineStatus").lastElementChild
-                        if (previousStatusCode != statusCode) {
-                            previousStatusCode = statusCode
-                            if (statusCode == 1) {
-                                engineStatusSpan.innerText = msg.trim()
-                                engineStatusDot.classList.remove("success")
-                                engineStatusDot.classList.add("error")
-                                engineStatusDot.title = errorMsg.trim()
-                            } else if (statusCode == 0) {
-                                engineStatusSpan.innerText = msg.trim()
-                                engineStatusDot.classList.remove("error")
-                                engineStatusDot.classList.add("success")
-                                engineStatusDot.title = ""
-                            }
-                        }
-                    };
-                }
-                function getEngineStatus() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/getEngineStatus", true);
-                    xhr.send()
-                }
-                streamEngineStatus();
-                setInterval(getEngineStatus, 10000);
-
-                function streamDriverPathStatus() {
-                    var driverPathEventSource = new EventSource("/admin/stream/getDriverPathStatus");
-                    var previousStatusCode = null
-                    driverPathEventSource.onmessage = function (e) {
-                        var content = e.data;
-                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                        var msg = content.split(";")[1]
-                        var driverLocSpan = document.getElementById("driverLoc").firstElementChild
-                        var driverLocDot = document.getElementById("driverLoc").lastElementChild
-                        if (previousStatusCode != statusCode) {
-                            previousStatusCode = statusCode
-                            if (statusCode == 1) {
-                                driverLocSpan.innerText = msg.trim()
-                                driverLocDot.classList.remove("success")
-                                driverLocDot.classList.add("error")
-                            } else if (statusCode == 0) {
-                                driverLocSpan.innerText = msg.trim()
-                                driverLocDot.classList.remove("error")
-                                driverLocDot.classList.add("success")
-                            }
-                        }
-                    };
-                }
-                function getDriverPathStatus() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/getDriverPathStatus", true);
-                    xhr.send()
-                }
-                streamDriverPathStatus();
-                setInterval(getDriverPathStatus, 10000);
-
-                function streamDriverStatus() {
-                    var driverEventSource = new EventSource("/admin/stream/getDriverStatus");
-                    var previousStatusCode = null
-                    driverEventSource.onmessage = function (e) {
-                        var content = e.data;
-                        var statusCode = parseInt(content.split(";")[0].split(":")[1]);
-                        var msg = content.split(";")[1]
-                        var errorMsg = content.split(";")[2]
-                        var driverStatusSpan = document.getElementById("driverStatus").firstElementChild
-                        var driverStatusDot = document.getElementById("driverStatus").lastElementChild
-                        if (previousStatusCode != statusCode) {
-                            previousStatusCode = statusCode
-                            if (statusCode == 1) {
-                                driverStatusSpan.innerText = "Webdriver " + msg.trim()
-                                driverStatusDot.classList.remove("success")
-                                driverStatusDot.classList.add("error")
-                                driverStatusDot.title = errorMsg.trim()
-                            } else if (statusCode == 0) {
-                                driverStatusSpan.innerText = "Webdriver " + msg.trim()
-                                driverStatusDot.classList.remove("error")
-                                driverStatusDot.classList.add("success")
-                                driverStatusDot.title = ""
-                            }
-                        }
-                    };
-                }
-                function getDriverStatus() {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "/admin/getDriverStatus", true);
-                    xhr.send()
-                }
-                streamDriverStatus();
-                setInterval(getDriverStatus, 10000);
-            </script>
         </div>
     </div>
 </div>
+<script src="/static/js/adminPage.js"></script>
 {% endblock %}

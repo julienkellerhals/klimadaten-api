@@ -1,3 +1,4 @@
+import pandas as pd
 from flask import Blueprint
 import webscraping
 
@@ -67,6 +68,20 @@ def constructBlueprint(announcer, instance, abstractDriver):
         engine = instance.getEngine()
         driver = abstractDriver.getDriver()
         paramRefreshDateDf = instance.getParameterRefreshDate()
+        configList = instance.readConfig(instance.configFileName)
+        configDf = pd.DataFrame(
+            [x.text for x in configList],
+            columns=["meas_name"]
+        )
+        configDf["valid_from"] = None
+        paramRefreshDateDf = pd.merge(
+            paramRefreshDateDf,
+            configDf,
+            how="outer",
+            on=["meas_name"],
+            suffixes=("", "_y")
+        )
+        del paramRefreshDateDf["valid_from_y"]
         if not paramRefreshDateDf.empty:
             savedDocumentsDf = webscraping._scrape_idaweb(
                 driver,

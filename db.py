@@ -9,14 +9,17 @@ from pathlib import Path
 from sqlalchemy import inspect
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy import Table, Column, Integer, String, Float, Date
+from sqlalchemy.pool import QueuePool
 from sqlalchemy_utils import database_exists, create_database
-import messageAnnouncer
+from messageAnnouncer import MessageAnnouncer
+from responseDict import ResponseDictionary
 
 
 class Database:
-    """ Database functions
+    """ Database class
     """
 
+    configFileName = "idawebConfig.xml"
     engine = None
     conn = None
     databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
@@ -24,16 +27,47 @@ class Database:
     announcer = None
     databaseStatusStream = None
     engineStatusStream = None
-    tablesStatusStream = None
+    stageTablesStatusStream = None
+    coreTablesStatusStream = None
+    datamartTablesStatusStream = None
+    dbServiceStatusStream = None
+    stageTableRespDict = None
+    coreTableRespDict = None
 
     def __init__(self, announcer):
-        """ Init engine
+        """ Init database class
+        Create announcer for all streams
+        Create base response dictionary for FE
+
+        Args:
+            announcer (announcer): Server announcer
         """
 
-        self.databaseStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.engineStatusStream = messageAnnouncer.MessageAnnouncer()
-        self.tablesStatusStream = messageAnnouncer.MessageAnnouncer()
+        self.databaseStatusStream = MessageAnnouncer()
+        self.engineStatusStream = MessageAnnouncer()
+        self.stageTablesStatusStream = MessageAnnouncer()
+        self.coreTablesStatusStream = MessageAnnouncer()
+        self.datamartTablesStatusStream = MessageAnnouncer()
+        self.dbServiceStatusStream = MessageAnnouncer()
         self.announcer = announcer
+        self.stageTableRespDict = ResponseDictionary({
+                "stage": {
+                    "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+                    "progressBar": False,
+                }
+            },
+            self.stageTablesStatusStream,
+            self
+        )
+        self.coreTableRespDict = ResponseDictionary({
+                "core": {
+                    "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+                    "progressBar": False,
+                }
+            },
+            self.coreTablesStatusStream,
+            self
+        )
 
     def readConfig(self, configFileName):
         """ Read config file
@@ -54,10 +88,20 @@ class Database:
         return configList
 
     def getEngine(self):
+        """ Get server engine
+
+        Returns:
+            engine: Server engine
+        """
+
         self.checkEngine()
         return self.engine
 
     def checkEngine(self):
+        """ Checks engine status
+        Creates engine if not started
+        """
+
         if self.engine is None:
             print("Engine not started")
             print("Starting programatically")
@@ -65,18 +109,191 @@ class Database:
             self.createEngine()
 
     def createEngine(self):
+        """ Creates engine
+        """
+
         self.engine = create_engine(
             self.databaseUrl,
-            echo=True
+            echo=False,
+            poolclass=QueuePool,
+            pool_size=100,
+            max_overflow=200
         )
 
+    def getDbServiceStatus(self):
+        """ Runs _getDbServiceStatus in thread
+        """
+
+        x = threading.Thread(
+            target=self._getDbServiceStatus
+        )
+        x.start()
+
+    def _getDbServiceStatus(self):
+        """ Gets status of API process
+        """
+
+        respDict = {
+            "runningService": {
+                "eventSourceUrl": "/admin/stream/getDbServiceStatus",
+                "dbConnection": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "dbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+                "tbCreate": {
+                    "currentAction": False,
+                    "actionUrl": None,
+                },
+            }
+        }
+
+        if self.engine is None:
+            respDict["runningService"][
+                "dbConnection"
+            ]["currentAction"] = True
+            respDict["runningService"][
+                "dbConnection"
+            ]["actionUrl"] = "/admin/db/connect"
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        else:
+            respDict["runningService"]["dbConnection"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        self.dbServiceStatusStream.announce(
+            self.dbServiceStatusStream.format_sse(msgText)
+        )
+
+        try:
+            create_engine(
+                self.databaseUrl
+            ).connect()
+        except sqlalchemy.exc.OperationalError:
+            try:
+                database_exists(self.databaseUrl)
+            except sqlalchemy.exc.OperationalError:
+                respDict["runningService"][
+                    "dbConnection"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "dbConnection"
+                ]["actionUrl"] = "/admin/db/connect"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+            else:
+                respDict["runningService"][
+                    "dbCreate"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "dbCreate"
+                ]["actionUrl"] = "/admin/db/create"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+        else:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        finally:
+            self.dbServiceStatusStream.announce(
+                self.dbServiceStatusStream.format_sse(msgText)
+            )
+
+        try:
+            inspector = inspect(self.engine)
+        except sqlalchemy.exc.NoInspectionAvailable:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        except sqlalchemy.exc.OperationalError:
+            respDict["runningService"]["dbCreate"]["currentAction"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        else:
+            self.conn = self.engine.connect()
+
+            stageTables = inspector.get_table_names("stage")
+            coreTables = inspector.get_table_names("core")
+            if len(stageTables) > 0 or len(coreTables) > 0:
+                respDict["runningService"]["tbCreate"]["currentAction"] = False
+                respDict["runningService"]["tbCreate"]["dbReady"] = True
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+            else:
+                respDict["runningService"][
+                    "tbCreate"
+                ]["currentAction"] = True
+                respDict["runningService"][
+                    "tbCreate"
+                ]["actionUrl"] = "/admin/db/table"
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
+        finally:
+            self.dbServiceStatusStream.announce(
+                    self.dbServiceStatusStream.format_sse(msgText)
+                )
+
     def getDatabaseStatus(self):
+        """ Runs _getDatabaseStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getDatabaseStatus
         )
         x.start()
 
     def _getDatabaseStatus(self):
+        """ Gets status of database process
+        """
+
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getDatabaseStatus",
+            "title": "Database connection",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Connect to db",
+                    "actionUrl": "http://localhost:5000/admin/db/connect",
+                    "enabled": True
+                },
+                {
+                    "name": "Create db",
+                    "actionUrl": "http://localhost:5000/admin/db/create",
+                    "enabled": True
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         try:
             create_engine(
                 self.databaseUrl
@@ -85,140 +302,273 @@ class Database:
             try:
                 database_exists(self.databaseUrl)
             except sqlalchemy.exc.OperationalError as e:
-                msgTxt = "Status: 2; Database not started; Error: " + str(e)
+                respDict["status"] = 2
+                respDict["headerBadge"]["caption"] = "Database not started"
+                respDict["headerBadge"]["content"] = errorIcon
+                respDict["action"][0]["enabled"] = True
+                respDict["action"][1]["enabled"] = False
+                respDict["bodyBadge"]["caption"] = str(e)
+                respDict["bodyBadge"]["content"] = errorIcon
+                msgText = json.dumps(
+                    respDict,
+                    default=str
+                )
                 self.databaseStatusStream.announce(
-                    self.databaseStatusStream.format_sse(msgTxt)
+                    self.databaseStatusStream.format_sse(msgText)
                 )
             else:
-                msgTxt = "Status: 1; Database not created; Error: " + str(e)
-                self.databaseStatusStream.announce(
-                    self.databaseStatusStream.format_sse(msgTxt)
+                respDict["status"] = 1
+                respDict["headerBadge"]["caption"] = "Database not created"
+                respDict["headerBadge"]["content"] = errorIcon
+                respDict["action"][0]["enabled"] = False
+                respDict["action"][1]["enabled"] = True
+                respDict["bodyBadge"]["caption"] = str(e)
+                respDict["bodyBadge"]["content"] = errorIcon
+                msgText = json.dumps(
+                    respDict,
+                    default=str
                 )
         else:
-            msgTxt = "Status: 0; Database connection: " + str(self.databaseUrl)
+            respDict["status"] = 0
+            respDict["headerBadge"]["caption"] = "connection"
+            respDict["headerBadge"]["content"] = str(self.databaseUrl)
+            respDict["action"][0]["enabled"] = False
+            respDict["action"][1]["enabled"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
+            )
+        finally:
             self.databaseStatusStream.announce(
-                self.databaseStatusStream.format_sse(msgTxt)
+                self.databaseStatusStream.format_sse(msgText)
             )
 
     def getEngineStatus(self):
+        """ Runs _getEngineStatus in thread
+        """
+
         x = threading.Thread(
             target=self._getEngineStatus
         )
         x.start()
 
     def _getEngineStatus(self):
+        """ Gets engine status
+        """
+
+        respDict = {
+            "status": 0,
+            "eventSourceUrl": "/admin/stream/getEngineStatus",
+            "title": "Engine status",
+            "headerBadge": {
+                "caption": "",
+                "content": "",
+            },
+            "action": [
+                {
+                    "name": "Start engine",
+                    "actionUrl": "http://localhost:5000/admin/db/connect",
+                    "enabled": True
+                }
+            ],
+            "bodyBadge": {
+                "caption": "",
+                "content": "",
+            },
+        }
+        errorIcon = '<i class="material-icons">error</i>'
+
         if self.engine is None:
-            msgTxt = "Status: 1; Engine not started; Error: Connect to db"
-            self.engineStatusStream.announce(
-                self.engineStatusStream.format_sse(msgTxt)
+            respDict["status"] = 1
+            respDict["headerBadge"]["caption"] = "Engine not started"
+            respDict["headerBadge"]["content"] = errorIcon
+            respDict["bodyBadge"]["caption"] = "Connect to db"
+            respDict["bodyBadge"]["content"] = errorIcon
+
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
         else:
-            msgTxt = "Status: 0; Engine started"
-            self.engineStatusStream.announce(
-                self.engineStatusStream.format_sse(msgTxt)
+            respDict["status"] = 0
+            respDict["headerBadge"]["content"] = "Engine started"
+            respDict["action"][0]["enabled"] = False
+            msgText = json.dumps(
+                respDict,
+                default=str
             )
+        self.engineStatusStream.announce(
+            self.engineStatusStream.format_sse(msgText)
+        )
 
-    def getTablesStatus(self):
+    def getStageTablesStatus(self):
+        """ Runs _getStageTablesStatus in thread
+        """
+
         x = threading.Thread(
-            target=self._getTablesStatus
+            target=self._getStageTablesStatus
         )
         x.start()
 
-    def _getTablesStatus(self):
-        self.getEngine()
-        try:
-            inspector = inspect(self.engine)
-        except sqlalchemy.exc.OperationalError:
-            msgTxt = "Status: 1; Database not found"
-            self.tablesStatusStream.announce(
-                self.tablesStatusStream.format_sse(msgTxt)
-            )
+    def _getStageTablesStatus(self):
+        """ Gets stage database tables
+        Adds table functions and row count
+        """
+
+        respDict = self.stageTableRespDict.respDict
+
+        # Check if process is already running
+        if respDict["stage"]["progressBar"]:
+            actionEnabled = False
         else:
-            self.conn = self.engine.connect()
+            actionEnabled = True
 
-            stageTables = inspector.get_table_names("stage")
-            coreTables = inspector.get_table_names("core")
-            if len(stageTables) > 0 or len(coreTables) > 0:
-                dbTables = {}
+        inspector = inspect(self.engine)
+        stageTables = inspector.get_table_names("stage")
+        for stageTable in stageTables:
+            respDict["stage"][stageTable] = {}
+            respDict["stage"][stageTable]["title"] = stageTable
 
-                dbTables["stage"] = []
-                for stageTable in stageTables:
-                    tableDict = {}
+            nrowQuery = "SELECT * FROM stage.{}_count_mv".format(
+                stageTable.strip("_t")
+            )
+            respDict["stage"][stageTable]["headerBadge"] = {}
+            respDict["stage"][stageTable]["headerBadge"]["caption"] = "rows"
+            respDict["stage"][stageTable]["headerBadge"]["content"] = \
+                "{:,}".format(self.conn.execute(
+                    nrowQuery
+                ).first()[0])
 
-                    tableDict["name"] = stageTable
+            actionList = []
 
-                    nrowQuery = \
-                        "SELECT count(*) FROM stage.{}".format(stageTable)
-                    tableDict["nrow"] = self.conn.execute(
+            if stageTable == "idaweb_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/idaweb"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+                actionDict = {}
+                actionDict["name"] = "Increment load"
+                actionDict["actionUrl"] = \
+                    "/admin/db/etl/stage/increment/idaweb"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+                actionDict = {}
+                actionDict["name"] = "Run scrapping"
+                actionDict["actionUrl"] = "/admin/scrape/idaweb"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+            elif stageTable == "meteoschweiz_t":
+                actionDict = {}
+                actionDict["name"] = "Run scrapping"
+                actionDict["actionUrl"] = "/admin/scrape/meteoschweiz"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+            elif stageTable == "station_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/station"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+            elif stageTable == "parameter_t":
+                actionDict = {}
+                actionDict["name"] = "Initial load"
+                actionDict["actionUrl"] = "/admin/db/etl/stage/parameter"
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
+
+            respDict["stage"][stageTable]["action"] = actionList
+
+            lastRefreshQuery = \
+                "SELECT * FROM stage.{}_max_valid_from_mv".format(
+                    stageTable.strip("_t")
+                )
+
+            respDict["stage"][stageTable]["bodyBadge"] = {}
+            lastRefresh = self.conn.execute(
+                lastRefreshQuery
+            ).first()[0]
+            if lastRefresh is not None:
+                respDict["stage"][stageTable]["bodyBadge"]["caption"] = \
+                    "last refresh"
+                respDict["stage"][stageTable]["bodyBadge"]["content"] = \
+                    lastRefresh
+
+        self.stageTableRespDict.send()
+
+    def getCoreTablesStatus(self):
+        """ Runs _getCoreTablesStatus in thread
+        """
+
+        x = threading.Thread(
+            target=self._getCoreTablesStatus
+        )
+        x.start()
+
+    def _getCoreTablesStatus(self):
+        """ Gets core database tables
+        Adds table functions and row count
+        """
+
+        respDict = self.coreTableRespDict.respDict
+
+        if respDict["core"]["progressBar"]:
+            actionEnabled = False
+        else:
+            actionEnabled = True
+
+        inspector = inspect(self.engine)
+        coreTables = inspector.get_table_names("core")
+        for coreTable in coreTables:
+            if "temp_" not in coreTable:
+                respDict["core"][coreTable] = {}
+                respDict["core"][coreTable]["title"] = coreTable
+
+                nrowQuery = "SELECT * FROM core.{}_count_mv".format(
+                    coreTable.strip("_t")
+                )
+                respDict["core"][coreTable]["headerBadge"] = {}
+                respDict["core"][coreTable]["headerBadge"]["caption"] = "rows"
+                respDict["core"][coreTable]["headerBadge"]["content"] = \
+                    "{:,}".format(self.conn.execute(
                         nrowQuery
-                    ).first()[0]
+                    ).first()[0])
 
-                    if stageTable == "meteoschweiz_t":
-                        lastRefreshQuery = \
-                            "SELECT max(load_date) FROM stage.{}".format(
-                                stageTable
-                            )
-                    else:
-                        lastRefreshQuery = \
-                            "SELECT max(valid_from) FROM stage.{}".format(
-                                stageTable
-                            )
+                actionList = []
 
-                    tableDict["lastRefresh"] = self.conn.execute(
-                        lastRefreshQuery
-                    ).first()[0]
+                actionDict = {}
+                actionDict["name"] = "Load"
+                actionDict["actionUrl"] = \
+                    "/admin/db/etl/core/" + coreTable.strip("_t")
+                actionDict["enabled"] = actionEnabled
+                actionList.append(actionDict)
 
-                    tableDict["action"] = []
+                respDict["core"][coreTable]["action"] = actionList
 
-                    if stageTable == "idaweb_t":
-                        tableDict["action"].append("Initial load")
-                        tableDict["action"].append("Increment load")
-                        tableDict["action"].append("Run scrapping")
-                    elif stageTable == "meteoschweiz_t":
-                        tableDict["action"].append("Run scrapping")
-                    elif stageTable == "station_t":
-                        tableDict["action"].append("Initial load")
-                    elif stageTable == "parameter_t":
-                        tableDict["action"].append("Initial load")
+                lastRefreshQuery = \
+                    "SELECT * FROM core.{}_max_valid_from_mv".format(
+                        coreTable.strip("_t")
+                    )
 
-                    dbTables["stage"].append(tableDict)
+                respDict["core"][coreTable]["bodyBadge"] = {}
+                lastRefresh = self.conn.execute(
+                    lastRefreshQuery
+                ).first()[0]
+                if lastRefresh is not None:
+                    respDict["core"][coreTable]["bodyBadge"]["caption"] = \
+                        "last refresh"
+                    respDict["core"][coreTable]["bodyBadge"]["content"] = \
+                        lastRefresh
 
-                dbTables["core"] = []
-                for coreTable in coreTables:
-                    if "temp_" not in coreTable:
-                        tableDict = {}
-
-                        tableDict["name"] = coreTable
-
-                        tableDict["nrow"] = self.conn.execute(
-                            "SELECT count(*) FROM core.{}".format(
-                                coreTable
-                            )
-                        ).first()[0]
-
-                        tableDict["lastRefresh"] = self.conn.execute(
-                            "SELECT max(valid_from) FROM core.{}".format(
-                                coreTable
-                            )
-                        ).first()[0]
-
-                        tableDict["action"] = ["Load"]
-                        dbTables["core"].append(tableDict)
-
-                msgTxt = "Status: 0; " + json.dumps(
-                    dbTables,
-                    default=str
-                )
-                self.tablesStatusStream.announce(
-                    self.tablesStatusStream.format_sse(msgTxt)
-                )
-            else:
-                msgTxt = "Status: 1; No tables found"
-                self.tablesStatusStream.announce(
-                    self.tablesStatusStream.format_sse(msgTxt)
-                )
+        self.coreTableRespDict.send()
 
     def getParameterRefreshDate(self):
+        """ Gets last load date of measurements data in core table
+
+        Returns:
+            dataframe: Table containing last load date of core data
+        """
+
         paramRefreshDateDf = pd.read_sql(
             "SELECT "
             "meas_name, "
@@ -249,8 +599,9 @@ class Database:
         ):  # Check if schema etl exists else create
             self.engine.execute(sqlalchemy.schema.CreateSchema('stage'))
 
+    # Check if they exist before, then drop them
     def createTable(self):
-        """ Creates tables
+        """ Creates tables and materialized views
         """
 
         if not self.engine.dialect.has_table(
@@ -379,11 +730,122 @@ class Database:
 
         self.meta.create_all(self.engine)
 
+        # stage.meteoschweiz_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.meteoschweiz_count_mv;" +
+            "CREATE MATERIALIZED VIEW stage.meteoschweiz_count_mv " +
+            "AS SELECT count(*) FROM stage.meteoschweiz_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.meteoschweiz_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv " +
+            "AS SELECT max(load_date) FROM stage.meteoschweiz_t"
+        )
+
+        # stage.idaweb_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.idaweb_count_mv;" +
+            "CREATE MATERIALIZED VIEW stage.idaweb_count_mv " +
+            "AS SELECT count(*) FROM stage.idaweb_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.idaweb_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW stage.idaweb_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.idaweb_t"
+        )
+
+        # stage.station_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.station_count_mv;" +
+            "CREATE MATERIALIZED VIEW stage.station_count_mv " +
+            "AS SELECT count(*) FROM stage.station_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.station_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW stage.station_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.station_t"
+        )
+        # stage.parameter_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.parameter_count_mv;" +
+            "CREATE MATERIALIZED VIEW stage.parameter_count_mv " +
+            "AS SELECT count(*) FROM stage.parameter_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS stage.parameter_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW stage.parameter_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM stage.parameter_t"
+        )
+
+        # core.measurements_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.measurements_count_mv;" +
+            "CREATE MATERIALIZED VIEW core.measurements_count_mv " +
+            "AS SELECT count(*) FROM core.measurements_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.measurements_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW core.measurements_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM core.measurements_t"
+        )
+
+        # core.station_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.station_count_mv;" +
+            "CREATE MATERIALIZED VIEW core.station_count_mv " +
+            "AS SELECT count(*) FROM core.station_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.station_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW core.station_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM core.station_t"
+        )
+
+        # core.parameter_t
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.parameter_count_mv;" +
+            "CREATE MATERIALIZED VIEW core.parameter_count_mv " +
+            "AS SELECT count(*) FROM core.parameter_t"
+        )
+
+        self.conn.execute(
+            "DROP MATERIALIZED VIEW " +
+            "IF EXISTS core.parameter_max_valid_from_mv;" +
+            "CREATE MATERIALIZED VIEW core.parameter_max_valid_from_mv " +
+            "AS SELECT max(valid_from) FROM core.parameter_t"
+        )
+
     def runStageETL(self):
+        """ Runs stage etl process
+        """
+
         self.stationParamStageETL()
         self.idaWebStageETL()
 
     def stationParamStageETL(self):
+        """ Runs station and Param stage etl process
+        """
+
+        self.stageTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -393,8 +855,7 @@ class Database:
             "TRUNCATE TABLE stage.parameter_t;"
         )
 
-        configFileName = "idawebConfig.xml"
-        configList = self.readConfig(configFileName)
+        configList = self.readConfig(self.configFileName)
         for config in configList:
             stationPartDf = pd.DataFrame()
             parameterPartDf = pd.DataFrame()
@@ -475,16 +936,26 @@ class Database:
                 if_exists='append',
                 index=False
             )
+            self.stageTableRespDict.updateLoadProcess()
+        self.stageTableRespDict.endLoadProcess()
 
     def idaWebStageETL(self, orderList=["*"]):
+        """ Runs idaweb stage etl process
+
+        Args:
+            orderList (list, optional): List of orders to load.
+                                        Defaults to ["*"].
+        """
+
+        self.stageTableRespDict.startLoadProcess()
+
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
             "TRUNCATE TABLE stage.idaweb_t;"
         )
 
-        configFileName = "idawebConfig.xml"
-        configList = self.readConfig(configFileName)
+        configList = self.readConfig(self.configFileName)
         for config in configList:
             idaWebPartDf = pd.DataFrame()
             dataDir = Path.cwd() / "data"
@@ -509,14 +980,19 @@ class Database:
                     dataFileDf["valid_to"] = pd.to_datetime("2262-04-11")
                     dataFileDf["source"] = "IdaWeb"
                     dataFileDf["granularity"] = config.attrib['granularity']
-                    if config.attrib['granularity'] == "M":
+                    if config.attrib['granularity'] == "D":
+                        dataFileDf["meas_date"] = pd.to_datetime(
+                            dataFileDf["meas_date"],
+                            format="%Y%m%d"
+                        )
+                    elif config.attrib['granularity'] == "M":
                         dataFileDf["meas_date"] = pd.to_datetime(
                             dataFileDf["meas_date"].map(str) + "01",
                             format="%Y%m%d"
                         )
-                    elif config.attrib['granularity'] == "D":
+                    elif config.attrib['granularity'] == "Y":
                         dataFileDf["meas_date"] = pd.to_datetime(
-                            dataFileDf["meas_date"],
+                            dataFileDf["meas_date"].map(str) + "0101",
                             format="%Y%m%d"
                         )
                     else:
@@ -551,15 +1027,29 @@ class Database:
                 if_exists='append',
                 index=False
             )
+            self.stageTableRespDict.updateLoadProcess()
+        self.stageTableRespDict.endLoadProcess()
 
     def runCoreETL(self):
+        """ Runs core etl process
+        """
+
         self.runMeasurementsETL()
+        self.stationCoreETL()
+        self.parameterCoreETL()
 
     def runMeasurementsETL(self):
+        """ Runs measurements etl process
+        """
+
         self.meteoschweizCoreETL()
         self.idawebCoreETL()
 
     def meteoschweizCoreETL(self):
+        """ Runs meteoschweiz etl process
+        """
+
+        self.coreTableRespDict.startLoadProcess()
         meteoschweizDf = pd.read_sql_table(
             "meteoschweiz_t",
             self.engine,
@@ -636,8 +1126,13 @@ class Database:
         self.conn.execute(
             "DROP TABLE IF EXISTS core.temp_measurements_t;"
         )
+        self.coreTableRespDict.endLoadProcess()
 
     def stationCoreETL(self):
+        """ Runs station etl process
+        """
+
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -645,8 +1140,13 @@ class Database:
             "SELECT * FROM stage.station_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.endLoadProcess()
 
     def parameterCoreETL(self):
+        """ Runs parameter etl process
+        """
+
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -654,8 +1154,13 @@ class Database:
             "SELECT * FROM stage.parameter_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.endLoadProcess()
 
     def idawebCoreETL(self):
+        """ Runs idaweb etl process
+        """
+
+        self.coreTableRespDict.startLoadProcess()
         if self.conn is None:
             self.conn = self.engine.connect()
         self.conn.execute(
@@ -663,3 +1168,4 @@ class Database:
             "SELECT * FROM stage.idaweb_t " +
             "ON CONFLICT DO NOTHING;"
         )
+        self.coreTableRespDict.endLoadProcess()
