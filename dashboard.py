@@ -670,7 +670,14 @@ def mydashboard(flaskApp, instance):
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
         plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
-        plotTemperature = plotBarCreation(dfTemperatureAll, meanTemperature, colors)
+        plotTemperature = plotBarCreation(
+            dfTemperatureAll,
+            meanTemperature,
+            colors
+        )
+        plotTemperature.update_layout(
+            title=f'Durchschnittliche Temperature aller Stationen in °C',
+        )
         plotSnow = plotScatterCreation(dfSnowAll, colors)
         plotSnow.update_layout(
             title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
@@ -1145,7 +1152,7 @@ def mydashboard(flaskApp, instance):
         )
 
         plotTemperature.update_layout(
-            title=f'∅ Maximaler Niederschlag bei {station} in cm'
+            title=f'Durchschnittliche Temperature bei {station} in °C'
         )
 
         return plotTemperature
