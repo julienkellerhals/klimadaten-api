@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask import send_from_directory
 import db
+import story
 import dashboard
 import abstractDriver
 import messageAnnouncer
@@ -45,17 +46,7 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
 )
 
 dashApp = dashboard.mydashboard(app, instance)
-
-
-@app.route("/")
-def mainPage():
-    """ Main page
-
-    Returns:
-        str: Temp main return
-    """
-
-    return "Hello World, story will be here"
+dashAppStory = story.mystory(app, instance)
 
 
 @app.route("/api")
@@ -76,6 +67,11 @@ def favicon():
         'favicon.ico',
         mimetype='image/vnd.microsoft.icon'
     )
+
+
+@app.route("/")
+def render_story():
+    return Flask.redirect('/dash')
 
 
 @app.route('/dashboard')
