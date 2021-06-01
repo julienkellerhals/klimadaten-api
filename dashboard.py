@@ -774,6 +774,7 @@ def mydashboard(flaskApp, instance):
                             }
                         ),
                         html.Div([
+
                             html.Button(
                                 id='allStations',
                                 n_clicks=0,
@@ -1146,6 +1147,36 @@ def mydashboard(flaskApp, instance):
         )
 
         return plotTemperature
+
+    @dashApp.callback(
+        Output('plotRainExtreme', 'figure'),
+        Output('plotTemperature', 'figure'),
+        Output('plotSnow', 'figure'),
+        Output('plotRain', 'figure'),
+        [Input('allStations', 'n_clicks')])
+    def callbackAllStations(n_clicks):
+        plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotTemperature = plotBarCreation(
+            dfTemperatureAll,
+            meanTemperature,
+            colors
+        )
+        plotTemperature.update_layout(
+            title=f'Durchschnittliche Temperature aller Stationen in °C',
+        )
+        plotSnow = plotScatterCreation(dfSnowAll, colors)
+        plotSnow.update_layout(
+            title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
+            yaxis={
+                'rangemode': "tozero",
+            },
+        )
+        plotRain = plotScatterCreation(dfRainAll, colors)
+        plotRain.update_layout(
+            title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+        )
+
+        return (plotRainExtreme, plotTemperature, plotSnow, plotRain)
 
     createDashboard()
     return dashApp
