@@ -772,7 +772,26 @@ def mydashboard(flaskApp, instance):
                                 'displayModeBar': False,
                                 'staticPlot': False
                             }
-                        )
+                        ),
+                        html.Div([
+                            html.Button(
+                                id='allStations',
+                                n_clicks=0,
+                                children='alle Stationen',
+                                style={
+                                    'backgroundColor': colors['d3'],
+                                    'color':colors['l1'],
+                                    'border-radius': 5,
+                                }
+                            )
+                        ], style={
+                            'position': 'fixed',
+                            'vertical-align': 'top',
+                            'horizontal-align': 'left',
+                            'zIndex': 999,
+                            'margin-top': -40,
+                            'margin-left': 10
+                        })
                     ], style={
                         'backgroundColor': colors['l0'],
                         'height': 430,
@@ -914,40 +933,11 @@ def mydashboard(flaskApp, instance):
                 # 2nd plot 2nd row
                 html.Div([
                     html.Div([
-                        html.Div([
-                            html.H4('Veränderung des Schneefalls')
-                        ], style={
-                            'padding-left': 20,
-                            'width': '70%',
-                            'display': 'inline-block',
-                            'vertical-align': 'top',
-                            # 'horizontal-align': 'left',
-                        }
-                        ),
-                        html.Div([
-                            dbc.Button(
-                                id='stationsOver1500',
-                                n_clicks=0,
-                                children='> 1500 m.ü.M.',
-                                # style={'fontSize': 12},
-                                color='secondary',
-                                size="sm",
-                            ),
-                        ], style={
-                            'width': '30%',
-                            'display': 'inline-block',
-                            'vertical-align': 'top',
-                            'text-align': 'right',
-                            'padding-right': 10,
-                            'padding-bottom': 5,
-                            # 'horizontal-align': 'right',
-                            # 'justify': 'right'
-                            # 'padding-left': 40,
-                        }
-                        ),
+                        html.H4('Veränderung des Schneefalls')
                     ], style={
-                            'height': 30,
-                        }
+                        'height': 30,
+                        'padding-left': 20
+                    }
                     ),
                     html.Div([
                         html.Div([
