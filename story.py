@@ -120,7 +120,27 @@ def mystory(flaskApp, instance):
                 'padding': '5px',
             }
             ),
-        ], style={
+            html.Div([
+                dcc.Markdown(
+                    '''
+                    Die Entscheidende Frage bleibt: Wurden die Bergwanderer 
+                    durch Warntafeln genügen über die Gefahr in diesem Gebiet informiert? 
+                    Die Antwort darauf lautet leider Nein. Die Warntafeln am Ender der 
+                    Alpstrasse warnten nur vor möglichen Bergstürzen im rot schraffierten 
+                    Vor der Gefahr eines Murgangs im Anschluss an einen Bergsturz wurden 
+                    nicht gewarnt
+                    '''
+                )
+            ], style={
+                'max-width': '1024px',
+                'padding-left': 50,
+                'padding-right': 50,
+                'horizontal-align': 'center',
+                # 'vetical-align': 'top',
+                'margin': '0 auto',
+            }
+            ),
+    ], style={
             'backgroundColor': colors['BgDashboard'],
             'height': '100vh'
         }
