@@ -503,6 +503,7 @@ def idaWebParameterPreselection(
         searchName (str): Parameter name
     """
 
+    time.sleep(1)
     # select search parameter
     driver.find_element_by_xpath(
         f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]'
@@ -532,6 +533,7 @@ def idaWebStationPreselection(driver, height):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to station preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Station preselection")]'
@@ -570,6 +572,7 @@ def idaWebTimePreselection(driver, since, until):
         until (str): Until date
     """
 
+    time.sleep(1)
     # go to time preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Time preselection")]'
@@ -596,6 +599,7 @@ def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
         bools: Bools with inventory result
     """
 
+    time.sleep(1)
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -625,6 +629,7 @@ def idaWebDataInventory(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -637,6 +642,13 @@ def idaWebDataInventory(driver):
 
 
 def idaWebCheckOrder(driver):
+    """ Check if there is too much data selected
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
+    time.sleep(1)
     tooManyValuesBool = False
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -660,6 +672,7 @@ def idaWebOrder(driver, orderName):
         orderName (str): Order name
     """
 
+    time.sleep(1)
     # go to order
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -684,6 +697,7 @@ def idaWebSummary(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to summary
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Summary")]'
@@ -697,6 +711,7 @@ def idaWebAgbs(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to general terms and conditions
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "General Terms and Conditions")]'
@@ -718,6 +733,12 @@ def idaWebAgbs(driver):
 
 
 def idaWebOrderPortal(driver):
+    """ Go to order portal
+
+    Args:
+        driver (driver): Selenium driver
+    """
+
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[7]/a').click()
 
@@ -732,6 +753,7 @@ def scrapeIdawebOrders(driver):
         df: Dataframe containing all orders
     """
 
+    time.sleep(1)
     orderUrl = "https://gate.meteoswiss.ch/idaweb/system/ordersList.do"
     if driver.current_url != orderUrl:
         scrape_idaweb_login(driver)
