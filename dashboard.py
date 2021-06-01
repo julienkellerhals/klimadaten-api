@@ -130,6 +130,7 @@ def mydashboard(flaskApp, instance):
     snowParam = 'hns000y0'
     rainParam = 'rre150y0'
     rainExtremeParam = 'rhh150yx'
+    temperatureParam = 'tre200y0'
     shadow = f'7px 7px 7px {colors["shadow"]}'
 
     dashApp = Dash(
@@ -462,6 +463,7 @@ def mydashboard(flaskApp, instance):
     yearSnow = getParamYear(dfSelection, snowParam)
     yearRain = getParamYear(dfSelection, rainParam)
     yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
+    yearTemperature = getParamYear(dfSelection, temperatureParam)
 
     # call plot functions
     dfScatterSnow = dfScatterWrangling(snowParam)
@@ -477,6 +479,10 @@ def mydashboard(flaskApp, instance):
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
     dfRainExtremeAll, meanRain = dfBarAllWrangling(
         dfStations, dfScatterRainExtreme, yearRainExtreme
+    )
+    dfScatterTemperature = dfScatterWrangling(temperatureParam)
+    dfTemperatureAll, meanTemperature = dfBarAllWrangling(
+        dfStations, dfScatterTemperature, yearTemperature
     )
 
     # functions for plot creation
@@ -664,6 +670,7 @@ def mydashboard(flaskApp, instance):
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
         plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotTemperature = plotBarCreation(dfTemperatureAll, meanTemperature, colors)
         plotSnow = plotScatterCreation(dfSnowAll, colors)
         plotSnow.update_layout(
             title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
@@ -977,7 +984,16 @@ def mydashboard(flaskApp, instance):
                         'padding-left': 20
                     }
                     ),
-                    html.Div([], style={
+                    html.Div([
+                        dcc.Graph(
+                            id='plotTemperature',
+                            figure=plotTemperature,
+                            config={
+                                'displayModeBar': False,
+                                'staticPlot': False
+                            }
+                        )
+                    ], style={
                         'backgroundColor': colors['l0'],
                         'height': 370,
                         'box-shadow': shadow,
@@ -1099,6 +1115,40 @@ def mydashboard(flaskApp, instance):
         )
 
         return plotRainExtreme
+
+    @dashApp.callback(
+        Output('plotTemperature', 'figure'),
+        [Input('intermediateValue', 'children')])
+    def callbackTemperature(station):
+        dfTemperatureAll = dfScatterTemperature[
+            dfScatterTemperature['station_name'] == station]
+        dfTemperatureAll = dfTemperatureAll.reset_index()
+
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(
+                dfTemperatureAll.meas_year),
+                dfTemperatureAll['meas_value']
+            )
+        dfTemperatureAll['bestfit'] = reg.predict(
+            np.vstack(dfTemperatureAll.meas_year)
+        )
+
+        meanRain = dfTemperatureAll['meas_value'].mean()
+        dfTemperatureAll['deviation'] = dfTemperatureAll[
+            'meas_value'] - meanRain
+        dfTemperatureAll['color'] = np.where(
+            dfTemperatureAll['deviation'] >= 0, True, False)
+
+        plotTemperature = plotBarCreation(
+            dfTemperatureAll, meanRain, colors
+        )
+
+        plotTemperature.update_layout(
+            title=f'∅ Maximaler Niederschlag bei {station} in cm'
+        )
+
+        return plotTemperature
 
     createDashboard()
     return dashApp
