@@ -688,6 +688,7 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors)
         plotRain.update_layout(
             title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+            height=420,
         )
 
         dashApp.layout = html.Div([
@@ -1075,7 +1076,8 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors)
 
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall bei {station} in mm'
+            title=f'Durchschnittlicher Regenfall bei {station} in mm',
+            height=420,
         )
 
         return plotRain
@@ -1174,6 +1176,7 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors)
         plotRain.update_layout(
             title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+            height=420,
         )
 
         return (plotRainExtreme, plotTemperature, plotSnow, plotRain)
