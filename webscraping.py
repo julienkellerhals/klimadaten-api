@@ -1,49 +1,24 @@
 import re
 import io
 import os
-import math
 import time
 import zipfile
 import threading
-import numpy as np
-from numpy.core.numeric import NaN
 import pandas as pd
 from lxml import etree
 from datetime import date
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
+from numpy.core.numeric import NaN
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-# from selenium.common.exceptions import TimeoutException
-# from selenium.common.exceptions import NoSuchElementException
 import download
 
 
-username = "julien.kellerhals@students.fhnw.ch"
-password = "CF767F6B27"
-
-
-def createJs(value):
-    """ Creates js for idaweb form
-
-    Args:
-        value (str): idaweb checkbox value
-
-    Returns:
-        str: Javascript to be executed on page
-    """
-
-    js = (
-        "var form = document.getElementsByTagName('form')[0];"  # get form
-        "var checkbox = document.createElement('input');"  # create input
-        "checkbox.checked = true;"  # set input to checked
-        "checkbox.name = 'selection';"  # set input name
-        f"checkbox.value = '{value}';"  # set input value
-        "updateCount(checkbox.checked);"  # update count
-        "form.appendChild(checkbox);"  # add checkbox
-    )
-    return js
+# username = "julien.kellerhals@students.fhnw.ch"
+# password = "CF767F6B27"
+username = "joel.grosjean@students.fhnw.ch"
+password = "AGEJ649GJAL02"
 
 
 def createOrderName(config, orderNumber, now):
@@ -83,40 +58,6 @@ def readConfig(configFileName):
     return configList
 
 
-def indexMarks(nrows, chunk_size):
-    """ Return idx range for df spliting
-
-    Args:
-        nrows (int): Number of rows in dataframe
-        chunk_size (int): Target chunk size
-
-    Returns:
-        range: Index range for split
-    """
-
-    indexMarksRange = range(
-        chunk_size,
-        math.ceil(nrows / chunk_size) * chunk_size,
-        chunk_size
-    )
-    return indexMarksRange
-
-
-def splitDf(dfm, chunk_size):
-    """ Splits df into specified chunks
-
-    Args:
-        dfm (df): Input dataframe
-        chunk_size (int): Target chunk size for df
-
-    Returns:
-        np: Splited df
-    """
-
-    indices = indexMarks(dfm.shape[0], chunk_size)
-    return np.split(dfm, indices)
-
-
 def getLastPageBool(driver, lastPageBool):
     """ Checks if the driver is at the last table page
 
@@ -142,26 +83,6 @@ def getLastPageBool(driver, lastPageBool):
             '//*[@id="body_block"]/form/div[5]/a[@title="Next"]'
         ).click()
     return lastPageBool
-
-
-def getUntil(since, timeDeltaList):
-    """ Creates until time for data request (max. today)
-
-    Args:
-        since (datetime): Since datetime
-        timeDeltaList (array): Delta to add on since date
-
-    Returns:
-        datetime: Incremented since date
-    """
-
-    if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
-            years=timeDeltaList[0])).date() < date.today():
-        until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
-            years=timeDeltaList[0])).strftime('%d.%m.%Y')
-    else:
-        until = date.today().strftime('%d.%m.%Y')
-    return until
 
 
 # main function
@@ -532,41 +453,6 @@ def run_scrape_idaweb(driver, engine, lastRefresh):
                     else:
                         notFinished = False
 
-            # select junks manually if select all doesn't work
-            # TODO make it work
-            else:
-                idaWebDataInventoryManual(driver)
-                inventoryDf = scrapeIdawebInventory(driver)
-                chunks = splitDf(inventoryDf, 400)
-                for chunk in chunks:
-                    for value in chunk["value"]:
-                        js = createJs(value)
-                        driver.execute_script(js)
-
-                orderName = createOrderName(config, orderNumber, now)
-                idaWebOrder(driver, orderName)
-                orderNumber += 1
-
-                idaWebSummary(driver)
-                idaWebAgbs(driver)
-
-                # Add order to list
-                saved_documents.append(orderName)
-
-                # redo the whole order process
-                idaWebParameterPortal(driver)
-                idaWebParameterPreselection(
-                    driver,
-                    config.attrib['group'],
-                    config.attrib['granularity'],
-                    config.text
-                )
-                idaWebStationPreselection(
-                    driver,
-                    f"{heightMin}..{heightMin + heightDeltaList[0]}"
-                )
-                idaWebTimePreselection(driver, since, until)
-
     print(saved_documents)
 
     return saved_documents
@@ -750,23 +636,6 @@ def idaWebDataInventory(driver):
     ).click()
 
 
-def idaWebDataInventoryManual(driver):
-    """ Go to inventory and .... to be implemented
-
-    Args:
-        driver (driver): Selenium driver
-    """
-
-    # TODO implement run js here?
-
-    # go to data inventory
-    driver.find_element_by_xpath(
-        '//*[@id="wizard"]//*[contains(., "Data inventory")]'
-    ).click()
-
-    print("Here")
-
-
 def idaWebCheckOrder(driver):
     tooManyValuesBool = False
     driver.find_element_by_xpath(
@@ -846,48 +715,6 @@ def idaWebAgbs(driver):
     driver.find_element_by_xpath(
         '//*[@id="content_block"]/form/table/tbody/tr[14]/td[2]/input'
     ).click()
-
-
-def scrapeIdawebInventory(driver):
-    """ Scrape data inventory for manual select
-
-    Args:
-        driver (driver): Selenium driver
-
-    Returns:
-        df: Dataframe with all tables concated
-    """
-
-    rowHeaders = [
-        "station",
-        "alt",
-        "parameter",
-        "unit",
-        "granularity",
-        "from",
-        "until",
-        "value"
-    ]
-    inventoryList = []
-    lastPageBool = False
-
-    while not lastPageBool:
-        for row in driver.find_elements_by_xpath(
-                    '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
-            cols = row.find_elements_by_tag_name("td")
-            rowContent = [col.text for col in cols[:-1]]
-            rowContent.append(
-                cols[-1].find_element_by_tag_name(
-                    "input"
-                ).get_attribute("value")
-            )
-            inventoryList.append(dict(zip(rowHeaders, rowContent)))
-
-        lastPageBool = getLastPageBool(driver, lastPageBool)
-    inventoryDf = pd.DataFrame(data=inventoryList)
-    inventoryDf = inventoryDf.drop_duplicates()
-
-    return inventoryDf
 
 
 def idaWebOrderPortal(driver):
