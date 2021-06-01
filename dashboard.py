@@ -216,10 +216,10 @@ def mydashboard(flaskApp, instance):
 
     def dfMapWrangling(dfStations, snowParam):
         # data wrangling map data
-        dfMap1 = pd.read_sql(
+        dfMap = pd.read_sql(
             f"""
             SELECT
-            avg(m.meas_value) avg_now,
+            avg(m.meas_value) avg,
             k.station_name,
             k.longitude,
             k.latitude,
@@ -227,8 +227,6 @@ def mydashboard(flaskApp, instance):
             FROM core.measurements_t m
             LEFT JOIN core.station_t k
             ON (m.station = k.station_short_name)
-            WHERE m.meas_date >= '2010-01-01'
-            AND m.meas_date < '2020-01-01'
             AND m.meas_name = {"'"+ snowParam +"'"}
             AND k.parameter = {"'"+ snowParam +"'"}
             AND m.valid_to = '2262-04-11'
@@ -241,32 +239,57 @@ def mydashboard(flaskApp, instance):
             engine
         )
 
-        dfMap2 = pd.read_sql(
-            f"""
-            SELECT
-            avg(m.meas_value) avg_then,
-            k.station_name
-            FROM core.measurements_t m
-            LEFT JOIN core.station_t k
-            ON (m.station = k.station_short_name)
-            WHERE m.meas_date >= '1970-01-01'
-            AND m.meas_date < '1980-01-01'
-            AND m.meas_name = {"'"+ snowParam +"'"}
-            AND k.parameter = {"'"+ snowParam +"'"}
-            AND m.valid_to = '2262-04-11'
-            AND k.valid_to = '2262-04-11'
-            GROUP BY k.station_name
-            """,
-            engine
-        )
+        # dfMap1 = pd.read_sql(
+        #     f"""
+        #     SELECT
+        #     avg(m.meas_value) avg_now,
+        #     k.station_name,
+        #     k.longitude,
+        #     k.latitude,
+        #     k.elevation
+        #     FROM core.measurements_t m
+        #     LEFT JOIN core.station_t k
+        #     ON (m.station = k.station_short_name)
+        #     WHERE m.meas_date >= '2010-01-01'
+        #     AND m.meas_date < '2020-01-01'
+        #     AND m.meas_name = {"'"+ snowParam +"'"}
+        #     AND k.parameter = {"'"+ snowParam +"'"}
+        #     AND m.valid_to = '2262-04-11'
+        #     AND k.valid_to = '2262-04-11'
+        #     GROUP BY k.station_name,
+        #     k.longitude,
+        #     k.latitude,
+        #     k.elevation;
+        #     """,
+        #     engine
+        # )
 
-        dfMap = pd.merge(
-            how='inner',
-            left=dfMap1,
-            right=dfMap2,
-            left_on='station_name',
-            right_on='station_name'
-        )
+        # dfMap2 = pd.read_sql(
+        #     f"""
+        #     SELECT
+        #     avg(m.meas_value) avg_then,
+        #     k.station_name
+        #     FROM core.measurements_t m
+        #     LEFT JOIN core.station_t k
+        #     ON (m.station = k.station_short_name)
+        #     WHERE m.meas_date >= '1970-01-01'
+        #     AND m.meas_date < '1980-01-01'
+        #     AND m.meas_name = {"'"+ snowParam +"'"}
+        #     AND k.parameter = {"'"+ snowParam +"'"}
+        #     AND m.valid_to = '2262-04-11'
+        #     AND k.valid_to = '2262-04-11'
+        #     GROUP BY k.station_name
+        #     """,
+        #     engine
+        # )
+
+        # dfMap = pd.merge(
+        #     how='inner',
+        #     left=dfMap1,
+        #     right=dfMap2,
+        #     left_on='station_name',
+        #     right_on='station_name'
+        # )
 
         dfMap = pd.merge(
             how='inner',
@@ -293,24 +316,29 @@ def mydashboard(flaskApp, instance):
         dfMap = dfMap.drop('lat', axis=1)
         dfMap = dfMap.astype({'longitude': 'float', 'latitude': 'float'})
         dfMap = dfMap.groupby(['station_name']).agg(
-            avg_now=('avg_now', 'mean'),
+            avg=('avg', 'mean'),
             longitude=('longitude', 'mean'),
             latitude=('latitude', 'mean'),
             elevation=('elevation', 'mean'),
-            avg_then=('avg_then', 'mean'),
+            # avg_now=('avg_now', 'mean'),
+            # avg_then=('avg_then', 'mean'),
         ).reset_index()
 
         # add text column for map pop-up
         dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
             ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
-            '<br>Ø Schneefall pro Tag 1970-1980: ' + \
-            (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
-            '<br>Ø Schneefall pro Tag 2010-2020: ' + \
-            (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
-            '<br>Veränderung: ' + \
-            (round(((
-                dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
-            ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
+            '<extra></extra>'
+
+        # dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
+        #     ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
+        #     '<br>Ø Schneefall pro Tag 1970-1980: ' + \
+        #     (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
+        #     '<br>Ø Schneefall pro Tag 2010-2020: ' + \
+        #     (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
+        #     '<br>Veränderung: ' + \
+        #     (round(((
+        #         dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
+        #     ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
 
         return dfMap
 
