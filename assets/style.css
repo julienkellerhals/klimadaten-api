@@ -1,15 +1,17 @@
-.gradient {
-    /* background gradient so that we can see the scrolling */
-    background: rgb(2, 0, 36);
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 17%, rgba(0, 212, 255, 1) 100%);
-    /* set height so that element is scrollable */
-    height: 1000px;
-  }
-  
-  .no-scrollbars::-webkit-scrollbar-button {
-    display: none;
-  }
-  
-  .no-scrollbars {
-    scrollbar-width: 1;
-  }
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #D8E0E5;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A3B5BF;
+  border-radius: 20px;
+  /* border: 6px solid transparent; */
+  background-clip: content-box;
+}
