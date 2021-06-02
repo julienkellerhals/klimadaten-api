@@ -117,7 +117,7 @@ def mydashboard(flaskApp, instance):
             'plotTitle': '#121F26',
             'plotGrid': '#B6C3CC',
             'plotAxisTitle': '#748B99',
-            'BgDashboard': '#D8E0E5',
+            'BgDashboard': '#E2E8ED',
             'shadow': '#C5D1D8'
         }
 
@@ -125,7 +125,13 @@ def mydashboard(flaskApp, instance):
     rainParam = 'rre150y0'
     rainExtremeParam = 'rhh150yx'
     temperatureParam = 'tre200y0'
-    shadow = f'7px 7px 7px {colors["shadow"]}'
+    shadow = f'7px 7px 10px {colors["shadow"]}'
+
+    # plot titles
+    titleRainExtreme = '∅ Maximaler Niederschlag aller Stationen'
+    titleTemperature = 'Durchschnittliche Temperature aller Stationen'
+    titleSnow = 'Durchschnittlicher Schneefall aller Stationen'
+    titleRain = 'Durchschnittlicher Regenfall aller Stationen'
 
     dashApp = Dash(
         __name__,
@@ -673,7 +679,7 @@ def mydashboard(flaskApp, instance):
             'cm'
         )
         plotRainExtreme.update_layout(
-            title='∅ Maximaler Niederschlag aller Stationen',
+            title=titleRainExtreme,
         )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
@@ -682,19 +688,19 @@ def mydashboard(flaskApp, instance):
             '°C'
         )
         plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature aller Stationen',
+            title=titleTemperature,
             # title_font_size='40%'
         )
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall aller Stationen',
+            title=titleSnow,
             yaxis={
                 'rangemode': "tozero",
             },
         )
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall aller Stationen',
+            title=titleRain,
             height=420,
         )
 
@@ -782,7 +788,6 @@ def mydashboard(flaskApp, instance):
                             }
                         ),
                         html.Div([
-
                             html.Button(
                                 id='allStations',
                                 n_clicks=0,
@@ -1060,7 +1065,7 @@ def mydashboard(flaskApp, instance):
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
 
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall bei {station} in Meter',
+            title=f'Durchschnittlicher Schneefall bei {station}',
             yaxis={
                 'rangemode': "tozero",
             },
@@ -1083,7 +1088,7 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
 
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall bei {station} in mm',
+            title=f'Durchschnittlicher Regenfall bei {station}',
             height=420,
         )
 
@@ -1118,7 +1123,7 @@ def mydashboard(flaskApp, instance):
         )
 
         plotRainExtreme.update_layout(
-            title=f'∅ Maximaler Niederschlag bei {station} in cm'
+            title=f'∅ Maximaler Niederschlag bei {station}'
         )
 
         return plotRainExtreme
@@ -1152,7 +1157,7 @@ def mydashboard(flaskApp, instance):
         )
 
         plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature bei {station} in °C'
+            title=f'Durchschnittliche Temperature bei {station}'
         )
 
         return plotTemperature
@@ -1170,6 +1175,9 @@ def mydashboard(flaskApp, instance):
             colors,
             'cm'
         )
+        plotRainExtreme.update_layout(
+            title=f'∅ Maximaler Niederschlag aller Stationen',
+        )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
             meanTemperature,
@@ -1177,18 +1185,18 @@ def mydashboard(flaskApp, instance):
             '°C'
         )
         plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature aller Stationen in °C',
+            title=f'Durchschnittliche Temperature aller Stationen',
         )
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
+            title=f'Durchschnittlicher Schneefall aller Stationen',
             yaxis={
                 'rangemode': "tozero",
             },
         )
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+            title=f'Durchschnittlicher Regenfall aller Stationen',
             height=420,
         )
 
