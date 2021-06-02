@@ -51,10 +51,11 @@ def readConfig(configFileName):
 
     configList = []
 
-    tree = etree.parse(configFileName)
-    root = tree.getroot()
-    for config in root:
-        configList.append(config)
+    if os.path.exists(configFileName):
+        tree = etree.parse(configFileName)
+        root = tree.getroot()
+        for config in root:
+            configList.append(config)           
     return configList
 
 
