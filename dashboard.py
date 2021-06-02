@@ -103,8 +103,14 @@ def mydashboard(flaskApp, instance):
         Hangrutschungen wird zudem durch die mögliche Zunahme von 
         Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
         """
-    
-    textStation1 = 'Momentan werden die Daten für folgende Station angezeigt:'
+
+    textStationAll = """
+        Momentan werden die Daten für folgende Stationen angezeigt:
+        """
+
+    textStationOne = """
+        Momentan werden die Daten für folgende Stationen angezeigt:
+        """
 
     colors = {
         'd1': '#05090C',
@@ -819,11 +825,20 @@ def mydashboard(flaskApp, instance):
                         html.Div([
                             dcc.Markdown(textDescription),
                         ], style={
-                            'maxHeight': 300,
-                            'overflowY': 'scroll'
+                            'maxHeight': 256,
+                            'overflowY': 'auto'
                         }
                         ),
-                        dcc.Markdown(textStation1),
+                        html.Div([
+                            dcc.Markdown(textStationAll),
+                            dcc.Markdown('# alle Stationen', id='name'),
+                            dcc.Markdown('', id='MASL'),
+                        ], style={
+                            'maxHeight': 160,
+                            'overflowY': 'auto'
+                        }
+                        ),
+
                     ], style={
                         'backgroundColor': colors['BgPlot2'],
                         'height': 430,
@@ -1097,11 +1112,17 @@ def mydashboard(flaskApp, instance):
 
     @dashApp.callback(
         Output('intermediateValue', 'children'),
+        Output('name', 'children'),
+        Output('MASL', 'children'),
         [Input('plotMap', 'clickData')])
     def callbackMap(clickData):
         v_index = clickData['points'][0]['pointIndex']
         station = dfMap.iloc[v_index]['station_name']
-        return station
+        elevation = dfMap.iloc[v_index]['elevation']
+        elevation = re.findall(r'^\d*', str(elevation))[0]
+        stationString = f'# {station}'
+        elevationString = f'#### {elevation} m.ü.M.'
+        return (station, stationString, elevationString)
 
     @dashApp.callback(
         Output('plotSnow', 'figure'),
@@ -1220,6 +1241,8 @@ def mydashboard(flaskApp, instance):
         Output('plotTemperature', 'figure'),
         Output('plotSnow', 'figure'),
         Output('plotRain', 'figure'),
+        Output('name', 'children'),
+        Output('MASL', 'children'),
         [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
         plotRainExtreme = plotBarCreation(
@@ -1253,7 +1276,17 @@ def mydashboard(flaskApp, instance):
             height=420,
         )
 
-        return (plotRainExtreme, plotTemperature, plotSnow, plotRain)
+        stationString = f'# alle Stationen'
+        elevationString = ''
+
+        return (
+            plotRainExtreme,
+            plotTemperature,
+            plotSnow,
+            plotRain,
+            stationString,
+            elevationString
+        )
 
     createDashboard()
     return dashApp
