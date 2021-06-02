@@ -147,7 +147,7 @@ def mydashboard(flaskApp, instance):
 
     # plot titles
     titleRainExtreme = '∅ Maximaler Niederschlag aller Stationen'
-    titleTemperature = 'Durchschnittliche Temperature aller Stationen'
+    titleTemperature = 'Durchschnittliche Temperatur aller Stationen'
     titleSnow = 'Durchschnittlicher Schneefall aller Stationen'
     titleRain = 'Durchschnittlicher Regenfall aller Stationen'
 
@@ -603,7 +603,7 @@ def mydashboard(flaskApp, instance):
                 'linecolor': colors['plotGrid']
             },
             hovermode='closest',
-            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+            margin={'l': 20, 'b': 20, 't': 10, 'r': 20},
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
@@ -655,7 +655,7 @@ def mydashboard(flaskApp, instance):
 
         plot.update_layout(
             title_x=0.1,
-            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+            margin={'l': 20, 'b': 20, 't': 10, 'r': 20},
             height=360,
             yaxis={
                 # 'title': 'Schneefall (Meter)',
@@ -696,30 +696,24 @@ def mydashboard(flaskApp, instance):
             colors,
             'cm'
         )
-        plotRainExtreme.update_layout(
-            title=titleRainExtreme,
-        )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
             meanTemperature,
             colors,
             '°C'
         )
-        plotTemperature.update_layout(
-            title=titleTemperature,
-            # title_font_size='40%'
-        )
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
-            title=titleSnow,
             yaxis={
                 'rangemode': "tozero",
             },
         )
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
-            title=titleRain,
             height=420,
+            yaxis={
+                'rangemode': "tozero",
+            },
         )
 
         dashApp.layout = html.Div([
@@ -833,7 +827,7 @@ def mydashboard(flaskApp, instance):
                     html.Div([
                         html.Div([
                             html.H4(
-                                'Landkarte zum Auswählen der Stationen',
+                                'Landkarte',
                                 style={'color': colors['plotTitle']}
                             ),
                             html.Div(
@@ -895,7 +889,7 @@ def mydashboard(flaskApp, instance):
                     # 3rd plot first row
                     html.Div([
                         html.Div([
-                            html.H4("Veränderung des Regenfalls")
+                            html.H4("Durchschnittlicher Regenfall")
                         ], style={
                             'padding-left': 20,
                             'padding-top': 5,
@@ -945,7 +939,7 @@ def mydashboard(flaskApp, instance):
                     # 1st plot 2nd row
                     html.Div([
                         html.Div([
-                            html.H4('Extreme Regenfälle')
+                            html.H4('Extremer Regenfall')
                         ], style={
                             'height': 30,
                             'padding-left': 20
@@ -987,7 +981,7 @@ def mydashboard(flaskApp, instance):
                     # 2nd plot 2nd row
                     html.Div([
                         html.Div([
-                            html.H4('Veränderung des Schneefalls')
+                            html.H4('Durchschnittlicher Schneefall')
                         ], style={
                             'height': 30,
                             'padding-left': 20
@@ -1120,7 +1114,6 @@ def mydashboard(flaskApp, instance):
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
 
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall bei {station}',
             yaxis={
                 'rangemode': "tozero",
             },
@@ -1143,8 +1136,10 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
 
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall bei {station}',
             height=420,
+            yaxis={
+                'rangemode': "tozero",
+            },
         )
 
         return plotRain
@@ -1177,10 +1172,6 @@ def mydashboard(flaskApp, instance):
             dfRainExtremeAll, meanRain, colors, 'cm'
         )
 
-        plotRainExtreme.update_layout(
-            title=f'∅ Maximaler Niederschlag bei {station}'
-        )
-
         return plotRainExtreme
 
     @dashApp.callback(
@@ -1211,10 +1202,6 @@ def mydashboard(flaskApp, instance):
             dfTemperatureAll, meanRain, colors, '°C'
         )
 
-        plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature bei {station}'
-        )
-
         return plotTemperature
 
     @dashApp.callback(
@@ -1232,29 +1219,24 @@ def mydashboard(flaskApp, instance):
             colors,
             'cm'
         )
-        plotRainExtreme.update_layout(
-            title=f'∅ Maximaler Niederschlag aller Stationen',
-        )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
             meanTemperature,
             colors,
             '°C'
         )
-        plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature aller Stationen',
-        )
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall aller Stationen',
             yaxis={
                 'rangemode': "tozero",
             },
         )
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall aller Stationen',
             height=420,
+            yaxis={
+                'rangemode': "tozero",
+            },
         )
 
         stationString = f'# alle Stationen'
