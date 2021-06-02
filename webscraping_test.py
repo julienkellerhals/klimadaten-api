@@ -60,3 +60,11 @@ class TestIDAWeb():
         url = "https://gate.meteoswiss.ch/idaweb/login.do"
         scrape_idaweb_login(driver, username, password)
         assert driver.current_url == url
+
+    def testScrapeIdawebOrders(self):
+        driver = abstractDriver.getDriver()
+        orderDF = scrapeIdawebOrders(driver)
+        if isinstance(orderDF, pd.DataFrame):
+            assert len(orderDF) != 0
+        else:
+            assert False
