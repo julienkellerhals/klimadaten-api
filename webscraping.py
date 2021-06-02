@@ -458,7 +458,7 @@ def run_scrape_idaweb(driver, engine, lastRefresh):
     return saved_documents
 
 
-def scrape_idaweb_login(driver):
+def scrape_idaweb_login(driver, username=username, password=password):
     """ Login into idaweb
 
     Args:
