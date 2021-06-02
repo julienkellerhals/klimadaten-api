@@ -94,32 +94,44 @@ def mydashboard(flaskApp, instance):
     # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
     external_stylesheets = [dbc.themes.UNITED]
 
+    textDescription = """
+        Erdrutsche werden in den kommenden Jahrzehnten wahrscheinlich 
+        häuffiger. Dieses Dashboard visualisiert die Ursachen von Erdrutschen. 
+        Durch die sich beschleunigende Gletscherschmelze und das langsame 
+        Auftauen des Permafrosts, wird das Risiko für Erdrutsche grösser. Die 
+        generell zunehmende Temperatur ist Grund dafür. Das Risiko von 
+        Hangrutschungen wird zudem durch die mögliche Zunahme von 
+        Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
+        """
+    
+    textStation1 = 'Momentan werden die Daten für folgende Station angezeigt:'
+
     colors = {
-            'd1': '#05090C',
-            'd2': '#0C1419',
-            'd3': '#121F26',
-            'l0': '#FFFFFF',
-            'l1': '#EBEFF2',
-            'l2': '#D8E0E5',
-            'l3': '#C5D1D8',
-            'l4': '#B6C3CC',
-            'l5': '#A3B5BF',
-            'l6': '#96A8B2',
-            'l8': '#748B99',
-            'blue': '#285D8F',
-            'red': '#DE3143',
-            'lightblue': '#B4DFFF',
-            'BgPlot1': '#FFFFFF',
-            'BgPlot2': '#FFFFFF',
-            'BgPlot3': '#FFFFFF',
-            'BgPlot4': '#ADD8E5',
-            'BgPlot5': '#FFFFFF',
-            'plotTitle': '#121F26',
-            'plotGrid': '#B6C3CC',
-            'plotAxisTitle': '#748B99',
-            'BgDashboard': '#E2E8ED',
-            'shadow': '#C5D1D8'
-        }
+        'd1': '#05090C',
+        'd2': '#0C1419',
+        'd3': '#121F26',
+        'l0': '#FFFFFF',
+        'l1': '#EBEFF2',
+        'l2': '#D8E0E5',
+        'l3': '#C5D1D8',
+        'l4': '#B6C3CC',
+        'l5': '#A3B5BF',
+        'l6': '#96A8B2',
+        'l8': '#748B99',
+        'blue': '#285D8F',
+        'red': '#DE3143',
+        'lightblue': '#B4DFFF',
+        'BgPlot1': '#FFFFFF',
+        'BgPlot2': '#FFFFFF',
+        'BgPlot3': '#FFFFFF',
+        'BgPlot4': '#ADD8E5',
+        'BgPlot5': '#FFFFFF',
+        'plotTitle': '#121F26',
+        'plotGrid': '#B6C3CC',
+        'plotAxisTitle': '#748B99',
+        'BgDashboard': '#E2E8ED',
+        'shadow': '#C5D1D8'
+    }
 
     snowParam = 'hns000y0'
     rainParam = 'rre150y0'
@@ -760,7 +772,44 @@ def mydashboard(flaskApp, instance):
             ),
             # first row of plots
             html.Div([
-                # map top left
+                # 1st plot 1st row
+                html.Div([
+                    html.Div([
+                        html.H4('Beschreibung')
+                    ], style={
+                        'padding-left': 20,
+                        'padding-top': 5,
+                        'height': 30,
+                    }
+                    ),
+                    html.Div([
+                        html.Div([
+                            dcc.Markdown(textDescription),
+                        ], style={
+                            'maxHeight': 300,
+                            'overflow': 'scroll'
+                        }
+                        ),
+                        dcc.Markdown(textStation1),
+                    ], style={
+                        'backgroundColor': colors['BgPlot2'],
+                        'height': 430,
+                        'box-shadow': shadow,
+                        'position': 'relative',
+                        'border-radius': 5,
+                        'margin': '10px',
+                        'vertical-align': 'top',
+                        'padding': '10px'
+                    }
+                    ),
+                ], style={
+                    'width': '25%',
+                    'display': 'inline-block',
+                    'vertical-align': 'top',
+                    'horizontal-align': 'center'
+                }
+                ),
+                # 2nd plot 1st row
                 html.Div([
                     html.Div([
                         html.H4(
@@ -817,39 +866,10 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                 ], style={
-                    'width': '40%',
+                    'width': '35%',
                     'display': 'inline-block',
                     'vertical-align': 'top',
                     'horizontal-align': 'left'
-                }
-                ),
-                # 2nd plot 1st row
-                html.Div([
-                    html.Div([
-                        html.H4('Beschreibung')
-                    ], style={
-                        'padding-left': 20,
-                        'padding-top': 5,
-                        'height': 30,
-                    }
-                    ),
-                    html.Div([
-                    ], style={
-                        'backgroundColor': colors['BgPlot2'],
-                        'height': 430,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        'vertical-align': 'top',
-                        'padding': '5px'
-                    }
-                    ),
-                ], style={
-                    'width': '20%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'center'
                 }
                 ),
                 # 3rd plot first row
