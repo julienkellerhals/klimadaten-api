@@ -1,9 +1,12 @@
+from typing import List
 import pytest
 import abstractDriver
 import messageAnnouncer
 import pandas as pd
+from webscraping import readConfig
 from webscraping import scrape_idaweb_login
 from webscraping import scrapeIdawebOrders
+
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
@@ -66,5 +69,21 @@ class TestIDAWeb():
         orderDF = scrapeIdawebOrders(driver)
         if isinstance(orderDF, pd.DataFrame):
             assert len(orderDF) != 0
+        else:
+            assert False
+
+    def testReadConfigSuccess(self):
+        configFileName = "idawebConfig.xml"
+        configFile = readConfig(configFileName)
+        if isinstance(configFile, List):
+            assert len(configFile) != 0
+        else:
+            assert False
+
+    def testReadConfigFail(self):
+        configFileName = "wrongFile.xml"
+        configFile = readConfig(configFileName)
+        if isinstance(configFile, List):
+            assert len(configFile) == 0
         else:
             assert False
