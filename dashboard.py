@@ -14,11 +14,9 @@ from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
-# TODO height of dash elements as percentage of the whole
-# TODO remove duplicates from map (avg. everything else)
-# TODO Add Rain for all Stations with button
-
 """
+Parameters in database
+
 wind
 "fklnd3m0" Days of the month with gust peak exceeding 27.8 m/s (100 km/h)
 "fu3010m1" Gust peak (one second); monthly maximum
@@ -62,6 +60,8 @@ soil temperature
 """
 
 """
+awesome color scale
+
 $white #FFFFFF
 $gray1 #EBEFF2
 $gray2 #E2E8ED
@@ -106,14 +106,8 @@ def mydashboard(flaskApp, instance):
             'l5': '#A3B5BF',
             'l6': '#96A8B2',
             'l8': '#748B99',
-            'c1': '#ED90A4',
-            'c2': '#ABB150',
-            'c3': '#00C1B2',
-            'c4': '#ACA2EC',
-            'b1': '#ADD8E5',
-            'b2': '#BCDFEB',
-            'rbb': '#285D8F',
-            'rbr': '#DE3143',
+            'blue': '#285D8F',
+            'red': '#DE3143',
             'lightblue': '#B4DFFF',
             'BgPlot1': '#FFFFFF',
             'BgPlot2': '#FFFFFF',
@@ -504,9 +498,9 @@ def mydashboard(flaskApp, instance):
                 #     ) / dfMap['avg_then'],
                 # 'colorscale': px.colors.diverging.BrBG,
                 # 'colorscale': [
-                #     [0, colors['rbr']],
+                #     [0, colors['red']],
                 #     [0.50, colors['l6']],
-                #     [1, colors['rbb']]
+                #     [1, colors['blue']]
                 # ],
                 # 'sizemode': 'area',
                 'opacity': 0.7
@@ -537,7 +531,7 @@ def mydashboard(flaskApp, instance):
 
         return plot
 
-    def plotBarCreation(df, meanRain, colors):
+    def plotBarCreation(df, meanRain, colors, suffix):
         # creating the rain barplot
         plot = go.Figure()
 
@@ -547,7 +541,7 @@ def mydashboard(flaskApp, instance):
             y=df["deviation"],
             base=meanRain,
             marker={
-                'color': colors['rbb'],
+                'color': colors['blue'],
                 # 'line': {'width': 1, 'color': 'black'}
             }
         ))
@@ -559,13 +553,12 @@ def mydashboard(flaskApp, instance):
             mode='lines',
             marker={
                 'size': 5,
-                'color': colors['rbr'],
+                'color': colors['red'],
                 'line': {'width': 1, 'color': 'black'}
             }
         ))
 
         plot.update_layout(
-            title='∅ Maximaler Niederschlag aller Stationen in cm',
             title_x=0.05,
             yaxis={
                 # 'title': 'maximaler Niederschlag in cm',
@@ -576,7 +569,8 @@ def mydashboard(flaskApp, instance):
                 'range': [
                     df.meas_value.min() * 0.95,
                     df.meas_value.max() * 1.05
-                ]
+                ],
+                'ticksuffix': ' ' + suffix
             },
             xaxis={
                 'showgrid': False,
@@ -589,6 +583,7 @@ def mydashboard(flaskApp, instance):
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
+            showlegend=False,
             legend={
                 'yanchor': 'top',
                 'y': 0.99,
@@ -599,7 +594,7 @@ def mydashboard(flaskApp, instance):
 
         return plot
 
-    def plotScatterCreation(df, colors):
+    def plotScatterCreation(df, colors, suffix):
         # creating the snow scatterplot with all stations
         plot = go.Figure()
 
@@ -611,7 +606,7 @@ def mydashboard(flaskApp, instance):
             line_shape='spline',
             marker={
                 'size': 5,
-                'color': colors['rbb'],
+                'color': colors['blue'],
                 'line': {
                     'width': 1,
                     'color': 'black'
@@ -626,7 +621,7 @@ def mydashboard(flaskApp, instance):
             mode='lines',
             marker={
                 'size': 5,
-                'color': colors['rbr'],
+                'color': colors['red'],
                 'line': {
                     'width': 1,
                     'color': 'black'
@@ -645,6 +640,7 @@ def mydashboard(flaskApp, instance):
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
                 # 'rangemode': "tozero",
+                'ticksuffix': ' ' + suffix
             },
             xaxis={
                 'showgrid': False,
@@ -654,6 +650,7 @@ def mydashboard(flaskApp, instance):
             },
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
+            showlegend=False,
             legend={
                 'yanchor': 'top',
                 'y': 0.99,
@@ -669,25 +666,35 @@ def mydashboard(flaskApp, instance):
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
-        plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotRainExtreme = plotBarCreation(
+            dfRainExtremeAll,
+            meanRain,
+            colors,
+            'cm'
+        )
+        plotRainExtreme.update_layout(
+            title='∅ Maximaler Niederschlag aller Stationen',
+        )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
             meanTemperature,
-            colors
+            colors,
+            '°C'
         )
         plotTemperature.update_layout(
-            title=f'Durchschnittliche Temperature aller Stationen in °C',
+            title=f'Durchschnittliche Temperature aller Stationen',
+            # title_font_size='40%'
         )
-        plotSnow = plotScatterCreation(dfSnowAll, colors)
+        plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
-            title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
+            title=f'Durchschnittlicher Schneefall aller Stationen',
             yaxis={
                 'rangemode': "tozero",
             },
         )
-        plotRain = plotScatterCreation(dfRainAll, colors)
+        plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
-            title=f'Durchschnittlicher Regenfall aller Stationen in mm',
+            title=f'Durchschnittlicher Regenfall aller Stationen',
             height=420,
         )
 
@@ -1050,7 +1057,7 @@ def mydashboard(flaskApp, instance):
             ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
         dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.meas_year))
 
-        plotSnow = plotScatterCreation(dfSnowAll, colors)
+        plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
 
         plotSnow.update_layout(
             title=f'Durchschnittlicher Schneefall bei {station} in Meter',
@@ -1073,7 +1080,7 @@ def mydashboard(flaskApp, instance):
             ).fit(np.vstack(dfRainAll.meas_year), dfRainAll['meas_value'])
         dfRainAll['bestfit'] = reg.predict(np.vstack(dfRainAll.meas_year))
 
-        plotRain = plotScatterCreation(dfRainAll, colors)
+        plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
 
         plotRain.update_layout(
             title=f'Durchschnittlicher Regenfall bei {station} in mm',
@@ -1107,7 +1114,7 @@ def mydashboard(flaskApp, instance):
             dfRainExtremeAll['deviation'] >= 0, True, False)
 
         plotRainExtreme = plotBarCreation(
-            dfRainExtremeAll, meanRain, colors
+            dfRainExtremeAll, meanRain, colors, 'cm'
         )
 
         plotRainExtreme.update_layout(
@@ -1141,7 +1148,7 @@ def mydashboard(flaskApp, instance):
             dfTemperatureAll['deviation'] >= 0, True, False)
 
         plotTemperature = plotBarCreation(
-            dfTemperatureAll, meanRain, colors
+            dfTemperatureAll, meanRain, colors, '°C'
         )
 
         plotTemperature.update_layout(
@@ -1157,23 +1164,29 @@ def mydashboard(flaskApp, instance):
         Output('plotRain', 'figure'),
         [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
-        plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotRainExtreme = plotBarCreation(
+            dfRainExtremeAll,
+            meanRain,
+            colors,
+            'cm'
+        )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
             meanTemperature,
-            colors
+            colors,
+            '°C'
         )
         plotTemperature.update_layout(
             title=f'Durchschnittliche Temperature aller Stationen in °C',
         )
-        plotSnow = plotScatterCreation(dfSnowAll, colors)
+        plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
         plotSnow.update_layout(
             title=f'Durchschnittlicher Schneefall aller Stationen in Meter',
             yaxis={
                 'rangemode': "tozero",
             },
         )
-        plotRain = plotScatterCreation(dfRainAll, colors)
+        plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
             title=f'Durchschnittlicher Regenfall aller Stationen in mm',
             height=420,
