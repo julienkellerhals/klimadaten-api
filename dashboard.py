@@ -603,7 +603,7 @@ def mydashboard(flaskApp, instance):
                 'linecolor': colors['plotGrid']
             },
             hovermode='closest',
-            margin={'l': 20, 'b': 20, 't': 10, 'r': 20},
+            margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
@@ -655,7 +655,7 @@ def mydashboard(flaskApp, instance):
 
         plot.update_layout(
             title_x=0.1,
-            margin={'l': 20, 'b': 20, 't': 10, 'r': 20},
+            margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
             yaxis={
                 # 'title': 'Schneefall (Meter)',
@@ -793,7 +793,10 @@ def mydashboard(flaskApp, instance):
                             ),
                             html.Div([
                                 dcc.Markdown(textStationAll),
-                                dcc.Markdown('# alle Stationen', id='name'),
+                                dcc.Markdown(
+                                    '## **alle Stationen**F',
+                                    id='name'
+                                ),
                                 dcc.Markdown('', id='MASL'),
                             ], style={
                                 'maxHeight': 160,
@@ -826,10 +829,7 @@ def mydashboard(flaskApp, instance):
                     # 2nd plot 1st row
                     html.Div([
                         html.Div([
-                            html.H4(
-                                'Landkarte',
-                                style={'color': colors['plotTitle']}
-                            ),
+                            html.H4('Landkarte'),
                             html.Div(
                                 id='intermediateValue',
                                 style={'display': 'none'}
@@ -862,7 +862,7 @@ def mydashboard(flaskApp, instance):
                                     }
                                 )
                             ], style={
-                                'position': 'fixed',
+                                'position': 'absolute',
                                 'vertical-align': 'top',
                                 'horizontal-align': 'left',
                                 'zIndex': 999,
@@ -1045,7 +1045,8 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top'
+                            'vertical-align': 'top',
+                            'padding': 5
                         }
                         ),
                     ], style={
@@ -1066,10 +1067,10 @@ def mydashboard(flaskApp, instance):
                 'flex-direction': 'column',
                 'justify-content': 'center',
                 'flex-grow': '1',
+                'backgroundColor': colors['BgDashboard'],
             }
             )
         ], style={
-            'backgroundColor': colors['BgDashboard'],
             'height': '100vh',
             'display': 'flex',
             'flex-direction': 'column',
@@ -1095,8 +1096,8 @@ def mydashboard(flaskApp, instance):
         station = dfMap.iloc[v_index]['station_name']
         elevation = dfMap.iloc[v_index]['elevation']
         elevation = re.findall(r'^\d*', str(elevation))[0]
-        stationString = f'# {station}'
-        elevationString = f'#### {elevation} m.ü.M.'
+        stationString = f'## **{station}**'
+        elevationString = f'#### **{elevation} m.ü.M.**'
         return (station, stationString, elevationString)
 
     @dashApp.callback(
@@ -1239,7 +1240,7 @@ def mydashboard(flaskApp, instance):
             },
         )
 
-        stationString = f'# alle Stationen'
+        stationString = f'## **alle Stationen**'
         elevationString = ''
 
         return (
