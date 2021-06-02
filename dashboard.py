@@ -783,11 +783,44 @@ def mydashboard(flaskApp, instance):
                     }
                     ),
                     html.Div([
+                        # dbc.Container([
+                        #     dbc.Row([
+                        #         dbc.Col(
+                        #             html.Div(
+                        #                 html.H1(
+                        #                     "Scrollbars",
+                        #                     className="text-center"
+                        #                 ),
+                        #                 className="p-3 gradient",
+                        #             ),
+                        #             width=6,
+                        #             style={
+                        #                 "overflow": "scroll",
+                        #                 "height": "400px"
+                        #             },
+                        #         ),
+                        #         dbc.Col(
+                        #             html.Div(
+                        #                 html.H1(
+                        #                     "No scrollbars",
+                        #                     className="text-center"
+                        #                 ),
+                        #                 className="p-3 gradient",
+                        #             ),
+                        #             width=6,
+                        #             style={
+                        #                 "overflow": "scroll",
+                        #                 "height": "400px"
+                        #             },
+                        #             className="no-scrollbars",
+                        #         ),
+                        #     ])
+                        # ]),
                         html.Div([
                             dcc.Markdown(textDescription),
                         ], style={
                             'maxHeight': 300,
-                            'overflow': 'scroll'
+                            'overflowY': 'scroll'
                         }
                         ),
                         dcc.Markdown(textStation1),
