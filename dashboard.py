@@ -95,13 +95,13 @@ def mydashboard(flaskApp, instance):
     external_stylesheets = [dbc.themes.UNITED]
 
     textDescription = """
-        Erdrutsche werden in den kommenden Jahrzehnten wahrscheinlich 
-        häuffiger. Dieses Dashboard visualisiert die Ursachen von Erdrutschen. 
-        Durch die sich beschleunigende Gletscherschmelze und das langsame 
-        Auftauen des Permafrosts, wird das Risiko für Erdrutsche grösser. Die 
-        generell zunehmende Temperatur ist Grund dafür. Das Risiko von 
-        Hangrutschungen wird zudem durch die mögliche Zunahme von 
-        Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
+        Erdrutsche werden in den kommenden Jahrzehnten wahrscheinlich
+         häuffiger. Dieses Dashboard visualisiert die Ursachen von Erdrutschen.
+         Durch die sich beschleunigende Gletscherschmelze und das langsame
+         Auftauen des Permafrosts, wird das Risiko für Erdrutsche grösser. Die
+         generell zunehmende Temperatur ist Grund dafür. Das Risiko von
+         Hangrutschungen wird zudem durch die mögliche Zunahme von
+         Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
         """
 
     textStationAll = """
@@ -776,328 +776,309 @@ def mydashboard(flaskApp, instance):
                 'padding': '5px',
             }
             ),
-            # first row of plots
             html.Div([
-                # 1st plot 1st row
+                # first row of plots
                 html.Div([
+                    # 1st plot 1st row
                     html.Div([
-                        html.H4('Beschreibung')
-                    ], style={
-                        'padding-left': 20,
-                        'padding-top': 5,
-                        'height': 30,
-                    }
-                    ),
-                    html.Div([
-                        # dbc.Container([
-                        #     dbc.Row([
-                        #         dbc.Col(
-                        #             html.Div(
-                        #                 html.H1(
-                        #                     "Scrollbars",
-                        #                     className="text-center"
-                        #                 ),
-                        #                 className="p-3 gradient",
-                        #             ),
-                        #             width=6,
-                        #             style={
-                        #                 "overflow": "scroll",
-                        #                 "height": "400px"
-                        #             },
-                        #         ),
-                        #         dbc.Col(
-                        #             html.Div(
-                        #                 html.H1(
-                        #                     "No scrollbars",
-                        #                     className="text-center"
-                        #                 ),
-                        #                 className="p-3 gradient",
-                        #             ),
-                        #             width=6,
-                        #             style={
-                        #                 "overflow": "scroll",
-                        #                 "height": "400px"
-                        #             },
-                        #             className="no-scrollbars",
-                        #         ),
-                        #     ])
-                        # ]),
                         html.Div([
-                            dcc.Markdown(textDescription),
+                            html.H4('Beschreibung')
                         ], style={
-                            'maxHeight': 256,
-                            'overflowY': 'auto'
+                            'padding-left': 20,
+                            'padding-top': 5,
+                            'height': 30,
                         }
                         ),
                         html.Div([
-                            dcc.Markdown(textStationAll),
-                            dcc.Markdown('# alle Stationen', id='name'),
-                            dcc.Markdown('', id='MASL'),
-                        ], style={
-                            'maxHeight': 160,
-                            'overflowY': 'auto'
-                        }
-                        ),
-
-                    ], style={
-                        'backgroundColor': colors['BgPlot2'],
-                        'height': 430,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        'vertical-align': 'top',
-                        'padding': '10px'
-                    }
-                    ),
-                ], style={
-                    'width': '25%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'center'
-                }
-                ),
-                # 2nd plot 1st row
-                html.Div([
-                    html.Div([
-                        html.H4(
-                            'Landkarte zum Auswählen der Stationen',
-                            style={'color': colors['plotTitle']}
-                        ),
-                        html.Div(
-                            id='intermediateValue',
-                            style={'display': 'none'}
-                        )
-                    ], style={
-                        'padding-left': 20,
-                        'padding-top': 5,
-                        'height': 30,
-                    }
-                    ),
-                    html.Div([
-                        dcc.Graph(
-                            className='map-plot',
-                            id='plotMap',
-                            figure=plotMap,
-                            config={
-                                'displayModeBar': False,
-                                'staticPlot': False
+                            html.Div([
+                                dcc.Markdown(textDescription),
+                            ], style={
+                                'maxHeight': 256,
+                                'overflowY': 'auto'
                             }
+                            ),
+                            html.Div([
+                                dcc.Markdown(textStationAll),
+                                dcc.Markdown('# alle Stationen', id='name'),
+                                dcc.Markdown('', id='MASL'),
+                            ], style={
+                                'maxHeight': 160,
+                                'overflowY': 'auto',
+                                'text-align': 'bottom',
+                            }
+                            ),
+
+                        ], style={
+                            'backgroundColor': colors['BgPlot2'],
+                            'height': 430,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top',
+                            'padding': '10px',
+                            'display': 'flex',
+                            'flex-direction': 'column',
+                            'justify-content': 'space-between',
+                        }
+                        ),
+                    ], style={
+                        'width': '25%',
+                        'display': 'inline-block',
+                        'vertical-align': 'top',
+                        'horizontal-align': 'center'
+                    }
+                    ),
+                    # 2nd plot 1st row
+                    html.Div([
+                        html.Div([
+                            html.H4(
+                                'Landkarte zum Auswählen der Stationen',
+                                style={'color': colors['plotTitle']}
+                            ),
+                            html.Div(
+                                id='intermediateValue',
+                                style={'display': 'none'}
+                            )
+                        ], style={
+                            'padding-left': 20,
+                            'padding-top': 5,
+                            'height': 30,
+                        }
                         ),
                         html.Div([
-                            html.Button(
-                                id='allStations',
-                                n_clicks=0,
-                                children='alle Stationen',
-                                style={
-                                    'backgroundColor': colors['d3'],
-                                    'color':colors['l1'],
-                                    'border-radius': 5,
+                            dcc.Graph(
+                                className='map-plot',
+                                id='plotMap',
+                                figure=plotMap,
+                                config={
+                                    'displayModeBar': False,
+                                    'staticPlot': False
                                 }
-                            )
+                            ),
+                            html.Div([
+                                html.Button(
+                                    id='allStations',
+                                    n_clicks=0,
+                                    children='alle Stationen',
+                                    style={
+                                        'backgroundColor': colors['d3'],
+                                        'color':colors['l1'],
+                                        'border-radius': 5,
+                                    }
+                                )
+                            ], style={
+                                'position': 'fixed',
+                                'vertical-align': 'top',
+                                'horizontal-align': 'left',
+                                'zIndex': 999,
+                                'margin-top': -40,
+                                'margin-left': 10
+                            })
                         ], style={
-                            'position': 'fixed',
-                            'vertical-align': 'top',
-                            'horizontal-align': 'left',
-                            'zIndex': 999,
-                            'margin-top': -40,
-                            'margin-left': 10
-                        })
+                            'backgroundColor': colors['l0'],
+                            'height': 430,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            # 'padding': '5px'
+                        }
+                        ),
                     ], style={
-                        'backgroundColor': colors['l0'],
-                        'height': 430,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        # 'padding': '5px'
+                        'width': '35%',
+                        'display': 'inline-block',
+                        'vertical-align': 'top',
+                        'horizontal-align': 'left'
                     }
                     ),
+                    # 3rd plot first row
+                    html.Div([
+                        html.Div([
+                            html.H4("Veränderung des Regenfalls")
+                        ], style={
+                            'padding-left': 20,
+                            'padding-top': 5,
+                            'height': 30,
+                        }
+                        ),
+                        html.Div([
+                            html.Div([
+                                dcc.Graph(
+                                    id='plotRain',
+                                    figure=plotRain,
+                                    config={
+                                        'displayModeBar': False,
+                                        'staticPlot': False
+                                    }
+                                )
+                            ], style={
+                                'backgroundColor': colors['BgPlot3'],
+                                'height': 420
+                            }
+                            )
+                        ], style={
+                            'backgroundColor': colors['BgPlot2'],
+                            'height': 430,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top',
+                            'padding': '5px'
+                        }
+                        ),
+                    ], style={
+                        'width': '40%',
+                        'display': 'inline-block',
+                        'vertical-align': 'top',
+                        'horizontal-align': 'right'
+                    }
+                    )
                 ], style={
-                    'width': '35%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'left'
+                    'padding-left': 30,
+                    'padding-right': 30
                 }
                 ),
-                # 3rd plot first row
+                # second row of plots
                 html.Div([
-                    html.Div([
-                        html.H4("Veränderung des Regenfalls")
-                    ], style={
-                        'padding-left': 20,
-                        'padding-top': 5,
-                        'height': 30,
-                    }
-                    ),
+                    # 1st plot 2nd row
                     html.Div([
                         html.Div([
-                            dcc.Graph(
-                                id='plotRain',
-                                figure=plotRain,
-                                config={
-                                    'displayModeBar': False,
-                                    'staticPlot': False
-                                }
-                            )
+                            html.H4('Extreme Regenfälle')
                         ], style={
-                            'backgroundColor': colors['BgPlot3'],
-                            'height': 420
+                            'height': 30,
+                            'padding-left': 20
                         }
-                        )
-                    ], style={
-                        'backgroundColor': colors['BgPlot2'],
-                        'height': 430,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        'vertical-align': 'top',
-                        'padding': '5px'
-                    }
-                    ),
-                ], style={
-                    'width': '40%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'right'
-                }
-                )
-            ], style={
-                'padding-left': 30,
-                'padding-right': 30
-            }
-            ),
-            # second row of plots
-            html.Div([
-                # 1st plot 2nd row
-                html.Div([
-                    html.Div([
-                        html.H4('Extreme Regenfälle')
-                    ], style={
-                        'height': 30,
-                        'padding-left': 20
-                    }
-                    ),
-                    html.Div([
+                        ),
                         html.Div([
-                            dcc.Graph(
-                                id='plotRainExtreme',
-                                figure=plotRainExtreme,
-                                config={
-                                    'displayModeBar': False,
-                                    'staticPlot': False
-                                }
+                            html.Div([
+                                dcc.Graph(
+                                    id='plotRainExtreme',
+                                    figure=plotRainExtreme,
+                                    config={
+                                        'displayModeBar': False,
+                                        'staticPlot': False
+                                    }
+                                )
+                            ], style={
+                                'backgroundColor': colors['BgPlot5'],
+                                'height': 360
+                            }
                             )
                         ], style={
                             'backgroundColor': colors['BgPlot5'],
-                            'height': 360
+                            'height': 370,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top',
+                            'padding': 5
                         }
-                        )
+                        ),
                     ], style={
-                        'backgroundColor': colors['BgPlot5'],
-                        'height': 370,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
+                        'width': '30%',
+                        'display': 'inline-block',
                         'vertical-align': 'top',
-                        'padding': 5
+                        'horizontal-align': 'right'
                     }
                     ),
-                ], style={
-                    'width': '30%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'right'
-                }
-                ),
-                # 2nd plot 2nd row
-                html.Div([
-                    html.Div([
-                        html.H4('Veränderung des Schneefalls')
-                    ], style={
-                        'height': 30,
-                        'padding-left': 20
-                    }
-                    ),
+                    # 2nd plot 2nd row
                     html.Div([
                         html.Div([
+                            html.H4('Veränderung des Schneefalls')
+                        ], style={
+                            'height': 30,
+                            'padding-left': 20
+                        }
+                        ),
+                        html.Div([
+                            html.Div([
+                                dcc.Graph(
+                                    id='plotSnow',
+                                    figure=plotSnow,
+                                    config={
+                                        'displayModeBar': False,
+                                        'staticPlot': False
+                                    }
+                                )
+                            ], style={
+                                'backgroundColor': colors['BgPlot3'],
+                                'height': 360
+                            }
+                            )
+                        ], style={
+                            'backgroundColor': colors['BgPlot3'],
+                            'height': 370,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top',
+                            'padding': 5
+                        }
+                        ),
+                    ], style={
+                        'width': '40%',
+                        'display': 'inline-block',
+                        'vertical-align': 'top',
+                        'horizontal-align': 'left'
+                    }
+                    ),
+                    # 3rd plot 2nd row
+                    html.Div([
+                        html.Div([
+                            html.H4('Durchschnittliche Temperatur')
+                        ], style={
+                            'height': 30,
+                            'padding-left': 20
+                        }
+                        ),
+                        html.Div([
                             dcc.Graph(
-                                id='plotSnow',
-                                figure=plotSnow,
+                                id='plotTemperature',
+                                figure=plotTemperature,
                                 config={
                                     'displayModeBar': False,
                                     'staticPlot': False
                                 }
                             )
                         ], style={
-                            'backgroundColor': colors['BgPlot3'],
-                            'height': 360
+                            'backgroundColor': colors['l0'],
+                            'height': 370,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top'
                         }
-                        )
+                        ),
                     ], style={
-                        'backgroundColor': colors['BgPlot3'],
-                        'height': 370,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
+                        'width': '30%',
+                        'display': 'inline-block',
                         'vertical-align': 'top',
-                        'padding': 5
+                        'horizontal-align': 'center'
                     }
                     ),
                 ], style={
-                    'width': '40%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'left'
-                }
-                ),
-                # 3rd plot 2nd row
-                html.Div([
-                    html.Div([
-                        html.H4('Durchschnittliche Temperatur')
-                    ], style={
-                        'height': 30,
-                        'padding-left': 20
-                    }
-                    ),
-                    html.Div([
-                        dcc.Graph(
-                            id='plotTemperature',
-                            figure=plotTemperature,
-                            config={
-                                'displayModeBar': False,
-                                'staticPlot': False
-                            }
-                        )
-                    ], style={
-                        'backgroundColor': colors['l0'],
-                        'height': 370,
-                        'box-shadow': shadow,
-                        'position': 'relative',
-                        'border-radius': 5,
-                        'margin': '10px',
-                        'vertical-align': 'top'
-                    }
-                    ),
-                ], style={
-                    'width': '30%',
-                    'display': 'inline-block',
-                    'vertical-align': 'top',
-                    'horizontal-align': 'center'
+                    'padding-left': 30,
+                    'padding-right': 30,
+                    'padding-bottom': 12,
                 }
                 ),
             ], style={
-                'padding-left': 30,
-                'padding-right': 30,
-                'padding-bottom': 12,
+                'display': 'flex',
+                'flex-direction': 'column',
+                'justify-content': 'center',
+                'flex-grow': '1',
             }
-            ),
+            )
         ], style={
             'backgroundColor': colors['BgDashboard'],
-            'height': '100vh'
+            'height': '100vh',
+            'display': 'flex',
+            'flex-direction': 'column',
         }
         )
 
