@@ -95,13 +95,15 @@ def mydashboard(flaskApp, instance):
     external_stylesheets = [dbc.themes.UNITED]
 
     textDescription = """
-        Erdrutsche werden in den kommenden Jahrzehnten wahrscheinlich
-         häuffiger. Dieses Dashboard visualisiert die Ursachen von Erdrutschen.
-         Durch die sich beschleunigende Gletscherschmelze und das langsame
-         Auftauen des Permafrosts, wird das Risiko für Erdrutsche grösser. Die
-         generell zunehmende Temperatur ist Grund dafür. Das Risiko von
-         Hangrutschungen wird zudem durch die mögliche Zunahme von
+        Dieses Dashboard visualisiert die Ursachen von Erdrutschen.
+         In den kommenden Jahrzehnten werden Erdrutsche wahrscheinlich
+         häuffiger. Die generell zunehmende Temperatur führt zum langsamen
+         Auftauen des Permafrosts und zur beschleunigten Gletscherschmelze,
+         welche das Risiko für Erdrutsche vergrössern. Das Risiko von
+         Erdrutschen wird zudem durch die mögliche Zunahme von
          Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
+         Eine höhere Schneefallgrenze und somit weniger Schnee führt zu mehr
+         Regen, welcher das Risiko für Erdrutsche weiter erhöht.
         """
 
     textStationAll = """
@@ -785,21 +787,32 @@ def mydashboard(flaskApp, instance):
                         ),
                         html.Div([
                             html.Div([
-                                dcc.Markdown(textDescription),
+                                dcc.Markdown(
+                                    textDescription,
+                                    style={
+                                        'font-size': '0.91rem'
+                                    }
+                                ),
                             ], style={
-                                'maxHeight': 256,
-                                'overflowY': 'auto'
+                                'maxHeight': 264,
+                                'overflowY': 'auto',
+                                'margin-bottom': 5
                             }
                             ),
                             html.Div([
-                                dcc.Markdown(textStationAll),
+                                dcc.Markdown(
+                                    textStationAll,
+                                    style={
+                                        'font-size': '0.91rem'
+                                    }
+                                ),
                                 dcc.Markdown(
                                     '## **alle Stationen**F',
                                     id='name'
                                 ),
                                 dcc.Markdown('', id='MASL'),
                             ], style={
-                                'maxHeight': 160,
+                                'maxHeight': 151,
                                 'overflowY': 'auto',
                                 'text-align': 'bottom',
                             }
