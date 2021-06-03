@@ -504,6 +504,7 @@ def mydashboard(flaskApp, instance):
     dfTemperatureAll, meanTemperature = dfBarAllWrangling(
         dfStations, dfScatterTemperature, yearTemperature
     )
+    meanStationHeight = re.findall(r'^\d*', str(dfMap['elevation'].mean()))[0]
 
     # functions for plot creation
     def plotMapCreation(dfMap, colors):
@@ -790,7 +791,7 @@ def mydashboard(flaskApp, instance):
                                 dcc.Markdown(
                                     textDescription,
                                     style={
-                                        'font-size': '0.91rem'
+                                        'font-size': '0.90rem'
                                     }
                                 ),
                             ], style={
@@ -803,7 +804,7 @@ def mydashboard(flaskApp, instance):
                                 dcc.Markdown(
                                     textStationAll,
                                     style={
-                                        'font-size': '0.91rem',
+                                        'font-size': '0.90rem',
                                         'border-top': f"""1px
                                              {colors['shadow']} solid""",
                                     }
@@ -812,7 +813,10 @@ def mydashboard(flaskApp, instance):
                                     '## **alle Stationen**F',
                                     id='name',
                                 ),
-                                dcc.Markdown('', id='MASL'),
+                                dcc.Markdown(
+                                    f'#### **Ø {meanStationHeight} m.ü.M.**',
+                                    id='MASL'
+                                ),
                             ], style={
                                 'maxHeight': 151,
                                 'overflowY': 'auto',
@@ -1256,7 +1260,7 @@ def mydashboard(flaskApp, instance):
         )
 
         stationString = f'## **alle Stationen**'
-        elevationString = ''
+        elevationString = f'#### **Ø {meanStationHeight} m.ü.M.**'
 
         return (
             plotRainExtreme,
