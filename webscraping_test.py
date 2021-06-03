@@ -1,8 +1,8 @@
-from typing import List
 import pytest
 import abstractDriver
 import messageAnnouncer
 import pandas as pd
+from typing import List
 from webscraping import readConfig
 from webscraping import scrape_idaweb_login
 from webscraping import scrapeIdawebOrders
