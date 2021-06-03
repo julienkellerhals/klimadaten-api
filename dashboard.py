@@ -420,6 +420,37 @@ def mydashboard(flaskApp, instance):
 
         return dfParamAll
 
+    def dfHeatAllWrangling(dfStations, dfScatter, yearParam):
+        dfAll = pd.merge(
+            how='inner',
+            left=dfStations,
+            right=dfScatter,
+            left_on='station_short_name',
+            right_on='station'
+        )
+
+        dfAll.sort_values([
+            'station_short_name',
+            'meas_year'
+        ], inplace=True)
+
+        # select all Stations
+        dfParamAll = dfAll.groupby(
+            'meas_year'
+        ).agg(
+            meas_value=('meas_value', 'mean')
+        )
+
+        dfParamAll = dfParamAll.reset_index()
+        dfParamAll = dfParamAll[dfParamAll.meas_year >= yearParam]
+
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(dfParamAll.index), dfParamAll['meas_value'])
+        dfParamAll['bestfit'] = reg.predict(np.vstack(dfParamAll.index))
+
+        return dfParamAll
+
     def dfBarAllWrangling(
         dfStations,
         dfScatter,
@@ -496,8 +527,12 @@ def mydashboard(flaskApp, instance):
     dfRainAll = dfScatterAllWrangling(
         dfStations, dfScatterRain, yearRain
     )
+    # dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    # dfRainExtremeAll, meanRain = dfBarAllWrangling(
+    #     dfStations, dfScatterRainExtreme, yearRainExtreme
+    # )
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
-    dfRainExtremeAll, meanRain = dfBarAllWrangling(
+    dfRainExtremeAll, meanRain = dfHeatAllWrangling(
         dfStations, dfScatterRainExtreme, yearRainExtreme
     )
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
@@ -684,6 +719,59 @@ def mydashboard(flaskApp, instance):
                 'xanchor': 'right',
                 'x': 0.99
             }
+        )
+
+        return plot
+
+    def plotHeatCreation(df, colors, suffix):
+        # creating the snow scatterplot with all stations
+        plot = go.Figure()
+
+        plot.add_trace(go.Heatmap(
+            # name='Schneefall',
+            x=df['meas_year'],
+            y=df['meas_month'],
+            z=df['meas_value']
+            # mode='lines',
+            # line_shape='spline',
+            # marker={
+            #     'size': 5,
+            #     'color': colors['blue'],
+            #     'line': {
+            #         'width': 1,
+            #         'color': 'black'
+            #     }
+            # }
+        ))
+
+        plot.update_layout(
+            # title_x=0.1,
+            margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
+            height=360,
+            # yaxis={
+            #     # 'title': 'Schneefall (Meter)',
+            #     'color': colors['plotAxisTitle'],
+            #     'showgrid': True,
+            #     'gridwidth': 1,
+            #     'gridcolor': colors['plotGrid'],
+            #     # 'rangemode': "tozero",
+            #     'ticksuffix': ' ' + suffix
+            # },
+            # xaxis={
+            #     'showgrid': False,
+            #     'color': colors['plotAxisTitle'],
+            #     'showline': True,
+            #     'linecolor': colors['plotGrid']
+            # },
+            paper_bgcolor=colors['BgPlot3'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            # showlegend=False,
+            # legend={
+            #     'yanchor': 'top',
+            #     'y': 0.99,
+            #     'xanchor': 'right',
+            #     'x': 0.99
+            # }
         )
 
         return plot
