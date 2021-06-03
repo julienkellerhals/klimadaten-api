@@ -803,12 +803,14 @@ def mydashboard(flaskApp, instance):
                                 dcc.Markdown(
                                     textStationAll,
                                     style={
-                                        'font-size': '0.91rem'
+                                        'font-size': '0.91rem',
+                                        'border-top': f"""1px
+                                             {colors['shadow']} solid""",
                                     }
                                 ),
                                 dcc.Markdown(
                                     '## **alle Stationen**F',
-                                    id='name'
+                                    id='name',
                                 ),
                                 dcc.Markdown('', id='MASL'),
                             ], style={
