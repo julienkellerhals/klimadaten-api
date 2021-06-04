@@ -1,4 +1,5 @@
 import re
+import math
 import datetime
 import numpy as np
 import pandas as pd
@@ -28,17 +29,23 @@ lightning
 precipitation
 "precipitation" meteoschweiz
 "rhs150m0" Precipitation; homogeneous monthly total
-"rzz150mx" Precipitation; maximum ten minute total of the month
-"rhh150mx" Precipitation; maximum total per hour of the month
+"rzz150mx" Precipitation; maximum ten minute total of the month (mm)
+"rhh150mx" Precipitation; maximum total per hour of the month (mm)
+"rre150mx" Precipitation; maximum daily total conventionally of the month (mm)
 "rre150m0" Precipitation; monthly total
 "rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
 "rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
-"rsd700y0" Days of the year with precipitation total exceeding 69.9 mm
+"rsd300m0" Days of the month with precipitation total exceeding 29.9 mm
+"rsd100m0" Days of the month with precipitation total exceeding 9.9 mm
+"rre002mx" Precipitation; maximum 2-day total of the month
+"rre003mx" Precipitation; maximum 3-day total of the month
 "rs1000y0" Days in a year with precipitation total exceeding 99.9 mm
+"rsd700y0" Days of the year with precipitation total exceeding 69.9 mm
+"rsd300y0" Days of the year with precipitation total exceeding 29.9 mm
 "rre150y0" Precipitation; annual total
-"rti150yx" Precipitation; date of the maximum daily total of the year
 "rzz150yx" Precipitation; maximum ten minute total of the year
 "rhh150yx" Precipitation; maximum total per hour of the year
+"rre150yx" Precipitation; maximum daily total conventionally of the year
 
 snow
 "hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day (cm)
@@ -532,6 +539,9 @@ def mydashboard(flaskApp, instance):
         ]
         yearParam = dfSelectionParam['min'].median()
 
+        if math.isnan(yearParam):
+            yearParam = 0
+
         return yearParam
 
     # call start functions
@@ -559,6 +569,10 @@ def mydashboard(flaskApp, instance):
     dfHeatRainExtreme = dfHeatWrangling(rainExtremeParam)
     dfRainExtremeAll = dfHeatAllWrangling(
         dfStations, dfHeatRainExtreme, yearRainExtreme
+    )
+    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    dfRainExtremeAllScatter = dfScatterAllWrangling(
+        dfStations, dfScatterRainExtreme, yearRainExtreme
     )
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
     dfTemperatureAll, meanTemperature = dfBarAllWrangling(
@@ -756,7 +770,12 @@ def mydashboard(flaskApp, instance):
             # name='Schneefall',
             x=df['meas_year'],
             y=df['meas_month'],
-            z=df['meas_value']
+            z=df['meas_value'],
+            colorscale=[
+                [1, colors['red']],
+                [0.50, colors['l2']],
+                [0, colors['blue']]
+            ],
             # mode='lines',
             # line_shape='spline',
             # marker={
@@ -826,6 +845,14 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
             height=420,
+            yaxis={
+                'rangemode': "tozero",
+            },
+        )
+        plotRainExtremeScatter = plotScatterCreation(
+            dfRainExtremeAllScatter, colors, 'mm'
+        )
+        plotRain.update_layout(
             yaxis={
                 'rangemode': "tozero",
             },
@@ -1185,6 +1212,56 @@ def mydashboard(flaskApp, instance):
                         'display': 'inline-block',
                         'vertical-align': 'top',
                         'horizontal-align': 'center'
+                    }
+                    ),
+                ], style={
+                    'padding-left': 30,
+                    'padding-right': 30,
+                    'padding-bottom': 12,
+                }
+                ),
+                # third row of plots
+                html.Div([
+                    # 1st plot 2nd row
+                    html.Div([
+                        html.Div([
+                            html.H4('Extremer Regenfall')
+                        ], style={
+                            'height': 30,
+                            'padding-left': 20
+                        }
+                        ),
+                        html.Div([
+                            html.Div([
+                                dcc.Graph(
+                                    id='plotRainExtremeTest',
+                                    figure=plotRainExtremeScatter,
+                                    config={
+                                        'displayModeBar': False,
+                                        'staticPlot': False
+                                    }
+                                )
+                            ], style={
+                                'backgroundColor': colors['BgPlot5'],
+                                'height': 360
+                            }
+                            )
+                        ], style={
+                            'backgroundColor': colors['BgPlot5'],
+                            'height': 370,
+                            'box-shadow': shadow,
+                            'position': 'relative',
+                            'border-radius': 5,
+                            'margin': '10px',
+                            'vertical-align': 'top',
+                            'padding': 5
+                        }
+                        ),
+                    ], style={
+                        'width': '30%',
+                        'display': 'inline-block',
+                        'vertical-align': 'top',
+                        'horizontal-align': 'right'
                     }
                     ),
                 ], style={
