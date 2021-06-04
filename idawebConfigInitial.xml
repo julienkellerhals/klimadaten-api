@@ -14,6 +14,11 @@
     <config granularity="M" group="precipitation">rhh150mx</config>
     <config granularity="M" group="precipitation">rre150m0</config>
     <config granularity="M" group="precipitation">rhs150m0</config>
+    <config granularity="M" group="precipitation">rsd300m0</config>
+    <config granularity="M" group="precipitation">rsd100m0</config>
+    <config granularity="M" group="precipitation">rre002mx</config>
+    <config granularity="M" group="precipitation">rre003mx</config>
+    <config granularity="M" group="precipitation">rre150mx</config>
     <config granularity="M" group="soil temperature">tso100m0</config>
     <config granularity="M" group="soil temperature">tso100mx</config>
     <config granularity="Y" group="snow">hto000y0</config>

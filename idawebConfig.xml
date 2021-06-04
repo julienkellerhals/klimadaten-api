@@ -1,17 +1,4 @@
 <root>
-    <config granularity="M" group="precipitation">rsd700m0</config>
-    <config granularity="M" group="precipitation">rs1000m0</config>
-    <config granularity="M" group="precipitation">rzz150mx</config>
-    <config granularity="M" group="precipitation">rhh150mx</config>
-    <config granularity="M" group="precipitation">rre150m0</config>
-    <config granularity="M" group="precipitation">rhs150m0</config>
-    <config granularity="Y" group="snow">hto000y0</config>
-    <config granularity="Y" group="snow">hns000y0</config>
-    <config granularity="Y" group="temperature">tre200y0</config>
-    <config granularity="Y" group="temperature">tnd00xy0</config>
-    <config granularity="Y" group="precipitation">rsd700y0</config>
-    <config granularity="Y" group="precipitation">rs1000y0</config>
-    <config granularity="Y" group="precipitation">rre150y0</config>
-    <config granularity="Y" group="precipitation">rzz150yx</config>
-    <config granularity="Y" group="precipitation">rhh150yx</config>
+    <config granularity="Y" group="precipitation">rsd300y0</config>
+    <config granularity="Y" group="precipitation">rre150yx</config>
 </root>
