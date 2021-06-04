@@ -12,36 +12,36 @@
 {% block container %}
 <div id="container">
     <div class="row">
-        <form class="col s6" action="/admin/postgres" method="GET">
-            <!-- <div class="input-field col s12">
-                <select>
+        <form class="col s6" action="/admin/postgres" method="POST">
+            <div class="input-field col s12">
+                <select name="type">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="postgresql">Postgres</option>
                 </select>
                 <label>Database type</label>
-            </div> -->
+            </div>
             <div class="input-field col s12">
-                <input id="username" type="text" value="">
+                <input id="username" type="text" name="username">
                 <label for="username">Username</label>
             </div>
             <div class="input-field col s12">
-                <input id="password" type="password">
+                <input id="password" type="password" name="password">
                 <label for="password">Password</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Password not encrypted!</span>
             </div>
             <div class="input-field col s12">
-                <input id="address" type="text">
-                <label for="address">Address</label>
+                <input id="address" type="text" name="address">
+                <label for=" address">Address</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Only supports localhost</span>
             </div>
             <div class="input-field col s12">
-                <input id="port" type="text"default="5432">
+                <input id="port" type="text" name="port">
                 <label for="port">Port</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Default 5432</span>
             </div>
             <input type="submit" value="Submit">
         </form>
     </div>
-    <!-- <script src="/static/js/connectionString.js"></script> -->
+    <script src="/static/js/connectionString.js"></script>
 </div>
 {% endblock %}
