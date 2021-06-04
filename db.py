@@ -54,7 +54,7 @@ class Database:
                     "progressBar": False,
                     "action": [
                         {
-                            "name": "Run scrapping",
+                            "name": "Run scraping",
                             "actionUrl": "/admin/scrape/",
                             "enabled": True
                         },
@@ -471,13 +471,13 @@ class Database:
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
                 actionDict = {}
-                actionDict["name"] = "Run scrapping"
+                actionDict["name"] = "Run scraping"
                 actionDict["actionUrl"] = "/admin/scrape/idaweb"
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
             elif stageTable == "meteoschweiz_t":
                 actionDict = {}
-                actionDict["name"] = "Run scrapping"
+                actionDict["name"] = "Run scraping"
                 actionDict["actionUrl"] = "/admin/scrape/meteoschweiz"
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
