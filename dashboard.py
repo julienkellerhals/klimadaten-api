@@ -143,7 +143,7 @@ def mydashboard(flaskApp, instance):
 
     snowParam = 'hns000y0'
     rainParam = 'rre150y0'
-    rainExtremeParam = 'rhh150yx'
+    rainExtremeParam = 'rzz150mx'
     temperatureParam = 'tre200y0'
     shadow = f'7px 7px 10px {colors["shadow"]}'
 
@@ -389,6 +389,38 @@ def mydashboard(flaskApp, instance):
 
         return dfScatter
 
+    def dfHeatWrangling(param):
+        # data wrangling scatterplot snow
+        dfHeat = pd.read_sql(
+            f"""
+            SELECT
+                extract(year from m.meas_date) as meas_year,
+                extract(month from m.meas_date) as meas_month,
+                k.station_name,
+                sum(m.meas_value) meas_value,
+                m.station,
+                k.elevation
+            FROM core.measurements_t m
+            JOIN core.station_t k
+            ON (m.station = k.station_short_name)
+            WHERE m.meas_name = {"'"+ param +"'"}
+            AND k.parameter = {"'"+ param +"'"}
+            AND m.valid_to = '2262-04-11'
+            AND k.valid_to = '2262-04-11'
+            GROUP BY
+                meas_year,
+                meas_month,
+                k.station_name,
+                m.station,
+                k.elevation
+            ORDER BY station_name, meas_year, meas_month ASC
+            """,
+            engine
+        )
+        dfHeat = dfHeat.dropna()
+
+        return dfHeat
+
     def dfScatterAllWrangling(dfStations, dfScatter, yearParam):
         dfAll = pd.merge(
             how='inner',
@@ -420,34 +452,31 @@ def mydashboard(flaskApp, instance):
 
         return dfParamAll
 
-    def dfHeatAllWrangling(dfStations, dfScatter, yearParam):
+    def dfHeatAllWrangling(dfStations, dfHeat, yearParam):
         dfAll = pd.merge(
             how='inner',
             left=dfStations,
-            right=dfScatter,
+            right=dfHeat,
             left_on='station_short_name',
             right_on='station'
         )
 
         dfAll.sort_values([
             'station_short_name',
-            'meas_year'
+            'meas_year',
+            'meas_month'
         ], inplace=True)
 
         # select all Stations
-        dfParamAll = dfAll.groupby(
-            'meas_year'
-        ).agg(
+        dfParamAll = dfAll.groupby([
+            'meas_year',
+            'meas_month'
+        ]).agg(
             meas_value=('meas_value', 'mean')
         )
 
         dfParamAll = dfParamAll.reset_index()
-        dfParamAll = dfParamAll[dfParamAll.meas_year >= yearParam]
-
-        # simple regression line
-        reg = LinearRegression(
-            ).fit(np.vstack(dfParamAll.index), dfParamAll['meas_value'])
-        dfParamAll['bestfit'] = reg.predict(np.vstack(dfParamAll.index))
+        # dfParamAll = dfParamAll[dfParamAll.meas_year >= yearParam]
 
         return dfParamAll
 
@@ -476,9 +505,9 @@ def mydashboard(flaskApp, instance):
             meas_value=('meas_value', 'mean')
         )
 
-        meanRain = dfParamAll['meas_value'].mean()
+        meanOfParam = dfParamAll['meas_value'].mean()
         dfParamAll['deviation'] = dfParamAll[
-            'meas_value'] - meanRain
+            'meas_value'] - meanOfParam
         dfParamAll['color'] = np.where(
             dfParamAll['deviation'] >= 0, True, False)
 
@@ -494,7 +523,7 @@ def mydashboard(flaskApp, instance):
         dfParamAll['bestfit'] = reg.predict(
             np.vstack(dfParamAll.index))
 
-        return (dfParamAll, meanRain)
+        return (dfParamAll, meanOfParam)
 
     def getParamYear(dfSelection, short_name):
         dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
@@ -527,13 +556,9 @@ def mydashboard(flaskApp, instance):
     dfRainAll = dfScatterAllWrangling(
         dfStations, dfScatterRain, yearRain
     )
-    # dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
-    # dfRainExtremeAll, meanRain = dfBarAllWrangling(
-    #     dfStations, dfScatterRainExtreme, yearRainExtreme
-    # )
-    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
-    dfRainExtremeAll, meanRain = dfHeatAllWrangling(
-        dfStations, dfScatterRainExtreme, yearRainExtreme
+    dfHeatRainExtreme = dfHeatWrangling(rainExtremeParam)
+    dfRainExtremeAll = dfHeatAllWrangling(
+        dfStations, dfHeatRainExtreme, yearRainExtreme
     )
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
     dfTemperatureAll, meanTemperature = dfBarAllWrangling(
@@ -593,7 +618,7 @@ def mydashboard(flaskApp, instance):
 
         return plot
 
-    def plotBarCreation(df, meanRain, colors, suffix):
+    def plotBarCreation(df, meanOfParam, colors, suffix):
         # creating the rain barplot
         plot = go.Figure()
 
@@ -601,7 +626,7 @@ def mydashboard(flaskApp, instance):
             name='Regenfall',
             x=df["meas_year"],
             y=df["deviation"],
-            base=meanRain,
+            base=meanOfParam,
             marker={
                 'color': colors['blue'],
                 # 'line': {'width': 1, 'color': 'black'}
@@ -781,9 +806,8 @@ def mydashboard(flaskApp, instance):
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
-        plotRainExtreme = plotBarCreation(
+        plotRainExtreme = plotHeatCreation(
             dfRainExtremeAll,
-            meanRain,
             colors,
             'cm'
         )
@@ -1256,28 +1280,12 @@ def mydashboard(flaskApp, instance):
         Output('plotRainExtreme', 'figure'),
         [Input('intermediateValue', 'children')])
     def callbackRainExtreme(station):
-        dfRainExtremeAll = dfScatterRainExtreme[
-            dfScatterRainExtreme['station_name'] == station]
+        dfRainExtremeAll = dfHeatRainExtreme[
+            dfHeatRainExtreme['station_name'] == station]
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
 
-        # simple regression line
-        reg = LinearRegression(
-            ).fit(np.vstack(
-                dfRainExtremeAll.meas_year),
-                dfRainExtremeAll['meas_value']
-            )
-        dfRainExtremeAll['bestfit'] = reg.predict(
-            np.vstack(dfRainExtremeAll.meas_year)
-        )
-
-        meanRain = dfRainExtremeAll['meas_value'].mean()
-        dfRainExtremeAll['deviation'] = dfRainExtremeAll[
-            'meas_value'] - meanRain
-        dfRainExtremeAll['color'] = np.where(
-            dfRainExtremeAll['deviation'] >= 0, True, False)
-
-        plotRainExtreme = plotBarCreation(
-            dfRainExtremeAll, meanRain, colors, 'cm'
+        plotRainExtreme = plotHeatCreation(
+            dfRainExtremeAll, colors, 'cm'
         )
 
         return plotRainExtreme
@@ -1300,14 +1308,14 @@ def mydashboard(flaskApp, instance):
             np.vstack(dfTemperatureAll.meas_year)
         )
 
-        meanRain = dfTemperatureAll['meas_value'].mean()
+        meanOfParam = dfTemperatureAll['meas_value'].mean()
         dfTemperatureAll['deviation'] = dfTemperatureAll[
-            'meas_value'] - meanRain
+            'meas_value'] - meanOfParam
         dfTemperatureAll['color'] = np.where(
             dfTemperatureAll['deviation'] >= 0, True, False)
 
         plotTemperature = plotBarCreation(
-            dfTemperatureAll, meanRain, colors, '°C'
+            dfTemperatureAll, meanOfParam, colors, '°C'
         )
 
         return plotTemperature
@@ -1321,9 +1329,8 @@ def mydashboard(flaskApp, instance):
         Output('MASL', 'children'),
         [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
-        plotRainExtreme = plotBarCreation(
+        plotRainExtreme = plotHeatCreation(
             dfRainExtremeAll,
-            meanRain,
             colors,
             'cm'
         )
