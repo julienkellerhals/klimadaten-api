@@ -1,5 +1,7 @@
 import os
 from flask import Flask
+from flask import request
+from flask import render_template
 from flask import send_from_directory
 import db
 import dashboard
@@ -45,6 +47,17 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
 )
 
 dashApp = dashboard.mydashboard(app, instance)
+
+
+@app.before_request
+def before_request():
+    print(request.endpoint)
+    if request.endpoint not in ["static", "adminApi.createConnectionString"]:
+        if instance.databaseUrl is None:
+            print("Database url not set")
+            return render_template(
+                "connectionString.html",
+            )
 
 
 @app.route("/")

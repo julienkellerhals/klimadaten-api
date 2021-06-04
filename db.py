@@ -1,3 +1,4 @@
+import os
 import re
 import json
 import threading
@@ -22,7 +23,7 @@ class Database:
     configFileName = "idawebConfig.xml"
     engine = None
     conn = None
-    databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
+    databaseUrl = None
     meta = MetaData()
     announcer = None
     databaseStatusStream = None
@@ -42,6 +43,11 @@ class Database:
             announcer (announcer): Server announcer
         """
 
+        if os.path.exists("config/config.json"):
+            f = open("config/config.json")
+            config = json.load(f)
+            if "databaseUrl" in config.keys():
+                self.databaseUrl = config["databaseUrl"]
         self.databaseStatusStream = MessageAnnouncer()
         self.engineStatusStream = MessageAnnouncer()
         self.stageTablesStatusStream = MessageAnnouncer()
