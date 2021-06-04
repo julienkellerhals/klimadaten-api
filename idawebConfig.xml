@@ -4,6 +4,7 @@
     <config granularity="D" group="temperature">tre200dx</config>
     <config granularity="D" group="temperature">tre200d0</config>
     <config granularity="D" group="temperature">tre200dn</config>
+    <config granularity="D" group="precipitation">rhs150d0</config>
     <config granularity="D" group="snow">hns000d0</config>
     <config granularity="M" group="wind">fklnd3m0</config>
     <config granularity="M" group="wind">fu3010m1</config>
