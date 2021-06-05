@@ -15,57 +15,6 @@ from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
-"""
-Parameters in database
-
-wind
-"fklnd3m0" Days of the month with gust peak exceeding 27.8 m/s (100 km/h)
-"fu3010m1" Gust peak (one second); monthly maximum
-
-lightning
-"breclod0" Close range lightning (distance below 3 km); daily total
-"brefard0" Distant lightning (distance 3 - 30 km); daily total
-
-precipitation
-"precipitation" meteoschweiz
-"rhs150m0" Precipitation; homogeneous monthly total
-"rzz150mx" Precipitation; maximum ten minute total of the month (mm)
-"rhh150mx" Precipitation; maximum total per hour of the month (mm)
-"rre150mx" Precipitation; maximum daily total conventionally of the month (mm)
-"rre150m0" Precipitation; monthly total
-"rsd700m0" Days of the month with precipitation total exceeding 69.9 mm
-"rs1000m0" Days of the month with precipitation total exceeding 99.9 mm
-"rsd300m0" Days of the month with precipitation total exceeding 29.9 mm
-"rsd100m0" Days of the month with precipitation total exceeding 9.9 mm
-"rre002mx" Precipitation; maximum 2-day total of the month
-"rre003mx" Precipitation; maximum 3-day total of the month
-"rs1000y0" Days in a year with precipitation total exceeding 99.9 mm
-"rsd700y0" Days of the year with precipitation total exceeding 69.9 mm
-"rsd300y0" Days of the year with precipitation total exceeding 29.9 mm
-"rre150y0" Precipitation; annual total
-"rzz150yx" Precipitation; maximum ten minute total of the year
-"rhh150yx" Precipitation; maximum total per hour of the year
-"rre150yx" Precipitation; maximum daily total conventionally of the year
-
-snow
-"hns000d0" Fresh snow; daily total 6 UTC - 6 UTC following day (cm)
-"hns000mx" Fresh snow; maximum daily total of the month
-"hto000y0" Snow depth; annual mean
-"hns000y0" Fresh snow; annual total of the daily merasurements
-
-temperature
-"temperature" meteoschweiz
-"tre200dn" Air temperature 2 m above ground; daily minimum
-"tre200d0" Air temperature 2 m above ground; daily mean
-"tre200dx" Air temperature 2 m above ground; daily maximum
-"tre200y0" Air temperature 2 m above ground; annual mean
-"tnd00xy0" Ice days (maximum lower than 0 degrees C); annual total
-
-soil temperature
-"tso100m0" Soil temperature at 100 cm depth; monthly mean
-"tso100mx" Soil temperature at 100 cm depth; absolute monthly maximum
-"""
-
 
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
