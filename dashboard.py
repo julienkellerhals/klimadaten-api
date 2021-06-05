@@ -147,7 +147,7 @@ def mydashboard(flaskApp, instance):
 
     snowParam = 'hns000y0'
     rainParam = 'rre150y0'
-    rainExtremeParam = 'rzz150mx'
+    rainExtremeParam = 'rhh150mx'
     temperatureParam = 'tre200y0'
     shadow = f'7px 7px 10px {colors["shadow"]}'
 
@@ -391,6 +391,8 @@ def mydashboard(flaskApp, instance):
         )
         dfScatter = dfScatter.dropna()
 
+        dfScatter = dfScatter[dfScatter.meas_year != 2021]
+
         return dfScatter
 
     def dfHeatWrangling(param):
@@ -563,12 +565,8 @@ def mydashboard(flaskApp, instance):
     dfRainAll = dfScatterAllWrangling(
         dfStations, dfScatterRain, yearRain
     )
-    dfHeatRainExtreme = dfHeatWrangling(rainExtremeParam)
-    dfRainExtremeAll = dfHeatAllWrangling(
-        dfStations, dfHeatRainExtreme, yearRainExtreme
-    )
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
-    dfRainExtremeAllScatter = dfScatterAllWrangling(
+    dfRainExtremeAll, meanRainExtreme = dfBarAllWrangling(
         dfStations, dfScatterRainExtreme, yearRainExtreme
     )
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
@@ -822,10 +820,11 @@ def mydashboard(flaskApp, instance):
 
         # call plot creation functions
         plotMap = plotMapCreation(dfMap, colors)
-        plotRainExtreme = plotHeatCreation(
+        plotRainExtreme = plotBarCreation(
             dfRainExtremeAll,
+            meanRainExtreme,
             colors,
-            'cm'
+            'mm'
         )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
@@ -842,14 +841,6 @@ def mydashboard(flaskApp, instance):
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
         plotRain.update_layout(
             height=420,
-            yaxis={
-                'rangemode': "tozero",
-            },
-        )
-        plotRainExtremeScatter = plotScatterCreation(
-            dfRainExtremeAllScatter, colors, 'mm'
-        )
-        plotRain.update_layout(
             yaxis={
                 'rangemode': "tozero",
             },
@@ -1217,56 +1208,6 @@ def mydashboard(flaskApp, instance):
                     'padding-bottom': 12,
                 }
                 ),
-                # third row of plots
-                html.Div([
-                    # 1st plot 2nd row
-                    html.Div([
-                        html.Div([
-                            html.H4('Extremer Regenfall')
-                        ], style={
-                            'height': 30,
-                            'padding-left': 20
-                        }
-                        ),
-                        html.Div([
-                            html.Div([
-                                dcc.Graph(
-                                    id='plotRainExtremeTest',
-                                    figure=plotRainExtremeScatter,
-                                    config={
-                                        'displayModeBar': False,
-                                        'staticPlot': False
-                                    }
-                                )
-                            ], style={
-                                'backgroundColor': colors['BgPlot5'],
-                                'height': 360
-                            }
-                            )
-                        ], style={
-                            'backgroundColor': colors['BgPlot5'],
-                            'height': 370,
-                            'box-shadow': shadow,
-                            'position': 'relative',
-                            'border-radius': 5,
-                            'margin': '10px',
-                            'vertical-align': 'top',
-                            'padding': 5
-                        }
-                        ),
-                    ], style={
-                        'width': '30%',
-                        'display': 'inline-block',
-                        'vertical-align': 'top',
-                        'horizontal-align': 'right'
-                    }
-                    ),
-                ], style={
-                    'padding-left': 30,
-                    'padding-right': 30,
-                    'padding-bottom': 12,
-                }
-                ),
             ], style={
                 'display': 'flex',
                 'flex-direction': 'column',
@@ -1354,12 +1295,28 @@ def mydashboard(flaskApp, instance):
         Output('plotRainExtreme', 'figure'),
         [Input('intermediateValue', 'children')])
     def callbackRainExtreme(station):
-        dfRainExtremeAll = dfHeatRainExtreme[
-            dfHeatRainExtreme['station_name'] == station]
+        dfRainExtremeAll = dfScatterRainExtreme[
+            dfScatterRainExtreme['station_name'] == station]
         dfRainExtremeAll = dfRainExtremeAll.reset_index()
 
-        plotRainExtreme = plotHeatCreation(
-            dfRainExtremeAll, colors, 'cm'
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(
+                dfRainExtremeAll.meas_year),
+                dfRainExtremeAll['meas_value']
+            )
+        dfRainExtremeAll['bestfit'] = reg.predict(
+            np.vstack(dfRainExtremeAll.meas_year)
+        )
+
+        meanOfParam = dfRainExtremeAll['meas_value'].mean()
+        dfRainExtremeAll['deviation'] = dfRainExtremeAll[
+            'meas_value'] - meanOfParam
+        dfRainExtremeAll['color'] = np.where(
+            dfRainExtremeAll['deviation'] >= 0, True, False)
+
+        plotRainExtreme = plotBarCreation(
+            dfRainExtremeAll, meanOfParam, colors, '°C'
         )
 
         return plotRainExtreme
@@ -1403,10 +1360,11 @@ def mydashboard(flaskApp, instance):
         Output('MASL', 'children'),
         [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
-        plotRainExtreme = plotHeatCreation(
+        plotRainExtreme = plotBarCreation(
             dfRainExtremeAll,
+            meanRainExtreme,
             colors,
-            'cm'
+            'mm'
         )
         plotTemperature = plotBarCreation(
             dfTemperatureAll,
