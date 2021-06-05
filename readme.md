@@ -1,7 +1,5 @@
 # Klima API Readme
 
----
-
 - [Klima API Readme](#klima-api-readme)
   - [Requirements](#requirements)
   - [Installation & Usage](#installation--usage)
@@ -9,6 +7,7 @@
     - [Without provided database](#without-provided-database)
     - [With VSCode and Edge](#with-vscode-and-edge)
     - [Start flask app](#start-flask-app)
+    - [Install Browser driver](#install-browser-driver)
   - [Extensions](#extensions)
     - [Add new parameters](#add-new-parameters)
     - [New credentials](#new-credentials)
@@ -29,16 +28,15 @@
       - [idawebConfigInitial.xml](#idawebconfiginitialxml)
       - [messageAnnouncer.py](#messageannouncerpy)
       - [responseDict.py](#responsedictpy)
+      - [abstractDriver.py](#abstractdriverpy)
     - [Dashboard](#dashboard)
       - [dashboard.py](#dashboardpy)
     - [Story](#story)
       - [story.py](#storypy)
     - [Tests](#tests)
       - [webscrapping_test.py](#webscrapping_testpy)
-      - [db_test.py ?](#db_testpy-)
+      - [db_test.py TODO Check name when branch is merged](#db_testpy-todo-check-name-when-branch-is-merged)
     - [Database implementation](#database-implementation)
-
----
 
 ## Requirements
 
@@ -71,8 +69,6 @@ Following programms and modules are required to run KlimaAPI
 | scikit_learn              | 0.24.2  |
 
 ## Installation & Usage
-
----
 
 ### With provided database
 
@@ -168,7 +164,23 @@ flask run
 
 **Important**, start anaconda / pip env before starting flask app
 
----
+### Install Browser driver
+
+In order to get new data selenium requires a browser driver to scrape websites
+
+> Browser version are checked automatically
+
+Installation as follows:
+
+Edge
+
+1. Navigate to [localhost:5000/admin](http://localhost:5000/admin)
+2. Press `Driver name`
+3. Press `Download driver`
+
+Chrome
+
+1. Navigate to [localhost:5000/admin/driver/Chrome?headless=false](http://localhost:5000/admin/driver/Chrome?headless=false)
 
 ## Extensions
 
@@ -181,14 +193,14 @@ flask run
 5. Click on idaweb_t
 6. Run increment load
 
+---
+
 ### New credentials
 
 In case of blocked idaweb credentials in code
 
 1. Open [webscraping.py](webscraping.py)
 2. Change credentials at the start of the file
-
----
 
 ## How it works
 
@@ -275,6 +287,13 @@ Helper file with functions for `POST` and `GET` requests
 3. Progressbar for FE
 4. Start materialized view refresh after data inserts
 
+#### [abstractDriver.py](abstractDriver.py)
+
+[abstractDriver.py](abstractDriver.py) handels all selenium driver interactions
+
+1. Driver install
+2. Front end information about driver status
+
 ### [Dashboard](http//localhost:5000/dashboard)
 
 ---
@@ -308,7 +327,7 @@ Helper file with functions for `POST` and `GET` requests
 
 Contains all webscraping unit tests
 
-#### db_test.py ?
+#### db_test.py TODO Check name when branch is merged
 
 Contains all database unit tests
 
