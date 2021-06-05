@@ -151,12 +151,6 @@ def mydashboard(flaskApp, instance):
     temperatureParam = 'tre200y0'
     shadow = f'7px 7px 10px {colors["shadow"]}'
 
-    # plot titles
-    titleRainExtreme = '∅ Maximaler Niederschlag aller Stationen'
-    titleTemperature = 'Durchschnittliche Temperatur aller Stationen'
-    titleSnow = 'Durchschnittlicher Schneefall aller Stationen'
-    titleRain = 'Durchschnittlicher Regenfall aller Stationen'
-
     dashApp = Dash(
         __name__,
         server=flaskApp,
@@ -264,58 +258,6 @@ def mydashboard(flaskApp, instance):
             engine
         )
 
-        # dfMap1 = pd.read_sql(
-        #     f"""
-        #     SELECT
-        #     avg(m.meas_value) avg_now,
-        #     k.station_name,
-        #     k.longitude,
-        #     k.latitude,
-        #     k.elevation
-        #     FROM core.measurements_t m
-        #     LEFT JOIN core.station_t k
-        #     ON (m.station = k.station_short_name)
-        #     WHERE m.meas_date >= '2010-01-01'
-        #     AND m.meas_date < '2020-01-01'
-        #     AND m.meas_name = {"'"+ snowParam +"'"}
-        #     AND k.parameter = {"'"+ snowParam +"'"}
-        #     AND m.valid_to = '2262-04-11'
-        #     AND k.valid_to = '2262-04-11'
-        #     GROUP BY k.station_name,
-        #     k.longitude,
-        #     k.latitude,
-        #     k.elevation;
-        #     """,
-        #     engine
-        # )
-
-        # dfMap2 = pd.read_sql(
-        #     f"""
-        #     SELECT
-        #     avg(m.meas_value) avg_then,
-        #     k.station_name
-        #     FROM core.measurements_t m
-        #     LEFT JOIN core.station_t k
-        #     ON (m.station = k.station_short_name)
-        #     WHERE m.meas_date >= '1970-01-01'
-        #     AND m.meas_date < '1980-01-01'
-        #     AND m.meas_name = {"'"+ snowParam +"'"}
-        #     AND k.parameter = {"'"+ snowParam +"'"}
-        #     AND m.valid_to = '2262-04-11'
-        #     AND k.valid_to = '2262-04-11'
-        #     GROUP BY k.station_name
-        #     """,
-        #     engine
-        # )
-
-        # dfMap = pd.merge(
-        #     how='inner',
-        #     left=dfMap1,
-        #     right=dfMap2,
-        #     left_on='station_name',
-        #     right_on='station_name'
-        # )
-
         dfMap = pd.merge(
             how='inner',
             left=dfMap,
@@ -353,17 +295,6 @@ def mydashboard(flaskApp, instance):
         dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
             ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
             '<extra></extra>'
-
-        # dfMap['text'] = '<b>' + dfMap['station_name'] + '</b>' +\
-        #     ' (' + (dfMap['elevation']).astype(str) + ' m.ü.M.)' + \
-        #     '<br>Ø Schneefall pro Tag 1970-1980: ' + \
-        #     (round(dfMap['avg_then'], 2)).astype(str) + 'cm' + \
-        #     '<br>Ø Schneefall pro Tag 2010-2020: ' + \
-        #     (round(dfMap['avg_now'], 2)).astype(str) + 'cm' + \
-        #     '<br>Veränderung: ' + \
-        #     (round(((
-        #         dfMap['avg_now'] - dfMap['avg_then']) / dfMap['avg_then']
-        #     ) * 100, 0)).astype(str) + '%' + '<extra></extra>'
 
         return dfMap
 
@@ -587,18 +518,6 @@ def mydashboard(flaskApp, instance):
             marker={
                 'size': 10,
                 'color': colors['d3'],
-                # 'size': dfMap['avg_now'] * 45,
-                # 'sizemin': 3,
-                # 'color': (
-                #     dfMap['avg_now'] - dfMap['avg_then']
-                #     ) / dfMap['avg_then'],
-                # 'colorscale': px.colors.diverging.BrBG,
-                # 'colorscale': [
-                #     [0, colors['red']],
-                #     [0.50, colors['l6']],
-                #     [1, colors['blue']]
-                # ],
-                # 'sizemode': 'area',
                 'opacity': 0.7
             }
         ))
@@ -614,7 +533,6 @@ def mydashboard(flaskApp, instance):
             mapbox=dict(
                 accesstoken='pk.eyJ1Ijoiam9lbGdyb3NqZWFuIiwiYSI6ImNrb' +
                 '24yNHpsMDA5OXQycXAxaHUzcDBzZHMifQ.TEpFKAlfpsYXKdAvgHYbLQ',
-                # bearing=0,
                 center=dict(
                     lat=46.9,
                     lon=8.2
@@ -638,7 +556,6 @@ def mydashboard(flaskApp, instance):
             base=meanOfParam,
             marker={
                 'color': colors['blue'],
-                # 'line': {'width': 1, 'color': 'black'}
             }
         ))
 
@@ -657,7 +574,6 @@ def mydashboard(flaskApp, instance):
         plot.update_layout(
             title_x=0.05,
             yaxis={
-                # 'title': 'maximaler Niederschlag in cm',
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
@@ -730,12 +646,10 @@ def mydashboard(flaskApp, instance):
             margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
             yaxis={
-                # 'title': 'Schneefall (Meter)',
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
-                # 'rangemode': "tozero",
                 'ticksuffix': ' ' + suffix
             },
             xaxis={
@@ -771,37 +685,12 @@ def mydashboard(flaskApp, instance):
                 [0.50, colors['l2']],
                 [0, colors['blue']]
             ],
-            # mode='lines',
-            # line_shape='spline',
-            # marker={
-            #     'size': 5,
-            #     'color': colors['blue'],
-            #     'line': {
-            #         'width': 1,
-            #         'color': 'black'
-            #     }
-            # }
         ))
 
         plot.update_layout(
             # title_x=0.1,
             margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
-            # yaxis={
-            #     # 'title': 'Schneefall (Meter)',
-            #     'color': colors['plotAxisTitle'],
-            #     'showgrid': True,
-            #     'gridwidth': 1,
-            #     'gridcolor': colors['plotGrid'],
-            #     # 'rangemode': "tozero",
-            #     'ticksuffix': ' ' + suffix
-            # },
-            # xaxis={
-            #     'showgrid': False,
-            #     'color': colors['plotAxisTitle'],
-            #     'showline': True,
-            #     'linecolor': colors['plotGrid']
-            # },
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
             # showlegend=False,
@@ -1080,7 +969,7 @@ def mydashboard(flaskApp, instance):
                     # 1st plot 2nd row
                     html.Div([
                         html.Div([
-                            html.H4('Extremer Regenfall')
+                            html.H4('Maximaler Regenfall')
                         ], style={
                             'padding-left': 20
                         }
