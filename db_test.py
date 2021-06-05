@@ -1,5 +1,6 @@
 import db
 import pytest
+import sqlalchemy
 import messageAnnouncer
 from typing import List
 
@@ -29,3 +30,7 @@ class TestDatabase():
             assert len(configFile) == 0
         else:
             assert False
+
+    def testGetEngineSuccess(self):
+        engine = instance.getEngine()
+        assert type(engine) == sqlalchemy.engine.base.Engine
