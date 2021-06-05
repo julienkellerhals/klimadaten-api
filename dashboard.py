@@ -102,22 +102,19 @@ def mydashboard(flaskApp, instance):
     external_stylesheets = [dbc.themes.UNITED]
 
     textDescription = """
-        Dieses Dashboard visualisiert die Ursachen von Erdrutschen.
-         In den kommenden Jahrzehnten werden Erdrutsche wahrscheinlich
+         In den kommenden Jahrzehnten werden Massenbewegungen wahrscheinlich
          häuffiger. Die generell zunehmende Temperatur führt zum langsamen
          Auftauen des Permafrosts und zur beschleunigten Gletscherschmelze,
-         welche das Risiko für Erdrutsche vergrössern. Das Risiko von
-         Erdrutschen wird zudem durch die mögliche Zunahme von
+         welche das Risiko für Massenbewegungen vergrössern. Das Risiko wird
+         zudem durch die mögliche Zunahme von
          Starkniederschlägen und durch den Anstieg der Schneefallgrenze erhöht.
-         Eine höhere Schneefallgrenze und somit weniger Schnee führt zu mehr
-         Regen, welcher das Risiko für Erdrutsche weiter erhöht.
+         Weniger Schneefall führt zu mehr
+         Regen, welcher durch eine hohe Bodendurchnässung das Risiko für
+         Massenbewegungen weiter erhöhen kann.
         """
 
     textStationAll = """
-        Momentan werden die Daten für folgende Stationen angezeigt:
-        """
-
-    textStationOne = """
+        Durch klicken auf Karte Station auswählen.
         Momentan werden die Daten für folgende Stationen angezeigt:
         """
 
@@ -863,7 +860,7 @@ def mydashboard(flaskApp, instance):
             html.Div([
                 html.Div([
                     html.H2(
-                        'Erdrutsche und ihre Ursachen',
+                        'Die Ursachen von Massenbewegungen',
                         id='titleDashboard',
                         style={
                             'color': colors['l1'],
@@ -934,7 +931,7 @@ def mydashboard(flaskApp, instance):
                                     }
                                 ),
                             ], style={
-                                'maxHeight': 264,
+                                'maxHeight': 300,
                                 'overflowY': 'auto',
                                 'margin-bottom': 5
                             }
@@ -957,7 +954,7 @@ def mydashboard(flaskApp, instance):
                                     id='MASL'
                                 ),
                             ], style={
-                                'maxHeight': 151,
+                                'height': 166,
                                 'overflowY': 'auto',
                                 'text-align': 'bottom',
                             }
