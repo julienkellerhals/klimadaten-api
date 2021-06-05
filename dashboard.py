@@ -857,11 +857,11 @@ def mydashboard(flaskApp, instance):
                             'color': colors['l1'],
                             'display': 'inline-block',
                             'padding-left': 45,
+                            'padding-right':45
                         }
                     ),
                 ], style={
                     'text-align': 'left',
-                    'width': '50%',
                     'display': 'inline-block',
                 }
                 ),
@@ -883,17 +883,20 @@ def mydashboard(flaskApp, instance):
                         style={
                             'color': colors['l1'],
                             'display': 'inline-block',
-                            'padding-right': 45,
+                            'padding-right': 30,
                         }
                     ),
                     html.Div(id='linkDatastoryOutput')
                 ], style={
                     'text-align': 'right',
-                    'width': '50%',
                     'display': 'inline-block',
+                    'padding-right': 15
                 }
                 ),
             ], style={
+                'display': 'flex',
+                'align-items': 'flex-start',
+                'justify-content': 'space-between',
                 'backgroundColor': colors['d3'],
                 'box-shadow': shadow,
                 'position': 'relative',
@@ -909,8 +912,6 @@ def mydashboard(flaskApp, instance):
                             html.H4('Beschreibung')
                         ], style={
                             'padding-left': 20,
-                            'padding-top': 5,
-                            'height': 30,
                         }
                         ),
                         html.Div([
@@ -946,7 +947,7 @@ def mydashboard(flaskApp, instance):
                                     id='MASL'
                                 ),
                             ], style={
-                                'height': 166,
+                                'height': 158,
                                 'overflowY': 'auto',
                                 'text-align': 'bottom',
                             }
@@ -959,7 +960,6 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top',
                             'padding': '10px',
                             'display': 'flex',
                             'flex-direction': 'column',
@@ -969,7 +969,6 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'width': '25%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'center'
                     }
                     ),
@@ -983,8 +982,6 @@ def mydashboard(flaskApp, instance):
                             )
                         ], style={
                             'padding-left': 20,
-                            'padding-top': 5,
-                            'height': 30,
                         }
                         ),
                         html.Div([
@@ -1029,7 +1026,6 @@ def mydashboard(flaskApp, instance):
                     ], style={
                         'width': '35%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'left'
                     }
                     ),
@@ -1039,8 +1035,6 @@ def mydashboard(flaskApp, instance):
                             html.H4("Durchschnittlicher Regenfall")
                         ], style={
                             'padding-left': 20,
-                            'padding-top': 5,
-                            'height': 30,
                         }
                         ),
                         html.Div([
@@ -1065,18 +1059,18 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top',
                             'padding': '5px'
                         }
                         ),
                     ], style={
                         'width': '40%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'right'
                     }
                     )
                 ], style={
+                    'display': 'flex',
+                    'align-items': 'flex-end',
                     'padding-left': 30,
                     'padding-right': 30
                 }
@@ -1088,7 +1082,6 @@ def mydashboard(flaskApp, instance):
                         html.Div([
                             html.H4('Extremer Regenfall')
                         ], style={
-                            'height': 30,
                             'padding-left': 20
                         }
                         ),
@@ -1114,14 +1107,12 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top',
                             'padding': 5
                         }
                         ),
                     ], style={
                         'width': '30%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'right'
                     }
                     ),
@@ -1130,7 +1121,6 @@ def mydashboard(flaskApp, instance):
                         html.Div([
                             html.H4('Durchschnittlicher Schneefall')
                         ], style={
-                            'height': 30,
                             'padding-left': 20
                         }
                         ),
@@ -1156,14 +1146,12 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top',
                             'padding': 5
                         }
                         ),
                     ], style={
                         'width': '40%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'left'
                     }
                     ),
@@ -1172,7 +1160,6 @@ def mydashboard(flaskApp, instance):
                         html.Div([
                             html.H4('Durchschnittliche Temperatur')
                         ], style={
-                            'height': 30,
                             'padding-left': 20
                         }
                         ),
@@ -1192,21 +1179,21 @@ def mydashboard(flaskApp, instance):
                             'position': 'relative',
                             'border-radius': 5,
                             'margin': '10px',
-                            'vertical-align': 'top',
                             'padding': 5
                         }
                         ),
                     ], style={
                         'width': '30%',
                         'display': 'inline-block',
-                        'vertical-align': 'top',
                         'horizontal-align': 'center'
                     }
                     ),
                 ], style={
+                    'display': 'flex',
+                    'align-items': 'flex-end',
                     'padding-left': 30,
                     'padding-right': 30,
-                    'padding-bottom': 12,
+                    'padding-bottom': 8,
                 }
                 ),
             ], style={
