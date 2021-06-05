@@ -1,6 +1,7 @@
 import db
 import pytest
 import sqlalchemy
+import pandas as pd
 import messageAnnouncer
 from typing import List
 
@@ -31,6 +32,16 @@ class TestDatabase():
         else:
             assert False
 
+    # Test if database engine exists and is of right type
     def testGetEngineSuccess(self):
         engine = instance.getEngine()
         assert type(engine) == sqlalchemy.engine.base.Engine
+
+    # Test if refresh dates are in a dataframe
+    # and dataframe has at least one entry
+    def testGetParameterRefreshDate(self):
+        table = instance.getParameterRefreshDate()
+        if type(table) == pd.core.frame.DataFrame:
+            assert len(table) > 0
+        else:
+            assert False
