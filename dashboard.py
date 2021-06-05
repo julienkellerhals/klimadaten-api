@@ -66,33 +66,6 @@ soil temperature
 "tso100mx" Soil temperature at 100 cm depth; absolute monthly maximum
 """
 
-"""
-awesome color scale
-
-$white #FFFFFF
-$gray1 #EBEFF2
-$gray2 #E2E8ED
-$gray3 #D8E0E5
-$gray4 #C5D1D8
-$gray5 #B6C3CC
-$gray6 #A3B5BF
-$gray7 #96A8B2
-$gray8 #889AA5
-$gray9 #748B99
-$gray10 #677E8C
-$gray11 #59717F
-$gray12 #4C6472
-Sgray 13 #425866
-Sgray14 #364C59
-$gray 15 #2C404C
-Sgray16 #23343F
-Sgray17 #1B2A33
-Sgray 18 #121F26
-Sgray 19 #0C1419
-Sgray20 #05090C
-$black #000000
-"""
-
 
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
@@ -120,25 +93,13 @@ def mydashboard(flaskApp, instance):
 
     colors = {
         'd1': '#05090C',
-        'd2': '#0C1419',
         'd3': '#121F26',
         'l0': '#FFFFFF',
         'l1': '#EBEFF2',
         'l2': '#D8E0E5',
-        'l3': '#C5D1D8',
-        'l4': '#B6C3CC',
-        'l5': '#A3B5BF',
-        'l6': '#96A8B2',
-        'l8': '#748B99',
         'blue': '#285D8F',
         'red': '#DE3143',
-        'lightblue': '#B4DFFF',
-        'BgPlot1': '#FFFFFF',
-        'BgPlot2': '#FFFFFF',
-        'BgPlot3': '#FFFFFF',
-        'BgPlot4': '#ADD8E5',
-        'BgPlot5': '#FFFFFF',
-        'plotTitle': '#121F26',
+        'BgPlots': '#FFFFFF',
         'plotGrid': '#B6C3CC',
         'plotAxisTitle': '#748B99',
         'BgDashboard': '#E2E8ED',
@@ -593,7 +554,7 @@ def mydashboard(flaskApp, instance):
             hovermode='closest',
             margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
-            paper_bgcolor=colors['BgPlot5'],
+            paper_bgcolor=colors['BgPlots'],
             plot_bgcolor='rgba(0,0,0,0)',
             showlegend=False,
             legend={
@@ -658,7 +619,7 @@ def mydashboard(flaskApp, instance):
                 'showline': True,
                 'linecolor': colors['plotGrid']
             },
-            paper_bgcolor=colors['BgPlot3'],
+            paper_bgcolor=colors['BgPlots'],
             plot_bgcolor='rgba(0,0,0,0)',
             showlegend=False,
             legend={
@@ -691,7 +652,7 @@ def mydashboard(flaskApp, instance):
             # title_x=0.1,
             margin={'l': 25, 'b': 25, 't': 5, 'r': 20},
             height=360,
-            paper_bgcolor=colors['BgPlot3'],
+            paper_bgcolor=colors['BgPlots'],
             plot_bgcolor='rgba(0,0,0,0)',
             # showlegend=False,
             # legend={
@@ -843,7 +804,7 @@ def mydashboard(flaskApp, instance):
                             ),
 
                         ], style={
-                            'backgroundColor': colors['BgPlot2'],
+                            'backgroundColor': colors['BgPlots'],
                             'height': 430,
                             'box-shadow': shadow,
                             'position': 'relative',
@@ -937,12 +898,12 @@ def mydashboard(flaskApp, instance):
                                     }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlot3'],
+                                'backgroundColor': colors['BgPlots'],
                                 'height': 420
                             }
                             )
                         ], style={
-                            'backgroundColor': colors['BgPlot2'],
+                            'backgroundColor': colors['BgPlots'],
                             'height': 430,
                             'box-shadow': shadow,
                             'position': 'relative',
@@ -985,12 +946,12 @@ def mydashboard(flaskApp, instance):
                                     }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlot5'],
+                                'backgroundColor': colors['BgPlots'],
                                 'height': 360
                             }
                             )
                         ], style={
-                            'backgroundColor': colors['BgPlot5'],
+                            'backgroundColor': colors['BgPlots'],
                             'height': 370,
                             'box-shadow': shadow,
                             'position': 'relative',
@@ -1024,12 +985,12 @@ def mydashboard(flaskApp, instance):
                                     }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlot3'],
+                                'backgroundColor': colors['BgPlots'],
                                 'height': 360
                             }
                             )
                         ], style={
-                            'backgroundColor': colors['BgPlot3'],
+                            'backgroundColor': colors['BgPlots'],
                             'height': 370,
                             'box-shadow': shadow,
                             'position': 'relative',
