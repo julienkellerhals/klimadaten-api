@@ -37,6 +37,9 @@
       - [webscrapping_test.py](#webscrapping_testpy)
       - [db_test.py TODO Check name when branch is merged](#db_testpy-todo-check-name-when-branch-is-merged)
     - [Database implementation](#database-implementation)
+      - [Stage](#stage)
+      - [Core](#core)
+      - [ERD](#erd)
 
 ## Requirements
 
@@ -335,9 +338,31 @@ Contains all database unit tests
 
 ---
 
-Add ERD
-explain pk
-explain dedupi
-index?
-explain schemas
-explain loading process
+TODO fix wording and structure
+
+- Database is divided into two main schemas, Stage and Core
+- All tables have corresponding materialized views for number of rows and last update
+- Data is copied from left to right
+  - Text files / Web into stage tables
+  - Stage tables into Core tables
+
+#### Stage
+
+Stage schema contain all new data
+
+- Can contain duplicate entries
+- No primary keys
+- Raw data
+
+#### Core
+
+- Cannot contain duplicate entries due to natural primary key violation
+- Data is indexed for faster selects
+- idaweb_t & meteoschweiz_t is merged into measurements_t table
+- Colums get added for datasource description
+- Data gets parsed into format used for future analysis
+- Core data never gets deleted, can be used to add new data
+
+#### ERD
+
+![databaseERD](/mockup/databaseERD.png)
