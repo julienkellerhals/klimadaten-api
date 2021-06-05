@@ -7,6 +7,11 @@ from db import Database
 announcer = messageAnnouncer.MessageAnnouncer()
 database = Database(announcer)
 
+"""
+To run tests, type the following into the console:
+pytest -m db
+"""
+
 
 @pytest.mark.db
 class DBTest():
