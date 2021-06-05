@@ -113,8 +113,8 @@ def mydashboard(flaskApp, instance):
          Massenbewegungen weiter erhöhen kann.
         """
 
-    textStationAll = """
-        Durch klicken auf Karte Station auswählen.
+    textSelection = """
+        Station durch klicken auf Karte auswählen.
         Momentan werden die Daten für folgende Stationen angezeigt:
         """
 
@@ -929,7 +929,8 @@ def mydashboard(flaskApp, instance):
                             ),
                             html.Div([
                                 dcc.Markdown(
-                                    textStationAll,
+                                    textSelection,
+                                    id='selection',
                                     style={
                                         'font-size': '0.90rem',
                                         'border-top': f"""1px
@@ -1236,6 +1237,7 @@ def mydashboard(flaskApp, instance):
         Output('intermediateValue', 'children'),
         Output('name', 'children'),
         Output('MASL', 'children'),
+        Output('selection', 'children'),
         [Input('plotMap', 'clickData')])
     def callbackMap(clickData):
         v_index = clickData['points'][0]['pointIndex']
@@ -1244,7 +1246,11 @@ def mydashboard(flaskApp, instance):
         elevation = re.findall(r'^\d*', str(elevation))[0]
         stationString = f'## **{station}**'
         elevationString = f'#### **{elevation} m.ü.M.**'
-        return (station, stationString, elevationString)
+        selectionString = """
+            Station durch klicken auf Karte auswählen.
+            Momentan werden die Daten für folgende Station angezeigt:
+            """
+        return (station, stationString, elevationString, selectionString)
 
     @dashApp.callback(
         Output('plotSnow', 'figure'),
@@ -1316,7 +1322,7 @@ def mydashboard(flaskApp, instance):
             dfRainExtremeAll['deviation'] >= 0, True, False)
 
         plotRainExtreme = plotBarCreation(
-            dfRainExtremeAll, meanOfParam, colors, '°C'
+            dfRainExtremeAll, meanOfParam, colors, 'mm'
         )
 
         return plotRainExtreme
@@ -1358,6 +1364,7 @@ def mydashboard(flaskApp, instance):
         Output('plotRain', 'figure'),
         Output('name', 'children'),
         Output('MASL', 'children'),
+        Output('selection', 'children'),
         [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
         plotRainExtreme = plotBarCreation(
@@ -1388,6 +1395,10 @@ def mydashboard(flaskApp, instance):
 
         stationString = f'## **alle Stationen**'
         elevationString = f'#### **Ø {meanStationHeight} m.ü.M.**'
+        selectionString = """
+            Station durch klicken auf Karte auswählen.
+            Momentan werden die Daten für folgende Stationen angezeigt:
+            """
 
         return (
             plotRainExtreme,
@@ -1395,7 +1406,8 @@ def mydashboard(flaskApp, instance):
             plotSnow,
             plotRain,
             stationString,
-            elevationString
+            elevationString,
+            selectionString
         )
 
     createDashboard()
