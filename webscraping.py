@@ -55,7 +55,7 @@ def readConfig(configFileName):
         tree = etree.parse(configFileName)
         root = tree.getroot()
         for config in root:
-            configList.append(config)           
+            configList.append(config)
     return configList
 
 

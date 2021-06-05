@@ -1,24 +1,21 @@
+import db
 import pytest
 import messageAnnouncer
 from typing import List
-from db import Database
-
 
 announcer = messageAnnouncer.MessageAnnouncer()
-database = Database(announcer)
+instance = db.Database(announcer)
 
-"""
-To run tests, type the following into the console:
-pytest -m db
-"""
+# To run tests, type the following into the console:
+# pytest -m database -s -v --color=yes
 
 
-@pytest.mark.db
-class DBTest():
+@pytest.mark.database
+class TestDatabase():
     # Test if cofigfile exist with correct file
     def testReadConfigSuccess(self):
         configFileName = "idawebConfig.xml"
-        configFile = database.readConfig(configFileName)
+        configFile = instance.readConfig(configFileName)
         if isinstance(configFile, List):
             assert len(configFile) != 0
         else:
@@ -27,7 +24,7 @@ class DBTest():
     # Test if cofigfile exist with wrong file
     def testReadConfigFail(self):
         configFileName = "wrongFile.xml"
-        configFile = database.readConfig(configFileName)
+        configFile = instance.readConfig(configFileName)
         if isinstance(configFile, List):
             assert len(configFile) == 0
         else:
