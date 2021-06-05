@@ -1,6 +1,5 @@
-# Readme
+# Klima API Readme
 
-# Klima API
 ## Requirements
 Python 3.7 <br>
 Postgres
@@ -28,25 +27,89 @@ Postgres
 | scikit_learn              | 0.24.2  |
 
 # Installation & Usage
-
+## Installation with provided database
+---
 Add images for clarity between steps
 
 1. Install Python
 2. Install all required modules for Klima API (see above)
 3. Install postgres
 4. Start flask app
-    ´´´Code start flaskapp´´´
+
+   Command Prompt
+    ~~~json
+    > set FLASK_APP=app.py
+    > set FLASK_ENV=production
+    > flask run
+    ~~~
+    PowerShell
+    ~~~ powershell
+    > $env:FLASK_APP = "app.py"
+    > $env:FLASK_ENV = "production"
+    > flask run
+    ~~~
+    Linux (untested)
+    ~~~ bash
+    $ export FLASK_APP=app.py
+    $ export FLASK_ENV=production
+    $ flask run
+    ~~~
+    Important, start anaconda / pip env before starting flask app
+
 5. Open webbrowser
 6. Navigate to localhost:5000
 7. Configure database connection string (Insert image of config page)
 8. Navigate to database tab of administration overview
-9. Run ETL load
-10. Run Core load
-11. Stop server
+9. Press action button to connect to database
+10. Open pgAdmin or equivalent
+11. Import database
 12. Uncomment dashboard creation line
 13. Start server (see step 4)
 14. Navigate to localhost:5000/admin
 15. Use app
+
+## Installation without provided database
+---
+Add images for clarity between steps
+
+1. Install Python
+2. Install all required modules for Klima API (see above)
+3. Install postgres
+4. Start flask app
+
+   Command Prompt
+    ~~~json
+    > set FLASK_APP=app.py
+    > set FLASK_ENV=production
+    > flask run
+    ~~~
+    PowerShell
+    ~~~ powershell
+    > $env:FLASK_APP = "app.py"
+    > $env:FLASK_ENV = "production"
+    > flask run
+    ~~~
+    Linux (untested)
+    ~~~ bash
+    $ export FLASK_APP=app.py
+    $ export FLASK_ENV=production
+    $ flask run
+    ~~~
+    Important, start anaconda / pip env before starting flask app
+
+5. Open webbrowser
+6. Navigate to localhost:5000
+7. Configure database connection string (Insert image of config page)
+8. Navigate to database tab of administration overview
+9. Press action button to connect to database
+10. Press action button to create database tables
+11. Run ETL load
+12. Run Core load
+13. Stop server
+14. Uncomment dashboard creation line
+15. Start server (see step 4)
+16. Navigate to localhost:5000/admin
+17. Use app
 
 # Extensions
 ## Add new parameters
@@ -64,10 +127,12 @@ In case of blocked idaweb credentials in code
 
 # How it works
 ## Scraping
+---
 ### webscraping.py
 Webscraping.py contain both meteoschweiz and idaweb scraping functions
 
 ## API
+---
 ### app.py & Api folder
 app.py and following contain all routes for the API
 
@@ -114,9 +179,40 @@ messageAnnouncer.py contains following:
 3. Formating
 
 ### responseDict.py
-1. Continue here
+responseDict.py contains following:
+1. Response sending for front end
+2. Button disabling for FE
+3. Progressbar for FE
+4. Start materialized view refresh after data inserts
+
 ## Dashboard
+---
+### dashboard.py
+dashboard.py handels following:
+1. Creation of dashboard and structure
+2. Selection of data displayed in dashboard
+3. Wrangling of selected data
+4. Callbacks handeling for interaction
 
 ## Story
+---
+### story.py
+story.py handels following:
+1. Creation of story and structure
+2. Selection of data displayed in story
+3. Wrangling of selected data
 
 ## Tests
+---
+### webscrapping_test.py
+Contains all webscraping unit tests
+### db_test.py ?
+Contains all database unit tests
+
+## Database implementation
+Add ERD
+explain pk
+explain dedupi
+index?
+explain schemas
+explain loading process
