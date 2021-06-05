@@ -8,6 +8,8 @@ announcer = messageAnnouncer.MessageAnnouncer()
 database = Database(announcer)
 
 
+#pytest -v -m db
+
 @pytest.mark.db
 class DBTest():
     # Test if cofigfile exist with correct file
