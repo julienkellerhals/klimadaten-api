@@ -1,5 +1,6 @@
 import re
 import datetime
+import math
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -338,16 +339,13 @@ def mystory(flaskApp, instance):
             meas_value=('meas_value', 'mean')
         )
 
-        meanRain = dfParamAll['meas_value'].mean()
+        meanOfParam = dfParamAll['meas_value'].mean()
         dfParamAll['deviation'] = dfParamAll[
-            'meas_value'] - meanRain
+            'meas_value'] - meanOfParam
         dfParamAll['color'] = np.where(
             dfParamAll['deviation'] >= 0, True, False)
 
         dfParamAll = dfParamAll.reset_index()
-        # TODO fix param and desc
-        dfParamAll = dfParamAll[
-            dfParamAll.meas_year >= yearParam]
 
         # simple regression line
         reg = LinearRegression(
@@ -356,7 +354,7 @@ def mystory(flaskApp, instance):
         dfParamAll['bestfit'] = reg.predict(
             np.vstack(dfParamAll.index))
 
-        return (dfParamAll, meanRain)
+        return (dfParamAll, meanOfParam)
 
     def getParamYear(dfSelection, short_name):
         dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
@@ -364,6 +362,9 @@ def mystory(flaskApp, instance):
             dfSelectionParam.station_name.isin(list(dfStations.station_name))
         ]
         yearParam = dfSelectionParam['min'].median()
+
+        if math.isnan(yearParam):
+            yearParam = 0
 
         return yearParam
 
@@ -378,9 +379,9 @@ def mystory(flaskApp, instance):
 
     dfScatterRain = dfScatterWrangling(rainParam, '1950-01-01')
 
-    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam, '1950-01-01')
     dfRainExtremeAll, meanRain = dfBarAllWrangling(
-    dfStations, dfScatterRainExtreme, yearRainExtreme
+        dfStations, dfScatterRainExtreme, yearRainExtreme
     )
 
     # main dashboard function
