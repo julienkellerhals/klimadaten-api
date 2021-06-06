@@ -74,8 +74,9 @@ def mystory(flaskApp, instance):
     )
 
     rainParam = 'rre150m0'
+    snowParam = 'hns000y0'
 
-    def dfScatterWrangling(param):
+    def dfScatterWrangling(param, meas_date='2007-01-01'):
         # data wrangling scatterplot snow
         dfScatter = pd.read_sql(
             f"""
@@ -90,10 +91,10 @@ def mystory(flaskApp, instance):
             ON (m.station = k.station_short_name)
             WHERE m.meas_name = {"'" + param +"'"}
             AND k.parameter = {"'" + param +"'"}
-            AND k.station_name = 'Soglio'
+            AND k.station_name = 'Weissfluhjoch'
             AND m.valid_to = '2262-04-11'
             AND k.valid_to = '2262-04-11'
-            AND m.meas_date >= '2007-01-01'
+            AND m.meas_date >= {"'" + meas_date +"'"}
             ORDER BY station, meas_date ASC
             """,
             engine
@@ -127,23 +128,23 @@ def mystory(flaskApp, instance):
             }
         ))
 
-        # plot.add_trace(go.Scatter(
-        #     name='Regression',
-        #     x=df['meas_year'],
-        #     y=df['bestfit'],
-        #     mode='lines',
-        #     marker={
-        #         'size': 5,
-        #         'color': colors['rbr'],
-        #         'line': {
-        #             'width': 1,
-        #             'color': 'black'
-        #         }
-        #     }
-        # ))
+        plot.add_trace(go.Scatter(
+            name='Regression',
+            x=df['meas_year'],
+            y=df['bestfit'],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
+                'line': {
+                    'width': 1,
+                    'color': 'black'
+                }
+            }
+        ))
 
         plot.update_layout(
-            title='Regenfall in Soglio',
+            title='Regenfall in Weissfluhjoch',
             title_x=0,
             margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=450,
@@ -173,11 +174,16 @@ def mystory(flaskApp, instance):
 
         return plot
 
-    dfScatterRain = dfScatterWrangling(rainParam)
+    dfScatterSnow = dfScatterWrangling(snowParam, '1950-01-01')
+    # change measurement unit to meters
+    # dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
+
+    dfScatterRain = dfScatterWrangling(rainParam, '1950-01-01')
 
     # main dashboard function
     def createStory():
         plotRain = plotScatterCreation(dfScatterRain, colors)
+        plotSnow = plotScatterCreation(dfScatterSnow, colors)
 
         dashAppStory.layout = html.Div([
             # header
@@ -252,6 +258,25 @@ def mystory(flaskApp, instance):
                     figure=plotRain,
                     config={
                         'displayModeBar': False,
+                        'staticPlot': False
+                    }
+                )
+            ], style={
+                'max-width': 965,
+                'padding-left': 15,
+                'padding-right': 15,
+                'padding-top': 0,
+                'horizontal-align': 'center',
+                'margin': '0 auto',
+                # 'vetical-align': 'top',
+            }
+            ),
+            html.Div([
+                dcc.Graph(
+                    id='plotSnow',
+                    figure=plotSnow,
+                    config={
+                        'displayModeBar': False,                      
                         'staticPlot': False
                     }
                 )
