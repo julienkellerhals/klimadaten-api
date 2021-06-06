@@ -75,6 +75,7 @@ def mystory(flaskApp, instance):
 
     rainParam = 'rre150m0'
     snowParam = 'hns000y0'
+    rainExtremeParam = 'rhh150yx'
 
     def dfScatterWrangling(param, meas_date='2007-01-01'):
         # data wrangling scatterplot snow
@@ -108,12 +109,88 @@ def mystory(flaskApp, instance):
 
         return dfScatter
 
-    def plotScatterCreation(df, colors):
+    def dfSelectionWrangling():
+        # Select the stations with the highest quality data
+        dfSelection = pd.read_sql(
+            """
+            SELECT
+                station_name,
+                station_short_name,
+                meas_name,
+                min(meas_year),
+                COUNT(*)
+            FROM(
+                SELECT
+                    extract(year from m.meas_date) as meas_year,
+                    k.station_short_name,
+                    k.station_name,
+                    m.meas_name
+                FROM core.measurements_t m
+                JOIN core.station_t k
+                ON (m.station = k.station_short_name)
+                WHERE m.meas_name IN (
+                    'hns000y0',
+                    'hto000y0',
+                    'rre150y0',
+                    'rzz150yx',
+                    'rhh150yx',
+                    'tnd00xy0',
+                    'tre200y0'
+                )
+                AND k.parameter IN (
+                    'hns000y0',
+                    'hto000y0',
+                    'rre150y0',
+                    'rzz150yx',
+                    'rhh150yx',
+                    'tnd00xy0',
+                    'tre200y0'
+                )
+                AND m.valid_to = '2262-04-11'
+                AND k.valid_to = '2262-04-11'
+                AND k.station_name = 'Weissfluhjoch'
+                GROUP BY
+                meas_year,
+                k.station_name,
+                k.station_short_name,
+                m.meas_name
+            ) AS filtered
+            GROUP BY
+                station_name,
+                station_short_name,
+                station_name,
+                meas_name
+            HAVING COUNT(*) >= 30
+            ORDER BY COUNT(*) DESC
+            """,
+            engine
+        )
+
+        dfSelection['years'] = 2020 - dfSelection['min']
+        dfSelection['ratio'] = dfSelection['count'] / dfSelection['years']
+        dfSelection = dfSelection[dfSelection.ratio >= 0.90]
+
+        return dfSelection
+
+    def dfStationsWrangling(dfSelection):
+        dfStations = dfSelection.groupby([
+            'station_short_name',
+            'station_name'
+        ]).agg(
+            meas_name=('meas_name', 'count'),
+            # min = ('min', 'min'),
+            # ratio = ('ratio', 'min')
+        ).reset_index()
+        dfStations = dfStations[dfStations.meas_name == 7]
+
+        return dfStations
+
+    def plotScatterCreation(df, colors, param_name):
         # creating the snow scatterplot with all stations
         plot = go.Figure()
 
         plot.add_trace(go.Scatter(
-            name='Schneefall',
+            name=param_name,
             x=df['meas_year'],
             y=df['meas_value'],
             mode='lines',
@@ -174,16 +251,143 @@ def mystory(flaskApp, instance):
 
         return plot
 
+    def plotBarCreation(df, meanRain, colors):
+        # creating the rain barplot
+        plot = go.Figure()
+
+        plot.add_trace(go.Bar(
+            name='Regenfall',
+            x=df["meas_year"],
+            y=df["deviation"],
+            base=meanRain,
+            marker={
+                'color': colors['rbb'],
+                # 'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plot.add_trace(go.Scatter(
+            name='Regression',
+            x=df["meas_year"],
+            y=df["bestfit"],
+            mode='lines',
+            marker={
+                'size': 5,
+                'color': colors['rbr'],
+                'line': {'width': 1, 'color': 'black'}
+            }
+        ))
+
+        plot.update_layout(
+            title='∅ Maximaler Niederschlag aller Stationen in cm',
+            title_x=0.05,
+            yaxis={
+                # 'title': 'maximaler Niederschlag in cm',
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid'],
+                'range': [
+                    df.meas_value.min() * 0.95,
+                    df.meas_value.max() * 1.05
+                ]
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
+            },
+            hovermode='closest',
+            margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
+            height=360,
+            paper_bgcolor=colors['BgPlot5'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            legend={
+                'yanchor': 'top',
+                'y': 0.99,
+                'xanchor': 'left',
+                'x': 0.01
+            }
+        )
+
+        return plot
+
+    def dfBarAllWrangling(
+        dfStations,
+        dfScatter,
+        yearParam
+    ):
+        dfAll = pd.merge(
+            how='inner',
+            left=dfStations,
+            right=dfScatter,
+            left_on='station_short_name',
+            right_on='station'
+        )
+
+        dfAll.sort_values([
+            'station_short_name',
+            'meas_year'
+        ], inplace=True)
+
+        # select all Stations
+        dfParamAll = dfAll.groupby(
+            'meas_year'
+        ).agg(
+            meas_value=('meas_value', 'mean')
+        )
+
+        meanRain = dfParamAll['meas_value'].mean()
+        dfParamAll['deviation'] = dfParamAll[
+            'meas_value'] - meanRain
+        dfParamAll['color'] = np.where(
+            dfParamAll['deviation'] >= 0, True, False)
+
+        dfParamAll = dfParamAll.reset_index()
+        # TODO fix param and desc
+        dfParamAll = dfParamAll[
+            dfParamAll.meas_year >= yearParam]
+
+        # simple regression line
+        reg = LinearRegression(
+            ).fit(np.vstack(
+                dfParamAll.index), dfParamAll['meas_value'])
+        dfParamAll['bestfit'] = reg.predict(
+            np.vstack(dfParamAll.index))
+
+        return (dfParamAll, meanRain)
+
+    def getParamYear(dfSelection, short_name):
+        dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
+        dfSelectionParam = dfSelectionParam[
+            dfSelectionParam.station_name.isin(list(dfStations.station_name))
+        ]
+        yearParam = dfSelectionParam['min'].median()
+
+        return yearParam
+
+    dfSelection = dfSelectionWrangling()
+    dfStations = dfStationsWrangling(dfSelection)
+
+    yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
+
     dfScatterSnow = dfScatterWrangling(snowParam, '1950-01-01')
     # change measurement unit to meters
     # dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
 
     dfScatterRain = dfScatterWrangling(rainParam, '1950-01-01')
 
+    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    dfRainExtremeAll, meanRain = dfBarAllWrangling(
+    dfStations, dfScatterRainExtreme, yearRainExtreme
+    )
+
     # main dashboard function
     def createStory():
-        plotRain = plotScatterCreation(dfScatterRain, colors)
-        plotSnow = plotScatterCreation(dfScatterSnow, colors)
+        plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
+        plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
+        plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
 
         dashAppStory.layout = html.Div([
             # header
@@ -277,6 +481,25 @@ def mystory(flaskApp, instance):
                     figure=plotSnow,
                     config={
                         'displayModeBar': False,                      
+                        'staticPlot': False
+                    }
+                )
+            ], style={
+                'max-width': 965,
+                'padding-left': 15,
+                'padding-right': 15,
+                'padding-top': 0,
+                'horizontal-align': 'center',
+                'margin': '0 auto',
+                # 'vetical-align': 'top',
+            }
+            ),
+            html.Div([
+                dcc.Graph(
+                    id='plotRainExtreme',
+                    figure=plotRainExtreme,
+                    config={
+                        'displayModeBar': False,
                         'staticPlot': False
                     }
                 )
