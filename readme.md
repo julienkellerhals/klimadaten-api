@@ -365,4 +365,4 @@ Stage schema contain all new data
 
 #### ERD
 
-![databaseERD](/assets/databaseERD.png)
+![databaseERD](/static/databaseERD.png)
