@@ -40,12 +40,12 @@
                     <li {% if active_page == "database" %} class="active"{% endif%}><a href="/admin/database">Database</a></li>
                     <li {% if active_page == "tests" %} class="active"{% endif%}><a href="/admin/tests">Tests</a></li>
                     <li {% if active_page == "doc" %} class="active"{% endif%}><a href="/admin/doc">Help / Doc</a></li>
-                    <li {% if active_page == "errors" %} class="active"{% endif%}><a id="error" class="right" href="/admin/errors"><i class="material-icons">error</i></a></li>
+                    <!-- <li {% if active_page == "errors" %} class="active"{% endif%}><a id="error" class="right" href="/admin/errors"><i class="material-icons">error</i></a></li> -->
                 </ul>
             {% endif%}
         </div>
     </nav>
-    <div id="container">
+    <div id="container" style="height: 100%;">
         {% block container %}{% endblock %}
     </div>
 </body>
