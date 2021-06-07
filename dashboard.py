@@ -1,19 +1,15 @@
 import re
 import math
-import datetime
 import numpy as np
 import pandas as pd
-import plotly.express as px
-import statsmodels.api as sm
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 from dash import Dash
-from flask import Flask
 from dash.exceptions import PreventUpdate
+from dash.dependencies import Input, Output
 from sklearn.linear_model import LinearRegression
-from dash.dependencies import Input, Output, State
 
 # cd path/to/project
 # pip install -r requirements.txt --user --no-deps
@@ -312,14 +308,11 @@ def mydashboard(flaskApp, instance):
         # select all Stations
         dfParamAll = dfAll.groupby('meas_year').agg(meas_value=('meas_value',
                                                                 'mean'))
-
         meanOfParam = dfParamAll['meas_value'].mean()
         dfParamAll['deviation'] = dfParamAll['meas_value'] - meanOfParam
         dfParamAll['color'] = np.where(dfParamAll['deviation'] >= 0, True,
                                        False)
-
         dfParamAll = dfParamAll.reset_index()
-        # TODO fix param and desc
         dfParamAll = dfParamAll[dfParamAll.meas_year >= yearParam]
 
         # simple regression line
@@ -371,18 +364,19 @@ def mydashboard(flaskApp, instance):
         # creating the map
         plot = go.Figure()
         plot.add_trace(
-            go.Scattermapbox(lat=dfMap['latitude'],
-                             lon=dfMap['longitude'],
-                             hovertemplate=dfMap['text'],
-                             mode='markers',
-                             marker={
-                                 'size': 10,
-                                 'color': colors['d3'],
-                                 'opacity': 0.7
-            }))
+            go.Scattermapbox(
+                lat=dfMap['latitude'],
+                lon=dfMap['longitude'],
+                hovertemplate=dfMap['text'],
+                mode='markers',
+                marker={
+                    'size': 10,
+                    'color': colors['d3'],
+                    'opacity': 0.7
+                }))
 
         plot.update_layout(
-            title_text='Schneefall',
+            title_text='Parameter',
             hovermode='closest',
             showlegend=False,
             margin={
@@ -409,27 +403,29 @@ def mydashboard(flaskApp, instance):
         plot = go.Figure()
 
         plot.add_trace(
-            go.Bar(name='Regenfall',
-                   x=df["meas_year"],
-                   y=df["deviation"],
-                   base=meanOfParam,
-                   marker={
-                       'color': colors['blue'],
-                   }))
+            go.Bar(
+                name='Parameter',
+                x=df["meas_year"],
+                y=df["deviation"],
+                base=meanOfParam,
+                marker={
+                    'color': colors['blue'],
+                }))
 
         plot.add_trace(
-            go.Scatter(name='Regression',
-                       x=df["meas_year"],
-                       y=df["bestfit"],
-                       mode='lines',
-                       marker={
-                           'size': 5,
-                           'color': colors['red'],
-                           'line': {
-                               'width': 1,
-                               'color': 'black'
-                           }
-                       }))
+            go.Scatter(
+                name='Regression',
+                x=df["meas_year"],
+                y=df["bestfit"],
+                mode='lines',
+                marker={
+                    'size': 5,
+                    'color': colors['red'],
+                    'line': {
+                        'width': 1,
+                        'color': 'black'
+                    }
+                }))
 
         plot.update_layout(
             title_x=0.05,
@@ -474,64 +470,67 @@ def mydashboard(flaskApp, instance):
         plot = go.Figure()
 
         plot.add_trace(
-            go.Scatter(name='Schneefall',
-                       x=df['meas_year'],
-                       y=df['meas_value'],
-                       mode='lines',
-                       line_shape='spline',
-                       marker={
-                           'size': 5,
-                           'color': colors['blue'],
-                           'line': {
-                               'width': 1,
-                               'color': 'black'
-                           }
-                       }))
+            go.Scatter(
+                name='Parameter',
+                x=df['meas_year'],
+                y=df['meas_value'],
+                mode='lines',
+                line_shape='spline',
+                marker={
+                    'size': 5,
+                    'color': colors['blue'],
+                    'line': {
+                        'width': 1,
+                        'color': 'black'
+                    }
+                }))
 
         plot.add_trace(
-            go.Scatter(name='Regression',
-                       x=df['meas_year'],
-                       y=df['bestfit'],
-                       mode='lines',
-                       marker={
-                           'size': 5,
-                           'color': colors['red'],
-                           'line': {
-                               'width': 1,
-                               'color': 'black'
-                           }
-                       }))
+            go.Scatter(
+                name='Regression',
+                x=df['meas_year'],
+                y=df['bestfit'],
+                mode='lines',
+                marker={
+                    'size': 5,
+                    'color': colors['red'],
+                    'line': {
+                        'width': 1,
+                        'color': 'black'
+                    }
+                }))
 
-        plot.update_layout(title_x=0.1,
-                           margin={
-                               'l': 25,
-                               'b': 25,
-                               't': 5,
-                               'r': 20
-                           },
-                           height=360,
-                           yaxis={
-                               'color': colors['plotAxisTitle'],
-                               'showgrid': True,
-                               'gridwidth': 1,
-                               'gridcolor': colors['plotGrid'],
-                               'ticksuffix': ' ' + suffix
-                           },
-                           xaxis={
-                               'showgrid': False,
-                               'color': colors['plotAxisTitle'],
-                               'showline': True,
-                               'linecolor': colors['plotGrid']
-                           },
-                           paper_bgcolor=colors['BgPlots'],
-                           plot_bgcolor='rgba(0,0,0,0)',
-                           showlegend=False,
-                           legend={
-                               'yanchor': 'top',
-                               'y': 0.99,
-                               'xanchor': 'right',
-                               'x': 0.99
-                           })
+        plot.update_layout(
+            title_x=0.1,
+            margin={
+                'l': 25,
+                'b': 25,
+                't': 5,
+                'r': 20
+            },
+            height=360,
+            yaxis={
+                'color': colors['plotAxisTitle'],
+                'showgrid': True,
+                'gridwidth': 1,
+                'gridcolor': colors['plotGrid'],
+                'ticksuffix': ' ' + suffix
+            },
+            xaxis={
+                'showgrid': False,
+                'color': colors['plotAxisTitle'],
+                'showline': True,
+                'linecolor': colors['plotGrid']
+            },
+            paper_bgcolor=colors['BgPlots'],
+            plot_bgcolor='rgba(0,0,0,0)',
+            showlegend=False,
+            legend={
+                'yanchor': 'top',
+                'y': 0.99,
+                'xanchor': 'right',
+                'x': 0.99
+            })
 
         return plot
 
@@ -541,7 +540,6 @@ def mydashboard(flaskApp, instance):
 
         plot.add_trace(
             go.Heatmap(
-                # name='Schneefall',
                 x=df['meas_year'],
                 y=df['meas_month'],
                 z=df['meas_value'],
@@ -826,7 +824,7 @@ def mydashboard(flaskApp, instance):
                     # 1st plot 2nd row
                     html.Div([
                         html.Div([
-                            html.H4('Maximaler Regenfall')
+                            html.H4('Maximaler Regenfall in einer Stunde')
                         ], style={
                             'padding-left': 20
                         }
@@ -966,7 +964,8 @@ def mydashboard(flaskApp, instance):
             return dcc.Location(pathname="/", id="hello")
 
     @dashApp.callback(Output('intermediateValue', 'children'),
-                      Output('name', 'children'), Output('MASL', 'children'),
+                      Output('name', 'children'),
+                      Output('MASL', 'children'),
                       Output('selection', 'children'),
                       [Input('plotMap', 'clickData')])
     def callbackMap(clickData):
@@ -1073,9 +1072,10 @@ def mydashboard(flaskApp, instance):
 
     @dashApp.callback(Output('plotRainExtreme', 'figure'),
                       Output('plotTemperature', 'figure'),
-                      Output('plotSnow',
-                             'figure'), Output('plotRain', 'figure'),
-                      Output('name', 'children'), Output('MASL', 'children'),
+                      Output('plotSnow', 'figure'),
+                      Output('plotRain', 'figure'),
+                      Output('name', 'children'),
+                      Output('MASL', 'children'),
                       Output('selection', 'children'),
                       [Input('allStations', 'n_clicks')])
     def callbackAllStations(n_clicks):
