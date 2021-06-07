@@ -253,7 +253,14 @@ def mystory(flaskApp, instance):
 
         return plot
 
-    def plotBarCreation(df, meanRain, colors):
+    def plotBarCreation(df, colors):
+
+        meanOfParam = df['meas_value'].mean()
+        df['deviation'] = df[
+            'meas_value'] - meanOfParam
+        df['color'] = np.where(
+            df['deviation'] >= 0, True, False)
+
         # creating the rain barplot
         plot = go.Figure()
 
@@ -261,7 +268,7 @@ def mystory(flaskApp, instance):
             name='Regenfall',
             x=df["meas_year"],
             y=df["deviation"],
-            base=meanRain,
+            base=meanOfParam,
             marker={
                 'color': colors['rbb'],
                 # 'line': {'width': 1, 'color': 'black'}
@@ -315,65 +322,8 @@ def mystory(flaskApp, instance):
 
         return plot
 
-    def dfBarAllWrangling(
-        dfStations,
-        dfScatter,
-        yearParam
-    ):
-        dfAll = pd.merge(
-            how='inner',
-            left=dfStations,
-            right=dfScatter,
-            left_on='station_short_name',
-            right_on='station'
-        )
-
-        dfAll.sort_values([
-            'station_short_name',
-            'meas_year'
-        ], inplace=True)
-
-        # select all Stations
-        dfParamAll = dfAll.groupby(
-            'meas_year'
-        ).agg(
-            meas_value=('meas_value', 'mean')
-        )
-
-        meanOfParam = dfParamAll['meas_value'].mean()
-        dfParamAll['deviation'] = dfParamAll[
-            'meas_value'] - meanOfParam
-        dfParamAll['color'] = np.where(
-            dfParamAll['deviation'] >= 0, True, False)
-
-        dfParamAll = dfParamAll.reset_index()
-
-        # simple regression line
-        reg = LinearRegression(
-            ).fit(np.vstack(
-                dfParamAll.index), dfParamAll['meas_value'])
-        dfParamAll['bestfit'] = reg.predict(
-            np.vstack(dfParamAll.index))
-
-        return (dfParamAll, meanOfParam)
-
-    def getParamYear(dfSelection, short_name):
-        dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
-        dfSelectionParam = dfSelectionParam[
-            dfSelectionParam.station_name.isin(list(dfStations.station_name))
-        ]
-        yearParam = dfSelectionParam['min'].median()
-
-        if math.isnan(yearParam):
-            yearParam = 0
-
-        return yearParam
-
-    dfSelection = dfSelectionWrangling()
-    dfStations = dfStationsWrangling(dfSelection)
-
-    yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
-    yearTemperature = getParamYear(dfSelection, temperatureParam)
+    # dfSelection = dfSelectionWrangling()
+    # dfStations = dfStationsWrangling(dfSelection)
 
     dfScatterSnow = dfScatterWrangling(snowParam, '1950-01-01')
     # change measurement unit to meters
@@ -382,21 +332,15 @@ def mystory(flaskApp, instance):
     dfScatterRain = dfScatterWrangling(rainParam, '1950-01-01')
 
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam, '1950-01-01')
-    dfRainExtremeAll, meanRain = dfBarAllWrangling(
-        dfStations, dfScatterRainExtreme, yearRainExtreme
-    )
 
     dfScatterTemperature = dfScatterWrangling(temperatureParam, '1950-01-01')
-    dfTemperatureAll, meanTemperature = dfBarAllWrangling(
-        dfStations, dfScatterTemperature, yearTemperature
-    )
 
     # main dashboard function
     def createStory():
         plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
         plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
-        plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
-        plotTemperature = plotBarCreation(dfRainExtremeAll, meanTemperature, colors)
+        plotRainExtreme = plotBarCreation(dfScatterRainExtreme, colors)
+        plotTemperature = plotBarCreation(dfScatterTemperature, colors)
 
         dashAppStory.layout = html.Div([
             # header
