@@ -19,6 +19,7 @@ from dash.dependencies import Input, Output, State
 # pip install -r requirements.txt --user --no-deps
 # ctrl + shift + P -> select interpreter -> new anaconda env
 
+
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
     instance.checkEngine()
@@ -297,7 +298,7 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfParamAll.index), dfParamAll['meas_value'])
+        ).fit(np.vstack(dfParamAll.index), dfParamAll['meas_value'])
         dfParamAll['bestfit'] = reg.predict(np.vstack(dfParamAll.index))
 
         return dfParamAll
@@ -368,8 +369,8 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(
-                dfParamAll.index), dfParamAll['meas_value'])
+        ).fit(np.vstack(
+            dfParamAll.index), dfParamAll['meas_value'])
         dfParamAll['bestfit'] = reg.predict(
             np.vstack(dfParamAll.index))
 
@@ -1050,7 +1051,7 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
+        ).fit(np.vstack(dfSnowAll.meas_year), dfSnowAll['meas_value'])
         dfSnowAll['bestfit'] = reg.predict(np.vstack(dfSnowAll.meas_year))
 
         plotSnow = plotScatterCreation(dfSnowAll, colors, 'm')
@@ -1072,7 +1073,7 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(dfRainAll.meas_year), dfRainAll['meas_value'])
+        ).fit(np.vstack(dfRainAll.meas_year), dfRainAll['meas_value'])
         dfRainAll['bestfit'] = reg.predict(np.vstack(dfRainAll.meas_year))
 
         plotRain = plotScatterCreation(dfRainAll, colors, 'mm')
@@ -1096,10 +1097,10 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(
-                dfRainExtremeAll.meas_year),
-                dfRainExtremeAll['meas_value']
-            )
+        ).fit(np.vstack(
+            dfRainExtremeAll.meas_year),
+            dfRainExtremeAll['meas_value']
+        )
         dfRainExtremeAll['bestfit'] = reg.predict(
             np.vstack(dfRainExtremeAll.meas_year)
         )
@@ -1126,10 +1127,10 @@ def mydashboard(flaskApp, instance):
 
         # simple regression line
         reg = LinearRegression(
-            ).fit(np.vstack(
-                dfTemperatureAll.meas_year),
-                dfTemperatureAll['meas_value']
-            )
+        ).fit(np.vstack(
+            dfTemperatureAll.meas_year),
+            dfTemperatureAll['meas_value']
+        )
         dfTemperatureAll['bestfit'] = reg.predict(
             np.vstack(dfTemperatureAll.meas_year)
         )
