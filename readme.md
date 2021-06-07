@@ -2,6 +2,8 @@
 
 - [Climate API Readme](#climate-api-readme)
   - [Requirements](#requirements)
+    - [Python module installation with pip](#python-module-installation-with-pip)
+    - [Python module installation with conda](#python-module-installation-with-conda)
   - [Installation & Usage](#installation--usage)
     - [With provided database](#with-provided-database)
     - [Without provided database](#without-provided-database)
@@ -71,6 +73,57 @@ The following programs and modules are required to run the climate API
 | pandas                    | 1.1.3   |
 | python_dateutil           | 2.8.1   |
 | scikit_learn              | 0.24.2  |
+
+### Python module installation with pip
+
+If desired, install pipenv with following code:
+
+~~~ cmd
+pip install --user pipenv
+~~~
+
+Installing dependencies with pipenv is done as follows:
+
+~~~ cmd
+pipenv install requests
+~~~
+
+[Pipenv guide](https://docs.python-guide.org/dev/virtualenvs/)
+
+Installing dependencies with pip is done as follows:
+
+~~~ cmd
+pip install numpy
+~~~
+
+In case of issues while starting climate API or conflicting versions run:
+
+~~~ cmd
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+~~~
+
+### Python module installation with conda
+
+If desired, activate environment before installing dependencies with following code:
+
+~~~ cmd
+conda create --no-default-packages -n myenv python
+conda activate ./envs
+~~~
+
+[Anaconda environment documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#:~:text=%20Managing%20environments%20%C2%B6%20%201%20Creating%20an,conda%20environment%20lives%20by%20providing%20a...%20More%20)
+
+Installing dependencies with conda is done as follows:
+
+~~~ cmd
+conda install numpy
+~~~
+
+In case of issues while starting climate API or conflicting versions run:
+
+~~~ cmd
+conda upgrade --all
+~~~
 
 ## Installation & Usage
 
