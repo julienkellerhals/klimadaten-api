@@ -279,6 +279,13 @@ In the case of a blocked idaweb account
 
 [webscraping.py](webscraping.py) contains both meteoschweiz and idaweb scraping functions
 
+Both scraping methods utilize selenium to login and navigate webpages.
+Selenium is currently configured with displayed browser in order to check activity.
+Navigation and click events on page are done with either xpath or javascript paths.
+
+Downloading of data on idaweb are done with the Python request module in headless mode.
+Sessions are passed as arguments for each requests.
+
 ### API
 
 ---
