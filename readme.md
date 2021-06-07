@@ -1,6 +1,6 @@
 # Climate API Readme
 
-- [Climate API Readme](#klima-api-readme)
+- [Climate API Readme](#climate-api-readme)
   - [Requirements](#requirements)
   - [Installation & Usage](#installation--usage)
     - [With provided database](#with-provided-database)
@@ -10,7 +10,7 @@
     - [Install Browser driver](#install-browser-driver)
   - [Extensions](#extensions)
     - [Add new parameters](#add-new-parameters)
-    - [New credentials](#new-credentials)
+    - [New login information](#new-login-information)
   - [How it works](#how-it-works)
     - [Scraping](#scraping)
       - [webscraping.py](#webscrapingpy)
