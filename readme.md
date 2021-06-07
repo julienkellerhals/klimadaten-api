@@ -1,6 +1,6 @@
-# Klima API Readme
+# Climate API Readme
 
-- [Klima API Readme](#klima-api-readme)
+- [Climate API Readme](#klima-api-readme)
   - [Requirements](#requirements)
   - [Installation & Usage](#installation--usage)
     - [With provided database](#with-provided-database)
@@ -34,7 +34,7 @@
     - [Story](#story)
       - [story.py](#storypy)
     - [Tests](#tests)
-      - [webscrapping_test.py](#webscrapping_testpy)
+      - [webscraping_test.py](#webscraping_testpy)
       - [db_test.py TODO Check name when branch is merged](#db_testpy-todo-check-name-when-branch-is-merged)
     - [Database implementation](#database-implementation)
       - [Stage](#stage)
@@ -43,7 +43,7 @@
 
 ## Requirements
 
-Following programms and modules are required to run KlimaAPI
+The following programs and modules are required to run the climate API
 
 - [ ] Python 3.7
 - [ ] Postgres
@@ -78,10 +78,10 @@ Following programms and modules are required to run KlimaAPI
 Add images for clarity between steps
 
 1. Install Python
-2. Install all required modules for Klima API ([Requirements](#requirements))
+2. Install all required modules for the climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Start flask app ([Instruction](#start-flask-app))
-5. Open webbrowser
+5. Open the web browser
 6. Navigate to [localhost:5000](http://localhost:5000)
 7. Configure database connection string (Insert image of config page)
 8. Navigate to database tab of administration overview
@@ -100,10 +100,10 @@ Add images for clarity between steps
 Add images for clarity between steps
 
 1. Install Python
-2. Install all required modules for Klima API ([Requirements](#requirements))
+2. Install all required modules for climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Start flask app ([Instruction](#start-flask-app))
-5. Open webbrowser
+5. Open the web browser
 6. Navigate to [localhost:5000](http://localhost:5000)
 7. Configure database connection string (Insert image of config page)
 8. Navigate to database tab of administration overview
@@ -122,7 +122,7 @@ Add images for clarity between steps
 ### With VSCode and Edge
 
 1. Install Python
-2. Install all required modules for Klima API ([Requirements](#requirements))
+2. Install all required modules for climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Open VSCode
 5. Launch debug config FE + Flask
@@ -165,13 +165,13 @@ export FLASK_ENV=production
 flask run
 ~~~
 
-**Important**, start anaconda / pip env before starting flask app
+**Important**, start anaconda / pip environment before starting the flask app
 
 ### Install Browser driver
 
 In order to get new data selenium requires a browser driver to scrape websites
 
-> Browser version are checked automatically
+> Browser version is checked automatically
 
 Installation as follows:
 
@@ -198,12 +198,12 @@ Chrome
 
 ---
 
-### New credentials
+### New login information
 
-In case of blocked idaweb credentials in code
+In the case of a blocked idaweb account
 
 1. Open [webscraping.py](webscraping.py)
-2. Change credentials at the start of the file
+2. Change the login information at the start of the file
 
 ## How it works
 
@@ -213,7 +213,7 @@ In case of blocked idaweb credentials in code
 
 #### [webscraping.py](webscraping.py)
 
-[webscraping.py](webscraping.py) contain both meteoschweiz and idaweb scraping functions
+[webscraping.py](webscraping.py) contains both meteoschweiz and idaweb scraping functions
 
 ### API
 
@@ -223,20 +223,20 @@ In case of blocked idaweb credentials in code
 
 ##### [app.py](app.py)
 
-1. Instanciates blueprint for all subAPI's in API folder
-2. Contains main routes for API
+1. Instantiates the blueprint for all sub APIs in the API folder
+2. Contains the main routes for the API
 
 ##### API folder
 
-1. All blueprint for different parts of the API
+1. All blueprints for different parts of the API
 
 ###### [adminAPI.py](api/adminAPI.py)
 
-1. Contains main admin page routes
+1. Contains the main admin page routes
 
 ###### [dbAPI.py](api/dbAPI.py)
 
-1. Contains database routes on [admin page](http://localhost:5000/admin)
+1. Contains database routes on the [admin page](http://localhost:5000/admin)
 2. Contains all database interface routes
 
 ###### [scrapeAPI.py](api/scrapeAPI.py)
@@ -245,25 +245,25 @@ In case of blocked idaweb credentials in code
 
 ###### [streamAPI.py](api/streamAPI.py)
 
-1. Handels all sse streams to the front end
+1. Handles all sse streams to the front end
 
 #### [db.py](db.py)
 
-[db.py](db.py) handels following:
+[db.py](db.py) does the following things:
 
 1. All interaction with database
    1. Database creation
    2. Table creation
    3. Selects
    4. Inserts
-2. Creates announcer for front end
-3. Creates messages from database status and sends them over sse to front end
+2. Creates announcer for the front end
+3. Creates messages of database status and sends them over the sse to the front end
 
 #### [download.py](download.py)
 
 Helper file with functions for `POST` and `GET` requests
 
-1. Helper functions for idaweb file download
+1. Contains helper functions for idaweb file download
 
 #### [idawebConfig.xml](idawebConfig.xml)
 
@@ -271,31 +271,31 @@ Helper file with functions for `POST` and `GET` requests
 
 #### [idawebConfigInitial.xml](idawebConfigInitial.xml)
 
-1. Used for developement as temporary storage of configs
+1. Used for development as temporary storage of configurations
 
 #### [messageAnnouncer.py](messageAnnouncer.py)
 
-[messageAnnouncer.py](messageAnnouncer.py) contains following:
+[messageAnnouncer.py](messageAnnouncer.py) does the following things:
 
 1. sse
-2. Queueing
-3. Formating
+2. queueing
+3. formatting
 
 #### [responseDict.py](responseDict.py)
 
-[responseDict.py](responseDict.py) contains following:
+[responseDict.py](responseDict.py) does the following things:
 
-1. Response sending for front end
-2. Button disabling for FE
-3. Progressbar for FE
-4. Start materialized view refresh after data inserts
+1. Response sending for the front end
+2. Button disabling for the front end
+3. Creating a progressbar for the front end
+4. Starting materialized view refresh after data inserts
 
 #### [abstractDriver.py](abstractDriver.py)
 
-[abstractDriver.py](abstractDriver.py) handels all selenium driver interactions
+[abstractDriver.py](abstractDriver.py) handles all selenium driver interactions
 
-1. Driver install
-2. Front end information about driver status
+1. Driver installation
+2. Creating front end information about driver status
 
 ### [Dashboard](http//localhost:5000/dashboard)
 
@@ -303,12 +303,12 @@ Helper file with functions for `POST` and `GET` requests
 
 #### [dashboard.py](dashboard.py)
 
-[dashboard.py](dashboard.py) handels following:
+[dashboard.py](dashboard.py) does the following things:
 
-1. Creation of dashboard and structure
-2. Selection of data displayed in dashboard
-3. Wrangling of selected data
-4. Callbacks handeling for interaction
+1. Creation of the dashboard its structure
+2. Selection of the data displayed on the dashboard
+3. Wrangling of the selected data
+4. Handling of user interaction using callbacks
 
 ### [Story](http://localhost:5000)
 
@@ -316,23 +316,23 @@ Helper file with functions for `POST` and `GET` requests
 
 #### [story.py](story.py)
 
-[story.py](story.py) handels following:
+[story.py](story.py) does the following things:
 
-1. Creation of story and structure
-2. Selection of data displayed in story
-3. Wrangling of selected data
+1. Creation of the story its structure
+2. Selection of data displayed in the story
+3. Wrangling of the selected data
 
 ### [Tests](http://localhost:5000/admin/tests)
 
 ---
 
-#### [webscrapping_test.py](webscraping.py)
+#### [webscraping_test.py](webscraping.py)
 
-Contains all webscraping unit tests
+Contains all unit tests of the webscraping
 
 #### db_test.py TODO Check name when branch is merged
 
-Contains all database unit tests
+Contains all unit tests of the database
 
 ### Database implementation
 
@@ -351,16 +351,16 @@ TODO fix wording and structure
 Stage schema contain all new data
 
 - Can contain duplicate entries
-- No primary keys
-- Raw data
+- Has No primary keys
+- Contains raw data
 
 #### Core
 
 - Cannot contain duplicate entries due to natural primary key violation
 - Data is indexed for faster selects
-- idaweb_t & meteoschweiz_t is merged into measurements_t table
-- Colums get added for datasource description
-- Data gets parsed into format used for future analysis
+- idaweb_t and meteoschweiz_t are merged into measurements_t table
+- Columns get added for the description of the data source
+- Data gets parsed into the format used in future analysis
 - Core data never gets deleted, can be used to add new data
 
 #### ERD
