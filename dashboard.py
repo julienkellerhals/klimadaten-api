@@ -15,6 +15,9 @@ from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
 
+# cd path/to/project
+# pip install -r requirements.txt --user --no-deps
+# ctrl + shift + P -> select interpreter -> new anaconda env
 
 def mydashboard(flaskApp, instance):
     flaskApp = flaskApp
