@@ -76,7 +76,7 @@ def mystory(flaskApp, instance):
         das verlorene Zuhause sehr tief. 
     '''
     InterviewF1 = '''
-        **-	Waren sei überrascht, dass es in Bondo zu solch einem Unglück 
+        **Waren sei überrascht, dass es in Bondo zu solch einem Unglück 
         kam?**
     '''
     InterviewA1 = '''
@@ -87,7 +87,47 @@ def mystory(flaskApp, instance):
         Kanton, um zu prüfen, ob die Schutzmauer nötig sei. Obwohl ich die 
         Mauer selbst gezahlt hätte, wurde das Baugesuch abgelehnt. Von da 
         an war mir bewusst, dass es nur noch eine Frage der Zeit ist.
-    '''    
+    '''
+    InterviewF2 = '''
+        **Wo waren Sie zum Zeitpunkt des Murgangs und wie haben Sie sich 
+        verhalten?**
+    '''
+    InterviewA2 = '''
+
+    '''
+    InterviewF3 = '''
+        **Wurde Ihr Haus stark beschädigt?**
+    '''
+    InterviewA3 = '''
+
+    '''
+    InterviewF4 = '''
+        **Haben Sie Angst, dass es wieder zu so einem Unglück 
+        kommen könnte?**
+    '''
+    InterviewA4 = '''
+
+    '''
+    InterviewF5 = '''
+        **Hat sich das Dorf nach dem Murgang verändert?**
+    '''
+    InterviewA5 = '''
+
+    '''
+    InterviewF6 = '''
+        **Kamen alle Bewohner wieder zurück oder zogen viele in andere 
+        Regionen?**
+    '''
+    InterviewA6 = '''
+
+    ''' 
+    InterviewF7 = '''
+        **Denken Sie, dass dieser Murgang etwas mit dem Klimawandel zu tun 
+        hatte?**
+    '''
+    InterviewA7 = '''
+
+    ''' 
 
     colors = {
         'd1': '#05090C',
@@ -460,6 +500,18 @@ def mystory(flaskApp, instance):
                 dcc.Markdown(text2),
                 dcc.Markdown(InterviewF1),
                 dcc.Markdown(InterviewA1),
+                dcc.Markdown(InterviewF2),
+                dcc.Markdown(InterviewA2),
+                dcc.Markdown(InterviewF3),
+                dcc.Markdown(InterviewA3), 
+                dcc.Markdown(InterviewF4),
+                dcc.Markdown(InterviewA4), 
+                dcc.Markdown(InterviewF5),
+                dcc.Markdown(InterviewA5),
+                dcc.Markdown(InterviewF6),
+                dcc.Markdown(InterviewA6),  
+                dcc.Markdown(InterviewF7),
+                dcc.Markdown(InterviewA7),                                                                           
             ], style={
                 'max-width': 665,
                 'padding-left': 15,
