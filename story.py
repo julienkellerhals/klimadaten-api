@@ -1,6 +1,7 @@
 import re
 import datetime
 import math
+from dash_core_components.Markdown import Markdown
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -23,14 +24,70 @@ def mystory(flaskApp, instance):
     # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
     external_stylesheets = [dbc.themes.UNITED]
 
-    text1 = '''
-        Die Entscheidende Frage bleibt: Wurden die Bergwanderer 
-        durch Warntafeln genügen über die Gefahr in diesem Gebiet informiert? 
-        Die Antwort darauf lautet leider Nein. Die Warntafeln am Ender der 
-        Alpstrasse warnten nur vor möglichen Bergstürzen im rot schraffierten 
-        Vor der Gefahr eines Murgangs im Anschluss an einen Bergsturz wurden 
-        nicht gewarnt
+    title1 = '''
+       # Werden Vorfälle wie in Bondo zukünftig noch mehr Opfer fordern?
     '''
+    title2 = '''
+       #### Wenn einem der Boden unter den Füssen wegrutscht
+    '''
+    subtitle1 = '''
+        **Der Klimawandel kann für uns viele Folgen haben. Eine selten 
+        betrachtete ist die zunehmende Gefahr von Massenbewegungen. Wir werden 
+        nachfolgend die Ursachen und wie sie sich in den vergangenen Jahren 
+        verändert haben aufzuzeigen und am Beispiel von der Messstation auf 
+        dem Weissfluhjoch visualisieren.**
+    '''
+    text1 = '''
+        Bondo ist ein idyllisches Dorf im Kanton Graubünden am Fusse 
+        des Piz Cengalo. Das kleine Dorf nahe der Grenze zu Italien liegt auf 
+        gerade Mal 823m ü. M. Umgeben ist es von über 3000 Meter hohen 
+        Berggipfeln, was dafür sorgt, dass einzelne Dorfteile im Winter 
+        Tagelang keinen Sonnenstrahlen erreichen. 
+        So ist die Region auch Ziel für viele Touristen, die versuchen dem 
+        Stadtalltag zu entfliehen und sich in der Ruhe der Berge zu entspannen. 
+        Auch unter Wanderern ist die Region mit ihren zahlreichen Wanderwegen 
+        und SAC-Hütten ein beliebtes Ziel. Für viele ist es ein Traum in einer 
+        solch wundervollen Berglandschaft zu leben. Dieser Traum wurde für die 
+        Einwohner von Bondo am Mittwoch, dem 23. August 2017 um 09:30 Uhr zu 
+        einem Albtraum. An diesem Tag löste sich eine ein Teil des Piz 
+        Cengalo, was zu einem Murgang führte, der alles in seinem Weg 
+        niederriss. So wurden auch viele Häuser in Bondo zerstört oder 
+        beschädigt. 99 unterschiedliche Gebäude wurden bei dem Vorfall 
+        beschädigt, wovon ein Drittel nicht mehr zu retten war. Noch schlimmer 
+        kam es für acht Wanderer, welche zu diesem Zeitpunkt oberhalb von 
+        Bondo unterwegs waren. Keiner der Wanderer kam bei diesem Unglück mit 
+        dem Leben davon. Die Leichen der Wanderer wurden nie gefunden.
+    '''
+    text2 = '''
+        Annemieke Buob Müller unterrichtete zum Zeitpunkt des Murgangs in 
+        Stampa, einem Nachbardorf von Bondo. Erst am Mittag erfuhr sie vom 
+        Murgang in ihrem Wohnort von ihren Schülern. Gemeinsam mit ihrem Mann 
+        und allen anderen Bewohnern musste sie sich eine neue Unterkunft zu 
+        suchen. Für ihren Mann Reto Müller war es schon immer nur eine Frage 
+        der Zeit, bis sich ein solcher Murgang löst. Für ihn ist klar, dass das 
+        Unglück noch schlimmer hätte kommen können. Wäre ein solches Ereignis 
+        in der Nacht passiert, wären noch viel mehr Leute in den Häusern 
+        gewesen und es hätte mit vielen Toten in Bodo selbst gerechnet werden 
+        müssen. Das Ehepaar, welches seit langer Zeit in Bondo zuhause ist, 
+        kam nach dem Unglück in einer Ferienwohnung in einem Nachbardorf unter. 
+        Sie wurden aus ihrer Zuhause gerissen, ohne zu wissen, wann und ob sie 
+        wieder zurückkönnen. Annemieke sprach nach dem Unglück mit einigen 
+        früheren Nachbaren. Bei allen sass der Schock und der Schmerz über 
+        das verlorene Zuhause sehr tief. 
+    '''
+    InterviewF1 = '''
+        **-	Waren sei überrascht, dass es in Bondo zu solch einem Unglück 
+        kam?**
+    '''
+    InterviewA1 = '''
+        Ich war nicht überrascht von solch einem Unglück. Da es schon 2011 
+        einen kleineren Murgang gab, war es angekündigt. Aus diesem Grund 
+        wollte ich bei meinem Haus, welches in der roten Gefahrenzone lag, 
+        eine Schutzmauer bauen. 2014 kamen Leute von der Gemeinde und vom 
+        Kanton, um zu prüfen, ob die Schutzmauer nötig sei. Obwohl ich die 
+        Mauer selbst gezahlt hätte, wurde das Baugesuch abgelehnt. Von da 
+        an war mir bewusst, dass es nur noch eine Frage der Zeit ist.
+    '''    
 
     colors = {
         'd1': '#05090C',
@@ -397,8 +454,12 @@ def mystory(flaskApp, instance):
             }
             ),
             html.Div([
-                dcc.Markdown('# Guter Titel'),
-                dcc.Markdown(text1),
+                dcc.Markdown(title1),
+                dcc.Markdown(subtitle1),
+                dcc.Markdown(title2),
+                dcc.Markdown(text2),
+                dcc.Markdown(InterviewF1),
+                dcc.Markdown(InterviewA1),
             ], style={
                 'max-width': 665,
                 'padding-left': 15,
