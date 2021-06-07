@@ -775,7 +775,7 @@ def scrapeIdawebOrders(driver):
 
     while not lastPageBool:
         for row in driver.find_elements_by_xpath(
-                    '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
+                '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
             rowContent = []
             for col in row.find_elements_by_tag_name("td"):
                 rowContent.append(col.text)
