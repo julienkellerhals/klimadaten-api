@@ -77,6 +77,7 @@ def mystory(flaskApp, instance):
     rainParam = 'rre150m0'
     snowParam = 'hns000y0'
     rainExtremeParam = 'rhh150yx'
+    temperatureParam = 'tre200y0'
 
     def dfScatterWrangling(param, meas_date='2007-01-01'):
         # data wrangling scatterplot snow
@@ -372,6 +373,7 @@ def mystory(flaskApp, instance):
     dfStations = dfStationsWrangling(dfSelection)
 
     yearRainExtreme = getParamYear(dfSelection, rainExtremeParam)
+    yearTemperature = getParamYear(dfSelection, temperatureParam)
 
     dfScatterSnow = dfScatterWrangling(snowParam, '1950-01-01')
     # change measurement unit to meters
@@ -384,11 +386,17 @@ def mystory(flaskApp, instance):
         dfStations, dfScatterRainExtreme, yearRainExtreme
     )
 
+    dfScatterTemperature = dfScatterWrangling(temperatureParam, '1950-01-01')
+    dfTemperatureAll, meanTemperature = dfBarAllWrangling(
+        dfStations, dfScatterTemperature, yearTemperature
+    )
+
     # main dashboard function
     def createStory():
         plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
         plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
         plotRainExtreme = plotBarCreation(dfRainExtremeAll, meanRain, colors)
+        plotTemperature = plotBarCreation(dfRainExtremeAll, meanTemperature, colors)
 
         dashAppStory.layout = html.Div([
             # header
@@ -512,6 +520,25 @@ def mystory(flaskApp, instance):
                 'horizontal-align': 'center',
                 'margin': '0 auto',
                 # 'vetical-align': 'top',
+            }
+            ),
+            html.Div([
+                dcc.Graph(
+                    id='plotTemperature',
+                    figure=plotTemperature,
+                    config={
+                        'displayModeBar': False,
+                        'staticPlot': False
+                    }
+                )
+            ], style={
+                'backgroundColor': colors['l0'],
+                'height': 370,
+                'box-shadow': shadow,
+                'position': 'relative',
+                'border-radius': 5,
+                'margin': '10px',
+                'padding': 5
             }
             ),
             html.Div([
