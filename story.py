@@ -476,13 +476,13 @@ def mystory(flaskApp, instance):
                     }
                 )
             ], style={
-                'backgroundColor': colors['l0'],
-                'height': 370,
-                'box-shadow': shadow,
-                'position': 'relative',
-                'border-radius': 5,
-                'margin': '10px',
-                'padding': 5
+                'max-width': 965,
+                'padding-left': 15,
+                'padding-right': 15,
+                'padding-top': 0,
+                'horizontal-align': 'center',
+                'margin': '0 auto',
+                # 'vetical-align': 'top',
             }
             ),
             html.Div([
