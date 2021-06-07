@@ -55,39 +55,39 @@ class Database:
         self.dbServiceStatusStream = MessageAnnouncer()
         self.announcer = announcer
         self.stageTableRespDict = ResponseDictionary({
-                "stage": {
-                    "eventSourceUrl": "/admin/stream/getStageTablesStatus",
-                    "progressBar": False,
-                    "action": [
-                        {
-                            "name": "Run scraping",
-                            "actionUrl": "/admin/scrape/",
-                            "enabled": True
-                        },
-                        {
-                            "name": "Stage ETL",
-                            "actionUrl": "/admin/db/etl/stage",
-                            "enabled": True
-                        },
-                    ],
-                }
-            },
+            "stage": {
+                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+                "progressBar": False,
+                "action": [
+                    {
+                        "name": "Run scraping",
+                        "actionUrl": "/admin/scrape/",
+                        "enabled": True
+                    },
+                    {
+                        "name": "Stage ETL",
+                        "actionUrl": "/admin/db/etl/stage",
+                        "enabled": True
+                    },
+                ],
+            }
+        },
             self.stageTablesStatusStream,
             self
         )
         self.coreTableRespDict = ResponseDictionary({
-                "core": {
-                    "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
-                    "progressBar": False,
-                    "action": [
-                        {
-                            "name": "Core ETL",
-                            "actionUrl": "/admin/db/etl/core",
-                            "enabled": True
-                        },
-                    ],
-                }
-            },
+            "core": {
+                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+                "progressBar": False,
+                "action": [
+                    {
+                        "name": "Core ETL",
+                        "actionUrl": "/admin/db/etl/core",
+                        "enabled": True
+                    },
+                ],
+            }
+        },
             self.coreTablesStatusStream,
             self
         )
@@ -274,8 +274,8 @@ class Database:
                 )
         finally:
             self.dbServiceStatusStream.announce(
-                    self.dbServiceStatusStream.format_sse(msgText)
-                )
+                self.dbServiceStatusStream.format_sse(msgText)
+            )
 
     def getDatabaseStatus(self):
         """ Runs _getDatabaseStatus in thread
