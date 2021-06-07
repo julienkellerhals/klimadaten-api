@@ -745,7 +745,7 @@ def mydashboard(flaskApp, instance):
                                     children='alle Stationen',
                                     style={
                                         'backgroundColor': colors['d3'],
-                                        'color':colors['l1'],
+                                        'color': colors['l1'],
                                         'border-radius': 5,
                                     }
                                 )
