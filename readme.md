@@ -8,6 +8,7 @@
     - [With VSCode and Edge](#with-vscode-and-edge)
     - [Start flask app](#start-flask-app)
     - [Install Browser driver](#install-browser-driver)
+    - [Configure database connection string](#configure-database-connection-string)
   - [Extensions](#extensions)
     - [Add new parameters](#add-new-parameters)
     - [New login information](#new-login-information)
@@ -75,15 +76,13 @@ The following programs and modules are required to run the climate API
 
 ### With provided database
 
-Add images for clarity between steps
-
 1. Install Python
 2. Install all required modules for the climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Start flask app ([Instruction](#start-flask-app))
 5. Open the web browser
 6. Navigate to [localhost:5000](http://localhost:5000)
-7. Configure database connection string (Insert image of config page)
+7. Configure database connection string ([Instruction](#configure-database-connection-string))
 8. Navigate to database tab of administration overview
 9. Press action button to connect to database
 10. Open pgAdmin or equivalent
@@ -97,15 +96,13 @@ Add images for clarity between steps
 
 ### Without provided database
 
-Add images for clarity between steps
-
 1. Install Python
 2. Install all required modules for climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Start flask app ([Instruction](#start-flask-app))
 5. Open the web browser
 6. Navigate to [localhost:5000](http://localhost:5000)
-7. Configure database connection string (Insert image of config page)
+7. Configure database connection string ([Instruction](#configure-database-connection-string))
 8. Navigate to database tab of administration overview
 9. Press action button to connect to database
 10. Press action button to create database tables
@@ -126,7 +123,7 @@ Add images for clarity between steps
 3. Install Postgres
 4. Open VSCode
 5. Launch debug config FE + Flask
-6. Configure database connection string (Insert image of config page)
+6. Configure database connection string ([Instruction](#configure-database-connection-string))
 7. Navigate to database tab of administration overview
 8. Press action button to connect to database
 9. Press action button to create database tables
@@ -184,6 +181,20 @@ Edge
 Chrome
 
 1. Navigate to [localhost:5000/admin/driver/Chrome?headless=false](http://localhost:5000/admin/driver/Chrome?headless=false)
+
+### Configure database connection string
+
+![Postgres config page](/static/postgresConfigString.png)
+
+1. Navigate to [localhost:5000/admin](http://localhost:5000/admin)
+2. Choose database type in drop down (Only supports Postgres)
+3. Enter Database username
+4. Enter database password (Not encrypted!)
+5. Enter database location (Only supports localhost)
+6. Select port
+7. Submit form
+
+Postgres connection string is save in [config/config.json](config/config.json)
 
 ## Extensions
 
