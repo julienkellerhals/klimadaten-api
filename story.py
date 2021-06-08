@@ -15,6 +15,7 @@ from flask import Flask
 from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output, State
+from storyText import *
 
 
 def mystory(flaskApp, instance):
@@ -24,110 +25,47 @@ def mystory(flaskApp, instance):
     # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
     external_stylesheets = [dbc.themes.UNITED]
 
-    title1 = '''
-       # Werden Vorfälle wie in Bondo zukünftig noch mehr Opfer fordern?
-    '''
-    title2 = '''
-       #### Wenn einem der Boden unter den Füssen wegrutscht
-    '''
-    subtitle1 = '''
-        **Der Klimawandel kann für uns viele Folgen haben. Eine selten 
-        betrachtete ist die zunehmende Gefahr von Massenbewegungen. Wir werden 
-        nachfolgend die Ursachen und wie sie sich in den vergangenen Jahren 
-        verändert haben aufzuzeigen und am Beispiel von der Messstation auf 
-        dem Weissfluhjoch visualisieren.**
-    '''
-    text1 = '''
-        Bondo ist ein idyllisches Dorf im Kanton Graubünden am Fusse 
-        des Piz Cengalo. Das kleine Dorf nahe der Grenze zu Italien liegt auf 
-        gerade Mal 823m ü. M. Umgeben ist es von über 3000 Meter hohen 
-        Berggipfeln, was dafür sorgt, dass einzelne Dorfteile im Winter 
-        Tagelang keinen Sonnenstrahlen erreichen. 
-        So ist die Region auch Ziel für viele Touristen, die versuchen dem 
-        Stadtalltag zu entfliehen und sich in der Ruhe der Berge zu entspannen. 
-        Auch unter Wanderern ist die Region mit ihren zahlreichen Wanderwegen 
-        und SAC-Hütten ein beliebtes Ziel. Für viele ist es ein Traum in einer 
-        solch wundervollen Berglandschaft zu leben. Dieser Traum wurde für die 
-        Einwohner von Bondo am Mittwoch, dem 23. August 2017 um 09:30 Uhr zu 
-        einem Albtraum. An diesem Tag löste sich eine ein Teil des Piz 
-        Cengalo, was zu einem Murgang führte, der alles in seinem Weg 
-        niederriss. So wurden auch viele Häuser in Bondo zerstört oder 
-        beschädigt. 99 unterschiedliche Gebäude wurden bei dem Vorfall 
-        beschädigt, wovon ein Drittel nicht mehr zu retten war. Noch schlimmer 
-        kam es für acht Wanderer, welche zu diesem Zeitpunkt oberhalb von 
-        Bondo unterwegs waren. Keiner der Wanderer kam bei diesem Unglück mit 
-        dem Leben davon. Die Leichen der Wanderer wurden nie gefunden.
-    '''
-    text2 = '''
-        Annemieke Buob Müller unterrichtete zum Zeitpunkt des Murgangs in 
-        Stampa, einem Nachbardorf von Bondo. Erst am Mittag erfuhr sie vom 
-        Murgang in ihrem Wohnort von ihren Schülern. Gemeinsam mit ihrem Mann 
-        und allen anderen Bewohnern musste sie sich eine neue Unterkunft zu 
-        suchen. Für ihren Mann Reto Müller war es schon immer nur eine Frage 
-        der Zeit, bis sich ein solcher Murgang löst. Für ihn ist klar, dass das 
-        Unglück noch schlimmer hätte kommen können. Wäre ein solches Ereignis 
-        in der Nacht passiert, wären noch viel mehr Leute in den Häusern 
-        gewesen und es hätte mit vielen Toten in Bodo selbst gerechnet werden 
-        müssen. Das Ehepaar, welches seit langer Zeit in Bondo zuhause ist, 
-        kam nach dem Unglück in einer Ferienwohnung in einem Nachbardorf unter. 
-        Sie wurden aus ihrer Zuhause gerissen, ohne zu wissen, wann und ob sie 
-        wieder zurückkönnen. Annemieke sprach nach dem Unglück mit einigen 
-        früheren Nachbaren. Bei allen sass der Schock und der Schmerz über 
-        das verlorene Zuhause sehr tief. 
-    '''
-    InterviewF1 = '''
-        **Waren sei überrascht, dass es in Bondo zu solch einem Unglück 
-        kam?**
-    '''
-    InterviewA1 = '''
-        Ich war nicht überrascht von solch einem Unglück. Da es schon 2011 
-        einen kleineren Murgang gab, war es angekündigt. Aus diesem Grund 
-        wollte ich bei meinem Haus, welches in der roten Gefahrenzone lag, 
-        eine Schutzmauer bauen. 2014 kamen Leute von der Gemeinde und vom 
-        Kanton, um zu prüfen, ob die Schutzmauer nötig sei. Obwohl ich die 
-        Mauer selbst gezahlt hätte, wurde das Baugesuch abgelehnt. Von da 
-        an war mir bewusst, dass es nur noch eine Frage der Zeit ist.
-    '''
-    InterviewF2 = '''
-        **Wo waren Sie zum Zeitpunkt des Murgangs und wie haben Sie sich 
-        verhalten?**
-    '''
-    InterviewA2 = '''
+    imgStyling = {
+        'min-height': '100%',
+        'min-width': '100%',
+        'max-height': '100%',
+        'max-width': '100%'
+    }
 
-    '''
-    InterviewF3 = '''
-        **Wurde Ihr Haus stark beschädigt?**
-    '''
-    InterviewA3 = '''
+    anchorStyling = {
+        'color': '#fff'
+    }
 
-    '''
-    InterviewF4 = '''
-        **Haben Sie Angst, dass es wieder zu so einem Unglück 
-        kommen könnte?**
-    '''
-    InterviewA4 = '''
+    imgWatermarkStyling = {
+        'position': 'absolute',
+        'vertical-align': 'top',
+        'horizontal-align': 'left',
+        'zIndex': 999,
+        'margin-top': -40,
+        'margin-left': 10
+    }
 
-    '''
-    InterviewF5 = '''
-        **Hat sich das Dorf nach dem Murgang verändert?**
-    '''
-    InterviewA5 = '''
+    imgDivStyling = {
+        'max-width': 965,
+        'padding-left': 15,
+        'padding-right': 15,
+        'padding-top': 0,
+        'horizontal-align': 'center',
+        'margin': '0 auto',
+        # 'vetical-align': 'top',
+    }
 
-    '''
-    InterviewF6 = '''
-        **Kamen alle Bewohner wieder zurück oder zogen viele in andere 
-        Regionen?**
-    '''
-    InterviewA6 = '''
+    plotDivStyling = imgDivStyling
 
-    ''' 
-    InterviewF7 = '''
-        **Denken Sie, dass dieser Murgang etwas mit dem Klimawandel zu tun 
-        hatte?**
-    '''
-    InterviewA7 = '''
-
-    ''' 
+    textDivStyling = {
+        'max-width': 665,
+        'padding-left': 15,
+        'padding-right': 15,
+        'padding-top': 40,
+        'horizontal-align': 'center',
+        'margin': '0 auto',
+        # 'vetical-align': 'top',
+    }
 
     colors = {
         'd1': '#05090C',
@@ -494,33 +432,70 @@ def mystory(flaskApp, instance):
             }
             ),
             html.Div([
+                # Pre image 1
                 dcc.Markdown(title1),
                 dcc.Markdown(subtitle1),
                 dcc.Markdown(title2),
                 dcc.Markdown(text2),
+            ], style=textDivStyling
+            ),
+            html.Div([
+                html.Img(
+                    src='/assets/Picture1.jpg',
+                    style=imgStyling
+                ),
+                html.Div([
+                    html.A(
+                        "Some watermark",
+                        href="Some link",
+                        style=anchorStyling
+                    )
+                ], style=imgWatermarkStyling
+                )
+            ], style=imgDivStyling
+            ),
+            html.Div([
+                # Pre image 2
                 dcc.Markdown(InterviewF1),
                 dcc.Markdown(InterviewA1),
                 dcc.Markdown(InterviewF2),
                 dcc.Markdown(InterviewA2),
                 dcc.Markdown(InterviewF3),
-                dcc.Markdown(InterviewA3), 
+                dcc.Markdown(InterviewA3),
                 dcc.Markdown(InterviewF4),
-                dcc.Markdown(InterviewA4), 
+                dcc.Markdown(InterviewA4),
                 dcc.Markdown(InterviewF5),
                 dcc.Markdown(InterviewA5),
                 dcc.Markdown(InterviewF6),
-                dcc.Markdown(InterviewA6),  
+                dcc.Markdown(InterviewA6),
                 dcc.Markdown(InterviewF7),
-                dcc.Markdown(InterviewA7),                                                                           
-            ], style={
-                'max-width': 665,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 40,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
-            }
+                dcc.Markdown(InterviewA7),
+            ], style=textDivStyling
+            ),
+            html.Div([
+                html.Img(
+                    src='/assets/bondoMurgang.jpeg',
+                    style=imgStyling
+                ),
+                html.Div([
+                    html.A(
+                        "© NZZ",
+                        href="https://img.nzz.ch/S=W1720/O=75/http://" +
+                             "nzz-img.s3.amazonaws.com/2017/8/24/" +
+                             "ccdd8fa5-dbfe-485e-95df-2e6984c840fb.jpeg",
+                        style=anchorStyling
+                    )
+                ], style=imgWatermarkStyling
+                )
+            ], style=imgDivStyling
+            ),
+            html.Div([
+                # Post image 2
+                dcc.Markdown(InterviewF6),
+                dcc.Markdown(InterviewA6),
+                dcc.Markdown(InterviewF7),
+                dcc.Markdown(InterviewA7),
+            ], style=textDivStyling
             ),
             html.Div([
                 dcc.Graph(
@@ -531,34 +506,18 @@ def mystory(flaskApp, instance):
                         'staticPlot': False
                     }
                 )
-            ], style={
-                'max-width': 965,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 0,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
-            }
+            ], style=plotDivStyling
             ),
             html.Div([
                 dcc.Graph(
                     id='plotSnow',
                     figure=plotSnow,
                     config={
-                        'displayModeBar': False,                      
+                        'displayModeBar': False,
                         'staticPlot': False
                     }
                 )
-            ], style={
-                'max-width': 965,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 0,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
-            }
+            ], style=plotDivStyling
             ),
             html.Div([
                 dcc.Graph(
@@ -569,15 +528,7 @@ def mystory(flaskApp, instance):
                         'staticPlot': False
                     }
                 )
-            ], style={
-                'max-width': 965,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 0,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
-            }
+            ], style=plotDivStyling
             ),
             html.Div([
                 dcc.Graph(
@@ -588,26 +539,34 @@ def mystory(flaskApp, instance):
                         'staticPlot': False
                     }
                 )
-            ], style={
-                'max-width': 965,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 0,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
-            }
+            ], style=plotDivStyling
             ),
             html.Div([
                 dcc.Markdown(text1),
+            ], style=textDivStyling
+            ),
+            # footer
+            html.Div([
+                html.Div([
+                    html.H2(
+                        'Made with ♥ by Bsc Data Science Students @ FHNW',
+                        style={
+                            'color': colors['l1'],
+                            'display': 'inline-block',
+                            'padding-left': 45,
+                        }
+                    ),
+                ], style={
+                    'text-align': 'left',
+                    'width': '50%',
+                    'display': 'inline-block',
+                }
+                ),
             ], style={
-                'max-width': 665,
-                'padding-left': 15,
-                'padding-right': 15,
-                'padding-top': 40,
-                'horizontal-align': 'center',
-                'margin': '0 auto',
-                # 'vetical-align': 'top',
+                'backgroundColor': colors['d3'],
+                'box-shadow': shadow,
+                'position': 'relative',
+                'padding': '5px',
             }
             ),
         ], style={
