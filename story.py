@@ -57,7 +57,7 @@ def mystory(flaskApp, instance):
         'padding-top': 40,
         'horizontal-align': 'center',
         'margin': '0 auto',
-        'font-size': '1.20rem',
+        'font-size': '1.15rem',
         # 'vetical-align': 'top',
     }
 

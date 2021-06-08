@@ -1,6 +1,8 @@
-# Werden Massenbewegungen wie in Bondo zukünftig noch mehr Opfer fordern?
+# **Werden Massenbewegungen wie in Bondo zukünftig noch mehr Opfer fordern?**
 
 **Der Klimawandel kann für uns viele Folgen haben. Eine selten betrachtete Folge ist die zunehmende Gefahr von Massenbewegungen wie Erdrutschen und Murgängen. Wir werden nachfolgend die Ursachen von Massenbewegungen klären und aufzeigen, wie sich die Ursachen in den vergangenen Jahren verändert haben. Dies visualisieren wir am Beispiel der Messstation auf dem Weissfluhjoch.**
+
+Von Lars Altschul, Julien Kellerhals und Joël Grosjean, 09.06.2021
 
 ## Wenn einem der Boden unter den Füssen wegrutscht
 
@@ -66,6 +68,6 @@ Um für mehr Sicherheit zu sorgen, forscht aktuell die ETH Zürich in Zusammenar
 
 Die Informationen zum Erdrutsch in Bondo und den Persönlichen Einblick der Familie Buob-Müller hatten wir einerseits von einem [Dokumentarfilm](<https://www.youtube.com/watch?v=nEcAy8yzEX0&t=147s>) und andererseits durch ein Persönliches Interview mit Reto Müller, welches wir selbst geführt haben.
 
-Die Daten für unsere Story und die Visualisierungen haben wir von [IDAWEB](<https://gate.meteoswiss.ch/idaweb/login.do;idaweb=1Irr9y2rzur_-anW7Be9xu1cfUi06DGFofkR5AICPuJ-6kblfV8G!1808625866>), welches einem einen kostenlosen Zugriff auf die Archivdaten der Messungen von MeteoSchweiz zur Verfügung stellt. Für die Visualisierung haben wir uns für die Messtation auf dem Weissfluhjoch entschieden, da für diese durchgehend Daten zur Verfügung stehen und sie topografisch ähnlich wie der Piz Cengalo ist.
+Die Daten für unsere Story und die Visualisierungen haben wir von [IDAWEB](<https://gate.meteoswiss.ch/idaweb/login.do;idaweb=1Irr9y2rzur_-anW7Be9xu1cfUi06DGFofkR5AICPuJ-6kblfV8G!1808625866>), welches einen kostenlosen Zugriff auf die Archivdaten der Messungen von MeteoSchweiz zur Verfügung stellt. Für die Visualisierung haben wir uns für die Messtation auf dem Weissfluhjoch entschieden, da für diese durchgehend Daten zur Verfügung stehen und sie topografisch ähnlich zum Piz Cengalo ist.
 
 Informationen zu der Entwicklung einer KI der ETH Zürich zur Früherkennung von Murgängen haben wir von offiziellen [Homepage der ETH Zürich](<https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2021/03/ki-warnt-vor-murgaengen.html>). Weiter hatten wir auch Informationen der [Homepage des WSL](<https://www.wsl.ch/de/naturgefahren/murgang-und-geschiebe.html>) für unsere Story verwendet.
