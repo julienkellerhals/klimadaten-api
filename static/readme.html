@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Climate API Readme</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="climate-api-readme">Climate API Readme</h1>
+<ul>
+<li><a href="#climate-api-readme">Climate API Readme</a>
+<ul>
+<li><a href="#requirements">Requirements</a>
+<ul>
+<li><a href="#python-module-installation-with-pip">Python module installation with pip</a></li>
+<li><a href="#python-module-installation-with-conda">Python module installation with conda</a></li>
+</ul>
+</li>
+<li><a href="#installation--usage">Installation &amp; Usage</a>
+<ul>
+<li><a href="#with-provided-database">With provided database</a></li>
+<li><a href="#without-provided-database">Without provided database</a></li>
+<li><a href="#with-vscode-and-edge">With VSCode and Edge</a></li>
+<li><a href="#start-flask-app">Start flask app</a></li>
+<li><a href="#install-browser-driver">Install Browser driver</a></li>
+<li><a href="#configure-database-connection-string">Configure database connection string</a></li>
+</ul>
+</li>
+<li><a href="#extensions">Extensions</a>
+<ul>
+<li><a href="#add-new-parameters">Add new parameters</a></li>
+<li><a href="#new-login-information">New login information</a></li>
+</ul>
+</li>
+<li><a href="#how-it-works">How it works</a>
+<ul>
+<li><a href="#scraping">Scraping</a>
+<ul>
+<li><a href="#webscrapingpy">webscraping.py</a></li>
+</ul>
+</li>
+<li><a href="#api">API</a>
+<ul>
+<li><a href="#apppy--api-folder">app.py &amp; API folder</a>
+<ul>
+<li><a href="#apppy">app.py</a></li>
+<li><a href="#api-folder">API folder</a>
+<ul>
+<li><a href="#adminapipy">adminAPI.py</a></li>
+<li><a href="#dbapipy">dbAPI.py</a></li>
+<li><a href="#scrapeapipy">scrapeAPI.py</a></li>
+<li><a href="#streamapipy">streamAPI.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#dbpy">db.py</a></li>
+<li><a href="#downloadpy">download.py</a></li>
+<li><a href="#idawebconfigxml">idawebConfig.xml</a></li>
+<li><a href="#idawebconfiginitialxml">idawebConfigInitial.xml</a></li>
+<li><a href="#messageannouncerpy">messageAnnouncer.py</a></li>
+<li><a href="#responsedictpy">responseDict.py</a></li>
+<li><a href="#abstractdriverpy">abstractDriver.py</a></li>
+</ul>
+</li>
+<li><a href="#dashboard">Dashboard</a>
+<ul>
+<li><a href="#dashboardpy">dashboard.py</a></li>
+</ul>
+</li>
+<li><a href="#story">Story</a>
+<ul>
+<li><a href="#storypy">story.py</a></li>
+</ul>
+</li>
+<li><a href="#tests">Tests</a>
+<ul>
+<li><a href="#webscraping_testpy">webscraping_test.py</a></li>
+<li><a href="#db_testpy-todo-check-name-when-branch-is-merged">db_test.py TODO Check name when branch is merged</a></li>
+</ul>
+</li>
+<li><a href="#database-implementation">Database implementation</a>
+<ul>
+<li><a href="#stage">Stage</a></li>
+<li><a href="#core">Core</a></li>
+<li><a href="#erd">ERD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>The following programs and modules are required to run the climate API</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Python 3.7</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Postgres</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Modules</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>modules</th>
+<th>version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dash_bootstrap_components</td>
+<td>0.12.2</td>
+</tr>
+<tr>
+<td>SQLAlchemy_Utils</td>
+<td>0.36.8</td>
+</tr>
+<tr>
+<td>Flask</td>
+<td>1.1.2</td>
+</tr>
+<tr>
+<td>dash</td>
+<td>1.19.0</td>
+</tr>
+<tr>
+<td>msedge_selenium_tools</td>
+<td>3.141.3</td>
+</tr>
+<tr>
+<td>statsmodels</td>
+<td>0.12.0</td>
+</tr>
+<tr>
+<td>urllib3</td>
+<td>1.25.11</td>
+</tr>
+<tr>
+<td>plotly</td>
+<td>4.14.3</td>
+</tr>
+<tr>
+<td>dash_core_components</td>
+<td>1.3.1</td>
+</tr>
+<tr>
+<td>numpy</td>
+<td>1.19.2</td>
+</tr>
+<tr>
+<td>selenium</td>
+<td>3.141.0</td>
+</tr>
+<tr>
+<td>SQLAlchemy</td>
+<td>1.3.20</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>2.24.0</td>
+</tr>
+<tr>
+<td>dash_html_components</td>
+<td>1.0.1</td>
+</tr>
+<tr>
+<td>pytest</td>
+<td>0.0.0</td>
+</tr>
+<tr>
+<td>lxml</td>
+<td>4.6.1</td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>1.1.3</td>
+</tr>
+<tr>
+<td>python_dateutil</td>
+<td>2.8.1</td>
+</tr>
+<tr>
+<td>scikit_learn</td>
+<td>0.24.2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python-module-installation-with-pip">Python module installation with pip</h3>
+<p>If desired, install pipenv with following code:</p>
+<pre><code class="language-cmd"><div>pip install --user pipenv
+</div></code></pre>
+<p>Installing dependencies with pipenv is done as follows:</p>
+<pre><code class="language-cmd"><div>pipenv install requests
+</div></code></pre>
+<p><a href="https://docs.python-guide.org/dev/virtualenvs/">Pipenv guide</a></p>
+<p>Installing dependencies with pip is done as follows:</p>
+<pre><code class="language-cmd"><div>pip install numpy
+</div></code></pre>
+<p>In case of issues while starting climate API or conflicting versions run:</p>
+<pre><code class="language-cmd"><div>pip freeze | %{$_.split(&#x27;==&#x27;)[<span class="hljs-number">0</span>]} | %{pip install --upgrade $_}
+</div></code></pre>
+<h3 id="python-module-installation-with-conda">Python module installation with conda</h3>
+<p>If desired, activate environment before installing dependencies with following code:</p>
+<pre><code class="language-cmd"><div>conda create --no-default-packages -n myenv python
+conda activate ./envs
+</div></code></pre>
+<p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#:~:text=%20Managing%20environments%20%C2%B6%20%201%20Creating%20an,conda%20environment%20lives%20by%20providing%20a...%20More%20">Anaconda environment documentation</a></p>
+<p>Installing dependencies with conda is done as follows:</p>
+<pre><code class="language-cmd"><div>conda install numpy
+</div></code></pre>
+<p>In case of issues while starting climate API or conflicting versions run:</p>
+<pre><code class="language-cmd"><div>conda upgrade --all
+</div></code></pre>
+<h2 id="installation--usage">Installation &amp; Usage</h2>
+<h3 id="with-provided-database">With provided database</h3>
+<ol>
+<li>Install Python</li>
+<li>Install all required modules for the climate API (<a href="#requirements">Requirements</a>)</li>
+<li>Install Postgres</li>
+<li>Start flask app (<a href="#start-flask-app">Instruction</a>)</li>
+<li>Open the web browser</li>
+<li>Navigate to <a href="http://localhost:5000">localhost:5000</a></li>
+<li>Configure database connection string (<a href="#configure-database-connection-string">Instruction</a>)</li>
+<li>Navigate to database tab of administration overview</li>
+<li>Press action button to connect to database</li>
+<li>Open pgAdmin or equivalent</li>
+<li>Import database</li>
+<li>Uncomment dashboard creation line in <a href="app.py">app.py</a></li>
+<li>Start server (<a href="#start-flask-app">Instruction</a>)</li>
+<li>Navigate to <a href="http://localhost:5000/admin">localhost:5000/admin</a></li>
+<li>Use app</li>
+</ol>
+<hr>
+<h3 id="without-provided-database">Without provided database</h3>
+<ol>
+<li>Install Python</li>
+<li>Install all required modules for climate API (<a href="#requirements">Requirements</a>)</li>
+<li>Install Postgres</li>
+<li>Start flask app (<a href="#start-flask-app">Instruction</a>)</li>
+<li>Open the web browser</li>
+<li>Navigate to <a href="http://localhost:5000">localhost:5000</a></li>
+<li>Configure database connection string (<a href="#configure-database-connection-string">Instruction</a>)</li>
+<li>Navigate to database tab of administration overview</li>
+<li>Press action button to connect to database</li>
+<li>Press action button to create database tables</li>
+<li>Run ETL load</li>
+<li>Run Core load</li>
+<li>Stop server</li>
+<li>Uncomment dashboard creation line in <a href="app.py">app.py</a></li>
+<li>Start server (<a href="#start-flask-app">Instruction</a>)</li>
+<li>Navigate to <a href="http://localhost:5000/admin">localhost:5000/admin</a></li>
+<li>Use app</li>
+</ol>
+<hr>
+<h3 id="with-vscode-and-edge">With VSCode and Edge</h3>
+<ol>
+<li>Install Python</li>
+<li>Install all required modules for climate API (<a href="#requirements">Requirements</a>)</li>
+<li>Install Postgres</li>
+<li>Open VSCode</li>
+<li>Launch debug config FE + Flask</li>
+<li>Configure database connection string (<a href="#configure-database-connection-string">Instruction</a>)</li>
+<li>Navigate to database tab of administration overview</li>
+<li>Press action button to connect to database</li>
+<li>Press action button to create database tables</li>
+<li>Run ETL load</li>
+<li>Run Core load</li>
+<li>Stop server</li>
+<li>Uncomment dashboard creation line in <a href="app.py">app.py</a></li>
+<li>Launch debug config FE + Flask</li>
+<li>Use app</li>
+</ol>
+<hr>
+<h3 id="start-flask-app">Start flask app</h3>
+<p>Command Prompt</p>
+<pre><code class="language-cmd"><div>&gt; <span class="hljs-built_in">set</span> FLASK_APP=app.py
+&gt; <span class="hljs-built_in">set</span> FLASK_ENV=production
+&gt; flask run
+</div></code></pre>
+<p>PowerShell</p>
+<pre><code class="language-powershell"><div>&gt; <span class="hljs-variable">$env:FLASK_APP</span> = <span class="hljs-string">&quot;app.py&quot;</span>
+&gt; <span class="hljs-variable">$env:FLASK_ENV</span> = <span class="hljs-string">&quot;production&quot;</span>
+&gt; flask run
+</div></code></pre>
+<p>Linux (untested)</p>
+<pre><code class="language-bash"><div><span class="hljs-built_in">export</span> FLASK_APP=app.py
+<span class="hljs-built_in">export</span> FLASK_ENV=production
+flask run
+</div></code></pre>
+<p><strong>Important</strong>, start anaconda / pip environment before starting the flask app</p>
+<h3 id="install-browser-driver">Install Browser driver</h3>
+<p>In order to get new data selenium requires a browser driver to scrape websites</p>
+<blockquote>
+<p>Browser version is checked automatically</p>
+</blockquote>
+<p>Installation as follows:</p>
+<p>Edge</p>
+<ol>
+<li>Navigate to <a href="http://localhost:5000/admin">localhost:5000/admin</a></li>
+<li>Press <code>Driver name</code></li>
+<li>Press <code>Download driver</code></li>
+</ol>
+<p>Chrome</p>
+<ol>
+<li>Navigate to <a href="http://localhost:5000/admin/driver/Chrome?headless=false">localhost:5000/admin/driver/Chrome?headless=false</a></li>
+</ol>
+<h3 id="configure-database-connection-string">Configure database connection string</h3>
+<p><img src="/static/postgresConfigString.png" alt="Postgres config page"></p>
+<ol>
+<li>Navigate to <a href="http://localhost:5000/admin">localhost:5000/admin</a></li>
+<li>Choose database type in drop down (Only supports Postgres)</li>
+<li>Enter Database username</li>
+<li>Enter database password (Not encrypted!)</li>
+<li>Enter database location (Only supports localhost)</li>
+<li>Select port</li>
+<li>Submit form</li>
+</ol>
+<p>Postgres connection string is save in <a href="config/config.json">config/config.json</a></p>
+<h2 id="extensions">Extensions</h2>
+<h3 id="add-new-parameters">Add new parameters</h3>
+<ol>
+<li>Open <a href="idawebConfig.xml">idawebConfig.xml</a></li>
+<li>Add new parameter with name, group and granularity</li>
+<li>Restart Server</li>
+<li>Navigate to <a href="http://localhost:5000/admin/database">localhost:5000/admin/database</a></li>
+<li>Click on idaweb_t</li>
+<li>Run increment load</li>
+</ol>
+<hr>
+<h3 id="new-login-information">New login information</h3>
+<p>In the case of a blocked idaweb account</p>
+<ol>
+<li>Open <a href="webscraping.py">webscraping.py</a></li>
+<li>Change the login information at the start of the file</li>
+</ol>
+<h2 id="how-it-works">How it works</h2>
+<h3 id="scraping">Scraping</h3>
+<hr>
+<h4 id="webscrapingpy"><a href="webscraping.py">webscraping.py</a></h4>
+<p><a href="webscraping.py">webscraping.py</a> contains both meteoschweiz and idaweb scraping functions</p>
+<p>Both scraping methods utilize selenium to login and navigate webpages.
+Selenium is currently configured with displayed browser in order to check activity.
+Navigation and click events on page are done with either xpath or javascript paths.</p>
+<p>Downloading of data on idaweb are done with the Python request module in headless mode.
+Sessions are passed as arguments for each requests.</p>
+<h3 id="api">API</h3>
+<hr>
+<h4 id="apppy--api-folder"><a href="app.py">app.py</a> &amp; API folder</h4>
+<h5 id="apppy"><a href="app.py">app.py</a></h5>
+<ol>
+<li>Instantiates the blueprint for all sub APIs in the API folder</li>
+<li>Contains the main routes for the API</li>
+</ol>
+<h5 id="api-folder">API folder</h5>
+<ol>
+<li>All blueprints for different parts of the API</li>
+</ol>
+<h6 id="adminapipy"><a href="api/adminAPI.py">adminAPI.py</a></h6>
+<ol>
+<li>Contains the main admin page routes</li>
+</ol>
+<h6 id="dbapipy"><a href="api/dbAPI.py">dbAPI.py</a></h6>
+<ol>
+<li>Contains database routes on the <a href="http://localhost:5000/admin">admin page</a></li>
+<li>Contains all database interface routes</li>
+</ol>
+<h6 id="scrapeapipy"><a href="api/scrapeAPI.py">scrapeAPI.py</a></h6>
+<ol>
+<li>Contains all scraping routes</li>
+</ol>
+<h6 id="streamapipy"><a href="api/streamAPI.py">streamAPI.py</a></h6>
+<ol>
+<li>Handles all sse streams to the front end</li>
+</ol>
+<h4 id="dbpy"><a href="db.py">db.py</a></h4>
+<p><a href="db.py">db.py</a> does the following things:</p>
+<ol>
+<li>All interaction with database
+<ol>
+<li>Database creation</li>
+<li>Table creation</li>
+<li>Selects</li>
+<li>Inserts</li>
+</ol>
+</li>
+<li>Creates announcer for the front end</li>
+<li>Creates messages of database status and sends them over the sse to the front end</li>
+</ol>
+<h4 id="downloadpy"><a href="download.py">download.py</a></h4>
+<p>Helper file with functions for <code>POST</code> and <code>GET</code> requests</p>
+<ol>
+<li>Contains helper functions for idaweb file download</li>
+</ol>
+<h4 id="idawebconfigxml"><a href="idawebConfig.xml">idawebConfig.xml</a></h4>
+<ol>
+<li>Contains idaweb parameters to download and refresh</li>
+</ol>
+<h4 id="idawebconfiginitialxml"><a href="idawebConfigInitial.xml">idawebConfigInitial.xml</a></h4>
+<ol>
+<li>Used for development as temporary storage of configurations</li>
+</ol>
+<h4 id="messageannouncerpy"><a href="messageAnnouncer.py">messageAnnouncer.py</a></h4>
+<p><a href="messageAnnouncer.py">messageAnnouncer.py</a> does the following things:</p>
+<ol>
+<li>sse</li>
+<li>queueing</li>
+<li>formatting</li>
+</ol>
+<h4 id="responsedictpy"><a href="responseDict.py">responseDict.py</a></h4>
+<p><a href="responseDict.py">responseDict.py</a> does the following things:</p>
+<ol>
+<li>Response sending for the front end</li>
+<li>Button disabling for the front end</li>
+<li>Creating a progressbar for the front end</li>
+<li>Starting materialized view refresh after data inserts</li>
+</ol>
+<h4 id="abstractdriverpy"><a href="abstractDriver.py">abstractDriver.py</a></h4>
+<p><a href="abstractDriver.py">abstractDriver.py</a> handles all selenium driver interactions</p>
+<ol>
+<li>Driver installation</li>
+<li>Creating front end information about driver status</li>
+</ol>
+<h3 id="dashboard"><a href="http//localhost:5000/dashboard">Dashboard</a></h3>
+<hr>
+<h4 id="dashboardpy"><a href="dashboard.py">dashboard.py</a></h4>
+<p><a href="dashboard.py">dashboard.py</a> does the following things:</p>
+<ol>
+<li>Creation of the dashboard its structure</li>
+<li>Selection of the data displayed on the dashboard</li>
+<li>Wrangling of the selected data</li>
+<li>Handling of user interaction using callbacks</li>
+</ol>
+<h3 id="story"><a href="http://localhost:5000">Story</a></h3>
+<hr>
+<h4 id="storypy"><a href="story.py">story.py</a></h4>
+<p><a href="story.py">story.py</a> does the following things:</p>
+<ol>
+<li>Creation of the story its structure</li>
+<li>Selection of data displayed in the story</li>
+<li>Wrangling of the selected data</li>
+</ol>
+<h3 id="tests"><a href="http://localhost:5000/admin/tests">Tests</a></h3>
+<hr>
+<h4 id="webscraping_testpy"><a href="webscraping.py">webscraping_test.py</a></h4>
+<p>Contains all unit tests of the webscraping</p>
+<h4 id="db_testpy-todo-check-name-when-branch-is-merged">db_test.py TODO Check name when branch is merged</h4>
+<p>Contains all unit tests of the database</p>
+<h3 id="database-implementation">Database implementation</h3>
+<hr>
+<p>TODO fix wording and structure</p>
+<ul>
+<li>Database is divided into two main schemas, Stage and Core</li>
+<li>All tables have corresponding materialized views for number of rows and last update</li>
+<li>Data is copied from left to right
+<ul>
+<li>Text files / Web into stage tables</li>
+<li>Stage tables into Core tables</li>
+</ul>
+</li>
+</ul>
+<h4 id="stage">Stage</h4>
+<p>Stage schema contain all new data</p>
+<ul>
+<li>Can contain duplicate entries</li>
+<li>Has No primary keys</li>
+<li>Contains raw data</li>
+</ul>
+<h4 id="core">Core</h4>
+<ul>
+<li>Cannot contain duplicate entries due to natural primary key violation</li>
+<li>Data is indexed for faster selects</li>
+<li>idaweb_t and meteoschweiz_t are merged into measurements_t table</li>
+<li>Columns get added for the description of the data source</li>
+<li>Data gets parsed into the format used in future analysis</li>
+<li>Core data never gets deleted, can be used to add new data</li>
+</ul>
+<h4 id="erd">ERD</h4>
+<p><img src="/static/databaseERD.png" alt="databaseERD"></p>
+
+    </body>
+    </html>
