@@ -57,6 +57,7 @@ def mystory(flaskApp, instance):
         'padding-top': 40,
         'horizontal-align': 'center',
         'margin': '0 auto',
+        'font-size': '1.20rem',
         # 'vetical-align': 'top',
     }
 
@@ -507,11 +508,11 @@ def mystory(flaskApp, instance):
                             'color': colors['l1'],
                             'display': 'inline-block',
                             'padding-left': 45,
+                            'padding-right': 45,
                         }
                     ),
                 ], style={
                     'text-align': 'left',
-                    'width': '50%',
                     'display': 'inline-block',
                     'margin-top': 20,
                     'margin-bottom': 20,
