@@ -107,8 +107,19 @@ def getAllStations():
         'precipitation',
         'station'
     ])
-
     return allStationsDf
+
+
+def getUrls(driver):
+    driver.get(
+        "https://www.meteoschweiz.admin.ch/home/klima/"
+        + "schweizer-klima-im-detail/"
+        + "homogene-messreihen-ab-1864.html?region=Tabelle"
+    )
+    urls = driver.find_elements_by_xpath(
+        "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
+    )
+    return urls    
 
 
 def _scrape_meteoschweiz(driver, engine, announcer):
@@ -131,14 +142,7 @@ def _scrape_meteoschweiz(driver, engine, announcer):
     url_list = []
     allStationsDf = getAllStations()
 
-    driver.get(
-        "https://www.meteoschweiz.admin.ch/home/klima/"
-        + "schweizer-klima-im-detail/"
-        + "homogene-messreihen-ab-1864.html?region=Tabelle"
-    )
-    urls = driver.find_elements_by_xpath(
-        "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
-    )
+    urls = getUrls(driver)
 
     for urlEl in urls:
         url = urlEl.get_attribute('href')
