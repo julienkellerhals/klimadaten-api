@@ -8,7 +8,16 @@ import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output
-from storyText import *
+from storyText import (
+    title, desc, author, subtitle1, text1, text2,  # Bild
+    text3, text4, text5,  # Bild
+    text6, text7, text8, subtitle2, text9, text10,  # Plot Temp
+    text11, text12, text13, text14,  # Plot Snow
+    text15,  # Plot Rain
+    text16, text17,  # Plot Rain Extreme
+    text18, subtitle3, text19, text20, text21,  # Sep
+    sep, subtitle4, text22, text23, text24
+)
 
 
 def mystory(flaskApp, instance):
@@ -375,6 +384,7 @@ def mystory(flaskApp, instance):
             html.Div([
                 dcc.Markdown(title),
                 dcc.Markdown(desc),
+                dcc.Markdown(author),
                 dcc.Markdown(subtitle1),
                 dcc.Markdown(text1),
                 dcc.Markdown(text2),
