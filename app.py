@@ -62,25 +62,13 @@ def before_request():
 
 
 @app.route("/")
-def mainPage():
-    """ Main page
-
-    Returns:
-        str: Temp main return
-    """
-
-    return "Hello World, story will be here"
+def render_story():
+    return Flask.redirect('/dash')
 
 
-@app.route("/api")
-def api():
-    """ API
-
-    Returns:
-        str: Temp
-    """
-
-    return "API"
+@app.route('/dashboard')
+def render_dashboard():
+    return Flask.redirect('/dash')
 
 
 @app.route('/favicon.ico')
@@ -90,13 +78,3 @@ def favicon():
         'favicon.ico',
         mimetype='image/vnd.microsoft.icon'
     )
-
-
-@app.route("/")
-def render_story():
-    return Flask.redirect('/dash')
-
-
-@app.route('/dashboard')
-def render_dashboard():
-    return Flask.redirect('/dash')
