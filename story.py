@@ -199,12 +199,6 @@ def mystory(flaskApp, instance):
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
             showlegend=False,
-            # legend={
-            #     'yanchor': 'top',
-            #     'y': 0.99,
-            #     'xanchor': 'right',
-            #     'x': 0.99
-            # }
         )
 
         return plot
@@ -281,6 +275,12 @@ def mystory(flaskApp, instance):
         dfScatterRainExtreme.meas_year != 2021]
     dfScatterRainExtreme = dfScatterRainExtreme[
         dfScatterRainExtreme.meas_year != min(dfScatterRainExtreme.meas_year)]
+    # simple regression line
+    reg = LinearRegression(
+        ).fit(np.vstack(
+            dfScatterRainExtreme.index), dfScatterRainExtreme['meas_value'])
+    dfScatterRainExtreme['bestfit'] = reg.predict(np.vstack(
+        dfScatterRainExtreme.index))
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
 
     # main dashboard function
@@ -322,7 +322,7 @@ def mystory(flaskApp, instance):
             html.Div([
                 html.Div([
                     html.H2(
-                        'Erdrutsch in Bondo',
+                        'Massenbewegung in Bondo',
                         id='titleDashboard',
                         style={
                             'color': colors['l1'],
