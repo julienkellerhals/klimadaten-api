@@ -2,7 +2,7 @@
 
 **Der Klimawandel kann für uns viele Folgen haben. Eine selten betrachtete Folge ist die zunehmende Gefahr von Massenbewegungen wie Erdrutschen und Murgängen. Wir werden nachfolgend die Ursachen von Massenbewegungen klären und aufzeigen, wie sich die Ursachen in den vergangenen Jahren verändert haben. Dies visualisieren wir am Beispiel der Messstation auf dem Weissfluhjoch.**
 
-Von Lars Altschul, Julien Kellerhals und Joël Grosjean, 09.06.2021
+###### Von Lars Altschul, Julien Kellerhals und Joël Grosjean, 09.06.2021
 
 ## Wenn einem der Boden unter den Füssen wegrutscht
 
