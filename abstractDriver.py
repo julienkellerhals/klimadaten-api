@@ -51,7 +51,6 @@ class AbstractDriver():
             "action": [
                 {
                     "name": "Download driver",
-                    # TODO make this work for all browser
                     "actionUrl": "http://localhost:5000/admin/driver/"
                                  "Edg?headless=false",
                     "enabled": True

@@ -58,7 +58,6 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
-    # TODO Make this more dynamic
     @streamApi.route("/getStageTablesStatus")
     def streamStageTablesStatus():
         instance.getStageTablesStatus()
@@ -67,7 +66,6 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
-    # TODO Make this more dynamic
     @streamApi.route("/getCoreTablesStatus")
     def streamCoreTablesStatus():
         instance.getCoreTablesStatus()
@@ -76,7 +74,6 @@ def constructBlueprint(announcer, instance, abstractDriver):
             mimetype='text/event-stream'
         )
 
-    # TODO Make this more dynamic
     @streamApi.route("/getDatamartTablesStatus")
     def streamDatamartTablesStatus():
         instance.getDatamartTablesStatus()
