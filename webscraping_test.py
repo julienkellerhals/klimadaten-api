@@ -73,6 +73,23 @@ class TestMeteoSchweiz():
         else:
             assert False
 
+    def testStartWebscrapingStations(self):
+        driver = abstractDriver.getDriver()
+        urls = getUrls(driver)
+        url_list = []
+        allStationsDf = setAllStations()
+
+        url_list, allStationsDf = startWebscraping(
+            url_list,
+            urls,
+            announcer,
+            allStationsDf
+        )
+        if isinstance(allStationsDf, List):
+            assert len(allStationsDf) != 0
+        else:
+            assert False
+
 
 @pytest.mark.idaweb
 class TestIDAWeb():
