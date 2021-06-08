@@ -48,6 +48,14 @@ class TestMeteoSchweiz():
         else:
             assert False
 
+    def getUrls(self):
+        driver = abstractDriver.getDriver()
+        urls = getUrls(driver)
+        if isinstance(urls, pd.DataFrame):
+            assert len(urls) != 0
+        else:
+            assert False
+
 
 @pytest.mark.idaweb
 class TestIDAWeb():
