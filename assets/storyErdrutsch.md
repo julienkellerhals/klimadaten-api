@@ -62,7 +62,7 @@ Um für mehr Sicherheit zu sorgen, forscht aktuell die ETH Zürich in Zusammenar
 
 ---
 
-## Die Untersuchung
+#### Die Untersuchung
 
 Die Informationen über den Erdrutsch in Bondo und den Persönlichen Einblick der Familie Buob-Müller hatten wir einerseits von einem Dokumentarfilm (<https://www.youtube.com/watch?v=nEcAy8yzEX0&t=147s>) weiter haben wir eine Persönliches Interview mit ihnen geführt, um weiter Informationen zu erhalten.
 
