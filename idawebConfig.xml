@@ -1,4 +1,6 @@
 <root>
-    <config granularity="Y" group="precipitation">rsd300y0</config>
-    <config granularity="Y" group="precipitation">rre150yx</config>
+    <config granularity="M" group="precipitation">rhh150mx</config>
+    <config granularity="Y" group="snow">hns000y0</config>
+    <config granularity="Y" group="temperature">tre200y0</config>
+    <config granularity="Y" group="precipitation">rre150y0</config>
 </root>
