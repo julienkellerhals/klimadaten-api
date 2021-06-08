@@ -114,7 +114,7 @@ def mystory(flaskApp, instance):
     rainExtremeParam = 'rhh150yx'
     temperatureParam = 'tre200y0'
 
-    def dfScatterWrangling(param, meas_date='2007-01-01'):
+    def dfScatterWrangling(param):
         # data wrangling scatterplot snow
         dfScatter = pd.read_sql(
             f"""
@@ -132,7 +132,6 @@ def mystory(flaskApp, instance):
             AND k.station_name = 'Weissfluhjoch'
             AND m.valid_to = '2262-04-11'
             AND k.valid_to = '2262-04-11'
-            AND m.meas_date >= {"'" + meas_date +"'"}
             ORDER BY station, meas_date ASC
             """,
             engine
@@ -145,82 +144,6 @@ def mystory(flaskApp, instance):
         dfScatter['bestfit'] = reg.predict(np.vstack(dfScatter.index))
 
         return dfScatter
-
-    def dfSelectionWrangling():
-        # Select the stations with the highest quality data
-        dfSelection = pd.read_sql(
-            """
-            SELECT
-                station_name,
-                station_short_name,
-                meas_name,
-                min(meas_year),
-                COUNT(*)
-            FROM(
-                SELECT
-                    extract(year from m.meas_date) as meas_year,
-                    k.station_short_name,
-                    k.station_name,
-                    m.meas_name
-                FROM core.measurements_t m
-                JOIN core.station_t k
-                ON (m.station = k.station_short_name)
-                WHERE m.meas_name IN (
-                    'hns000y0',
-                    'hto000y0',
-                    'rre150y0',
-                    'rzz150yx',
-                    'rhh150yx',
-                    'tnd00xy0',
-                    'tre200y0'
-                )
-                AND k.parameter IN (
-                    'hns000y0',
-                    'hto000y0',
-                    'rre150y0',
-                    'rzz150yx',
-                    'rhh150yx',
-                    'tnd00xy0',
-                    'tre200y0'
-                )
-                AND m.valid_to = '2262-04-11'
-                AND k.valid_to = '2262-04-11'
-                AND k.station_name = 'Weissfluhjoch'
-                GROUP BY
-                meas_year,
-                k.station_name,
-                k.station_short_name,
-                m.meas_name
-            ) AS filtered
-            GROUP BY
-                station_name,
-                station_short_name,
-                station_name,
-                meas_name
-            HAVING COUNT(*) >= 30
-            ORDER BY COUNT(*) DESC
-            """,
-            engine
-        )
-
-        dfSelection['years'] = 2020 - dfSelection['min']
-        dfSelection['ratio'] = dfSelection['count'] / dfSelection['years']
-        dfSelection = dfSelection[dfSelection.ratio >= 0.90]
-
-        return dfSelection
-
-    def dfStationsWrangling(dfSelection):
-        dfStations = dfSelection.groupby([
-            'station_short_name',
-            'station_name'
-        ]).agg(
-            meas_name=('meas_name', 'count'),
-            # min = ('min', 'min'),
-            # ratio = ('ratio', 'min')
-        ).reset_index()
-        dfStations = dfStations[dfStations.meas_name == 7]
-
-        return dfStations
 
     def plotScatterCreation(df, colors, param_name):
         # creating the snow scatterplot with all stations
@@ -278,6 +201,7 @@ def mystory(flaskApp, instance):
             },
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
+            showlegend=False,
             # legend={
             #     'yanchor': 'top',
             #     'y': 0.99,
@@ -288,7 +212,7 @@ def mystory(flaskApp, instance):
 
         return plot
 
-    def plotBarCreation(df, colors):
+    def plotBarCreation(df, colors, param_name):
 
         meanOfParam = df['meas_value'].mean()
         df['deviation'] = df[
@@ -300,7 +224,7 @@ def mystory(flaskApp, instance):
         plot = go.Figure()
 
         plot.add_trace(go.Bar(
-            name='Regenfall',
+            name=param_name,
             x=df["meas_year"],
             y=df["deviation"],
             base=meanOfParam,
@@ -347,35 +271,26 @@ def mystory(flaskApp, instance):
             height=360,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
-            legend={
-                'yanchor': 'top',
-                'y': 0.99,
-                'xanchor': 'left',
-                'x': 0.01
-            }
+            showlegend=False,
         )
 
         return plot
 
-    # dfSelection = dfSelectionWrangling()
-    # dfStations = dfStationsWrangling(dfSelection)
-
-    dfScatterSnow = dfScatterWrangling(snowParam, '1950-01-01')
-    # change measurement unit to meters
-    # dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
-
-    dfScatterRain = dfScatterWrangling(rainParam, '1950-01-01')
-
-    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam, '1950-01-01')
-
-    dfScatterTemperature = dfScatterWrangling(temperatureParam, '1950-01-01')
+    dfScatterSnow = dfScatterWrangling(snowParam)
+    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
+    dfScatterSnow['bestfit'] = round(dfScatterSnow.meas_value / 100, 2)
+    dfScatterRain = dfScatterWrangling(rainParam)
+    dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    dfScatterTemperature = dfScatterWrangling(temperatureParam)
 
     # main dashboard function
     def createStory():
         plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
         plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
-        plotRainExtreme = plotBarCreation(dfScatterRainExtreme, colors)
-        plotTemperature = plotBarCreation(dfScatterTemperature, colors)
+        plotRainExtreme = plotBarCreation(
+            dfScatterRainExtreme, colors, 'Extreme Regenfälle')
+        plotTemperature = plotBarCreation(
+            dfScatterTemperature, colors, 'Temperatur')
 
         dashAppStory.layout = html.Div([
             # header
