@@ -99,24 +99,7 @@ def scrape_meteoschweiz(abstractDriver, instance, announcer):
     return announcer
 
 
-def _scrape_meteoschweiz(driver, engine, announcer):
-    """ Scrape data from meteo suisse
-
-    Args:
-        driver (driver): Selenium driver
-        engine (engine): Database engine
-        announcer (announcer): Message announcer
-
-    Returns:
-        str: Scrapped data
-    """
-
-    engine.connect()
-    engine.execute(
-        "TRUNCATE TABLE stage.meteoschweiz_t"
-    )
-
-    url_list = []
+def setAllStations():
     allStationsDf = pd.DataFrame(columns=[
         'year',
         'month',
@@ -124,7 +107,10 @@ def _scrape_meteoschweiz(driver, engine, announcer):
         'precipitation',
         'station'
     ])
+    return allStationsDf
 
+
+def getUrls(driver):
     driver.get(
         "https://www.meteoschweiz.admin.ch/home/klima/"
         + "schweizer-klima-im-detail/"
@@ -133,7 +119,10 @@ def _scrape_meteoschweiz(driver, engine, announcer):
     urls = driver.find_elements_by_xpath(
         "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
     )
+    return urls
 
+
+def startWebscraping(url_list, urls, announcer, allStationsDf):
     for urlEl in urls:
         url = urlEl.get_attribute('href')
 
@@ -172,6 +161,38 @@ def _scrape_meteoschweiz(driver, engine, announcer):
 
         # append the data frame to the data frame of all stations
         allStationsDf = allStationsDf.append(stationDf, ignore_index=True)
+
+    return url_list, allStationsDf
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
+    """ Scrape data from meteo suisse
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+        announcer (announcer): Message announcer
+
+    Returns:
+        str: Scrapped data
+    """
+
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
+
+    url_list = []
+    allStationsDf = setAllStations()
+
+    urls = getUrls(driver)
+
+    url_list, allStationsDf = startWebscraping(
+        url_list,
+        urls,
+        announcer,
+        allStationsDf
+    )
 
     # change column data types
     allStationsDf = allStationsDf.astype(

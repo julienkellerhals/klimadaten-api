@@ -12,8 +12,8 @@ instance = db.Database(announcer)
 # pytest -m database -s -v --color=yes
 
 
-@pytest.mark.database
-class TestDatabase():
+@pytest.mark.db
+class DBTest():
     # Test if cofigfile exist with correct file
     def testReadConfigSuccess(self):
         configFileName = "idawebConfig.xml"

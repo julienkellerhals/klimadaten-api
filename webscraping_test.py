@@ -6,7 +6,10 @@ from typing import List
 from webscraping import readConfig
 from webscraping import scrape_idaweb_login
 from webscraping import scrapeIdawebOrders
-
+from webscraping import setAllStations
+from webscraping import getUrls
+from webscraping import startWebscraping
+from webscraping import password as webscrapingPassword
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
@@ -38,6 +41,55 @@ class TestMeteoSchweiz():
         driver.quit()
         assert len(urls) == 30
 
+    def testSetAllStations(self):
+        allStationsDf = setAllStations()
+        if isinstance(allStationsDf, pd.DataFrame):
+            assert len(allStationsDf) == 0
+        else:
+            assert False
+
+    def getUrls(self):
+        driver = abstractDriver.getDriver()
+        urls = getUrls(driver)
+        if isinstance(urls, pd.DataFrame):
+            assert len(urls) != 0
+        else:
+            assert False
+
+    def testStartWebscrapingUrlList(self):
+        driver = abstractDriver.getDriver()
+        urls = getUrls(driver)
+        url_list = []
+        allStationsDf = setAllStations()
+
+        url_list, allStationsDf = startWebscraping(
+            url_list,
+            urls,
+            announcer,
+            allStationsDf
+        )
+        if isinstance(url_list, List):
+            assert len(url_list) != 0
+        else:
+            assert False
+
+    def testStartWebscrapingStations(self):
+        driver = abstractDriver.getDriver()
+        urls = getUrls(driver)
+        url_list = []
+        allStationsDf = setAllStations()
+
+        url_list, allStationsDf = startWebscraping(
+            url_list,
+            urls,
+            announcer,
+            allStationsDf
+        )
+        if isinstance(allStationsDf, List):
+            assert len(allStationsDf) != 0
+        else:
+            assert False
+
 
 @pytest.mark.idaweb
 class TestIDAWeb():
@@ -50,7 +102,7 @@ class TestIDAWeb():
 
     def test_idaweb_login_sucess(self):
         username = "joel.grosjean@students.fhnw.ch"
-        password = "AGEJ649GJAL02"
+        password = webscrapingPassword
         driver = abstractDriver.getDriver()
         url = "https://gate.meteoswiss.ch/idaweb/login.do"
         scrape_idaweb_login(driver, username, password)
