@@ -38,7 +38,7 @@
       - [story.py](#storypy)
     - [Tests](#tests)
       - [webscraping_test.py](#webscraping_testpy)
-      - [db_test.py TODO Check name when branch is merged](#db_testpy-todo-check-name-when-branch-is-merged)
+      - [db_test.py](#db_testpy)
     - [Database implementation](#database-implementation)
       - [Stage](#stage)
       - [Core](#core)
@@ -217,6 +217,8 @@ flask run
 
 **Important**, start anaconda / pip environment before starting the flask app
 
+---
+
 ### Install Browser driver
 
 In order to get new data selenium requires a browser driver to scrape websites
@@ -235,6 +237,8 @@ Chrome
 
 1. Navigate to [localhost:5000/admin/driver/Chrome?headless=false](http://localhost:5000/admin/driver/Chrome?headless=false)
 
+---
+
 ### Configure database connection string
 
 ![Postgres config page](/static/postgresConfigString.png)
@@ -247,7 +251,7 @@ Chrome
 6. Select port
 7. Submit form
 
-Postgres connection string is save in [config/config.json](config/config.json)
+Postgres connection string is save in plain text in [config/config.json](config/config.json)
 
 ## Extensions
 
@@ -397,19 +401,17 @@ Helper file with functions for `POST` and `GET` requests
 
 ---
 
-#### [webscraping_test.py](webscraping.py)
+#### [webscraping_test.py](webscraping_test.py)
 
 Contains all unit tests of the webscraping
 
-#### db_test.py TODO Check name when branch is merged
+#### [db_test.py](db_test.py)
 
 Contains all unit tests of the database
 
 ### Database implementation
 
 ---
-
-TODO fix wording and structure
 
 - Database is divided into two main schemas, Stage and Core
 - All tables have corresponding materialized views for number of rows and last update
