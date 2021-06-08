@@ -628,8 +628,7 @@ class Database:
         """ Creates tables and materialized views
         """
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='meteoschweiz_t',
             schema='stage'
         ):
@@ -644,8 +643,7 @@ class Database:
                 Column("load_date", Date, index=True),
                 schema='stage')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='idaweb_t',
             schema='stage'
         ):
@@ -662,8 +660,7 @@ class Database:
                 Column("valid_to", Date),
                 schema='stage')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='station_t',
             schema='stage'
         ):
@@ -683,8 +680,7 @@ class Database:
                 Column("valid_to", Date),
                 schema='stage')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='parameter_t',
             schema='stage'
         ):
@@ -698,8 +694,7 @@ class Database:
                 Column("valid_to", Date),
                 schema='stage')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='measurements_t',
             schema='core'
         ):
@@ -716,8 +711,7 @@ class Database:
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='station_t',
             schema='core'
         ):
@@ -737,8 +731,7 @@ class Database:
                 Column("valid_to", Date, primary_key=True),
                 schema='core')
 
-        if not self.engine.dialect.has_table(
-            connection=self.engine,
+        if not inspect(self.engine).has_table(
             table_name='parameter_t',
             schema='core'
         ):
