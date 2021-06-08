@@ -1,0 +1,584 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 95480
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_95480_ABE_rre003mx_1_data.txt     Data      Aarberg                              Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_ABE_rre003mx_1_legend.txt   Legend    Aarberg                              Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_DLACH_rre003mx_1_data.txt   Data      Achberg / Doberatsweiler             Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_DLACH_rre003mx_1_legend.txt Legend    Achberg / Doberatsweiler             Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_ATN_rre003mx_1_data.txt     Data      Altnau                               Precipitation; maximum 3-day total of the month             196012-199803
+order_95480_ATN_rre003mx_1_legend.txt   Legend    Altnau                               Precipitation; maximum 3-day total of the month             196012-199803
+order_95480_DLALM_rre003mx_1_data.txt   Data      Altomünster                          Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLALM_rre003mx_1_legend.txt Legend    Altomünster                          Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLAME_rre003mx_1_data.txt   Data      Amerang / Pfaffing                   Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLAME_rre003mx_1_legend.txt Legend    Amerang / Pfaffing                   Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_TGAMR_rre003mx_1_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201008-201111
+order_95480_TGAMR_rre003mx_1_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201008-201111
+order_95480_TGAMR_rre003mx_2_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201112-201211
+order_95480_TGAMR_rre003mx_2_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201112-201211
+order_95480_TGAMR_rre003mx_3_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201303-201404
+order_95480_TGAMR_rre003mx_3_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201303-201404
+order_95480_TGAMR_rre003mx_4_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGAMR_rre003mx_4_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGAMR_rre003mx_5_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGAMR_rre003mx_5_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGAMR_rre003mx_6_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201508-201708
+order_95480_TGAMR_rre003mx_6_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201508-201708
+order_95480_TGAMR_rre003mx_7_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201709-201812
+order_95480_TGAMR_rre003mx_7_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201709-201812
+order_95480_TGAMR_rre003mx_8_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201901-201908
+order_95480_TGAMR_rre003mx_8_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201901-201908
+order_95480_TGAMR_rre003mx_9_data.txt   Data      Amriswil                             Precipitation; maximum 3-day total of the month             201909-201911
+order_95480_TGAMR_rre003mx_9_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201909-201911
+order_95480_TGAMR_rre003mx_10_data.txt  Data      Amriswil                             Precipitation; maximum 3-day total of the month             201912-202012
+order_95480_TGAMR_rre003mx_10_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             201912-202012
+order_95480_TGAMR_rre003mx_11_data.txt  Data      Amriswil                             Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_TGAMR_rre003mx_11_legend.txt Legend    Amriswil                             Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_TGARE_rre003mx_1_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201008-201112
+order_95480_TGARE_rre003mx_1_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201008-201112
+order_95480_TGARE_rre003mx_2_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201201-201211
+order_95480_TGARE_rre003mx_2_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201201-201211
+order_95480_TGARE_rre003mx_3_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201212-201311
+order_95480_TGARE_rre003mx_3_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201212-201311
+order_95480_TGARE_rre003mx_4_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201401-201404
+order_95480_TGARE_rre003mx_4_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201401-201404
+order_95480_TGARE_rre003mx_5_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGARE_rre003mx_5_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGARE_rre003mx_6_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGARE_rre003mx_6_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGARE_rre003mx_7_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201508-201910
+order_95480_TGARE_rre003mx_7_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201508-201910
+order_95480_TGARE_rre003mx_8_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             201911-202008
+order_95480_TGARE_rre003mx_8_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             201911-202008
+order_95480_TGARE_rre003mx_9_data.txt   Data      Arenenberg                           Precipitation; maximum 3-day total of the month             202009-202105
+order_95480_TGARE_rre003mx_9_legend.txt Legend    Arenenberg                           Precipitation; maximum 3-day total of the month             202009-202105
+order_95480_ARI_rre003mx_1_data.txt     Data      Arisdorf                             Precipitation; maximum 3-day total of the month             190001-201905
+order_95480_ARI_rre003mx_1_legend.txt   Legend    Arisdorf                             Precipitation; maximum 3-day total of the month             190001-201905
+order_95480_ARI_rre003mx_2_data.txt     Data      Arisdorf                             Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_ARI_rre003mx_2_legend.txt   Legend    Arisdorf                             Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_AGATT_rre003mx_1_data.txt   Data      Attelwil                             Precipitation; maximum 3-day total of the month             201406-202105
+order_95480_AGATT_rre003mx_1_legend.txt Legend    Attelwil                             Precipitation; maximum 3-day total of the month             201406-202105
+order_95480_RAG_rre003mx_1_data.txt     Data      Bad Ragaz                            Precipitation; maximum 3-day total of the month             187005-189012
+order_95480_RAG_rre003mx_1_legend.txt   Legend    Bad Ragaz                            Precipitation; maximum 3-day total of the month             187005-189012
+order_95480_RAG_rre003mx_2_data.txt     Data      Bad Ragaz                            Precipitation; maximum 3-day total of the month             193808-201112
+order_95480_RAG_rre003mx_2_legend.txt   Legend    Bad Ragaz                            Precipitation; maximum 3-day total of the month             193808-201112
+order_95480_RAG_rre003mx_3_data.txt     Data      Bad Ragaz                            Precipitation; maximum 3-day total of the month             201202-201605
+order_95480_RAG_rre003mx_3_legend.txt   Legend    Bad Ragaz                            Precipitation; maximum 3-day total of the month             201202-201605
+order_95480_RAG_rre003mx_4_data.txt     Data      Bad Ragaz                            Precipitation; maximum 3-day total of the month             201606-202105
+order_95480_RAG_rre003mx_4_legend.txt   Legend    Bad Ragaz                            Precipitation; maximum 3-day total of the month             201606-202105
+order_95480_IYBAR_rre003mx_1_data.txt   Data      Barbian / Kollmann                   Precipitation; maximum 3-day total of the month             200212-201905
+order_95480_IYBAR_rre003mx_1_legend.txt Legend    Barbian / Kollmann                   Precipitation; maximum 3-day total of the month             200212-201905
+order_95480_IYBAR_rre003mx_2_data.txt   Data      Barbian / Kollmann                   Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_IYBAR_rre003mx_2_legend.txt Legend    Barbian / Kollmann                   Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_BEP_rre003mx_1_data.txt     Data      Belp                                 Precipitation; maximum 3-day total of the month             190012-202105
+order_95480_BEP_rre003mx_1_legend.txt   Legend    Belp                                 Precipitation; maximum 3-day total of the month             190012-202105
+order_95480_BNW_rre003mx_1_data.txt     Data      Bennwil BL                           Precipitation; maximum 3-day total of the month             190001-199506
+order_95480_BNW_rre003mx_1_legend.txt   Legend    Bennwil BL                           Precipitation; maximum 3-day total of the month             190001-199506
+order_95480_SOBIB_rre003mx_1_data.txt   Data      Bibern                               Precipitation; maximum 3-day total of the month             199812-201307
+order_95480_SOBIB_rre003mx_1_legend.txt Legend    Bibern                               Precipitation; maximum 3-day total of the month             199812-201307
+order_95480_AGBRW_rre003mx_1_data.txt   Data      Birrwil                              Precipitation; maximum 3-day total of the month             200007-200904
+order_95480_AGBRW_rre003mx_1_legend.txt Legend    Birrwil                              Precipitation; maximum 3-day total of the month             200007-200904
+order_95480_AGBRW_rre003mx_2_data.txt   Data      Birrwil                              Precipitation; maximum 3-day total of the month             200905-200906
+order_95480_AGBRW_rre003mx_2_legend.txt Legend    Birrwil                              Precipitation; maximum 3-day total of the month             200905-200906
+order_95480_AGBRW_rre003mx_3_data.txt   Data      Birrwil                              Precipitation; maximum 3-day total of the month             200912-202105
+order_95480_AGBRW_rre003mx_3_legend.txt Legend    Birrwil                              Precipitation; maximum 3-day total of the month             200912-202105
+order_95480_BIZ_rre003mx_1_data.txt     Data      Bischofszell                         Precipitation; maximum 3-day total of the month             190001-201004
+order_95480_BIZ_rre003mx_1_legend.txt   Legend    Bischofszell                         Precipitation; maximum 3-day total of the month             190001-201004
+order_95480_BIZ_rre003mx_2_data.txt     Data      Bischofszell                         Precipitation; maximum 3-day total of the month             201005-202105
+order_95480_BIZ_rre003mx_2_legend.txt   Legend    Bischofszell                         Precipitation; maximum 3-day total of the month             201005-202105
+order_95480_MMBOY_rre003mx_1_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201211-201309
+order_95480_MMBOY_rre003mx_1_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201211-201309
+order_95480_MMBOY_rre003mx_2_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201310-201311
+order_95480_MMBOY_rre003mx_2_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201310-201311
+order_95480_MMBOY_rre003mx_3_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201312-201410
+order_95480_MMBOY_rre003mx_3_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201312-201410
+order_95480_MMBOY_rre003mx_4_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201411-201511
+order_95480_MMBOY_rre003mx_4_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201411-201511
+order_95480_MMBOY_rre003mx_5_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201602-201605
+order_95480_MMBOY_rre003mx_5_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201602-201605
+order_95480_MMBOY_rre003mx_6_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201606-201609
+order_95480_MMBOY_rre003mx_6_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201606-201609
+order_95480_MMBOY_rre003mx_7_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201612-201712
+order_95480_MMBOY_rre003mx_7_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201612-201712
+order_95480_MMBOY_rre003mx_8_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201801-201805
+order_95480_MMBOY_rre003mx_8_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201801-201805
+order_95480_MMBOY_rre003mx_9_data.txt   Data      Boudry                               Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMBOY_rre003mx_9_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMBOY_rre003mx_10_data.txt  Data      Boudry                               Precipitation; maximum 3-day total of the month             201809-201811
+order_95480_MMBOY_rre003mx_10_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201809-201811
+order_95480_MMBOY_rre003mx_11_data.txt  Data      Boudry                               Precipitation; maximum 3-day total of the month             201812-201905
+order_95480_MMBOY_rre003mx_11_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201812-201905
+order_95480_MMBOY_rre003mx_12_data.txt  Data      Boudry                               Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_MMBOY_rre003mx_12_legend.txt Legend    Boudry                               Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_CPS_rre003mx_1_data.txt     Data      Compesières                          Precipitation; maximum 3-day total of the month             190009-197312
+order_95480_CPS_rre003mx_1_legend.txt   Legend    Compesières                          Precipitation; maximum 3-day total of the month             190009-197312
+order_95480_VDCRI_rre003mx_1_data.txt   Data      Crissier                             Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_VDCRI_rre003mx_1_legend.txt Legend    Crissier                             Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_CRO_rre003mx_1_data.txt     Data      Croix-de-Rozon                       Precipitation; maximum 3-day total of the month             197312-200505
+order_95480_CRO_rre003mx_1_legend.txt   Legend    Croix-de-Rozon                       Precipitation; maximum 3-day total of the month             197312-200505
+order_95480_DLDEU_rre003mx_1_data.txt   Data      Deuselbach                           Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLDEU_rre003mx_1_legend.txt Legend    Deuselbach                           Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_EFF_rre003mx_1_data.txt     Data      Effretikon                           Precipitation; maximum 3-day total of the month             195212-201905
+order_95480_EFF_rre003mx_1_legend.txt   Legend    Effretikon                           Precipitation; maximum 3-day total of the month             195212-201905
+order_95480_EFF_rre003mx_2_data.txt     Data      Effretikon                           Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_EFF_rre003mx_2_legend.txt   Legend    Effretikon                           Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_EVI_rre003mx_1_data.txt     Data      Evionnaz                             Precipitation; maximum 3-day total of the month             201312-202105
+order_95480_EVI_rre003mx_1_legend.txt   Legend    Evionnaz                             Precipitation; maximum 3-day total of the month             201312-202105
+order_95480_DLFEL_rre003mx_1_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             198112-199711
+order_95480_DLFEL_rre003mx_1_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             198112-199711
+order_95480_DLFEL_rre003mx_2_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             199712-200003
+order_95480_DLFEL_rre003mx_2_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             199712-200003
+order_95480_DLFEL_rre003mx_3_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             200101-200105
+order_95480_DLFEL_rre003mx_3_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             200101-200105
+order_95480_DLFEL_rre003mx_4_data.txt   Data      Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             200612-202105
+order_95480_DLFEL_rre003mx_4_legend.txt Legend    Feldkirchen-Westerham / Lenzmühle    Precipitation; maximum 3-day total of the month             200612-202105
+order_95480_DLFEU_rre003mx_1_data.txt   Data      Feuchtwangen / Heilbronn             Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLFEU_rre003mx_1_legend.txt Legend    Feuchtwangen / Heilbronn             Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLHAH_rre003mx_1_data.txt   Data      Frankfurt / Hahn Flughafen           Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLHAH_rre003mx_1_legend.txt Legend    Frankfurt / Hahn Flughafen           Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_VDFEC_rre003mx_1_data.txt   Data      Féchy                                Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_VDFEC_rre003mx_1_legend.txt Legend    Féchy                                Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_DLFUR_rre003mx_1_data.txt   Data      Fürstenzell                          Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLFUR_rre003mx_1_legend.txt Legend    Fürstenzell                          Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_GPN_rre003mx_1_data.txt     Data      Gempenach                            Precipitation; maximum 3-day total of the month             197112-197912
+order_95480_GPN_rre003mx_1_legend.txt   Legend    Gempenach                            Precipitation; maximum 3-day total of the month             197112-197912
+order_95480_GIH_rre003mx_1_data.txt     Data      Giswil                               Precipitation; maximum 3-day total of the month             197607-202105
+order_95480_GIH_rre003mx_1_legend.txt   Legend    Giswil                               Precipitation; maximum 3-day total of the month             197607-202105
+order_95480_GLA_rre003mx_1_data.txt     Data      Glarus                               Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_GLA_rre003mx_1_legend.txt   Legend    Glarus                               Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_GLGLA_rre003mx_1_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             201308-201406
+order_95480_GLGLA_rre003mx_1_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             201308-201406
+order_95480_GLGLA_rre003mx_2_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             201407-201501
+order_95480_GLGLA_rre003mx_2_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             201407-201501
+order_95480_GLGLA_rre003mx_3_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             201612-201901
+order_95480_GLGLA_rre003mx_3_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             201612-201901
+order_95480_GLGLA_rre003mx_4_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_GLGLA_rre003mx_4_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_GLGLA_rre003mx_5_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             201906-202005
+order_95480_GLGLA_rre003mx_5_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             201906-202005
+order_95480_GLGLA_rre003mx_6_data.txt   Data      Glarus                               Precipitation; maximum 3-day total of the month             202007-202105
+order_95480_GLGLA_rre003mx_6_legend.txt Legend    Glarus                               Precipitation; maximum 3-day total of the month             202007-202105
+order_95480_SOGRE_rre003mx_1_data.txt   Data      Grenchen                             Precipitation; maximum 3-day total of the month             199912-201505
+order_95480_SOGRE_rre003mx_1_legend.txt Legend    Grenchen                             Precipitation; maximum 3-day total of the month             199912-201505
+order_95480_DLHAR_rre003mx_1_data.txt   Data      Harburg                              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLHAR_rre003mx_1_legend.txt Legend    Harburg                              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_HEB_rre003mx_1_data.txt     Data      Herzogenbuchsee                      Precipitation; maximum 3-day total of the month             190012-201905
+order_95480_HEB_rre003mx_1_legend.txt   Legend    Herzogenbuchsee                      Precipitation; maximum 3-day total of the month             190012-201905
+order_95480_HEB_rre003mx_2_data.txt     Data      Herzogenbuchsee                      Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_HEB_rre003mx_2_legend.txt   Legend    Herzogenbuchsee                      Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_LUHOC_rre003mx_1_data.txt   Data      Hochdorf                             Precipitation; maximum 3-day total of the month             201612-201711
+order_95480_LUHOC_rre003mx_1_legend.txt Legend    Hochdorf                             Precipitation; maximum 3-day total of the month             201612-201711
+order_95480_LUHOC_rre003mx_2_data.txt   Data      Hochdorf                             Precipitation; maximum 3-day total of the month             201712-201812
+order_95480_LUHOC_rre003mx_2_legend.txt Legend    Hochdorf                             Precipitation; maximum 3-day total of the month             201712-201812
+order_95480_LUHOC_rre003mx_3_data.txt   Data      Hochdorf                             Precipitation; maximum 3-day total of the month             201902-202105
+order_95480_LUHOC_rre003mx_3_legend.txt Legend    Hochdorf                             Precipitation; maximum 3-day total of the month             201902-202105
+order_95480_HUN_rre003mx_1_data.txt     Data      Hunzikon                             Precipitation; maximum 3-day total of the month             197212-199112
+order_95480_HUN_rre003mx_1_legend.txt   Legend    Hunzikon                             Precipitation; maximum 3-day total of the month             197212-199112
+order_95480_GEFOR_rre003mx_1_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199111-199403
+order_95480_GEFOR_rre003mx_1_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199111-199403
+order_95480_GEFOR_rre003mx_2_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199404-199512
+order_95480_GEFOR_rre003mx_2_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199404-199512
+order_95480_GEFOR_rre003mx_3_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199602-199705
+order_95480_GEFOR_rre003mx_3_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199602-199705
+order_95480_GEFOR_rre003mx_4_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199706-199805
+order_95480_GEFOR_rre003mx_4_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199706-199805
+order_95480_GEFOR_rre003mx_5_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199806-199905
+order_95480_GEFOR_rre003mx_5_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199806-199905
+order_95480_GEFOR_rre003mx_6_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199906-200503
+order_95480_GEFOR_rre003mx_6_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             199906-200503
+order_95480_GEFOR_rre003mx_7_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200504-200506
+order_95480_GEFOR_rre003mx_7_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200504-200506
+order_95480_GEFOR_rre003mx_8_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200508-200604
+order_95480_GEFOR_rre003mx_8_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200508-200604
+order_95480_GEFOR_rre003mx_9_data.txt   Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200605-200704
+order_95480_GEFOR_rre003mx_9_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200605-200704
+order_95480_GEFOR_rre003mx_10_data.txt  Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200705-201011
+order_95480_GEFOR_rre003mx_10_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             200705-201011
+order_95480_GEFOR_rre003mx_11_data.txt  Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201111-201112
+order_95480_GEFOR_rre003mx_11_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201111-201112
+order_95480_GEFOR_rre003mx_12_data.txt  Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201202-201204
+order_95480_GEFOR_rre003mx_12_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201202-201204
+order_95480_GEFOR_rre003mx_13_data.txt  Data      Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201211-202105
+order_95480_GEFOR_rre003mx_13_legend.txt Legend    Jussy / Maison de la foret           Precipitation; maximum 3-day total of the month             201211-202105
+order_95480_WSLJUB_rre003mx_1_data.txt  Data      Jussy Bestand                        Precipitation; maximum 3-day total of the month             201712-201804
+order_95480_WSLJUB_rre003mx_1_legend.txt Legend    Jussy Bestand                        Precipitation; maximum 3-day total of the month             201712-201804
+order_95480_WSLJUB_rre003mx_2_data.txt  Data      Jussy Bestand                        Precipitation; maximum 3-day total of the month             201805-201806
+order_95480_WSLJUB_rre003mx_2_legend.txt Legend    Jussy Bestand                        Precipitation; maximum 3-day total of the month             201805-201806
+order_95480_WSLJUB_rre003mx_3_data.txt  Data      Jussy Bestand                        Precipitation; maximum 3-day total of the month             201807-202005
+order_95480_WSLJUB_rre003mx_3_legend.txt Legend    Jussy Bestand                        Precipitation; maximum 3-day total of the month             201807-202005
+order_95480_WSLJUF_rre003mx_1_data.txt  Data      Jussy Freiland                       Precipitation; maximum 3-day total of the month             201712-202006
+order_95480_WSLJUF_rre003mx_1_legend.txt Legend    Jussy Freiland                       Precipitation; maximum 3-day total of the month             201712-202006
+order_95480_WSLJUF_rre003mx_2_data.txt  Data      Jussy Freiland                       Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_WSLJUF_rre003mx_2_legend.txt Legend    Jussy Freiland                       Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLKAI_rre003mx_1_data.txt   Data      Kaisersbach / Cronhütte              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLKAI_rre003mx_1_legend.txt Legend    Kaisersbach / Cronhütte              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_IYKAL_rre003mx_1_data.txt   Data      Kaltern / Oberplanitzing             Precipitation; maximum 3-day total of the month             201312-201907
+order_95480_IYKAL_rre003mx_1_legend.txt Legend    Kaltern / Oberplanitzing             Precipitation; maximum 3-day total of the month             201312-201907
+order_95480_IYKAL_rre003mx_2_data.txt   Data      Kaltern / Oberplanitzing             Precipitation; maximum 3-day total of the month             201908-202105
+order_95480_IYKAL_rre003mx_2_legend.txt Legend    Kaltern / Oberplanitzing             Precipitation; maximum 3-day total of the month             201908-202105
+order_95480_DLKIF_rre003mx_1_data.txt   Data      Kiefersfelden                        Precipitation; maximum 3-day total of the month             194012-194612
+order_95480_DLKIF_rre003mx_1_legend.txt Legend    Kiefersfelden                        Precipitation; maximum 3-day total of the month             194012-194612
+order_95480_DLKIF_rre003mx_2_data.txt   Data      Kiefersfelden                        Precipitation; maximum 3-day total of the month             194812-194912
+order_95480_DLKIF_rre003mx_2_legend.txt Legend    Kiefersfelden                        Precipitation; maximum 3-day total of the month             194812-194912
+order_95480_DLKIF_rre003mx_3_data.txt   Data      Kiefersfelden                        Precipitation; maximum 3-day total of the month             197112-197204
+order_95480_DLKIF_rre003mx_3_legend.txt Legend    Kiefersfelden                        Precipitation; maximum 3-day total of the month             197112-197204
+order_95480_DLKIF_rre003mx_4_data.txt   Data      Kiefersfelden                        Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLKIF_rre003mx_4_legend.txt Legend    Kiefersfelden                        Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_KOL_rre003mx_1_data.txt     Data      Kollbrunn                            Precipitation; maximum 3-day total of the month             190001-197312
+order_95480_KOL_rre003mx_1_legend.txt   Legend    Kollbrunn                            Precipitation; maximum 3-day total of the month             190001-197312
+order_95480_KOP_rre003mx_1_data.txt     Data      Koppigen                             Precipitation; maximum 3-day total of the month             196011-202105
+order_95480_KOP_rre003mx_1_legend.txt   Legend    Koppigen                             Precipitation; maximum 3-day total of the month             196011-202105
+order_95480_KRZ_rre003mx_1_data.txt     Data      Kreuzlingen                          Precipitation; maximum 3-day total of the month             190001-197605
+order_95480_KRZ_rre003mx_1_legend.txt   Legend    Kreuzlingen                          Precipitation; maximum 3-day total of the month             190001-197605
+order_95480_KAR_rre003mx_1_data.txt     Data      Küssnacht am Rigi                    Precipitation; maximum 3-day total of the month             196012-202105
+order_95480_KAR_rre003mx_1_legend.txt   Legend    Küssnacht am Rigi                    Precipitation; maximum 3-day total of the month             196012-202105
+order_95480_GELAN_rre003mx_1_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             198910-199109
+order_95480_GELAN_rre003mx_1_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             198910-199109
+order_95480_GELAN_rre003mx_2_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199111-199210
+order_95480_GELAN_rre003mx_2_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199111-199210
+order_95480_GELAN_rre003mx_3_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199211-199308
+order_95480_GELAN_rre003mx_3_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199211-199308
+order_95480_GELAN_rre003mx_4_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199310-199311
+order_95480_GELAN_rre003mx_4_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199310-199311
+order_95480_GELAN_rre003mx_5_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199312-199410
+order_95480_GELAN_rre003mx_5_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199312-199410
+order_95480_GELAN_rre003mx_6_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199412-199612
+order_95480_GELAN_rre003mx_6_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199412-199612
+order_95480_GELAN_rre003mx_7_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199702-199704
+order_95480_GELAN_rre003mx_7_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199702-199704
+order_95480_GELAN_rre003mx_8_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             199706-200506
+order_95480_GELAN_rre003mx_8_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             199706-200506
+order_95480_GELAN_rre003mx_9_data.txt   Data      Landecy                              Precipitation; maximum 3-day total of the month             200508-200811
+order_95480_GELAN_rre003mx_9_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             200508-200811
+order_95480_GELAN_rre003mx_10_data.txt  Data      Landecy                              Precipitation; maximum 3-day total of the month             200910-201002
+order_95480_GELAN_rre003mx_10_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             200910-201002
+order_95480_GELAN_rre003mx_11_data.txt  Data      Landecy                              Precipitation; maximum 3-day total of the month             201010-201011
+order_95480_GELAN_rre003mx_11_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             201010-201011
+order_95480_GELAN_rre003mx_12_data.txt  Data      Landecy                              Precipitation; maximum 3-day total of the month             201111-201112
+order_95480_GELAN_rre003mx_12_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             201111-201112
+order_95480_GELAN_rre003mx_13_data.txt  Data      Landecy                              Precipitation; maximum 3-day total of the month             201211-202105
+order_95480_GELAN_rre003mx_13_legend.txt Legend    Landecy                              Precipitation; maximum 3-day total of the month             201211-202105
+order_95480_DLLAN_rre003mx_1_data.txt   Data      Landshut / Reithof                   Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLLAN_rre003mx_1_legend.txt Legend    Landshut / Reithof                   Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_MMLBB_rre003mx_1_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201612-201805
+order_95480_MMLBB_rre003mx_1_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201612-201805
+order_95480_MMLBB_rre003mx_2_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMLBB_rre003mx_2_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMLBB_rre003mx_3_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201809-201901
+order_95480_MMLBB_rre003mx_3_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201809-201901
+order_95480_MMLBB_rre003mx_4_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMLBB_rre003mx_4_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMLBB_rre003mx_5_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201906-202012
+order_95480_MMLBB_rre003mx_5_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             201906-202012
+order_95480_MMLBB_rre003mx_6_data.txt   Data      Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_MMLBB_rre003mx_6_legend.txt Legend    Langenthal / Bleienbach              Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_LULAN_rre003mx_1_data.txt   Data      Langnau                              Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_LULAN_rre003mx_1_legend.txt Legend    Langnau                              Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_LAP_rre003mx_1_data.txt     Data      Laupen                               Precipitation; maximum 3-day total of the month             197112-202105
+order_95480_LAP_rre003mx_1_legend.txt   Legend    Laupen                               Precipitation; maximum 3-day total of the month             197112-202105
+order_95480_VDLUC_rre003mx_1_data.txt   Data      Lucens                               Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_VDLUC_rre003mx_1_legend.txt Legend    Lucens                               Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_LUW_rre003mx_1_data.txt     Data      Luzern Wesemlin                      Precipitation; maximum 3-day total of the month             197012-197112
+order_95480_LUW_rre003mx_1_legend.txt   Legend    Luzern Wesemlin                      Precipitation; maximum 3-day total of the month             197012-197112
+order_95480_LUMAL_rre003mx_1_data.txt   Data      Malters                              Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_LUMAL_rre003mx_1_legend.txt Legend    Malters                              Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_SOMAT_rre003mx_1_data.txt   Data      Matzendorf                           Precipitation; maximum 3-day total of the month             199912-201208
+order_95480_SOMAT_rre003mx_1_legend.txt Legend    Matzendorf                           Precipitation; maximum 3-day total of the month             199912-201208
+order_95480_SOMAT_rre003mx_2_data.txt   Data      Matzendorf                           Precipitation; maximum 3-day total of the month             201305-201307
+order_95480_SOMAT_rre003mx_2_legend.txt Legend    Matzendorf                           Precipitation; maximum 3-day total of the month             201305-201307
+order_95480_SOMAT_rre003mx_3_data.txt   Data      Matzendorf                           Precipitation; maximum 3-day total of the month             201308-201309
+order_95480_SOMAT_rre003mx_3_legend.txt Legend    Matzendorf                           Precipitation; maximum 3-day total of the month             201308-201309
+order_95480_SOMAT_rre003mx_4_data.txt   Data      Matzendorf                           Precipitation; maximum 3-day total of the month             201310-202103
+order_95480_SOMAT_rre003mx_4_legend.txt Legend    Matzendorf                           Precipitation; maximum 3-day total of the month             201310-202103
+order_95480_MMMEL_rre003mx_1_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201211-201212
+order_95480_MMMEL_rre003mx_1_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201211-201212
+order_95480_MMMEL_rre003mx_2_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201301-201310
+order_95480_MMMEL_rre003mx_2_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201301-201310
+order_95480_MMMEL_rre003mx_3_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201311-201411
+order_95480_MMMEL_rre003mx_3_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201311-201411
+order_95480_MMMEL_rre003mx_4_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201501-201504
+order_95480_MMMEL_rre003mx_4_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201501-201504
+order_95480_MMMEL_rre003mx_5_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201505-201511
+order_95480_MMMEL_rre003mx_5_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201505-201511
+order_95480_MMMEL_rre003mx_6_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201602-201609
+order_95480_MMMEL_rre003mx_6_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201602-201609
+order_95480_MMMEL_rre003mx_7_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_MMMEL_rre003mx_7_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_MMMEL_rre003mx_8_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201612-201712
+order_95480_MMMEL_rre003mx_8_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201612-201712
+order_95480_MMMEL_rre003mx_9_data.txt   Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201802-201805
+order_95480_MMMEL_rre003mx_9_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201802-201805
+order_95480_MMMEL_rre003mx_10_data.txt  Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201806-201901
+order_95480_MMMEL_rre003mx_10_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201806-201901
+order_95480_MMMEL_rre003mx_11_data.txt  Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMMEL_rre003mx_11_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMMEL_rre003mx_12_data.txt  Data      Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_MMMEL_rre003mx_12_legend.txt Legend    Mels / Heiligkreuz                   Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_MEM_rre003mx_1_data.txt     Data      Mettmenstetten                       Precipitation; maximum 3-day total of the month             196012-198404
+order_95480_MEM_rre003mx_1_legend.txt   Legend    Mettmenstetten                       Precipitation; maximum 3-day total of the month             196012-198404
+order_95480_SOMET_rre003mx_1_data.txt   Data      Metzerlen                            Precipitation; maximum 3-day total of the month             200112-201310
+order_95480_SOMET_rre003mx_1_legend.txt Legend    Metzerlen                            Precipitation; maximum 3-day total of the month             200112-201310
+order_95480_SOMET_rre003mx_2_data.txt   Data      Metzerlen                            Precipitation; maximum 3-day total of the month             201311-202103
+order_95480_SOMET_rre003mx_2_legend.txt Legend    Metzerlen                            Precipitation; maximum 3-day total of the month             201311-202103
+order_95480_SOMET_rre003mx_3_data.txt   Data      Metzerlen                            Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_SOMET_rre003mx_3_legend.txt Legend    Metzerlen                            Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_VDMOI_rre003mx_1_data.txt   Data      Moillettaz                           Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_VDMOI_rre003mx_1_legend.txt Legend    Moillettaz                           Precipitation; maximum 3-day total of the month             201212-202105
+order_95480_MRW_rre003mx_1_data.txt     Data      Möriswang                            Precipitation; maximum 3-day total of the month             199112-199803
+order_95480_MRW_rre003mx_1_legend.txt   Legend    Möriswang                            Precipitation; maximum 3-day total of the month             199112-199803
+order_95480_MUB_rre003mx_1_data.txt     Data      Mühleberg                            Precipitation; maximum 3-day total of the month             198811-202105
+order_95480_MUB_rre003mx_1_legend.txt   Legend    Mühleberg                            Precipitation; maximum 3-day total of the month             198811-202105
+order_95480_DLMUC_rre003mx_1_data.txt   Data      München                              Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLMUC_rre003mx_1_legend.txt Legend    München                              Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_GLNET_rre003mx_1_data.txt   Data      Netstal                              Precipitation; maximum 3-day total of the month             201308-201406
+order_95480_GLNET_rre003mx_1_legend.txt Legend    Netstal                              Precipitation; maximum 3-day total of the month             201308-201406
+order_95480_GLNET_rre003mx_2_data.txt   Data      Netstal                              Precipitation; maximum 3-day total of the month             201407-201806
+order_95480_GLNET_rre003mx_2_legend.txt Legend    Netstal                              Precipitation; maximum 3-day total of the month             201407-201806
+order_95480_GLNET_rre003mx_3_data.txt   Data      Netstal                              Precipitation; maximum 3-day total of the month             201807-202006
+order_95480_GLNET_rre003mx_3_legend.txt Legend    Netstal                              Precipitation; maximum 3-day total of the month             201807-202006
+order_95480_GLNET_rre003mx_4_data.txt   Data      Netstal                              Precipitation; maximum 3-day total of the month             202007-202103
+order_95480_GLNET_rre003mx_4_legend.txt Legend    Netstal                              Precipitation; maximum 3-day total of the month             202007-202103
+order_95480_GLNET_rre003mx_5_data.txt   Data      Netstal                              Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_GLNET_rre003mx_5_legend.txt Legend    Netstal                              Precipitation; maximum 3-day total of the month             202104-202105
+order_95480_DLNEB_rre003mx_1_data.txt   Data      Neuburg an der Kammel                Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLNEB_rre003mx_1_legend.txt Legend    Neuburg an der Kammel                Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_NEU_rre003mx_1_data.txt     Data      Neuchâtel                            Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_NEU_rre003mx_1_legend.txt   Legend    Neuchâtel                            Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_TGNUS_rre003mx_1_data.txt   Data      Nussbaumen                           Precipitation; maximum 3-day total of the month             201008-201404
+order_95480_TGNUS_rre003mx_1_legend.txt Legend    Nussbaumen                           Precipitation; maximum 3-day total of the month             201008-201404
+order_95480_TGNUS_rre003mx_2_data.txt   Data      Nussbaumen                           Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGNUS_rre003mx_2_legend.txt Legend    Nussbaumen                           Precipitation; maximum 3-day total of the month             201405-201505
+order_95480_TGNUS_rre003mx_3_data.txt   Data      Nussbaumen                           Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGNUS_rre003mx_3_legend.txt Legend    Nussbaumen                           Precipitation; maximum 3-day total of the month             201506-201507
+order_95480_TGNUS_rre003mx_4_data.txt   Data      Nussbaumen                           Precipitation; maximum 3-day total of the month             201509-202105
+order_95480_TGNUS_rre003mx_4_legend.txt Legend    Nussbaumen                           Precipitation; maximum 3-day total of the month             201509-202105
+order_95480_DLNUR_rre003mx_1_data.txt   Data      Nürburg / Barweiler                  Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLNUR_rre003mx_1_legend.txt Legend    Nürburg / Barweiler                  Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLOBS_rre003mx_1_data.txt   Data      Oberschleissheim                     Precipitation; maximum 3-day total of the month             200605-202105
+order_95480_DLOBS_rre003mx_1_legend.txt Legend    Oberschleissheim                     Precipitation; maximum 3-day total of the month             200605-202105
+order_95480_OWE_rre003mx_1_data.txt     Data      Oberweningen                         Precipitation; maximum 3-day total of the month             196012-197811
+order_95480_OWE_rre003mx_1_legend.txt   Legend    Oberweningen                         Precipitation; maximum 3-day total of the month             196012-197811
+order_95480_WSLOTB_rre003mx_1_data.txt  Data      Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201712-201803
+order_95480_WSLOTB_rre003mx_1_legend.txt Legend    Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201712-201803
+order_95480_WSLOTB_rre003mx_2_data.txt  Data      Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201807-201901
+order_95480_WSLOTB_rre003mx_2_legend.txt Legend    Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201807-201901
+order_95480_WSLOTB_rre003mx_3_data.txt  Data      Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_WSLOTB_rre003mx_3_legend.txt Legend    Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_WSLOTB_rre003mx_4_data.txt  Data      Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201906-201910
+order_95480_WSLOTB_rre003mx_4_legend.txt Legend    Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201906-201910
+order_95480_WSLOTB_rre003mx_5_data.txt  Data      Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201911-202105
+order_95480_WSLOTB_rre003mx_5_legend.txt Legend    Othmarsingen Bestand                 Precipitation; maximum 3-day total of the month             201911-202105
+order_95480_PAY_rre003mx_1_data.txt     Data      Payerne                              Precipitation; maximum 3-day total of the month             196407-202105
+order_95480_PAY_rre003mx_1_legend.txt   Legend    Payerne                              Precipitation; maximum 3-day total of the month             196407-202105
+order_95480_AGREH_rre003mx_1_data.txt   Data      Reinach                              Precipitation; maximum 3-day total of the month             199912-201308
+order_95480_AGREH_rre003mx_1_legend.txt Legend    Reinach                              Precipitation; maximum 3-day total of the month             199912-201308
+order_95480_AGREH_rre003mx_2_data.txt   Data      Reinach                              Precipitation; maximum 3-day total of the month             201402-201406
+order_95480_AGREH_rre003mx_2_legend.txt Legend    Reinach                              Precipitation; maximum 3-day total of the month             201402-201406
+order_95480_AGREH_rre003mx_3_data.txt   Data      Reinach                              Precipitation; maximum 3-day total of the month             201410-201704
+order_95480_AGREH_rre003mx_3_legend.txt Legend    Reinach                              Precipitation; maximum 3-day total of the month             201410-201704
+order_95480_AGREH_rre003mx_4_data.txt   Data      Reinach                              Precipitation; maximum 3-day total of the month             201707-202105
+order_95480_AGREH_rre003mx_4_legend.txt Legend    Reinach                              Precipitation; maximum 3-day total of the month             201707-202105
+order_95480_DLREN_rre003mx_1_data.txt   Data      Renningen                            Precipitation; maximum 3-day total of the month             194012-194412
+order_95480_DLREN_rre003mx_1_legend.txt Legend    Renningen                            Precipitation; maximum 3-day total of the month             194012-194412
+order_95480_DLREN_rre003mx_2_data.txt   Data      Renningen                            Precipitation; maximum 3-day total of the month             194612-200406
+order_95480_DLREN_rre003mx_2_legend.txt Legend    Renningen                            Precipitation; maximum 3-day total of the month             194612-200406
+order_95480_DLREN_rre003mx_3_data.txt   Data      Renningen                            Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_DLREN_rre003mx_3_legend.txt Legend    Renningen                            Precipitation; maximum 3-day total of the month             201605-202105
+order_95480_WHF_rre003mx_1_data.txt     Data      Riedholz / Wallierhof                Precipitation; maximum 3-day total of the month             196812-202105
+order_95480_WHF_rre003mx_1_legend.txt   Legend    Riedholz / Wallierhof                Precipitation; maximum 3-day total of the month             196812-202105
+order_95480_ZHRAT_rre003mx_1_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             197804-197811
+order_95480_ZHRAT_rre003mx_1_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             197804-197811
+order_95480_ZHRAT_rre003mx_2_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             197903-197911
+order_95480_ZHRAT_rre003mx_2_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             197903-197911
+order_95480_ZHRAT_rre003mx_3_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198004-198010
+order_95480_ZHRAT_rre003mx_3_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198004-198010
+order_95480_ZHRAT_rre003mx_4_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198103-198201
+order_95480_ZHRAT_rre003mx_4_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198103-198201
+order_95480_ZHRAT_rre003mx_5_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198203-198211
+order_95480_ZHRAT_rre003mx_5_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198203-198211
+order_95480_ZHRAT_rre003mx_6_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198303-198310
+order_95480_ZHRAT_rre003mx_6_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198303-198310
+order_95480_ZHRAT_rre003mx_7_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198403-198411
+order_95480_ZHRAT_rre003mx_7_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198403-198411
+order_95480_ZHRAT_rre003mx_8_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198503-198510
+order_95480_ZHRAT_rre003mx_8_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198503-198510
+order_95480_ZHRAT_rre003mx_9_data.txt   Data      Räterschen                           Precipitation; maximum 3-day total of the month             198603-198611
+order_95480_ZHRAT_rre003mx_9_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198603-198611
+order_95480_ZHRAT_rre003mx_10_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             198703-198711
+order_95480_ZHRAT_rre003mx_10_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198703-198711
+order_95480_ZHRAT_rre003mx_11_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             198803-198810
+order_95480_ZHRAT_rre003mx_11_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198803-198810
+order_95480_ZHRAT_rre003mx_12_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             198903-198911
+order_95480_ZHRAT_rre003mx_12_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             198903-198911
+order_95480_ZHRAT_rre003mx_13_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199003-199011
+order_95480_ZHRAT_rre003mx_13_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199003-199011
+order_95480_ZHRAT_rre003mx_14_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199103-199111
+order_95480_ZHRAT_rre003mx_14_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199103-199111
+order_95480_ZHRAT_rre003mx_15_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199203-199211
+order_95480_ZHRAT_rre003mx_15_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199203-199211
+order_95480_ZHRAT_rre003mx_16_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199303-199310
+order_95480_ZHRAT_rre003mx_16_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199303-199310
+order_95480_ZHRAT_rre003mx_17_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199403-199411
+order_95480_ZHRAT_rre003mx_17_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199403-199411
+order_95480_ZHRAT_rre003mx_18_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199503-199511
+order_95480_ZHRAT_rre003mx_18_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199503-199511
+order_95480_ZHRAT_rre003mx_19_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199603-199611
+order_95480_ZHRAT_rre003mx_19_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199603-199611
+order_95480_ZHRAT_rre003mx_20_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199703-199711
+order_95480_ZHRAT_rre003mx_20_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199703-199711
+order_95480_ZHRAT_rre003mx_21_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199804-199811
+order_95480_ZHRAT_rre003mx_21_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199804-199811
+order_95480_ZHRAT_rre003mx_22_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             199903-199911
+order_95480_ZHRAT_rre003mx_22_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             199903-199911
+order_95480_ZHRAT_rre003mx_23_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             200003-200011
+order_95480_ZHRAT_rre003mx_23_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             200003-200011
+order_95480_ZHRAT_rre003mx_24_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             200103-200111
+order_95480_ZHRAT_rre003mx_24_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             200103-200111
+order_95480_ZHRAT_rre003mx_25_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             200203-200211
+order_95480_ZHRAT_rre003mx_25_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             200203-200211
+order_95480_ZHRAT_rre003mx_26_data.txt  Data      Räterschen                           Precipitation; maximum 3-day total of the month             200304-202105
+order_95480_ZHRAT_rre003mx_26_legend.txt Legend    Räterschen                           Precipitation; maximum 3-day total of the month             200304-202105
+order_95480_SRN_rre003mx_1_data.txt     Data      Sarnen                               Precipitation; maximum 3-day total of the month             189509-201905
+order_95480_SRN_rre003mx_1_legend.txt   Legend    Sarnen                               Precipitation; maximum 3-day total of the month             189509-201905
+order_95480_SRN_rre003mx_2_data.txt     Data      Sarnen                               Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_SRN_rre003mx_2_legend.txt   Legend    Sarnen                               Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_MMSAX_rre003mx_1_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201211-201506
+order_95480_MMSAX_rre003mx_1_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201211-201506
+order_95480_MMSAX_rre003mx_2_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201509-201511
+order_95480_MMSAX_rre003mx_2_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201509-201511
+order_95480_MMSAX_rre003mx_3_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201602-201609
+order_95480_MMSAX_rre003mx_3_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201602-201609
+order_95480_MMSAX_rre003mx_4_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_MMSAX_rre003mx_4_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_MMSAX_rre003mx_5_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201612-201905
+order_95480_MMSAX_rre003mx_5_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201612-201905
+order_95480_MMSAX_rre003mx_6_data.txt   Data      Sax                                  Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_MMSAX_rre003mx_6_legend.txt Legend    Sax                                  Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_FLSAA_rre003mx_1_data.txt   Data      Schaanwald                           Precipitation; maximum 3-day total of the month             201307-202104
+order_95480_FLSAA_rre003mx_1_legend.txt Legend    Schaanwald                           Precipitation; maximum 3-day total of the month             201307-202104
+order_95480_SCH_rre003mx_1_data.txt     Data      Schleitheim                          Precipitation; maximum 3-day total of the month             190001-201905
+order_95480_SCH_rre003mx_1_legend.txt   Legend    Schleitheim                          Precipitation; maximum 3-day total of the month             190001-201905
+order_95480_SCH_rre003mx_2_data.txt     Data      Schleitheim                          Precipitation; maximum 3-day total of the month             201906-201907
+order_95480_SCH_rre003mx_2_legend.txt   Legend    Schleitheim                          Precipitation; maximum 3-day total of the month             201906-201907
+order_95480_SCH_rre003mx_3_data.txt     Data      Schleitheim                          Precipitation; maximum 3-day total of the month             201908-202105
+order_95480_SCH_rre003mx_3_legend.txt   Legend    Schleitheim                          Precipitation; maximum 3-day total of the month             201908-202105
+order_95480_SWZ_rre003mx_1_data.txt     Data      Schwyz                               Precipitation; maximum 3-day total of the month             190001-197502
+order_95480_SWZ_rre003mx_1_legend.txt   Legend    Schwyz                               Precipitation; maximum 3-day total of the month             190001-197502
+order_95480_SWZ_rre003mx_2_data.txt     Data      Schwyz                               Precipitation; maximum 3-day total of the month             199511-202105
+order_95480_SWZ_rre003mx_2_legend.txt   Legend    Schwyz                               Precipitation; maximum 3-day total of the month             199511-202105
+order_95480_LUSEM_rre003mx_1_data.txt   Data      Sempach                              Precipitation; maximum 3-day total of the month             201712-201801
+order_95480_LUSEM_rre003mx_1_legend.txt Legend    Sempach                              Precipitation; maximum 3-day total of the month             201712-201801
+order_95480_LUSEM_rre003mx_2_data.txt   Data      Sempach                              Precipitation; maximum 3-day total of the month             201804-202010
+order_95480_LUSEM_rre003mx_2_legend.txt Legend    Sempach                              Precipitation; maximum 3-day total of the month             201804-202010
+order_95480_LUSEM_rre003mx_3_data.txt   Data      Sempach                              Precipitation; maximum 3-day total of the month             202011-202105
+order_95480_LUSEM_rre003mx_3_legend.txt Legend    Sempach                              Precipitation; maximum 3-day total of the month             202011-202105
+order_95480_DLSIZ_rre003mx_1_data.txt   Data      Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             193012-194412
+order_95480_DLSIZ_rre003mx_1_legend.txt Legend    Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             193012-194412
+order_95480_DLSIZ_rre003mx_2_data.txt   Data      Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             194612-198804
+order_95480_DLSIZ_rre003mx_2_legend.txt Legend    Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             194612-198804
+order_95480_DLSIZ_rre003mx_3_data.txt   Data      Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             201605-202002
+order_95480_DLSIZ_rre003mx_3_legend.txt Legend    Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             201605-202002
+order_95480_DLSIZ_rre003mx_4_data.txt   Data      Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             202007-202105
+order_95480_DLSIZ_rre003mx_4_legend.txt Legend    Sigmarszell-Zeisertsweiler           Precipitation; maximum 3-day total of the month             202007-202105
+order_95480_SIO_rre003mx_1_data.txt     Data      Sion                                 Precipitation; maximum 3-day total of the month             195712-202105
+order_95480_SIO_rre003mx_1_legend.txt   Legend    Sion                                 Precipitation; maximum 3-day total of the month             195712-202105
+order_95480_SCS_rre003mx_1_data.txt     Data      St. Chrischona BS                    Precipitation; maximum 3-day total of the month             191612-199508
+order_95480_SCS_rre003mx_1_legend.txt   Legend    St. Chrischona BS                    Precipitation; maximum 3-day total of the month             191612-199508
+order_95480_STU_rre003mx_1_data.txt     Data      St. Urban                            Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_STU_rre003mx_1_legend.txt   Legend    St. Urban                            Precipitation; maximum 3-day total of the month             190001-202105
+order_95480_LUSUR_rre003mx_1_data.txt   Data      Sursee                               Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_LUSUR_rre003mx_1_legend.txt Legend    Sursee                               Precipitation; maximum 3-day total of the month             201612-202105
+order_95480_MMTRG_rre003mx_1_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201608-201610
+order_95480_MMTRG_rre003mx_1_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201608-201610
+order_95480_MMTRG_rre003mx_2_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201612-201805
+order_95480_MMTRG_rre003mx_2_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201612-201805
+order_95480_MMTRG_rre003mx_3_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMTRG_rre003mx_3_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201806-201808
+order_95480_MMTRG_rre003mx_4_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201809-201901
+order_95480_MMTRG_rre003mx_4_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201809-201901
+order_95480_MMTRG_rre003mx_5_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMTRG_rre003mx_5_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201903-201905
+order_95480_MMTRG_rre003mx_6_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201906-201907
+order_95480_MMTRG_rre003mx_6_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201906-201907
+order_95480_MMTRG_rre003mx_7_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             201908-202012
+order_95480_MMTRG_rre003mx_7_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             201908-202012
+order_95480_MMTRG_rre003mx_8_data.txt   Data      Triengen                             Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_MMTRG_rre003mx_8_legend.txt Legend    Triengen                             Precipitation; maximum 3-day total of the month             202101-202105
+order_95480_VDU_rre003mx_1_data.txt     Data      Vaduz (Fürstl. Weinberg)             Precipitation; maximum 3-day total of the month             192801-197312
+order_95480_VDU_rre003mx_1_legend.txt   Legend    Vaduz (Fürstl. Weinberg)             Precipitation; maximum 3-day total of the month             192801-197312
+order_95480_VDVAL_rre003mx_1_data.txt   Data      Valeyres-sous-Montagny               Precipitation; maximum 3-day total of the month             201308-202105
+order_95480_VDVAL_rre003mx_1_legend.txt Legend    Valeyres-sous-Montagny               Precipitation; maximum 3-day total of the month             201308-202105
+order_95480_VAR_rre003mx_1_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             188212-188701
+order_95480_VAR_rre003mx_1_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             188212-188701
+order_95480_VAR_rre003mx_2_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             188704-189007
+order_95480_VAR_rre003mx_2_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             188704-189007
+order_95480_VAR_rre003mx_3_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189008-189111
+order_95480_VAR_rre003mx_3_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189008-189111
+order_95480_VAR_rre003mx_4_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189112-189204
+order_95480_VAR_rre003mx_4_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189112-189204
+order_95480_VAR_rre003mx_5_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189205-189807
+order_95480_VAR_rre003mx_5_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189205-189807
+order_95480_VAR_rre003mx_6_data.txt     Data      Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189808-202105
+order_95480_VAR_rre003mx_6_legend.txt   Legend    Valeyres-sous-Rances                 Precipitation; maximum 3-day total of the month             189808-202105
+order_95480_VDPPI_rre003mx_1_data.txt   Data      Villeneuve, Le Pissot                Precipitation; maximum 3-day total of the month             201308-201901
+order_95480_VDPPI_rre003mx_1_legend.txt Legend    Villeneuve, Le Pissot                Precipitation; maximum 3-day total of the month             201308-201901
+order_95480_VDPPI_rre003mx_2_data.txt   Data      Villeneuve, Le Pissot                Precipitation; maximum 3-day total of the month             202006-202105
+order_95480_VDPPI_rre003mx_2_legend.txt Legend    Villeneuve, Le Pissot                Precipitation; maximum 3-day total of the month             202006-202105
+order_95480_WSLVOB_rre003mx_1_data.txt  Data      Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             201902-201908
+order_95480_WSLVOB_rre003mx_1_legend.txt Legend    Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             201902-201908
+order_95480_WSLVOB_rre003mx_2_data.txt  Data      Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             201909-201911
+order_95480_WSLVOB_rre003mx_2_legend.txt Legend    Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             201909-201911
+order_95480_WSLVOB_rre003mx_3_data.txt  Data      Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             202002-202011
+order_95480_WSLVOB_rre003mx_3_legend.txt Legend    Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             202002-202011
+order_95480_WSLVOB_rre003mx_4_data.txt  Data      Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             202102-202105
+order_95480_WSLVOB_rre003mx_4_legend.txt Legend    Vordemwald Bestand                   Precipitation; maximum 3-day total of the month             202102-202105
+order_95480_WSLVOF_rre003mx_1_data.txt  Data      Vordemwald Freiland                  Precipitation; maximum 3-day total of the month             201712-201910
+order_95480_WSLVOF_rre003mx_1_legend.txt Legend    Vordemwald Freiland                  Precipitation; maximum 3-day total of the month             201712-201910
+order_95480_WSLVOF_rre003mx_2_data.txt  Data      Vordemwald Freiland                  Precipitation; maximum 3-day total of the month             202002-202105
+order_95480_WSLVOF_rre003mx_2_legend.txt Legend    Vordemwald Freiland                  Precipitation; maximum 3-day total of the month             202002-202105
+order_95480_DLWAL_rre003mx_1_data.txt   Data      Waldmünchen                          Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLWAL_rre003mx_1_legend.txt Legend    Waldmünchen                          Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_WWM_rre003mx_1_data.txt     Data      Wauwilermoos                         Precipitation; maximum 3-day total of the month             196012-197312
+order_95480_WWM_rre003mx_1_legend.txt   Legend    Wauwilermoos                         Precipitation; maximum 3-day total of the month             196012-197312
+order_95480_DLWES_rre003mx_1_data.txt   Data      Weihenstephan / Dürnast              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_DLWES_rre003mx_1_legend.txt Legend    Weihenstephan / Dürnast              Precipitation; maximum 3-day total of the month             202008-202105
+order_95480_WEF_rre003mx_1_data.txt     Data      Weinfelden                           Precipitation; maximum 3-day total of the month             190012-201411
+order_95480_WEF_rre003mx_1_legend.txt   Legend    Weinfelden                           Precipitation; maximum 3-day total of the month             190012-201411
+order_95480_WEF_rre003mx_2_data.txt     Data      Weinfelden                           Precipitation; maximum 3-day total of the month             201412-201905
+order_95480_WEF_rre003mx_2_legend.txt   Legend    Weinfelden                           Precipitation; maximum 3-day total of the month             201412-201905
+order_95480_WEF_rre003mx_3_data.txt     Data      Weinfelden                           Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_WEF_rre003mx_3_legend.txt   Legend    Weinfelden                           Precipitation; maximum 3-day total of the month             201906-202105
+order_95480_SGWAU_rre003mx_1_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201405-201506
+order_95480_SGWAU_rre003mx_1_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201405-201506
+order_95480_SGWAU_rre003mx_2_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201507-201609
+order_95480_SGWAU_rre003mx_2_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201507-201609
+order_95480_SGWAU_rre003mx_3_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_SGWAU_rre003mx_3_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201610-201611
+order_95480_SGWAU_rre003mx_4_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201612-201706
+order_95480_SGWAU_rre003mx_4_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201612-201706
+order_95480_SGWAU_rre003mx_5_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201710-201802
+order_95480_SGWAU_rre003mx_5_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201710-201802
+order_95480_SGWAU_rre003mx_6_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201810-201903
+order_95480_SGWAU_rre003mx_6_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201810-201903
+order_95480_SGWAU_rre003mx_7_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201904-201905
+order_95480_SGWAU_rre003mx_7_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201904-201905
+order_95480_SGWAU_rre003mx_8_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             201909-202003
+order_95480_SGWAU_rre003mx_8_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             201909-202003
+order_95480_SGWAU_rre003mx_9_data.txt   Data      Weite / Wartau                       Precipitation; maximum 3-day total of the month             202010-202012
+order_95480_SGWAU_rre003mx_9_legend.txt Legend    Weite / Wartau                       Precipitation; maximum 3-day total of the month             202010-202012
+order_95480_WIN_rre003mx_1_data.txt     Data      Winterthur / Seen                    Precipitation; maximum 3-day total of the month             186312-187110
+order_95480_WIN_rre003mx_1_legend.txt   Legend    Winterthur / Seen                    Precipitation; maximum 3-day total of the month             186312-187110
+order_95480_WIN_rre003mx_2_data.txt     Data      Winterthur / Seen                    Precipitation; maximum 3-day total of the month             187111-187601
+order_95480_WIN_rre003mx_2_legend.txt   Legend    Winterthur / Seen                    Precipitation; maximum 3-day total of the month             187111-187601
+order_95480_WIN_rre003mx_3_data.txt     Data      Winterthur / Seen                    Precipitation; maximum 3-day total of the month             187701-202105
+order_95480_WIN_rre003mx_3_legend.txt   Legend    Winterthur / Seen                    Precipitation; maximum 3-day total of the month             187701-202105
+order_95480_WAE_rre003mx_1_data.txt     Data      Wädenswil                            Precipitation; maximum 3-day total of the month             196012-202105
+order_95480_WAE_rre003mx_1_legend.txt   Legend    Wädenswil                            Precipitation; maximum 3-day total of the month             196012-202105
+order_95480_WGI_rre003mx_1_data.txt     Data      Wängi                                Precipitation; maximum 3-day total of the month             190012-196812
+order_95480_WGI_rre003mx_1_legend.txt   Legend    Wängi                                Precipitation; maximum 3-day total of the month             190012-196812
+order_95480_ZST_rre003mx_1_data.txt     Data      Zürich-Strickhof                     Precipitation; maximum 3-day total of the month             196012-197606
+order_95480_ZST_rre003mx_1_legend.txt   Legend    Zürich-Strickhof                     Precipitation; maximum 3-day total of the month             196012-197606

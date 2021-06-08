@@ -1,5 +1,7 @@
+import os
 import json
 from flask import request
+from flask import redirect
 from flask import Blueprint
 from flask import render_template
 
@@ -18,6 +20,32 @@ def constructBlueprint(announcer, instance, abstractDriver):
         return render_template(
             "admin.html",
         )
+
+    @adminApi.route("/postgres", methods=["POST"])
+    def createConnectionString():
+        type = request.form.get("type")
+        username = request.form.get("username")
+        password = request.form.get("password")
+        address = request.form.get("address")
+        port = request.form.get("port")
+        connectionString = "{}://{}:{}@{}:{}/klimadb".format(
+            type,
+            username,
+            password,
+            address,
+            port,
+        )
+        if not os.path.exists("config/config.json"):
+            os.mkdir("config")
+            f = open("config/config.json", "a")
+        else:
+            f = open("config/config.json", "a")
+
+        config = json.dumps({"databaseUrl": connectionString})
+        f.write(config)
+        f.close
+        instance.databaseUrl = connectionString
+        return redirect("/admin/")
 
     @adminApi.route("/getServiceList", methods=["POST"])
     def getServiceList():

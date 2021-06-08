@@ -1,0 +1,736 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 95455
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_95455_ABE_rsd100m0_1_data.txt     Data      Aarberg                              Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_ABE_rsd100m0_1_legend.txt   Legend    Aarberg                              Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_DLACH_rsd100m0_1_data.txt   Data      Achberg / Doberatsweiler             Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_DLACH_rsd100m0_1_legend.txt Legend    Achberg / Doberatsweiler             Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_ATN_rsd100m0_1_data.txt     Data      Altnau                               Days of the month with precipitation total exceeding 9.9 mm 196012-199803
+order_95455_ATN_rsd100m0_1_legend.txt   Legend    Altnau                               Days of the month with precipitation total exceeding 9.9 mm 196012-199803
+order_95455_TGAMR_rsd100m0_1_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201008-201107
+order_95455_TGAMR_rsd100m0_1_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201008-201107
+order_95455_TGAMR_rsd100m0_2_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201108-201111
+order_95455_TGAMR_rsd100m0_2_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201108-201111
+order_95455_TGAMR_rsd100m0_3_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201112-201209
+order_95455_TGAMR_rsd100m0_3_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201112-201209
+order_95455_TGAMR_rsd100m0_4_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201210-201211
+order_95455_TGAMR_rsd100m0_4_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201210-201211
+order_95455_TGAMR_rsd100m0_5_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201304-201308
+order_95455_TGAMR_rsd100m0_5_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201304-201308
+order_95455_TGAMR_rsd100m0_6_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201309-201403
+order_95455_TGAMR_rsd100m0_6_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201309-201403
+order_95455_TGAMR_rsd100m0_7_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201405-201504
+order_95455_TGAMR_rsd100m0_7_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201405-201504
+order_95455_TGAMR_rsd100m0_8_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201508-201510
+order_95455_TGAMR_rsd100m0_8_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201508-201510
+order_95455_TGAMR_rsd100m0_9_data.txt   Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201511-201706
+order_95455_TGAMR_rsd100m0_9_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201511-201706
+order_95455_TGAMR_rsd100m0_10_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201707-201708
+order_95455_TGAMR_rsd100m0_10_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201707-201708
+order_95455_TGAMR_rsd100m0_11_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201709-201811
+order_95455_TGAMR_rsd100m0_11_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201709-201811
+order_95455_TGAMR_rsd100m0_12_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201901-201908
+order_95455_TGAMR_rsd100m0_12_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201901-201908
+order_95455_TGAMR_rsd100m0_13_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201909-201911
+order_95455_TGAMR_rsd100m0_13_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201909-201911
+order_95455_TGAMR_rsd100m0_14_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201912-202012
+order_95455_TGAMR_rsd100m0_14_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 201912-202012
+order_95455_TGAMR_rsd100m0_15_data.txt  Data      Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 202101-202105
+order_95455_TGAMR_rsd100m0_15_legend.txt Legend    Amriswil                             Days of the month with precipitation total exceeding 9.9 mm 202101-202105
+order_95455_TGARE_rsd100m0_1_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201008-201112
+order_95455_TGARE_rsd100m0_1_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201008-201112
+order_95455_TGARE_rsd100m0_2_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201201-201211
+order_95455_TGARE_rsd100m0_2_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201201-201211
+order_95455_TGARE_rsd100m0_3_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201212-201308
+order_95455_TGARE_rsd100m0_3_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201212-201308
+order_95455_TGARE_rsd100m0_4_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201401-201404
+order_95455_TGARE_rsd100m0_4_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201401-201404
+order_95455_TGARE_rsd100m0_5_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201405-201504
+order_95455_TGARE_rsd100m0_5_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201405-201504
+order_95455_TGARE_rsd100m0_6_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201508-201707
+order_95455_TGARE_rsd100m0_6_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201508-201707
+order_95455_TGARE_rsd100m0_7_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201708-201812
+order_95455_TGARE_rsd100m0_7_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201708-201812
+order_95455_TGARE_rsd100m0_8_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201901-201910
+order_95455_TGARE_rsd100m0_8_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201901-201910
+order_95455_TGARE_rsd100m0_9_data.txt   Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201911-202005
+order_95455_TGARE_rsd100m0_9_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 201911-202005
+order_95455_TGARE_rsd100m0_10_data.txt  Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202006-202008
+order_95455_TGARE_rsd100m0_10_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202006-202008
+order_95455_TGARE_rsd100m0_11_data.txt  Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202009-202011
+order_95455_TGARE_rsd100m0_11_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202009-202011
+order_95455_TGARE_rsd100m0_12_data.txt  Data      Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202012-202105
+order_95455_TGARE_rsd100m0_12_legend.txt Legend    Arenenberg                           Days of the month with precipitation total exceeding 9.9 mm 202012-202105
+order_95455_ARI_rsd100m0_1_data.txt     Data      Arisdorf                             Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_ARI_rsd100m0_1_legend.txt   Legend    Arisdorf                             Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_AGATT_rsd100m0_1_data.txt   Data      Attelwil                             Days of the month with precipitation total exceeding 9.9 mm 201406-202105
+order_95455_AGATT_rsd100m0_1_legend.txt Legend    Attelwil                             Days of the month with precipitation total exceeding 9.9 mm 201406-202105
+order_95455_RAG_rsd100m0_1_data.txt     Data      Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 187005-189012
+order_95455_RAG_rsd100m0_1_legend.txt   Legend    Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 187005-189012
+order_95455_RAG_rsd100m0_2_data.txt     Data      Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 193808-201112
+order_95455_RAG_rsd100m0_2_legend.txt   Legend    Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 193808-201112
+order_95455_RAG_rsd100m0_3_data.txt     Data      Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 201202-201605
+order_95455_RAG_rsd100m0_3_legend.txt   Legend    Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 201202-201605
+order_95455_RAG_rsd100m0_4_data.txt     Data      Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 201606-202105
+order_95455_RAG_rsd100m0_4_legend.txt   Legend    Bad Ragaz                            Days of the month with precipitation total exceeding 9.9 mm 201606-202105
+order_95455_IYBAR_rsd100m0_1_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 200212-201903
+order_95455_IYBAR_rsd100m0_1_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 200212-201903
+order_95455_IYBAR_rsd100m0_2_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 201904-201908
+order_95455_IYBAR_rsd100m0_2_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 201904-201908
+order_95455_IYBAR_rsd100m0_3_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 201909-202004
+order_95455_IYBAR_rsd100m0_3_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 201909-202004
+order_95455_IYBAR_rsd100m0_4_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202005-202006
+order_95455_IYBAR_rsd100m0_4_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202005-202006
+order_95455_IYBAR_rsd100m0_5_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202007-202009
+order_95455_IYBAR_rsd100m0_5_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202007-202009
+order_95455_IYBAR_rsd100m0_6_data.txt   Data      Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202010-202104
+order_95455_IYBAR_rsd100m0_6_legend.txt Legend    Barbian / Kollmann                   Days of the month with precipitation total exceeding 9.9 mm 202010-202104
+order_95455_SOBIB_rsd100m0_1_data.txt   Data      Bibern                               Days of the month with precipitation total exceeding 9.9 mm 199812-201307
+order_95455_SOBIB_rsd100m0_1_legend.txt Legend    Bibern                               Days of the month with precipitation total exceeding 9.9 mm 199812-201307
+order_95455_AGBRW_rsd100m0_1_data.txt   Data      Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200007-200903
+order_95455_AGBRW_rsd100m0_1_legend.txt Legend    Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200007-200903
+order_95455_AGBRW_rsd100m0_2_data.txt   Data      Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200905-200906
+order_95455_AGBRW_rsd100m0_2_legend.txt Legend    Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200905-200906
+order_95455_AGBRW_rsd100m0_3_data.txt   Data      Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200912-201107
+order_95455_AGBRW_rsd100m0_3_legend.txt Legend    Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 200912-201107
+order_95455_AGBRW_rsd100m0_4_data.txt   Data      Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 201108-202105
+order_95455_AGBRW_rsd100m0_4_legend.txt Legend    Birrwil                              Days of the month with precipitation total exceeding 9.9 mm 201108-202105
+order_95455_CPS_rsd100m0_1_data.txt     Data      Compesières                          Days of the month with precipitation total exceeding 9.9 mm 190009-197312
+order_95455_CPS_rsd100m0_1_legend.txt   Legend    Compesières                          Days of the month with precipitation total exceeding 9.9 mm 190009-197312
+order_95455_VDCRI_rsd100m0_1_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199902-199903
+order_95455_VDCRI_rsd100m0_1_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199902-199903
+order_95455_VDCRI_rsd100m0_2_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199904-199905
+order_95455_VDCRI_rsd100m0_2_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199904-199905
+order_95455_VDCRI_rsd100m0_3_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199906-199910
+order_95455_VDCRI_rsd100m0_3_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 199906-199910
+order_95455_VDCRI_rsd100m0_4_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200001-200005
+order_95455_VDCRI_rsd100m0_4_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200001-200005
+order_95455_VDCRI_rsd100m0_5_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200008-200009
+order_95455_VDCRI_rsd100m0_5_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200008-200009
+order_95455_VDCRI_rsd100m0_6_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200010-200011
+order_95455_VDCRI_rsd100m0_6_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200010-200011
+order_95455_VDCRI_rsd100m0_7_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200101-200102
+order_95455_VDCRI_rsd100m0_7_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200101-200102
+order_95455_VDCRI_rsd100m0_8_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200106-200108
+order_95455_VDCRI_rsd100m0_8_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200106-200108
+order_95455_VDCRI_rsd100m0_9_data.txt   Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200109-200111
+order_95455_VDCRI_rsd100m0_9_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200109-200111
+order_95455_VDCRI_rsd100m0_10_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200201-200204
+order_95455_VDCRI_rsd100m0_10_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200201-200204
+order_95455_VDCRI_rsd100m0_11_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200206-200207
+order_95455_VDCRI_rsd100m0_11_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200206-200207
+order_95455_VDCRI_rsd100m0_12_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200211-200212
+order_95455_VDCRI_rsd100m0_12_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200211-200212
+order_95455_VDCRI_rsd100m0_13_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200302-200310
+order_95455_VDCRI_rsd100m0_13_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200302-200310
+order_95455_VDCRI_rsd100m0_14_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200401-200409
+order_95455_VDCRI_rsd100m0_14_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200401-200409
+order_95455_VDCRI_rsd100m0_15_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200410-200411
+order_95455_VDCRI_rsd100m0_15_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200410-200411
+order_95455_VDCRI_rsd100m0_16_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200503-200510
+order_95455_VDCRI_rsd100m0_16_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200503-200510
+order_95455_VDCRI_rsd100m0_17_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200601-200605
+order_95455_VDCRI_rsd100m0_17_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200601-200605
+order_95455_VDCRI_rsd100m0_18_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200606-200607
+order_95455_VDCRI_rsd100m0_18_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200606-200607
+order_95455_VDCRI_rsd100m0_19_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200608-200611
+order_95455_VDCRI_rsd100m0_19_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200608-200611
+order_95455_VDCRI_rsd100m0_20_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200701-200702
+order_95455_VDCRI_rsd100m0_20_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200701-200702
+order_95455_VDCRI_rsd100m0_21_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200706-200710
+order_95455_VDCRI_rsd100m0_21_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200706-200710
+order_95455_VDCRI_rsd100m0_22_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200711-200803
+order_95455_VDCRI_rsd100m0_22_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200711-200803
+order_95455_VDCRI_rsd100m0_23_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200804-200807
+order_95455_VDCRI_rsd100m0_23_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200804-200807
+order_95455_VDCRI_rsd100m0_24_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDCRI_rsd100m0_24_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDCRI_rsd100m0_25_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200812-200911
+order_95455_VDCRI_rsd100m0_25_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 200812-200911
+order_95455_VDCRI_rsd100m0_26_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201001-201010
+order_95455_VDCRI_rsd100m0_26_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201001-201010
+order_95455_VDCRI_rsd100m0_27_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201012-201205
+order_95455_VDCRI_rsd100m0_27_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201012-201205
+order_95455_VDCRI_rsd100m0_28_data.txt  Data      Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201206-202105
+order_95455_VDCRI_rsd100m0_28_legend.txt Legend    Crissier                             Days of the month with precipitation total exceeding 9.9 mm 201206-202105
+order_95455_CRO_rsd100m0_1_data.txt     Data      Croix-de-Rozon                       Days of the month with precipitation total exceeding 9.9 mm 197312-200505
+order_95455_CRO_rsd100m0_1_legend.txt   Legend    Croix-de-Rozon                       Days of the month with precipitation total exceeding 9.9 mm 197312-200505
+order_95455_DLDEU_rsd100m0_1_data.txt   Data      Deuselbach                           Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLDEU_rsd100m0_1_legend.txt Legend    Deuselbach                           Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_EFF_rsd100m0_1_data.txt     Data      Effretikon                           Days of the month with precipitation total exceeding 9.9 mm 195212-202105
+order_95455_EFF_rsd100m0_1_legend.txt   Legend    Effretikon                           Days of the month with precipitation total exceeding 9.9 mm 195212-202105
+order_95455_EVI_rsd100m0_1_data.txt     Data      Evionnaz                             Days of the month with precipitation total exceeding 9.9 mm 201312-202105
+order_95455_EVI_rsd100m0_1_legend.txt   Legend    Evionnaz                             Days of the month with precipitation total exceeding 9.9 mm 201312-202105
+order_95455_DLFEU_rsd100m0_1_data.txt   Data      Feuchtwangen / Heilbronn             Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLFEU_rsd100m0_1_legend.txt Legend    Feuchtwangen / Heilbronn             Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLHAH_rsd100m0_1_data.txt   Data      Frankfurt / Hahn Flughafen           Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLHAH_rsd100m0_1_legend.txt Legend    Frankfurt / Hahn Flughafen           Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_VDFEC_rsd100m0_1_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 199902-199904
+order_95455_VDFEC_rsd100m0_1_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 199902-199904
+order_95455_VDFEC_rsd100m0_2_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 199905-199910
+order_95455_VDFEC_rsd100m0_2_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 199905-199910
+order_95455_VDFEC_rsd100m0_3_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200001-200003
+order_95455_VDFEC_rsd100m0_3_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200001-200003
+order_95455_VDFEC_rsd100m0_4_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200004-200010
+order_95455_VDFEC_rsd100m0_4_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200004-200010
+order_95455_VDFEC_rsd100m0_5_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200101-200104
+order_95455_VDFEC_rsd100m0_5_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200101-200104
+order_95455_VDFEC_rsd100m0_6_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200106-200110
+order_95455_VDFEC_rsd100m0_6_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200106-200110
+order_95455_VDFEC_rsd100m0_7_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200202-200205
+order_95455_VDFEC_rsd100m0_7_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200202-200205
+order_95455_VDFEC_rsd100m0_8_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200208-200209
+order_95455_VDFEC_rsd100m0_8_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200208-200209
+order_95455_VDFEC_rsd100m0_9_data.txt   Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200210-200211
+order_95455_VDFEC_rsd100m0_9_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200210-200211
+order_95455_VDFEC_rsd100m0_10_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200212-200309
+order_95455_VDFEC_rsd100m0_10_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200212-200309
+order_95455_VDFEC_rsd100m0_11_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200310-200311
+order_95455_VDFEC_rsd100m0_11_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200310-200311
+order_95455_VDFEC_rsd100m0_12_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200401-200407
+order_95455_VDFEC_rsd100m0_12_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200401-200407
+order_95455_VDFEC_rsd100m0_13_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200408-200411
+order_95455_VDFEC_rsd100m0_13_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200408-200411
+order_95455_VDFEC_rsd100m0_14_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200505-200509
+order_95455_VDFEC_rsd100m0_14_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200505-200509
+order_95455_VDFEC_rsd100m0_15_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200512-200606
+order_95455_VDFEC_rsd100m0_15_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200512-200606
+order_95455_VDFEC_rsd100m0_16_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200608-200612
+order_95455_VDFEC_rsd100m0_16_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200608-200612
+order_95455_VDFEC_rsd100m0_17_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200701-200706
+order_95455_VDFEC_rsd100m0_17_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200701-200706
+order_95455_VDFEC_rsd100m0_18_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200707-200711
+order_95455_VDFEC_rsd100m0_18_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200707-200711
+order_95455_VDFEC_rsd100m0_19_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200712-200811
+order_95455_VDFEC_rsd100m0_19_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200712-200811
+order_95455_VDFEC_rsd100m0_20_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200812-200903
+order_95455_VDFEC_rsd100m0_20_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200812-200903
+order_95455_VDFEC_rsd100m0_21_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200904-201010
+order_95455_VDFEC_rsd100m0_21_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 200904-201010
+order_95455_VDFEC_rsd100m0_22_data.txt  Data      Féchy                                Days of the month with precipitation total exceeding 9.9 mm 201012-202105
+order_95455_VDFEC_rsd100m0_22_legend.txt Legend    Féchy                                Days of the month with precipitation total exceeding 9.9 mm 201012-202105
+order_95455_DLFUR_rsd100m0_1_data.txt   Data      Fürstenzell                          Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLFUR_rsd100m0_1_legend.txt Legend    Fürstenzell                          Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_GPN_rsd100m0_1_data.txt     Data      Gempenach                            Days of the month with precipitation total exceeding 9.9 mm 197112-197912
+order_95455_GPN_rsd100m0_1_legend.txt   Legend    Gempenach                            Days of the month with precipitation total exceeding 9.9 mm 197112-197912
+order_95455_GIH_rsd100m0_1_data.txt     Data      Giswil                               Days of the month with precipitation total exceeding 9.9 mm 197607-202105
+order_95455_GIH_rsd100m0_1_legend.txt   Legend    Giswil                               Days of the month with precipitation total exceeding 9.9 mm 197607-202105
+order_95455_GLGLA_rsd100m0_1_data.txt   Data      Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201308-201406
+order_95455_GLGLA_rsd100m0_1_legend.txt Legend    Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201308-201406
+order_95455_GLGLA_rsd100m0_2_data.txt   Data      Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201407-201412
+order_95455_GLGLA_rsd100m0_2_legend.txt Legend    Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201407-201412
+order_95455_GLGLA_rsd100m0_3_data.txt   Data      Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201612-202005
+order_95455_GLGLA_rsd100m0_3_legend.txt Legend    Glarus                               Days of the month with precipitation total exceeding 9.9 mm 201612-202005
+order_95455_GLGLA_rsd100m0_4_data.txt   Data      Glarus                               Days of the month with precipitation total exceeding 9.9 mm 202007-202105
+order_95455_GLGLA_rsd100m0_4_legend.txt Legend    Glarus                               Days of the month with precipitation total exceeding 9.9 mm 202007-202105
+order_95455_SOGRE_rsd100m0_1_data.txt   Data      Grenchen                             Days of the month with precipitation total exceeding 9.9 mm 199912-201505
+order_95455_SOGRE_rsd100m0_1_legend.txt Legend    Grenchen                             Days of the month with precipitation total exceeding 9.9 mm 199912-201505
+order_95455_DLHAR_rsd100m0_1_data.txt   Data      Harburg                              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLHAR_rsd100m0_1_legend.txt Legend    Harburg                              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_HEB_rsd100m0_1_data.txt     Data      Herzogenbuchsee                      Days of the month with precipitation total exceeding 9.9 mm 190012-202105
+order_95455_HEB_rsd100m0_1_legend.txt   Legend    Herzogenbuchsee                      Days of the month with precipitation total exceeding 9.9 mm 190012-202105
+order_95455_LUHOC_rsd100m0_1_data.txt   Data      Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201512-201711
+order_95455_LUHOC_rsd100m0_1_legend.txt Legend    Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201512-201711
+order_95455_LUHOC_rsd100m0_2_data.txt   Data      Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201712-201812
+order_95455_LUHOC_rsd100m0_2_legend.txt Legend    Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201712-201812
+order_95455_LUHOC_rsd100m0_3_data.txt   Data      Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201902-202102
+order_95455_LUHOC_rsd100m0_3_legend.txt Legend    Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 201902-202102
+order_95455_LUHOC_rsd100m0_4_data.txt   Data      Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_LUHOC_rsd100m0_4_legend.txt Legend    Hochdorf                             Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_HUN_rsd100m0_1_data.txt     Data      Hunzikon                             Days of the month with precipitation total exceeding 9.9 mm 197212-199112
+order_95455_HUN_rsd100m0_1_legend.txt   Legend    Hunzikon                             Days of the month with precipitation total exceeding 9.9 mm 197212-199112
+order_95455_GEFOR_rsd100m0_1_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199111-199403
+order_95455_GEFOR_rsd100m0_1_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199111-199403
+order_95455_GEFOR_rsd100m0_2_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199404-199512
+order_95455_GEFOR_rsd100m0_2_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199404-199512
+order_95455_GEFOR_rsd100m0_3_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199602-199705
+order_95455_GEFOR_rsd100m0_3_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199602-199705
+order_95455_GEFOR_rsd100m0_4_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199706-199805
+order_95455_GEFOR_rsd100m0_4_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199706-199805
+order_95455_GEFOR_rsd100m0_5_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199806-199905
+order_95455_GEFOR_rsd100m0_5_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199806-199905
+order_95455_GEFOR_rsd100m0_6_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199906-200503
+order_95455_GEFOR_rsd100m0_6_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 199906-200503
+order_95455_GEFOR_rsd100m0_7_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200504-200506
+order_95455_GEFOR_rsd100m0_7_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200504-200506
+order_95455_GEFOR_rsd100m0_8_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200508-200604
+order_95455_GEFOR_rsd100m0_8_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200508-200604
+order_95455_GEFOR_rsd100m0_9_data.txt   Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200605-200704
+order_95455_GEFOR_rsd100m0_9_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200605-200704
+order_95455_GEFOR_rsd100m0_10_data.txt  Data      Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200705-202105
+order_95455_GEFOR_rsd100m0_10_legend.txt Legend    Jussy / Maison de la foret           Days of the month with precipitation total exceeding 9.9 mm 200705-202105
+order_95455_WSLJUB_rsd100m0_1_data.txt  Data      Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201712-201804
+order_95455_WSLJUB_rsd100m0_1_legend.txt Legend    Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201712-201804
+order_95455_WSLJUB_rsd100m0_2_data.txt  Data      Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201806-201906
+order_95455_WSLJUB_rsd100m0_2_legend.txt Legend    Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201806-201906
+order_95455_WSLJUB_rsd100m0_3_data.txt  Data      Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201907-202005
+order_95455_WSLJUB_rsd100m0_3_legend.txt Legend    Jussy Bestand                        Days of the month with precipitation total exceeding 9.9 mm 201907-202005
+order_95455_WSLJUF_rsd100m0_1_data.txt  Data      Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201712-201803
+order_95455_WSLJUF_rsd100m0_1_legend.txt Legend    Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201712-201803
+order_95455_WSLJUF_rsd100m0_2_data.txt  Data      Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201804-201807
+order_95455_WSLJUF_rsd100m0_2_legend.txt Legend    Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201804-201807
+order_95455_WSLJUF_rsd100m0_3_data.txt  Data      Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201808-201912
+order_95455_WSLJUF_rsd100m0_3_legend.txt Legend    Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 201808-201912
+order_95455_WSLJUF_rsd100m0_4_data.txt  Data      Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 202002-202004
+order_95455_WSLJUF_rsd100m0_4_legend.txt Legend    Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 202002-202004
+order_95455_WSLJUF_rsd100m0_5_data.txt  Data      Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_WSLJUF_rsd100m0_5_legend.txt Legend    Jussy Freiland                       Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLKAI_rsd100m0_1_data.txt   Data      Kaisersbach / Cronhütte              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLKAI_rsd100m0_1_legend.txt Legend    Kaisersbach / Cronhütte              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_IYKAL_rsd100m0_1_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201312-201903
+order_95455_IYKAL_rsd100m0_1_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201312-201903
+order_95455_IYKAL_rsd100m0_2_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201904-201908
+order_95455_IYKAL_rsd100m0_2_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201904-201908
+order_95455_IYKAL_rsd100m0_3_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201909-202004
+order_95455_IYKAL_rsd100m0_3_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 201909-202004
+order_95455_IYKAL_rsd100m0_4_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202005-202006
+order_95455_IYKAL_rsd100m0_4_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202005-202006
+order_95455_IYKAL_rsd100m0_5_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202007-202009
+order_95455_IYKAL_rsd100m0_5_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202007-202009
+order_95455_IYKAL_rsd100m0_6_data.txt   Data      Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202010-202105
+order_95455_IYKAL_rsd100m0_6_legend.txt Legend    Kaltern / Oberplanitzing             Days of the month with precipitation total exceeding 9.9 mm 202010-202105
+order_95455_KOL_rsd100m0_1_data.txt     Data      Kollbrunn                            Days of the month with precipitation total exceeding 9.9 mm 189912-197312
+order_95455_KOL_rsd100m0_1_legend.txt   Legend    Kollbrunn                            Days of the month with precipitation total exceeding 9.9 mm 189912-197312
+order_95455_KOP_rsd100m0_1_data.txt     Data      Koppigen                             Days of the month with precipitation total exceeding 9.9 mm 196011-202105
+order_95455_KOP_rsd100m0_1_legend.txt   Legend    Koppigen                             Days of the month with precipitation total exceeding 9.9 mm 196011-202105
+order_95455_KRZ_rsd100m0_1_data.txt     Data      Kreuzlingen                          Days of the month with precipitation total exceeding 9.9 mm 189912-197605
+order_95455_KRZ_rsd100m0_1_legend.txt   Legend    Kreuzlingen                          Days of the month with precipitation total exceeding 9.9 mm 189912-197605
+order_95455_KAR_rsd100m0_1_data.txt     Data      Küssnacht am Rigi                    Days of the month with precipitation total exceeding 9.9 mm 196012-202105
+order_95455_KAR_rsd100m0_1_legend.txt   Legend    Küssnacht am Rigi                    Days of the month with precipitation total exceeding 9.9 mm 196012-202105
+order_95455_GELAN_rsd100m0_1_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 198910-199005
+order_95455_GELAN_rsd100m0_1_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 198910-199005
+order_95455_GELAN_rsd100m0_2_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199006-199010
+order_95455_GELAN_rsd100m0_2_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199006-199010
+order_95455_GELAN_rsd100m0_3_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199011-199109
+order_95455_GELAN_rsd100m0_3_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199011-199109
+order_95455_GELAN_rsd100m0_4_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199111-199210
+order_95455_GELAN_rsd100m0_4_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199111-199210
+order_95455_GELAN_rsd100m0_5_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199212-199308
+order_95455_GELAN_rsd100m0_5_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199212-199308
+order_95455_GELAN_rsd100m0_6_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199310-199311
+order_95455_GELAN_rsd100m0_6_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199310-199311
+order_95455_GELAN_rsd100m0_7_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199401-199403
+order_95455_GELAN_rsd100m0_7_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199401-199403
+order_95455_GELAN_rsd100m0_8_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199405-199410
+order_95455_GELAN_rsd100m0_8_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199405-199410
+order_95455_GELAN_rsd100m0_9_data.txt   Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199412-199503
+order_95455_GELAN_rsd100m0_9_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199412-199503
+order_95455_GELAN_rsd100m0_10_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199505-199508
+order_95455_GELAN_rsd100m0_10_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199505-199508
+order_95455_GELAN_rsd100m0_11_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199509-199510
+order_95455_GELAN_rsd100m0_11_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199509-199510
+order_95455_GELAN_rsd100m0_12_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199511-199610
+order_95455_GELAN_rsd100m0_12_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199511-199610
+order_95455_GELAN_rsd100m0_13_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199611-199612
+order_95455_GELAN_rsd100m0_13_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199611-199612
+order_95455_GELAN_rsd100m0_14_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199702-199704
+order_95455_GELAN_rsd100m0_14_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199702-199704
+order_95455_GELAN_rsd100m0_15_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199706-200506
+order_95455_GELAN_rsd100m0_15_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 199706-200506
+order_95455_GELAN_rsd100m0_16_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 200507-201106
+order_95455_GELAN_rsd100m0_16_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 200507-201106
+order_95455_GELAN_rsd100m0_17_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 201108-201204
+order_95455_GELAN_rsd100m0_17_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 201108-201204
+order_95455_GELAN_rsd100m0_18_data.txt  Data      Landecy                              Days of the month with precipitation total exceeding 9.9 mm 201205-202105
+order_95455_GELAN_rsd100m0_18_legend.txt Legend    Landecy                              Days of the month with precipitation total exceeding 9.9 mm 201205-202105
+order_95455_DLLAN_rsd100m0_1_data.txt   Data      Landshut / Reithof                   Days of the month with precipitation total exceeding 9.9 mm 200803-201512
+order_95455_DLLAN_rsd100m0_1_legend.txt Legend    Landshut / Reithof                   Days of the month with precipitation total exceeding 9.9 mm 200803-201512
+order_95455_DLLAN_rsd100m0_2_data.txt   Data      Landshut / Reithof                   Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_DLLAN_rsd100m0_2_legend.txt Legend    Landshut / Reithof                   Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_MMLBB_rsd100m0_1_data.txt   Data      Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201607-201808
+order_95455_MMLBB_rsd100m0_1_legend.txt Legend    Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201607-201808
+order_95455_MMLBB_rsd100m0_2_data.txt   Data      Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201809-201811
+order_95455_MMLBB_rsd100m0_2_legend.txt Legend    Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201809-201811
+order_95455_MMLBB_rsd100m0_3_data.txt   Data      Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201812-201908
+order_95455_MMLBB_rsd100m0_3_legend.txt Legend    Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201812-201908
+order_95455_MMLBB_rsd100m0_4_data.txt   Data      Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201909-202011
+order_95455_MMLBB_rsd100m0_4_legend.txt Legend    Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 201909-202011
+order_95455_MMLBB_rsd100m0_5_data.txt   Data      Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 202102-202105
+order_95455_MMLBB_rsd100m0_5_legend.txt Legend    Langenthal / Bleienbach              Days of the month with precipitation total exceeding 9.9 mm 202102-202105
+order_95455_LULAN_rsd100m0_1_data.txt   Data      Langnau                              Days of the month with precipitation total exceeding 9.9 mm 201512-202102
+order_95455_LULAN_rsd100m0_1_legend.txt Legend    Langnau                              Days of the month with precipitation total exceeding 9.9 mm 201512-202102
+order_95455_LULAN_rsd100m0_2_data.txt   Data      Langnau                              Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_LULAN_rsd100m0_2_legend.txt Legend    Langnau                              Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_LAP_rsd100m0_1_data.txt     Data      Laupen                               Days of the month with precipitation total exceeding 9.9 mm 197112-202105
+order_95455_LAP_rsd100m0_1_legend.txt   Legend    Laupen                               Days of the month with precipitation total exceeding 9.9 mm 197112-202105
+order_95455_VDLUC_rsd100m0_1_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 199902-199910
+order_95455_VDLUC_rsd100m0_1_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 199902-199910
+order_95455_VDLUC_rsd100m0_2_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200001-200003
+order_95455_VDLUC_rsd100m0_2_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200001-200003
+order_95455_VDLUC_rsd100m0_3_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200004-200006
+order_95455_VDLUC_rsd100m0_3_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200004-200006
+order_95455_VDLUC_rsd100m0_4_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200007-200012
+order_95455_VDLUC_rsd100m0_4_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200007-200012
+order_95455_VDLUC_rsd100m0_5_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200101-200102
+order_95455_VDLUC_rsd100m0_5_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200101-200102
+order_95455_VDLUC_rsd100m0_6_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200105-200212
+order_95455_VDLUC_rsd100m0_6_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200105-200212
+order_95455_VDLUC_rsd100m0_7_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200302-200311
+order_95455_VDLUC_rsd100m0_7_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200302-200311
+order_95455_VDLUC_rsd100m0_8_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200401-200409
+order_95455_VDLUC_rsd100m0_8_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200401-200409
+order_95455_VDLUC_rsd100m0_9_data.txt   Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200410-200411
+order_95455_VDLUC_rsd100m0_9_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200410-200411
+order_95455_VDLUC_rsd100m0_10_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200501-200512
+order_95455_VDLUC_rsd100m0_10_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200501-200512
+order_95455_VDLUC_rsd100m0_11_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200602-200610
+order_95455_VDLUC_rsd100m0_11_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200602-200610
+order_95455_VDLUC_rsd100m0_12_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200611-200612
+order_95455_VDLUC_rsd100m0_12_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200611-200612
+order_95455_VDLUC_rsd100m0_13_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200703-200704
+order_95455_VDLUC_rsd100m0_13_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200703-200704
+order_95455_VDLUC_rsd100m0_14_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200705-200706
+order_95455_VDLUC_rsd100m0_14_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200705-200706
+order_95455_VDLUC_rsd100m0_15_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200707-200711
+order_95455_VDLUC_rsd100m0_15_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200707-200711
+order_95455_VDLUC_rsd100m0_16_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200712-200803
+order_95455_VDLUC_rsd100m0_16_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200712-200803
+order_95455_VDLUC_rsd100m0_17_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200804-200808
+order_95455_VDLUC_rsd100m0_17_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200804-200808
+order_95455_VDLUC_rsd100m0_18_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDLUC_rsd100m0_18_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDLUC_rsd100m0_19_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200901-200905
+order_95455_VDLUC_rsd100m0_19_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200901-200905
+order_95455_VDLUC_rsd100m0_20_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200906-200911
+order_95455_VDLUC_rsd100m0_20_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 200906-200911
+order_95455_VDLUC_rsd100m0_21_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 201002-201010
+order_95455_VDLUC_rsd100m0_21_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 201002-201010
+order_95455_VDLUC_rsd100m0_22_data.txt  Data      Lucens                               Days of the month with precipitation total exceeding 9.9 mm 201012-202105
+order_95455_VDLUC_rsd100m0_22_legend.txt Legend    Lucens                               Days of the month with precipitation total exceeding 9.9 mm 201012-202105
+order_95455_LUW_rsd100m0_1_data.txt     Data      Luzern Wesemlin                      Days of the month with precipitation total exceeding 9.9 mm 197012-197112
+order_95455_LUW_rsd100m0_1_legend.txt   Legend    Luzern Wesemlin                      Days of the month with precipitation total exceeding 9.9 mm 197012-197112
+order_95455_LUMAL_rsd100m0_1_data.txt   Data      Malters                              Days of the month with precipitation total exceeding 9.9 mm 201512-202102
+order_95455_LUMAL_rsd100m0_1_legend.txt Legend    Malters                              Days of the month with precipitation total exceeding 9.9 mm 201512-202102
+order_95455_LUMAL_rsd100m0_2_data.txt   Data      Malters                              Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_LUMAL_rsd100m0_2_legend.txt Legend    Malters                              Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_MMMEL_rsd100m0_1_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201211-201212
+order_95455_MMMEL_rsd100m0_1_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201211-201212
+order_95455_MMMEL_rsd100m0_2_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201301-201309
+order_95455_MMMEL_rsd100m0_2_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201301-201309
+order_95455_MMMEL_rsd100m0_3_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201311-201404
+order_95455_MMMEL_rsd100m0_3_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201311-201404
+order_95455_MMMEL_rsd100m0_4_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201405-201410
+order_95455_MMMEL_rsd100m0_4_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201405-201410
+order_95455_MMMEL_rsd100m0_5_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201501-201504
+order_95455_MMMEL_rsd100m0_5_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201501-201504
+order_95455_MMMEL_rsd100m0_6_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201505-201511
+order_95455_MMMEL_rsd100m0_6_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201505-201511
+order_95455_MMMEL_rsd100m0_7_data.txt   Data      Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201602-202105
+order_95455_MMMEL_rsd100m0_7_legend.txt Legend    Mels / Heiligkreuz                   Days of the month with precipitation total exceeding 9.9 mm 201602-202105
+order_95455_MEM_rsd100m0_1_data.txt     Data      Mettmenstetten                       Days of the month with precipitation total exceeding 9.9 mm 196012-198404
+order_95455_MEM_rsd100m0_1_legend.txt   Legend    Mettmenstetten                       Days of the month with precipitation total exceeding 9.9 mm 196012-198404
+order_95455_SOMET_rsd100m0_1_data.txt   Data      Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 200112-201310
+order_95455_SOMET_rsd100m0_1_legend.txt Legend    Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 200112-201310
+order_95455_SOMET_rsd100m0_2_data.txt   Data      Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 201312-202103
+order_95455_SOMET_rsd100m0_2_legend.txt Legend    Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 201312-202103
+order_95455_SOMET_rsd100m0_3_data.txt   Data      Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_SOMET_rsd100m0_3_legend.txt Legend    Metzerlen                            Days of the month with precipitation total exceeding 9.9 mm 202104-202105
+order_95455_VDMOI_rsd100m0_1_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199902-199903
+order_95455_VDMOI_rsd100m0_1_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199902-199903
+order_95455_VDMOI_rsd100m0_2_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199904-199908
+order_95455_VDMOI_rsd100m0_2_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199904-199908
+order_95455_VDMOI_rsd100m0_3_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199910-199911
+order_95455_VDMOI_rsd100m0_3_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 199910-199911
+order_95455_VDMOI_rsd100m0_4_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200001-200102
+order_95455_VDMOI_rsd100m0_4_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200001-200102
+order_95455_VDMOI_rsd100m0_5_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200106-200111
+order_95455_VDMOI_rsd100m0_5_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200106-200111
+order_95455_VDMOI_rsd100m0_6_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200201-200204
+order_95455_VDMOI_rsd100m0_6_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200201-200204
+order_95455_VDMOI_rsd100m0_7_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200205-200211
+order_95455_VDMOI_rsd100m0_7_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200205-200211
+order_95455_VDMOI_rsd100m0_8_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200301-200303
+order_95455_VDMOI_rsd100m0_8_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200301-200303
+order_95455_VDMOI_rsd100m0_9_data.txt   Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200305-200312
+order_95455_VDMOI_rsd100m0_9_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200305-200312
+order_95455_VDMOI_rsd100m0_10_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200403-200411
+order_95455_VDMOI_rsd100m0_10_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200403-200411
+order_95455_VDMOI_rsd100m0_11_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200501-200502
+order_95455_VDMOI_rsd100m0_11_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200501-200502
+order_95455_VDMOI_rsd100m0_12_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200504-200512
+order_95455_VDMOI_rsd100m0_12_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200504-200512
+order_95455_VDMOI_rsd100m0_13_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200603-200608
+order_95455_VDMOI_rsd100m0_13_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200603-200608
+order_95455_VDMOI_rsd100m0_14_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200609-200612
+order_95455_VDMOI_rsd100m0_14_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200609-200612
+order_95455_VDMOI_rsd100m0_15_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200704-200707
+order_95455_VDMOI_rsd100m0_15_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200704-200707
+order_95455_VDMOI_rsd100m0_16_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200708-200710
+order_95455_VDMOI_rsd100m0_16_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200708-200710
+order_95455_VDMOI_rsd100m0_17_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200712-200805
+order_95455_VDMOI_rsd100m0_17_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200712-200805
+order_95455_VDMOI_rsd100m0_18_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200806-200811
+order_95455_VDMOI_rsd100m0_18_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200806-200811
+order_95455_VDMOI_rsd100m0_19_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200812-200911
+order_95455_VDMOI_rsd100m0_19_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 200812-200911
+order_95455_VDMOI_rsd100m0_20_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201001-201011
+order_95455_VDMOI_rsd100m0_20_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201001-201011
+order_95455_VDMOI_rsd100m0_21_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201012-201111
+order_95455_VDMOI_rsd100m0_21_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201012-201111
+order_95455_VDMOI_rsd100m0_22_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201112-201211
+order_95455_VDMOI_rsd100m0_22_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201112-201211
+order_95455_VDMOI_rsd100m0_23_data.txt  Data      Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201212-202105
+order_95455_VDMOI_rsd100m0_23_legend.txt Legend    Moillettaz                           Days of the month with precipitation total exceeding 9.9 mm 201212-202105
+order_95455_MRW_rsd100m0_1_data.txt     Data      Möriswang                            Days of the month with precipitation total exceeding 9.9 mm 199112-199803
+order_95455_MRW_rsd100m0_1_legend.txt   Legend    Möriswang                            Days of the month with precipitation total exceeding 9.9 mm 199112-199803
+order_95455_MUB_rsd100m0_1_data.txt     Data      Mühleberg                            Days of the month with precipitation total exceeding 9.9 mm 198811-199907
+order_95455_MUB_rsd100m0_1_legend.txt   Legend    Mühleberg                            Days of the month with precipitation total exceeding 9.9 mm 198811-199907
+order_95455_MUB_rsd100m0_2_data.txt     Data      Mühleberg                            Days of the month with precipitation total exceeding 9.9 mm 199908-202105
+order_95455_MUB_rsd100m0_2_legend.txt   Legend    Mühleberg                            Days of the month with precipitation total exceeding 9.9 mm 199908-202105
+order_95455_GLNET_rsd100m0_1_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201309-201404
+order_95455_GLNET_rsd100m0_1_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201309-201404
+order_95455_GLNET_rsd100m0_2_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201405-201406
+order_95455_GLNET_rsd100m0_2_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201405-201406
+order_95455_GLNET_rsd100m0_3_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201408-201506
+order_95455_GLNET_rsd100m0_3_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201408-201506
+order_95455_GLNET_rsd100m0_4_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201507-201509
+order_95455_GLNET_rsd100m0_4_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201507-201509
+order_95455_GLNET_rsd100m0_5_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201510-201806
+order_95455_GLNET_rsd100m0_5_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201510-201806
+order_95455_GLNET_rsd100m0_6_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201807-202006
+order_95455_GLNET_rsd100m0_6_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 201807-202006
+order_95455_GLNET_rsd100m0_7_data.txt   Data      Netstal                              Days of the month with precipitation total exceeding 9.9 mm 202010-202012
+order_95455_GLNET_rsd100m0_7_legend.txt Legend    Netstal                              Days of the month with precipitation total exceeding 9.9 mm 202010-202012
+order_95455_DLNEB_rsd100m0_1_data.txt   Data      Neuburg an der Kammel                Days of the month with precipitation total exceeding 9.9 mm 199105-201512
+order_95455_DLNEB_rsd100m0_1_legend.txt Legend    Neuburg an der Kammel                Days of the month with precipitation total exceeding 9.9 mm 199105-201512
+order_95455_DLNEB_rsd100m0_2_data.txt   Data      Neuburg an der Kammel                Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_DLNEB_rsd100m0_2_legend.txt Legend    Neuburg an der Kammel                Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_NEU_rsd100m0_1_data.txt     Data      Neuchâtel                            Days of the month with precipitation total exceeding 9.9 mm 187912-188001
+order_95455_NEU_rsd100m0_1_legend.txt   Legend    Neuchâtel                            Days of the month with precipitation total exceeding 9.9 mm 187912-188001
+order_95455_NEU_rsd100m0_2_data.txt     Data      Neuchâtel                            Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_NEU_rsd100m0_2_legend.txt   Legend    Neuchâtel                            Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_TGNUS_rsd100m0_1_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201008-201009
+order_95455_TGNUS_rsd100m0_1_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201008-201009
+order_95455_TGNUS_rsd100m0_2_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201010-201107
+order_95455_TGNUS_rsd100m0_2_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201010-201107
+order_95455_TGNUS_rsd100m0_3_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201108-201305
+order_95455_TGNUS_rsd100m0_3_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201108-201305
+order_95455_TGNUS_rsd100m0_4_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201306-201308
+order_95455_TGNUS_rsd100m0_4_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201306-201308
+order_95455_TGNUS_rsd100m0_5_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201309-201311
+order_95455_TGNUS_rsd100m0_5_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201309-201311
+order_95455_TGNUS_rsd100m0_6_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201312-201402
+order_95455_TGNUS_rsd100m0_6_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201312-201402
+order_95455_TGNUS_rsd100m0_7_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201405-201407
+order_95455_TGNUS_rsd100m0_7_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201405-201407
+order_95455_TGNUS_rsd100m0_8_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201408-201502
+order_95455_TGNUS_rsd100m0_8_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201408-201502
+order_95455_TGNUS_rsd100m0_9_data.txt   Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201509-201510
+order_95455_TGNUS_rsd100m0_9_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201509-201510
+order_95455_TGNUS_rsd100m0_10_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201511-201603
+order_95455_TGNUS_rsd100m0_10_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201511-201603
+order_95455_TGNUS_rsd100m0_11_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201604-201605
+order_95455_TGNUS_rsd100m0_11_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201604-201605
+order_95455_TGNUS_rsd100m0_12_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201607-201608
+order_95455_TGNUS_rsd100m0_12_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201607-201608
+order_95455_TGNUS_rsd100m0_13_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201609-201712
+order_95455_TGNUS_rsd100m0_13_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201609-201712
+order_95455_TGNUS_rsd100m0_14_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201801-201803
+order_95455_TGNUS_rsd100m0_14_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201801-201803
+order_95455_TGNUS_rsd100m0_15_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201804-201811
+order_95455_TGNUS_rsd100m0_15_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201804-201811
+order_95455_TGNUS_rsd100m0_16_data.txt  Data      Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201812-202105
+order_95455_TGNUS_rsd100m0_16_legend.txt Legend    Nussbaumen                           Days of the month with precipitation total exceeding 9.9 mm 201812-202105
+order_95455_DLNUR_rsd100m0_1_data.txt   Data      Nürburg / Barweiler                  Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLNUR_rsd100m0_1_legend.txt Legend    Nürburg / Barweiler                  Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLOBS_rsd100m0_1_data.txt   Data      Oberschleissheim                     Days of the month with precipitation total exceeding 9.9 mm 197603-202105
+order_95455_DLOBS_rsd100m0_1_legend.txt Legend    Oberschleissheim                     Days of the month with precipitation total exceeding 9.9 mm 197603-202105
+order_95455_OWE_rsd100m0_1_data.txt     Data      Oberweningen                         Days of the month with precipitation total exceeding 9.9 mm 196012-197811
+order_95455_OWE_rsd100m0_1_legend.txt   Legend    Oberweningen                         Days of the month with precipitation total exceeding 9.9 mm 196012-197811
+order_95455_WSLOTB_rsd100m0_1_data.txt  Data      Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201712-201803
+order_95455_WSLOTB_rsd100m0_1_legend.txt Legend    Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201712-201803
+order_95455_WSLOTB_rsd100m0_2_data.txt  Data      Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201807-201910
+order_95455_WSLOTB_rsd100m0_2_legend.txt Legend    Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201807-201910
+order_95455_WSLOTB_rsd100m0_3_data.txt  Data      Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201911-202004
+order_95455_WSLOTB_rsd100m0_3_legend.txt Legend    Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 201911-202004
+order_95455_WSLOTB_rsd100m0_4_data.txt  Data      Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 202005-202105
+order_95455_WSLOTB_rsd100m0_4_legend.txt Legend    Othmarsingen Bestand                 Days of the month with precipitation total exceeding 9.9 mm 202005-202105
+order_95455_PAY_rsd100m0_1_data.txt     Data      Payerne                              Days of the month with precipitation total exceeding 9.9 mm 196407-202105
+order_95455_PAY_rsd100m0_1_legend.txt   Legend    Payerne                              Days of the month with precipitation total exceeding 9.9 mm 196407-202105
+order_95455_DLREN_rsd100m0_1_data.txt   Data      Renningen                            Days of the month with precipitation total exceeding 9.9 mm 194012-194412
+order_95455_DLREN_rsd100m0_1_legend.txt Legend    Renningen                            Days of the month with precipitation total exceeding 9.9 mm 194012-194412
+order_95455_DLREN_rsd100m0_2_data.txt   Data      Renningen                            Days of the month with precipitation total exceeding 9.9 mm 194612-201512
+order_95455_DLREN_rsd100m0_2_legend.txt Legend    Renningen                            Days of the month with precipitation total exceeding 9.9 mm 194612-201512
+order_95455_DLREN_rsd100m0_3_data.txt   Data      Renningen                            Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_DLREN_rsd100m0_3_legend.txt Legend    Renningen                            Days of the month with precipitation total exceeding 9.9 mm 201604-202105
+order_95455_ZHRAT_rsd100m0_1_data.txt   Data      Räterschen                           Days of the month with precipitation total exceeding 9.9 mm 201511-201601
+order_95455_ZHRAT_rsd100m0_1_legend.txt Legend    Räterschen                           Days of the month with precipitation total exceeding 9.9 mm 201511-201601
+order_95455_ZHRAT_rsd100m0_2_data.txt   Data      Räterschen                           Days of the month with precipitation total exceeding 9.9 mm 201612-202105
+order_95455_ZHRAT_rsd100m0_2_legend.txt Legend    Räterschen                           Days of the month with precipitation total exceeding 9.9 mm 201612-202105
+order_95455_SRN_rsd100m0_1_data.txt     Data      Sarnen                               Days of the month with precipitation total exceeding 9.9 mm 189509-202105
+order_95455_SRN_rsd100m0_1_legend.txt   Legend    Sarnen                               Days of the month with precipitation total exceeding 9.9 mm 189509-202105
+order_95455_MMSAX_rsd100m0_1_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201211-201404
+order_95455_MMSAX_rsd100m0_1_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201211-201404
+order_95455_MMSAX_rsd100m0_2_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201405-201506
+order_95455_MMSAX_rsd100m0_2_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201405-201506
+order_95455_MMSAX_rsd100m0_3_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201507-201508
+order_95455_MMSAX_rsd100m0_3_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201507-201508
+order_95455_MMSAX_rsd100m0_4_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201509-201511
+order_95455_MMSAX_rsd100m0_4_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201509-201511
+order_95455_MMSAX_rsd100m0_5_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201602-201712
+order_95455_MMSAX_rsd100m0_5_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201602-201712
+order_95455_MMSAX_rsd100m0_6_data.txt   Data      Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201801-202105
+order_95455_MMSAX_rsd100m0_6_legend.txt Legend    Sax                                  Days of the month with precipitation total exceeding 9.9 mm 201801-202105
+order_95455_SCH_rsd100m0_1_data.txt     Data      Schleitheim                          Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_SCH_rsd100m0_1_legend.txt   Legend    Schleitheim                          Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_SWZ_rsd100m0_1_data.txt     Data      Schwyz                               Days of the month with precipitation total exceeding 9.9 mm 189912-197502
+order_95455_SWZ_rsd100m0_1_legend.txt   Legend    Schwyz                               Days of the month with precipitation total exceeding 9.9 mm 189912-197502
+order_95455_SWZ_rsd100m0_2_data.txt     Data      Schwyz                               Days of the month with precipitation total exceeding 9.9 mm 199511-202105
+order_95455_SWZ_rsd100m0_2_legend.txt   Legend    Schwyz                               Days of the month with precipitation total exceeding 9.9 mm 199511-202105
+order_95455_SIO_rsd100m0_1_data.txt     Data      Sion                                 Days of the month with precipitation total exceeding 9.9 mm 195712-202105
+order_95455_SIO_rsd100m0_1_legend.txt   Legend    Sion                                 Days of the month with precipitation total exceeding 9.9 mm 195712-202105
+order_95455_STU_rsd100m0_1_data.txt     Data      St. Urban                            Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_STU_rsd100m0_1_legend.txt   Legend    St. Urban                            Days of the month with precipitation total exceeding 9.9 mm 189912-202105
+order_95455_MMTRG_rsd100m0_1_data.txt   Data      Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201607-201808
+order_95455_MMTRG_rsd100m0_1_legend.txt Legend    Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201607-201808
+order_95455_MMTRG_rsd100m0_2_data.txt   Data      Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201809-201811
+order_95455_MMTRG_rsd100m0_2_legend.txt Legend    Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201809-201811
+order_95455_MMTRG_rsd100m0_3_data.txt   Data      Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201812-201908
+order_95455_MMTRG_rsd100m0_3_legend.txt Legend    Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201812-201908
+order_95455_MMTRG_rsd100m0_4_data.txt   Data      Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201909-202012
+order_95455_MMTRG_rsd100m0_4_legend.txt Legend    Triengen                             Days of the month with precipitation total exceeding 9.9 mm 201909-202012
+order_95455_MMTRG_rsd100m0_5_data.txt   Data      Triengen                             Days of the month with precipitation total exceeding 9.9 mm 202101-202105
+order_95455_MMTRG_rsd100m0_5_legend.txt Legend    Triengen                             Days of the month with precipitation total exceeding 9.9 mm 202101-202105
+order_95455_VDU_rsd100m0_1_data.txt     Data      Vaduz (Fürstl. Weinberg)             Days of the month with precipitation total exceeding 9.9 mm 192801-197312
+order_95455_VDU_rsd100m0_1_legend.txt   Legend    Vaduz (Fürstl. Weinberg)             Days of the month with precipitation total exceeding 9.9 mm 192801-197312
+order_95455_VDVAL_rsd100m0_1_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 199905-199906
+order_95455_VDVAL_rsd100m0_1_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 199905-199906
+order_95455_VDVAL_rsd100m0_2_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 199908-199909
+order_95455_VDVAL_rsd100m0_2_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 199908-199909
+order_95455_VDVAL_rsd100m0_3_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200007-200009
+order_95455_VDVAL_rsd100m0_3_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200007-200009
+order_95455_VDVAL_rsd100m0_4_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200104-200108
+order_95455_VDVAL_rsd100m0_4_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200104-200108
+order_95455_VDVAL_rsd100m0_5_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200109-200110
+order_95455_VDVAL_rsd100m0_5_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200109-200110
+order_95455_VDVAL_rsd100m0_6_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200112-200203
+order_95455_VDVAL_rsd100m0_6_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200112-200203
+order_95455_VDVAL_rsd100m0_7_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200206-200207
+order_95455_VDVAL_rsd100m0_7_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200206-200207
+order_95455_VDVAL_rsd100m0_8_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200208-200211
+order_95455_VDVAL_rsd100m0_8_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200208-200211
+order_95455_VDVAL_rsd100m0_9_data.txt   Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200301-200311
+order_95455_VDVAL_rsd100m0_9_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200301-200311
+order_95455_VDVAL_rsd100m0_10_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200401-200411
+order_95455_VDVAL_rsd100m0_10_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200401-200411
+order_95455_VDVAL_rsd100m0_11_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200503-200510
+order_95455_VDVAL_rsd100m0_11_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200503-200510
+order_95455_VDVAL_rsd100m0_12_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200511-200512
+order_95455_VDVAL_rsd100m0_12_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200511-200512
+order_95455_VDVAL_rsd100m0_13_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200603-200701
+order_95455_VDVAL_rsd100m0_13_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200603-200701
+order_95455_VDVAL_rsd100m0_14_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200703-200704
+order_95455_VDVAL_rsd100m0_14_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200703-200704
+order_95455_VDVAL_rsd100m0_15_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200705-200710
+order_95455_VDVAL_rsd100m0_15_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200705-200710
+order_95455_VDVAL_rsd100m0_16_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200712-200808
+order_95455_VDVAL_rsd100m0_16_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200712-200808
+order_95455_VDVAL_rsd100m0_17_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDVAL_rsd100m0_17_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200809-200811
+order_95455_VDVAL_rsd100m0_18_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200902-200911
+order_95455_VDVAL_rsd100m0_18_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200902-200911
+order_95455_VDVAL_rsd100m0_19_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200912-201011
+order_95455_VDVAL_rsd100m0_19_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 200912-201011
+order_95455_VDVAL_rsd100m0_20_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201012-201111
+order_95455_VDVAL_rsd100m0_20_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201012-201111
+order_95455_VDVAL_rsd100m0_21_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201112-201210
+order_95455_VDVAL_rsd100m0_21_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201112-201210
+order_95455_VDVAL_rsd100m0_22_data.txt  Data      Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201212-202105
+order_95455_VDVAL_rsd100m0_22_legend.txt Legend    Valeyres-sous-Montagny               Days of the month with precipitation total exceeding 9.9 mm 201212-202105
+order_95455_VDPPI_rsd100m0_1_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 199904-199910
+order_95455_VDPPI_rsd100m0_1_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 199904-199910
+order_95455_VDPPI_rsd100m0_2_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200002-200103
+order_95455_VDPPI_rsd100m0_2_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200002-200103
+order_95455_VDPPI_rsd100m0_3_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200104-200109
+order_95455_VDPPI_rsd100m0_3_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200104-200109
+order_95455_VDPPI_rsd100m0_4_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200112-200206
+order_95455_VDPPI_rsd100m0_4_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200112-200206
+order_95455_VDPPI_rsd100m0_5_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200207-200208
+order_95455_VDPPI_rsd100m0_5_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200207-200208
+order_95455_VDPPI_rsd100m0_6_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200209-200212
+order_95455_VDPPI_rsd100m0_6_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200209-200212
+order_95455_VDPPI_rsd100m0_7_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200302-200305
+order_95455_VDPPI_rsd100m0_7_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200302-200305
+order_95455_VDPPI_rsd100m0_8_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200306-200311
+order_95455_VDPPI_rsd100m0_8_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200306-200311
+order_95455_VDPPI_rsd100m0_9_data.txt   Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200401-200404
+order_95455_VDPPI_rsd100m0_9_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200401-200404
+order_95455_VDPPI_rsd100m0_10_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200405-200411
+order_95455_VDPPI_rsd100m0_10_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200405-200411
+order_95455_VDPPI_rsd100m0_11_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200504-200505
+order_95455_VDPPI_rsd100m0_11_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200504-200505
+order_95455_VDPPI_rsd100m0_12_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200507-200510
+order_95455_VDPPI_rsd100m0_12_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200507-200510
+order_95455_VDPPI_rsd100m0_13_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200606-200609
+order_95455_VDPPI_rsd100m0_13_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200606-200609
+order_95455_VDPPI_rsd100m0_14_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200610-200611
+order_95455_VDPPI_rsd100m0_14_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200610-200611
+order_95455_VDPPI_rsd100m0_15_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200703-200707
+order_95455_VDPPI_rsd100m0_15_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200703-200707
+order_95455_VDPPI_rsd100m0_16_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200709-200710
+order_95455_VDPPI_rsd100m0_16_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200709-200710
+order_95455_VDPPI_rsd100m0_17_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200711-200802
+order_95455_VDPPI_rsd100m0_17_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200711-200802
+order_95455_VDPPI_rsd100m0_18_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200804-200810
+order_95455_VDPPI_rsd100m0_18_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200804-200810
+order_95455_VDPPI_rsd100m0_19_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200812-201010
+order_95455_VDPPI_rsd100m0_19_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 200812-201010
+order_95455_VDPPI_rsd100m0_20_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 201012-201901
+order_95455_VDPPI_rsd100m0_20_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 201012-201901
+order_95455_VDPPI_rsd100m0_21_data.txt  Data      Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 202006-202105
+order_95455_VDPPI_rsd100m0_21_legend.txt Legend    Villeneuve, Le Pissot                Days of the month with precipitation total exceeding 9.9 mm 202006-202105
+order_95455_WSLVOB_rsd100m0_1_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201902-201903
+order_95455_WSLVOB_rsd100m0_1_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201902-201903
+order_95455_WSLVOB_rsd100m0_2_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201904-201906
+order_95455_WSLVOB_rsd100m0_2_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201904-201906
+order_95455_WSLVOB_rsd100m0_3_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201909-201911
+order_95455_WSLVOB_rsd100m0_3_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 201909-201911
+order_95455_WSLVOB_rsd100m0_4_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202002-202004
+order_95455_WSLVOB_rsd100m0_4_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202002-202004
+order_95455_WSLVOB_rsd100m0_5_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202005-202011
+order_95455_WSLVOB_rsd100m0_5_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202005-202011
+order_95455_WSLVOB_rsd100m0_6_data.txt  Data      Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202102-202105
+order_95455_WSLVOB_rsd100m0_6_legend.txt Legend    Vordemwald Bestand                   Days of the month with precipitation total exceeding 9.9 mm 202102-202105
+order_95455_WSLVOF_rsd100m0_1_data.txt  Data      Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201712-201903
+order_95455_WSLVOF_rsd100m0_1_legend.txt Legend    Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201712-201903
+order_95455_WSLVOF_rsd100m0_2_data.txt  Data      Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201904-201907
+order_95455_WSLVOF_rsd100m0_2_legend.txt Legend    Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201904-201907
+order_95455_WSLVOF_rsd100m0_3_data.txt  Data      Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201908-201910
+order_95455_WSLVOF_rsd100m0_3_legend.txt Legend    Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 201908-201910
+order_95455_WSLVOF_rsd100m0_4_data.txt  Data      Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 202002-202105
+order_95455_WSLVOF_rsd100m0_4_legend.txt Legend    Vordemwald Freiland                  Days of the month with precipitation total exceeding 9.9 mm 202002-202105
+order_95455_DLWAL_rsd100m0_1_data.txt   Data      Waldmünchen                          Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLWAL_rsd100m0_1_legend.txt Legend    Waldmünchen                          Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_WWM_rsd100m0_1_data.txt     Data      Wauwilermoos                         Days of the month with precipitation total exceeding 9.9 mm 196012-197312
+order_95455_WWM_rsd100m0_1_legend.txt   Legend    Wauwilermoos                         Days of the month with precipitation total exceeding 9.9 mm 196012-197312
+order_95455_DLWES_rsd100m0_1_data.txt   Data      Weihenstephan / Dürnast              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_DLWES_rsd100m0_1_legend.txt Legend    Weihenstephan / Dürnast              Days of the month with precipitation total exceeding 9.9 mm 202008-202105
+order_95455_WEF_rsd100m0_1_data.txt     Data      Weinfelden                           Days of the month with precipitation total exceeding 9.9 mm 190012-201411
+order_95455_WEF_rsd100m0_1_legend.txt   Legend    Weinfelden                           Days of the month with precipitation total exceeding 9.9 mm 190012-201411
+order_95455_WEF_rsd100m0_2_data.txt     Data      Weinfelden                           Days of the month with precipitation total exceeding 9.9 mm 201501-202105
+order_95455_WEF_rsd100m0_2_legend.txt   Legend    Weinfelden                           Days of the month with precipitation total exceeding 9.9 mm 201501-202105
+order_95455_SGWAU_rsd100m0_1_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201405-201407
+order_95455_SGWAU_rsd100m0_1_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201405-201407
+order_95455_SGWAU_rsd100m0_2_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201408-201506
+order_95455_SGWAU_rsd100m0_2_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201408-201506
+order_95455_SGWAU_rsd100m0_3_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201507-201609
+order_95455_SGWAU_rsd100m0_3_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201507-201609
+order_95455_SGWAU_rsd100m0_4_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201610-201703
+order_95455_SGWAU_rsd100m0_4_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201610-201703
+order_95455_SGWAU_rsd100m0_5_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201710-201802
+order_95455_SGWAU_rsd100m0_5_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201710-201802
+order_95455_SGWAU_rsd100m0_6_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201810-201903
+order_95455_SGWAU_rsd100m0_6_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201810-201903
+order_95455_SGWAU_rsd100m0_7_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201910-202003
+order_95455_SGWAU_rsd100m0_7_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 201910-202003
+order_95455_SGWAU_rsd100m0_8_data.txt   Data      Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 202010-202012
+order_95455_SGWAU_rsd100m0_8_legend.txt Legend    Weite / Wartau                       Days of the month with precipitation total exceeding 9.9 mm 202010-202012
+order_95455_WAE_rsd100m0_1_data.txt     Data      Wädenswil                            Days of the month with precipitation total exceeding 9.9 mm 196012-202105
+order_95455_WAE_rsd100m0_1_legend.txt   Legend    Wädenswil                            Days of the month with precipitation total exceeding 9.9 mm 196012-202105
+order_95455_WGI_rsd100m0_1_data.txt     Data      Wängi                                Days of the month with precipitation total exceeding 9.9 mm 190012-196812
+order_95455_WGI_rsd100m0_1_legend.txt   Legend    Wängi                                Days of the month with precipitation total exceeding 9.9 mm 190012-196812

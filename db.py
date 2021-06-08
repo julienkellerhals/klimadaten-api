@@ -1,3 +1,4 @@
+import os
 import re
 import json
 import threading
@@ -22,7 +23,7 @@ class Database:
     configFileName = "idawebConfig.xml"
     engine = None
     conn = None
-    databaseUrl = "postgresql://postgres:postgres@localhost:5432/klimadb"
+    databaseUrl = None
     meta = MetaData()
     announcer = None
     databaseStatusStream = None
@@ -42,6 +43,11 @@ class Database:
             announcer (announcer): Server announcer
         """
 
+        if os.path.exists("config/config.json"):
+            f = open("config/config.json")
+            config = json.load(f)
+            if "databaseUrl" in config.keys():
+                self.databaseUrl = config["databaseUrl"]
         self.databaseStatusStream = MessageAnnouncer()
         self.engineStatusStream = MessageAnnouncer()
         self.stageTablesStatusStream = MessageAnnouncer()
@@ -49,39 +55,39 @@ class Database:
         self.dbServiceStatusStream = MessageAnnouncer()
         self.announcer = announcer
         self.stageTableRespDict = ResponseDictionary({
-                "stage": {
-                    "eventSourceUrl": "/admin/stream/getStageTablesStatus",
-                    "progressBar": False,
-                    "action": [
-                        {
-                            "name": "Run scrapping",
-                            "actionUrl": "/admin/scrape/",
-                            "enabled": True
-                        },
-                        {
-                            "name": "Stage ETL",
-                            "actionUrl": "/admin/db/etl/stage",
-                            "enabled": True
-                        },
-                    ],
-                }
-            },
+            "stage": {
+                "eventSourceUrl": "/admin/stream/getStageTablesStatus",
+                "progressBar": False,
+                "action": [
+                    {
+                        "name": "Run scraping",
+                        "actionUrl": "/admin/scrape/",
+                        "enabled": True
+                    },
+                    {
+                        "name": "Stage ETL",
+                        "actionUrl": "/admin/db/etl/stage",
+                        "enabled": True
+                    },
+                ],
+            }
+        },
             self.stageTablesStatusStream,
             self
         )
         self.coreTableRespDict = ResponseDictionary({
-                "core": {
-                    "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
-                    "progressBar": False,
-                    "action": [
-                        {
-                            "name": "Core ETL",
-                            "actionUrl": "/admin/db/etl/core",
-                            "enabled": True
-                        },
-                    ],
-                }
-            },
+            "core": {
+                "eventSourceUrl": "/admin/stream/getCoreTablesStatus",
+                "progressBar": False,
+                "action": [
+                    {
+                        "name": "Core ETL",
+                        "actionUrl": "/admin/db/etl/core",
+                        "enabled": True
+                    },
+                ],
+            }
+        },
             self.coreTablesStatusStream,
             self
         )
@@ -98,10 +104,11 @@ class Database:
 
         configList = []
 
-        tree = etree.parse(configFileName)
-        root = tree.getroot()
-        for config in root:
-            configList.append(config)
+        if os.path.exists(configFileName):
+            tree = etree.parse(configFileName)
+            root = tree.getroot()
+            for config in root:
+                configList.append(config)
         return configList
 
     def getEngine(self):
@@ -268,8 +275,8 @@ class Database:
                 )
         finally:
             self.dbServiceStatusStream.announce(
-                    self.dbServiceStatusStream.format_sse(msgText)
-                )
+                self.dbServiceStatusStream.format_sse(msgText)
+            )
 
     def getDatabaseStatus(self):
         """ Runs _getDatabaseStatus in thread
@@ -471,13 +478,13 @@ class Database:
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
                 actionDict = {}
-                actionDict["name"] = "Run scrapping"
+                actionDict["name"] = "Run scraping"
                 actionDict["actionUrl"] = "/admin/scrape/idaweb"
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)
             elif stageTable == "meteoschweiz_t":
                 actionDict = {}
-                actionDict["name"] = "Run scrapping"
+                actionDict["name"] = "Run scraping"
                 actionDict["actionUrl"] = "/admin/scrape/meteoschweiz"
                 actionDict["enabled"] = actionEnabled
                 actionList.append(actionDict)

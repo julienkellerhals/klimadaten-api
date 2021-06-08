@@ -1,5 +1,4 @@
 var refreshInterval = 20000
-// TODO maybe remove these and add them on on message event
 
 function postReq(url) {
     console.log(url)
@@ -156,8 +155,6 @@ function createRowStructure(row, colName, ul) {
 }
 
 function updateRowStructure(content, previousContent, colName, ul) {
-    // TODO Update still not working
-    // Use table trigger maybe
     var row = document.getElementById(camelize(colName + " " + content.title))
     if (row == null) {
         createRowStructure(content, colName, ul)
@@ -167,7 +164,6 @@ function updateRowStructure(content, previousContent, colName, ul) {
     console.log(content)
     console.log(previousContent)
     console.log(contentDiff)
-    // FIXME None check may not work
     if (contentDiff != null) {
         if (contentDiff.title != undefined) {
             row.querySelector("div.collapsible-header").childNodes[0].nodeValue = contentDiff.title

@@ -1,49 +1,24 @@
 import re
 import io
 import os
-import math
 import time
 import zipfile
 import threading
-import numpy as np
-from numpy.core.numeric import NaN
 import pandas as pd
 from lxml import etree
 from datetime import date
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
+from numpy.core.numeric import NaN
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-# from selenium.common.exceptions import TimeoutException
-# from selenium.common.exceptions import NoSuchElementException
 import download
 
 
-username = "julien.kellerhals@students.fhnw.ch"
-password = "CF767F6B27"
-
-
-def createJs(value):
-    """ Creates js for idaweb form
-
-    Args:
-        value (str): idaweb checkbox value
-
-    Returns:
-        str: Javascript to be executed on page
-    """
-
-    js = (
-        "var form = document.getElementsByTagName('form')[0];"  # get form
-        "var checkbox = document.createElement('input');"  # create input
-        "checkbox.checked = true;"  # set input to checked
-        "checkbox.name = 'selection';"  # set input name
-        f"checkbox.value = '{value}';"  # set input value
-        "updateCount(checkbox.checked);"  # update count
-        "form.appendChild(checkbox);"  # add checkbox
-    )
-    return js
+# username = "julien.kellerhals@students.fhnw.ch"
+# password = "CF767F6B27"
+username = "joel.grosjean@students.fhnw.ch"
+password = "AGEJ649GJAL02"
 
 
 def createOrderName(config, orderNumber, now):
@@ -76,45 +51,12 @@ def readConfig(configFileName):
 
     configList = []
 
-    tree = etree.parse(configFileName)
-    root = tree.getroot()
-    for config in root:
-        configList.append(config)
+    if os.path.exists(configFileName):
+        tree = etree.parse(configFileName)
+        root = tree.getroot()
+        for config in root:
+            configList.append(config)
     return configList
-
-
-def indexMarks(nrows, chunk_size):
-    """ Return idx range for df spliting
-
-    Args:
-        nrows (int): Number of rows in dataframe
-        chunk_size (int): Target chunk size
-
-    Returns:
-        range: Index range for split
-    """
-
-    indexMarksRange = range(
-        chunk_size,
-        math.ceil(nrows / chunk_size) * chunk_size,
-        chunk_size
-    )
-    return indexMarksRange
-
-
-def splitDf(dfm, chunk_size):
-    """ Splits df into specified chunks
-
-    Args:
-        dfm (df): Input dataframe
-        chunk_size (int): Target chunk size for df
-
-    Returns:
-        np: Splited df
-    """
-
-    indices = indexMarks(dfm.shape[0], chunk_size)
-    return np.split(dfm, indices)
 
 
 def getLastPageBool(driver, lastPageBool):
@@ -144,26 +86,6 @@ def getLastPageBool(driver, lastPageBool):
     return lastPageBool
 
 
-def getUntil(since, timeDeltaList):
-    """ Creates until time for data request (max. today)
-
-    Args:
-        since (datetime): Since datetime
-        timeDeltaList (array): Delta to add on since date
-
-    Returns:
-        datetime: Incremented since date
-    """
-
-    if (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
-            years=timeDeltaList[0])).date() < date.today():
-        until = (datetime.strptime(since, "%d.%m.%Y") + relativedelta(
-            years=timeDeltaList[0])).strftime('%d.%m.%Y')
-    else:
-        until = date.today().strftime('%d.%m.%Y')
-    return until
-
-
 # main function
 def scrape_meteoschweiz(abstractDriver, instance, announcer):
     driver = abstractDriver.getDriver()
@@ -177,24 +99,7 @@ def scrape_meteoschweiz(abstractDriver, instance, announcer):
     return announcer
 
 
-def _scrape_meteoschweiz(driver, engine, announcer):
-    """ Scrape data from meteo suisse
-
-    Args:
-        driver (driver): Selenium driver
-        engine (engine): Database engine
-        announcer (announcer): Message announcer
-
-    Returns:
-        str: Scrapped data
-    """
-
-    engine.connect()
-    engine.execute(
-        "TRUNCATE TABLE stage.meteoschweiz_t"
-    )
-
-    url_list = []
+def setAllStations():
     allStationsDf = pd.DataFrame(columns=[
         'year',
         'month',
@@ -202,7 +107,10 @@ def _scrape_meteoschweiz(driver, engine, announcer):
         'precipitation',
         'station'
     ])
+    return allStationsDf
 
+
+def getUrls(driver):
     driver.get(
         "https://www.meteoschweiz.admin.ch/home/klima/"
         + "schweizer-klima-im-detail/"
@@ -211,7 +119,10 @@ def _scrape_meteoschweiz(driver, engine, announcer):
     urls = driver.find_elements_by_xpath(
         "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
     )
+    return urls
 
+
+def startWebscraping(url_list, urls, announcer, allStationsDf):
     for urlEl in urls:
         url = urlEl.get_attribute('href')
 
@@ -251,6 +162,38 @@ def _scrape_meteoschweiz(driver, engine, announcer):
         # append the data frame to the data frame of all stations
         allStationsDf = allStationsDf.append(stationDf, ignore_index=True)
 
+    return url_list, allStationsDf
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
+    """ Scrape data from meteo suisse
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+        announcer (announcer): Message announcer
+
+    Returns:
+        str: Scrapped data
+    """
+
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
+
+    url_list = []
+    allStationsDf = setAllStations()
+
+    urls = getUrls(driver)
+
+    url_list, allStationsDf = startWebscraping(
+        url_list,
+        urls,
+        announcer,
+        allStationsDf
+    )
+
     # change column data types
     allStationsDf = allStationsDf.astype(
         {
@@ -285,12 +228,6 @@ def _scrape_meteoschweiz(driver, engine, announcer):
     engine.execute(
         "REFRESH MATERIALIZED VIEW stage.meteoschweiz_max_valid_from_mv"
     )
-
-    # allStationsDf.isnull().sum().head()
-    # pd.to_numeric(allStationsDf["Temperature"], errors='coerce')
-    # allStationsDf.dtypes
-
-    # TODO See what to return
     return str(allStationsDf)
 
 
@@ -532,47 +469,12 @@ def run_scrape_idaweb(driver, engine, lastRefresh):
                     else:
                         notFinished = False
 
-            # select junks manually if select all doesn't work
-            # TODO make it work
-            else:
-                idaWebDataInventoryManual(driver)
-                inventoryDf = scrapeIdawebInventory(driver)
-                chunks = splitDf(inventoryDf, 400)
-                for chunk in chunks:
-                    for value in chunk["value"]:
-                        js = createJs(value)
-                        driver.execute_script(js)
-
-                orderName = createOrderName(config, orderNumber, now)
-                idaWebOrder(driver, orderName)
-                orderNumber += 1
-
-                idaWebSummary(driver)
-                idaWebAgbs(driver)
-
-                # Add order to list
-                saved_documents.append(orderName)
-
-                # redo the whole order process
-                idaWebParameterPortal(driver)
-                idaWebParameterPreselection(
-                    driver,
-                    config.attrib['group'],
-                    config.attrib['granularity'],
-                    config.text
-                )
-                idaWebStationPreselection(
-                    driver,
-                    f"{heightMin}..{heightMin + heightDeltaList[0]}"
-                )
-                idaWebTimePreselection(driver, since, until)
-
     print(saved_documents)
 
     return saved_documents
 
 
-def scrape_idaweb_login(driver):
+def scrape_idaweb_login(driver, username=username, password=password):
     """ Login into idaweb
 
     Args:
@@ -617,6 +519,7 @@ def idaWebParameterPreselection(
         searchName (str): Parameter name
     """
 
+    time.sleep(1)
     # select search parameter
     driver.find_element_by_xpath(
         f'//*[@id="paramGroup_input"]/option[@value="{searchGroup}"]'
@@ -646,6 +549,7 @@ def idaWebStationPreselection(driver, height):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to station preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Station preselection")]'
@@ -684,6 +588,7 @@ def idaWebTimePreselection(driver, since, until):
         until (str): Until date
     """
 
+    time.sleep(1)
     # go to time preselection
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Time preselection")]'
@@ -710,6 +615,7 @@ def idaWebDataInventoryCount(driver, tooManyEntriesBool, noEntriesBool):
         bools: Bools with inventory result
     """
 
+    time.sleep(1)
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -739,6 +645,7 @@ def idaWebDataInventory(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to data inventory
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Data inventory")]'
@@ -750,24 +657,14 @@ def idaWebDataInventory(driver):
     ).click()
 
 
-def idaWebDataInventoryManual(driver):
-    """ Go to inventory and .... to be implemented
+def idaWebCheckOrder(driver):
+    """ Check if there is too much data selected
 
     Args:
         driver (driver): Selenium driver
     """
 
-    # TODO implement run js here?
-
-    # go to data inventory
-    driver.find_element_by_xpath(
-        '//*[@id="wizard"]//*[contains(., "Data inventory")]'
-    ).click()
-
-    print("Here")
-
-
-def idaWebCheckOrder(driver):
+    time.sleep(1)
     tooManyValuesBool = False
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -791,6 +688,7 @@ def idaWebOrder(driver, orderName):
         orderName (str): Order name
     """
 
+    time.sleep(1)
     # go to order
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Order")]'
@@ -815,6 +713,7 @@ def idaWebSummary(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to summary
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "Summary")]'
@@ -828,6 +727,7 @@ def idaWebAgbs(driver):
         driver (driver): Selenium driver
     """
 
+    time.sleep(1)
     # go to general terms and conditions
     driver.find_element_by_xpath(
         '//*[@id="wizard"]//*[contains(., "General Terms and Conditions")]'
@@ -848,49 +748,13 @@ def idaWebAgbs(driver):
     ).click()
 
 
-def scrapeIdawebInventory(driver):
-    """ Scrape data inventory for manual select
+def idaWebOrderPortal(driver):
+    """ Go to order portal
 
     Args:
         driver (driver): Selenium driver
-
-    Returns:
-        df: Dataframe with all tables concated
     """
 
-    rowHeaders = [
-        "station",
-        "alt",
-        "parameter",
-        "unit",
-        "granularity",
-        "from",
-        "until",
-        "value"
-    ]
-    inventoryList = []
-    lastPageBool = False
-
-    while not lastPageBool:
-        for row in driver.find_elements_by_xpath(
-                    '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
-            cols = row.find_elements_by_tag_name("td")
-            rowContent = [col.text for col in cols[:-1]]
-            rowContent.append(
-                cols[-1].find_element_by_tag_name(
-                    "input"
-                ).get_attribute("value")
-            )
-            inventoryList.append(dict(zip(rowHeaders, rowContent)))
-
-        lastPageBool = getLastPageBool(driver, lastPageBool)
-    inventoryDf = pd.DataFrame(data=inventoryList)
-    inventoryDf = inventoryDf.drop_duplicates()
-
-    return inventoryDf
-
-
-def idaWebOrderPortal(driver):
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="menu_block"]/ul/li[7]/a').click()
 
@@ -905,6 +769,7 @@ def scrapeIdawebOrders(driver):
         df: Dataframe containing all orders
     """
 
+    time.sleep(1)
     orderUrl = "https://gate.meteoswiss.ch/idaweb/system/ordersList.do"
     if driver.current_url != orderUrl:
         scrape_idaweb_login(driver)
@@ -925,7 +790,7 @@ def scrapeIdawebOrders(driver):
 
     while not lastPageBool:
         for row in driver.find_elements_by_xpath(
-                    '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
+                '//*[@id="body_block"]/form/div[4]/table/tbody/tr[*]'):
             rowContent = []
             for col in row.find_elements_by_tag_name("td"):
                 rowContent.append(col.text)
