@@ -1,6 +1,5 @@
 import os
 import re
-import os
 import json
 import threading
 import sqlalchemy

@@ -51,7 +51,6 @@ dashApp = dashboard.mydashboard(app, instance)
 
 @app.before_request
 def before_request():
-    print(request.endpoint)
     if request.endpoint not in ["static", "adminApi.createConnectionString"]:
         if instance.databaseUrl is None:
             print("Database url not set")
