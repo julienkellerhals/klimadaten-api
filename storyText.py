@@ -1,6 +1,6 @@
 
 title1 = '''
-    # Werden Vorfälle wie in Bondo zukünftig noch mehr Opfer fordern?
+    # **Werden Vorfälle wie in Bondo zukünftig noch mehr Opfer fordern?**
 '''
 title2 = '''
     #### Wenn einem der Boden unter den Füssen wegrutscht

@@ -149,7 +149,7 @@ def mystory(flaskApp, instance):
 
         return dfScatter
 
-    def plotScatterCreation(df, colors, param_name):
+    def plotScatterCreation(df, colors, param_name, suffix):
         # creating the snow scatterplot with all stations
         plot = go.Figure()
 
@@ -195,6 +195,7 @@ def mystory(flaskApp, instance):
                 'gridwidth': 1,
                 'gridcolor': colors['plotGrid'],
                 'rangemode': "tozero",
+                'ticksuffix': ' ' + suffix
             },
             xaxis={
                 'showgrid': False,
@@ -215,7 +216,7 @@ def mystory(flaskApp, instance):
 
         return plot
 
-    def plotBarCreation(df, colors, param_name):
+    def plotBarCreation(df, colors, param_name, suffix):
 
         meanOfParam = df['meas_value'].mean()
         df['deviation'] = df[
@@ -258,8 +259,8 @@ def mystory(flaskApp, instance):
                 'gridcolor': colors['plotGrid'],
                 'range': [
                     df.meas_value.min() * 0.95,
-                    df.meas_value.max() * 1.05
-                ]
+                    df.meas_value.max() * 1.05],
+                'ticksuffix': ' ' + suffix
             },
             xaxis={
                 'showgrid': False,
@@ -269,7 +270,7 @@ def mystory(flaskApp, instance):
             },
             hovermode='closest',
             margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
-            height=360,
+            height=450,
             paper_bgcolor=colors['BgPlot5'],
             plot_bgcolor='rgba(0,0,0,0)',
             showlegend=False,
@@ -291,23 +292,36 @@ def mystory(flaskApp, instance):
 
     # main dashboard function
     def createStory():
-        plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
+        # plot rain
+        plotRain = plotScatterCreation(
+            dfScatterRain, colors, 'Regenfälle', 'mm'
+        )
         plotRain.update_layout(
             title='Regenfall auf dem Weissfluhjoch'
         )
-        plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
+        # plot snow
+        plotSnow = plotScatterCreation(
+            dfScatterSnow, colors, 'Schneefälle', 'm'
+        )
         plotSnow.update_layout(
             title='Schneefall auf dem Weissfluhjoch'
         )
+        # plot rain extreme
         plotRainExtreme = plotBarCreation(
-            dfScatterRainExtreme, colors, 'Extreme Regenfälle')
+            dfScatterRainExtreme, colors, 'Extreme Regenfälle', 'mm')
         plotRainExtreme.update_layout(
             title='Extremer Regenfall auf dem Weissfluhjoch'
         )
+        # plot temperature
         plotTemperature = plotBarCreation(
-            dfScatterTemperature, colors, 'Temperatur')
+            dfScatterTemperature, colors, 'Temperatur', '°C')
         plotTemperature.update_layout(
-            title='Temperatur auf dem Weissfluhjoch'
+            title='Temperatur auf dem Weissfluhjoch',
+            yaxis={
+                'range': [
+                    dfScatterTemperature.meas_value.min() * 1.05,
+                    dfScatterTemperature.meas_value.max() * 1.05],
+            },
         )
 
         dashAppStory.layout = html.Div([
@@ -480,7 +494,7 @@ def mystory(flaskApp, instance):
             # footer
             html.Div([
                 html.Div([
-                    html.H2(
+                    html.H4(
                         'Made with ♥ by Bsc Data Science Students @ FHNW',
                         style={
                             'color': colors['l1'],
@@ -492,6 +506,8 @@ def mystory(flaskApp, instance):
                     'text-align': 'left',
                     'width': '50%',
                     'display': 'inline-block',
+                    'margin-top': 20,
+                    'margin-bottom': 20,
                 }
                 ),
             ], style={
