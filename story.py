@@ -33,7 +33,7 @@ def mystory(flaskApp, instance):
     }
 
     anchorStyling = {
-        'color': '#fff'
+        'color': '#FFFFFF'
     }
 
     imgWatermarkStyling = {
@@ -41,7 +41,7 @@ def mystory(flaskApp, instance):
         'vertical-align': 'top',
         'horizontal-align': 'left',
         'zIndex': 999,
-        'margin-top': -40,
+        'margin-top': 0,
         'margin-left': 10
     }
 
@@ -109,9 +109,9 @@ def mystory(flaskApp, instance):
         external_stylesheets=external_stylesheets
     )
 
-    rainParam = 'rre150m0'
+    rainParam = 'rre150y0'
     snowParam = 'hns000y0'
-    rainExtremeParam = 'rhh150yx'
+    rainExtremeParam = 'rhh150mx'
     temperatureParam = 'tre200y0'
 
     def dfScatterWrangling(param):
@@ -119,11 +119,9 @@ def mystory(flaskApp, instance):
         dfScatter = pd.read_sql(
             f"""
             SELECT
-                m.meas_date meas_year,
-                k.station_name,
-                m.meas_value,
-                m.station,
-                k.elevation
+                extract(year from m.meas_date) as meas_year,
+                extract(month from m.meas_date) as meas_month,
+                m.meas_value
             FROM core.measurements_t m
             JOIN core.station_t k
             ON (m.station = k.station_short_name)
@@ -132,11 +130,17 @@ def mystory(flaskApp, instance):
             AND k.station_name = 'Weissfluhjoch'
             AND m.valid_to = '2262-04-11'
             AND k.valid_to = '2262-04-11'
-            ORDER BY station, meas_date ASC
+            ORDER BY meas_date ASC
             """,
             engine
         )
         dfScatter = dfScatter.dropna()
+
+        # select all Stations
+        dfScatter = dfScatter.groupby('meas_year').agg(
+            meas_value=('meas_value', 'mean'))
+
+        dfScatter = dfScatter.reset_index()
 
         # simple regression line
         reg = LinearRegression(
@@ -181,8 +185,7 @@ def mystory(flaskApp, instance):
         ))
 
         plot.update_layout(
-            title='Regenfall in Weissfluhjoch',
-            title_x=0,
+            title_x=0.01,
             margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=450,
             yaxis={
@@ -247,10 +250,8 @@ def mystory(flaskApp, instance):
         ))
 
         plot.update_layout(
-            title='∅ Maximaler Niederschlag aller Stationen in cm',
-            title_x=0.05,
+            title_x=0.01,
             yaxis={
-                # 'title': 'maximaler Niederschlag in cm',
                 'color': colors['plotAxisTitle'],
                 'showgrid': True,
                 'gridwidth': 1,
@@ -277,20 +278,37 @@ def mystory(flaskApp, instance):
         return plot
 
     dfScatterSnow = dfScatterWrangling(snowParam)
-    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 2)
-    dfScatterSnow['bestfit'] = round(dfScatterSnow.meas_value / 100, 2)
+    dfScatterSnow['meas_value'] = round(dfScatterSnow.meas_value / 100, 3)
+    dfScatterSnow['bestfit'] = round(dfScatterSnow.bestfit / 100, 3)
     dfScatterRain = dfScatterWrangling(rainParam)
     dfScatterRainExtreme = dfScatterWrangling(rainExtremeParam)
+    # remove the first and last year because they aren't complete
+    dfScatterRainExtreme = dfScatterRainExtreme[
+        dfScatterRainExtreme.meas_year != 2021]
+    dfScatterRainExtreme = dfScatterRainExtreme[
+        dfScatterRainExtreme.meas_year != min(dfScatterRainExtreme.meas_year)]
     dfScatterTemperature = dfScatterWrangling(temperatureParam)
 
     # main dashboard function
     def createStory():
         plotRain = plotScatterCreation(dfScatterRain, colors, 'Regenfälle')
+        plotRain.update_layout(
+            title='Regenfall auf dem Weissfluhjoch'
+        )
         plotSnow = plotScatterCreation(dfScatterSnow, colors, 'Schneefälle')
+        plotSnow.update_layout(
+            title='Schneefall auf dem Weissfluhjoch'
+        )
         plotRainExtreme = plotBarCreation(
             dfScatterRainExtreme, colors, 'Extreme Regenfälle')
+        plotRainExtreme.update_layout(
+            title='Extremer Regenfall auf dem Weissfluhjoch'
+        )
         plotTemperature = plotBarCreation(
             dfScatterTemperature, colors, 'Temperatur')
+        plotTemperature.update_layout(
+            title='Temperatur auf dem Weissfluhjoch'
+        )
 
         dashAppStory.layout = html.Div([
             # header
@@ -355,18 +373,17 @@ def mystory(flaskApp, instance):
             ], style=textDivStyling
             ),
             html.Div([
+                html.Div([
+                    html.A(
+                        "Reto und Annemieke vor ihrem Haus",
+                        style=anchorStyling
+                    )
+                ], style=imgWatermarkStyling
+                ),
                 html.Img(
                     src='/assets/Picture1.jpg',
                     style=imgStyling
                 ),
-                html.Div([
-                    html.A(
-                        "Some watermark",
-                        href="Some link",
-                        style=anchorStyling
-                    )
-                ], style=imgWatermarkStyling
-                )
             ], style=imgDivStyling
             ),
             html.Div([
@@ -388,10 +405,6 @@ def mystory(flaskApp, instance):
             ], style=textDivStyling
             ),
             html.Div([
-                html.Img(
-                    src='/assets/bondoMurgang.jpeg',
-                    style=imgStyling
-                ),
                 html.Div([
                     html.A(
                         "© NZZ",
@@ -401,7 +414,11 @@ def mystory(flaskApp, instance):
                         style=anchorStyling
                     )
                 ], style=imgWatermarkStyling
-                )
+                ),
+                html.Img(
+                    src='/assets/bondoMurgang.jpeg',
+                    style=imgStyling
+                ),
             ], style=imgDivStyling
             ),
             html.Div([
@@ -414,8 +431,8 @@ def mystory(flaskApp, instance):
             ),
             html.Div([
                 dcc.Graph(
-                    id='plotRain',
-                    figure=plotRain,
+                    id='plotTemperature',
+                    figure=plotTemperature,
                     config={
                         'displayModeBar': False,
                         'staticPlot': False
@@ -436,8 +453,8 @@ def mystory(flaskApp, instance):
             ),
             html.Div([
                 dcc.Graph(
-                    id='plotRainExtreme',
-                    figure=plotRainExtreme,
+                    id='plotRain',
+                    figure=plotRain,
                     config={
                         'displayModeBar': False,
                         'staticPlot': False
@@ -447,8 +464,8 @@ def mystory(flaskApp, instance):
             ),
             html.Div([
                 dcc.Graph(
-                    id='plotTemperature',
-                    figure=plotTemperature,
+                    id='plotRainExtreme',
+                    figure=plotRainExtreme,
                     config={
                         'displayModeBar': False,
                         'staticPlot': False
