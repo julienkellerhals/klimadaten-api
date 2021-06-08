@@ -6,7 +6,9 @@ from typing import List
 from webscraping import readConfig
 from webscraping import scrape_idaweb_login
 from webscraping import scrapeIdawebOrders
-
+from webscraping import setAllStations
+from webscraping import getUrls
+from webscraping import startWebscraping
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
@@ -37,6 +39,13 @@ class TestMeteoSchweiz():
             + "/td/span[@class='overflow']/a")
         driver.quit()
         assert len(urls) == 30
+
+    def testSetAllStations(self):
+        allStationsDf = setAllStations()
+        if isinstance(allStationsDf, pd.DataFrame):
+            assert len(allStationsDf) != 0
+        else:
+            assert False
 
 
 @pytest.mark.idaweb
