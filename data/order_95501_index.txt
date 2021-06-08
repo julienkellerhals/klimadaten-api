@@ -1,0 +1,940 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 95501
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_95501_AIR_rre150mx_1_data.txt     Data      Airolo                               Precipitation; maximum daily total conventionally of the    188310-202105
+                                                                                       month
+order_95501_AIR_rre150mx_1_legend.txt   Legend    Airolo                               Precipitation; maximum daily total conventionally of the    188310-202105
+                                                                                       month
+order_95501_TIAIR_rre150mx_1_data.txt   Data      Airolo                               Precipitation; maximum daily total conventionally of the    201611-201706
+                                                                                       month
+order_95501_TIAIR_rre150mx_1_legend.txt Legend    Airolo                               Precipitation; maximum daily total conventionally of the    201611-201706
+                                                                                       month
+order_95501_TIAIR_rre150mx_2_data.txt   Data      Airolo                               Precipitation; maximum daily total conventionally of the    201707-201803
+                                                                                       month
+order_95501_TIAIR_rre150mx_2_legend.txt Legend    Airolo                               Precipitation; maximum daily total conventionally of the    201707-201803
+                                                                                       month
+order_95501_TIAIR_rre150mx_3_data.txt   Data      Airolo                               Precipitation; maximum daily total conventionally of the    201804-202010
+                                                                                       month
+order_95501_TIAIR_rre150mx_3_legend.txt Legend    Airolo                               Precipitation; maximum daily total conventionally of the    201804-202010
+                                                                                       month
+order_95501_TIAIR_rre150mx_4_data.txt   Data      Airolo                               Precipitation; maximum daily total conventionally of the    202011-202105
+                                                                                       month
+order_95501_TIAIR_rre150mx_4_legend.txt Legend    Airolo                               Precipitation; maximum daily total conventionally of the    202011-202105
+                                                                                       month
+order_95501_WSLALB_rre150mx_1_data.txt  Data      Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    201712-201907
+                                                                                       month
+order_95501_WSLALB_rre150mx_1_legend.txt Legend    Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    201712-201907
+                                                                                       month
+order_95501_WSLALB_rre150mx_2_data.txt  Data      Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLALB_rre150mx_2_legend.txt Legend    Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLALB_rre150mx_3_data.txt  Data      Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202002-202005
+                                                                                       month
+order_95501_WSLALB_rre150mx_3_legend.txt Legend    Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202002-202005
+                                                                                       month
+order_95501_WSLALB_rre150mx_4_data.txt  Data      Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202007-202012
+                                                                                       month
+order_95501_WSLALB_rre150mx_4_legend.txt Legend    Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202007-202012
+                                                                                       month
+order_95501_WSLALB_rre150mx_5_data.txt  Data      Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202102-202105
+                                                                                       month
+order_95501_WSLALB_rre150mx_5_legend.txt Legend    Alpthal Bestand                      Precipitation; maximum daily total conventionally of the    202102-202105
+                                                                                       month
+order_95501_ALV_rre150mx_1_data.txt     Data      Alvaneu Dorf                         Precipitation; maximum daily total conventionally of the    197212-201910
+                                                                                       month
+order_95501_ALV_rre150mx_1_legend.txt   Legend    Alvaneu Dorf                         Precipitation; maximum daily total conventionally of the    197212-201910
+                                                                                       month
+order_95501_ALV_rre150mx_2_data.txt     Data      Alvaneu Dorf                         Precipitation; maximum daily total conventionally of the    201911-202105
+                                                                                       month
+order_95501_ALV_rre150mx_2_legend.txt   Legend    Alvaneu Dorf                         Precipitation; maximum daily total conventionally of the    201911-202105
+                                                                                       month
+order_95501_BAC_rre150mx_1_data.txt     Data      Bachtel                              Precipitation; maximum daily total conventionally of the    196012-200310
+                                                                                       month
+order_95501_BAC_rre150mx_1_legend.txt   Legend    Bachtel                              Precipitation; maximum daily total conventionally of the    196012-200310
+                                                                                       month
+order_95501_BSW_rre150mx_1_data.txt     Data      Bad Schwendi                         Precipitation; maximum daily total conventionally of the    197312-200503
+                                                                                       month
+order_95501_BSW_rre150mx_1_legend.txt   Legend    Bad Schwendi                         Precipitation; maximum daily total conventionally of the    197312-200503
+                                                                                       month
+order_95501_BAL_rre150mx_1_data.txt     Data      Balmberg                             Precipitation; maximum daily total conventionally of the    197312-199603
+                                                                                       month
+order_95501_BAL_rre150mx_1_legend.txt   Legend    Balmberg                             Precipitation; maximum daily total conventionally of the    197312-199603
+                                                                                       month
+order_95501_BEA_rre150mx_1_data.txt     Data      Beatenberg                           Precipitation; maximum daily total conventionally of the    196012-198012
+                                                                                       month
+order_95501_BEA_rre150mx_1_legend.txt   Legend    Beatenberg                           Precipitation; maximum daily total conventionally of the    196012-198012
+                                                                                       month
+order_95501_WSLBTB_rre150mx_1_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    201712-201907
+                                                                                       month
+order_95501_WSLBTB_rre150mx_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    201712-201907
+                                                                                       month
+order_95501_WSLBTB_rre150mx_2_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLBTB_rre150mx_2_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLBTB_rre150mx_3_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202002-202005
+                                                                                       month
+order_95501_WSLBTB_rre150mx_3_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202002-202005
+                                                                                       month
+order_95501_WSLBTB_rre150mx_4_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202006-202012
+                                                                                       month
+order_95501_WSLBTB_rre150mx_4_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202006-202012
+                                                                                       month
+order_95501_WSLBTB_rre150mx_5_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_WSLBTB_rre150mx_5_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_WSLBTF_rre150mx_1_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    201712-201807
+                                                                                       month
+order_95501_WSLBTF_rre150mx_1_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    201712-201807
+                                                                                       month
+order_95501_WSLBTF_rre150mx_2_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    201808-201907
+                                                                                       month
+order_95501_WSLBTF_rre150mx_2_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    201808-201907
+                                                                                       month
+order_95501_WSLBTF_rre150mx_3_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    202002-202004
+                                                                                       month
+order_95501_WSLBTF_rre150mx_3_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    202002-202004
+                                                                                       month
+order_95501_WSLBTF_rre150mx_4_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    202006-202105
+                                                                                       month
+order_95501_WSLBTF_rre150mx_4_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum daily total conventionally of the    202006-202105
+                                                                                       month
+order_95501_FRE_rre150mx_1_data.txt     Data      Bullet / La Frétaz                   Precipitation; maximum daily total conventionally of the    197712-202105
+                                                                                       month
+order_95501_FRE_rre150mx_1_legend.txt   Legend    Bullet / La Frétaz                   Precipitation; maximum daily total conventionally of the    197712-202105
+                                                                                       month
+order_95501_CHM_rre150mx_1_data.txt     Data      Chaumont                             Precipitation; maximum daily total conventionally of the    186312-188711
+                                                                                       month
+order_95501_CHM_rre150mx_1_legend.txt   Legend    Chaumont                             Precipitation; maximum daily total conventionally of the    186312-188711
+                                                                                       month
+order_95501_CHM_rre150mx_2_data.txt     Data      Chaumont                             Precipitation; maximum daily total conventionally of the    188712-202105
+                                                                                       month
+order_95501_CHM_rre150mx_2_legend.txt   Legend    Chaumont                             Precipitation; maximum daily total conventionally of the    188712-202105
+                                                                                       month
+order_95501_NABCHA_rre150mx_1_data.txt  Data      Chaumont / Bosset                    Precipitation; maximum daily total conventionally of the    201004-201311
+                                                                                       month
+order_95501_NABCHA_rre150mx_1_legend.txt Legend    Chaumont / Bosset                    Precipitation; maximum daily total conventionally of the    201004-201311
+                                                                                       month
+order_95501_NABCHA_rre150mx_2_data.txt  Data      Chaumont / Bosset                    Precipitation; maximum daily total conventionally of the    201312-201412
+                                                                                       month
+order_95501_NABCHA_rre150mx_2_legend.txt Legend    Chaumont / Bosset                    Precipitation; maximum daily total conventionally of the    201312-201412
+                                                                                       month
+order_95501_TICOL_rre150mx_1_data.txt   Data      Colla                                Precipitation; maximum daily total conventionally of the    200607-201612
+                                                                                       month
+order_95501_TICOL_rre150mx_1_legend.txt Legend    Colla                                Precipitation; maximum daily total conventionally of the    200607-201612
+                                                                                       month
+order_95501_TICOL_rre150mx_2_data.txt   Data      Colla                                Precipitation; maximum daily total conventionally of the    201701-201705
+                                                                                       month
+order_95501_TICOL_rre150mx_2_legend.txt Legend    Colla                                Precipitation; maximum daily total conventionally of the    201701-201705
+                                                                                       month
+order_95501_TICOL_rre150mx_3_data.txt   Data      Colla                                Precipitation; maximum daily total conventionally of the    201706-202104
+                                                                                       month
+order_95501_TICOL_rre150mx_3_legend.txt Legend    Colla                                Precipitation; maximum daily total conventionally of the    201706-202104
+                                                                                       month
+order_95501_DIS_rre150mx_1_data.txt     Data      Disentis                             Precipitation; maximum daily total conventionally of the    195812-201705
+                                                                                       month
+order_95501_DIS_rre150mx_1_legend.txt   Legend    Disentis                             Precipitation; maximum daily total conventionally of the    195812-201705
+                                                                                       month
+order_95501_DIS_rre150mx_2_data.txt     Data      Disentis                             Precipitation; maximum daily total conventionally of the    201706-202105
+                                                                                       month
+order_95501_DIS_rre150mx_2_legend.txt   Legend    Disentis                             Precipitation; maximum daily total conventionally of the    201706-202105
+                                                                                       month
+order_95501_VSDUR_rre150mx_1_data.txt   Data      Durnand                              Precipitation; maximum daily total conventionally of the    201211-202105
+                                                                                       month
+order_95501_VSDUR_rre150mx_1_legend.txt Legend    Durnand                              Precipitation; maximum daily total conventionally of the    201211-202105
+                                                                                       month
+order_95501_EIT_rre150mx_1_data.txt     Data      Eigenthal                            Precipitation; maximum daily total conventionally of the    190012-191408
+                                                                                       month
+order_95501_EIT_rre150mx_1_legend.txt   Legend    Eigenthal                            Precipitation; maximum daily total conventionally of the    190012-191408
+                                                                                       month
+order_95501_EIT_rre150mx_2_data.txt     Data      Eigenthal                            Precipitation; maximum daily total conventionally of the    191409-202105
+                                                                                       month
+order_95501_EIT_rre150mx_2_legend.txt   Legend    Eigenthal                            Precipitation; maximum daily total conventionally of the    191409-202105
+                                                                                       month
+order_95501_VSERG_rre150mx_1_data.txt   Data      Ergisch                              Precipitation; maximum daily total conventionally of the    201310-201404
+                                                                                       month
+order_95501_VSERG_rre150mx_1_legend.txt Legend    Ergisch                              Precipitation; maximum daily total conventionally of the    201310-201404
+                                                                                       month
+order_95501_VSERG_rre150mx_2_data.txt   Data      Ergisch                              Precipitation; maximum daily total conventionally of the    201406-202105
+                                                                                       month
+order_95501_VSERG_rre150mx_2_legend.txt Legend    Ergisch                              Precipitation; maximum daily total conventionally of the    201406-202105
+                                                                                       month
+order_95501_FIE_rre150mx_1_data.txt     Data      Fiesch                               Precipitation; maximum daily total conventionally of the    190012-199105
+                                                                                       month
+order_95501_FIE_rre150mx_1_legend.txt   Legend    Fiesch                               Precipitation; maximum daily total conventionally of the    190012-199105
+                                                                                       month
+order_95501_FIT_rre150mx_1_data.txt     Data      Fieschertal                          Precipitation; maximum daily total conventionally of the    199907-202105
+                                                                                       month
+order_95501_FIT_rre150mx_1_legend.txt   Legend    Fieschertal                          Precipitation; maximum daily total conventionally of the    199907-202105
+                                                                                       month
+order_95501_CTA_rre150mx_1_data.txt     Data      Finhaut                              Precipitation; maximum daily total conventionally of the    196812-200605
+                                                                                       month
+order_95501_CTA_rre150mx_1_legend.txt   Legend    Finhaut                              Precipitation; maximum daily total conventionally of the    196812-200605
+                                                                                       month
+order_95501_CTA_rre150mx_2_data.txt     Data      Finhaut                              Precipitation; maximum daily total conventionally of the    200606-201310
+                                                                                       month
+order_95501_CTA_rre150mx_2_legend.txt   Legend    Finhaut                              Precipitation; maximum daily total conventionally of the    200606-201310
+                                                                                       month
+order_95501_CTA_rre150mx_3_data.txt     Data      Finhaut                              Precipitation; maximum daily total conventionally of the    201311-202105
+                                                                                       month
+order_95501_CTA_rre150mx_3_legend.txt   Legend    Finhaut                              Precipitation; maximum daily total conventionally of the    201311-202105
+                                                                                       month
+order_95501_GAD_rre150mx_1_data.txt     Data      Gadmen                               Precipitation; maximum daily total conventionally of the    191107-192012
+                                                                                       month
+order_95501_GAD_rre150mx_1_legend.txt   Legend    Gadmen                               Precipitation; maximum daily total conventionally of the    191107-192012
+                                                                                       month
+order_95501_GAD_rre150mx_2_data.txt     Data      Gadmen                               Precipitation; maximum daily total conventionally of the    192302-202105
+                                                                                       month
+order_95501_GAD_rre150mx_2_legend.txt   Legend    Gadmen                               Precipitation; maximum daily total conventionally of the    192302-202105
+                                                                                       month
+order_95501_BEGAD_rre150mx_1_data.txt   Data      Gadmen                               Precipitation; maximum daily total conventionally of the    200807-201302
+                                                                                       month
+order_95501_BEGAD_rre150mx_1_legend.txt Legend    Gadmen                               Precipitation; maximum daily total conventionally of the    200807-201302
+                                                                                       month
+order_95501_BEGAD_rre150mx_2_data.txt   Data      Gadmen                               Precipitation; maximum daily total conventionally of the    201304-202105
+                                                                                       month
+order_95501_BEGAD_rre150mx_2_legend.txt Legend    Gadmen                               Precipitation; maximum daily total conventionally of the    201304-202105
+                                                                                       month
+order_95501_GWA_rre150mx_1_data.txt     Data      Grindelwald                          Precipitation; maximum daily total conventionally of the    196012-200501
+                                                                                       month
+order_95501_GWA_rre150mx_1_legend.txt   Legend    Grindelwald                          Precipitation; maximum daily total conventionally of the    196012-200501
+                                                                                       month
+order_95501_GWA_rre150mx_2_data.txt     Data      Grindelwald                          Precipitation; maximum daily total conventionally of the    200506-202105
+                                                                                       month
+order_95501_GWA_rre150mx_2_legend.txt   Legend    Grindelwald                          Precipitation; maximum daily total conventionally of the    200506-202105
+                                                                                       month
+order_95501_GRY_rre150mx_1_data.txt     Data      Gryon                                Precipitation; maximum daily total conventionally of the    190204-192006
+                                                                                       month
+order_95501_GRY_rre150mx_1_legend.txt   Legend    Gryon                                Precipitation; maximum daily total conventionally of the    190204-192006
+                                                                                       month
+order_95501_GRY_rre150mx_2_data.txt     Data      Gryon                                Precipitation; maximum daily total conventionally of the    192007-200912
+                                                                                       month
+order_95501_GRY_rre150mx_2_legend.txt   Legend    Gryon                                Precipitation; maximum daily total conventionally of the    192007-200912
+                                                                                       month
+order_95501_GRY_rre150mx_3_data.txt     Data      Gryon                                Precipitation; maximum daily total conventionally of the    201001-202105
+                                                                                       month
+order_95501_GRY_rre150mx_3_legend.txt   Legend    Gryon                                Precipitation; maximum daily total conventionally of the    201001-202105
+                                                                                       month
+order_95501_GST_rre150mx_1_data.txt     Data      Gstaad                               Precipitation; maximum daily total conventionally of the    198101-201012
+                                                                                       month
+order_95501_GST_rre150mx_1_legend.txt   Legend    Gstaad                               Precipitation; maximum daily total conventionally of the    198101-201012
+                                                                                       month
+order_95501_GSG_rre150mx_1_data.txt     Data      Gsteig, Gstaad                       Precipitation; maximum daily total conventionally of the    190012-194210
+                                                                                       month
+order_95501_GSG_rre150mx_1_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; maximum daily total conventionally of the    190012-194210
+                                                                                       month
+order_95501_GSG_rre150mx_2_data.txt     Data      Gsteig, Gstaad                       Precipitation; maximum daily total conventionally of the    194211-202105
+                                                                                       month
+order_95501_GSG_rre150mx_2_legend.txt   Legend    Gsteig, Gstaad                       Precipitation; maximum daily total conventionally of the    194211-202105
+                                                                                       month
+order_95501_BERIF_rre150mx_1_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    200207-201303
+                                                                                       month
+order_95501_BERIF_rre150mx_1_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    200207-201303
+                                                                                       month
+order_95501_BERIF_rre150mx_2_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201304-201512
+                                                                                       month
+order_95501_BERIF_rre150mx_2_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201304-201512
+                                                                                       month
+order_95501_BERIF_rre150mx_3_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201601-201611
+                                                                                       month
+order_95501_BERIF_rre150mx_3_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201601-201611
+                                                                                       month
+order_95501_BERIF_rre150mx_4_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201612-201908
+                                                                                       month
+order_95501_BERIF_rre150mx_4_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201612-201908
+                                                                                       month
+order_95501_BERIF_rre150mx_5_data.txt   Data      Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201909-202105
+                                                                                       month
+order_95501_BERIF_rre150mx_5_legend.txt Legend    Guggisberg / Riffenmatt              Precipitation; maximum daily total conventionally of the    201909-202105
+                                                                                       month
+order_95501_GNB_rre150mx_1_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; maximum daily total conventionally of the    197112-197512
+                                                                                       month
+order_95501_GNB_rre150mx_1_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; maximum daily total conventionally of the    197112-197512
+                                                                                       month
+order_95501_GNB_rre150mx_2_data.txt     Data      Gurnigelbad / Gassenscheuer          Precipitation; maximum daily total conventionally of the    198112-199506
+                                                                                       month
+order_95501_GNB_rre150mx_2_legend.txt   Legend    Gurnigelbad / Gassenscheuer          Precipitation; maximum daily total conventionally of the    198112-199506
+                                                                                       month
+order_95501_BEHAK_rre150mx_1_data.txt   Data      Habkern                              Precipitation; maximum daily total conventionally of the    200809-201302
+                                                                                       month
+order_95501_BEHAK_rre150mx_1_legend.txt Legend    Habkern                              Precipitation; maximum daily total conventionally of the    200809-201302
+                                                                                       month
+order_95501_BEHAK_rre150mx_2_data.txt   Data      Habkern                              Precipitation; maximum daily total conventionally of the    201304-202105
+                                                                                       month
+order_95501_BEHAK_rre150mx_2_legend.txt Legend    Habkern                              Precipitation; maximum daily total conventionally of the    201304-202105
+                                                                                       month
+order_95501_HDI_rre150mx_1_data.txt     Data      Heiligenschwendi                     Precipitation; maximum daily total conventionally of the    196012-197105
+                                                                                       month
+order_95501_HDI_rre150mx_1_legend.txt   Legend    Heiligenschwendi                     Precipitation; maximum daily total conventionally of the    196012-197105
+                                                                                       month
+order_95501_HER_rre150mx_1_data.txt     Data      Hérémence                            Precipitation; maximum daily total conventionally of the    190601-196008
+                                                                                       month
+order_95501_HER_rre150mx_1_legend.txt   Legend    Hérémence                            Precipitation; maximum daily total conventionally of the    190601-196008
+                                                                                       month
+order_95501_HER_rre150mx_2_data.txt     Data      Hérémence                            Precipitation; maximum daily total conventionally of the    196012-200609
+                                                                                       month
+order_95501_HER_rre150mx_2_legend.txt   Legend    Hérémence                            Precipitation; maximum daily total conventionally of the    196012-200609
+                                                                                       month
+order_95501_HER_rre150mx_3_data.txt     Data      Hérémence                            Precipitation; maximum daily total conventionally of the    200704-202105
+                                                                                       month
+order_95501_HER_rre150mx_3_legend.txt   Legend    Hérémence                            Precipitation; maximum daily total conventionally of the    200704-202105
+                                                                                       month
+order_95501_HOE_rre150mx_1_data.txt     Data      Hörnli                               Precipitation; maximum daily total conventionally of the    200506-202105
+                                                                                       month
+order_95501_HOE_rre150mx_1_legend.txt   Legend    Hörnli                               Precipitation; maximum daily total conventionally of the    200506-202105
+                                                                                       month
+order_95501_WSLISB_rre150mx_1_data.txt  Data      Isone Bestand                        Precipitation; maximum daily total conventionally of the    201712-202006
+                                                                                       month
+order_95501_WSLISB_rre150mx_1_legend.txt Legend    Isone Bestand                        Precipitation; maximum daily total conventionally of the    201712-202006
+                                                                                       month
+order_95501_WSLISB_rre150mx_2_data.txt  Data      Isone Bestand                        Precipitation; maximum daily total conventionally of the    202007-202012
+                                                                                       month
+order_95501_WSLISB_rre150mx_2_legend.txt Legend    Isone Bestand                        Precipitation; maximum daily total conventionally of the    202007-202012
+                                                                                       month
+order_95501_WSLISF_rre150mx_1_data.txt  Data      Isone Freiland                       Precipitation; maximum daily total conventionally of the    201712-201807
+                                                                                       month
+order_95501_WSLISF_rre150mx_1_legend.txt Legend    Isone Freiland                       Precipitation; maximum daily total conventionally of the    201712-201807
+                                                                                       month
+order_95501_WSLISF_rre150mx_2_data.txt  Data      Isone Freiland                       Precipitation; maximum daily total conventionally of the    201808-201908
+                                                                                       month
+order_95501_WSLISF_rre150mx_2_legend.txt Legend    Isone Freiland                       Precipitation; maximum daily total conventionally of the    201808-201908
+                                                                                       month
+order_95501_WSLISF_rre150mx_3_data.txt  Data      Isone Freiland                       Precipitation; maximum daily total conventionally of the    201909-202012
+                                                                                       month
+order_95501_WSLISF_rre150mx_3_legend.txt Legend    Isone Freiland                       Precipitation; maximum daily total conventionally of the    201909-202012
+                                                                                       month
+order_95501_VSISE_rre150mx_1_data.txt   Data      Isérables                            Precipitation; maximum daily total conventionally of the    201211-201307
+                                                                                       month
+order_95501_VSISE_rre150mx_1_legend.txt Legend    Isérables                            Precipitation; maximum daily total conventionally of the    201211-201307
+                                                                                       month
+order_95501_VSISE_rre150mx_2_data.txt   Data      Isérables                            Precipitation; maximum daily total conventionally of the    201308-202012
+                                                                                       month
+order_95501_VSISE_rre150mx_2_legend.txt Legend    Isérables                            Precipitation; maximum daily total conventionally of the    201308-202012
+                                                                                       month
+order_95501_VSISE_rre150mx_3_data.txt   Data      Isérables                            Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_VSISE_rre150mx_3_legend.txt Legend    Isérables                            Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_KAS_rre150mx_1_data.txt     Data      Kandersteg                           Precipitation; maximum daily total conventionally of the    189907-202105
+                                                                                       month
+order_95501_KAS_rre150mx_1_legend.txt   Legend    Kandersteg                           Precipitation; maximum daily total conventionally of the    189907-202105
+                                                                                       month
+order_95501_KLA_rre150mx_1_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    186312-186401
+                                                                                       month
+order_95501_KLA_rre150mx_1_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    186312-186401
+                                                                                       month
+order_95501_KLA_rre150mx_2_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    188510-188902
+                                                                                       month
+order_95501_KLA_rre150mx_2_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    188510-188902
+                                                                                       month
+order_95501_KLA_rre150mx_3_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    188905-188908
+                                                                                       month
+order_95501_KLA_rre150mx_3_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    188905-188908
+                                                                                       month
+order_95501_KLA_rre150mx_4_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    189005-189102
+                                                                                       month
+order_95501_KLA_rre150mx_4_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    189005-189102
+                                                                                       month
+order_95501_KLA_rre150mx_5_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    189807-191105
+                                                                                       month
+order_95501_KLA_rre150mx_5_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    189807-191105
+                                                                                       month
+order_95501_KLA_rre150mx_6_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    191111-192012
+                                                                                       month
+order_95501_KLA_rre150mx_6_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    191111-192012
+                                                                                       month
+order_95501_KLA_rre150mx_7_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    193012-201311
+                                                                                       month
+order_95501_KLA_rre150mx_7_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    193012-201311
+                                                                                       month
+order_95501_KLA_rre150mx_8_data.txt     Data      Klosters                             Precipitation; maximum daily total conventionally of the    202104-202105
+                                                                                       month
+order_95501_KLA_rre150mx_8_legend.txt   Legend    Klosters                             Precipitation; maximum daily total conventionally of the    202104-202105
+                                                                                       month
+order_95501_AUB_rre150mx_1_data.txt     Data      L' Auberson                          Precipitation; maximum daily total conventionally of the    191412-202105
+                                                                                       month
+order_95501_AUB_rre150mx_1_legend.txt   Legend    L' Auberson                          Precipitation; maximum daily total conventionally of the    191412-202105
+                                                                                       month
+order_95501_CUE_rre150mx_1_data.txt     Data      La Cure                              Precipitation; maximum daily total conventionally of the    189912-202105
+                                                                                       month
+order_95501_CUE_rre150mx_1_legend.txt   Legend    La Cure                              Precipitation; maximum daily total conventionally of the    189912-202105
+                                                                                       month
+order_95501_LTO_rre150mx_1_data.txt     Data      La Tourne                            Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_LTO_rre150mx_1_legend.txt   Legend    La Tourne                            Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_LBG_rre150mx_1_data.txt     Data      Lauenen bei Gstaad                   Precipitation; maximum daily total conventionally of the    196012-200003
+                                                                                       month
+order_95501_LBG_rre150mx_1_legend.txt   Legend    Lauenen bei Gstaad                   Precipitation; maximum daily total conventionally of the    196012-200003
+                                                                                       month
+order_95501_BOI_rre150mx_1_data.txt     Data      Le Boinod                            Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_BOI_rre150mx_1_legend.txt   Legend    Le Boinod                            Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_LBA_rre150mx_1_data.txt     Data      Le Brassus                           Precipitation; maximum daily total conventionally of the    196812-199112
+                                                                                       month
+order_95501_LBA_rre150mx_1_legend.txt   Legend    Le Brassus                           Precipitation; maximum daily total conventionally of the    196812-199112
+                                                                                       month
+order_95501_LEN_rre150mx_1_data.txt     Data      Lenk                                 Precipitation; maximum daily total conventionally of the    200004-202105
+                                                                                       month
+order_95501_LEN_rre150mx_1_legend.txt   Legend    Lenk                                 Precipitation; maximum daily total conventionally of the    200004-202105
+                                                                                       month
+order_95501_MMLEN_rre150mx_1_data.txt   Data      Lenk                                 Precipitation; maximum daily total conventionally of the    201211-201307
+                                                                                       month
+order_95501_MMLEN_rre150mx_1_legend.txt Legend    Lenk                                 Precipitation; maximum daily total conventionally of the    201211-201307
+                                                                                       month
+order_95501_MMLEN_rre150mx_2_data.txt   Data      Lenk                                 Precipitation; maximum daily total conventionally of the    201308-201404
+                                                                                       month
+order_95501_MMLEN_rre150mx_2_legend.txt Legend    Lenk                                 Precipitation; maximum daily total conventionally of the    201308-201404
+                                                                                       month
+order_95501_MMLEN_rre150mx_3_data.txt   Data      Lenk                                 Precipitation; maximum daily total conventionally of the    201405-201510
+                                                                                       month
+order_95501_MMLEN_rre150mx_3_legend.txt Legend    Lenk                                 Precipitation; maximum daily total conventionally of the    201405-201510
+                                                                                       month
+order_95501_MMLEN_rre150mx_4_data.txt   Data      Lenk                                 Precipitation; maximum daily total conventionally of the    201603-202105
+                                                                                       month
+order_95501_MMLEN_rre150mx_4_legend.txt Legend    Lenk                                 Precipitation; maximum daily total conventionally of the    201603-202105
+                                                                                       month
+order_95501_WSLLEB_rre150mx_1_data.txt  Data      Lens Bestand                         Precipitation; maximum daily total conventionally of the    201712-201809
+                                                                                       month
+order_95501_WSLLEB_rre150mx_1_legend.txt Legend    Lens Bestand                         Precipitation; maximum daily total conventionally of the    201712-201809
+                                                                                       month
+order_95501_WSLLEB_rre150mx_2_data.txt  Data      Lens Bestand                         Precipitation; maximum daily total conventionally of the    201810-201812
+                                                                                       month
+order_95501_WSLLEB_rre150mx_2_legend.txt Legend    Lens Bestand                         Precipitation; maximum daily total conventionally of the    201810-201812
+                                                                                       month
+order_95501_WSLLEB_rre150mx_3_data.txt  Data      Lens Bestand                         Precipitation; maximum daily total conventionally of the    201901-201904
+                                                                                       month
+order_95501_WSLLEB_rre150mx_3_legend.txt Legend    Lens Bestand                         Precipitation; maximum daily total conventionally of the    201901-201904
+                                                                                       month
+order_95501_WSLLEB_rre150mx_4_data.txt  Data      Lens Bestand                         Precipitation; maximum daily total conventionally of the    201905-201906
+                                                                                       month
+order_95501_WSLLEB_rre150mx_4_legend.txt Legend    Lens Bestand                         Precipitation; maximum daily total conventionally of the    201905-201906
+                                                                                       month
+order_95501_WSLLEB_rre150mx_5_data.txt  Data      Lens Bestand                         Precipitation; maximum daily total conventionally of the    201908-202006
+                                                                                       month
+order_95501_WSLLEB_rre150mx_5_legend.txt Legend    Lens Bestand                         Precipitation; maximum daily total conventionally of the    201908-202006
+                                                                                       month
+order_95501_DIB_rre150mx_1_data.txt     Data      Les Diablerets                       Precipitation; maximum daily total conventionally of the    196012-202105
+                                                                                       month
+order_95501_DIB_rre150mx_1_legend.txt   Legend    Les Diablerets                       Precipitation; maximum daily total conventionally of the    196012-202105
+                                                                                       month
+order_95501_PSB_rre150mx_1_data.txt     Data      Les Plans-sur-Bex                    Precipitation; maximum daily total conventionally of the    196012-200302
+                                                                                       month
+order_95501_PSB_rre150mx_1_legend.txt   Legend    Les Plans-sur-Bex                    Precipitation; maximum daily total conventionally of the    196012-200302
+                                                                                       month
+order_95501_LRO_rre150mx_1_data.txt     Data      Les Rots                             Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_LRO_rre150mx_1_legend.txt   Legend    Les Rots                             Precipitation; maximum daily total conventionally of the    196912-197412
+                                                                                       month
+order_95501_BELUA_rre150mx_1_data.txt   Data      Lüderenalp                           Precipitation; maximum daily total conventionally of the    201111-201203
+                                                                                       month
+order_95501_BELUA_rre150mx_1_legend.txt Legend    Lüderenalp                           Precipitation; maximum daily total conventionally of the    201111-201203
+                                                                                       month
+order_95501_BELUA_rre150mx_2_data.txt   Data      Lüderenalp                           Precipitation; maximum daily total conventionally of the    201210-201212
+                                                                                       month
+order_95501_BELUA_rre150mx_2_legend.txt Legend    Lüderenalp                           Precipitation; maximum daily total conventionally of the    201210-201212
+                                                                                       month
+order_95501_BELUA_rre150mx_3_data.txt   Data      Lüderenalp                           Precipitation; maximum daily total conventionally of the    201304-201803
+                                                                                       month
+order_95501_BELUA_rre150mx_3_legend.txt Legend    Lüderenalp                           Precipitation; maximum daily total conventionally of the    201304-201803
+                                                                                       month
+order_95501_BELUA_rre150mx_4_data.txt   Data      Lüderenalp                           Precipitation; maximum daily total conventionally of the    201804-202105
+                                                                                       month
+order_95501_BELUA_rre150mx_4_legend.txt Legend    Lüderenalp                           Precipitation; maximum daily total conventionally of the    201804-202105
+                                                                                       month
+order_95501_FLMAI_rre150mx_1_data.txt   Data      Maienfeld / Guscha                   Precipitation; maximum daily total conventionally of the    201312-202105
+                                                                                       month
+order_95501_FLMAI_rre150mx_1_legend.txt Legend    Maienfeld / Guscha                   Precipitation; maximum daily total conventionally of the    201312-202105
+                                                                                       month
+order_95501_VSMAT_rre150mx_1_data.txt   Data      Mattsand                             Precipitation; maximum daily total conventionally of the    201010-202105
+                                                                                       month
+order_95501_VSMAT_rre150mx_1_legend.txt Legend    Mattsand                             Precipitation; maximum daily total conventionally of the    201010-202105
+                                                                                       month
+order_95501_MSO_rre150mx_1_data.txt     Data      Mont-Soleil                          Precipitation; maximum daily total conventionally of the    190712-199406
+                                                                                       month
+order_95501_MSO_rre150mx_1_legend.txt   Legend    Mont-Soleil                          Precipitation; maximum daily total conventionally of the    190712-199406
+                                                                                       month
+order_95501_MOD_rre150mx_1_data.txt     Data      Montagne du Droit                    Precipitation; maximum daily total conventionally of the    199407-202104
+                                                                                       month
+order_95501_MOD_rre150mx_1_legend.txt   Legend    Montagne du Droit                    Precipitation; maximum daily total conventionally of the    199407-202104
+                                                                                       month
+order_95501_GLMUL_rre150mx_1_data.txt   Data      Mullern                              Precipitation; maximum daily total conventionally of the    201312-201406
+                                                                                       month
+order_95501_GLMUL_rre150mx_1_legend.txt Legend    Mullern                              Precipitation; maximum daily total conventionally of the    201312-201406
+                                                                                       month
+order_95501_GLMUL_rre150mx_2_data.txt   Data      Mullern                              Precipitation; maximum daily total conventionally of the    201407-201812
+                                                                                       month
+order_95501_GLMUL_rre150mx_2_legend.txt Legend    Mullern                              Precipitation; maximum daily total conventionally of the    201407-201812
+                                                                                       month
+order_95501_GLMUL_rre150mx_3_data.txt   Data      Mullern                              Precipitation; maximum daily total conventionally of the    201904-201909
+                                                                                       month
+order_95501_GLMUL_rre150mx_3_legend.txt Legend    Mullern                              Precipitation; maximum daily total conventionally of the    201904-201909
+                                                                                       month
+order_95501_GLMUL_rre150mx_4_data.txt   Data      Mullern                              Precipitation; maximum daily total conventionally of the    201910-202006
+                                                                                       month
+order_95501_GLMUL_rre150mx_4_legend.txt Legend    Mullern                              Precipitation; maximum daily total conventionally of the    201910-202006
+                                                                                       month
+order_95501_GLMUL_rre150mx_5_data.txt   Data      Mullern                              Precipitation; maximum daily total conventionally of the    202007-202105
+                                                                                       month
+order_95501_GLMUL_rre150mx_5_legend.txt Legend    Mullern                              Precipitation; maximum daily total conventionally of the    202007-202105
+                                                                                       month
+order_95501_IYMUW_rre150mx_1_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    197012-198505
+                                                                                       month
+order_95501_IYMUW_rre150mx_1_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    197012-198505
+                                                                                       month
+order_95501_IYMUW_rre150mx_2_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    198506-198709
+                                                                                       month
+order_95501_IYMUW_rre150mx_2_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    198506-198709
+                                                                                       month
+order_95501_IYMUW_rre150mx_3_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    198710-201903
+                                                                                       month
+order_95501_IYMUW_rre150mx_3_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    198710-201903
+                                                                                       month
+order_95501_IYMUW_rre150mx_4_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYMUW_rre150mx_4_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYMUW_rre150mx_5_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYMUW_rre150mx_5_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYMUW_rre150mx_6_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYMUW_rre150mx_6_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYMUW_rre150mx_7_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYMUW_rre150mx_7_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYMUW_rre150mx_8_data.txt   Data      Mühlwald                             Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYMUW_rre150mx_8_legend.txt Legend    Mühlwald                             Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_MUS_rre150mx_1_data.txt     Data      Müstair                              Precipitation; maximum daily total conventionally of the    197212-202105
+                                                                                       month
+order_95501_MUS_rre150mx_1_legend.txt   Legend    Müstair                              Precipitation; maximum daily total conventionally of the    197212-202105
+                                                                                       month
+order_95501_WSLNOF_rre150mx_1_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201712-201803
+                                                                                       month
+order_95501_WSLNOF_rre150mx_1_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201712-201803
+                                                                                       month
+order_95501_WSLNOF_rre150mx_2_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201804-201805
+                                                                                       month
+order_95501_WSLNOF_rre150mx_2_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201804-201805
+                                                                                       month
+order_95501_WSLNOF_rre150mx_3_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201806-201809
+                                                                                       month
+order_95501_WSLNOF_rre150mx_3_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201806-201809
+                                                                                       month
+order_95501_WSLNOF_rre150mx_4_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201810-201812
+                                                                                       month
+order_95501_WSLNOF_rre150mx_4_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201810-201812
+                                                                                       month
+order_95501_WSLNOF_rre150mx_5_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201901-201907
+                                                                                       month
+order_95501_WSLNOF_rre150mx_5_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201901-201907
+                                                                                       month
+order_95501_WSLNOF_rre150mx_6_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLNOF_rre150mx_6_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    201908-201909
+                                                                                       month
+order_95501_WSLNOF_rre150mx_7_data.txt  Data      Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    202002-202105
+                                                                                       month
+order_95501_WSLNOF_rre150mx_7_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum daily total conventionally of the    202002-202105
+                                                                                       month
+order_95501_OBI_rre150mx_1_data.txt     Data      Oberiberg                            Precipitation; maximum daily total conventionally of the    188309-202105
+                                                                                       month
+order_95501_OBI_rre150mx_1_legend.txt   Legend    Oberiberg                            Precipitation; maximum daily total conventionally of the    188309-202105
+                                                                                       month
+order_95501_PJO_rre150mx_1_data.txt     Data      Petite Joux                          Precipitation; maximum daily total conventionally of the    197312-197412
+                                                                                       month
+order_95501_PJO_rre150mx_1_legend.txt   Legend    Petite Joux                          Precipitation; maximum daily total conventionally of the    197312-197412
+                                                                                       month
+order_95501_ROB_rre150mx_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; maximum daily total conventionally of the    195812-202105
+                                                                                       month
+order_95501_ROB_rre150mx_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; maximum daily total conventionally of the    195812-202105
+                                                                                       month
+order_95501_ROG_rre150mx_1_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201209-201210
+                                                                                       month
+order_95501_ROG_rre150mx_1_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201209-201210
+                                                                                       month
+order_95501_ROG_rre150mx_2_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201212-201604
+                                                                                       month
+order_95501_ROG_rre150mx_2_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201212-201604
+                                                                                       month
+order_95501_ROG_rre150mx_3_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201605-201606
+                                                                                       month
+order_95501_ROG_rre150mx_3_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201605-201606
+                                                                                       month
+order_95501_ROG_rre150mx_4_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201607-201610
+                                                                                       month
+order_95501_ROG_rre150mx_4_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201607-201610
+                                                                                       month
+order_95501_ROG_rre150mx_5_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201611-201811
+                                                                                       month
+order_95501_ROG_rre150mx_5_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201611-201811
+                                                                                       month
+order_95501_ROG_rre150mx_6_data.txt     Data      Rossberg                             Precipitation; maximum daily total conventionally of the    201812-202105
+                                                                                       month
+order_95501_ROG_rre150mx_6_legend.txt   Legend    Rossberg                             Precipitation; maximum daily total conventionally of the    201812-202105
+                                                                                       month
+order_95501_RUM_rre150mx_1_data.txt     Data      Rumein / Igels                       Precipitation; maximum daily total conventionally of the    196812-199710
+                                                                                       month
+order_95501_RUM_rre150mx_1_legend.txt   Legend    Rumein / Igels                       Precipitation; maximum daily total conventionally of the    196812-199710
+                                                                                       month
+order_95501_KASMR_rre150mx_1_data.txt   Data      Sattel / Mostelrieter                Precipitation; maximum daily total conventionally of the    201903-201904
+                                                                                       month
+order_95501_KASMR_rre150mx_1_legend.txt Legend    Sattel / Mostelrieter                Precipitation; maximum daily total conventionally of the    201903-201904
+                                                                                       month
+order_95501_KASMR_rre150mx_2_data.txt   Data      Sattel / Mostelrieter                Precipitation; maximum daily total conventionally of the    201906-202010
+                                                                                       month
+order_95501_KASMR_rre150mx_2_legend.txt Legend    Sattel / Mostelrieter                Precipitation; maximum daily total conventionally of the    201906-202010
+                                                                                       month
+order_95501_SVG_rre150mx_1_data.txt     Data      Savognin                             Precipitation; maximum daily total conventionally of the    189201-202105
+                                                                                       month
+order_95501_SVG_rre150mx_1_legend.txt   Legend    Savognin                             Precipitation; maximum daily total conventionally of the    189201-202105
+                                                                                       month
+order_95501_MMSVG_rre150mx_1_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201412-201511
+                                                                                       month
+order_95501_MMSVG_rre150mx_1_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201412-201511
+                                                                                       month
+order_95501_MMSVG_rre150mx_2_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201602-201710
+                                                                                       month
+order_95501_MMSVG_rre150mx_2_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201602-201710
+                                                                                       month
+order_95501_MMSVG_rre150mx_3_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201711-201808
+                                                                                       month
+order_95501_MMSVG_rre150mx_3_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201711-201808
+                                                                                       month
+order_95501_MMSVG_rre150mx_4_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201809-201811
+                                                                                       month
+order_95501_MMSVG_rre150mx_4_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201809-201811
+                                                                                       month
+order_95501_MMSVG_rre150mx_5_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201812-201904
+                                                                                       month
+order_95501_MMSVG_rre150mx_5_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201812-201904
+                                                                                       month
+order_95501_MMSVG_rre150mx_6_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201906-201908
+                                                                                       month
+order_95501_MMSVG_rre150mx_6_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201906-201908
+                                                                                       month
+order_95501_MMSVG_rre150mx_7_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    201909-201912
+                                                                                       month
+order_95501_MMSVG_rre150mx_7_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    201909-201912
+                                                                                       month
+order_95501_MMSVG_rre150mx_8_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    202001-202007
+                                                                                       month
+order_95501_MMSVG_rre150mx_8_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    202001-202007
+                                                                                       month
+order_95501_MMSVG_rre150mx_9_data.txt   Data      Savognin                             Precipitation; maximum daily total conventionally of the    202009-202012
+                                                                                       month
+order_95501_MMSVG_rre150mx_9_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    202009-202012
+                                                                                       month
+order_95501_MMSVG_rre150mx_10_data.txt  Data      Savognin                             Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_MMSVG_rre150mx_10_legend.txt Legend    Savognin                             Precipitation; maximum daily total conventionally of the    202101-202105
+                                                                                       month
+order_95501_BESCB_rre150mx_1_data.txt   Data      Schallenberg                         Precipitation; maximum daily total conventionally of the    201210-201212
+                                                                                       month
+order_95501_BESCB_rre150mx_1_legend.txt Legend    Schallenberg                         Precipitation; maximum daily total conventionally of the    201210-201212
+                                                                                       month
+order_95501_BESCB_rre150mx_2_data.txt   Data      Schallenberg                         Precipitation; maximum daily total conventionally of the    201304-201511
+                                                                                       month
+order_95501_BESCB_rre150mx_2_legend.txt Legend    Schallenberg                         Precipitation; maximum daily total conventionally of the    201304-201511
+                                                                                       month
+order_95501_BESCB_rre150mx_3_data.txt   Data      Schallenberg                         Precipitation; maximum daily total conventionally of the    201512-202105
+                                                                                       month
+order_95501_BESCB_rre150mx_3_legend.txt Legend    Schallenberg                         Precipitation; maximum daily total conventionally of the    201512-202105
+                                                                                       month
+order_95501_SZS_rre150mx_1_data.txt     Data      Schwarzsee Bad                       Precipitation; maximum daily total conventionally of the    197112-197508
+                                                                                       month
+order_95501_SZS_rre150mx_1_legend.txt   Legend    Schwarzsee Bad                       Precipitation; maximum daily total conventionally of the    197112-197508
+                                                                                       month
+order_95501_SWB_rre150mx_1_data.txt     Data      Schwäbrig                            Precipitation; maximum daily total conventionally of the    197312-197512
+                                                                                       month
+order_95501_SWB_rre150mx_1_legend.txt   Legend    Schwäbrig                            Precipitation; maximum daily total conventionally of the    197312-197512
+                                                                                       month
+order_95501_SWI_rre150mx_1_data.txt     Data      Schwäbrig                            Precipitation; maximum daily total conventionally of the    196012-197312
+                                                                                       month
+order_95501_SWI_rre150mx_1_legend.txt   Legend    Schwäbrig                            Precipitation; maximum daily total conventionally of the    196012-197312
+                                                                                       month
+order_95501_SOB_rre150mx_1_data.txt     Data      Schönenboden                         Precipitation; maximum daily total conventionally of the    197212-197912
+                                                                                       month
+order_95501_SOB_rre150mx_1_legend.txt   Legend    Schönenboden                         Precipitation; maximum daily total conventionally of the    197212-197912
+                                                                                       month
+order_95501_SOG_rre150mx_1_data.txt     Data      Soglio                               Precipitation; maximum daily total conventionally of the    188401-202105
+                                                                                       month
+order_95501_SOG_rre150mx_1_legend.txt   Legend    Soglio                               Precipitation; maximum daily total conventionally of the    188401-202105
+                                                                                       month
+order_95501_IYSMT_rre150mx_1_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    198801-200212
+                                                                                       month
+order_95501_IYSMT_rre150mx_1_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    198801-200212
+                                                                                       month
+order_95501_IYSMT_rre150mx_2_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    200303-200305
+                                                                                       month
+order_95501_IYSMT_rre150mx_2_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    200303-200305
+                                                                                       month
+order_95501_IYSMT_rre150mx_3_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    200306-201903
+                                                                                       month
+order_95501_IYSMT_rre150mx_3_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    200306-201903
+                                                                                       month
+order_95501_IYSMT_rre150mx_4_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYSMT_rre150mx_4_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYSMT_rre150mx_5_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYSMT_rre150mx_5_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYSMT_rre150mx_6_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYSMT_rre150mx_6_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYSMT_rre150mx_7_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYSMT_rre150mx_7_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYSMT_rre150mx_8_data.txt   Data      St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202011-202104
+                                                                                       month
+order_95501_IYSMT_rre150mx_8_legend.txt Legend    St. Martin in Thurn                  Precipitation; maximum daily total conventionally of the    202011-202104
+                                                                                       month
+order_95501_IYSWA_rre150mx_1_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    197912-201903
+                                                                                       month
+order_95501_IYSWA_rre150mx_1_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    197912-201903
+                                                                                       month
+order_95501_IYSWA_rre150mx_2_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYSWA_rre150mx_2_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYSWA_rre150mx_3_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYSWA_rre150mx_3_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYSWA_rre150mx_4_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYSWA_rre150mx_4_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYSWA_rre150mx_5_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYSWA_rre150mx_5_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYSWA_rre150mx_6_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    202010-202011
+                                                                                       month
+order_95501_IYSWA_rre150mx_6_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    202010-202011
+                                                                                       month
+order_95501_IYSWA_rre150mx_7_data.txt   Data      St. Walburg                          Precipitation; maximum daily total conventionally of the    202101-202104
+                                                                                       month
+order_95501_IYSWA_rre150mx_7_legend.txt Legend    St. Walburg                          Precipitation; maximum daily total conventionally of the    202101-202104
+                                                                                       month
+order_95501_STP_rre150mx_1_data.txt     Data      Stöckalp                             Precipitation; maximum daily total conventionally of the    198409-202105
+                                                                                       month
+order_95501_STP_rre150mx_1_legend.txt   Legend    Stöckalp                             Precipitation; maximum daily total conventionally of the    198409-202105
+                                                                                       month
+order_95501_IYTAU_rre150mx_1_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    192112-201903
+                                                                                       month
+order_95501_IYTAU_rre150mx_1_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    192112-201903
+                                                                                       month
+order_95501_IYTAU_rre150mx_2_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYTAU_rre150mx_2_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYTAU_rre150mx_3_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYTAU_rre150mx_3_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYTAU_rre150mx_4_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYTAU_rre150mx_4_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYTAU_rre150mx_5_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYTAU_rre150mx_5_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYTAU_rre150mx_6_data.txt   Data      Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYTAU_rre150mx_6_legend.txt Legend    Taufers i.M.                         Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYTOB_rre150mx_1_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    192112-196003
+                                                                                       month
+order_95501_IYTOB_rre150mx_1_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    192112-196003
+                                                                                       month
+order_95501_IYTOB_rre150mx_2_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    196005-196406
+                                                                                       month
+order_95501_IYTOB_rre150mx_2_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    196005-196406
+                                                                                       month
+order_95501_IYTOB_rre150mx_3_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    196409-201903
+                                                                                       month
+order_95501_IYTOB_rre150mx_3_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    196409-201903
+                                                                                       month
+order_95501_IYTOB_rre150mx_4_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYTOB_rre150mx_4_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYTOB_rre150mx_5_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYTOB_rre150mx_5_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYTOB_rre150mx_6_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYTOB_rre150mx_6_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYTOB_rre150mx_7_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYTOB_rre150mx_7_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYTOB_rre150mx_8_data.txt   Data      Toblach                              Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYTOB_rre150mx_8_legend.txt Legend    Toblach                              Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_FLTRB_rre150mx_1_data.txt   Data      Triesenberg                          Precipitation; maximum daily total conventionally of the    201309-202007
+                                                                                       month
+order_95501_FLTRB_rre150mx_1_legend.txt Legend    Triesenberg                          Precipitation; maximum daily total conventionally of the    201309-202007
+                                                                                       month
+order_95501_FLTRB_rre150mx_2_data.txt   Data      Triesenberg                          Precipitation; maximum daily total conventionally of the    202008-202105
+                                                                                       month
+order_95501_FLTRB_rre150mx_2_legend.txt Legend    Triesenberg                          Precipitation; maximum daily total conventionally of the    202008-202105
+                                                                                       month
+order_95501_VAL_rre150mx_1_data.txt     Data      Val                                  Precipitation; maximum daily total conventionally of the    196012-197912
+                                                                                       month
+order_95501_VAL_rre150mx_1_legend.txt   Legend    Val                                  Precipitation; maximum daily total conventionally of the    196012-197912
+                                                                                       month
+order_95501_VLS_rre150mx_1_data.txt     Data      Vals                                 Precipitation; maximum daily total conventionally of the    189201-202105
+                                                                                       month
+order_95501_VLS_rre150mx_1_legend.txt   Legend    Vals                                 Precipitation; maximum daily total conventionally of the    189201-202105
+                                                                                       month
+order_95501_VEL_rre150mx_1_data.txt     Data      Vella                                Precipitation; maximum daily total conventionally of the    199704-202105
+                                                                                       month
+order_95501_VEL_rre150mx_1_legend.txt   Legend    Vella                                Precipitation; maximum daily total conventionally of the    199704-202105
+                                                                                       month
+order_95501_VIO_rre150mx_1_data.txt     Data      Vicosoprano                          Precipitation; maximum daily total conventionally of the    192912-197609
+                                                                                       month
+order_95501_VIO_rre150mx_1_legend.txt   Legend    Vicosoprano                          Precipitation; maximum daily total conventionally of the    192912-197609
+                                                                                       month
+order_95501_VIO_rre150mx_2_data.txt     Data      Vicosoprano                          Precipitation; maximum daily total conventionally of the    200501-201612
+                                                                                       month
+order_95501_VIO_rre150mx_2_legend.txt   Legend    Vicosoprano                          Precipitation; maximum daily total conventionally of the    200501-201612
+                                                                                       month
+order_95501_VIO_rre150mx_3_data.txt     Data      Vicosoprano                          Precipitation; maximum daily total conventionally of the    201701-202105
+                                                                                       month
+order_95501_VIO_rre150mx_3_legend.txt   Legend    Vicosoprano                          Precipitation; maximum daily total conventionally of the    201701-202105
+                                                                                       month
+order_95501_LOE_rre150mx_1_data.txt     Data      Vicosoprano / Löbbia                 Precipitation; maximum daily total conventionally of the    197609-200408
+                                                                                       month
+order_95501_LOE_rre150mx_1_legend.txt   Legend    Vicosoprano / Löbbia                 Precipitation; maximum daily total conventionally of the    197609-200408
+                                                                                       month
+order_95501_TAW_rre150mx_1_data.txt     Data      Wald / Tanne                         Precipitation; maximum daily total conventionally of the    197509-202105
+                                                                                       month
+order_95501_TAW_rre150mx_1_legend.txt   Legend    Wald / Tanne                         Precipitation; maximum daily total conventionally of the    197509-202105
+                                                                                       month
+order_95501_WSS_rre150mx_1_data.txt     Data      Weissenstein                         Precipitation; maximum daily total conventionally of the    190312-194412
+                                                                                       month
+order_95501_WSS_rre150mx_1_legend.txt   Legend    Weissenstein                         Precipitation; maximum daily total conventionally of the    190312-194412
+                                                                                       month
+order_95501_WSS_rre150mx_2_data.txt     Data      Weissenstein                         Precipitation; maximum daily total conventionally of the    196012-197212
+                                                                                       month
+order_95501_WSS_rre150mx_2_legend.txt   Legend    Weissenstein                         Precipitation; maximum daily total conventionally of the    196012-197212
+                                                                                       month
+order_95501_IYWEL_rre150mx_1_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    192212-195110
+                                                                                       month
+order_95501_IYWEL_rre150mx_1_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    192212-195110
+                                                                                       month
+order_95501_IYWEL_rre150mx_2_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    195111-195412
+                                                                                       month
+order_95501_IYWEL_rre150mx_2_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    195111-195412
+                                                                                       month
+order_95501_IYWEL_rre150mx_3_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    195501-196809
+                                                                                       month
+order_95501_IYWEL_rre150mx_3_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    195501-196809
+                                                                                       month
+order_95501_IYWEL_rre150mx_4_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    196810-197912
+                                                                                       month
+order_95501_IYWEL_rre150mx_4_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    196810-197912
+                                                                                       month
+order_95501_IYWEL_rre150mx_5_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    198112-198512
+                                                                                       month
+order_95501_IYWEL_rre150mx_5_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    198112-198512
+                                                                                       month
+order_95501_IYWEL_rre150mx_6_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    198612-201903
+                                                                                       month
+order_95501_IYWEL_rre150mx_6_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    198612-201903
+                                                                                       month
+order_95501_IYWEL_rre150mx_7_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYWEL_rre150mx_7_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYWEL_rre150mx_8_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYWEL_rre150mx_8_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYWEL_rre150mx_9_data.txt   Data      Welsberg                             Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYWEL_rre150mx_9_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYWEL_rre150mx_10_data.txt  Data      Welsberg                             Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYWEL_rre150mx_10_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYWEL_rre150mx_11_data.txt  Data      Welsberg                             Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYWEL_rre150mx_11_legend.txt Legend    Welsberg                             Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYWEN_rre150mx_1_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    192012-192610
+                                                                                       month
+order_95501_IYWEN_rre150mx_1_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    192012-192610
+                                                                                       month
+order_95501_IYWEN_rre150mx_2_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    192611-192612
+                                                                                       month
+order_95501_IYWEN_rre150mx_2_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    192611-192612
+                                                                                       month
+order_95501_IYWEN_rre150mx_3_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    192712-194012
+                                                                                       month
+order_95501_IYWEN_rre150mx_3_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    192712-194012
+                                                                                       month
+order_95501_IYWEN_rre150mx_4_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    194212-194412
+                                                                                       month
+order_95501_IYWEN_rre150mx_4_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    194212-194412
+                                                                                       month
+order_95501_IYWEN_rre150mx_5_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    194512-195101
+                                                                                       month
+order_95501_IYWEN_rre150mx_5_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    194512-195101
+                                                                                       month
+order_95501_IYWEN_rre150mx_6_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    195103-196912
+                                                                                       month
+order_95501_IYWEN_rre150mx_6_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    195103-196912
+                                                                                       month
+order_95501_IYWEN_rre150mx_7_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    197003-197812
+                                                                                       month
+order_95501_IYWEN_rre150mx_7_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    197003-197812
+                                                                                       month
+order_95501_IYWEN_rre150mx_8_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    198512-201903
+                                                                                       month
+order_95501_IYWEN_rre150mx_8_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    198512-201903
+                                                                                       month
+order_95501_IYWEN_rre150mx_9_data.txt   Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYWEN_rre150mx_9_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    201905-201908
+                                                                                       month
+order_95501_IYWEN_rre150mx_10_data.txt  Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYWEN_rre150mx_10_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    201909-202004
+                                                                                       month
+order_95501_IYWEN_rre150mx_11_data.txt  Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYWEN_rre150mx_11_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    202005-202006
+                                                                                       month
+order_95501_IYWEN_rre150mx_12_data.txt  Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYWEN_rre150mx_12_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    202007-202009
+                                                                                       month
+order_95501_IYWEN_rre150mx_13_data.txt  Data      Welschnofen                          Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month
+order_95501_IYWEN_rre150mx_13_legend.txt Legend    Welschnofen                          Precipitation; maximum daily total conventionally of the    202010-202104
+                                                                                       month

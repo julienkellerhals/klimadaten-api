@@ -1,0 +1,604 @@
+Federal Office of Meteorology and Climatology, MeteoSwiss
+Operation Center 1
+Postfach 257
+8058 Zürich-Flughafen
+
+Order number 95473
+
+Filename                                Filetype  Station                              Parameter                                                   Period
+order_95473_AHO_rre002mx_1_data.txt     Data      Ahorn / Kammenhütte                  Precipitation; maximum 2-day total of the month             197112-199909
+order_95473_AHO_rre002mx_1_legend.txt   Legend    Ahorn / Kammenhütte                  Precipitation; maximum 2-day total of the month             197112-199909
+order_95473_TGALL_rre002mx_1_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201008-201009
+order_95473_TGALL_rre002mx_1_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201008-201009
+order_95473_TGALL_rre002mx_2_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201103-201111
+order_95473_TGALL_rre002mx_2_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201103-201111
+order_95473_TGALL_rre002mx_3_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201203-201204
+order_95473_TGALL_rre002mx_3_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201203-201204
+order_95473_TGALL_rre002mx_4_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201205-201209
+order_95473_TGALL_rre002mx_4_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201205-201209
+order_95473_TGALL_rre002mx_5_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201304-201308
+order_95473_TGALL_rre002mx_5_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201304-201308
+order_95473_TGALL_rre002mx_6_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201405-201410
+order_95473_TGALL_rre002mx_6_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201405-201410
+order_95473_TGALL_rre002mx_7_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201508-201509
+order_95473_TGALL_rre002mx_7_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201508-201509
+order_95473_TGALL_rre002mx_8_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201604-201606
+order_95473_TGALL_rre002mx_8_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201604-201606
+order_95473_TGALL_rre002mx_9_data.txt   Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201607-201610
+order_95473_TGALL_rre002mx_9_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201607-201610
+order_95473_TGALL_rre002mx_10_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201704-201710
+order_95473_TGALL_rre002mx_10_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201704-201710
+order_95473_TGALL_rre002mx_11_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201804-201809
+order_95473_TGALL_rre002mx_11_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201804-201809
+order_95473_TGALL_rre002mx_12_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201905-201908
+order_95473_TGALL_rre002mx_12_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201905-201908
+order_95473_TGALL_rre002mx_13_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             201909-201910
+order_95473_TGALL_rre002mx_13_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             201909-201910
+order_95473_TGALL_rre002mx_14_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             202004-202005
+order_95473_TGALL_rre002mx_14_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             202004-202005
+order_95473_TGALL_rre002mx_15_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             202006-202008
+order_95473_TGALL_rre002mx_15_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             202006-202008
+order_95473_TGALL_rre002mx_16_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             202009-202011
+order_95473_TGALL_rre002mx_16_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             202009-202011
+order_95473_TGALL_rre002mx_17_data.txt  Data      Allenwinden                          Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_TGALL_rre002mx_17_legend.txt Legend    Allenwinden                          Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_APT_rre002mx_1_data.txt     Data      Alpthal                              Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_APT_rre002mx_1_legend.txt   Legend    Alpthal                              Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_ALM_rre002mx_1_data.txt     Data      Altmatt                              Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_ALM_rre002mx_1_legend.txt   Legend    Altmatt                              Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_AND_rre002mx_1_data.txt     Data      Andeer                               Precipitation; maximum 2-day total of the month             190012-191012
+order_95473_AND_rre002mx_1_legend.txt   Legend    Andeer                               Precipitation; maximum 2-day total of the month             190012-191012
+order_95473_AND_rre002mx_2_data.txt     Data      Andeer                               Precipitation; maximum 2-day total of the month             191111-191301
+order_95473_AND_rre002mx_2_legend.txt   Legend    Andeer                               Precipitation; maximum 2-day total of the month             191111-191301
+order_95473_AND_rre002mx_3_data.txt     Data      Andeer                               Precipitation; maximum 2-day total of the month             191306-202105
+order_95473_AND_rre002mx_3_legend.txt   Legend    Andeer                               Precipitation; maximum 2-day total of the month             191306-202105
+order_95473_BAC_rre002mx_1_data.txt     Data      Bachtel                              Precipitation; maximum 2-day total of the month             196012-200310
+order_95473_BAC_rre002mx_1_legend.txt   Legend    Bachtel                              Precipitation; maximum 2-day total of the month             196012-200310
+order_95473_DLBHI_rre002mx_1_data.txt   Data      Bad Hindelang                        Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLBHI_rre002mx_1_legend.txt Legend    Bad Hindelang                        Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_BSW_rre002mx_1_data.txt     Data      Bad Schwendi                         Precipitation; maximum 2-day total of the month             197312-200503
+order_95473_BSW_rre002mx_1_legend.txt   Legend    Bad Schwendi                         Precipitation; maximum 2-day total of the month             197312-200503
+order_95473_DLBAL_rre002mx_1_data.txt   Data      Balderschwang                        Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_DLBAL_rre002mx_1_legend.txt Legend    Balderschwang                        Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_BAL_rre002mx_1_data.txt     Data      Balmberg                             Precipitation; maximum 2-day total of the month             197312-199603
+order_95473_BAL_rre002mx_1_legend.txt   Legend    Balmberg                             Precipitation; maximum 2-day total of the month             197312-199603
+order_95473_BEY_rre002mx_1_data.txt     Data      Bellelay                             Precipitation; maximum 2-day total of the month             190009-202105
+order_95473_BEY_rre002mx_1_legend.txt   Legend    Bellelay                             Precipitation; maximum 2-day total of the month             190009-202105
+order_95473_DLBEN_rre002mx_1_data.txt   Data      Bernau                               Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLBEN_rre002mx_1_legend.txt Legend    Bernau                               Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_WSLBTB_rre002mx_1_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             201712-201909
+order_95473_WSLBTB_rre002mx_1_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             201712-201909
+order_95473_WSLBTB_rre002mx_2_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202002-202005
+order_95473_WSLBTB_rre002mx_2_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202002-202005
+order_95473_WSLBTB_rre002mx_3_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202006-202012
+order_95473_WSLBTB_rre002mx_3_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202006-202012
+order_95473_WSLBTB_rre002mx_4_data.txt  Data      Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_WSLBTB_rre002mx_4_legend.txt Legend    Bettlachstock Bestand                Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_WSLBTF_rre002mx_1_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             201712-201908
+order_95473_WSLBTF_rre002mx_1_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             201712-201908
+order_95473_WSLBTF_rre002mx_2_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             202002-202004
+order_95473_WSLBTF_rre002mx_2_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             202002-202004
+order_95473_WSLBTF_rre002mx_3_data.txt  Data      Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             202006-202105
+order_95473_WSLBTF_rre002mx_3_legend.txt Legend    Bettlachstock Freiland               Precipitation; maximum 2-day total of the month             202006-202105
+order_95473_BRM_rre002mx_1_data.txt     Data      Breitmoos                            Precipitation; maximum 2-day total of the month             197401-197912
+order_95473_BRM_rre002mx_1_legend.txt   Legend    Breitmoos                            Precipitation; maximum 2-day total of the month             197401-197912
+order_95473_DLBRI_rre002mx_1_data.txt   Data      Breitnau                             Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_DLBRI_rre002mx_1_legend.txt Legend    Breitnau                             Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_BLS_rre002mx_1_data.txt     Data      Brülisau                             Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_BLS_rre002mx_1_legend.txt   Legend    Brülisau                             Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_TICAR_rre002mx_1_data.txt   Data      Carena                               Precipitation; maximum 2-day total of the month             200509-201612
+order_95473_TICAR_rre002mx_1_legend.txt Legend    Carena                               Precipitation; maximum 2-day total of the month             200509-201612
+order_95473_TICAR_rre002mx_2_data.txt   Data      Carena                               Precipitation; maximum 2-day total of the month             201701-201705
+order_95473_TICAR_rre002mx_2_legend.txt Legend    Carena                               Precipitation; maximum 2-day total of the month             201701-201705
+order_95473_TICAR_rre002mx_3_data.txt   Data      Carena                               Precipitation; maximum 2-day total of the month             201706-202105
+order_95473_TICAR_rre002mx_3_legend.txt Legend    Carena                               Precipitation; maximum 2-day total of the month             201706-202105
+order_95473_VSCHY_rre002mx_1_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201010-201212
+order_95473_VSCHY_rre002mx_1_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201010-201212
+order_95473_VSCHY_rre002mx_2_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201301-201504
+order_95473_VSCHY_rre002mx_2_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201301-201504
+order_95473_VSCHY_rre002mx_3_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201505-201705
+order_95473_VSCHY_rre002mx_3_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201505-201705
+order_95473_VSCHY_rre002mx_4_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201706-202006
+order_95473_VSCHY_rre002mx_4_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201706-202006
+order_95473_VSCHY_rre002mx_5_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             202007-202012
+order_95473_VSCHY_rre002mx_5_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             202007-202012
+order_95473_VSCHY_rre002mx_6_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_VSCHY_rre002mx_6_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_MMCPY_rre002mx_1_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201608-201610
+order_95473_MMCPY_rre002mx_1_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201608-201610
+order_95473_MMCPY_rre002mx_2_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201611-201808
+order_95473_MMCPY_rre002mx_2_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201611-201808
+order_95473_MMCPY_rre002mx_3_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201809-201908
+order_95473_MMCPY_rre002mx_3_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201809-201908
+order_95473_MMCPY_rre002mx_4_data.txt   Data      Champéry                             Precipitation; maximum 2-day total of the month             201909-202105
+order_95473_MMCPY_rre002mx_4_legend.txt Legend    Champéry                             Precipitation; maximum 2-day total of the month             201909-202105
+order_95473_CHW_rre002mx_1_data.txt     Data      Chipferweidli                        Precipitation; maximum 2-day total of the month             197201-198109
+order_95473_CHW_rre002mx_1_legend.txt   Legend    Chipferweidli                        Precipitation; maximum 2-day total of the month             197201-198109
+order_95473_CTB_rre002mx_1_data.txt     Data      Chuttelbad                           Precipitation; maximum 2-day total of the month             197112-197712
+order_95473_CTB_rre002mx_1_legend.txt   Legend    Chuttelbad                           Precipitation; maximum 2-day total of the month             197112-197712
+order_95473_CHD_rre002mx_1_data.txt     Data      Château-d'Oex                        Precipitation; maximum 2-day total of the month             187812-188709
+order_95473_CHD_rre002mx_1_legend.txt   Legend    Château-d'Oex                        Precipitation; maximum 2-day total of the month             187812-188709
+order_95473_CHD_rre002mx_2_data.txt     Data      Château-d'Oex                        Precipitation; maximum 2-day total of the month             189606-201610
+order_95473_CHD_rre002mx_2_legend.txt   Legend    Château-d'Oex                        Precipitation; maximum 2-day total of the month             189606-201610
+order_95473_CHD_rre002mx_3_data.txt     Data      Château-d'Oex                        Precipitation; maximum 2-day total of the month             201611-202105
+order_95473_CHD_rre002mx_3_legend.txt   Legend    Château-d'Oex                        Precipitation; maximum 2-day total of the month             201611-202105
+order_95473_EIT_rre002mx_1_data.txt     Data      Eigenthal                            Precipitation; maximum 2-day total of the month             190012-191408
+order_95473_EIT_rre002mx_1_legend.txt   Legend    Eigenthal                            Precipitation; maximum 2-day total of the month             190012-191408
+order_95473_EIT_rre002mx_2_data.txt     Data      Eigenthal                            Precipitation; maximum 2-day total of the month             191409-202105
+order_95473_EIT_rre002mx_2_legend.txt   Legend    Eigenthal                            Precipitation; maximum 2-day total of the month             191409-202105
+order_95473_DLEIS_rre002mx_1_data.txt   Data      Eisenbach                            Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_DLEIS_rre002mx_1_legend.txt Legend    Eisenbach                            Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_ELM_rre002mx_1_data.txt     Data      Elm                                  Precipitation; maximum 2-day total of the month             187801-188108
+order_95473_ELM_rre002mx_1_legend.txt   Legend    Elm                                  Precipitation; maximum 2-day total of the month             187801-188108
+order_95473_ELM_rre002mx_2_data.txt     Data      Elm                                  Precipitation; maximum 2-day total of the month             188111-202105
+order_95473_ELM_rre002mx_2_legend.txt   Legend    Elm                                  Precipitation; maximum 2-day total of the month             188111-202105
+order_95473_GLELM_rre002mx_1_data.txt   Data      Elm                                  Precipitation; maximum 2-day total of the month             201308-201406
+order_95473_GLELM_rre002mx_1_legend.txt Legend    Elm                                  Precipitation; maximum 2-day total of the month             201308-201406
+order_95473_GLELM_rre002mx_2_data.txt   Data      Elm                                  Precipitation; maximum 2-day total of the month             201407-202006
+order_95473_GLELM_rre002mx_2_legend.txt Legend    Elm                                  Precipitation; maximum 2-day total of the month             201407-202006
+order_95473_GLELM_rre002mx_3_data.txt   Data      Elm                                  Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_GLELM_rre002mx_3_legend.txt Legend    Elm                                  Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_ENG_rre002mx_1_data.txt     Data      Engelberg                            Precipitation; maximum 2-day total of the month             186312-202105
+order_95473_ENG_rre002mx_1_legend.txt   Legend    Engelberg                            Precipitation; maximum 2-day total of the month             186312-202105
+order_95473_MMERZ_rre002mx_1_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201211-201404
+order_95473_MMERZ_rre002mx_1_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201211-201404
+order_95473_MMERZ_rre002mx_2_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201405-201407
+order_95473_MMERZ_rre002mx_2_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201405-201407
+order_95473_MMERZ_rre002mx_3_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201411-201505
+order_95473_MMERZ_rre002mx_3_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201411-201505
+order_95473_MMERZ_rre002mx_4_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201506-201507
+order_95473_MMERZ_rre002mx_4_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201506-201507
+order_95473_MMERZ_rre002mx_5_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201509-201511
+order_95473_MMERZ_rre002mx_5_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201509-201511
+order_95473_MMERZ_rre002mx_6_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201602-201903
+order_95473_MMERZ_rre002mx_6_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201602-201903
+order_95473_MMERZ_rre002mx_7_data.txt   Data      Eriz                                 Precipitation; maximum 2-day total of the month             201904-202105
+order_95473_MMERZ_rre002mx_7_legend.txt Legend    Eriz                                 Precipitation; maximum 2-day total of the month             201904-202105
+order_95473_ERN_rre002mx_1_data.txt     Data      Ernen                                Precipitation; maximum 2-day total of the month             196612-199908
+order_95473_ERN_rre002mx_1_legend.txt   Legend    Ernen                                Precipitation; maximum 2-day total of the month             196612-199908
+order_95473_FIE_rre002mx_1_data.txt     Data      Fiesch                               Precipitation; maximum 2-day total of the month             190012-199105
+order_95473_FIE_rre002mx_1_legend.txt   Legend    Fiesch                               Precipitation; maximum 2-day total of the month             190012-199105
+order_95473_FIL_rre002mx_1_data.txt     Data      Filisur                              Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_FIL_rre002mx_1_legend.txt   Legend    Filisur                              Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_FLI_rre002mx_1_data.txt     Data      Flims                                Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_FLI_rre002mx_1_legend.txt   Legend    Flims                                Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_FLU_rre002mx_1_data.txt     Data      Flühli, LU                           Precipitation; maximum 2-day total of the month             188207-188208
+order_95473_FLU_rre002mx_1_legend.txt   Legend    Flühli, LU                           Precipitation; maximum 2-day total of the month             188207-188208
+order_95473_FLU_rre002mx_2_data.txt     Data      Flühli, LU                           Precipitation; maximum 2-day total of the month             188804-192012
+order_95473_FLU_rre002mx_2_legend.txt   Legend    Flühli, LU                           Precipitation; maximum 2-day total of the month             188804-192012
+order_95473_FLU_rre002mx_3_data.txt     Data      Flühli, LU                           Precipitation; maximum 2-day total of the month             193012-200907
+order_95473_FLU_rre002mx_3_legend.txt   Legend    Flühli, LU                           Precipitation; maximum 2-day total of the month             193012-200907
+order_95473_FLU_rre002mx_4_data.txt     Data      Flühli, LU                           Precipitation; maximum 2-day total of the month             200908-201509
+order_95473_FLU_rre002mx_4_legend.txt   Legend    Flühli, LU                           Precipitation; maximum 2-day total of the month             200908-201509
+order_95473_FLU_rre002mx_5_data.txt     Data      Flühli, LU                           Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_FLU_rre002mx_5_legend.txt   Legend    Flühli, LU                           Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLGRA_rre002mx_1_data.txt   Data      Grafenhausen                         Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLGRA_rre002mx_1_legend.txt Legend    Grafenhausen                         Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_GWA_rre002mx_1_data.txt     Data      Grindelwald                          Precipitation; maximum 2-day total of the month             196012-200501
+order_95473_GWA_rre002mx_1_legend.txt   Legend    Grindelwald                          Precipitation; maximum 2-day total of the month             196012-200501
+order_95473_GWA_rre002mx_2_data.txt     Data      Grindelwald                          Precipitation; maximum 2-day total of the month             200506-202105
+order_95473_GWA_rre002mx_2_legend.txt   Legend    Grindelwald                          Precipitation; maximum 2-day total of the month             200506-202105
+order_95473_GST_rre002mx_1_data.txt     Data      Gstaad                               Precipitation; maximum 2-day total of the month             198101-201012
+order_95473_GST_rre002mx_1_legend.txt   Legend    Gstaad                               Precipitation; maximum 2-day total of the month             198101-201012
+order_95473_GTT_rre002mx_1_data.txt     Data      Guttannen                            Precipitation; maximum 2-day total of the month             187607-202105
+order_95473_GTT_rre002mx_1_legend.txt   Legend    Guttannen                            Precipitation; maximum 2-day total of the month             187607-202105
+order_95473_MMGTT_rre002mx_1_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             201608-201612
+order_95473_MMGTT_rre002mx_1_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             201608-201612
+order_95473_MMGTT_rre002mx_2_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             201701-201808
+order_95473_MMGTT_rre002mx_2_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             201701-201808
+order_95473_MMGTT_rre002mx_3_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             201811-201906
+order_95473_MMGTT_rre002mx_3_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             201811-201906
+order_95473_MMGTT_rre002mx_4_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             201907-201908
+order_95473_MMGTT_rre002mx_4_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             201907-201908
+order_95473_MMGTT_rre002mx_5_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             201909-202007
+order_95473_MMGTT_rre002mx_5_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             201909-202007
+order_95473_MMGTT_rre002mx_6_data.txt   Data      Guttannen                            Precipitation; maximum 2-day total of the month             202008-202105
+order_95473_MMGTT_rre002mx_6_legend.txt Legend    Guttannen                            Precipitation; maximum 2-day total of the month             202008-202105
+order_95473_GOS_rre002mx_1_data.txt     Data      Göschenen                            Precipitation; maximum 2-day total of the month             188212-188301
+order_95473_GOS_rre002mx_1_legend.txt   Legend    Göschenen                            Precipitation; maximum 2-day total of the month             188212-188301
+order_95473_GOS_rre002mx_2_data.txt     Data      Göschenen                            Precipitation; maximum 2-day total of the month             189412-201601
+order_95473_GOS_rre002mx_2_legend.txt   Legend    Göschenen                            Precipitation; maximum 2-day total of the month             189412-201601
+order_95473_GOS_rre002mx_3_data.txt     Data      Göschenen                            Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_GOS_rre002mx_3_legend.txt   Legend    Göschenen                            Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLHOH_rre002mx_1_data.txt   Data      Hohenpeissenberg                     Precipitation; maximum 2-day total of the month             201605-202105
+order_95473_DLHOH_rre002mx_1_legend.txt Legend    Hohenpeissenberg                     Precipitation; maximum 2-day total of the month             201605-202105
+order_95473_DLIMR_rre002mx_1_data.txt   Data      Immenstadt / Reute                   Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_DLIMR_rre002mx_1_legend.txt Legend    Immenstadt / Reute                   Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_JAU_rre002mx_1_data.txt     Data      Jaun                                 Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_JAU_rre002mx_1_legend.txt   Legend    Jaun                                 Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_IYJEN_rre002mx_1_data.txt   Data      Jenesien                             Precipitation; maximum 2-day total of the month             201510-202004
+order_95473_IYJEN_rre002mx_1_legend.txt Legend    Jenesien                             Precipitation; maximum 2-day total of the month             201510-202004
+order_95473_IYJEN_rre002mx_2_data.txt   Data      Jenesien                             Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYJEN_rre002mx_2_legend.txt Legend    Jenesien                             Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYJEN_rre002mx_3_data.txt   Data      Jenesien                             Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_IYJEN_rre002mx_3_legend.txt Legend    Jenesien                             Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_KIE_rre002mx_1_data.txt     Data      Kiental                              Precipitation; maximum 2-day total of the month             190012-192606
+order_95473_KIE_rre002mx_1_legend.txt   Legend    Kiental                              Precipitation; maximum 2-day total of the month             190012-192606
+order_95473_KIE_rre002mx_2_data.txt     Data      Kiental                              Precipitation; maximum 2-day total of the month             192607-202105
+order_95473_KIE_rre002mx_2_legend.txt   Legend    Kiental                              Precipitation; maximum 2-day total of the month             192607-202105
+order_95473_DLKLI_rre002mx_1_data.txt   Data      Klippeneck                           Precipitation; maximum 2-day total of the month             201605-202105
+order_95473_DLKLI_rre002mx_1_legend.txt Legend    Klippeneck                           Precipitation; maximum 2-day total of the month             201605-202105
+order_95473_GLKLT_rre002mx_1_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201310-201404
+order_95473_GLKLT_rre002mx_1_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201310-201404
+order_95473_GLKLT_rre002mx_2_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201405-201406
+order_95473_GLKLT_rre002mx_2_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201405-201406
+order_95473_GLKLT_rre002mx_3_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201407-201410
+order_95473_GLKLT_rre002mx_3_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201407-201410
+order_95473_GLKLT_rre002mx_4_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201411-201412
+order_95473_GLKLT_rre002mx_4_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201411-201412
+order_95473_GLKLT_rre002mx_5_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201504-201506
+order_95473_GLKLT_rre002mx_5_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201504-201506
+order_95473_GLKLT_rre002mx_6_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201508-201511
+order_95473_GLKLT_rre002mx_6_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201508-201511
+order_95473_GLKLT_rre002mx_7_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201603-201710
+order_95473_GLKLT_rre002mx_7_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201603-201710
+order_95473_GLKLT_rre002mx_8_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201711-201712
+order_95473_GLKLT_rre002mx_8_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201711-201712
+order_95473_GLKLT_rre002mx_9_data.txt   Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201801-201804
+order_95473_GLKLT_rre002mx_9_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201801-201804
+order_95473_GLKLT_rre002mx_10_data.txt  Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201805-201807
+order_95473_GLKLT_rre002mx_10_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201805-201807
+order_95473_GLKLT_rre002mx_11_data.txt  Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201808-201810
+order_95473_GLKLT_rre002mx_11_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201808-201810
+order_95473_GLKLT_rre002mx_12_data.txt  Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201811-202006
+order_95473_GLKLT_rre002mx_12_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             201811-202006
+order_95473_GLKLT_rre002mx_13_data.txt  Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             202007-202010
+order_95473_GLKLT_rre002mx_13_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             202007-202010
+order_95473_GLKLT_rre002mx_14_data.txt  Data      Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_GLKLT_rre002mx_14_legend.txt Legend    Klöntal, Schwändeli                  Precipitation; maximum 2-day total of the month             202102-202105
+order_95473_AUB_rre002mx_1_data.txt     Data      L' Auberson                          Precipitation; maximum 2-day total of the month             191412-202105
+order_95473_AUB_rre002mx_1_legend.txt   Legend    L' Auberson                          Precipitation; maximum 2-day total of the month             191412-202105
+order_95473_BRL_rre002mx_1_data.txt     Data      La Brévine                           Precipitation; maximum 2-day total of the month             190012-193110
+order_95473_BRL_rre002mx_1_legend.txt   Legend    La Brévine                           Precipitation; maximum 2-day total of the month             190012-193110
+order_95473_BRL_rre002mx_2_data.txt     Data      La Brévine                           Precipitation; maximum 2-day total of the month             193207-193208
+order_95473_BRL_rre002mx_2_legend.txt   Legend    La Brévine                           Precipitation; maximum 2-day total of the month             193207-193208
+order_95473_BRL_rre002mx_3_data.txt     Data      La Brévine                           Precipitation; maximum 2-day total of the month             193212-195003
+order_95473_BRL_rre002mx_3_legend.txt   Legend    La Brévine                           Precipitation; maximum 2-day total of the month             193212-195003
+order_95473_BRL_rre002mx_4_data.txt     Data      La Brévine                           Precipitation; maximum 2-day total of the month             195004-202105
+order_95473_BRL_rre002mx_4_legend.txt   Legend    La Brévine                           Precipitation; maximum 2-day total of the month             195004-202105
+order_95473_CDF_rre002mx_1_data.txt     Data      La Chaux-de-Fonds                    Precipitation; maximum 2-day total of the month             189912-202105
+order_95473_CDF_rre002mx_1_legend.txt   Legend    La Chaux-de-Fonds                    Precipitation; maximum 2-day total of the month             189912-202105
+order_95473_LSE_rre002mx_1_data.txt     Data      La Sagne Eglise                      Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_LSE_rre002mx_1_legend.txt   Legend    La Sagne Eglise                      Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_VST_rre002mx_1_data.txt     Data      La Valsainte                         Precipitation; maximum 2-day total of the month             188208-202105
+order_95473_VST_rre002mx_1_legend.txt   Legend    La Valsainte                         Precipitation; maximum 2-day total of the month             188208-202105
+order_95473_EGL_rre002mx_1_data.txt     Data      Lachen / Eggen                       Precipitation; maximum 2-day total of the month             196812-196912
+order_95473_EGL_rre002mx_1_legend.txt   Legend    Lachen / Eggen                       Precipitation; maximum 2-day total of the month             196812-196912
+order_95473_EGL_rre002mx_2_data.txt     Data      Lachen / Eggen                       Precipitation; maximum 2-day total of the month             197202-202105
+order_95473_EGL_rre002mx_2_legend.txt   Legend    Lachen / Eggen                       Precipitation; maximum 2-day total of the month             197202-202105
+order_95473_LBA_rre002mx_1_data.txt     Data      Le Brassus                           Precipitation; maximum 2-day total of the month             196812-199112
+order_95473_LBA_rre002mx_1_legend.txt   Legend    Le Brassus                           Precipitation; maximum 2-day total of the month             196812-199112
+order_95473_LOC_rre002mx_1_data.txt     Data      Le Locle                             Precipitation; maximum 2-day total of the month             194512-202105
+order_95473_LOC_rre002mx_1_legend.txt   Legend    Le Locle                             Precipitation; maximum 2-day total of the month             194512-202105
+order_95473_MMNOI_rre002mx_1_data.txt   Data      Le Noirmont                          Precipitation; maximum 2-day total of the month             201211-201404
+order_95473_MMNOI_rre002mx_1_legend.txt Legend    Le Noirmont                          Precipitation; maximum 2-day total of the month             201211-201404
+order_95473_MMNOI_rre002mx_2_data.txt   Data      Le Noirmont                          Precipitation; maximum 2-day total of the month             201405-201406
+order_95473_MMNOI_rre002mx_2_legend.txt Legend    Le Noirmont                          Precipitation; maximum 2-day total of the month             201405-201406
+order_95473_MMNOI_rre002mx_3_data.txt   Data      Le Noirmont                          Precipitation; maximum 2-day total of the month             201408-201510
+order_95473_MMNOI_rre002mx_3_legend.txt Legend    Le Noirmont                          Precipitation; maximum 2-day total of the month             201408-201510
+order_95473_MMNOI_rre002mx_4_data.txt   Data      Le Noirmont                          Precipitation; maximum 2-day total of the month             201602-201711
+order_95473_MMNOI_rre002mx_4_legend.txt Legend    Le Noirmont                          Precipitation; maximum 2-day total of the month             201602-201711
+order_95473_MMNOI_rre002mx_5_data.txt   Data      Le Noirmont                          Precipitation; maximum 2-day total of the month             201712-202105
+order_95473_MMNOI_rre002mx_5_legend.txt Legend    Le Noirmont                          Precipitation; maximum 2-day total of the month             201712-202105
+order_95473_SET_rre002mx_1_data.txt     Data      Le Sentier                           Precipitation; maximum 2-day total of the month             190001-199606
+order_95473_SET_rre002mx_1_legend.txt   Legend    Le Sentier                           Precipitation; maximum 2-day total of the month             190001-199606
+order_95473_SET_rre002mx_2_data.txt     Data      Le Sentier                           Precipitation; maximum 2-day total of the month             200507-200508
+order_95473_SET_rre002mx_2_legend.txt   Legend    Le Sentier                           Precipitation; maximum 2-day total of the month             200507-200508
+order_95473_VDLSP_rre002mx_1_data.txt   Data      Le Sentier                           Precipitation; maximum 2-day total of the month             201212-201512
+order_95473_VDLSP_rre002mx_1_legend.txt Legend    Le Sentier                           Precipitation; maximum 2-day total of the month             201212-201512
+order_95473_VDLSP_rre002mx_2_data.txt   Data      Le Sentier                           Precipitation; maximum 2-day total of the month             201601-202105
+order_95473_VDLSP_rre002mx_2_legend.txt Legend    Le Sentier                           Precipitation; maximum 2-day total of the month             201601-202105
+order_95473_VDSEP_rre002mx_1_data.txt   Data      Le Sépey                             Precipitation; maximum 2-day total of the month             201308-201512
+order_95473_VDSEP_rre002mx_1_legend.txt Legend    Le Sépey                             Precipitation; maximum 2-day total of the month             201308-201512
+order_95473_VDSEP_rre002mx_2_data.txt   Data      Le Sépey                             Precipitation; maximum 2-day total of the month             201601-202105
+order_95473_VDSEP_rre002mx_2_legend.txt Legend    Le Sépey                             Precipitation; maximum 2-day total of the month             201601-202105
+order_95473_LEN_rre002mx_1_data.txt     Data      Lenk                                 Precipitation; maximum 2-day total of the month             200004-202105
+order_95473_LEN_rre002mx_1_legend.txt   Legend    Lenk                                 Precipitation; maximum 2-day total of the month             200004-202105
+order_95473_MMLEN_rre002mx_1_data.txt   Data      Lenk                                 Precipitation; maximum 2-day total of the month             201211-201307
+order_95473_MMLEN_rre002mx_1_legend.txt Legend    Lenk                                 Precipitation; maximum 2-day total of the month             201211-201307
+order_95473_MMLEN_rre002mx_2_data.txt   Data      Lenk                                 Precipitation; maximum 2-day total of the month             201308-201404
+order_95473_MMLEN_rre002mx_2_legend.txt Legend    Lenk                                 Precipitation; maximum 2-day total of the month             201308-201404
+order_95473_MMLEN_rre002mx_3_data.txt   Data      Lenk                                 Precipitation; maximum 2-day total of the month             201405-201510
+order_95473_MMLEN_rre002mx_3_legend.txt Legend    Lenk                                 Precipitation; maximum 2-day total of the month             201405-201510
+order_95473_MMLEN_rre002mx_4_data.txt   Data      Lenk                                 Precipitation; maximum 2-day total of the month             201603-202105
+order_95473_MMLEN_rre002mx_4_legend.txt Legend    Lenk                                 Precipitation; maximum 2-day total of the month             201603-202105
+order_95473_WSLLEB_rre002mx_1_data.txt  Data      Lens Bestand                         Precipitation; maximum 2-day total of the month             201712-202006
+order_95473_WSLLEB_rre002mx_1_legend.txt Legend    Lens Bestand                         Precipitation; maximum 2-day total of the month             201712-202006
+order_95473_AVA_rre002mx_1_data.txt     Data      Les Avants                           Precipitation; maximum 2-day total of the month             197312-201003
+order_95473_AVA_rre002mx_1_legend.txt   Legend    Les Avants                           Precipitation; maximum 2-day total of the month             197312-201003
+order_95473_AVA_rre002mx_2_data.txt     Data      Les Avants                           Precipitation; maximum 2-day total of the month             201004-202105
+order_95473_AVA_rre002mx_2_legend.txt   Legend    Les Avants                           Precipitation; maximum 2-day total of the month             201004-202105
+order_95473_BIO_rre002mx_1_data.txt     Data      Les Bioux                            Precipitation; maximum 2-day total of the month             199606-202105
+order_95473_BIO_rre002mx_1_legend.txt   Legend    Les Bioux                            Precipitation; maximum 2-day total of the month             199606-202105
+order_95473_CHB_rre002mx_1_data.txt     Data      Les Charbonnières                    Precipitation; maximum 2-day total of the month             198206-202105
+order_95473_CHB_rre002mx_1_legend.txt   Legend    Les Charbonnières                    Precipitation; maximum 2-day total of the month             198206-202105
+order_95473_MAR_rre002mx_1_data.txt     Data      Les Marécottes                       Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_MAR_rre002mx_1_legend.txt   Legend    Les Marécottes                       Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_LPP_rre002mx_1_data.txt     Data      Les Petits-Ponts                     Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_LPP_rre002mx_1_legend.txt   Legend    Les Petits-Ponts                     Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_PSB_rre002mx_1_data.txt     Data      Les Plans-sur-Bex                    Precipitation; maximum 2-day total of the month             196012-200302
+order_95473_PSB_rre002mx_1_legend.txt   Legend    Les Plans-sur-Bex                    Precipitation; maximum 2-day total of the month             196012-200302
+order_95473_PDM_rre002mx_1_data.txt     Data      Les Ponts-de-Martel                  Precipitation; maximum 2-day total of the month             190001-202105
+order_95473_PDM_rre002mx_1_legend.txt   Legend    Les Ponts-de-Martel                  Precipitation; maximum 2-day total of the month             190001-202105
+order_95473_LRO_rre002mx_1_data.txt     Data      Les Rots                             Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_LRO_rre002mx_1_legend.txt   Legend    Les Rots                             Precipitation; maximum 2-day total of the month             196912-197412
+order_95473_MAT_rre002mx_1_data.txt     Data      Martina                              Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_MAT_rre002mx_1_legend.txt   Legend    Martina                              Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_MEB_rre002mx_1_data.txt     Data      Menzberg                             Precipitation; maximum 2-day total of the month             197312-199603
+order_95473_MEB_rre002mx_1_legend.txt   Legend    Menzberg                             Precipitation; maximum 2-day total of the month             197312-199603
+order_95473_MIR_rre002mx_1_data.txt     Data      Miralago                             Precipitation; maximum 2-day total of the month             196012-197109
+order_95473_MIR_rre002mx_1_legend.txt   Legend    Miralago                             Precipitation; maximum 2-day total of the month             196012-197109
+order_95473_DLMIT_rre002mx_1_data.txt   Data      Mittenwald                           Precipitation; maximum 2-day total of the month             194012-194412
+order_95473_DLMIT_rre002mx_1_legend.txt Legend    Mittenwald                           Precipitation; maximum 2-day total of the month             194012-194412
+order_95473_DLMIT_rre002mx_2_data.txt   Data      Mittenwald                           Precipitation; maximum 2-day total of the month             197510-197512
+order_95473_DLMIT_rre002mx_2_legend.txt Legend    Mittenwald                           Precipitation; maximum 2-day total of the month             197510-197512
+order_95473_DLMIT_rre002mx_3_data.txt   Data      Mittenwald                           Precipitation; maximum 2-day total of the month             201605-201805
+order_95473_DLMIT_rre002mx_3_legend.txt Legend    Mittenwald                           Precipitation; maximum 2-day total of the month             201605-201805
+order_95473_DLMIT_rre002mx_4_data.txt   Data      Mittenwald                           Precipitation; maximum 2-day total of the month             201806-202105
+order_95473_DLMIT_rre002mx_4_legend.txt Legend    Mittenwald                           Precipitation; maximum 2-day total of the month             201806-202105
+order_95473_BEMOE_rre002mx_1_data.txt   Data      Moosegg                              Precipitation; maximum 2-day total of the month             201112-201203
+order_95473_BEMOE_rre002mx_1_legend.txt Legend    Moosegg                              Precipitation; maximum 2-day total of the month             201112-201203
+order_95473_BEMOE_rre002mx_2_data.txt   Data      Moosegg                              Precipitation; maximum 2-day total of the month             201210-201212
+order_95473_BEMOE_rre002mx_2_legend.txt Legend    Moosegg                              Precipitation; maximum 2-day total of the month             201210-201212
+order_95473_BEMOE_rre002mx_3_data.txt   Data      Moosegg                              Precipitation; maximum 2-day total of the month             201304-202105
+order_95473_BEMOE_rre002mx_3_legend.txt Legend    Moosegg                              Precipitation; maximum 2-day total of the month             201304-202105
+order_95473_NEB_rre002mx_1_data.txt     Data      Nesselboden                          Precipitation; maximum 2-day total of the month             197212-200910
+order_95473_NEB_rre002mx_1_legend.txt   Legend    Nesselboden                          Precipitation; maximum 2-day total of the month             197212-200910
+order_95473_NEB_rre002mx_2_data.txt     Data      Nesselboden                          Precipitation; maximum 2-day total of the month             201402-202105
+order_95473_NEB_rre002mx_2_legend.txt   Legend    Nesselboden                          Precipitation; maximum 2-day total of the month             201402-202105
+order_95473_GLNIT_rre002mx_1_data.txt   Data      Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             201308-201406
+order_95473_GLNIT_rre002mx_1_legend.txt Legend    Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             201308-201406
+order_95473_GLNIT_rre002mx_2_data.txt   Data      Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             201407-202006
+order_95473_GLNIT_rre002mx_2_legend.txt Legend    Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             201407-202006
+order_95473_GLNIT_rre002mx_3_data.txt   Data      Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_GLNIT_rre002mx_3_legend.txt Legend    Niederurnen / Morgenholz             Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_WSLNOB_rre002mx_1_data.txt  Data      Novaggio Bestand                     Precipitation; maximum 2-day total of the month             201712-201904
+order_95473_WSLNOB_rre002mx_1_legend.txt Legend    Novaggio Bestand                     Precipitation; maximum 2-day total of the month             201712-201904
+order_95473_WSLNOB_rre002mx_2_data.txt  Data      Novaggio Bestand                     Precipitation; maximum 2-day total of the month             201906-201909
+order_95473_WSLNOB_rre002mx_2_legend.txt Legend    Novaggio Bestand                     Precipitation; maximum 2-day total of the month             201906-201909
+order_95473_WSLNOB_rre002mx_3_data.txt  Data      Novaggio Bestand                     Precipitation; maximum 2-day total of the month             202002-202005
+order_95473_WSLNOB_rre002mx_3_legend.txt Legend    Novaggio Bestand                     Precipitation; maximum 2-day total of the month             202002-202005
+order_95473_WSLNOB_rre002mx_4_data.txt  Data      Novaggio Bestand                     Precipitation; maximum 2-day total of the month             202010-202105
+order_95473_WSLNOB_rre002mx_4_legend.txt Legend    Novaggio Bestand                     Precipitation; maximum 2-day total of the month             202010-202105
+order_95473_WSLNOF_rre002mx_1_data.txt  Data      Novaggio Freiland                    Precipitation; maximum 2-day total of the month             201712-201909
+order_95473_WSLNOF_rre002mx_1_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum 2-day total of the month             201712-201909
+order_95473_WSLNOF_rre002mx_2_data.txt  Data      Novaggio Freiland                    Precipitation; maximum 2-day total of the month             202002-202105
+order_95473_WSLNOF_rre002mx_2_legend.txt Legend    Novaggio Freiland                    Precipitation; maximum 2-day total of the month             202002-202105
+order_95473_OBI_rre002mx_1_data.txt     Data      Oberiberg                            Precipitation; maximum 2-day total of the month             188309-202105
+order_95473_OBI_rre002mx_1_legend.txt   Legend    Oberiberg                            Precipitation; maximum 2-day total of the month             188309-202105
+order_95473_DLOBB_rre002mx_1_data.txt   Data      Oberstdorf / Birgsau                 Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLOBB_rre002mx_1_legend.txt Legend    Oberstdorf / Birgsau                 Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_TIOLV_rre002mx_1_data.txt   Data      Olivone                              Precipitation; maximum 2-day total of the month             197812-200510
+order_95473_TIOLV_rre002mx_1_legend.txt Legend    Olivone                              Precipitation; maximum 2-day total of the month             197812-200510
+order_95473_TIOLV_rre002mx_2_data.txt   Data      Olivone                              Precipitation; maximum 2-day total of the month             200511-201111
+order_95473_TIOLV_rre002mx_2_legend.txt Legend    Olivone                              Precipitation; maximum 2-day total of the month             200511-201111
+order_95473_TIOLV_rre002mx_3_data.txt   Data      Olivone                              Precipitation; maximum 2-day total of the month             201112-201705
+order_95473_TIOLV_rre002mx_3_legend.txt Legend    Olivone                              Precipitation; maximum 2-day total of the month             201112-201705
+order_95473_TIOLV_rre002mx_4_data.txt   Data      Olivone                              Precipitation; maximum 2-day total of the month             201706-202105
+order_95473_TIOLV_rre002mx_4_legend.txt Legend    Olivone                              Precipitation; maximum 2-day total of the month             201706-202105
+order_95473_ORS_rre002mx_1_data.txt     Data      Orsières                             Precipitation; maximum 2-day total of the month             190012-190907
+order_95473_ORS_rre002mx_1_legend.txt   Legend    Orsières                             Precipitation; maximum 2-day total of the month             190012-190907
+order_95473_ORS_rre002mx_2_data.txt     Data      Orsières                             Precipitation; maximum 2-day total of the month             190908-196012
+order_95473_ORS_rre002mx_2_legend.txt   Legend    Orsières                             Precipitation; maximum 2-day total of the month             190908-196012
+order_95473_ORS_rre002mx_3_data.txt     Data      Orsières                             Precipitation; maximum 2-day total of the month             196812-200905
+order_95473_ORS_rre002mx_3_legend.txt   Legend    Orsières                             Precipitation; maximum 2-day total of the month             196812-200905
+order_95473_ORS_rre002mx_4_data.txt     Data      Orsières                             Precipitation; maximum 2-day total of the month             200906-202105
+order_95473_ORS_rre002mx_4_legend.txt   Legend    Orsières                             Precipitation; maximum 2-day total of the month             200906-202105
+order_95473_PIO_rre002mx_1_data.txt     Data      Piotta                               Precipitation; maximum 2-day total of the month             197901-202105
+order_95473_PIO_rre002mx_1_legend.txt   Legend    Piotta                               Precipitation; maximum 2-day total of the month             197901-202105
+order_95473_PLF_rre002mx_1_data.txt     Data      Plaffeien                            Precipitation; maximum 2-day total of the month             198910-202105
+order_95473_PLF_rre002mx_1_legend.txt   Legend    Plaffeien                            Precipitation; maximum 2-day total of the month             198910-202105
+order_95473_PTO_rre002mx_1_data.txt     Data      Pont / Le Tornaz                     Precipitation; maximum 2-day total of the month             196012-196912
+order_95473_PTO_rre002mx_1_legend.txt   Legend    Pont / Le Tornaz                     Precipitation; maximum 2-day total of the month             196012-196912
+order_95473_ROB_rre002mx_1_data.txt     Data      Poschiavo / Robbia                   Precipitation; maximum 2-day total of the month             195812-202105
+order_95473_ROB_rre002mx_1_legend.txt   Legend    Poschiavo / Robbia                   Precipitation; maximum 2-day total of the month             195812-202105
+order_95473_RIB_rre002mx_1_data.txt     Data      Riedbad                              Precipitation; maximum 2-day total of the month             196012-197312
+order_95473_RIB_rre002mx_1_legend.txt   Legend    Riedbad                              Precipitation; maximum 2-day total of the month             196012-197312
+order_95473_NABRIG_rre002mx_1_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199105-199112
+order_95473_NABRIG_rre002mx_1_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199105-199112
+order_95473_NABRIG_rre002mx_2_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199312-199407
+order_95473_NABRIG_rre002mx_2_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199312-199407
+order_95473_NABRIG_rre002mx_3_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199408-199605
+order_95473_NABRIG_rre002mx_3_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199408-199605
+order_95473_NABRIG_rre002mx_4_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199608-199903
+order_95473_NABRIG_rre002mx_4_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199608-199903
+order_95473_NABRIG_rre002mx_5_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199904-199911
+order_95473_NABRIG_rre002mx_5_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199904-199911
+order_95473_NABRIG_rre002mx_6_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199912-200012
+order_95473_NABRIG_rre002mx_6_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             199912-200012
+order_95473_NABRIG_rre002mx_7_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200101-200106
+order_95473_NABRIG_rre002mx_7_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200101-200106
+order_95473_NABRIG_rre002mx_8_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200108-200110
+order_95473_NABRIG_rre002mx_8_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200108-200110
+order_95473_NABRIG_rre002mx_9_data.txt  Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200111-200303
+order_95473_NABRIG_rre002mx_9_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200111-200303
+order_95473_NABRIG_rre002mx_10_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200304-200405
+order_95473_NABRIG_rre002mx_10_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200304-200405
+order_95473_NABRIG_rre002mx_11_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200406-200604
+order_95473_NABRIG_rre002mx_11_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200406-200604
+order_95473_NABRIG_rre002mx_12_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200605-200607
+order_95473_NABRIG_rre002mx_12_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200605-200607
+order_95473_NABRIG_rre002mx_13_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200608-200611
+order_95473_NABRIG_rre002mx_13_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200608-200611
+order_95473_NABRIG_rre002mx_14_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200612-201006
+order_95473_NABRIG_rre002mx_14_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             200612-201006
+order_95473_NABRIG_rre002mx_15_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201007-201408
+order_95473_NABRIG_rre002mx_15_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201007-201408
+order_95473_NABRIG_rre002mx_16_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201409-201809
+order_95473_NABRIG_rre002mx_16_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201409-201809
+order_95473_NABRIG_rre002mx_17_data.txt Data      Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201810-202105
+order_95473_NABRIG_rre002mx_17_legend.txt Legend    Rigi-Seebodenalp                     Precipitation; maximum 2-day total of the month             201810-202105
+order_95473_RSE_rre002mx_1_data.txt     Data      Rüschegg                             Precipitation; maximum 2-day total of the month             197112-197912
+order_95473_RSE_rre002mx_1_legend.txt   Legend    Rüschegg                             Precipitation; maximum 2-day total of the month             197112-197912
+order_95473_MMSAA_rre002mx_1_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201608-201610
+order_95473_MMSAA_rre002mx_1_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201608-201610
+order_95473_MMSAA_rre002mx_2_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201611-201703
+order_95473_MMSAA_rre002mx_2_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201611-201703
+order_95473_MMSAA_rre002mx_3_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201705-201804
+order_95473_MMSAA_rre002mx_3_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201705-201804
+order_95473_MMSAA_rre002mx_4_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201805-201806
+order_95473_MMSAA_rre002mx_4_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201805-201806
+order_95473_MMSAA_rre002mx_5_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201810-201902
+order_95473_MMSAA_rre002mx_5_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201810-201902
+order_95473_MMSAA_rre002mx_6_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201904-201908
+order_95473_MMSAA_rre002mx_6_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201904-201908
+order_95473_MMSAA_rre002mx_7_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             201909-202006
+order_95473_MMSAA_rre002mx_7_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             201909-202006
+order_95473_MMSAA_rre002mx_8_data.txt   Data      Saanen                               Precipitation; maximum 2-day total of the month             202007-202103
+order_95473_MMSAA_rre002mx_8_legend.txt Legend    Saanen                               Precipitation; maximum 2-day total of the month             202007-202103
+order_95473_MMSAS_rre002mx_1_data.txt   Data      Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201608-201808
+order_95473_MMSAS_rre002mx_1_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201608-201808
+order_95473_MMSAS_rre002mx_2_data.txt   Data      Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201809-201908
+order_95473_MMSAS_rre002mx_2_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201809-201908
+order_95473_MMSAS_rre002mx_3_data.txt   Data      Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201909-202012
+order_95473_MMSAS_rre002mx_3_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum 2-day total of the month             201909-202012
+order_95473_MMSAS_rre002mx_4_data.txt   Data      Saas, Prättigau                      Precipitation; maximum 2-day total of the month             202101-202103
+order_95473_MMSAS_rre002mx_4_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum 2-day total of the month             202101-202103
+order_95473_MMSAS_rre002mx_5_data.txt   Data      Saas, Prättigau                      Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_MMSAS_rre002mx_5_legend.txt Legend    Saas, Prättigau                      Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_SAB_rre002mx_1_data.txt     Data      Sangernboden                         Precipitation; maximum 2-day total of the month             199507-202105
+order_95473_SAB_rre002mx_1_legend.txt   Legend    Sangernboden                         Precipitation; maximum 2-day total of the month             199507-202105
+order_95473_IYSAR_rre002mx_1_data.txt   Data      Sarnthein                            Precipitation; maximum 2-day total of the month             200012-202004
+order_95473_IYSAR_rre002mx_1_legend.txt Legend    Sarnthein                            Precipitation; maximum 2-day total of the month             200012-202004
+order_95473_IYSAR_rre002mx_2_data.txt   Data      Sarnthein                            Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYSAR_rre002mx_2_legend.txt Legend    Sarnthein                            Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYSAR_rre002mx_3_data.txt   Data      Sarnthein                            Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_IYSAR_rre002mx_3_legend.txt Legend    Sarnthein                            Precipitation; maximum 2-day total of the month             202007-202105
+order_95473_SZS_rre002mx_1_data.txt     Data      Schwarzsee Bad                       Precipitation; maximum 2-day total of the month             197112-197508
+order_95473_SZS_rre002mx_1_legend.txt   Legend    Schwarzsee Bad                       Precipitation; maximum 2-day total of the month             197112-197508
+order_95473_SWN_rre002mx_1_data.txt     Data      Schwellbrunn                         Precipitation; maximum 2-day total of the month             197212-197612
+order_95473_SWN_rre002mx_1_legend.txt   Legend    Schwellbrunn                         Precipitation; maximum 2-day total of the month             197212-197612
+order_95473_SOB_rre002mx_1_data.txt     Data      Schönenboden                         Precipitation; maximum 2-day total of the month             197212-197912
+order_95473_SOB_rre002mx_1_legend.txt   Legend    Schönenboden                         Precipitation; maximum 2-day total of the month             197212-197912
+order_95473_SCD_rre002mx_1_data.txt     Data      Scudellate                           Precipitation; maximum 2-day total of the month             197312-200701
+order_95473_SCD_rre002mx_1_legend.txt   Legend    Scudellate                           Precipitation; maximum 2-day total of the month             197312-200701
+order_95473_SCD_rre002mx_2_data.txt     Data      Scudellate                           Precipitation; maximum 2-day total of the month             200706-201509
+order_95473_SCD_rre002mx_2_legend.txt   Legend    Scudellate                           Precipitation; maximum 2-day total of the month             200706-201509
+order_95473_SCD_rre002mx_3_data.txt     Data      Scudellate                           Precipitation; maximum 2-day total of the month             201510-202105
+order_95473_SCD_rre002mx_3_legend.txt   Legend    Scudellate                           Precipitation; maximum 2-day total of the month             201510-202105
+order_95473_SES_rre002mx_1_data.txt     Data      Seewis                               Precipitation; maximum 2-day total of the month             196012-199301
+order_95473_SES_rre002mx_1_legend.txt   Legend    Seewis                               Precipitation; maximum 2-day total of the month             196012-199301
+order_95473_SOG_rre002mx_1_data.txt     Data      Soglio                               Precipitation; maximum 2-day total of the month             188401-202105
+order_95473_SOG_rre002mx_1_legend.txt   Legend    Soglio                               Precipitation; maximum 2-day total of the month             188401-202105
+order_95473_SCG_rre002mx_1_data.txt     Data      St-Cergue                            Precipitation; maximum 2-day total of the month             189912-192312
+order_95473_SCG_rre002mx_1_legend.txt   Legend    St-Cergue                            Precipitation; maximum 2-day total of the month             189912-192312
+order_95473_IYSTZ_rre002mx_1_data.txt   Data      Sterzing                             Precipitation; maximum 2-day total of the month             200012-202004
+order_95473_IYSTZ_rre002mx_1_legend.txt Legend    Sterzing                             Precipitation; maximum 2-day total of the month             200012-202004
+order_95473_IYSTZ_rre002mx_2_data.txt   Data      Sterzing                             Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYSTZ_rre002mx_2_legend.txt Legend    Sterzing                             Precipitation; maximum 2-day total of the month             202005-202006
+order_95473_IYSTZ_rre002mx_3_data.txt   Data      Sterzing                             Precipitation; maximum 2-day total of the month             202007-202009
+order_95473_IYSTZ_rre002mx_3_legend.txt Legend    Sterzing                             Precipitation; maximum 2-day total of the month             202007-202009
+order_95473_IYSTZ_rre002mx_4_data.txt   Data      Sterzing                             Precipitation; maximum 2-day total of the month             202010-202104
+order_95473_IYSTZ_rre002mx_4_legend.txt Legend    Sterzing                             Precipitation; maximum 2-day total of the month             202010-202104
+order_95473_STP_rre002mx_1_data.txt     Data      Stöckalp                             Precipitation; maximum 2-day total of the month             198409-202105
+order_95473_STP_rre002mx_1_legend.txt   Legend    Stöckalp                             Precipitation; maximum 2-day total of the month             198409-202105
+order_95473_CTO_rre002mx_1_data.txt     Data      Torricella / Crana                   Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_CTO_rre002mx_1_legend.txt   Legend    Torricella / Crana                   Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_FLTRB_rre002mx_1_data.txt   Data      Triesenberg                          Precipitation; maximum 2-day total of the month             201309-202007
+order_95473_FLTRB_rre002mx_1_legend.txt Legend    Triesenberg                          Precipitation; maximum 2-day total of the month             201309-202007
+order_95473_FLTRB_rre002mx_2_data.txt   Data      Triesenberg                          Precipitation; maximum 2-day total of the month             202008-202105
+order_95473_FLTRB_rre002mx_2_legend.txt Legend    Triesenberg                          Precipitation; maximum 2-day total of the month             202008-202105
+order_95473_TRO_rre002mx_1_data.txt     Data      Trogen                               Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_TRO_rre002mx_1_legend.txt   Legend    Trogen                               Precipitation; maximum 2-day total of the month             197212-202105
+order_95473_MMUNS_rre002mx_1_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201211-201305
+order_95473_MMUNS_rre002mx_1_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201211-201305
+order_95473_MMUNS_rre002mx_2_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201306-201308
+order_95473_MMUNS_rre002mx_2_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201306-201308
+order_95473_MMUNS_rre002mx_3_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201309-201404
+order_95473_MMUNS_rre002mx_3_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201309-201404
+order_95473_MMUNS_rre002mx_4_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201405-201408
+order_95473_MMUNS_rre002mx_4_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201405-201408
+order_95473_MMUNS_rre002mx_5_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201410-201412
+order_95473_MMUNS_rre002mx_5_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201410-201412
+order_95473_MMUNS_rre002mx_6_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201501-201505
+order_95473_MMUNS_rre002mx_6_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201501-201505
+order_95473_MMUNS_rre002mx_7_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201604-201610
+order_95473_MMUNS_rre002mx_7_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201604-201610
+order_95473_MMUNS_rre002mx_8_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201611-201612
+order_95473_MMUNS_rre002mx_8_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201611-201612
+order_95473_MMUNS_rre002mx_9_data.txt   Data      Unterschächen                        Precipitation; maximum 2-day total of the month             201702-202105
+order_95473_MMUNS_rre002mx_9_legend.txt Legend    Unterschächen                        Precipitation; maximum 2-day total of the month             201702-202105
+order_95473_VLL_rre002mx_1_data.txt     Data      Vallorbe / Reposoir                  Precipitation; maximum 2-day total of the month             191712-197712
+order_95473_VLL_rre002mx_1_legend.txt   Legend    Vallorbe / Reposoir                  Precipitation; maximum 2-day total of the month             191712-197712
+order_95473_VIO_rre002mx_1_data.txt     Data      Vicosoprano                          Precipitation; maximum 2-day total of the month             192912-197609
+order_95473_VIO_rre002mx_1_legend.txt   Legend    Vicosoprano                          Precipitation; maximum 2-day total of the month             192912-197609
+order_95473_VIO_rre002mx_2_data.txt     Data      Vicosoprano                          Precipitation; maximum 2-day total of the month             200501-201612
+order_95473_VIO_rre002mx_2_legend.txt   Legend    Vicosoprano                          Precipitation; maximum 2-day total of the month             200501-201612
+order_95473_VIO_rre002mx_3_data.txt     Data      Vicosoprano                          Precipitation; maximum 2-day total of the month             201701-202105
+order_95473_VIO_rre002mx_3_legend.txt   Legend    Vicosoprano                          Precipitation; maximum 2-day total of the month             201701-202105
+order_95473_LOE_rre002mx_1_data.txt     Data      Vicosoprano / Löbbia                 Precipitation; maximum 2-day total of the month             197609-200408
+order_95473_LOE_rre002mx_1_legend.txt   Legend    Vicosoprano / Löbbia                 Precipitation; maximum 2-day total of the month             197609-200408
+order_95473_VAE_rre002mx_1_data.txt     Data      Vättis                               Precipitation; maximum 2-day total of the month             190012-194406
+order_95473_VAE_rre002mx_1_legend.txt   Legend    Vättis                               Precipitation; maximum 2-day total of the month             190012-194406
+order_95473_VAE_rre002mx_2_data.txt     Data      Vättis                               Precipitation; maximum 2-day total of the month             194410-200512
+order_95473_VAE_rre002mx_2_legend.txt   Legend    Vättis                               Precipitation; maximum 2-day total of the month             194410-200512
+order_95473_VAE_rre002mx_3_data.txt     Data      Vättis                               Precipitation; maximum 2-day total of the month             200605-202105
+order_95473_VAE_rre002mx_3_legend.txt   Legend    Vättis                               Precipitation; maximum 2-day total of the month             200605-202105
+order_95473_DLVOB_rre002mx_1_data.txt   Data      Vöhrenbach / Urach                   Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLVOB_rre002mx_1_legend.txt Legend    Vöhrenbach / Urach                   Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_TAW_rre002mx_1_data.txt     Data      Wald / Tanne                         Precipitation; maximum 2-day total of the month             197509-202105
+order_95473_TAW_rre002mx_1_legend.txt   Legend    Wald / Tanne                         Precipitation; maximum 2-day total of the month             197509-202105
+order_95473_WAW_rre002mx_1_data.txt     Data      Waldweide                            Precipitation; maximum 2-day total of the month             196812-199304
+order_95473_WAW_rre002mx_1_legend.txt   Legend    Waldweide                            Precipitation; maximum 2-day total of the month             196812-199304
+order_95473_WAW_rre002mx_2_data.txt     Data      Waldweide                            Precipitation; maximum 2-day total of the month             199407-200309
+order_95473_WAW_rre002mx_2_legend.txt   Legend    Waldweide                            Precipitation; maximum 2-day total of the month             199407-200309
+order_95473_WET_rre002mx_1_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             190012-190504
+order_95473_WET_rre002mx_1_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             190012-190504
+order_95473_WET_rre002mx_2_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             190507-190606
+order_95473_WET_rre002mx_2_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             190507-190606
+order_95473_WET_rre002mx_3_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             190608-192207
+order_95473_WET_rre002mx_3_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             190608-192207
+order_95473_WET_rre002mx_4_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             192208-192901
+order_95473_WET_rre002mx_4_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             192208-192901
+order_95473_WET_rre002mx_5_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             192905-193302
+order_95473_WET_rre002mx_5_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             192905-193302
+order_95473_WET_rre002mx_6_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             193304-193501
+order_95473_WET_rre002mx_6_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             193304-193501
+order_95473_WET_rre002mx_7_data.txt     Data      Weisstannen                          Precipitation; maximum 2-day total of the month             193509-202104
+order_95473_WET_rre002mx_7_legend.txt   Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             193509-202104
+order_95473_MMWET_rre002mx_1_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201211-201309
+order_95473_MMWET_rre002mx_1_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201211-201309
+order_95473_MMWET_rre002mx_2_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201311-201401
+order_95473_MMWET_rre002mx_2_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201311-201401
+order_95473_MMWET_rre002mx_3_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201405-201411
+order_95473_MMWET_rre002mx_3_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201405-201411
+order_95473_MMWET_rre002mx_4_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201502-201511
+order_95473_MMWET_rre002mx_4_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201502-201511
+order_95473_MMWET_rre002mx_5_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201602-201704
+order_95473_MMWET_rre002mx_5_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201602-201704
+order_95473_MMWET_rre002mx_6_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201705-201709
+order_95473_MMWET_rre002mx_6_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201705-201709
+order_95473_MMWET_rre002mx_7_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201710-201711
+order_95473_MMWET_rre002mx_7_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201710-201711
+order_95473_MMWET_rre002mx_8_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201712-201911
+order_95473_MMWET_rre002mx_8_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201712-201911
+order_95473_MMWET_rre002mx_9_data.txt   Data      Weisstannen                          Precipitation; maximum 2-day total of the month             201912-202012
+order_95473_MMWET_rre002mx_9_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             201912-202012
+order_95473_MMWET_rre002mx_10_data.txt  Data      Weisstannen                          Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_MMWET_rre002mx_10_legend.txt Legend    Weisstannen                          Precipitation; maximum 2-day total of the month             202101-202105
+order_95473_DLWER_rre002mx_1_data.txt   Data      Wertach                              Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_DLWER_rre002mx_1_legend.txt Legend    Wertach                              Precipitation; maximum 2-day total of the month             202104-202105
+order_95473_WHA_rre002mx_1_data.txt     Data      Wildhaus                             Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_WHA_rre002mx_1_legend.txt   Legend    Wildhaus                             Precipitation; maximum 2-day total of the month             196012-202105
+order_95473_ZUB_rre002mx_1_data.txt     Data      Zugerberg                            Precipitation; maximum 2-day total of the month             197112-201606
+order_95473_ZUB_rre002mx_1_legend.txt   Legend    Zugerberg                            Precipitation; maximum 2-day total of the month             197112-201606
+order_95473_ZUB_rre002mx_2_data.txt     Data      Zugerberg                            Precipitation; maximum 2-day total of the month             201607-202105
+order_95473_ZUB_rre002mx_2_legend.txt   Legend    Zugerberg                            Precipitation; maximum 2-day total of the month             201607-202105
+order_95473_ZWE_rre002mx_1_data.txt     Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_ZWE_rre002mx_1_legend.txt   Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             190012-202105
+order_95473_MMZWE_rre002mx_1_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201608-201703
+order_95473_MMZWE_rre002mx_1_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201608-201703
+order_95473_MMZWE_rre002mx_2_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201704-201706
+order_95473_MMZWE_rre002mx_2_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201704-201706
+order_95473_MMZWE_rre002mx_3_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201707-201802
+order_95473_MMZWE_rre002mx_3_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201707-201802
+order_95473_MMZWE_rre002mx_4_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201805-201807
+order_95473_MMZWE_rre002mx_4_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201805-201807
+order_95473_MMZWE_rre002mx_5_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201809-201904
+order_95473_MMZWE_rre002mx_5_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201809-201904
+order_95473_MMZWE_rre002mx_6_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201905-201908
+order_95473_MMZWE_rre002mx_6_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201905-201908
+order_95473_MMZWE_rre002mx_7_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             201909-202009
+order_95473_MMZWE_rre002mx_7_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             201909-202009
+order_95473_MMZWE_rre002mx_8_data.txt   Data      Zweisimmen                           Precipitation; maximum 2-day total of the month             202010-202105
+order_95473_MMZWE_rre002mx_8_legend.txt Legend    Zweisimmen                           Precipitation; maximum 2-day total of the month             202010-202105
