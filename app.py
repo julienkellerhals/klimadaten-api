@@ -4,6 +4,7 @@ from flask import request
 from flask import render_template
 from flask import send_from_directory
 import db
+import story
 import dashboard
 import abstractDriver
 import messageAnnouncer
@@ -47,6 +48,7 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
 )
 
 dashApp = dashboard.mydashboard(app, instance)
+dashAppStory = story.mystory(app, instance)
 
 
 @app.before_request
@@ -88,6 +90,11 @@ def favicon():
         'favicon.ico',
         mimetype='image/vnd.microsoft.icon'
     )
+
+
+@app.route("/")
+def render_story():
+    return Flask.redirect('/dash')
 
 
 @app.route('/dashboard')
