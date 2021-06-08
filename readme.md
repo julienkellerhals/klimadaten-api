@@ -175,7 +175,7 @@ conda upgrade --all
 2. Install all required modules for climate API ([Requirements](#requirements))
 3. Install Postgres
 4. Open VSCode
-5. Launch debug config FE + Flask
+5. Launch debug config FE + Flask found in [doc/launch.json](/doc/launch.json)
 6. Configure database connection string ([Instruction](#configure-database-connection-string))
 7. Navigate to database tab of administration overview
 8. Press action button to connect to database
