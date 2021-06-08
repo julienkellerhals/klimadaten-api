@@ -206,6 +206,9 @@ def mystory(flaskApp, instance):
                 'showline': True,
                 'linecolor': colors['plotGrid']
             },
+            font=dict(
+                size=18,
+            ),
             paper_bgcolor=colors['BgPlot3'],
             plot_bgcolor='rgba(0,0,0,0)',
             showlegend=False,
@@ -265,6 +268,9 @@ def mystory(flaskApp, instance):
                 'showline': True,
                 'linecolor': colors['plotGrid']
             },
+            font=dict(
+                size=18,
+            ),
             hovermode='closest',
             margin={'l': 20, 'b': 20, 't': 40, 'r': 20},
             height=450,
