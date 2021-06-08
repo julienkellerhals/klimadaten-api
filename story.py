@@ -1,20 +1,13 @@
-import re
-import datetime
-import math
-from dash_core_components.Markdown import Markdown
 import numpy as np
 import pandas as pd
-import plotly.express as px
-import statsmodels.api as sm
+from dash import Dash
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
-from dash import Dash
-from flask import Flask
 from dash.exceptions import PreventUpdate
 from sklearn.linear_model import LinearRegression
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 from storyText import *
 
 
@@ -379,10 +372,10 @@ def mystory(flaskApp, instance):
             }
             ),
             html.Div([
-                # Pre image 1
-                dcc.Markdown(title1),
+                dcc.Markdown(title),
+                dcc.Markdown(desc),
                 dcc.Markdown(subtitle1),
-                dcc.Markdown(title2),
+                dcc.Markdown(text1),
                 dcc.Markdown(text2),
             ], style=textDivStyling
             ),
@@ -401,21 +394,9 @@ def mystory(flaskApp, instance):
             ], style=imgDivStyling
             ),
             html.Div([
-                # Pre image 2
-                dcc.Markdown(InterviewF1),
-                dcc.Markdown(InterviewA1),
-                dcc.Markdown(InterviewF2),
-                dcc.Markdown(InterviewA2),
-                dcc.Markdown(InterviewF3),
-                dcc.Markdown(InterviewA3),
-                dcc.Markdown(InterviewF4),
-                dcc.Markdown(InterviewA4),
-                dcc.Markdown(InterviewF5),
-                dcc.Markdown(InterviewA5),
-                dcc.Markdown(InterviewF6),
-                dcc.Markdown(InterviewA6),
-                dcc.Markdown(InterviewF7),
-                dcc.Markdown(InterviewA7),
+                dcc.Markdown(text3),
+                dcc.Markdown(text4),
+                dcc.Markdown(text5),
             ], style=textDivStyling
             ),
             html.Div([
@@ -436,11 +417,12 @@ def mystory(flaskApp, instance):
             ], style=imgDivStyling
             ),
             html.Div([
-                # Post image 2
-                dcc.Markdown(InterviewF6),
-                dcc.Markdown(InterviewA6),
-                dcc.Markdown(InterviewF7),
-                dcc.Markdown(InterviewA7),
+                dcc.Markdown(text6),
+                dcc.Markdown(text7),
+                dcc.Markdown(text8),
+                dcc.Markdown(subtitle2),
+                dcc.Markdown(text9),
+                dcc.Markdown(text10),
             ], style=textDivStyling
             ),
             html.Div([
@@ -455,6 +437,13 @@ def mystory(flaskApp, instance):
             ], style=plotDivStyling
             ),
             html.Div([
+                dcc.Markdown(text11),
+                dcc.Markdown(text12),
+                dcc.Markdown(text13),
+                dcc.Markdown(text14),
+            ], style=textDivStyling
+            ),
+            html.Div([
                 dcc.Graph(
                     id='plotSnow',
                     figure=plotSnow,
@@ -464,6 +453,10 @@ def mystory(flaskApp, instance):
                     }
                 )
             ], style=plotDivStyling
+            ),
+            html.Div([
+                dcc.Markdown(text15),
+            ], style=textDivStyling
             ),
             html.Div([
                 dcc.Graph(
@@ -477,6 +470,11 @@ def mystory(flaskApp, instance):
             ], style=plotDivStyling
             ),
             html.Div([
+                dcc.Markdown(text16),
+                dcc.Markdown(text17),
+            ], style=textDivStyling
+            ),
+            html.Div([
                 dcc.Graph(
                     id='plotRainExtreme',
                     figure=plotRainExtreme,
@@ -488,7 +486,16 @@ def mystory(flaskApp, instance):
             ], style=plotDivStyling
             ),
             html.Div([
-                dcc.Markdown(text1),
+                dcc.Markdown(text18),
+                dcc.Markdown(subtitle3),
+                dcc.Markdown(text19),
+                dcc.Markdown(text20),
+                dcc.Markdown(text21),
+                dcc.Markdown(sep),
+                dcc.Markdown(subtitle4),
+                dcc.Markdown(text22),
+                dcc.Markdown(text23),
+                dcc.Markdown(text24),
             ], style=textDivStyling
             ),
             # footer
