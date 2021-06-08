@@ -99,6 +99,18 @@ def scrape_meteoschweiz(abstractDriver, instance, announcer):
     return announcer
 
 
+def getAllStations():
+    allStationsDf = pd.DataFrame(columns=[
+        'year',
+        'month',
+        'temperature',
+        'precipitation',
+        'station'
+    ])
+
+    return allStationsDf
+
+
 def _scrape_meteoschweiz(driver, engine, announcer):
     """ Scrape data from meteo suisse
 
@@ -117,13 +129,7 @@ def _scrape_meteoschweiz(driver, engine, announcer):
     )
 
     url_list = []
-    allStationsDf = pd.DataFrame(columns=[
-        'year',
-        'month',
-        'temperature',
-        'precipitation',
-        'station'
-    ])
+    allStationsDf = getAllStations()
 
     driver.get(
         "https://www.meteoschweiz.admin.ch/home/klima/"
