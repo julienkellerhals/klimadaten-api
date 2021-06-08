@@ -9,6 +9,7 @@ from webscraping import scrapeIdawebOrders
 from webscraping import setAllStations
 from webscraping import getUrls
 from webscraping import startWebscraping
+from webscraping import password as webscrapingPassword
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
@@ -43,7 +44,7 @@ class TestMeteoSchweiz():
     def testSetAllStations(self):
         allStationsDf = setAllStations()
         if isinstance(allStationsDf, pd.DataFrame):
-            assert len(allStationsDf) != 0
+            assert len(allStationsDf) == 0
         else:
             assert False
 
@@ -59,7 +60,7 @@ class TestIDAWeb():
 
     def test_idaweb_login_sucess(self):
         username = "joel.grosjean@students.fhnw.ch"
-        password = "AGEJ649GJAL02"
+        password = webscrapingPassword
         driver = abstractDriver.getDriver()
         url = "https://gate.meteoswiss.ch/idaweb/login.do"
         scrape_idaweb_login(driver, username, password)
