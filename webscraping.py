@@ -99,7 +99,7 @@ def scrape_meteoschweiz(abstractDriver, instance, announcer):
     return announcer
 
 
-def getAllStations():
+def setAllStations():
     allStationsDf = pd.DataFrame(columns=[
         'year',
         'month',
@@ -119,31 +119,10 @@ def getUrls(driver):
     urls = driver.find_elements_by_xpath(
         "//table[@id='stations-table']/tbody/tr/td/span[@class='overflow']/a"
     )
-    return urls    
+    return urls
 
 
-def _scrape_meteoschweiz(driver, engine, announcer):
-    """ Scrape data from meteo suisse
-
-    Args:
-        driver (driver): Selenium driver
-        engine (engine): Database engine
-        announcer (announcer): Message announcer
-
-    Returns:
-        str: Scrapped data
-    """
-
-    engine.connect()
-    engine.execute(
-        "TRUNCATE TABLE stage.meteoschweiz_t"
-    )
-
-    url_list = []
-    allStationsDf = getAllStations()
-
-    urls = getUrls(driver)
-
+def startWebscraping(url_list, urls, announcer, allStationsDf):
     for urlEl in urls:
         url = urlEl.get_attribute('href')
 
@@ -182,6 +161,38 @@ def _scrape_meteoschweiz(driver, engine, announcer):
 
         # append the data frame to the data frame of all stations
         allStationsDf = allStationsDf.append(stationDf, ignore_index=True)
+
+    return url_list, allStationsDf
+
+
+def _scrape_meteoschweiz(driver, engine, announcer):
+    """ Scrape data from meteo suisse
+
+    Args:
+        driver (driver): Selenium driver
+        engine (engine): Database engine
+        announcer (announcer): Message announcer
+
+    Returns:
+        str: Scrapped data
+    """
+
+    engine.connect()
+    engine.execute(
+        "TRUNCATE TABLE stage.meteoschweiz_t"
+    )
+
+    url_list = []
+    allStationsDf = setAllStations()
+
+    urls = getUrls(driver)
+
+    url_list, allStationsDf = startWebscraping(
+        url_list,
+        urls,
+        announcer,
+        allStationsDf
+    )
 
     # change column data types
     allStationsDf = allStationsDf.astype(
