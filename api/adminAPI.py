@@ -36,6 +36,7 @@ def constructBlueprint(announcer, instance, abstractDriver):
             port,
         )
         if not os.path.exists("config/config.json"):
+            os.mkdir("config")
             f = open("config/config.json", "a")
         else:
             f = open("config/config.json", "a")
