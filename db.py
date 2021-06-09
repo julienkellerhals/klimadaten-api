@@ -1028,23 +1028,24 @@ class Database:
                         value_name="meas_value"
                     )
                     idaWebPartDf = idaWebPartDf.append(dataFileDf)
-            validFromDf = idaWebPartDf.groupby(
-                ["meas_name"]
-            ).agg(valid_from=("meas_date", np.max))
-            idaWebPartDf = idaWebPartDf.merge(
-                validFromDf,
-                on="meas_name",
-                how="outer"
-            )
-            idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
-            idaWebPartDf.to_sql(
-                'idaweb_t',
-                self.engine,
-                schema='stage',
-                if_exists='append',
-                index=False
-            )
-            self.stageTableRespDict.updateLoadProcess()
+            if len(idaWebPartDf) > 0:
+                validFromDf = idaWebPartDf.groupby(
+                    ["meas_name"]
+                ).agg(valid_from=("meas_date", np.max))
+                idaWebPartDf = idaWebPartDf.merge(
+                    validFromDf,
+                    on="meas_name",
+                    how="outer"
+                )
+                idaWebPartDf["meas_value"].replace("-", np.NaN, inplace=True)
+                idaWebPartDf.to_sql(
+                    'idaweb_t',
+                    self.engine,
+                    schema='stage',
+                    if_exists='append',
+                    index=False
+                )
+                self.stageTableRespDict.updateLoadProcess()
         self.stageTableRespDict.endLoadProcess()
 
     def runCoreETL(self):
