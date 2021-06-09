@@ -487,10 +487,10 @@ def scrape_idaweb_login(driver, username=username, password=password):
     # log into page
     driver.find_element_by_name('user').send_keys(username)
     driver.find_element_by_name('password').send_keys(password)
-    driver.find_element_by_xpath(
-        '//*[@id="content_block"]/form/fieldset/'
-        + 'table/tbody/tr[3]/td/table/tbody/tr/td[1]/input'
-    ).click()
+    prev_url = driver.current_url
+    driver.find_element_by_xpath('//input[@value="Login"]').click()
+    if driver.current_url != prev_url:
+        driver.find_element_by_xpath('//input[@value="Login"]').click()
 
 
 def idaWebParameterPortal(driver):
