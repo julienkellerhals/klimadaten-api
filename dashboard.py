@@ -82,22 +82,16 @@ def mydashboard(flaskApp, instance):
                 JOIN core.station_t k
                 ON (m.station = k.station_short_name)
                 WHERE m.meas_name IN (
+                    'rhh150mx',
                     'hns000y0',
-                    'hto000y0',
-                    'rre150y0',
-                    'rzz150yx',
-                    'rhh150yx',
-                    'tnd00xy0',
-                    'tre200y0'
+                    'tre200y0',
+                    'rre150y0'
                 )
                 AND k.parameter IN (
+                    'rhh150mx',
                     'hns000y0',
-                    'hto000y0',
-                    'rre150y0',
-                    'rzz150yx',
-                    'rhh150yx',
-                    'tnd00xy0',
-                    'tre200y0'
+                    'tre200y0',
+                    'rre150y0'
                 )
                 AND m.valid_to = '2262-04-11'
                 AND k.valid_to = '2262-04-11'
@@ -129,7 +123,7 @@ def mydashboard(flaskApp, instance):
                # min = ('min', 'min'),
                # ratio = ('ratio', 'min')
                ).reset_index()
-        dfStations = dfStations[dfStations.meas_name == 7]
+        dfStations = dfStations[dfStations.meas_name == 4]
 
         return dfStations
 
