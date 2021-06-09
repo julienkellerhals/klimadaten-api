@@ -489,7 +489,7 @@ def scrape_idaweb_login(driver, username=username, password=password):
     driver.find_element_by_name('password').send_keys(password)
     prev_url = driver.current_url
     driver.find_element_by_xpath('//input[@value="Login"]').click()
-    if driver.current_url != prev_url:
+    if driver.current_url == prev_url:
         driver.find_element_by_xpath('//input[@value="Login"]').click()
 
 
