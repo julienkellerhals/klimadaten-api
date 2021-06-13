@@ -647,63 +647,7 @@ class Dashboard():
                 },
             )
 
-            self.dashApp.layout = html.Div([
-                # header
-                html.Div([
-                    html.Div([
-                        html.H2(
-                            'Die Ursachen von Massenbewegungen',
-                            id='titleDashboard',
-                            style={
-                                'color': colors['l1'],
-                                'display': 'inline-block',
-                                'padding-left': 45,
-                                'padding-right':45
-                            }
-                        ),
-                    ], style={
-                        'text-align': 'left',
-                        'display': 'inline-block',
-                    }
-                    ),
-                    html.Div([
-                        html.H3(
-                            'Dashboard',
-                            id='linkDashboard',
-                            style={
-                                'color': colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 30,
-                                'font-weight': 'bold'
-                            }
-                        ),
-                        html.H3(
-                            'Datenstory',
-                            id='linkDatastory',
-                            n_clicks=0,
-                            style={
-                                'color': colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 30,
-                            }
-                        ),
-                        html.Div(id='linkDatastoryOutput')
-                    ], style={
-                        'text-align': 'right',
-                        'display': 'inline-block',
-                        'padding-right': 15
-                    }
-                    ),
-                ], style={
-                    'display': 'flex',
-                    'align-items': 'flex-start',
-                    'justify-content': 'space-between',
-                    'backgroundColor': colors['d3'],
-                    'box-shadow': shadow,
-                    'position': 'relative',
-                    'padding': '5px',
-                }
-                ),
+            self.dashApp.layout.children.append(
                 html.Div([
                     # first row of plots
                     html.Div([
@@ -1006,11 +950,6 @@ class Dashboard():
                     'backgroundColor': colors['BgDashboard'],
                 }
                 )
-            ], style={
-                'height': '100vh',
-                'display': 'flex',
-                'flex-direction': 'column',
-            }
             )
 
         @self.dashApp.callback(
@@ -1227,4 +1166,3 @@ class Dashboard():
                     stationString, elevationString, selectionString)
 
         createDashboard()
-        return self.dashApp
