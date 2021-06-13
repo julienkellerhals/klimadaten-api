@@ -47,7 +47,8 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
     url_prefix="/admin/scrape"
 )
 
-# dashApp = dashboard.mydashboard(app, instance)
+db = dashboard.Dashboard(app, instance)
+# dashApp = db.mydashboard(app, instance)
 # dashAppStory = story.mystory(app, instance)
 
 
