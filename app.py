@@ -4,20 +4,24 @@ from flask import request
 from flask import render_template
 from flask import send_from_directory
 import db
-import story
-import dashboard
 import abstractDriver
 import messageAnnouncer
 from api import dbAPI
+from story import Story
 from api import adminAPI
 from api import streamAPI
 from api import scrapeAPI
+from dashboard import Dashboard
+
 
 announcer = messageAnnouncer.MessageAnnouncer()
 abstractDriver = abstractDriver.AbstractDriver(announcer)
 instance = db.Database(announcer)
-
 app = Flask(__name__)
+Dashboard(app, instance)
+Story(app, instance)
+
+
 app.register_blueprint(adminAPI.constructBlueprint(
     announcer,
     instance,
@@ -47,10 +51,6 @@ app.register_blueprint(scrapeAPI.constructBlueprint(
     url_prefix="/admin/scrape"
 )
 
-db = dashboard.Dashboard(app, instance)
-# dashApp = db.mydashboard(app, instance)
-# dashAppStory = story.mystory(app, instance)
-
 
 @app.before_request
 def before_request():
@@ -60,16 +60,6 @@ def before_request():
             return render_template(
                 "connectionString.html",
             )
-
-
-@app.route("/")
-def render_story():
-    return Flask.redirect('/dash')
-
-
-@app.route('/dashboard')
-def render_dashboard():
-    return Flask.redirect('/dash')
 
 
 @app.route('/favicon.ico')

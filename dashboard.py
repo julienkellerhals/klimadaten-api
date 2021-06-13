@@ -16,6 +16,7 @@ from sklearn.linear_model import LinearRegression
 
 
 class Dashboard():
+    DashboardBool = False
     instance = None
     dashApp = None
     # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
@@ -114,18 +115,20 @@ class Dashboard():
 
         @self.dashApp.server.before_request
         def before_request():
-            if request.endpoint in ["/dashboard/"]:
-                try:
-                    create_engine(
-                        self.instance.databaseUrl
-                    ).connect()
-                except sqlalchemy.exc.OperationalError as e:
-                    print(e)
-                    raise PreventUpdate
-                else:
-                    self.mydashboard()
+            if not self.DashboardBool:
+                if request.endpoint in ["/dashboard/"]:
+                    try:
+                        create_engine(
+                            self.instance.databaseUrl
+                        ).connect()
+                    except sqlalchemy.exc.OperationalError as e:
+                        print(e)
+                        raise PreventUpdate
+                    else:
+                        self.mydashboard()
 
     def mydashboard(self):
+        self.DashboardBool = True
         self.instance.checkEngine()
         engine = self.instance.engine
 
