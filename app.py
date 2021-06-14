@@ -23,31 +23,31 @@ Story(app, instance)
 
 
 app.register_blueprint(adminAPI.constructBlueprint(
-    announcer,
-    instance,
-    abstractDriver
-),
+        announcer,
+        instance,
+        abstractDriver
+    ),
     url_prefix="/admin"
 )
 app.register_blueprint(streamAPI.constructBlueprint(
-    announcer,
-    instance,
-    abstractDriver
-),
+        announcer,
+        instance,
+        abstractDriver
+    ),
     url_prefix="/admin/stream"
 )
 app.register_blueprint(dbAPI.constructBlueprint(
-    announcer,
-    instance,
-    abstractDriver
-),
+        announcer,
+        instance,
+        abstractDriver
+    ),
     url_prefix="/admin/db"
 )
 app.register_blueprint(scrapeAPI.constructBlueprint(
-    announcer,
-    instance,
-    abstractDriver
-),
+        announcer,
+        instance,
+        abstractDriver
+    ),
     url_prefix="/admin/scrape"
 )
 
