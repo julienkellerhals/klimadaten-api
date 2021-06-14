@@ -8,8 +8,8 @@ from dash import Dash
 from flask import request
 from sqlalchemy import create_engine
 from dash.exceptions import PreventUpdate
-from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output
+from sklearn.linear_model import LinearRegression
 from storyText import (
     title, desc, author, subtitle1, text1, text2,  # Bild
     text3, text4, text5,  # Bild
