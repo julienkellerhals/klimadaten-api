@@ -6,36 +6,29 @@ import pandas as pd
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_bootstrap_components as dbc
 from dash import Dash
 from flask import request
 from sqlalchemy import create_engine
 from dash.exceptions import PreventUpdate
 from dash.dependencies import Input, Output
 from sklearn.linear_model import LinearRegression
+from dashHelper import (
+    rainParam,
+    snowParam,
+    rainExtremeParam,
+    temperatureParam,
+    external_stylesheets,
+    colors,
+    shadow,
+    createLayout,
+    createHeader
+)
 
 
 class Dashboard():
     DashboardBool = False
     instance = None
     dashApp = None
-    # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
-    external_stylesheets = [dbc.themes.UNITED]
-    colors = {
-        'd1': '#05090C',
-        'd3': '#121F26',
-        'l0': '#FFFFFF',
-        'l1': '#EBEFF2',
-        'l2': '#D8E0E5',
-        'blue': '#285D8F',
-        'red': '#DE3143',
-        'BgPlots': '#FFFFFF',
-        'plotGrid': '#B6C3CC',
-        'plotAxisTitle': '#748B99',
-        'BgDashboard': '#E2E8ED',
-        'shadow': '#C5D1D8'
-    }
-    shadow = f'7px 7px 10px {colors["shadow"]}'
 
     def __init__(self, flaskApp, instance):
         self.instance = instance
@@ -44,73 +37,15 @@ class Dashboard():
             __name__,
             server=flaskApp,
             url_base_pathname='/dashboard/',
-            external_stylesheets=self.external_stylesheets
+            external_stylesheets=external_stylesheets
         )
 
-        self.dashApp.layout = html.Div(
-            [
-                # header
-                html.Div([
-                    html.Div([
-                        html.H2(
-                            'Die Ursachen von Massenbewegungen',
-                            id='titleDashboard',
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-left': 45,
-                                'padding-right':45
-                            }
-                        ),
-                    ], style={
-                        'text-align': 'left',
-                        'display': 'inline-block',
-                    }
-                    ),
-                    html.Div([
-                        html.H3(
-                            'Dashboard',
-                            id='linkDashboard',
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 30,
-                                'font-weight': 'bold'
-                            }
-                        ),
-                        html.H3(
-                            'Datenstory',
-                            id='linkDatastory',
-                            n_clicks=0,
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 30,
-                            }
-                        ),
-                        html.Div(id='linkDatastoryOutput')
-                    ], style={
-                        'text-align': 'right',
-                        'display': 'inline-block',
-                        'padding-right': 15
-                    }
-                    ),
-                ], style={
-                    'display': 'flex',
-                    'align-items': 'flex-start',
-                    'justify-content': 'space-between',
-                    'backgroundColor': self.colors['d3'],
-                    'box-shadow': self.shadow,
-                    'position': 'relative',
-                    'padding': '5px',
-                }
-                ),
-            ],
-            style={
-                'height': '100vh',
-                'display': 'flex',
-                'flex-direction': 'column',
-            }
+        self.dashApp.layout = createLayout()
+        self.dashApp.layout.children.append(
+            createHeader(
+                "Die Ursachen von Massenbewegungen",
+                "dashboard"
+            )
         )
 
         @self.dashApp.server.before_request
@@ -149,14 +84,6 @@ class Dashboard():
             Station durch klicken auf Karte auswählen.
             Momentan werden die Daten für folgende Stationen angezeigt:
             """
-
-        colors = self.colors
-
-        snowParam = 'hns000y0'
-        rainParam = 'rre150y0'
-        rainExtremeParam = 'rhh150mx'
-        temperatureParam = 'tre200y0'
-        shadow = self.shadow
 
         def dfSelectionWrangling():
             # Select the stations with the highest quality data
@@ -482,7 +409,7 @@ class Dashboard():
                     y=df["deviation"],
                     base=meanOfParam,
                     marker={
-                        'color': colors['blue'],
+                        'color': colors['rbb'],
                     }))
 
             plot.add_trace(
@@ -493,7 +420,7 @@ class Dashboard():
                     mode='lines',
                     marker={
                         'size': 5,
-                        'color': colors['red'],
+                        'color': colors['rbr'],
                         'line': {
                             'width': 1,
                             'color': 'black'
@@ -528,7 +455,7 @@ class Dashboard():
                     'r': 20
                 },
                 height=360,
-                paper_bgcolor=colors['BgPlots'],
+                paper_bgcolor=colors['BgPlot1'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 showlegend=False,
                 legend={
@@ -553,7 +480,7 @@ class Dashboard():
                     line_shape='spline',
                     marker={
                         'size': 5,
-                        'color': colors['blue'],
+                        'color': colors['rbb'],
                         'line': {
                             'width': 1,
                             'color': 'black'
@@ -568,7 +495,7 @@ class Dashboard():
                     mode='lines',
                     marker={
                         'size': 5,
-                        'color': colors['red'],
+                        'color': colors['rbr'],
                         'line': {
                             'width': 1,
                             'color': 'black'
@@ -597,7 +524,7 @@ class Dashboard():
                     'showline': True,
                     'linecolor': colors['plotGrid']
                 },
-                paper_bgcolor=colors['BgPlots'],
+                paper_bgcolor=colors['BgPlot1'],
                 plot_bgcolor='rgba(0,0,0,0)',
                 showlegend=False,
                 legend={
@@ -703,7 +630,7 @@ class Dashboard():
                                 ),
 
                             ], style={
-                                'backgroundColor': colors['BgPlots'],
+                                'backgroundColor': colors['BgPlot1'],
                                 'height': 430,
                                 'box-shadow': shadow,
                                 'position': 'relative',
@@ -797,12 +724,12 @@ class Dashboard():
                                         }
                                     )
                                 ], style={
-                                    'backgroundColor': colors['BgPlots'],
+                                    'backgroundColor': colors['BgPlot1'],
                                     'height': 420
                                 }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlots'],
+                                'backgroundColor': colors['BgPlot1'],
                                 'height': 430,
                                 'box-shadow': shadow,
                                 'position': 'relative',
@@ -845,12 +772,12 @@ class Dashboard():
                                         }
                                     )
                                 ], style={
-                                    'backgroundColor': colors['BgPlots'],
+                                    'backgroundColor': colors['BgPlot1'],
                                     'height': 360
                                 }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlots'],
+                                'backgroundColor': colors['BgPlot1'],
                                 'height': 370,
                                 'box-shadow': shadow,
                                 'position': 'relative',
@@ -884,12 +811,12 @@ class Dashboard():
                                         }
                                     )
                                 ], style={
-                                    'backgroundColor': colors['BgPlots'],
+                                    'backgroundColor': colors['BgPlot1'],
                                     'height': 360
                                 }
                                 )
                             ], style={
-                                'backgroundColor': colors['BgPlots'],
+                                'backgroundColor': colors['BgPlot1'],
                                 'height': 370,
                                 'box-shadow': shadow,
                                 'position': 'relative',

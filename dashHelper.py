@@ -39,6 +39,7 @@ colors = {
     'plotGrid': '#B6C3CC',
     'plotAxisTitle': '#748B99',
     'BgStory': '#FFFFFF',
+    'BgDashboard': '#E2E8ED',
     'shadow': '#C5D1D8'
 }
 
