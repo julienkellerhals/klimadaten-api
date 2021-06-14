@@ -85,102 +85,22 @@ class Dashboard():
             Momentan werden die Daten für folgende Stationen angezeigt:
             """
 
-        def dfSelectionWrangling():
-            # Select the stations with the highest quality data
-            dfSelection = pd.read_sql(
-                """
-                SELECT
-                    station_name,
-                    station_short_name,
-                    meas_name,
-                    min(meas_year),
-                    COUNT(*)
-                FROM(
-                    SELECT
-                        extract(year from m.meas_date) as meas_year,
-                        k.station_short_name,
-                        k.station_name,
-                        m.meas_name
-                    FROM core.measurements_t m
-                    JOIN core.station_t k
-                    ON (m.station = k.station_short_name)
-                    WHERE m.meas_name IN (
-                        'rhh150mx',
-                        'hns000y0',
-                        'tre200y0',
-                        'rre150y0'
-                    )
-                    AND k.parameter IN (
-                        'rhh150mx',
-                        'hns000y0',
-                        'tre200y0',
-                        'rre150y0'
-                    )
-                    AND m.valid_to = '2262-04-11'
-                    AND k.valid_to = '2262-04-11'
-                    GROUP BY
-                    meas_year,
-                    k.station_name,
-                    k.station_short_name,
-                    m.meas_name
-                ) AS filtered
-                GROUP BY
-                    station_name,
-                    station_short_name,
-                    station_name,
-                    meas_name
-                HAVING COUNT(*) >= 30
-                ORDER BY COUNT(*) DESC
-                """, engine)
-
-            dfSelection['years'] = 2020 - dfSelection['min']
-            dfSelection['ratio'] = dfSelection['count'] / dfSelection['years']
-            dfSelection = dfSelection[dfSelection.ratio >= 0.90]
-
-            return dfSelection
-
-        def dfStationsWrangling(dfSelection):
-            dfStations = dfSelection.groupby([
-                'station_short_name', 'station_name'
-            ]).agg(
-                meas_name=('meas_name', 'count'),
-                # min = ('min', 'min'),
-                # ratio = ('ratio', 'min')
-            ).reset_index()
-            dfStations = dfStations[dfStations.meas_name == 4]
-
-            return dfStations
-
-        def dfMapWrangling(dfStations, snowParam):
+        def dfMapWrangling(dfStations, dfStationInfo):
             # data wrangling map data
-            dfMap = pd.read_sql(
-                f"""
-                SELECT
-                avg(m.meas_value) avg,
-                k.station_name,
-                k.longitude,
-                k.latitude,
-                k.elevation
-                FROM core.measurements_t m
-                LEFT JOIN core.station_t k
-                ON (m.station = k.station_short_name)
-                AND m.meas_name = {"'"+ snowParam +"'"}
-                AND k.parameter = {"'"+ snowParam +"'"}
-                AND m.valid_to = '2262-04-11'
-                AND k.valid_to = '2262-04-11'
-                GROUP BY k.station_name,
-                k.longitude,
-                k.latitude,
-                k.elevation;
-                """, engine)
-
             dfMap = pd.merge(
                 how='inner',
-                left=dfMap,
+                left=dfStationInfo,
                 right=dfStations,
-                left_on='station_name',
-                right_on='station_name'
+                left_on='station_short_name',
+                right_on='station'
             )
+
+            dfMap = dfMap[[
+                "station_name",
+                "longitude",
+                "latitude",
+                "elevation"
+            ]]
 
             # data wrangling for longitude and latitude
             dfMap['lon'] = dfMap['longitude'].str.extract(r'(\d+).$')
@@ -200,7 +120,6 @@ class Dashboard():
             dfMap = dfMap.drop('lat', axis=1)
             dfMap = dfMap.astype({'longitude': 'float', 'latitude': 'float'})
             dfMap = dfMap.groupby(['station_name']).agg(
-                avg=('avg', 'mean'),
                 longitude=('longitude', 'mean'),
                 latitude=('latitude', 'mean'),
                 elevation=('elevation', 'mean'),
@@ -231,8 +150,6 @@ class Dashboard():
                 ON (m.station = k.station_short_name)
                 WHERE m.meas_name = {"'"+ param +"'"}
                 AND k.parameter = {"'"+ param +"'"}
-                AND m.valid_to = '2262-04-11'
-                AND k.valid_to = '2262-04-11'
                 GROUP BY
                     meas_year,
                     meas_month,
@@ -252,12 +169,12 @@ class Dashboard():
                 how='inner',
                 left=dfStations,
                 right=dfScatter,
-                left_on='station_short_name',
+                left_on='station',
                 right_on='station'
             )
 
             dfAll.sort_values(
-                ['station_short_name', 'meas_year'],
+                ['station', 'meas_year'],
                 inplace=True
             )
 
@@ -282,12 +199,12 @@ class Dashboard():
                 how='inner',
                 left=dfStations,
                 right=dfScatter,
-                left_on='station_short_name',
+                left_on='station',
                 right_on='station'
             )
 
             dfAll.sort_values(
-                ['station_short_name', 'meas_year'],
+                ['station', 'meas_year'],
                 inplace=True
             )
 
@@ -311,14 +228,15 @@ class Dashboard():
 
             return (dfParamAll, meanOfParam)
 
-        def getParamYear(dfSelection, short_name):
-            dfSelectionParam = dfSelection[dfSelection.meas_name == short_name]
-            dfSelectionParam = dfSelectionParam[
-                dfSelectionParam.station_name.isin(
-                    list(dfStations.station_name)
-                )
-            ]
-            yearParam = dfSelectionParam['min'].median()
+        def getParamYear(dfSelection, paramName):
+            years = []
+
+            for _, row in dfSelection.iterrows():
+                idx = row["meas_name"].index(paramName)
+                years.append(row["min_year"][idx])
+
+            years = pd.Series(years)
+            yearParam = years.median()
 
             if math.isnan(yearParam):
                 yearParam = 0
@@ -326,9 +244,14 @@ class Dashboard():
             return yearParam
 
         # call start functions
-        dfSelection = dfSelectionWrangling()
-        dfStations = dfStationsWrangling(dfSelection)
-        dfMap = dfMapWrangling(dfStations, snowParam)
+        dfSelection = self.instance.getStationMinYear()
+        dfStations = self.instance.getStationSubset()
+        dfStationInfo = self.instance.getStationInfo(snowParam)
+
+        dfMap = dfMapWrangling(
+            dfStations,
+            dfStationInfo
+        )
 
         # get starting year for each parameter
         yearSnow = getParamYear(dfSelection, snowParam)
