@@ -53,7 +53,7 @@ The following programs and modules are required to run the climate API
 - [ ] Modules
 
 | modules                   | version |
-|---------------------------|---------|
+| ------------------------- | ------- |
 | dash_bootstrap_components | 0.12.2  |
 | SQLAlchemy_Utils          | 0.36.8  |
 | Flask                     | 1.1.2   |
@@ -65,7 +65,7 @@ The following programs and modules are required to run the climate API
 | dash_core_components      | 1.3.1   |
 | numpy                     | 1.19.2  |
 | selenium                  | 3.141.0 |
-| SQLAlchemy                | 1.3.20  |
+| SQLAlchemy                | 1.4.15  |
 | requests                  | 2.24.0  |
 | dash_html_components      | 1.0.1   |
 | pytest                    | 0.0.0   |
@@ -138,9 +138,9 @@ conda upgrade --all
 7. Configure database connection string ([Instruction](#configure-database-connection-string))
 8. Navigate to database tab of administration overview
 9. Press action button to connect to database
-10. Open pgAdmin or equivalent
-11. Import database
-12. Uncomment dashboard creation line in [app.py](app.py)
+10. Stop server
+11. Open pgAdmin or equivalent
+12. Import [database.db](databse.db)
 13. Start server ([Instruction](#start-flask-app))
 14. Navigate to [localhost:5000/admin](http://localhost:5000/admin)
 15. Use app
@@ -161,11 +161,7 @@ conda upgrade --all
 10. Press action button to create database tables
 11. Run ETL load
 12. Run Core load
-13. Stop server
-14. Uncomment dashboard creation line in [app.py](app.py)
-15. Start server ([Instruction](#start-flask-app))
-16. Navigate to [localhost:5000/admin](http://localhost:5000/admin)
-17. Use app
+13. Use app
 
 ---
 
@@ -182,10 +178,7 @@ conda upgrade --all
 9. Press action button to create database tables
 10. Run ETL load
 11. Run Core load
-12. Stop server
-13. Uncomment dashboard creation line in [app.py](app.py)
-14. Launch debug config FE + Flask
-15. Use app
+12. Use app
 
 ---
 
