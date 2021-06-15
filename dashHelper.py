@@ -90,13 +90,14 @@ def createHeader(title, active):
             html.H3(
                 'Datenstory',
                 id='linkDatastory',
+                n_clicks=0,
                 style={
                     'color': colors['l1'],
                     'display': 'inline-block',
                     'padding-right': 30,
                 }
             ),
-            html.Div(id='linkDashboardOutput')
+            html.Div(id='linkOutput')
         ], style={
             'text-align': 'right',
             'width': '50%',
