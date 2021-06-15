@@ -806,7 +806,7 @@ class Dashboard():
             )
 
         @self.dashApp.callback(
-            Output('linkDatastoryOutput', 'children'),
+            Output('linkOutput', 'children'),
             [Input('linkDatastory', 'n_clicks')]
         )
         def redirectToStory(n_clicks):
