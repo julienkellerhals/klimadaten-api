@@ -604,6 +604,34 @@ class Database:
         )
         return paramRefreshDateDf
 
+    def getStationMinYear(self):
+        with open("queries/stationMinYear.sql") as f:
+            query = f.read()
+        dfStationMinYear = pd.read_sql(query, self.engine)
+        return dfStationMinYear
+
+    def getStationSubset(self):
+        with open("queries/stationSubset.sql") as f:
+            query = f.read()
+        dfStationSubset = pd.read_sql(query, self.engine)
+        return dfStationSubset
+
+    def getStationInfo(self, snowParam):
+        query = (
+            f"""
+            SELECT
+                station_short_name
+                ,station_name
+                ,longitude
+                ,latitude
+                ,elevation
+            FROM core.station_t
+            WHERE parameter =  {"'"+ snowParam +"'"}
+            """
+        )
+        dfStationInfo = pd.read_sql(query, self.engine)
+        return dfStationInfo
+
     def createDatabase(self):
         """ Creates database
         """

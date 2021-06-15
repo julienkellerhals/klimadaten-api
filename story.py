@@ -4,13 +4,12 @@ import pandas as pd
 import plotly.graph_objs as go
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_bootstrap_components as dbc
 from dash import Dash
 from flask import request
 from sqlalchemy import create_engine
 from dash.exceptions import PreventUpdate
-from sklearn.linear_model import LinearRegression
 from dash.dependencies import Input, Output
+from sklearn.linear_model import LinearRegression
 from storyText import (
     title, desc, author, subtitle1, text1, text2,  # Bild
     text3, text4, text5,  # Bild
@@ -21,48 +20,23 @@ from storyText import (
     text18, subtitle3, text19, text20, text21,  # Sep
     sep, subtitle4, text22, text23, text24
 )
+from dashHelper import (
+    rainParam,
+    snowParam,
+    rainExtremeParam,
+    temperatureParam,
+    external_stylesheets,
+    colors,
+    shadow,
+    createLayout,
+    createHeader
+)
 
 
 class Story():
     storyBool = False
     instance = None
     dashApp = None
-    # decent stylesheets: MINTY, SANDSTONE, SIMPLEX, UNITED
-    external_stylesheets = [dbc.themes.UNITED]
-    colors = {
-        'd1': '#05090C',
-        'd2': '#0C1419',
-        'd3': '#121F26',
-        'l0': '#FFFFFF',
-        'l1': '#EBEFF2',
-        'l2': '#D8E0E5',
-        'l3': '#C5D1D8',
-        'l4': '#B6C3CC',
-        'l5': '#A3B5BF',
-        'l6': '#96A8B2',
-        'l8': '#748B99',
-        'c1': '#ED90A4',
-        'c2': '#ABB150',
-        'c3': '#00C1B2',
-        'c4': '#ACA2EC',
-        'b1': '#ADD8E5',
-        'b2': '#BCDFEB',
-        'rbb': '#285D8F',
-        'rbr': '#DE3143',
-        'lightblue': '#B4DFFF',
-        'BgPlot1': '#FFFFFF',
-        'BgPlot2': '#FFFFFF',
-        'BgPlot3': '#FFFFFF',
-        'BgPlot4': '#ADD8E5',
-        'BgPlot5': '#FFFFFF',
-        'plotTitle': '#121F26',
-        'plotGrid': '#B6C3CC',
-        'plotAxisTitle': '#748B99',
-        'BgStory': '#FFFFFF',
-        'shadow': '#C5D1D8'
-    }
-
-    shadow = f'7px 7px 7px {colors["shadow"]}'
 
     def __init__(self, flaskApp, instance):
         self.instance = instance
@@ -71,70 +45,15 @@ class Story():
             __name__,
             server=flaskApp,
             url_base_pathname='/',
-            external_stylesheets=self.external_stylesheets
+            external_stylesheets=external_stylesheets
         )
 
-        self.dashApp.layout = html.Div(
-            [
-                # header
-                html.Div([
-                    html.Div([
-                        html.H2(
-                            'Massenbewegung in Bondo',
-                            id='titleDashboard',
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-left': 45,
-                            }
-                        ),
-                    ], style={
-                        'text-align': 'left',
-                        'width': '50%',
-                        'display': 'inline-block',
-                    }
-                    ),
-                    html.Div([
-                        html.H3(
-                            'Dashboard',
-                            id='linkDashboard',
-                            n_clicks=0,
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 30,
-                            }
-                        ),
-                        html.H3(
-                            'Datenstory',
-                            id='linkDatastory',
-                            style={
-                                'color': self.colors['l1'],
-                                'display': 'inline-block',
-                                'padding-right': 45,
-                                'font-weight': 'bold'
-                            }
-                        ),
-                        html.Div(id='linkDashboardOutput')
-                    ], style={
-                        'text-align': 'right',
-                        'width': '50%',
-                        'display': 'inline-block',
-                    }
-                    ),
-                ], style={
-                        'backgroundColor': self.colors['d3'],
-                        'box-shadow': self.shadow,
-                        'position': 'relative',
-                        'padding': '5px',
-                    }
-                ),
-            ],
-            style={
-                'height': '100vh',
-                'display': 'flex',
-                'flex-direction': 'column',
-            }
+        self.dashApp.layout = createLayout()
+        self.dashApp.layout.children.append(
+            createHeader(
+                "Massenbewegung in Bondo",
+                "story"
+            )
         )
 
         @self.dashApp.server.before_request
@@ -198,11 +117,6 @@ class Story():
             'font-size': '1.15rem',
             # 'vetical-align': 'top',
         }
-
-        rainParam = 'rre150y0'
-        snowParam = 'hns000y0'
-        rainExtremeParam = 'rhh150mx'
-        temperatureParam = 'tre200y0'
 
         def dfScatterWrangling(param):
             # data wrangling scatterplot snow
@@ -394,27 +308,27 @@ class Story():
         def createStory():
             # plot rain
             plotRain = plotScatterCreation(
-                dfScatterRain, self.colors, 'Regenfälle', 'mm'
+                dfScatterRain, colors, 'Regenfälle', 'mm'
             )
             plotRain.update_layout(
                 title='Regenfall auf dem Weissfluhjoch'
             )
             # plot snow
             plotSnow = plotScatterCreation(
-                dfScatterSnow, self.colors, 'Schneefälle', 'm'
+                dfScatterSnow, colors, 'Schneefälle', 'm'
             )
             plotSnow.update_layout(
                 title='Schneefall auf dem Weissfluhjoch'
             )
             # plot rain extreme
             plotRainExtreme = plotBarCreation(
-                dfScatterRainExtreme, self.colors, 'Extreme Regenfälle', 'mm')
+                dfScatterRainExtreme, colors, 'Extreme Regenfälle', 'mm')
             plotRainExtreme.update_layout(
                 title='Extremer Regenfall auf dem Weissfluhjoch'
             )
             # plot temperature
             plotTemperature = plotBarCreation(
-                dfScatterTemperature, self.colors, 'Temperatur', '°C')
+                dfScatterTemperature, colors, 'Temperatur', '°C')
             plotTemperature.update_layout(
                 title='Temperatur auf dem Weissfluhjoch',
                 yaxis={
@@ -563,7 +477,7 @@ class Story():
                                 'Made with ♥ ' +
                                 'by Bsc Data Science Students @ FHNW',
                                 style={
-                                    'color': self.colors['l1'],
+                                    'color': colors['l1'],
                                     'display': 'inline-block',
                                     'padding-left': 45,
                                     'padding-right': 45,
@@ -577,14 +491,14 @@ class Story():
                         }
                         ),
                     ], style={
-                        'backgroundColor': self.colors['d3'],
-                        'box-shadow': self.shadow,
+                        'backgroundColor': colors['d3'],
+                        'box-shadow': shadow,
                         'position': 'relative',
                         'padding': '5px',
                     }
                     ),
                 ], style={
-                    'backgroundColor': self.colors['BgStory'],
+                    'backgroundColor': colors['BgStory'],
                     'height': '100vh'
                 })
             )
